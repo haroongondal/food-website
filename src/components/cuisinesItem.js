@@ -1,4 +1,3 @@
-import React from 'react'
 import '../styles/CuisinesItem.css'
 import foodPlateImg from '../images/food_plate.png'
 

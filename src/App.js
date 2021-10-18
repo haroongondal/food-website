@@ -1,14 +1,14 @@
 
 import './App.css';
-import NearMe from '../src/components/nearMeItem';
-import DeaksItem from '../src/components/dealsItem';
-import CuisinesItem from '../src/components/cuisinesItem';
-import MobileAppSection from '../src/components//mobileAppSection';
-import Footer from './components/footer';
+import NearMe from './components/NearMeItem';
+import DeaksItem from './components/DealsItem';
+import CuisinesItem from './components/CuisinesItem';
+import MobileAppSection from './components/MobileAppSection';
+import Footer from './components/Footer';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import NavBar from './components/navBar';
-import Banner from './components/banner'
+import NavBar from './components/NavBar';
+import Banner from './components/Banner'
 import Carousel_Responsive from './styles/Carousel_Responsive';
 
 function App() {
@@ -40,7 +40,7 @@ export default App;
   fetch("http://18.135.67.49/api/Vendor/GetBookingCountsByUser?userId=491fb4a9-ea49-4ae8-9d78-a556dc863457")
   .then((res) => {
     
-    console.log(res.data)
+    console.log(res)
     return res;
   })
   .catch((e) => {

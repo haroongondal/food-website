@@ -1,4 +1,3 @@
-import React from 'react'
 import '../styles/Footer.css'
 import fbImage from '../images/facebook_logo.png'
 import twitterImage from '../images/twitter_logo.png'
@@ -19,7 +18,7 @@ export default function Footer() {
 
             <div className="col-xs-6 col-md-2 margin">
                 <h6>COMPANY</h6>
-                <ul class="footer-links">
+                <ul className="footer-links">
                   <li><a href="#abc">Who We Are</a></li>
                   <li><a href="#abc">Blog</a></li>
                   <li><a href="#abc">Carrers</a></li>
@@ -31,7 +30,7 @@ export default function Footer() {
 
               <div className="col-xs-6 col-md-2 margin">
                 <h6>FOR FOODIES</h6>
-                <ul class="footer-links">
+                <ul className="footer-links">
                   <li><a href="#abc">Code of Conduct</a></li>
                   <li><a href="#abc">Community</a></li>
                   <li><a href="#abc">Blogger Helps</a></li>
