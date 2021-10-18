@@ -8,20 +8,25 @@ import Footer from './components/footer';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import NavBar from './components/navBar';
+import Banner from './components/banner'
+import Carousel_Responsive from './styles/Carousel_Responsive';
 
 function App() {
+  getHomeData();
   return (
     <div className="App">
       <header className="App-header">
       <NavBar></NavBar>
-      <Carousel responsive={responsive}>
+      <Banner></Banner>
+    
+      <Carousel responsive={Carousel_Responsive}>
       <NearMe></NearMe>
       <NearMe></NearMe>
       <NearMe></NearMe>
       <NearMe></NearMe>
       </Carousel>
       <DeaksItem></DeaksItem>
-      <CuisinesItem></CuisinesItem>
+      <CuisinesItem name = {"Ali"}/>
       <MobileAppSection></MobileAppSection>
       <Footer></Footer>
       </header>
@@ -30,22 +35,17 @@ function App() {
 }
 
 export default App;
-const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 5
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 6
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1
-  }
-};
+
+  function getHomeData() {
+  fetch("http://18.135.67.49/api/Vendor/GetBookingCountsByUser?userId=491fb4a9-ea49-4ae8-9d78-a556dc863457")
+  .then((res) => {
+    
+    console.log(res.data)
+    return res;
+  })
+  .catch((e) => {
+    console.log(e)
+    return e;
+  });
+  
+}

@@ -2,9 +2,9 @@ import React from 'react'
 import '../styles/CuisinesItem.css'
 import foodPlateImg from '../images/food_plate.png'
 
-export default function CuisinesItem() {
+export default function CuisinesItem(props) {
 
-
+console.log(props)
     return (
         <div>
            
@@ -20,7 +20,7 @@ export default function CuisinesItem() {
                 <div className="detail-box-cuisines">
                 
                 <div className="type-cuisines">
-                <a herf="#abc" className="text-cuisines">North Indian</a>   
+                <a href="#abc" className="text-cuisines">North Indian</a>   
                 </div>
                 
                 </div>	
