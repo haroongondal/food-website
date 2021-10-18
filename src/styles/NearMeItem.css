@@ -1,0 +1,74 @@
+.products-slider{
+            background-color: #ECECEC;
+            padding-top: 60px;
+            padding-left: 100px;
+            padding-right: 125px;
+            box-sizing: border-box;
+        }
+        .slider-heading{
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin-left: 25px;
+        }
+        .slider-heading h3{
+            font-size: 1.45rem;
+            color: #1d1d1f;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+          line-height:34px;
+        }
+        .slider-heading h3 span{
+            color: #6e6e73;
+        }
+        .box-near-me{
+            width: 130px;
+            box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);
+            border-radius: 40px;
+            margin: 10px;
+            margin-top: 20px;
+            background-color: white;
+}
+        .box-near-me:hover{
+            box-shadow: 2px 2px 18px rgba(0,0,0,0.10);
+            transform: scale(1.008);
+            transition: all  0.3s ease;
+}
+.slide-img-near-me{
+    height: 85px;
+    position: relative;
+}
+.image-near-me{
+    margin-left: 32px;
+    padding-top: 20px;
+    width: 65px;
+    height: fit-content;
+}
+.detail-box-near-me{
+    width: 100%;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: 5px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+}
+.type-near-me{
+    display: flex;
+	flex-direction: column;
+}
+.text-near-me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222222;
+    margin: 5px 0px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    font-size: 15px;
+    font-family:Raleway;
+}
+.text-near-me:hover{
+    text-decoration: none;
+    color: black;
+}
