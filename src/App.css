@@ -1,7 +1,6 @@
-
-body{
+ body, html { 
+    font-family: 'Raleway';
     margin: 0px;
     padding: 0px;
     background-color:#ECECEC;
-    font-family: Raleway;
   }

@@ -1,4 +1,3 @@
-import React from 'react'
 import '../styles/NavBar.css'
 import logo from '../images/logo.png'
 import locationIcon from '../images/location_pin.svg'

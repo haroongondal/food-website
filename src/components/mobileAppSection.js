@@ -1,4 +1,3 @@
-import React from 'react'
 import '../styles/MobileAppSection.css'
 import mobileIcon from '../images/mobile_icon.png'
 import googlePlayStoreImg from '../images/google_playstore_image.png'
