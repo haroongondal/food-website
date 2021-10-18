@@ -12,12 +12,12 @@ export default function Footer() {
     return (
         <div>
            
-           <footer class="site-footer">
-        <div class="container">
-            <h3 class="footer-logo">Logo</h3>
-          <div class="row">
+           <footer className="site-footer">
+        <div className="container">
+            <h3 className="footer-logo">Logo</h3>
+          <div className="row">
 
-            <div class="col-xs-6 col-md-2 margin">
+            <div className="col-xs-6 col-md-2 margin">
                 <h6>COMPANY</h6>
                 <ul class="footer-links">
                   <li><a href="#abc">Who We Are</a></li>
@@ -29,7 +29,7 @@ export default function Footer() {
                 </ul>
               </div>
 
-              <div class="col-xs-6 col-md-2 margin">
+              <div className="col-xs-6 col-md-2 margin">
                 <h6>FOR FOODIES</h6>
                 <ul class="footer-links">
                   <li><a href="#abc">Code of Conduct</a></li>
@@ -38,9 +38,9 @@ export default function Footer() {
                   <li><a href="#abc">Mobile Apps</a></li>
                 </ul>
               </div>
-            <div class="col-xs-6 col-md-2 " style={{marginRight: "70px"}}>
+            <div className="col-xs-6 col-md-2 " style={{marginRight: "70px"}}>
                 <h6 style={{paddingright: "60px",inlineSize: "max-content"}}>FOR RESTAURANT</h6>
-                <ul class="footer-links">
+                <ul className="footer-links">
                   <li><a href="#abc">Add restaurants</a></li>
                   <li><a href="#abc">Business App</a></li>
                   <li style={{inlineSize: "max-content"}}><a href="#abc">Restaurants Widgets</a></li>
@@ -48,9 +48,9 @@ export default function Footer() {
                 </ul>
               </div>
   
-            <div class="col-xs-6 col-md-2">
+            <div className="col-xs-6 col-md-2">
               <h6>FOR YOU</h6>
-              <ul class="footer-links">
+              <ul className="footer-links">
                 <li><a href="#abc">Privacy</a></li>
                 <li><a href="#abc">Terms</a></li>
                 <li><a href="#abc">Security</a></li>
@@ -58,22 +58,22 @@ export default function Footer() {
               </ul>
             </div>
   
-            <div class="col-xs-6 col-md-2">
+            <div className="col-xs-6 col-md-2">
               <h6>SOCIAL LINKS</h6>
-                <ul class="social-icons" style={{paddingLeft: "0px"}}>
-                  <li><a class="facebook" href="#abc"><img alt="fb-pic" src={fbImage} style={{height: "25px",width: "25px"}}/></a></li>
-                  <li><a class="twitter" href="#abc"><img alt="twitter-pic" src={twitterImage} style={{height: "25px",width: "25px"}}/></a></li>
-                  <li><a class="instagram" href="#abc"><img alt="insta-pic" src={instaImage} style={{height: "25px",width: "25px"}}/></a></li>   
+                <ul className="social-icons" style={{paddingLeft: "0px"}}>
+                  <li><a className="facebook" href="#abc"><img alt="fb-pic" src={fbImage} style={{height: "25px",width: "25px"}}/></a></li>
+                  <li><a className="twitter" href="#abc"><img alt="twitter-pic" src={twitterImage} style={{height: "25px",width: "25px"}}/></a></li>
+                  <li><a className="instagram" href="#abc"><img alt="insta-pic" src={instaImage} style={{height: "25px",width: "25px"}}/></a></li>   
                 </ul>
               </div>
             </div>
           </div>
           <hr style={{marginTop: "50px"}}/>
         
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 col-sm-6 col-xs-12">
-              <p class="copyright-text">Copyright © By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 col-sm-6 col-xs-12">
+              <p className="copyright-text">Copyright © By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-
                 2021 © <a href="#abc">Food-App™</a> Ltd. All rights reserved
               </p>
             </div>
