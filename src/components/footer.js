@@ -10,7 +10,7 @@ export default function Footer() {
 
     return (
         <div>
-           
+          
            <footer className="site-footer">
         <div className="container">
             <h3 className="footer-logo">Logo</h3>
@@ -19,6 +19,7 @@ export default function Footer() {
             <div className="col-xs-6 col-md-2 margin">
                 <h6>COMPANY</h6>
                 <ul className="footer-links">
+
                   <li><a href="#abc">Who We Are</a></li>
                   <li><a href="#abc">Blog</a></li>
                   <li><a href="#abc">Carrers</a></li>
@@ -40,6 +41,7 @@ export default function Footer() {
             <div className="col-xs-6 col-md-2 " style={{marginRight: "70px"}}>
                 <h6 style={{paddingright: "60px",inlineSize: "max-content"}}>FOR RESTAURANT</h6>
                 <ul className="footer-links">
+
                   <li><a href="#abc">Add restaurants</a></li>
                   <li><a href="#abc">Business App</a></li>
                   <li style={{inlineSize: "max-content"}}><a href="#abc">Restaurants Widgets</a></li>
@@ -47,9 +49,11 @@ export default function Footer() {
                 </ul>
               </div>
   
+
             <div className="col-xs-6 col-md-2">
               <h6>FOR YOU</h6>
               <ul className="footer-links">
+
                 <li><a href="#abc">Privacy</a></li>
                 <li><a href="#abc">Terms</a></li>
                 <li><a href="#abc">Security</a></li>
@@ -63,12 +67,12 @@ export default function Footer() {
                   <li><a className="facebook" href="#abc"><img alt="fb-pic" src={fbImage} style={{height: "25px",width: "25px"}}/></a></li>
                   <li><a className="twitter" href="#abc"><img alt="twitter-pic" src={twitterImage} style={{height: "25px",width: "25px"}}/></a></li>
                   <li><a className="instagram" href="#abc"><img alt="insta-pic" src={instaImage} style={{height: "25px",width: "25px"}}/></a></li>   
+
                 </ul>
               </div>
             </div>
           </div>
           <hr style={{marginTop: "50px"}}/>
-        
         <div className="container">
           <div className="row">
             <div className="col-md-12 col-sm-6 col-xs-12">

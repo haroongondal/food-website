@@ -1,6 +1,10 @@
- body, html { 
-    font-family: 'Raleway';
-    margin: 0px;
-    padding: 0px;
-    background-color:#ECECEC;
-  }
+
+header{
+  font-family:Raleway;
+  background-color: #ECECEC;
+}
+.margin{
+  margin-top:60px;
+  margin-left:100px;
+  margin-right:100px;
+}

@@ -1,3 +1,4 @@
+
 import '../styles/NavBar.css'
 import logo from '../images/logo.png'
 import locationIcon from '../images/location_pin.svg'
@@ -9,10 +10,11 @@ export default function NavBar() {
     return (
         <div>
            
-            
+
            <div className="header">
         <nav className="navbar">
                 <div className="logo_image">
+
                     <a href="https://www.food_app.com">
                         <img alt="food_app" style={{maxWidth: "145px"}} src={logo}/>
                     </a>
@@ -22,6 +24,7 @@ export default function NavBar() {
 
 
       {/* Location-Box */}
+
 
       <a href="#abc" className="section-location">
               <div className="details-location">
@@ -38,11 +41,13 @@ export default function NavBar() {
 
       {/* Search-bar */}
 
+
     <div className="parent">
       <div className="search-box sticky-search" id="searchBar" style={{display: "none"}}>
         <input type="text" className="searchTerm-top" placeholder="Search for Restaurants, Cuisines, Location "/>
         <button type="submit" className="searchButton-top">
           <span className="text-search-button-top">Search</span>
+
        </button>
       </div>
     </div>
@@ -55,6 +60,7 @@ export default function NavBar() {
                 <li><a href="#abc">Help</a></li>
                 <li><a href="#abc">Login</a></li>
                 <li><a className="signup_buton" href="#abc">SignUp</a></li>
+
             </ul>
         
         </nav>

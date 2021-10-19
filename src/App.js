@@ -1,15 +1,18 @@
 
 import './App.css';
-import NearMe from './components/NearMeItem';
-import DeaksItem from './components/DealsItem';
-import CuisinesItem from './components/CuisinesItem';
-import MobileAppSection from './components/MobileAppSection';
-import Footer from './components/Footer';
+
+import NearMe from '../src/components/nearMeItem';
+import DealsItem from '../src/components/dealsItem';
+import CuisinesItem from '../src/components/cuisinesItem';
+import RestaurentItem from './components/restaurentItem';
+import MobileAppSection from '../src/components//mobileAppSection';
+import Footer from './components/footer';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import NavBar from './components/NavBar';
-import Banner from './components/Banner'
+import NavBar from './components/navBar';
+import DashboardConsumer from './components/dashboardConsumer';
 import Carousel_Responsive from './styles/Carousel_Responsive';
+
 
 function App() {
   getHomeData();
@@ -17,16 +20,35 @@ function App() {
     <div className="App">
       <header className="App-header">
       <NavBar></NavBar>
-      <Banner></Banner>
-    
+      <DashboardConsumer></DashboardConsumer>
+      <div className="margin">
       <Carousel responsive={Carousel_Responsive}>
+
+      <NearMe></NearMe>
+      <NearMe></NearMe>
+      <NearMe></NearMe>
+      <NearMe></NearMe>
       <NearMe></NearMe>
       <NearMe></NearMe>
       <NearMe></NearMe>
       <NearMe></NearMe>
       </Carousel>
+      <Carousel responsive={responsive}>
+      <RestaurentItem></RestaurentItem>
+      <RestaurentItem></RestaurentItem>
+      <RestaurentItem></RestaurentItem>
+      <RestaurentItem></RestaurentItem>
+      <RestaurentItem></RestaurentItem>
+      <RestaurentItem></RestaurentItem>
+      </Carousel>
+      <CuisinesItem></CuisinesItem>
+      <DealsItem></DealsItem>
+      </div>
+
+      </Carousel>
       <DeaksItem></DeaksItem>
       <CuisinesItem name = {"Ali"}/>
+
       <MobileAppSection></MobileAppSection>
       <Footer></Footer>
       </header>
@@ -49,3 +71,4 @@ export default App;
   });
   
 }
+
