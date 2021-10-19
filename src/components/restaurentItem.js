@@ -2,10 +2,12 @@ import React from 'react'
 import '../styles/RestaurentItem.css'
 import restaurentImage from '../images/restaurant.jpg'
 
+
 export default function RestaurentItem({key = "", data = ""}) {
 
 console.log(data.RestaurantName)
     return (
+       
         <div>
            <div className="box-restaurent">
                     {/* img-box */}
@@ -47,5 +49,6 @@ console.log(data.RestaurantName)
                 
             
         </div>
+      
     )
 }

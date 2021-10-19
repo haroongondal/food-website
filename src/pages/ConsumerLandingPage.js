@@ -1,5 +1,4 @@
 import '../styles/ConsumerLandingPage.css';
-import React, { useState, useEffect } from 'react';
 import NearMe from '../components/NearMeItem';
 import CuisinesItem from '../components/CuisinesItem';
 import RestaurentItem from '../components/RestaurentItem';
@@ -15,17 +14,13 @@ import CarouselRestaurent from '../styles/Carousel_Restaurent';
 import HeadingRestaurentNear from '../components/Heading_Restaurent_Near';
 import CarouselCuisines from '../styles/Carousel_Cuisines';
 import HeadingWhyBook from '../components/Section_Why_Book';
+import useFetch from '../components/useFetch';
+import Skeleton from 'react-loading-skeleton';
 
 function ConsumerLandingPage() {
 
-  const [array, setArray] = useState([]);
-
-  useEffect(() => {
-     fetch("https://api.masairapp.com/api/Restaurant/GetRestaurants")
-    .then(res =>  res.json())
-    .then(r => setArray(r))
-    .catch(e => console.log(e));
-  }, []);
+  const { data, isPending, error } = useFetch('https://api.masairapp.com/api/Restaurant/GetRestaurants');
+  
   
   return (
     <div className="App">
@@ -51,14 +46,19 @@ function ConsumerLandingPage() {
       <HeadingRestaurentNear heading = {"Restaurants Near You"}/>
 
       <Carousel responsive={CarouselRestaurent}>
-      {array.map((rest) => <RestaurentItem key = {rest.Id} data = {rest}/>)}
+        {isPending && <div><Skeleton width={200} height={250}orientation={"horizontal"}/></div>}
+        {error && <div>{error}</div>}
+        {data && data.map((rest) => <RestaurentItem key = {rest.Id} data = {rest}/>)}
+      
       </Carousel>
      
 
       <HeadingRestaurentNear heading = {"Featured Restaurants"}/>
 
       <Carousel responsive={CarouselRestaurent}>
-      {array.map((rest) => <RestaurentItem key = {rest.Id} data = {rest}/>)}
+      {isPending && <div><Skeleton width={200} height={250}/></div>}
+        {error && <div>{error}</div>}
+        {data && data.map((rest) => <RestaurentItem key = {rest.Id} data = {rest}/>)}
       </Carousel>
 
       <HeadingRestaurentNear heading = {"Popular Cuisines"}/>
@@ -78,7 +78,9 @@ function ConsumerLandingPage() {
       <HeadingRestaurentNear heading = {"Popular Restaurants"}/>
 
       <Carousel responsive={CarouselRestaurent}>
-      {array.map((rest) => <RestaurentItem key = {rest.Id} data = {rest}/>)}
+      {isPending && <div><Skeleton width={250} height={258}/></div>}
+        {error && <div>{error}</div>}
+        {data && data.map((rest) => <RestaurentItem key = {rest.Id} data = {rest}/>)}
       </Carousel>
 
       <HeadingWhyBook/>
