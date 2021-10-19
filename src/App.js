@@ -1,11 +1,12 @@
 
 import './App.css';
-import Filter from '../src/components/Filter'
+import Land from '../src/components/ConsumerLandingPage'
 
 function App() {
 
   return (
-    <div className="App">     
+    <div className="App">   
+    <Land/>  
     </div>
   );
 }
