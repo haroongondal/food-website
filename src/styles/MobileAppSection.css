@@ -1,3 +1,6 @@
+.line-grey{
+  color:grey;
+}
 .div-boxes-mobile-app{
     display: flex;
     justify-content: space-between;
@@ -9,7 +12,7 @@
 }
 .text-explore{
     font-size: 22px;
-    margin-bottom: 7px;
+    margin-bottom: 3px;
     font-weight: 500;
 }
 .text-logo-mobile-app{
@@ -18,10 +21,10 @@
     font-weight: bold;
 }
 .text-details-mobile-app{
-    font-size: 14px;
+    font-size: 11px;
     color: #5A5A5A;
     font-weight: normal;
-    margin-top: 15px;
+    margin-top: 5px;
 }
 .search {
     width: 100%;
@@ -32,18 +35,18 @@
 .image-mobile{
     position: absolute;
     left: 10px;
-    top: 10px;
+    top: 5px;
   }
 .searchTerm {
     width: 100%;
     border: 1px solid #70707063;
     border-right: none;
     padding: 5px;
-    padding-left: 45px;
+    padding-left: 35px;
     height: 35px;
     outline: none;
     color: #9DBFAF;
-    font-size: medium;
+    font-size: smaller;
   }
   
 .searchTerm:focus{

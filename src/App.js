@@ -1,18 +1,21 @@
 
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import NearMe from '../src/components/nearMeItem';
-import DealsItem from '../src/components/DealsItem';
-import CuisinesItem from '../src/components/CuisinesItem';
-import RestaurentItem from './components/restaurentItem';
-import MobileAppSection from '../src/components/mobileAppSection';
-import Footer from './components/footer';
+import NearMe from './components/NearMeItem';
+import CuisinesItem from './components/CuisinesItem';
+import RestaurentItem from './components/RestaurentItem';
+import MobileAppSection from './components/MobileAppSection';
+import Footer from './components/Footer';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import NavBar from './components/navBar';
-import DashboardConsumer from './components/dashboardConsumer';
-import Carousel_Responsive from './styles/Carousel_Responsive';
-
+import NavBar from './components/NavBar';
+import DashboardConsumer from './components/DashboardConsumer';
+import CarouselNearMe from './styles/Carousel_NearMe';
+import HeadingHiFoodie from './components/Heading_Hi_Foodie';
+import CarouselRestaurent from './styles/Carousel_Restaurent';
+import HeadingRestaurentNear from './components/Heading_Restaurent_Near';
+import CarouselCuisines from './styles/Carousel_Cuisines';
+import HeadingWhyBook from './components/Section_Why_Book';
 
 function App() {
 
@@ -30,8 +33,12 @@ function App() {
       <header className="App-header">
       <NavBar></NavBar>
       <DashboardConsumer></DashboardConsumer>
-      <div className="margin">
-      <Carousel responsive={Carousel_Responsive}>
+      <div className="marginMain">
+      <HeadingHiFoodie></HeadingHiFoodie>
+      <Carousel responsive={CarouselNearMe}>
+      <NearMe></NearMe>
+      <NearMe></NearMe>
+      <NearMe></NearMe>
       <NearMe></NearMe>
       <NearMe></NearMe>
       <NearMe></NearMe>
@@ -41,16 +48,54 @@ function App() {
       <NearMe></NearMe>
       <NearMe></NearMe>
       </Carousel>
-      <Carousel responsive={Carousel_Responsive}>
+
+      <HeadingRestaurentNear heading = {"Restaurants Near You"}/>
+
+      <Carousel responsive={CarouselRestaurent}>
       {array.map((rest) => <RestaurentItem key = {rest.Id} data = {rest}/>)}
       </Carousel>
-      <CuisinesItem></CuisinesItem>
-      <DealsItem></DealsItem>
+     
+
+      <HeadingRestaurentNear heading = {"Featured Restaurants"}/>
+
+      <Carousel responsive={CarouselRestaurent}>
+      <RestaurentItem></RestaurentItem>
+      <RestaurentItem></RestaurentItem>
+      <RestaurentItem></RestaurentItem>
+      <RestaurentItem></RestaurentItem>
+      <RestaurentItem></RestaurentItem>
+      <RestaurentItem></RestaurentItem>
+      </Carousel>
+
+      <HeadingRestaurentNear heading = {"Popular Cuisines"}/>
+
+      <Carousel responsive={CarouselCuisines}>
+      <CuisinesItem name = {"Ali"}/>
+      <CuisinesItem name = {"Ali"}/>
+      <CuisinesItem name = {"Ali"}/>
+      <CuisinesItem name = {"Ali"}/>
+      <CuisinesItem name = {"Ali"}/>
+      <CuisinesItem name = {"Ali"}/>
+      <CuisinesItem name = {"Ali"}/>
+      <CuisinesItem name = {"Ali"}/>
+      <CuisinesItem name = {"Ali"}/>
+      </Carousel>
+      
+      <HeadingRestaurentNear heading = {"Popular Restaurants"}/>
+
+      <Carousel responsive={CarouselRestaurent}>
+      <RestaurentItem></RestaurentItem>
+      <RestaurentItem></RestaurentItem>
+      <RestaurentItem></RestaurentItem>
+      <RestaurentItem></RestaurentItem>
+      <RestaurentItem></RestaurentItem>
+      <RestaurentItem></RestaurentItem>
+      </Carousel>
+
+      <HeadingWhyBook/>
+
       </div>
-
-      <DealsItem></DealsItem>
-      <CuisinesItem/>
-
+      
       <MobileAppSection></MobileAppSection>
       <Footer></Footer>
       </header>
