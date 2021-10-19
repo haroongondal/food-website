@@ -49,7 +49,9 @@
     .parent {
       /* something to ensure that the parent container is scrollable */
       height: 0vh;
+     
     }
+   
     .search-box{
         margin: 0px 10px;
         width: 25%;

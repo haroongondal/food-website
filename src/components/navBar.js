@@ -1,12 +1,24 @@
 
 import '../styles/NavBar.css'
 import logo from '../images/logo.png'
+import React, { useState, useEffect } from 'react';
 import locationIcon from '../images/location_pin.svg'
 import downArrowIcon from '../images/down_arrow.svg'
 
 export default function NavBar() {
 
+const [navbar, setNavbar] = useState(false)
 
+
+const showSearchBar = ()=> {
+    if (window.scrollY >= 210) {
+        setNavbar(true)
+    } else {
+        setNavbar(false)
+    }
+}
+
+window.addEventListener('scroll', showSearchBar)
     return (
         <div>
            
@@ -43,7 +55,7 @@ export default function NavBar() {
 
 
     <div className="parent">
-      <div className="search-box sticky-search" id="searchBar" style={{display: "none"}}>
+      <div className="search-box sticky-search" id="searchBar" style={{ display: navbar ? "inline" : "none"}}>
         <input type="text" className="searchTerm-top" placeholder="Search for Restaurants, Cuisines, Location "/>
         <button type="submit" className="searchButton-top">
           <span className="text-search-button-top">Search</span>
