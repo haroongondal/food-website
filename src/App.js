@@ -1,11 +1,11 @@
 
 import './App.css';
-
+import React, { useState, useEffect } from 'react';
 import NearMe from '../src/components/nearMeItem';
-import DealsItem from '../src/components/dealsItem';
-import CuisinesItem from '../src/components/cuisinesItem';
+import DealsItem from '../src/components/DealsItem';
+import CuisinesItem from '../src/components/CuisinesItem';
 import RestaurentItem from './components/restaurentItem';
-import MobileAppSection from '../src/components//mobileAppSection';
+import MobileAppSection from '../src/components/mobileAppSection';
 import Footer from './components/footer';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -16,8 +16,15 @@ import Carousel_Responsive from './styles/Carousel_Responsive';
 
 function App() {
 
- 
-  getHomeData();
+  const [array, setArray] = useState([]);
+
+  useEffect(() => {
+     fetch("https://api.masairapp.com/api/Restaurant/GetRestaurants")
+    .then(res =>  res.json())
+    .then(r => setArray(r))
+    .catch(e => console.log(e));
+  }, []);
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -25,7 +32,6 @@ function App() {
       <DashboardConsumer></DashboardConsumer>
       <div className="margin">
       <Carousel responsive={Carousel_Responsive}>
-
       <NearMe></NearMe>
       <NearMe></NearMe>
       <NearMe></NearMe>
@@ -35,21 +41,15 @@ function App() {
       <NearMe></NearMe>
       <NearMe></NearMe>
       </Carousel>
-      <Carousel responsive={responsive}>
-      <RestaurentItem></RestaurentItem>
-      <RestaurentItem></RestaurentItem>
-      <RestaurentItem></RestaurentItem>
-      <RestaurentItem></RestaurentItem>
-      <RestaurentItem></RestaurentItem>
-      <RestaurentItem></RestaurentItem>
+      <Carousel responsive={Carousel_Responsive}>
+      {array.map((rest) => <RestaurentItem key = {rest.Id} data = {rest}/>)}
       </Carousel>
       <CuisinesItem></CuisinesItem>
       <DealsItem></DealsItem>
       </div>
 
-      </Carousel>
-      <DeaksItem></DeaksItem>
-      <CuisinesItem name = {"Ali"}/>
+      <DealsItem></DealsItem>
+      <CuisinesItem/>
 
       <MobileAppSection></MobileAppSection>
       <Footer></Footer>
@@ -60,14 +60,4 @@ function App() {
 
 export default App;
 
-  async function getHomeData() {
-    
-    await fetch("https://api.masairapp.com/api/Restaurant/GetRestaurants")
-    .then(res =>  res.json())
-    .then(r => {
-      console.log(r)
-    })
-    .catch(e => console.log(e));
   
-}
-

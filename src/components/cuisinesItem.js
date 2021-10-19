@@ -1,9 +1,8 @@
 import '../styles/CuisinesItem.css'
 import foodPlateImg from '../images/food_plate.png'
 
-export default function CuisinesItem(props) {
+export default function CuisinesItem() {
 
-console.log(props)
     return (
         <div>
            
