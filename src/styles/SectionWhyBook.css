@@ -71,6 +71,9 @@
     margin-top: 2px;
     font-family: 'Raleway';
 }
+.text-why-book:hover{
+    color:black;
+}
 .discount-details-why-book{
     color: black;
     justify-content: center;
