@@ -1,5 +1,6 @@
 
 import './App.css';
+
 import NearMe from '../src/components/nearMeItem';
 import DealsItem from '../src/components/dealsItem';
 import CuisinesItem from '../src/components/cuisinesItem';
@@ -10,16 +11,19 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import NavBar from './components/navBar';
 import DashboardConsumer from './components/dashboardConsumer';
+import Carousel_Responsive from './styles/Carousel_Responsive';
+
 
 function App() {
+  getHomeData();
   return (
     <div className="App">
       <header className="App-header">
       <NavBar></NavBar>
       <DashboardConsumer></DashboardConsumer>
-
       <div className="margin">
-      <Carousel responsive={responsive}>
+      <Carousel responsive={Carousel_Responsive}>
+
       <NearMe></NearMe>
       <NearMe></NearMe>
       <NearMe></NearMe>
@@ -41,6 +45,10 @@ function App() {
       <DealsItem></DealsItem>
       </div>
 
+      </Carousel>
+      <DeaksItem></DeaksItem>
+      <CuisinesItem name = {"Ali"}/>
+
       <MobileAppSection></MobileAppSection>
       <Footer></Footer>
       </header>
@@ -49,22 +57,18 @@ function App() {
 }
 
 export default App;
-const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 5
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 5
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 6
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 3
-  }
-};
+
+  function getHomeData() {
+  fetch("http://18.135.67.49/api/Vendor/GetBookingCountsByUser?userId=491fb4a9-ea49-4ae8-9d78-a556dc863457")
+  .then((res) => {
+    
+    console.log(res)
+    return res;
+  })
+  .catch((e) => {
+    console.log(e)
+    return e;
+  });
+  
+}
+

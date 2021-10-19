@@ -1,10 +1,9 @@
-import React from 'react'
 import '../styles/CuisinesItem.css'
 import foodPlateImg from '../images/food_plate.png'
 
-export default function CuisinesItem() {
+export default function CuisinesItem(props) {
 
-
+console.log(props)
     return (
         <div>
            

@@ -1,4 +1,3 @@
-import React from 'react'
 import '../styles/DealsItem.css'
 import nearMeImg from '../images/near_me.png'
 

@@ -1,4 +1,4 @@
- import React from 'react'
+
  import '../styles/NearMeItem.css'
  import nearMeImg from '../images/near_me.png'
 
