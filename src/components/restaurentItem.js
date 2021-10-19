@@ -4,41 +4,42 @@ import restaurentImage from '../images/restaurant.jpg'
 
 export default function RestaurentItem({key = "", data = ""}) {
 
-
 console.log(data.RestaurantName)
     return (
         <div>
-           <div class="box-restaurent">
+           <div className="box-restaurent">
                     {/* img-box */}
-                    <div class="img-restaurent">
+                    <div className="img-restaurent">
                     <img alt="4" src={restaurentImage}/>
 
                     {/* heart-icon */}
+
                     <section class="ac-footer">
                     <div class="ac-footer-container ac-footer-brand">
                          <span class="ac-icon ac-icon-love-dark"></span> 
+
                     </div>
   
                     </section>
 
                     {/* rating */}
-                <div class="rating">	
-                    <a href="#abc" class="restaurent-rating">4.5</a>	
+                <div className="rating">	
+                    <a href="#abc" className="restaurent-rating">4.5</a>	
                     </div>
                     </div>
 
                     {/* detail-box */}
-                    <div class="detail-box-restaurent">
+                    <div className="detail-box-restaurent">
 
                     {/* restaurent-name */}
-                    <div class="restaurent-details">
+                    <div className="restaurent-details">
                     <a href="#abc">{data.RestaurantName}</a>
-                    <span class="restaurent-location">Islamabad, Pakistan</span>
-                    <span class="restaurent-discount">Flat 25% Off the Total bill</span>
+                    <span className="restaurent-location">{data.PrimaryLocation == null ? "Address not available" : data.PrimaryLocation}</span>
+                    <span className="restaurent-discount">Flat 25% Off the Total bill</span>
                     </div>
 
                     {/* distance */}
-                    <a href="#abc" class="restaurent-distance">0.5 km</a>
+                    <a href="#abc" className="restaurent-distance">0.5 km</a>
                         
                     </div>
                     
