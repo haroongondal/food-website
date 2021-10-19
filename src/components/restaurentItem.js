@@ -1,7 +1,6 @@
 import React from 'react'
 import '../styles/RestaurentItem.css'
 import restaurentImage from '../images/restaurant.jpg'
-import heartIcon from '../images/heart.png'
 
 export default function RestaurentItem() {
 
@@ -18,9 +17,12 @@ export default function RestaurentItem() {
                     <img alt="4" src={restaurentImage}/>
 
                     {/* heart-icon */}
-                    <div class="heart-icon">
-                        <img alt="heart-icon" src={heartIcon}/>
+                    <section class="ac-footer">
+                    <div class="ac-footer-container ac-footer-brand">
+                         <span class="ac-icon ac-icon-love-dark"></span> 
                     </div>
+  
+                    </section>
 
                     {/* rating */}
                 <div class="rating">	
