@@ -1,7 +1,7 @@
 
 import '../styles/NavBar.css'
 import logo from '../images/logo.png'
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import locationIcon from '../images/location_pin.svg'
 import downArrowIcon from '../images/down_arrow.svg'
 
@@ -11,7 +11,7 @@ const [navbar, setNavbar] = useState(false)
 
 
 const showSearchBar = ()=> {
-    if (window.scrollY >= 210) {
+    if (window.scrollY >= 250) {
         setNavbar(true)
     } else {
         setNavbar(false)
