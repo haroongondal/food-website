@@ -35,7 +35,7 @@ function App() {
       <DashboardConsumer></DashboardConsumer>
       <div className="marginMain">
       <HeadingHiFoodie></HeadingHiFoodie>
-      <Carousel responsive={CarouselNearMe}>
+      <Carousel renderButtonGroupOutside={true} responsive={CarouselNearMe}>
       <NearMe></NearMe>
       <NearMe></NearMe>
       <NearMe></NearMe>

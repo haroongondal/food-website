@@ -48,6 +48,10 @@
     text-decoration: none;
     font-size: 17px;
     margin-bottom: -1px;
+    width: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .restaurent-details a:hover{
     text-decoration: none;
@@ -67,6 +71,7 @@
     text-decoration: none;
     padding-top: 1px;
     padding-bottom: 1px;
+    min-inline-size: fit-content;
 }
 .restaurent-distance:hover{
     text-decoration: none;
