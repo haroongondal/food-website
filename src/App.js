@@ -1,12 +1,14 @@
 
 import './App.css';
-import Land from '../src/components/ConsumerLandingPage'
+import Filter from '../src/components/Filter'
+import FilterPageItem from './components/Filter_Page_Item';
 
 function App() {
 
   return (
-    <div className="App">   
-    <Land/>  
+    <div className="App">
+    <Filter filter_name = {"Dine Out"}/>     
+    <FilterPageItem/>
     </div>
   );
 }
