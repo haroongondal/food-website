@@ -1,6 +1,6 @@
 
 import './App.css';
-
+import React, { useState, useEffect } from 'react';
 import NearMe from './components/NearMeItem';
 import CuisinesItem from './components/CuisinesItem';
 import RestaurentItem from './components/RestaurentItem';
@@ -19,8 +19,15 @@ import HeadingWhyBook from './components/Section_Why_Book';
 
 function App() {
 
- 
-  getHomeData();
+  const [array, setArray] = useState([]);
+
+  useEffect(() => {
+     fetch("https://api.masairapp.com/api/Restaurant/GetRestaurants")
+    .then(res =>  res.json())
+    .then(r => setArray(r))
+    .catch(e => console.log(e));
+  }, []);
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -43,15 +50,11 @@ function App() {
       </Carousel>
 
       <HeadingRestaurentNear heading = {"Restaurants Near You"}/>
-      
+
       <Carousel responsive={CarouselRestaurent}>
-      <RestaurentItem></RestaurentItem>
-      <RestaurentItem></RestaurentItem>
-      <RestaurentItem></RestaurentItem>
-      <RestaurentItem></RestaurentItem>
-      <RestaurentItem></RestaurentItem>
-      <RestaurentItem></RestaurentItem>
+      {array.map((rest) => <RestaurentItem key = {rest.Id} data = {rest}/>)}
       </Carousel>
+     
 
       <HeadingRestaurentNear heading = {"Featured Restaurants"}/>
 
@@ -102,14 +105,4 @@ function App() {
 
 export default App;
 
-  async function getHomeData() {
-    
-    await fetch("https://api.masairapp.com/api/Restaurant/GetRestaurants")
-    .then(res =>  res.json())
-    .then(r => {
-      console.log(r)
-    })
-    .catch(e => console.log(e));
   
-}
-

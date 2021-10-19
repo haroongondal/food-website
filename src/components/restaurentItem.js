@@ -3,16 +3,13 @@ import '../styles/RestaurentItem.css'
 import restaurentImage from '../images/restaurant.jpg'
 import heartIcon from '../images/heart.png'
 
-export default function RestaurentItem() {
+export default function RestaurentItem({key = "", data = ""}) {
 
 
+console.log(data.RestaurantName)
     return (
         <div>
-           
-            
            <div class="box-restaurent">
-
-                
                     {/* img-box */}
                     <div class="img-restaurent">
                     <img alt="4" src={restaurentImage}/>
@@ -33,8 +30,8 @@ export default function RestaurentItem() {
 
                     {/* restaurent-name */}
                     <div class="restaurent-details">
-                    <a href="#abc">Nostalgia</a>
-                    <span class="restaurent-location">Margao, South Goa</span>
+                    <a href="#abc">{data.RestaurantName}</a>
+                    <span class="restaurent-location">Islamabad, Pakistan</span>
                     <span class="restaurent-discount">Flat 25% Off the Total bill</span>
                     </div>
 
