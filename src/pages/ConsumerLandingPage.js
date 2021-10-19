@@ -1,20 +1,20 @@
 import '../styles/ConsumerLandingPage.css';
 import React, { useState, useEffect } from 'react';
-import NearMe from './NearMeItem';
-import CuisinesItem from './CuisinesItem';
-import RestaurentItem from './RestaurentItem';
-import MobileAppSection from './MobileAppSection';
-import Footer from './Footer';
+import NearMe from '../components/NearMeItem';
+import CuisinesItem from '../components/CuisinesItem';
+import RestaurentItem from '../components/RestaurentItem';
+import MobileAppSection from '../components/MobileAppSection';
+import Footer from '../components/Footer';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import NavBar from './NavBar';
-import DashboardConsumer from './DashboardConsumer';
+import NavBar from '../components/NavBar';
+import DashboardConsumer from '../components/DashboardConsumer';
 import CarouselNearMe from '../styles/Carousel_NearMe';
-import HeadingHiFoodie from './Heading_Hi_Foodie';
+import HeadingHiFoodie from '../components/Heading_Hi_Foodie';
 import CarouselRestaurent from '../styles/Carousel_Restaurent';
-import HeadingRestaurentNear from './Heading_Restaurent_Near';
+import HeadingRestaurentNear from '../components/Heading_Restaurent_Near';
 import CarouselCuisines from '../styles/Carousel_Cuisines';
-import HeadingWhyBook from './Section_Why_Book';
+import HeadingWhyBook from '../components/Section_Why_Book';
 
 function ConsumerLandingPage() {
 
