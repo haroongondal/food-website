@@ -1,0 +1,118 @@
+
+.box-restaurent{
+	width: 250px;
+    box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 10px;
+    margin-top: 23px;
+    background-color: #fff;
+    cursor:pointer;
+}
+.box-restaurent:hover{
+    box-shadow: 2px 2px 18px rgba(0,0,0,0.10);
+    transform: scale(1.008);
+    transition: all  0.3s ease;
+}
+.img-restaurent{
+	height: 180px;
+    position: relative;
+}
+.img-restaurent img{
+	width:100%;
+	height: 100%;
+	object-fit: cover;
+	box-sizing: border-box;
+    border-radius: 30px;
+}
+.detail-box-restaurent{
+	width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    padding-right: 12px;
+    padding-bottom: 7px;
+    box-sizing: border-box;
+}
+.restaurent-details{
+	display: flex;
+	flex-direction: column;
+}
+.restaurent-details a{
+	color: #222222;
+    margin: 5px 0px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding-right: 8px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-bottom: -1px;
+}
+.restaurent-details a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.restaurent-distance{
+	color: #333333;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    margin-top: -35px;
+    background-color: #C8DEC9;
+    padding: 0px 5px;
+    padding-top: px;
+    border-radius: 20px;
+    text-decoration: none;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.restaurent-distance:hover{
+    text-decoration: none;
+    color: black;
+}
+.heart-icon{
+	position: absolute;
+    right: 0%;
+    top: 13%;
+    transform: translate(-50%,-50%);
+    width: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rating a{
+    text-decoration: none;
+    cursor: text;
+}
+.rating a:hover{
+    color:white;
+    cursor: text;
+}
+.restaurent-rating{
+    width: 40px;
+    height: 30px;
+    display: flex;
+    background-color: #439548;
+    color: #FFFFFF;
+    font-weight: 400;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    transform: translate(10px, -35px);
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: text;
+}
+.restaurent-location{
+    font-weight: 500;
+    color: #949494;
+    font-size: 12px;
+}
+.restaurent-discount{
+    font-weight: bolder;
+    color: #439548;
+    font-size: 11px;
+    margin-top: 3px;
+}
