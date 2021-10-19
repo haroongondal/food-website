@@ -15,6 +15,8 @@ import Carousel_Responsive from './styles/Carousel_Responsive';
 
 
 function App() {
+
+ 
   getHomeData();
   return (
     <div className="App">
@@ -58,17 +60,14 @@ function App() {
 
 export default App;
 
-  function getHomeData() {
-  fetch("http://18.135.67.49/api/Vendor/GetBookingCountsByUser?userId=491fb4a9-ea49-4ae8-9d78-a556dc863457")
-  .then((res) => {
+  async function getHomeData() {
     
-    console.log(res)
-    return res;
-  })
-  .catch((e) => {
-    console.log(e)
-    return e;
-  });
+    await fetch("https://api.masairapp.com/api/Restaurant/GetRestaurants")
+    .then(res =>  res.json())
+    .then(r => {
+      console.log(r)
+    })
+    .catch(e => console.log(e));
   
 }
 
