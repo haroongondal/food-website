@@ -10,8 +10,9 @@ export default function MobileAppSection() {
 
     return (
         <div>
-           
-            
+
+           <hr className="line-grey"/>
+
            <div className="div-boxes-mobile-app">
 
 {/* 1-section */}
@@ -27,7 +28,7 @@ export default function MobileAppSection() {
 
 <div className="wrap">
     <div className="search">
-        <span className="image-mobile"><img alt="mobile-icon" src={mobileIcon} width={25} height={25}/></span>
+        <span className="image-mobile"><img alt="mobile-icon" src={mobileIcon} width={20} height={20}/></span>
        <input type="text" className="searchTerm" placeholder="Your Mobile Number"/>
        <button type="submit" className="searchButton">
          <span className="text-search-link">Send Link</span>
