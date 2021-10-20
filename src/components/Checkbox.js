@@ -1,4 +1,4 @@
-import '../styles/Filter.css'
+import '../styles/Checkbox.css'
 
 export default function Filter({filter_name= ""}) {
 
