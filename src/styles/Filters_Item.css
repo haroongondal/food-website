@@ -1,4 +1,6 @@
-
+  .adjust{
+    width:25%;
+  }
   .alignment{
     display: inline-block;
     zoom: 1;
@@ -13,7 +15,8 @@
     height: calc(100vh - 3vh);
     overflow-y: scroll;
     overflow-x: hidden;
-    width: 25%;
+    width: -webkit-fill-available;
+
   }
   .listing_sidebar::-webkit-scrollbar {
     width: 8px;

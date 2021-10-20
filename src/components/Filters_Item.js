@@ -1,10 +1,11 @@
 import '../styles/Filters_Item.css'
-import Filter from './Filter'
+import Checkbox from './Checkbox'
+
 
 export default function FiltersItem() {
 
     return (
-        <div>
+        <div className="adjust">
 
 <div className="alignment listing_sidebar">
 
@@ -16,7 +17,7 @@ export default function FiltersItem() {
 <div className="accordion-content" style={{maxHeight: "189px"}}>
 
 <input type="text" className="searchTerm-quick-filters" placeholder="Search"/>
-<Filter/>
+<Checkbox filter_name={"Dine out"}/>
 
 </div>
 

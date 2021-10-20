@@ -1,6 +1,6 @@
-import '../styles/Filter.css'
+import '../styles/Checkbox.css'
 
-export default function Filter({filter_name= ""}) {
+export default function Checkbox({filter_name= ""}) {
 
     return (
         <div>
