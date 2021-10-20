@@ -13,6 +13,7 @@ function FilterPage() {
     return (
         <div>
             <Breadcrumb/>
+
             <div class="container">
                 <AdItem/>
                 <div class="main-section">
@@ -35,6 +36,7 @@ function FilterPage() {
                 </div>
                 </div>
             </div>
+
         </div>
     )
 }

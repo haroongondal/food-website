@@ -1,0 +1,207 @@
+
+.content-review-section{
+    display: flex;
+      justify-content: space-between;
+      padding: 0px 20px;
+      margin-bottom: 10px;
+      margin-top: 30px;
+      background: #fff;
+      height: 140px;
+  }
+  .for-two-sections{
+    display: flex;position: relative
+  }
+  .left-profile-image{
+    text-align: center;
+  }
+  .profile-image{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 60px;
+    height: 60px;
+  }
+  .text-user-name{
+    
+    font-size: 0.9rem;
+    /* margin: 0 auto; */
+    text-align: center;
+    margin-top: 5px;
+      margin-bottom: 0px;
+  }
+  .text-city-name{
+    font-size: 0.8rem;
+      text-align: center;
+      margin-bottom: 0px;
+      color: #000000a6;
+  }
+  .profile-review{
+    display: flex;
+    align-items: center;
+  }
+  .review-image{
+    height: 9px;
+      width: 9px;
+  }
+  .profile-review p{
+    margin-bottom: 0px;
+    font-size: 0.71rem;
+    margin-left: 5px;
+  }
+  .review-details{
+    margin-left: 50px;
+  }
+  .section-review-details{
+    position: absolute;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .section-rating-star{
+    width: 190px;
+  }
+  .section-rating-star h4{
+    color: black;
+    font-size: 1.0rem;
+    inline-size: max-content;
+  }
+  .section-rating-stars-dined-a-day{
+    display: flex;
+    margin-bottom: -10px;
+  }
+  .text-dined-a-day{
+    font-size: 0.75rem;
+    margin-left: 8px;
+     margin-top: 1px;
+     font-weight: 500;
+  }
+  .section-overall-review{
+    display: flex;
+    margin-bottom: -10px;
+  }
+  .div-overall-review{
+    display: flex;
+    margin-right: 5px;
+    font-size: 0.8rem;
+  }
+  .text-overall-review{
+    margin-right: 5px;
+    font-weight: 600;
+    color: #000;
+  }
+  .text-number-review{
+    margin-right: 5px;
+    font-weight: 700;
+    color: #D10909;
+  }
+  .comment-section{
+    display: -webkit-inline-box;
+    width: 200%;
+  }
+.paragraph-comment{
+    width: 200%;
+  }
+  .paragraph-comment p{
+    font-size: 0.8rem;
+  }
+  .report-section{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: -20px;
+  }
+  .helpful-review{
+    display: flex;
+    border: 1px solid #C1C1C1;
+    border-radius: 50px;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+  }
+  .helpful-review img{
+    width: 13px;
+      height: 13px;
+  }
+  .helpful-review p{
+    margin: 0px 5px;
+    font-size: 0.7rem;
+  }
+  .report-review{
+    display: flex;
+    border: 1px solid #C1C1C1;
+    border-radius: 50px;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+  }
+  .report-review p{
+    margin: 0px 5px;
+    font-size: 0.7rem;
+  }
+  .report-image{
+    width: 10px;
+      height: 10px;
+  }
+  
+.section-rating-star{
+    width: 190px;
+  }
+  .section-rating-star h4{
+    color: black;
+    font-size: 1.0rem;
+    inline-size: max-content;
+  }
+  .section-rating-stars-dined-a-day{
+    display: flex;
+    margin-bottom: -10px;
+  }
+  .text-dined-a-day{
+    font-size: 0.75rem;
+    margin-left: 8px;
+     margin-top: 1px;
+     font-weight: 500;
+  }
+
+  
+.rate-review-section {
+    float: left;
+    height: 5px;
+    margin-top: -8px;
+    margin-right: 5px;
+  }
+  .rate-review-section:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+  }
+  .rate-review-section:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:20px;
+    color:#ccc;
+  }
+  .rate-review-section:not(:checked) > label:before {
+    content: '★ ';
+  }
+  .rate-review-section > input:checked ~ label {
+    color: #439548;    
+  }
+  .rate-review-section:not(:checked) > label:hover,
+  .rate-review-section:not(:checked) > label:hover ~ label {
+    color: #509955;  
+  }
+  .rate-review-section > input:checked + label:hover,
+  .rate-review-section > input:checked + label:hover ~ label,
+  .rate-review-section > input:checked ~ label:hover,
+  .rate-review-section > input:checked ~ label:hover ~ label,
+  .rate-review-section > label:hover ~ input:checked ~ label {
+    color: #3db645;
+  }
+  .hr-for-review-section{
+    margin: 30px 0px;
+  }
+  .fixed{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 20;
+  }
