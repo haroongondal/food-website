@@ -23,7 +23,7 @@ const useFetch = (url) => {
       })
       .catch(err => {
         if (err.name === 'AbortError') {
-          console.log('fetch aborted')
+          console.log('fetch http call saborted')
         } else {
           setIsPending(false);
           setError(err.message);
