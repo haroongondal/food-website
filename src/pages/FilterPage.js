@@ -26,9 +26,6 @@ function FilterPage() {
                         <FilterPageItem/>
                         <FilterPageItem/>
                         <FilterPageItem/>
-                        <FilterPageItem/>
-                        <FilterPageItem/>
-                        <FilterPageItem/>
                     </div>
                     </div>
                     <hr className="grey"/>
