@@ -5,6 +5,14 @@ import { Link } from 'react-router-dom'
 
 export default function Filter_Page_Item({data = ""}) {
 
+    // const cusinesList = data.ListOfRestaurantCusine;
+
+    // var cusines = "";
+    // for (let c in cusinesList) {
+    //     cusines += c.
+    // }
+    
+
     return (
         
            
@@ -32,7 +40,7 @@ export default function Filter_Page_Item({data = ""}) {
                           : (data.PrimaryLocation == null ? data.PrimaryAreaOfOutlet
                            : data.PrimaryAreaOfOutlet + ", " + data.PrimaryLocation)}</span>
    
-                            <span className="filter-P-restaurent-location">₹ 2,500 for 2 | Multi-Cuisine, North Indian Multi-Cuisne, North </span>
+                            <span className="filter-P-restaurent-location">Rs. {data.CostOfTwo == null ? "00" : data.CostOfTwo} for 2 | Multi-Cuisine, North Indian Multi-Cuisne, North </span>
 
                             <span className="filter-P-offer">1 offer avaiable</span>
 

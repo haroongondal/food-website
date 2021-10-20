@@ -8,6 +8,7 @@
     word-spacing: normal;
     vertical-align: top;
     text-rendering: auto;
+    
   }
   .listing_sidebar{
     position: sticky;
@@ -67,6 +68,16 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-in-out;
+  }
+  .accordion-content-hide {
+    background-color: white;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    padding-left: 8px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    display: none;
   }
   .searchTerm-quick-filters{
     border: none;

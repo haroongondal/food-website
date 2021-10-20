@@ -11,7 +11,10 @@ import useFetch from '../components/useFetch';
 import Skeleton from 'react-loading-skeleton';
 
 
+
 function FilterPage() {
+
+    
     const { data, isPending, error } = useFetch('https://api.masairapp.com/api/Restaurant/GetRestaurants');
     return (
         <div>
@@ -20,7 +23,10 @@ function FilterPage() {
             <div class="container">
                 <AdItem/>
                 <div class="main-section">
-                <FiltersItem/>
+                <FiltersItem filter_name = "Quick Filters"/>
+                <FiltersItem filter_name = "Cusines"/>
+                <FiltersItem filter_name = "Tags"/>
+                <FiltersItem filter_name = "Features"/>
                 <div class="right-section">
                     <div class="div-top-boxes-content">
                     <HeadingFilterPage/>
@@ -37,7 +43,7 @@ function FilterPage() {
                 </div>
             </div>
 
-        </div>
+            </div>
     )
 }
 
