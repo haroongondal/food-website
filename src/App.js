@@ -6,8 +6,6 @@ import FilterPage from './pages/FilterPage';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 
-
-
 function App() {
 
   return (
@@ -22,11 +20,14 @@ function App() {
         <ConsumerLandingPage/>
         </Route>
 
-        <Route path = "/FilterPage">
+        <Route exact path = "/FilterPage">
         <FilterPage/>
         
         </Route>
 
+        <Route exact path = "/TestPage">
+        
+        </Route>
       </Switch>
     <Footer/>
     
