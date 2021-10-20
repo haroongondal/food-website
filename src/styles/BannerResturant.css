@@ -1,0 +1,17 @@
+.dashboard_image{
+    height: 460px;
+}
+.dashboard_image img{
+    width: 100%;
+    height: 100%;
+}
+.div-save-this-resturent{
+    position: absolute;
+    top: 40%;
+    right: 8%;
+  }
+  .section-save-this-resturent{
+    background-color: white;
+    padding: 15px 40px;
+    border-radius: 36px;
+  }

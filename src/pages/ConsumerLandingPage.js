@@ -14,13 +14,13 @@ import CarouselRestaurent from '../styles/Carousel_Restaurent';
 import HeadingRestaurentNear from '../components/Heading_Restaurent_Near';
 import CarouselCuisines from '../styles/Carousel_Cuisines';
 import HeadingWhyBook from '../components/Section_Why_Book';
-import useFetch from '../components/UseFetch';
+import useFetch from '../components/useFetch';
 import Skeleton from 'react-loading-skeleton';
 
 function ConsumerLandingPage() {
 
   const { data, isPending, error } = useFetch('https://api.masairapp.com/api/Restaurant/GetRestaurants');
-  
+
   
   return (
     <div className="App">
