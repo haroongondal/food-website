@@ -20,7 +20,7 @@ import Skeleton from 'react-loading-skeleton';
 function ConsumerLandingPage() {
 
   const { data, isPending, error } = useFetch('https://api.masairapp.com/api/Restaurant/GetRestaurants');
-
+  
   
   return (
     <div className="App">
@@ -46,7 +46,7 @@ function ConsumerLandingPage() {
       <HeadingRestaurentNear heading = {"Restaurants Near You"}/>
 
       <Carousel responsive={CarouselRestaurent}>
-        {isPending && <div><Skeleton width={200} height={250}orientation={"horizontal"}/></div>}
+        {isPending && <div><Skeleton width={200} height={250}/></div>}
         {error && <div>{error}</div>}
         {data && data.map((rest) => <RestaurentItem key = {rest.Id} data = {rest}/>)}
       
@@ -58,7 +58,7 @@ function ConsumerLandingPage() {
       <Carousel responsive={CarouselRestaurent}>
       {isPending && <div><Skeleton width={200} height={250}/></div>}
         {error && <div>{error}</div>}
-        {data && data.map((rest) => <RestaurentItem key = {rest.Id} data = {rest}/>)}
+        {data && data.filter((e) => e.IsFeature).map((rest) => <RestaurentItem key = {rest.Id} data = {rest}/>)}
       </Carousel>
 
       <HeadingRestaurentNear heading = {"Popular Cuisines"}/>
