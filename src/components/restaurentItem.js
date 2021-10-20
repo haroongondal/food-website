@@ -36,7 +36,10 @@ console.log(data.RestaurantName)
                     {/* restaurent-name */}
                     <div className="restaurent-details">
                     <a href="#abc">{data.RestaurantName}</a>
-                    <span className="restaurent-location">{data.PrimaryLocation == null ? "Address not available" : data.PrimaryLocation}</span>
+                    <span className="restaurent-location">
+                        {data.PrimaryAreaOfOutlet == null ? (data.PrimaryLocation == null ? "Address not Available" : data.PrimaryLocation)
+                      : (data.PrimaryLocation == null ? data.PrimaryAreaOfOutlet
+                      : data.PrimaryAreaOfOutlet + ", " + data.PrimaryLocation)}</span>
                     <span className="restaurent-discount">Flat 25% Off the Total bill</span>
                     </div>
 

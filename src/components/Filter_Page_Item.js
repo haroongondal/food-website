@@ -3,7 +3,7 @@ import restaurentImage from '../images/restaurant.jpg'
 import bookmarkIcon from '../images/bookmark.png'
 import { Link } from 'react-router-dom'
 
-export default function Filter_Page_Item() {
+export default function Filter_Page_Item({data = ""}) {
 
     return (
         
@@ -25,9 +25,15 @@ export default function Filter_Page_Item() {
                             <div className="filter-P-restaurent-detail-box">
                             {/* restaurent-name */}
                             <div className="filter-P-restaurent-name">
-                            <p>JW Kitchen</p>
-                            <span className="filter-P-restaurent-location" style={{marginTop:"5px"}}>JW Marriott Hotel, Vital Mallya Road, Central</span>
+                              
+                            <p>{data.RestaurantName}</p>
+                            <span className="filter-P-restaurent-location">
+                            {data.PrimaryAreaOfOutlet == null ? (data.PrimaryLocation == null ? "Address not Available" : data.PrimaryLocation)
+                          : (data.PrimaryLocation == null ? data.PrimaryAreaOfOutlet
+                           : data.PrimaryAreaOfOutlet + ", " + data.PrimaryLocation)}</span>
+   
                             <span className="filter-P-restaurent-location">₹ 2,500 for 2 | Multi-Cuisine, North Indian Multi-Cuisne, North </span>
+
                             <span className="filter-P-offer">1 offer avaiable</span>
 
                             <div style={{marginTop: "5px"}}>
