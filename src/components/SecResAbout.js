@@ -5,8 +5,8 @@ import smook from '../images/smoking_area.png'
 function SecResAbout() {
     return (
         <div>
-            <div class="border-about-section" id="about-section">
-            <div class="content-about-section">
+            <div className="border-about-section" id="about-section">
+            <div className="content-about-section">
                         <h6>About</h6>
                         <p>
                             <span>Lorem ipsum dolor, adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem 
@@ -17,11 +17,11 @@ function SecResAbout() {
                                   Sed dapibus pulvinar nibh tempor porta. </span><a onclick="myFunction()" id="myBtn">Read more</a>
                             </span>
                         </p>
-                        <div class="section-cuisine">
-                            <div class="image-cuisine">
+                        <div className="section-cuisine">
+                            <div className="image-cuisine">
                                 <img src={knife}/>
                             </div>
-                            <div class="div-text-cuisine">
+                            <div className="div-text-cuisine">
                                 <h4>CUISINE</h4>
                                 <a href="#">Multi-Cuisine</a>
                                 <a href="#">Multi-Cuisine</a>
@@ -29,11 +29,11 @@ function SecResAbout() {
                                 <a href="#">Multi-Cuisine</a>
                             </div>
                         </div>
-                        <div class="section-cuisine">
-                            <div class="image-cuisine">
+                        <div className="section-cuisine">
+                            <div className="image-cuisine">
                                 <img src={knife}/>
                             </div>
-                            <div class="div-text-cuisine">
+                            <div className="div-text-cuisine">
                                 <h4>CUISINE</h4>
                                 <a href="#">Multi-Cuisine</a>
                                 <a href="#">Multi-Cuisine</a>
@@ -43,11 +43,11 @@ function SecResAbout() {
                                 <a href="#">Multi-Cuisine</a>
                             </div>
                         </div>
-                        <div class="section-cuisine">
-                            <div class="image-cuisine">
+                        <div className="section-cuisine">
+                            <div className="image-cuisine">
                                 <img src={knife}/>
                             </div>
-                            <div class="div-text-cuisine">
+                            <div className="div-text-cuisine">
                                 <h4>CUISINE</h4>
                                 <a href="#">Multi-Cuisine</a>
                                 <a href="#">Multi-Cuisine</a>
@@ -56,11 +56,11 @@ function SecResAbout() {
                                 <a href="#">Multi-Cuisine</a>
                             </div>
                         </div>
-                        <div class="section-cuisine">
-                            <div class="image-cuisine">
+                        <div className="section-cuisine">
+                            <div className="image-cuisine">
                                 <img src={knife}/>
                             </div>
-                            <div class="div-text-cuisine">
+                            <div className="div-text-cuisine">
                                 <h4>CUISINE</h4>
                                 <a href="#">Multi-Cuisine</a>
                                 <a href="#">Multi-Cuisine</a>
@@ -68,13 +68,13 @@ function SecResAbout() {
                                 <a href="#">Multi-Cuisine</a>
                             </div>
                         </div>
-                        <div class="section-cuisine">
-                            <div class="image-cuisine">
+                        <div className="section-cuisine">
+                            <div className="image-cuisine">
                                 <img src={knife}/>
                             </div>
-                            <div class="div-text-cuisine">
+                            <div className="div-text-cuisine">
                                 <h4>CUISINE</h4>
-                                <ul class="ul-facilities">
+                                <ul className="ul-facilities">
                                     <li>
                                         <img src={smook}/>
                                         <a>Smoking area</a>

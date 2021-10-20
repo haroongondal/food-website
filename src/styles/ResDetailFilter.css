@@ -1,0 +1,99 @@
+
+.main-filters-section {
+    display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-top: 10px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      justify-items: center;
+  }
+  .text-good-for-groups{
+    font-size: 15px;
+    margin-bottom: -20px;
+    color: #747474;
+    margin-left: -5px;
+  }
+  /* Hiding the initial checkbox */
+  .input-filter-checkbox[type=checkbox] {
+    visibility: hidden;
+  }
+  /* Creating a custom checkbox based on demand */
+  .w3docs-filter-section {
+    position: absolute;
+      top: 0;
+      left: 0;
+      height: 17px;
+      width: 17px;
+      background-color: white;
+      border-radius: 3px;
+      border: 1px solid #9F9F9F;
+  }
+  /* Specify the background color to be shown when hovering over checkbox */
+  /* .main:hover input ~ .w3docs {
+    background-color: #9F9F9F;
+  } */
+  /* Specify the background color to be shown when checkbox is active */
+  .main-filters-section .input-filter-checkbox:active ~ .w3docs-filter-section {
+    background-color: white;
+  }
+  /* Specify the background color to be shown when checkbox is checked */
+  .main-filters-section .input-filter-checkbox:checked ~ .w3docs-filter-section {
+    background-color: #0083C7;
+  }
+  /* Checkmark to be shown in checkbox */
+  /* It is not be shown when not checked */
+  .w3docs-filter-section:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  /* Display checkmark when checked */
+  .main-filters-section .input-filter-checkbox:checked ~ .w3docs-filter-section:after {
+    display: block;
+  }
+  /* Styling the checkmark using webkit */
+  /* Rotated the rectangle by 45 degree and 
+  showing only two border to make it look
+  like a tickmark */
+  .main-filters-section .w3docs-filter-section:after {
+    left: 5px;
+    bottom: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .div-for-filter-buttons{
+    display: flex;
+      padding: 0;
+      margin: 0 0 -16px;
+      overflow-x: auto;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+  .filter-button{
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    text-align: center;
+    height: unset;
+    width: unset;
+    padding: 8px 16px;
+    margin: 0 16px 16px 0;
+    border-radius: .125rem;
+    transition: none;
+    flex-shrink: 0;
+    -webkit-appearance: button;
+    background-color: #fff;
+      color: #2d333f;
+      border: .0625rem solid #d8d9db;
+  }

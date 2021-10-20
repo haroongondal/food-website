@@ -1,16 +1,17 @@
 import '../styles/Filter_Page_Item.css'
 import restaurentImage from '../images/restaurant.jpg'
 import bookmarkIcon from '../images/bookmark.png'
+import { Link } from 'react-router-dom'
 
 export default function Filter_Page_Item() {
 
     return (
-        <div>
+        
            
             
            <div className="filter-page-box">
 
-                
+                    <Link to = "/">
                             {/* img-box */}
                             <div className="filter-P-restaurent-image">
                             <img alt="restaurent-pic" src={restaurentImage}/>
@@ -24,7 +25,7 @@ export default function Filter_Page_Item() {
                             <div className="filter-P-restaurent-detail-box">
                             {/* restaurent-name */}
                             <div className="filter-P-restaurent-name">
-                            <a href="#abc">JW Kitchen</a>
+                            <p>JW Kitchen</p>
                             <span className="filter-P-restaurent-location">JW Marriott Hotel, Vital Mallya Road, Central</span>
                             <span className="filter-P-offer">1 offer avaiable</span>
 
@@ -35,10 +36,11 @@ export default function Filter_Page_Item() {
                             </div>
                                 
                             </div>
+                     </Link>
                             
-                            </div>   
-                
+            </div>   
             
-        </div>
+            
+       
     )
 }

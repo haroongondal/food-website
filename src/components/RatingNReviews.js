@@ -3,64 +3,64 @@ import '../styles/RatingNReviews.css'
 function RatingNReviews() {
     return (
         <div>
-            <div class="ratings-bars-rating-stars">
-                          <div class="content-rating-bars"> 
-                           <div class="bar">         
-                           <div class="side">
+            <div className="ratings-bars-rating-stars">
+                          <div className="content-rating-bars"> 
+                           <div className="bar">         
+                           <div className="side">
                            <div>5</div>
                            </div>
-                           <div class="middle">
-                           <div class="bar-container">
-                           <div class="bar-alignment bar5"></div>
+                           <div className="middle">
+                           <div className="bar-container">
+                           <div className="bar-alignment bar5"></div>
                            </div>
                            </div>
                            </div>
-                           <div class="bar">         
-                            <div class="side">
+                           <div className="bar">         
+                            <div className="side">
                             <div>4</div>
                             </div>
-                            <div class="middle">
-                            <div class="bar-container">
-                            <div class="bar-alignment bar4"></div>
+                            <div className="middle">
+                            <div className="bar-container">
+                            <div className="bar-alignment bar4"></div>
                             </div>
                             </div>
                             </div>
-                            <div class="bar">         
-                           <div class="side">
+                            <div className="bar">         
+                           <div className="side">
                            <div>3</div>
                            </div>
-                           <div class="middle">
-                           <div class="bar-container">
-                           <div class="bar-alignment bar3"></div>
+                           <div className="middle">
+                           <div className="bar-container">
+                           <div className="bar-alignment bar3"></div>
                            </div>
                            </div>
                            </div>
-                           <div class="bar">         
-                            <div class="side">
+                           <div className="bar">         
+                            <div className="side">
                             <div>2</div>
                             </div>
-                            <div class="middle">
-                            <div class="bar-container">
-                            <div class="bar-alignment bar2"></div>
+                            <div className="middle">
+                            <div className="bar-container">
+                            <div className="bar-alignment bar2"></div>
                             </div>
                             </div>
                             </div>
-                            <div class="bar">         
-                           <div class="side">
+                            <div className="bar">         
+                           <div className="side">
                            <div>1</div>
                            </div>
-                           <div class="middle">
-                           <div class="bar-container">
-                           <div class="bar-alignment bar1"></div>
+                           <div className="middle">
+                           <div className="bar-container">
+                           <div className="bar-alignment bar1"></div>
                            </div>
                            </div>
                            </div>
                            
                         </div>
                        
-                        <div class="content-rating-stars">
-                            <h3 class="rating-number">4.5</h3>
-                            <div class="rate-for-ratings-section">
+                        <div className="content-rating-stars">
+                            <h3 className="rating-number">4.5</h3>
+                            <div className="rate-for-ratings-section">
                                 <input type="radio" id="star5" name="rate" value="5"/>
                                 <label for="star5" title="text">5 stars</label>
                                 <input type="radio" id="star4" name="rate" value="4"/>
