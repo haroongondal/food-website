@@ -1,14 +1,6 @@
 .div-sort-by{
     width: 33%;
-  }
-  
-  .alignment{
-    display: inline-block;
-    zoom: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    text-rendering: auto;
+    display: contents;
   }
   .input-group{
     overflow: hidden;

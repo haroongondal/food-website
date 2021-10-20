@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ConsumerLandingPage from './pages/ConsumerLandingPage';
 import FilterPage from './pages/FilterPage';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 
 
@@ -26,7 +27,7 @@ function App() {
         </Route>
 
       </Switch>
-    
+    <Footer/>
     
     
     </Router>
