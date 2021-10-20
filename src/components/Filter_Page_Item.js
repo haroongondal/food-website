@@ -26,7 +26,8 @@ export default function Filter_Page_Item() {
                             {/* restaurent-name */}
                             <div className="filter-P-restaurent-name">
                             <p>JW Kitchen</p>
-                            <span className="filter-P-restaurent-location">JW Marriott Hotel, Vital Mallya Road, Central</span>
+                            <span className="filter-P-restaurent-location" style={{marginTop:"5px"}}>JW Marriott Hotel, Vital Mallya Road, Central</span>
+                            <span className="filter-P-restaurent-location">₹ 2,500 for 2 | Multi-Cuisine, North Indian Multi-Cuisne, North </span>
                             <span className="filter-P-offer">1 offer avaiable</span>
 
                             <div style={{marginTop: "5px"}}>

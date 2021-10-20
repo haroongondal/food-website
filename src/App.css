@@ -9,3 +9,6 @@ header{
   margin-left:100px;
   margin-right:100px;
 }
+.App-body{
+  background-color: #ECECEC;
+}

@@ -1,5 +1,7 @@
 ul.breadcrumb {
     padding: 10px 16px;
+    padding-left: 0px;
+    padding-top: 20px;
     list-style: none;
     margin-bottom:40px;
   }
