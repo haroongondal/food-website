@@ -1,0 +1,21 @@
+
+  .navigation-page-item-active .navigation-page-link {
+    z-index: 3;
+    color: #000;
+    background-color: #007bff00;
+    border-color: #DC0000;
+  }
+  .navigation-page-link{
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1;
+    color: #000;
+    background-color: #007bff00;
+    border: 1px solid #BBBBBB;
+    
+  }
+  .decoration li a{
+    text-decoration-line: none;
+  }
