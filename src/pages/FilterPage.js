@@ -35,7 +35,9 @@ function FilterPage() {
                 <FiltersItem filter_name = "Cusines"/>
                 <FiltersItem filter_name = "Tags"/>
                 <FiltersItem filter_name = "Features"/>
+                </div>
 
+</div>
                 <div className="right-section">
                     <div className="div-top-boxes-content">
 
