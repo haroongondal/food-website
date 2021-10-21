@@ -10,7 +10,6 @@ import RestaurentDetailsPage from './pages/RestaurentDetailsPage';
 
 import TestPage from './pages/TestPage';
 import OrderHistoryPage from './pages/OrderHistoryPage';
-import ReviewHistoryPage from './pages/ReviewHistoryPage';
 
 
 
@@ -31,7 +30,6 @@ function App() {
 
         <Route exact path = "/FilterPage">
         <FilterPage/>
-        
         </Route>
 
         <Route exact path = "/TestPage">
@@ -39,16 +37,12 @@ function App() {
         </Route>
 
 
-        <Route exact path = "/RestaurentDetailsPage">
+        <Route exact path = "/RestaurentDetailsPage/:id">
         <RestaurentDetailsPage/> 
         </Route>
 
-        <Route exact path = "/OrderHistoryPage">
+        <Route path = "/Dashboard">
         <OrderHistoryPage/> 
-        </Route>
-
-        <Route exact path = "/ReviewHistoryPage">
-        <ReviewHistoryPage/> 
         </Route>
 
       </Switch>

@@ -1,0 +1,14 @@
+ {
+ 
+ "DashboardTypes": {
+
+    "Reviews": 0,
+    "Follwers": 1,
+    "Photos": 2,
+    "Bookmarks": 3,
+    "OrderHistory": 4,
+    "MyProfile": 5
+
+
+ }
+}

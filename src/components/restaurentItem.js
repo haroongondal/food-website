@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/RestaurentItem.css'
 import restaurentImage from '../images/restaurant.jpg'
+import { Link } from 'react-router-dom'
 
 
 export default function RestaurentItem({key = "", data = ""}) {
@@ -8,7 +9,8 @@ export default function RestaurentItem({key = "", data = ""}) {
 console.log(data.RestaurantName)
     return (
        
-        <div>
+        <Link to = {`/RestaurentDetailsPage/${data.Id}`}>
+        <div >
            <div className="box-restaurent">
                     {/* img-box */}
                     <div className="img-restaurent">
@@ -52,6 +54,6 @@ console.log(data.RestaurantName)
                 
             
         </div>
-      
+        </Link>
     )
 }
