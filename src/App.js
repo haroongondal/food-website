@@ -7,8 +7,10 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import TestPage from './pages/TestPage';
 
-function App() {
 
+
+function App() {
+    
   return (
     <div>
       
@@ -29,6 +31,7 @@ function App() {
         <Route exact path = "/TestPage">
         <TestPage/>
         </Route>
+
       </Switch>
     <Footer/>
     

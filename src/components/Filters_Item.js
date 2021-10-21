@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import '../styles/Filters_Item.css'
 import Checkbox from './Checkbox'
-import useFetch from './useFetch'
+import useFetch from '../Utils/useFetch'
 
 
 export default function FiltersItem({filter_name = ""}) {
@@ -46,11 +46,11 @@ function showFilters(dt) {
 
     return (
         
-<div className="adjust">
 
-<div className="alignment listing_sidebar">
 
-{/* content starts here */}
+
+
+
 
 <div className="container" style={{display: "contents"}}>
 
@@ -71,9 +71,9 @@ function showFilters(dt) {
 </div>
 
 </div>  
-</div>
 
-        </div>
+
+       
     )
 }
 
