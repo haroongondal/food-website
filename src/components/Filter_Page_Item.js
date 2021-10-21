@@ -19,7 +19,7 @@ export default function Filter_Page_Item({data = ""}) {
             
            <div className="filter-page-box">
 
-                    <Link to = "/">
+                    <Link to = "/RestaurentDetailsPage">
                             {/* img-box */}
                             <div className="filter-P-restaurent-image">
                             <img alt="restaurent-pic" src={restaurentImage}/>

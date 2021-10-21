@@ -1,7 +1,5 @@
 import React from 'react'
 import Breadcrumb from '../components/Breadcrumb'
-import RestaurentItem from '../components/RestaurentItem'
-import CarouselRestaurent from '../styles/Carousel_Restaurent';
 import AdItem from '../components/Ad_Item';
 import FiltersItem from '../components/Filters_Item';
 import '../styles/FilterPage.css'

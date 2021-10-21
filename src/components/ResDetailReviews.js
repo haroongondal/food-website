@@ -14,7 +14,7 @@ function ResDetailReviews() {
                                     <p className="text-user-name">Nadeem</p>
                                     <p className="text-city-name">New York</p>
                                     <div className="profile-review">
-                                        <img className="review-image" src={reviews}/>
+                                        <img alt="review-pic" className="review-image" src={reviews}/>
                                         <p><span>1</span> review</p>
                                     </div>
                                 </div>
@@ -76,11 +76,11 @@ function ResDetailReviews() {
                             </div>
                             <div className="report-section">
                                 <div className="helpful-review">
-                                <img src={thumbs}/>
+                                <img alt="thumb-pic" src={thumbs}/>
                                 <p>Helpful review</p>
                                 </div>
                                 <div className="report-review">
-                                    <img className="report-image" src={blackflag}/>
+                                    <img alt="report-pic" className="report-image" src={blackflag}/>
                                     <p>Report</p>
                                     </div>
                                 
