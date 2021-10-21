@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/SecResDetails.css'
 import downIcon from '../images/down_arrow.svg'
-function SecResDetails() {
+function SecResDetails(props) {
     return (
         
             <div id="top-section">
@@ -10,10 +10,14 @@ function SecResDetails() {
                        <div className="merge-text-rating" style={{display: "flex",
                        justifyContent: "space-between"}}>
                         <div className="text-section">
-                            <h3>Local</h3>
-                            <h6 className="text-font-size">Rs 1,800 for 2 | <span style={{color:"gray"}}> North indian, North indian, North indian</span></h6>
-                            <h6 className="text-font-size">Scindia House | Scindia House | Scindia House |<span style={{color: "#0083C7", fontWeight: "700"}}> Get Direction</span></h6>
-                            <h6 className="text-font-size">Time: 12:00 PM to 12:00 AM <span style={{color: "#0083C7", fontWeight: "700"}}>(Open Now)</span><span><img alt="blue-arrow" src={downIcon} style={{height: "11px",width: "11px",marginLeft: "5px",marginBottom: "5px"}}/></span></h6>
+                            <h3>{props.RestaurantName}</h3>
+                            <h6 className="text-font-size">Rs {props.CostOfTwo} for 2 | <span style={{color:"gray"}}>{props.Cusines}</span></h6>
+                            <h6 className="text-font-size">
+                            {props.PrimaryAreaOfOutlet == null ? (props.PrimaryLocation == null ? "Address not Available" : props.PrimaryLocation)
+                            : (props.PrimaryLocation == null ? props.PrimaryAreaOfOutlet
+                            : props.PrimaryAreaOfOutlet + ", " + props.PrimaryLocation)}<span style={{color: "#0083C7", fontWeight: "700"}}> Get Direction</span></h6>
+                            <h6 className="text-font-size">Time: 12:00 PM to 12:00 AM <span style={{color: "#0083C7", fontWeight: "700"}}>(Open Now)</span>
+                            <span><img alt="blue-arrow" src={downIcon} style={{height: "11px",width: "11px",marginLeft: "5px",marginBottom: "5px"}}/></span></h6>
                         </div>
                         <div className="rating-section" style={{display:"flex",
                         flexDirection: "column",
