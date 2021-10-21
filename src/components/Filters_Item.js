@@ -46,11 +46,11 @@ function showFilters(dt) {
 
     return (
         
-<div className="adjust">
 
-<div className="alignment listing_sidebar">
 
-{/* content starts here */}
+
+
+
 
 <div className="container" style={{display: "contents"}}>
 
@@ -71,9 +71,9 @@ function showFilters(dt) {
 </div>
 
 </div>  
-</div>
 
-        </div>
+
+       
     )
 }
 

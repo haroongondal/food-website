@@ -23,13 +23,22 @@ function FilterPage() {
 
             <div className="container">
                 <AdItem/>
+
                 <div className="main-section">
+
+                <div className="adjust">
+
+                <div className="alignment listing_sidebar">
+
+
                 <FiltersItem filter_name = "Quick Filters"/>
                 <FiltersItem filter_name = "Cusines"/>
                 <FiltersItem filter_name = "Tags"/>
                 <FiltersItem filter_name = "Features"/>
+
                 <div className="right-section">
                     <div className="div-top-boxes-content">
+
                     <HeadingFilterPage/>
                     <Sortby/>
                     <div className="align-boxes">
