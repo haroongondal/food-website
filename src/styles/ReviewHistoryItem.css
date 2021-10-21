@@ -1,226 +1,118 @@
-
 .div-border-review-history-box{
-    margin: 20px 40px;background-color: white;padding: 20px 0px;box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);overflow: hidden;
-  }
-  .div-kadai-chicken-review-history{
-    display: flex;justify-content: space-between;padding: 0px 20px;margin-top: 8px;
-  }
-  .black-circle{
-    content: "\25CF";
-    font-size: 10px;
-  }
-  .text-kadai-chicken-review-history{
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin-top: -5px;
-  }
-  .text-dish-price-review-history{
-    background-color: #439548;
-    color: white;
-    padding: 8px 30px;
-    border-radius: 5px;
-    margin-top: -15px;
-    font-weight: 600;
-    font-size: 1.1rem;
-  }
-  .hr-order-history-review-history{
-    margin-top: 5px;
-    margin-bottom: 20px;
-  }
-  .section-rating-star{
-    width: 190px;
-  }
-  .section-rating-star h4{
-    color: black;
-    font-size: 1.0rem;
-    inline-size: max-content;
-  }
-  .section-rating-stars-dined-a-day{
-    display: flex;
-    margin-bottom: -10px;
-  }
-  .text-dined-a-day{
-    font-size: 0.75rem;
-    margin-left: 8px;
-     margin-top: 1px;
-     font-weight: 500;
-  }
-  .section-overall-review{
-    display: flex;
-    margin-bottom: -10px;
-  }
-  .div-overall-review{
-    display: flex;
-    margin-right: 5px;
-    font-size: 0.8rem;
-  }
-  .text-overall-review{
-    margin-right: 5px;
-    font-weight: 600;
-    color: #000;
-  }
-  .text-number-review{
-    margin-right: 5px;
-    font-weight: 700;
-    color: #D10909;
-  }
-  .div-for-butter-chicken-part-1-review-history h6{
-    font-size: 0.7rem;
-  }
-  .section-restaurent-location{
-    inline-size: max-content;
-  }
-  .section-restaurent-location h4{
-    font-size: 0.71rem;
-      color: #898989;
-      margin-bottom: .3rem;
-      
-  }
-  .section-restaurent-location p{
-    font-size: 0.6rem;
-    color: #898989;
-  }
-  .been-there{
-    color: #E40E0E;
-    font-size: 0.75rem;
-    position: absolute;
-    bottom: -55px;
-    font-weight: 600;
-  }
-  .been-there svg{
-    margin-bottom: 4px;
-      margin-right: 5px;
-  }
-  .section-write-a-review{
-    margin-bottom: 10px;
-  }
-  .text-duration{
-    text-align: end;
-    margin-top: 4px;
-  }
-  .text-duration h6{
-    font-size: x-small;
-  }
-  .button-write-a-review{
-    position: relative;
-    bottom: -76px;
-  }
-  .button-write-a-review button{
-    background: none;
-      border: none;
-      color: #E40E0E;
-      font-size: 0.8rem;
-      font-weight: 700;
-      padding-right: 0px;
-  }
-  .black-circle-overall-review{
-    content: "\25CF";
-    font-size: 7px;
-    margin-top: 5px;
-  }
-  .comment-section{
-    display: -webkit-inline-box;
-    width: 200%;
-  }
-  .paragraph-comment{
-    width: 200%;
-  }
-  .paragraph-comment p{
-    font-size: 0.8rem;
-  }
-  .report-section{
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: -20px;
-  }
-  .helpful-review{
-    display: flex;
-    border: 1px solid #C1C1C1;
-    border-radius: 50px;
-    align-items: center;
-    padding: 5px;
-    margin: 5px;
-  }
-  .helpful-review img{
-    width: 13px;
-      height: 13px;
-  }
-  .helpful-review p{
-    margin: 0px 5px;
-    font-size: 0.7rem;
-  }
-  .report-review{
-    display: flex;
-    border: 1px solid #C1C1C1;
-    border-radius: 50px;
-    align-items: center;
-    padding: 5px;
-    margin: 5px;
-  }
-  .report-review p{
-    margin: 0px 5px;
-    font-size: 0.7rem;
-  }
-  .report-image{
-    width: 10px;
-      height: 10px;
-  }
-  .button-order-history-review-history a{
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .button-order-history-review-history a:hover{
-    box-shadow: 1px 1px 3px black;
-    transform: scale(2.008);
-    transition: all  0.3s ease;
-    padding: 11px 15px;
-  }
-  .image-triangle-arrow-review-history{
-    height: 10px; width: 10px;
-  }
-  .rate-review-section {
-    float: left;
-    height: 5px;
-    margin-top: -8px;
-    margin-right: 5px;
-  }
-  .rate-review-section:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
-  }
-  .rate-review-section:not(:checked) > label {
-    float:right;
-    width:1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:20px;
-    color:#ccc;
-  }
-  .rate-review-section:not(:checked) > label:before {
-    content: '★ ';
-  }
-  .rate-review-section > input:checked ~ label {
-    color: #439548;    
-  }
-  .rate-review-section:not(:checked) > label:hover,
-  .rate-review-section:not(:checked) > label:hover ~ label {
-    color: #509955;  
-  }
-  .rate-review-section > input:checked + label:hover,
-  .rate-review-section > input:checked + label:hover ~ label,
-  .rate-review-section > input:checked ~ label:hover,
-  .rate-review-section > input:checked ~ label:hover ~ label,
-  .rate-review-section > label:hover ~ input:checked ~ label {
-    color: #3db645;
-  }
-  .hr-for-review-section{
-    margin: 30px 0px;
-  }
-  .fixed{
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 20;
-  }
+  margin: 20px 40px;background-color: white;padding: 20px 0px;box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);overflow: hidden;
+}
+.div-kadai-chicken-review-history{
+  display: flex;justify-content: space-between;padding: 0px 20px;margin-top: 8px;
+}
+.text-kadai-chicken-review-history{
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: -5px;
+}
+
+.rate-review-history {
+  float: left;
+  height: 5px;
+  margin-top: -8px;
+  margin-right: 5px;
+}
+.rate-review-history:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.rate-review-history:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:20px;
+  color:#ccc;
+}
+.rate-review-history:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate-review-history > input:checked ~ label {
+  color: #439548;    
+}
+.rate-review-history:not(:checked) > label:hover,
+.rate-review-history:not(:checked) > label:hover ~ label {
+  color: #509955;  
+}
+.rate-review-history > input:checked + label:hover,
+.rate-review-history > input:checked + label:hover ~ label,
+.rate-review-history > input:checked ~ label:hover,
+.rate-review-history > input:checked ~ label:hover ~ label,
+.rate-review-history > label:hover ~ input:checked ~ label {
+  color: #3db645;
+}
+.black-circle{
+  content: "\25CF";
+  font-size: 10px;
+}
+.for-3-sections-review-history{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+  margin-bottom: 10px;
+}
+.section-1-image-review-history img{
+  border-radius: 10%;
+  object-fit: cover;
+}
+.div-for-butter-chicken-part-1-review-history{
+  margin-top: 3px
+}
+.div-for-butter-chicken-part-1-review-history h4{
+  color: black;
+  font-size: 1.0rem;
+  inline-size: max-content;
+  margin-bottom: .3rem;
+}
+.section-overall{
+  display: flex;
+}
+.div-overall{
+  display: flex;
+  margin-right: 5px;
+}
+
+.text-overall{
+  margin-right: 5px;
+  font-weight: 600;
+  color: #000;
+}
+.text-number{
+  margin-right: 5px;
+  font-weight: 700;
+  color: #D10909;
+}
+.div-for-butter-chicken-part-1-review-history h6{
+  font-size: 0.7rem;
+}
+.black-circle-overall{
+  content: "\25CF";
+  font-size: 7px;
+  margin-top: 2px;
+}
+.button-order-history-review-history a{
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.button-order-history-review-history a:hover{
+  box-shadow: 1px 1px 3px black;
+  transform: scale(2.008);
+  transition: all  0.3s ease;
+  padding: 11px 15px;
+}
+.image-triangle-arrow-review-history{
+  height: 10px; width: 10px;
+}
+#edit {
+  outline: none;
+  font-size: 10px;
+  width: 200%;
+  font-weight: 600;
+}

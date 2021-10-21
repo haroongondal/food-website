@@ -4,7 +4,7 @@ import triangle from '../images/triangle-right-arrow.svg'
 import '../styles/ReviewHistoryItem.css'
 function ReviewHistoryItem() {
     return (
-        <div>
+        
             <div class="div-border-review-history-box moreBox">
                     <div class="div-kadai-chicken-review-history">
                         <h6 class="text-kadai-chicken-review-history">Kadai Chicken</h6>
@@ -62,13 +62,10 @@ function ReviewHistoryItem() {
                                 <div class="div-for-delivery-rating-part-2-review-history">
                                 <div style={{display: "-webkit-inline-box"}}>
                                 <div style={{width: "100%"}}>
-                                    <textarea rows="4" cols="50" name="comment" form="usrform" id="edit">                                        Not bad, not great.
+                                    <textarea rows="4" cols="50" name="comment" form="usrform" id="edit">Not bad, not great.
                                         Given my experience at other locations, competition and prices, I expect better than mediocre.
                                     </textarea>
-                                    {/* <!-- <div style="display: flex;">
-                                    <button type="submit" id="edit-button">Edit</button>
-                                    <button type="submit" id="end-editing">Done</button>
-                                    </div> --> */}
+                                    
                                     
                                 </div>
                                 </div>
@@ -80,16 +77,16 @@ function ReviewHistoryItem() {
                         <div class="section-3-following-review-history" style={{display:"flex",marginBottom: "10px"}}>
                             <div>
                                 <div class="button-order-history-review-history" style={{marginBottom: "20px"}} id="edit-button">
-                                    <a style={{backgroundolor: "#1D1D1D",color: "white"}}>Edit Review<span style={{marginLeft: "10px"}}><img class="image-triangle-arrow" src={triangle}/></span></a>
+                                    <a href="#abc" style={{backgroundColor: "#1D1D1D",color: "white"}}>Edit Review<span style={{marginLeft: "10px"}}><img alt="down-arrow" class="image-triangle-arrow" src={triangle}/></span></a>
                                 </div>
-                                <div class="button-order-history-review-history" style={{float: "right", display: "none"}} id="end-editing">
-                                    <a style={{backgroundColor: "#1D1D1D",color: "white"}}>Done</a>
+                                <div class="button-order-history-review-history" style={{float: "right"}} id="end-editing">
+                                    <a href="#abc" style={{backgroundColor: "#1D1D1D",color: "white"}}>Done</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-        </div>
+        
     )
 }
 

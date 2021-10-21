@@ -3,7 +3,7 @@ import profile_pic from '../images/profile_pic.jpg'
 import '../styles/SuggestedFollowers.css'
 function SuggestedFollowers() {
     return (
-        <div>
+        
             <div className="alignment-suggested-followers">
                                     <img src={profile_pic} alt="Avatar"/>
                                     <div>
@@ -11,7 +11,7 @@ function SuggestedFollowers() {
                                         <p>123 Reviews - 1.7k Followers</p>
                                     </div>
                                 </div>
-        </div>
+        
     )
 }
 

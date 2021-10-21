@@ -1,0 +1,12 @@
+.main-section{
+    display: flex;
+    margin-top: 30px;
+    text-rendering: optimizespeed;
+    display: -ms-flexbox;
+    -ms-flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row wrap;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+  }

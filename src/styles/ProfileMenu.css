@@ -1,4 +1,11 @@
-
+.for-link a{
+    display: inline-grid;
+    text-decoration: none;
+    color: white;
+}
+.for-link a:hover{
+  color:white;
+}
 .alignment-profile-data{
     display: inline-flex;
     margin: 5px 0px;

@@ -9,7 +9,7 @@ export default function ResLikeItem() {
 
         <div className="box-restaurent-3rd-page">
 
-                  <Link to = "/FilterPage">
+                  <Link to = "/OrderHistoryPage">
                                 {/* img-box */}
                                 <div className="slide-img-restaurent-3rd-page">
                                 <img alt="4" src={restaurentImage}/>
