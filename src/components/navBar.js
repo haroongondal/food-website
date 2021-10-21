@@ -4,10 +4,17 @@ import logo from '../images/logo.png'
 import React, { useState } from 'react';
 import locationIcon from '../images/location_pin.svg'
 import downArrowIcon from '../images/down_arrow.svg'
+import SignUp from './SignUp';
+import Modal from 'react-responsive-modal';
+import Login from './Login';
 
 export default function NavBar() {
 
 const [navbar, setNavbar] = useState(false)
+
+const [isSignpShowing, setSignupShowing] = useState(false)
+
+const [isLoginShowing, setLoginShowing] = useState(false)
 
 
 const showSearchBar = ()=> {
@@ -18,10 +25,37 @@ const showSearchBar = ()=> {
     }
 }
 
+const handleSignUpPop = (e) => {
+e.preventDefault();
+setSignupShowing(true)
+}
+
+const closeSignupPop = () => {
+    setSignupShowing(false)
+}
+
+const handleLoginPop = (e) => {
+    e.preventDefault();
+    setLoginShowing(true)
+    }
+    
+const closeLoginPop = () => {
+    setLoginShowing(false)
+ }
+
+
 window.addEventListener('scroll', showSearchBar)
+
     return (
         <div>
            
+        <Modal open={isSignpShowing} onClose={closeSignupPop} center styles = {{modal: {"margin-top": "80px"}}}>
+          <SignUp/>
+      </Modal>
+
+      <Modal open={isLoginShowing} onClose={closeLoginPop} center styles = {{modal: {"margin-top": "80px"}}}>
+          <Login/>
+      </Modal>
 
            <div className="header">
         <nav className="navbar">
@@ -53,6 +87,8 @@ window.addEventListener('scroll', showSearchBar)
 
       {/* Search-bar */}
 
+      
+
 
     <div className="parent">
       <div className="search-box sticky-search" id="searchBar" style={{ display: navbar ? "inline" : "none"}}>
@@ -70,8 +106,8 @@ window.addEventListener('scroll', showSearchBar)
             <ul className="desktop-list">
                 <li><a href="#abc">786 100 4444</a></li>
                 <li><a href="#abc">Help</a></li>
-                <li><a href="#abc">Login</a></li>
-                <li><a className="signup_buton" href="#abc">SignUp</a></li>
+                <li><a href="/" onClick={handleLoginPop}>Login</a></li>
+                <li><a className="signup_buton" href="/" onClick={handleSignUpPop}>SignUp</a></li>
 
             </ul>
         

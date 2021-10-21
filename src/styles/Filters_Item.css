@@ -1,4 +1,6 @@
-
+  .adjust{
+    width:25%;
+  }
   .alignment{
     display: inline-block;
     zoom: 1;
@@ -6,6 +8,7 @@
     word-spacing: normal;
     vertical-align: top;
     text-rendering: auto;
+    
   }
   .listing_sidebar{
     position: sticky;
@@ -13,7 +16,8 @@
     height: calc(100vh - 3vh);
     overflow-y: scroll;
     overflow-x: hidden;
-    width: 25%;
+    width: -webkit-fill-available;
+
   }
   .listing_sidebar::-webkit-scrollbar {
     width: 8px;
@@ -64,6 +68,16 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-in-out;
+  }
+  .accordion-content-hide {
+    background-color: white;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    padding-left: 8px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    display: none;
   }
   .searchTerm-quick-filters{
     border: none;
