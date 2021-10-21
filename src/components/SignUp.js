@@ -40,7 +40,7 @@ function SignUp() {
                                         <input type="password" className="form-control" placeholder="Re-enter password *"/>
                                     </div>
                                     <div className="form-location">
-                                        <span className="input-icon"><i className="bi bi-geo-alt"></i></span>
+                                        <span style={{marginTop:"3px"}} className="input-icon" ><i className="bi bi-geo-alt"></i></span>
                                         <select>
                                             <option className="option">Primary Dining Location *</option>
                                             <option className="option">Argentina</option>

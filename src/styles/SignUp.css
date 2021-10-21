@@ -87,8 +87,8 @@
 }
 .modal-body .form-control{
     font-size: 17px;
-    height: 35px;
-    width: 85%;
+    height: 50px;
+    width: 100%;
     padding: 6px 0 6px 50px;
     margin: 0 auto;
     border: 1px solid #cccccc;
@@ -103,20 +103,21 @@
     color: #AEAFB1;
 }
 .form-group.checkbox{
-    width: 375px;
-    margin-top: 15px;
-    display: inline-block;
+    margin-top: 25px;
+    display: flex;
 }
 .form-group.checkbox label{
     color: black;
     font-weight: normal;
     font-size: 15px;
+    margin-left: 10px;
 }
 .form-group.checkbox input[type=checkbox]{
     margin-left: 0;
     visibility: visible;
     transition-duration: 0.3s;
     cursor: pointer;
+    margin-top: 3px;
 }
 .modal-body .forgot-pass{
     color: #0083c7;
@@ -211,9 +212,9 @@
 }
 .form-location select{
   font-size: 16px;
-  color: #AEAFB1;
-    width: 99%;
-    border: .0625rem solid #d8d9db;
+  color: #626262;
+    width: 100%;
+    border: .0625rem solid #cccccc;
     border-radius: 10px;
     height: 100%;
     display: block;
@@ -237,7 +238,7 @@
     position: absolute;
     pointer-events: none;
     right: 15px;
-    top: 15px;
+    top: 20px;
     display: inline-block;
     height: 1.5rem;
     width: 1.5rem;
@@ -248,7 +249,6 @@
 .form-location span img{
   width: 13px;
   height: 13px;
-  margin-top: 4px;
 }
 .modal-content .modal-body .btn:focus{ outline: none; }
 @media only screen and (max-width: 480px){

@@ -1,9 +1,9 @@
-import '../styles/Login.css'
+// import '../styles/Login.css'
 
 export default function Login() {
     return (
         
-        <div className="row">
+        <div className="row" style={{width: "500px"}}>
             <div className="col-md-12">
     
     {/* <div className="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> */}
