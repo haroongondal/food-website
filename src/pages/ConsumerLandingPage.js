@@ -14,7 +14,7 @@ import CarouselRestaurent from '../styles/Carousel_Restaurent';
 import HeadingRestaurentNear from '../components/Heading_Restaurent_Near';
 import CarouselCuisines from '../styles/Carousel_Cuisines';
 import HeadingWhyBook from '../components/Section_Why_Book';
-import useFetch from '../components/useFetch';
+import useFetch from '../Utils/useFetch';
 import Skeleton from 'react-loading-skeleton';
 
 function ConsumerLandingPage() {
