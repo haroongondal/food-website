@@ -6,8 +6,10 @@ import FilterPage from './pages/FilterPage';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 
-function App() {
 
+
+function App() {
+    
   return (
     <div>
       
@@ -28,6 +30,7 @@ function App() {
         <Route exact path = "/TestPage">
         
         </Route>
+
       </Switch>
     <Footer/>
     
