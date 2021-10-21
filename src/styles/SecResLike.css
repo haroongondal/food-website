@@ -1,0 +1,27 @@
+
+.border-like-restaurents{
+    background-color: #fff;
+    margin-bottom: 12px;
+  }
+  .content-like-restaurents{
+    padding: 20px;
+  }
+  .content-like-restaurents h6{
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  .content-like-restaurents h5{
+    font-size: 0.75rem;
+    margin-top: 20px;
+  }
+  .boxes-like-restaurents{
+    display: flex;
+      /* column-count: 3; */
+      padding: 0;
+      /* margin: 16px 0 0; */
+      /* column-count: 3; */
+      /* column-fill: balance; */
+      column-gap: 12px;
+      margin: -8px;
+      margin-bottom: 10px;
+  }

@@ -6,9 +6,6 @@ import personsIcon from '../images/persons.svg'
 export default function ReservationItem() {
 
     return (
-        <div>
-           
-            
            <div className="section-right-reservation">
                 <div className="border-reservation">
                     <div className="content-reservation">
@@ -65,6 +62,6 @@ export default function ReservationItem() {
             </div> 
                 
             
-        </div>
+       
     )
 }

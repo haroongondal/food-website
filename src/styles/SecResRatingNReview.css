@@ -1,0 +1,23 @@
+
+.border-rating-reviews{
+    background-color: #fff;
+  }
+  .content-rating-reviews{
+    padding: 20px;
+    padding-bottom: 0px;
+  }
+  .content-rating-reviews h6{
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  .content-rating-reviews h5{
+    font-size: 0.85rem;
+    margin-top: 13px;
+  }
+  .content-rating-reviews h5 span{
+    font-weight: 700;
+  }
+  .border-review-section{
+    margin: 50px 0px;
+    margin-bottom: 0px;
+  }

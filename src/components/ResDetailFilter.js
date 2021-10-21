@@ -3,6 +3,7 @@ import '../styles/ResDetailFilter.css'
 function ResDetailFilter() {
     return (
         <div>
+        <h4 style={{marginTop: "30px"}}>Filters</h4>
             <div className="div-for-filter-buttons">
                             <button className="filter-button">
                                 <label className="main-filters-section"><h1 className="text-good-for-groups">Good for groups</h1>

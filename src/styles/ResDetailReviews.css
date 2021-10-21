@@ -3,6 +3,7 @@
     display: flex;
       justify-content: space-between;
       padding: 0px 20px;
+      padding-bottom: 10px;
       margin-bottom: 10px;
       margin-top: 30px;
       background: #fff;
@@ -105,7 +106,6 @@
   .report-section{
     display: flex;
     align-items: flex-end;
-    margin-bottom: -20px;
   }
   .helpful-review{
     display: flex;
@@ -155,7 +155,7 @@
   .text-dined-a-day{
     font-size: 0.75rem;
     margin-left: 8px;
-     margin-top: 1px;
+     margin-top: 4px;
      font-weight: 500;
   }
 
@@ -163,7 +163,7 @@
 .rate-review-section {
     float: left;
     height: 5px;
-    margin-top: -8px;
+    margin-top: -3px;
     margin-right: 5px;
   }
   .rate-review-section:not(:checked) > input {
@@ -199,9 +199,9 @@
   .hr-for-review-section{
     margin: 30px 0px;
   }
-  .fixed{
+  /* .fixed{
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 20;
-  }
+  } */

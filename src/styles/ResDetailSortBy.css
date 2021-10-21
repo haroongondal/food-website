@@ -43,3 +43,8 @@
     height: 13px;
     margin-top: 4px;
   }
+  .content-rating-reviews h4{
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-top: 20px;
+  }

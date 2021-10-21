@@ -2,6 +2,8 @@ import React from 'react'
 import '../styles/SecResAbout.css'
 import knife from '../images/knife_plate.png'
 import smook from '../images/smoking_area.png'
+import ResCuisineItem from './ResCuisineItem'
+import ResCuisineFacilities from './ResCuisineFacilities'
 function SecResAbout() {
     return (
         <div>
@@ -17,115 +19,10 @@ function SecResAbout() {
                                   Sed dapibus pulvinar nibh tempor porta. </span><a onclick="myFunction()" id="myBtn">Read more</a>
                             </span>
                         </p>
-                        <div className="section-cuisine">
-                            <div className="image-cuisine">
-                                <img src={knife}/>
-                            </div>
-                            <div className="div-text-cuisine">
-                                <h4>CUISINE</h4>
-                                <a href="#">Multi-Cuisine</a>
-                                <a href="#">Multi-Cuisine</a>
-                                <a href="#">Multi-Cuisine</a>
-                                <a href="#">Multi-Cuisine</a>
-                            </div>
-                        </div>
-                        <div className="section-cuisine">
-                            <div className="image-cuisine">
-                                <img src={knife}/>
-                            </div>
-                            <div className="div-text-cuisine">
-                                <h4>CUISINE</h4>
-                                <a href="#">Multi-Cuisine</a>
-                                <a href="#">Multi-Cuisine</a>
-                                <a href="#">Multi-Cuisine</a>
-                                <a href="#">Multi-Cuisine</a>
-                                <a href="#">Multi-Cuisine</a>
-                                <a href="#">Multi-Cuisine</a>
-                            </div>
-                        </div>
-                        <div className="section-cuisine">
-                            <div className="image-cuisine">
-                                <img src={knife}/>
-                            </div>
-                            <div className="div-text-cuisine">
-                                <h4>CUISINE</h4>
-                                <a href="#">Multi-Cuisine</a>
-                                <a href="#">Multi-Cuisine</a>
-                                <a href="#">Multi-Cuisine</a>
-                                <a href="#">Multi-Cuisine</a>
-                                <a href="#">Multi-Cuisine</a>
-                            </div>
-                        </div>
-                        <div className="section-cuisine">
-                            <div className="image-cuisine">
-                                <img src={knife}/>
-                            </div>
-                            <div className="div-text-cuisine">
-                                <h4>CUISINE</h4>
-                                <a href="#">Multi-Cuisine</a>
-                                <a href="#">Multi-Cuisine</a>
-                                <a href="#">Multi-Cuisine</a>
-                                <a href="#">Multi-Cuisine</a>
-                            </div>
-                        </div>
-                        <div className="section-cuisine">
-                            <div className="image-cuisine">
-                                <img src={knife}/>
-                            </div>
-                            <div className="div-text-cuisine">
-                                <h4>CUISINE</h4>
-                                <ul className="ul-facilities">
-                                    <li>
-                                        <img src={smook}/>
-                                        <a>Smoking area</a>
-                                    </li>
-                                    <li>
-                                        <img src={smook}/>
-                                        <a>Smoking area</a>
-                                    </li>
-                                    <li>
-                                        <img src={smook}/>
-                                        <a>Smoking area</a>
-                                    </li>
-                                    <li>
-                                        <img src={smook}/>
-                                        <a>Smoking area</a>
-                                    </li>
-                                    <li>
-                                        <img src={smook}/>
-                                        <a>Smoking area</a>
-                                    </li>
-                                    <li>
-                                        <img src={smook}/>
-                                        <a>Smoking area</a>
-                                    </li>
-                                    <li>
-                                        <img src={smook}/>
-                                        <a>Smoking area</a>
-                                    </li>
-                                    <li>
-                                        <img src={smook}/>
-                                        <a>Smoking area</a>
-                                    </li>
-                                    <li>
-                                        <img src={smook}/>
-                                        <a>Smoking area</a>
-                                    </li>
-                                    <li>
-                                        <img src={smook}/>
-                                        <a>Smoking area</a>
-                                    </li>
-                                    <li>
-                                        <img src={smook}/>
-                                        <a>Smoking area</a>
-                                    </li>
-                                    <li>
-                                        <img src={smook}/>
-                                        <a>Smoking area</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        
+                        <ResCuisineItem/>
+
+                        <ResCuisineFacilities/>
                     </div>
                     </div>
         </div>

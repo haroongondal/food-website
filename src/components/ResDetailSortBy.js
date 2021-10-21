@@ -4,6 +4,7 @@ import arrow from '../images/down_arrow.svg'
 function ResDetailSortBy() {
     return (
         <div>
+        <h4>Sort by</h4>
             <div className="border-select-sort-by">
                             <div className="content-select-sort-by">
                                 <select>
@@ -12,7 +13,7 @@ function ResDetailSortBy() {
                                     <option className="option">Lowest Rating</option>
                                 </select>
                                 <span>
-                                    <img src={arrow}/>
+                                    <img alt="down-arrow" src={arrow}/>
                                 </span>
                             </div>
                         </div>
