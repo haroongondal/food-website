@@ -1,0 +1,46 @@
+
+.border-profile-details{
+    background-color: white;
+    box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);
+    overflow: hidden;
+    margin: 20px 30px;
+    margin-right: 10px;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+  }
+  .heading-profile-details{
+    padding: 20px;
+      padding-bottom: 5px;
+      padding-top: 20px;
+  }
+  .heading-profile-details h6{
+    text-align: center;
+    font-size: 1.04rem;
+    margin-bottom: 0px;
+  }
+  .content-profile-details-data{
+    display: grid;
+  }
+  .edit-text{
+    display: grid;
+      padding: 15px 30px;
+  }
+  .label-profile-details{
+    font-size: 0.96rem;
+      font-weight: 500;
+  }
+  .input-profile-details{
+    border: 1px solid #a7a7a775;
+      border-radius: 8px;
+      padding: 8px;
+      padding-left: 20px;
+      font-size: 0.95rem;
+      margin-top: 5px;
+      color: grey;
+  }
+  .input-profile-details:focus{
+    color: black;
+  }
+  .input-profile-details:hover{
+    border: 1px solid #929292;
+  }
