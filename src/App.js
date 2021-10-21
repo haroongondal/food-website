@@ -5,10 +5,16 @@ import ConsumerLandingPage from './pages/ConsumerLandingPage';
 import FilterPage from './pages/FilterPage';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+
 import RestaurentDetailsPage from './pages/RestaurentDetailsPage';
 
-function App() {
+import TestPage from './pages/TestPage';
 
+
+
+
+function App() {
+    
   return (
     <div>
       
@@ -27,12 +33,14 @@ function App() {
         </Route>
 
         <Route exact path = "/TestPage">
-        
+        <TestPage/>
         </Route>
+
 
         <Route exact path = "/RestaurentDetailsPage">
         <RestaurentDetailsPage/> 
         </Route>
+
       </Switch>
     <Footer/>
     

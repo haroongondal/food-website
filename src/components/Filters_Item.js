@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import '../styles/Filters_Item.css'
 import Checkbox from './Checkbox'
-import useFetch from './useFetch'
+import useFetch from '../Utils/useFetch'
 
 
 export default function FiltersItem({filter_name = ""}) {
