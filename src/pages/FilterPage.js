@@ -1,6 +1,7 @@
 import React from 'react'
 import Carousel from 'react-multi-carousel'
 import Breadcrumb from '../components/Breadcrumb'
+import ProfileBanner from '../components/ProfileBanner';
 import ResDetailFilter from '../components/ResDetailFilter';
 import ResDetailReviews from '../components/ResDetailReviews';
 import ResDetailSortBy from '../components/ResDetailSortBy';
@@ -11,10 +12,7 @@ import '../styles/FilterPage.css'
 function FilterPage() {
     return (
         <div>
-            <Breadcrumb/>
-            <ResDetailSortBy/>
-            <ResDetailFilter/>
-            <ResDetailReviews/>
+            
         </div>
     )
 }

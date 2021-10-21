@@ -1,0 +1,143 @@
+#grad1 {
+    height: 350px;
+    background-color: red;   /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #B72828 , #8741AF);
+  }
+  .for-3-sections{
+      display: flex;
+      justify-content: space-between;
+      top: 30%;
+      position: relative;
+      padding: 0px 100px;
+  }
+  .section-1-image img{
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    object-fit: cover;
+  }
+  .upload-photo{
+      position: absolute;
+      margin-top: -40px;
+      margin-left: 50px;
+  }
+  .upload-photo h6{
+      background-color: white;
+      padding: 5px 10px;
+      border-radius: 30px;
+      font-size: 12px;
+  }
+  .alignment-section-following{
+    background-color: white;
+    padding: 14px 30px;
+    text-align: center;
+  }
+  .alignment-section-following h4{
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+  .alignment-section-following h6{
+    font-size: 0.8rem;
+  }
+  .alignment-profile-data{
+    display: inline-flex;
+    margin: 5px 0px;
+    cursor: pointer;
+  }
+  .alignment-profile-data:hover{
+    padding-top: 10px;
+    padding-left: 20px;
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 60%);
+    transition: all 0.25s ease-out;
+    border: 1px solid white;
+  }
+  .alignment-profile-data img{
+    height: 14px;
+    width: 14px;
+    margin-top: 1px;
+  }
+  .alignment-profile-data h6{
+    margin-left: 24px;
+    color: white;
+    font-size: 0.96rem;
+    font-weight: 400;
+  }
+  .alignment-suggested-followers{
+    display: inline-flex;
+    margin: 5px 0px;
+    cursor: pointer;
+  }
+  .alignment-suggested-followers:hover{
+    padding-top: 10px;
+    padding-left: 20px;
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 60%);
+    transition: all 0.25s ease-out;
+    border: 1px solid white;
+  }
+  .alignment-suggested-followers img{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .alignment-suggested-followers h6{
+    margin-left: 12px;
+    color: white;
+    margin-bottom: 0px;
+    font-weight: 400;
+    font-size: 0.96rem;
+  }
+  .alignment-suggested-followers p{
+    margin-left: 15px;
+    font-size: 0.6rem;
+    color: #8A8888;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+  
+.overlay{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width:100%;
+	height: 100%;
+	background-color: rgba(92,95,236,0.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.buy-btn{
+	width:160px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #FFFFFF;
+	color:#252525;
+	font-weight: 700;
+	letter-spacing: 1px;
+	font-family: calibri;
+	border-radius: 20px;
+	box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+}
+.buy-btn:hover{
+	color:#FFFFFF;
+	background-color: #f15fa3;
+	transition: all ease 0.3s;
+}
+.overlay{
+	visibility: hidden;
+}
+.slide-img:hover .overlay{
+	visibility: visible;
+	animation:fade 0.5s;
+}
+ 
+@keyframes fade{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
