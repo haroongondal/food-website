@@ -64,6 +64,8 @@ export default function SecResMenu() {
                         <h5>Market Salads &amp; Starters</h5>
                         <ul className="ul-for-menu">
                             <ResMenuItem/>
+                            <ResMenuItem/>
+                            <ResMenuItem/>
                         </ul>
 
                         <div className="button-view-full-menu" style={{display: "none"}}>

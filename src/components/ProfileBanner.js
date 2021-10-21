@@ -15,15 +15,15 @@ function ProfileBanner() {
                     <div className="overlay">
                         
                         <div>
-                        <a href="#" className="buy-btn">Upload photo</a>
-                        <a href="#" className="buy-btn">Delete photo</a>
+                        <a href="#abc" className="buy-btn">Upload photo</a>
+                        <a href="#abc" className="buy-btn">Delete photo</a>
                         </div>	
                         </div>
                 </div>
                 <div className="section-2-user-details " style={{marginLeft: "60px"}}>
                     <div style={{bottom: "1%", position: "absolute",width: "100%"}}>
                     <h4 style={{color: "white",fontSize: "1.6rem"}}>Smith Leo</h4>
-                    <h6 style={{color: "white",fontWeight: "300",fontSize: "0.96rem"}}><span style={{marginBottom: "5px"}}><img src={location} style={{height: "15px",width: "15px",marginBottom: "4px",marginRight: "5px"}}/></span>Lisbon, Portugal</h6>
+                    <h6 style={{color: "white",fontWeight: "300",fontSize: "0.96rem"}}><span style={{marginBottom: "5px"}}><img alt="location-icon" src={location} style={{height: "15px",width: "15px",marginBottom: "4px",marginRight: "5px"}}/></span>Lisbon, Portugal</h6>
                     <div style={{display: "-webkit-inline-box"}}>
                     <h6 style={{backgroundColor:" black",color: "white",padding: "10px 10px", borderRadius: "15px 0px 0px 15px"}}>0.5 Foodie</h6>
                     <h6 style={{backgroundColor:" white",color: "black",padding: "10px 10px", borderRadius: "0px 15px 15px 0px"}}>150 Points to level up</h6>

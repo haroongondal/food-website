@@ -9,6 +9,8 @@ import Footer from './components/Footer';
 import RestaurentDetailsPage from './pages/RestaurentDetailsPage';
 
 import TestPage from './pages/TestPage';
+import OrderHistoryPage from './pages/OrderHistoryPage';
+import ReviewHistoryPage from './pages/ReviewHistoryPage';
 
 
 
@@ -39,6 +41,14 @@ function App() {
 
         <Route exact path = "/RestaurentDetailsPage">
         <RestaurentDetailsPage/> 
+        </Route>
+
+        <Route exact path = "/OrderHistoryPage">
+        <OrderHistoryPage/> 
+        </Route>
+
+        <Route exact path = "/ReviewHistoryPage">
+        <ReviewHistoryPage/> 
         </Route>
 
       </Switch>
