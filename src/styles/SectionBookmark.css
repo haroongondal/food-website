@@ -1,0 +1,7 @@
+.align-boxes-bookmark{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px 6px;
+}

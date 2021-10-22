@@ -13,6 +13,9 @@ import OrderHistoryPage from './pages/OrderHistoryPage';
 
 import ReviewHistoryPage from './pages/ReviewHistoryPage';
 import MyProfilePage from './pages/MyProfilePage';
+import FollowersPage from './pages/FollowersPage';
+import BookmarkPage from './pages/BookmarkPage';
+import BusinessLandingPage from './pages/BusinessLandingPage';
 
 
 
@@ -25,7 +28,7 @@ function App() {
       
     <Router>
     
-    <NavBar/>
+    {/* <NavBar/> */}
      <Switch>
 
         <Route exact path = "/">
@@ -56,6 +59,18 @@ function App() {
 
         <Route exact path = "/MyProfilePage">
         <MyProfilePage/>
+        </Route>
+
+        <Route exact path = "/FollowersPage">
+        <FollowersPage/>
+        </Route>
+
+        <Route exact path = "/BookmarkPage">
+        <BookmarkPage/>
+        </Route>
+
+        <Route exact path = "/BusinessLandingPage">
+        <BusinessLandingPage/>
         </Route>
 
 

@@ -35,20 +35,24 @@ function ProfileMenu() {
                                 </div>
                             </Link>
 
+                            <Link to = "/FollowersPage">
                                 <div className="alignment-profile-data">
                                     <img alt="follower-icon" src={follower}/>
                                     <h6>Followers</h6>
                                 </div>
+                            </Link>
 
                                 <div className="alignment-profile-data">
                                     <img alt="profile-icon" src={image}/>
                                     <h6>Photos</h6>
                                 </div>
 
+                            <Link to = "/BookmarkPage">
                                 <div className="alignment-profile-data">
                                     <img alt="heart-icon" src={heart}/>
                                     <h6>Bookmarks</h6>
                                 </div>
+                            </Link>
 
                             </div>
                         </div>
