@@ -18,7 +18,9 @@ function OrderHistoryPage() {
                       <Switch>
                          
                           <Route exact path="/Dashboard" component={ReviewHistory}></Route>
+
                           <Route exact path="/Dashboard/MyReviews" component={OrderHistory}></Route>
+                          
                           </Switch>
                   </div>
             </div>
