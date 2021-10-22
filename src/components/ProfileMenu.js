@@ -23,11 +23,7 @@ function ProfileMenu() {
                                 <h6 style={{fontSize:"0.75rem",color:"#8A8888"}}>Profile data</h6>
                             </div>
                             <div className="for-link" style={{display: "inline-grid",marginTop: "10px"}}>
-
-
-                            
-
-                            <Link to = {"/Dashboard/MyReviews"}>
+                            <Link to = "/Dashboard/MyReviews">
                                 <div className="alignment-profile-data" >
 
                                     <img alt="star-icon" src={star}/>
@@ -69,11 +65,13 @@ function ProfileMenu() {
                                     <h6>My Profile</h6>
                                 </div>
 
+                                <Link to = "/Dashboard">
+
+
                             </Link>
 
                            
 
-                                <Link to = {"/Dashboard"}>
                                 <div className="alignment-profile-data" >
                                     <img alt="order-icon" src={order}/>
                                     <h6>My Orders</h6>

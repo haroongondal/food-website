@@ -22,7 +22,8 @@ import BusinessLandingPage from './pages/BusinessLandingPage';
 
 
 function App() {
-    
+
+      
   return (
     <div>
       
