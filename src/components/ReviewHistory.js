@@ -1,5 +1,6 @@
 import React from 'react'
 import ReviewHistoryItem from './ReviewHistoryItem'
+import ReviewHistoryItemUR from './ReviewHistoryItemUR'
 
 function ReviewHistory() {
     return (
@@ -8,6 +9,7 @@ function ReviewHistory() {
                     <h3 style={{fontSize: "1.4rem", fontWeight: "700"}}>Review History(10)</h3>
                 </div>
                 <ReviewHistoryItem/>
+                <ReviewHistoryItemUR/>
 
                 <div id="loadMore">
                     <a href="#abc">Load More</a>

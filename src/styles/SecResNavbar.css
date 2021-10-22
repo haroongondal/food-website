@@ -12,6 +12,7 @@
       flex-flow: row;
       list-style: none;
       padding: 0px;
+      margin-bottom:0px;
   }
   .ul-overview-navbar li{
     border-right: 1px solid #cfcfcf5e;
@@ -34,3 +35,10 @@
     border-bottom: 5px solid #00e0b4;
     text-decoration: none;
   }
+  .activeTab{
+    color: #00e0b4;
+    display: inline-block;
+    border-bottom: 5px solid #00e0b4;
+    text-decoration: none;
+  }
+  

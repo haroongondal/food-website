@@ -9,9 +9,10 @@ export default function RestaurentItem({key = "", data = ""}) {
 console.log(data.RestaurantName)
     return (
        
-        <Link to = {`/RestaurentDetailsPage/${data.Id}`}>
-        <div >
-           <div className="box-restaurent">
+        
+        <div className="link">
+           <Link to = {`/RestaurentDetailsPage/${data.Id}`}>
+                <div className="box-restaurent">
                     {/* img-box */}
                     <div className="img-restaurent">
                     <img alt="4" src={restaurentImage}/>
@@ -50,10 +51,10 @@ console.log(data.RestaurantName)
                         
                     </div>
                     
-                    </div>
+                </div>
                 
-            
+            </Link>
         </div>
-        </Link>
+        
     )
 }

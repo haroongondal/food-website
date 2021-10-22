@@ -1,28 +1,39 @@
 import React, { useState } from 'react'
 import '../styles/FollowerItems.css'
-import FollowerItem from '../components/FollowerItem';
+import FollowersList from './FollowersList';
 function SectionFollower() {
-    const [isOpened, setIsOpened] = useState(true);
-
+    const [activeTab, setActiveTab] = useState("tab1");
+    const handleTab1 = () => {
+       
+        setActiveTab("tab1");
+      };
+      const handleTab2 = () => {
+       
+        setActiveTab("tab2");
+      };
     return (
-        <div>
-            <div class="right-section" style={{backgroundColor: "white"}}>
-                <div style={{textAlign: "center",margin: "20px",marginTop: "30px"}}>
-                    <h3 style={{ fontSize:"1.4rem",
-                    fontWeight: "700"}}>Followers</h3>
+        
+            <div className="right-section" style={{backgroundColor: "white"}}>
+            <div style={{textAlign: "center",margin: "20px",marginTop: "30px"}}>
+                    <h3 style={{fontSize: "1.4rem", fontWeight: "700"}}>Followers</h3>
                 </div>
-                <ul class="tab-group">
-                      <li class="tab active"><a  onClick={()=>setIsOpened(isOpened)}>Followers</a></li>
-                      <li class="tab"><a>Following</a></li>
+                
+                <ul className="tab-group">
+                      <li className={`tab  ${activeTab === "tab1" ? "active" : ""}`}  onClick={handleTab1}><p>Followers</p></li>
+                      <li className={`tab ${activeTab === "tab2" ? "active" : ""}`}  onClick={handleTab2}><p>Following</p></li>
                 </ul>
-                {isOpened && (
-       <FollowerItem/>
-      )}
+             
 
+                {activeTab === "tab1" ? <FollowersList/>  : <FollowersList/> }
+
+
+                <div id="loadMore">
+                    <a href="#abc">Load More</a>
+                 </div>
                 
             
             </div>
-        </div>
+        
     )
 }
 

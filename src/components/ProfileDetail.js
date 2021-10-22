@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/ProfileDetail.css'
 function ProfileDetail() {
     return (
-        <div>
+        
             <div class="border-profile-details">
                         <div class="heading-profile-details">
                             <h6>Profile Details</h6>
@@ -54,11 +54,11 @@ function ProfileDetail() {
 
                             
                             <div class="button-save-changes">
-                                <a href="#">Save Changes</a>
+                                <a href="#abc">Save Changes</a>
                              </div>
                         </div>
                     </div>
-        </div>
+        
     )
 }
 
