@@ -11,6 +11,7 @@ import RestaurentDetailsPage from './pages/RestaurentDetailsPage';
 import TestPage from './pages/TestPage';
 import OrderHistoryPage from './pages/OrderHistoryPage';
 import ReviewHistoryPage from './pages/ReviewHistoryPage';
+import MyProfilePage from './pages/MyProfilePage';
 
 
 
@@ -49,6 +50,10 @@ function App() {
 
         <Route exact path = "/ReviewHistoryPage">
         <ReviewHistoryPage/> 
+        </Route>
+
+        <Route exact path = "/MyProfilePage">
+        <MyProfilePage/>
         </Route>
 
       </Switch>
