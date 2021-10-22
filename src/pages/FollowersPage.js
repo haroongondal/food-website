@@ -1,8 +1,9 @@
 import React from 'react'
 import ProfileBanner from '../components/ProfileBanner'
 import ProfileMenu from '../components/ProfileMenu'
+import SectionFollower from '../components/SectionFollower'
 
-function ReviewHistoryPage() {
+function FollowersPage() {
     return (
         <div>
             <ProfileBanner/>
@@ -11,11 +12,11 @@ function ReviewHistoryPage() {
 
                   <div className="main-section">
                   <ProfileMenu/>
-                  
+                  <SectionFollower/>
                   </div>
             </div>
         </div>
     )
 }
 
-export default ReviewHistoryPage
+export default FollowersPage

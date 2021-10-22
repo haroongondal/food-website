@@ -35,9 +35,10 @@
     border-bottom: 5px solid #00e0b4;
     text-decoration: none;
   }
-  .active{
+  .activeTab{
     color: #00e0b4;
     display: inline-block;
     border-bottom: 5px solid #00e0b4;
     text-decoration: none;
   }
+  

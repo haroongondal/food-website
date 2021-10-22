@@ -35,7 +35,7 @@ function ResDetailReviews() {
                                                 <input type="radio" id="star1" name="rate" value="1"/>
                                                 <label for="star1" title="text">1 star</label>
                                             </div>
-                                            <span className="black-circle">●</span>
+                                            <span className="black-circle-reviewSec">●</span>
                                             <p className="text-dined-a-day"> Dined a day</p> 
                                         </div>
                                     <div className="section-overall-review">
@@ -74,7 +74,9 @@ function ResDetailReviews() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="report-section">
+                            
+            </div>
+            <div className="report-section">
                                 <div className="helpful-review">
                                 <img alt="thumb-pic" src={thumbs}/>
                                 <p>Helpful review</p>
@@ -85,7 +87,6 @@ function ResDetailReviews() {
                                     </div>
                                 
                             </div>
-                        </div>
         </div>
     )
 }

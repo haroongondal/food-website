@@ -1,0 +1,47 @@
+.section-restaurent-location{
+    inline-size: max-content;
+  }
+  
+  .section-restaurent-location h4{
+    font-size: 0.71rem;
+      color: #898989;
+      margin-bottom: .3rem;
+      
+  }
+  .section-restaurent-location p{
+    font-size: 0.6rem;
+    color: #898989;
+  }
+  .been-there{
+    color: #E40E0E;
+    font-size: 0.75rem;
+    position: absolute;
+    bottom: -55px;
+    font-weight: 600;
+  }
+  .been-there svg{
+  margin-bottom: 4px;
+    margin-right: 5px;
+}
+.section-write-a-review{
+  margin-bottom: 10px;
+}
+.text-duration{
+    text-align: end;
+    margin-top: 4px;
+  }
+  .text-duration h6{
+    font-size: x-small;
+  }
+  .button-write-a-review{
+    position: relative;
+    bottom: -76px;
+  }
+  .button-write-a-review button{
+    background: none;
+      border: none;
+      color: #E40E0E;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding-right: 0px;
+  }

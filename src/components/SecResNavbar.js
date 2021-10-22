@@ -11,7 +11,7 @@ export default function SecResNavbar() {
            <div className="border-overview-navbar fixed">
            <Scrollspy
         items={ ['abc', 'about-section', 'menu-section', 'rating-review-section'] }
-        currentClassName="active" className="ul-overview-navbar">
+        currentClassName="activeTab" className="ul-overview-navbar">
 
                    
                         <li><a href="#abc">Overview</a></li>
