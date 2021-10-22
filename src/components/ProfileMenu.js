@@ -12,6 +12,8 @@ import logout from '../images/logout.svg'
 import SuggestedFollowers from './SuggestedFollowers'
 import { Link } from 'react-router-dom'
 function ProfileMenu() {
+
+    
     return (
         <div class="alignment listing_sidebar" style={{width:"25%"}}>
                 <div class="container" style={{display: "contents"}}>
@@ -22,8 +24,12 @@ function ProfileMenu() {
                             </div>
                             <div className="for-link" style={{display: "inline-grid",marginTop: "10px"}}>
 
-                            <Link to = "/ReviewHistoryPage">
-                                <div className="alignment-profile-data">
+
+                            
+
+                            <Link to = {"/Dashboard/MyReviews"}>
+                                <div className="alignment-profile-data" >
+
                                     <img alt="star-icon" src={star}/>
                                     <h6>Reviews</h6>
                                 </div>
@@ -58,14 +64,17 @@ function ProfileMenu() {
                                     <img alt="user-icon" src={user}/>
                                     <h6>My Profile</h6>
                                 </div>
+
                             </Link>
 
-                            <Link to = "/OrderHistoryPage">
-                                <div className="alignment-profile-data">
+                           
+
+                                <Link to = {"/Dashboard"}>
+                                <div className="alignment-profile-data" >
                                     <img alt="order-icon" src={order}/>
                                     <h6>My Orders</h6>
                                 </div>
-                            </Link>
+                                </Link>
 
                                 <div className="alignment-profile-data">
                                     <img alt="message-icon" src={messages}/>
@@ -91,6 +100,6 @@ function ProfileMenu() {
                 </div>
         </div>
     )
-}
+    }
 
 export default ProfileMenu

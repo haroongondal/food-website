@@ -1,10 +1,13 @@
 import React from 'react'
+import { BrowserRouter as Route, Switch } from 'react-router-dom';
 import OrderHistory from '../components/OrderHistory'
 import ProfileBanner from '../components/ProfileBanner'
 import ProfileMenu from '../components/ProfileMenu'
+import ReviewHistory from '../components/ReviewHistory'
 import '../styles/OrderHistoryPage.css'
 
 function OrderHistoryPage() {
+
     return (
         <div>
             <ProfileBanner/>
@@ -12,7 +15,11 @@ function OrderHistoryPage() {
 
                   <div className="main-section">
                   <ProfileMenu/>
-                  <OrderHistory/>
+                      <Switch>
+                         
+                          <Route exact path="/Dashboard" component={ReviewHistory}></Route>
+                          <Route exact path="/Dashboard/MyReviews" component={OrderHistory}></Route>
+                          </Switch>
                   </div>
             </div>
         </div>
