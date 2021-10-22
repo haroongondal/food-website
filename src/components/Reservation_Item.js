@@ -2,9 +2,16 @@ import '../styles/Reservation_Item.css'
 import calenderIcon from '../images/calender.svg'
 import downArrowIcon from '../images/grey-arrow.svg'
 import personsIcon from '../images/persons.svg'
-
+import DatePicker from "react-datepicker";
+import React, { useState } from "react";
+import "react-datepicker/dist/react-datepicker.css";
 export default function ReservationItem() {
+    const [date, setDate] = useState(new Date());
 
+  const handleCalendarClose = () => console.log("Calendar closed");
+  const handleCalendarOpen = () => console.log("Calendar opened");
+    
+       
     return (
            <div className="section-right-reservation">
                 <div className="border-reservation">
@@ -15,8 +22,15 @@ export default function ReservationItem() {
                         
                         <div className="border-select-sections">
                             <img className="image-calender" alt="calender-icon" src={calenderIcon}/>
+                           
+    
                             <div className="date-picker">
-                                <div className="selected-date" data-value="Wed Oct 13 2021 05:00:00 GMT+0500 (Pakistan Standard Time)">13 / 10 / 2021</div>
+                                <div className="selected-date" data-value="Wed Oct 13 2021 05:00:00 GMT+0500 (Pakistan Standard Time)">  <DatePicker
+      selected={date}
+      onChange={(date) => setDate(date)}
+      onCalendarClose={handleCalendarClose}
+      onCalendarOpen={handleCalendarOpen}
+    /></div>
                         
                                 <div className="dates">
                                     <div className="month">
@@ -31,7 +45,7 @@ export default function ReservationItem() {
                             <img className="reservation-image-down-arrow" alt="down-arrow-icon" src={downArrowIcon}/>
                         </div>
                         
-
+            
 
                         <div className="content-two-persons">
                             <span className="two-persons-image">
