@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/ChangePassword.css'
 function ChangePassword() {
     return (
-        <div>
+        
             <div className="border-change-password">
                         <div className="heading-change-password">
                             <h6>Change Password</h6>
@@ -34,7 +34,7 @@ function ChangePassword() {
                              </div>
                         </div>
                     </div>
-        </div>
+        
     )
 }
 

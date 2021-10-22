@@ -4,11 +4,10 @@ import ProfileDetail from './ProfileDetail'
 import '../styles/MyProfileSection.css'
 function MyProfileSection() {
     return (
-        <div>
+        
             <div class="right-section" style={{backgroundColor: "#F9F9F9"}}>
-                <div style={{textAlign: "center",margin: "20px",marginTop: "30px"}}>
-                    <h3 style={{ fontSize: "1.4rem",
-                    fontWeight: "700"}}>My Profile</h3>
+            <div style={{textAlign: "center",margin: "20px",marginTop: "30px"}}>
+                    <h3 style={{fontSize: "1.4rem", fontWeight: "700"}}>My Profile</h3>
                 </div>
 
 
@@ -18,7 +17,7 @@ function MyProfileSection() {
                 </div>
             
             </div>
-        </div>
+        
     )
 }
 

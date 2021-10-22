@@ -11,7 +11,7 @@ function ReviewHistoryPage() {
 
                   <div className="main-section">
                   <ProfileMenu/>
-                  
+
                   </div>
             </div>
         </div>
