@@ -27,9 +27,7 @@ function SectionFollower() {
                 {activeTab === "tab1" ? <FollowersList/>  : <FollowersList/> }
 
 
-                <div id="loadMore">
-                    <a href="#abc">Load More</a>
-                 </div>
+               
                 
             
             </div>
