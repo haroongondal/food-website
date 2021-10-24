@@ -16,6 +16,7 @@ import MyProfilePage from './pages/MyProfilePage';
 import FollowersPage from './pages/FollowersPage';
 import BookmarkPage from './pages/BookmarkPage';
 import BusinessLandingPage from './pages/BusinessLandingPage';
+import AdminMenuPage from './pages/AdminMenuPage';
 
 
 
@@ -74,9 +75,13 @@ function App() {
         <BusinessLandingPage/>
         </Route>
 
+        <Route exact path = "/AdminMenuPage">
+        <AdminMenuPage/>
+        </Route>
+
 
       </Switch>
-    <Footer/>
+    {/* <Footer/> */}
     
     
     </Router>
