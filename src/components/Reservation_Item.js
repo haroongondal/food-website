@@ -2,9 +2,9 @@ import '../styles/Reservation_Item.css'
 import calenderIcon from '../images/calender.svg'
 import downArrowIcon from '../images/grey-arrow.svg'
 import personsIcon from '../images/persons.svg'
-import DatePicker from "react-datepicker";
+// import DatePicker from "react-datepicker";
 import React, { useState } from "react";
-import "react-datepicker/dist/react-datepicker.css";
+// import "react-datepicker/dist/react-datepicker.css";
 export default function ReservationItem() {
     const [date, setDate] = useState(new Date());
 
@@ -25,12 +25,14 @@ export default function ReservationItem() {
                            
     
                             <div className="date-picker">
-                                <div className="selected-date" data-value="Wed Oct 13 2021 05:00:00 GMT+0500 (Pakistan Standard Time)">  <DatePicker
+                                <div className="selected-date" data-value="Wed Oct 13 2021 05:00:00 GMT+0500 (Pakistan Standard Time)">
+                                      {/* <DatePicker
       selected={date}
       onChange={(date) => setDate(date)}
       onCalendarClose={handleCalendarClose}
       onCalendarOpen={handleCalendarOpen}
-    /></div>
+    /> */}
+    </div>
                         
                                 <div className="dates">
                                     <div className="month">

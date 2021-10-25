@@ -1,6 +1,24 @@
 // import '../styles/Login.css'
 
+import useFetch from "../Utils/useFetch"
+import usePostFetch from "../Utils/usePostFetch"
+
 export default function Login() {
+
+const { data, isPending, error } = useFetch()
+
+
+const handleLogin = (userName, password) => {
+
+    const obj = {
+        grant_type: "password",
+        Username: userName,
+        Password: password
+    }
+
+   // const { data, isPending, error } = usePostFetch('https://api.masairapp.com/api/token', obj)
+}
+
     return (
         
         <div className="row" style={{width: "500px"}}>
