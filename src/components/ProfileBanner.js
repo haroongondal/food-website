@@ -3,6 +3,8 @@ import '../styles/ProfileBanner.css'
 import profile from '../images/profile_pic.jpg'
 import location from '../images/locatioin_white.png'
 function ProfileBanner() {
+
+   
     return (
         <div>
             <div id="grad1">

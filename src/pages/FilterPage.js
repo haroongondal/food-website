@@ -9,14 +9,14 @@ import FilterPageItem from '../components/Filter_Page_Item';
 import Pagination from '../components/Pagination';
 import useFetch from '../Utils/useFetch';
 import Skeleton from 'react-loading-skeleton';
-import useLocation from '../Utils/useLocation';
 import { useState } from 'react';
 
 
 
 function FilterPage() {
 
-    console.log(useLocation());
+  
+
 
     const [url, seturl] = useState('https://api.masairapp.com/api/Restaurant/GetRestaurants');
     const { data, isPending, error } = useFetch(url);
@@ -28,6 +28,12 @@ function FilterPage() {
                      featureId=${featureId}&tagId=${tagId}&offset=0&limit=10`
             seturl(url)
     }
+    
+    // const location = useLocation().then((location => {
+    //     seturl(`https://api.masairapp.com/api/Restaurant/GetRestaurantsByCoordinate
+    //     ?latitude=${location.lat}&longitude=${location.long}`)
+    // }));
+    // console.log(location);
     
     return (
         <div>
