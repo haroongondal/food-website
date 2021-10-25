@@ -9,7 +9,20 @@ function AdminMenuItem() {
 
     const handdleToggle = () => setOpened(!IsOpened)
 
+    
+        const [showResults, setShowResults] = useState(false)
+        const onClick = () => setShowResults(!showResults)
+        
+            
+      
+      const Results = () => (
+        <div id="results" className="search-results">
+          Some Results
+        </div>
+      )
+      
 
+    
     return (
         <div className="item-menu">
             <button className= { IsOpened ? "accordion-menu is-open" : "accordion-menu"}  style={{outline: "0px auto -webkit-focus-ring-color"}} onClick={handdleToggle}>
@@ -42,6 +55,11 @@ function AdminMenuItem() {
                 <button type="submit" className="blue-plus-btn"><i class='bx bx-plus-circle'></i></button>
                 <span>Add Menu Category</span>
                 </div>
+                <div>
+            
+            { showResults ? <Results /> : <input type="submit" value="Search" onClick={onClick} /> }
+          </div>
+       
                 </div>
                 </div>
 
