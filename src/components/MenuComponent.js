@@ -10,7 +10,7 @@ function MenuComponent() {
         <div className="top-tools">
 
             <div className="left-tools">
-            <form action="#">
+            <form class="search-menu"action="#">
 				<div className="form-input">
 					<input type="search" placeholder="Search items, categories, sub categories"/>
 					<button type="submit" className="search-btn"><i className='bx bx-search' ></i></button>

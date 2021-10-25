@@ -148,7 +148,7 @@ li.have-children ul {
 	padding: 0px;
 } 
 li.have-children ul li a {
-	background-color: #3c3636;
+	background-color: #0a2542;
 	padding-left: 62px;
 } 
 li.have-children ul li a:hover {
@@ -165,13 +165,31 @@ li.have-children, li {
   content: "\f078";
   color: #fff;
   transition: all .5s;
-}
-li.active.have-children span::after {
-	-moz-transform: rotate(180deg);
-	-o-transform: rotate(180deg);
-	-webkit-transform: rotate(180deg);
-	transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .sidebar-menu .have-children > ul {
+    display: block;
+}
+
+.sidebar-menu .have-no-children > ul {
     display: none;
 }
+.have-no-children span::after {
+	position: absolute;
+	right: 30px;
+	content: "\f078";
+	color: #fff;
+	transition: all .3s;
+	transform: rotate(270deg);
+}
+.have-no-children span::after {
+	position: absolute;
+	right: 30px;
+	content: "\f078";
+	color: #fff;
+	transition: all .5s;
+	-moz-transform: rotate(0deg);
+	  -o-transform: rotate(0deg);
+	  -webkit-transform: rotate(0deg);
+	  transform: rotate(0deg);
+  }

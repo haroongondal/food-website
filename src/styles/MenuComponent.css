@@ -10,7 +10,7 @@
     align-items: center;
     grid-gap: 16px;
 }
-form {
+.search-menu {
 	max-width: 340px;
 	width: 100%;
 	margin-right: auto;
@@ -18,12 +18,12 @@ form {
     border-radius: 15px;
     box-shadow: 0px 11px 6px rgb(0 0 0 / 10%);
 }
-form .form-input {
+.search-menu .form-input {
 	display: flex;
 	align-items: center;
 	height: 36px;
 }
-form .form-input input {
+.search-menu .form-input input {
     flex-grow: 1;
     padding: 25px 16px;
     height: 100%;
@@ -34,10 +34,10 @@ form .form-input input {
     width: 100%;
     font-size: 13px;
 }
-form .form-input input::placeholder{
+.search-menu .form-input input::placeholder{
     color: #A19E9E;
 }
-form .form-input button {
+.search-menu .form-input button {
     width: 36px;
     height: 100%;
     display: flex;
