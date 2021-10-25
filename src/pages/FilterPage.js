@@ -10,13 +10,25 @@ import Pagination from '../components/Pagination';
 import useFetch from '../Utils/useFetch';
 import Skeleton from 'react-loading-skeleton';
 import useLocation from '../Utils/useLocation';
+import { useState } from 'react';
 
 
 
 function FilterPage() {
 
     console.log(useLocation());
-    const { data, isPending, error } = useFetch('https://api.masairapp.com/api/Restaurant/GetRestaurants');
+
+    const [url, seturl] = useState('https://api.masairapp.com/api/Restaurant/GetRestaurants');
+    const { data, isPending, error } = useFetch(url);
+    
+    const handleFilters = (tagId, cusinesId, featureId, quickFilterId)=> {
+
+        const url = `https://api.masairapp.com/api/Restaurant/
+                     GetRestaurantsByFilters?cusineId=${cusinesId}&RestaurantId=&
+                     featureId=${featureId}&tagId=${tagId}&offset=0&limit=10`
+            seturl(url)
+    }
+    
     return (
         <div>
             <Breadcrumb/>
@@ -31,10 +43,10 @@ function FilterPage() {
                 <div className="alignment listing_sidebar">
 
 
-                <FiltersItem filter_name = "Quick Filters"/>
-                <FiltersItem filter_name = "Cusines"/>
-                <FiltersItem filter_name = "Tags"/>
-                <FiltersItem filter_name = "Features"/>
+                <FiltersItem filter_name = "Quick Filters" handleFilters = {handleFilters.bind}/>
+                <FiltersItem filter_name = "Cusines" handleFilters = {handleFilters.bind}/>
+                <FiltersItem filter_name = "Tags" handleFilters = {handleFilters.bind}/>
+                <FiltersItem filter_name = "Features" handleFilters = {handleFilters.bind}/>
                 </div>
 
 </div>
