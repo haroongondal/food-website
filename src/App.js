@@ -16,7 +16,9 @@ import MyProfilePage from './pages/MyProfilePage';
 import FollowersPage from './pages/FollowersPage';
 import BookmarkPage from './pages/BookmarkPage';
 import BusinessLandingPage from './pages/BusinessLandingPage';
-
+import AdminMenuPage from './pages/AdminMenuPage';
+import ConsumerRoute from './customRoutes/ConsumerRoute'
+import UserDashboard from './customRoutes/ConsumerRoute'
 
 
 
@@ -29,54 +31,36 @@ function App() {
       
     <Router>
     
-    {/* <NavBar/> */}
+    
      <Switch>
 
         <Route exact path = "/">
-        <ConsumerLandingPage/>
+        <ConsumerRoute/>
         </Route>
 
-        <Route exact path = "/FilterPage">
-        <FilterPage/>
-        </Route>
+        
 
         <Route exact path = "/TestPage">
         <TestPage/>
         </Route>
 
 
-        <Route exact path = "/RestaurentDetailsPage/:id">
-        <RestaurentDetailsPage/> 
+        <Route exact path = "/Dashboard">
+        <UserDashboard/> 
         </Route>
 
-        <Route path = "/Dashboard">
-        <OrderHistoryPage/> 
-        </Route>
-
-
-        <Route exact path = "/ReviewHistoryPage">
-        <ReviewHistoryPage/> 
-        </Route>
-
-        <Route exact path = "/MyProfilePage">
-        <MyProfilePage/>
-        </Route>
-
-        <Route exact path = "/FollowersPage">
-        <FollowersPage/>
-        </Route>
-
-        <Route exact path = "/BookmarkPage">
-        <BookmarkPage/>
-        </Route>
 
         <Route exact path = "/BusinessLandingPage">
         <BusinessLandingPage/>
         </Route>
 
+        <Route exact path = "/AdminMenuPage">
+        <AdminMenuPage/>
+        </Route>
+
 
       </Switch>
-    <Footer/>
+    
     
     
     </Router>
