@@ -2,23 +2,12 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ConsumerLandingPage from './pages/ConsumerLandingPage';
-import FilterPage from './pages/FilterPage';
-import NavBar from './components/NavBar';
-import Footer from './components/Footer';
-
-import RestaurentDetailsPage from './pages/RestaurentDetailsPage';
-
 import TestPage from './pages/TestPage';
-import OrderHistoryPage from './pages/OrderHistoryPage';
-
-import ReviewHistoryPage from './pages/ReviewHistoryPage';
-import MyProfilePage from './pages/MyProfilePage';
-import FollowersPage from './pages/FollowersPage';
-import BookmarkPage from './pages/BookmarkPage';
 import BusinessLandingPage from './pages/BusinessLandingPage';
 import AdminMenuPage from './pages/AdminMenuPage';
-import ConsumerRoute from './customRoutes/ConsumerRoute'
-import UserDashboard from './customRoutes/ConsumerRoute'
+import FilterPage from './pages/FilterPage';
+import RestaurentDetailsPage from './pages/RestaurentDetailsPage';
+import MyProfilePage from './pages/MyProfilePage';
 
 
 
@@ -35,7 +24,15 @@ function App() {
      <Switch>
 
         <Route exact path = "/">
-        <ConsumerRoute/>
+        <ConsumerLandingPage/>
+        </Route>
+
+        <Route exact path = "/FilterPage">
+        <FilterPage/>
+        </Route>
+
+        <Route path = "/RestaurentDetailsPage/:id">
+        <RestaurentDetailsPage/>
         </Route>
 
         
@@ -45,8 +42,8 @@ function App() {
         </Route>
 
 
-        <Route exact path = "/Dashboard">
-        <UserDashboard/> 
+        <Route path = "/Dashboard">
+        <MyProfilePage/> 
         </Route>
 
 
