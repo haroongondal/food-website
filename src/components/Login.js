@@ -1,26 +1,43 @@
-import React,{useEffect, useState} from 'react'
+import React,{ useState} from 'react'
 
 import useFetch from "../Utils/useFetch"
 import usePostFetch from "../Utils/usePostFetch"
 
 export default function Login() {
 
+   
+
+
     const [email, setEmail] = useState("");
+
     const [password, setPassword] = useState("");
    
     
     function Login(){
         // console.log(email,password)
-        let item = [email,password];
-        fetch("https://api.masairapp.com",{
+        
+        const object = {
+            grant_type: "password",
+            Username: username,
+            Password: password
+        }
+
+
+        const formBody = Object.keys(object).
+        map(key => encodeURIComponent(key) + '='
+         + encodeURIComponent(object[key])).join('&');
+
+        fetch("https://api.masairapp.com/token",{
             method:"POST",
             headers:{
-                "Content-Type":"application/json",
-                "Accept":"application/json"
+                "Content-Type":"application/x-www-form-urlencoded"
+                
             },
-            body:JSON.stringify(item)
+            body:formBody
         }).then((result)=>{
             result.json()
+        }).catch((error)=>{
+            console.log(error)
         })
         
     }
@@ -40,7 +57,7 @@ export default function Login() {
                     <div className="content-of-form">
                         <div className="form-group" style={{marginTop: "30px"}}>
                             <span className="input-icon"><i className="bi bi-person"></i></span>
-                            <input type="email" className="form-control" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="Email"/>
+                            <input type="email" className="form-control" value={username} onChange={(e)=>setUserName(e.target.value)} placeholder="Email"/>
                         </div>
                         <div className="form-group">
                             <span className="input-icon"><i className="bi bi-key"></i></span>
