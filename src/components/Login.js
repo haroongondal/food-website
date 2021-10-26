@@ -14,7 +14,7 @@ export default function Login() {
    
     
     function Login(){
-        // console.log(email,password)
+        
         
         const object = {
             grant_type: "password",
