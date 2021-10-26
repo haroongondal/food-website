@@ -6,7 +6,9 @@ function AdminSidebar() {
 
   const [IsOpened, setOpened] = useState(false)
 
-    const handdleToggle = () => setOpened(!IsOpened)
+    const handdleToggle = () => {
+      console.log("clicked")
+      setOpened(!IsOpened)}
 
     return (
         <section id="sidebar">
@@ -15,13 +17,13 @@ function AdminSidebar() {
 		</a>
         <ul className="sidebar-menu">
     <li><span className="nav-section-title"></span></li>
-    <li className="have-children"><a href="#abc" onClick={handdleToggle}><span className="fa fa-university"></span>Menu</a>
-      <ul>
+    <li className= {IsOpened ? "have-children" : "have-no-children"}><a href="#abc" onClick={handdleToggle}><span className="fa fa-university"></span>Menu</a>
+        <ul>
         <li><a href="#abc">Add Exhibition</a></li>
         <li><a href="#abc">View Exhibitions</a></li>
         <li><a href="#abc">Add Exhibition</a></li>
         <li><a href="#abc">View Exhibitions</a></li>
-      </ul>
+      </ul> 
     </li>
     <li className="have-children"><a href="#abc"><span className="fa fa-tags"></span>Menu</a>
       <ul>

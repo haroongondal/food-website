@@ -1,0 +1,43 @@
+
+.Category-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 16px;
+    margin: 0px 20px;
+  }
+  .left-tools-category{
+    display: flex;
+    align-items: center;
+    grid-gap: 6px;
+  }
+  .left-tools-category h6{
+    font-size: 13px;
+    margin-left:10px;
+    margin-bottom:0px;
+    font-weight: bold;
+    color:#06386C;
+  }
+  .drag-btn{
+    background: white;
+    border: none;
+    margin-top:5px;
+    margin-right:20px;
+  }
+  .right-tools-category{
+    display: flex;
+    align-items: center;
+    grid-gap: 26px;
+  }
+  .right-tools-category  h6{
+    font-size: 13px;
+    margin-left:10px;
+    margin-bottom:0px;
+    font-weight: bold;
+    color:#06386C;
+  }
+  .options-btn{
+    background: white;
+    border: none;
+    margin-top:5px;
+  }

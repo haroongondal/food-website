@@ -8,22 +8,26 @@ import order from '../images/order.svg'
 import messages from '../images/message.svg'
 import heart from '../images/heart.svg'
 import logout from '../images/logout.svg'
-
 import SuggestedFollowers from './SuggestedFollowers'
-import { Link } from 'react-router-dom'
+import { Link, useRouteMatch } from 'react-router-dom'
+
 function ProfileMenu() {
 
+    const {url} = useRouteMatch();
+    
     
     return (
-        <div class="alignment listing_sidebar" style={{width:"25%"}}>
-                <div class="container" style={{display: "contents"}}>
+        
+        <div className="alignment listing_sidebar" style={{width:"25%"}}>
+            
+                <div className="container" style={{display: "contents"}}>
                      <div className="div-menu-bar" style={{backgroundColor:"#2A2A2A",padding: "10px 15px",display: "grid"}}>
                         <div className="profile-data" style={{display: "inline-grid",marginTop: "5px"}}>
                             <div>
                                 <h6 style={{fontSize:"0.75rem",color:"#8A8888"}}>Profile data</h6>
                             </div>
                             <div className="for-link" style={{display: "inline-grid",marginTop: "10px"}}>
-                            <Link to = "/Dashboard/MyReviews">
+                            <Link to = {`${url}/ReviewHistory`}>
                                 <div className="alignment-profile-data" >
 
                                     <img alt="star-icon" src={star}/>
@@ -31,7 +35,7 @@ function ProfileMenu() {
                                 </div>
                             </Link>
 
-                            <Link to = "/FollowersPage">
+                            <Link to = {`${url}/Followers`}>
                                 <div className="alignment-profile-data">
                                     <img alt="follower-icon" src={follower}/>
                                     <h6>Followers</h6>
@@ -43,7 +47,7 @@ function ProfileMenu() {
                                     <h6>Photos</h6>
                                 </div>
 
-                            <Link to = "/BookmarkPage">
+                                <Link to = {`${url}/Bookmarks`}>
                                 <div className="alignment-profile-data">
                                     <img alt="heart-icon" src={heart}/>
                                     <h6>Bookmarks</h6>
@@ -59,18 +63,18 @@ function ProfileMenu() {
                             
                             <div className="for-link" style={{display: "inline-grid",marginTop: "10px"}}>
 
-                            <Link to = "/MyProfilePage">
+                            <Link to = {`${url}`}>
                                 <div className="alignment-profile-data">
                                     <img alt="user-icon" src={user}/>
                                     <h6>My Profile</h6>
                                 </div>
 
-                                <Link to = "/Dashboard">
+                               
 
 
                             </Link>
 
-                           
+                            <Link to = {`${url}/OrderHistory`}>
 
                                 <div className="alignment-profile-data" >
                                     <img alt="order-icon" src={order}/>
@@ -100,8 +104,12 @@ function ProfileMenu() {
                         </div>
                     </div>
                 </div>
+                
         </div>
+       
     )
+
+    
     }
 
 export default ProfileMenu

@@ -1,19 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
-const useFetch = (url) => {
+const usePostFetch = (url, object) => {
   const [data, setData] = useState(null);
   const [isPending, setIsPending] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    console.log(url)
-    const abortCont = new AbortController();
-
+  const requestOptions = {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(object)
+};
     setTimeout(() => {
-      fetch(url, { signal: abortCont.signal })
+      fetch(url, requestOptions)
       .then(res => {
         if (!res.ok) { 
-          throw Error('could not fetch the data for that resource');
+          throw Error('could not login for that resource');
         } 
         return res.json();
       })
@@ -32,11 +33,7 @@ const useFetch = (url) => {
         }
       })
     }, 1000);
-
-    return () => abortCont.abort();
-  }, [url])
-
   return { data, isPending, error };
 }
  
-export default useFetch;
+export default usePostFetch;

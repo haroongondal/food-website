@@ -1,5 +1,5 @@
 import '../styles/SecResNavbar.css'
-import Scrollspy from 'react-scrollspy'
+//import Scrollspy from 'react-scrollspy'
 
 
 export default function SecResNavbar() {
@@ -9,7 +9,7 @@ export default function SecResNavbar() {
            
             
            <div className="border-overview-navbar fixed">
-           <Scrollspy
+           {/* <Scrollspy
         items={ ['abc', 'about-section', 'menu-section', 'rating-review-section'] }
         currentClassName="activeTab" className="ul-overview-navbar">
 
@@ -20,7 +20,7 @@ export default function SecResNavbar() {
                         <li><a href="#rating-review-section">Reviews</a></li>
                     
 
-  </Scrollspy>
+  </Scrollspy> */}
                 </div>
                 
                 

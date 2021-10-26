@@ -1,7 +1,15 @@
 import React,{ useState} from 'react'
 
+import useFetch from "../Utils/useFetch"
+import usePostFetch from "../Utils/usePostFetch"
+
 export default function Login() {
-    const [username, setUserName] = useState("");
+
+   
+
+
+    const [email, setEmail] = useState("");
+
     const [password, setPassword] = useState("");
    
     
@@ -33,6 +41,7 @@ export default function Login() {
         })
         
     }
+
     return (
         
         <div className="row" style={{width: "500px"}}>
