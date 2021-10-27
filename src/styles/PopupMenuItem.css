@@ -205,7 +205,7 @@
     transform: rotate(45deg);
   }
   .form-dropDown {
-    max-width: 270px;
+    max-width: 272px;
     width: 100%;
     /* margin-left: 15px; */
     /* margin-bottom: 5px; */
@@ -292,6 +292,11 @@
     justify-content: space-between;
     align-items: center;
 }
+.checkBox-deleteBtn{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
 .add-CB-group{
     display: flex;
     align-items: center;
@@ -324,12 +329,11 @@
 }
 .label-dropDown-small-G{
     color:#06386C;
-    font-size: 14px;
-    margin-right: 10px;
+    font-size: 10px;
 }
 .border-dropDown-small-G{
-    width: 17rem;
-    margin: 15px 20px;
+    width: 3rem;
+    margin: 15px 5px;
   }
 
   .form-dropDown-small-G {
@@ -369,4 +373,28 @@
     outline: none;
     border-radius: 0 5px 5px 0;
     padding: 20px;
+  }
+  .min-max{
+      display:flex;
+  }
+
+  .tab-switch{
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .align-tab-switch{
+    display: flex;
+  }
+  .tab-switch-btn{
+    border: none;
+    font-size: 14px;
+    background: #06386C;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 30px;
+  }
+  .tab-switch-btn:focus{
+      background:red;
   }
