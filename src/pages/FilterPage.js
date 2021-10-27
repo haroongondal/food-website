@@ -23,6 +23,7 @@ function FilterPage() {
     
     const handleFilters = (tagId, cusinesId, featureId, quickFilterId)=> {
 
+        
         const url = `https://api.masairapp.com/api/Restaurant/
                      GetRestaurantsByFilters?cusineId=${cusinesId}&RestaurantId=&
                      featureId=${featureId}&tagId=${tagId}&offset=0&limit=10`

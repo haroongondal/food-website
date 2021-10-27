@@ -23,6 +23,7 @@ function App() {
     
      <Switch>
 
+
         <Route exact path = "/">
         <ConsumerLandingPage/>
         </Route>
