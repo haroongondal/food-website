@@ -258,12 +258,8 @@
     }
 }
 
-
-  
-  .success {
-    color: blue;
-  }
-  
-  .error {
-    color: red;
+p {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    color: #f00e0e;
   }

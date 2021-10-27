@@ -1,8 +1,4 @@
 import React,{ useState} from 'react'
-
-import useFetch from "../Utils/useFetch"
-import usePostFetch from "../Utils/usePostFetch"
-
 export default function Login() {
 
    
@@ -39,6 +35,8 @@ export default function Login() {
         }).catch((error)=>{
             console.log(error)
         })
+
+        
         
     }
 
@@ -54,14 +52,16 @@ export default function Login() {
                 <div className="modal-body">
                     <h3 className="title">Please sign in</h3>
                     <hr className="hr-for-sign-in-form"/>
+                    <form>
                     <div className="content-of-form">
+                    
                         <div className="form-group" style={{marginTop: "30px"}}>
                             <span className="input-icon"><i className="bi bi-person"></i></span>
-                            <input type="email" className="form-control" value={username} onChange={(e)=>setUserName(e.target.value)} placeholder="Email"/>
+                            <input type="email" className="form-control" value={username} onChange={(e)=>setUserName(e.target.value)} placeholder="Email" required/>
                         </div>
                         <div className="form-group">
                             <span className="input-icon"><i className="bi bi-key"></i></span>
-                            <input type="password" className="form-control" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="Password"/>
+                            <input type="password" className="form-control" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="Password" required/>
                         </div>
                         <a href="/" className="forgot-pass">Forgot Password?</a>
                         <button className="btn" onClick={Login}>Sign In</button>
@@ -83,8 +83,9 @@ export default function Login() {
                         </div>
                     </div>
                     
-                    
+                    </form>
                 </div>
+
             </div>
         </div>
     </div>
