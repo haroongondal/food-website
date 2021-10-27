@@ -162,7 +162,7 @@ button.accordion-menu {
   }
   .blue-plus-btn{
     color: #06386C;
-    background: white;
+    background: #ffffff00;
     width: 36px;
     height: 100%;
     font-size: 18px;
@@ -266,7 +266,7 @@ button.accordion-menu-category {
   outline: none;
   padding: 15px;
   padding-left: 20px;
-  transform: rotate(0deg);
+  transform: rotate(-90deg);
 }
 .Category-name span{
   background: white;
@@ -311,46 +311,3 @@ button.accordion-menu-sub-category {
   grid-gap: 16px;
 }
 
-
-.Category-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  grid-gap: 16px;
-  margin: 0px 20px;
-}
-.left-tools-category{
-  display: flex;
-  align-items: center;
-  grid-gap: 6px;
-}
-.left-tools-category h6{
-  font-size: 13px;
-  margin-left:10px;
-  margin-bottom:0px;
-  font-weight: bold;
-  color:#06386C;
-}
-.drag-btn{
-  background: white;
-  border: none;
-  margin-top:5px;
-  margin-right:20px;
-}
-.right-tools-category{
-  display: flex;
-  align-items: center;
-  grid-gap: 26px;
-}
-.right-tools-category  h6{
-  font-size: 13px;
-  margin-left:10px;
-  margin-bottom:0px;
-  font-weight: bold;
-  color:#06386C;
-}
-.options-btn{
-  background: white;
-  border: none;
-  margin-top:5px;
-}

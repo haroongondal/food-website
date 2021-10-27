@@ -1,46 +1,19 @@
 import arrowImg from '../images/grey-arrow.svg'
 import '../styles/SignUp.css'
 import 'react-responsive-modal/styles.css'
-import React,{ useState, useEffect } from 'react'
+import React from 'react'
 import useFetch from '../Utils/useFetch'
-import { validEmail, validUser } from '../regex.js';
-function SignUp() {
-    const [userName , setUserName] = useState('');
-    const [fullName , setFullName] = useState('');
-    const [email, setEmail] = useState('');
-    const [enterPassword, setEnterPassword] = useState('');
-    const [reEnterPass, setReEnterPass] = useState('');
-    const [valid, setValid] = useState({userName,fullName,email,enterPassword});
+import validate from '../validateInfo';
+import useForm from '../useForm';
 
-    function signUp(){
-      
-    const object = {
-        userName: userName,
-        fullName: fullName,
-        email: email,
-        enterPassword: enterPassword,
-        // reEnterPass: reEnterPass,
-        AccountTypeId: 2,
-    }
-
-    const formBody = Object.keys(object).
-    map(key => encodeURIComponent(key) + '='
-     + encodeURIComponent(object[key])).join('&');
-
-    const data = fetch("https://api.masairapp.com/api/User/Signup",{
-        method:"POST",
-        headers:{
-            "Content-Type":"application/x-www-form-urlencoded"
-            
-        },
-        body:JSON.stringify(formBody)
-    }).then((result)=>{
-        result.json(data)
-    }).catch((error)=>{
-        console.log(error)
-    })
+function SignUp({submitForm}) {
    
-}
+    const { handleChange, handleSubmit, values, errors } = useForm(
+        submitForm,
+        validate
+      );
+      
+    
     const {data, isPending, error} = useFetch("https://api.masairapp.com/api/Lov/GetCities");
       
     return (
@@ -59,31 +32,42 @@ function SignUp() {
                                 <hr className="hr-for-sign-in-form"/>
                                 
                                 <div className="content-of-form">
-                                <form>
+                                <form onSubmit={handleSubmit} noValidate>
                                     <div className="form-group" style={{marginTop: "30px"}}>
                                         <span className="input-icon"><i className="bi bi-person"></i></span>
-                                        <input type="text" className="form-control" Value={userName} onChange={(e)=>setUserName(e.target.value)} placeholder="UserName" required />
+                                        <input type="text" className="form-control" name='userName' placeholder="UserName" value={values.userName}
+                                         onChange={handleChange} />
+                                         {errors.userName && <p>{errors.userName}</p>}
                                     </div>
-                                   
+                                    
                                     <div className="form-group">
                                         <span className="input-icon"><i className="bi bi-person"></i></span>
-                                        <input type="text" className="form-control" Value={fullName} onChange={(e)=>setFullName(e.target.value)} placeholder="FullName" required />
+                                        <input type="text" className="form-control" name="fullName" Value={values.fullName} onChange={handleChange} placeholder="FullName"  />
+                                        {errors.fullName && <p>{errors.fullName}</p>}
                                     </div>
+                                    
                                     <div className="form-group">
                                         <span className="input-icon"><i className="bi bi-envelope"></i></span>
-                                        <input type="email" className="form-control" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="Enter email *" required />
-                                        
+                                        <input type="email" className="form-control" name="email" value={values.email}
+                                            onChange={handleChange} placeholder="Enter email *" />
+                                          {errors.email && <p>{errors.email}</p>}
                                     </div>
                                    
                                    
                                     <div className="form-group">
                                         <span className="input-icon"><i className="bi bi-key"></i></span>
-                                        <input type="password" className="form-control" Value={enterPassword} onChange={(e)=>setEnterPassword(e.target.value)} placeholder="Enter password *" required/>
+                                        <input type="password" className="form-control" value={values.password}
+                                         onChange={handleChange}  name='password' placeholder="Enter password *"/>
+                                        {errors.password && <p>{errors.password}</p>}
                                     </div>
+                                    
                                     <div className="form-group">
                                         <span className="input-icon"><i className="bi bi-key"></i></span>
-                                        <input type="password" className="form-control"  Value={reEnterPass} onChange={(e)=>setReEnterPass(e.target.value)} placeholder="Re-enter password *" required/>
+                                        <input type="password" className="form-control" name='password2' value={values.password2}
+                                         onChange={handleChange} placeholder="Re-enter password *"/>
+                                         {errors.password2 && <p>{errors.password2}</p>}
                                     </div>
+                                    
                                     <div className="form-location">
                                         <span style={{marginTop:"3px"}} className="input-icon" ><i className="bi bi-geo-alt"></i></span>
                                         <select >
@@ -113,7 +97,7 @@ function SignUp() {
                                         <input type="checkbox"/>
                                         <label>Remember me</label>
                                     </div>
-                                    <button className="btn" onClick={signUp}>Create Account</button>
+                                    <button className="btn">Create Account</button>
                                     <hr className="hr-for-sign-in-form"/>
                                     <h6 className="text-dont-want-form">Don't want to complete the form?</h6>
                                     <button className="social-button">

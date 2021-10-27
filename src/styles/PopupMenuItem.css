@@ -1,0 +1,372 @@
+.border-popup{
+    background: white;
+    border-radius: 30px;
+    margin: 30px 0px;
+    padding: 0px 30px;
+    box-shadow: 2px 2px 18px rgb(0 0 0 / 10%);
+}
+.align-dropDown{
+    padding: 10px;
+}
+.dropDown-checkBox{
+    display: flex;
+    inline-size: max-content;
+    align-items: center;
+}
+.dropDown{
+    display: flex;
+    inline-size: max-content;
+    grid-gap: 70px;
+}
+.dropDown-item{
+    display: flex;
+    align-items: center;
+    inline-size: max-content;
+}
+.label-dropDown{
+    color:#06386C;
+    font-size: 14px;
+    margin-right: 10px;
+}
+.border-dropDown{
+    width: 17rem;
+    margin: 15px 20px;
+  }
+  .content-dropDown{
+    position: relative;
+      display: flex;
+      align-items: center;
+  }
+  .content-dropDown select{
+    font-size: 14px;
+    color: #474747;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    height: 100%;
+    display: block;
+    background-color: rgb(6 56 108 / 10%);
+    resize: vertical;
+    box-sizing: border-box;
+    min-height: 40px;
+    padding: 0px 10px;
+    -webkit-appearance: none;
+    text-transform: none;
+    font-family: inherit;
+    line-height: 1.15;
+    margin: 0;
+  }
+  .content-dropDown select:focus{
+      outline:none;
+  }
+  .content-dropDown span{
+    position: absolute;
+    pointer-events: none;
+    right: 4px;
+    display: inline-block;
+      height: 1.5rem;
+      width: 1.5rem;
+      min-width: 1.5rem;
+      font-size: 0;
+      line-height: 1;
+  }
+  .content-dropDown span img{
+    width: 12px;
+    height: 12px;
+    margin-top: 6px;
+  }
+  /*checkbox */
+  .main-popup-CB {
+    display: block;
+      position: relative;
+      padding-left: 27px;
+      margin-top: 15px;
+      margin-left: 5px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      justify-items: center;
+  }
+  .text-dineout-popup-CB{
+    font-size: 12px;
+    margin-bottom: -24px;
+    padding-top: 1px;
+    color: #06386C;
+  }
+  /* Hiding the initial checkbox */
+  input[type=checkbox] {
+    visibility: hidden;
+  }
+  /* Creating a custom checkbox based on demand */
+  .w3docs-popup-CB {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 14px;
+    width: 14px;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid #0325FF;
+  }
+  /* Specify the background color to be shown when hovering over checkbox */
+  /* .main:hover input ~ .w3docs {
+    background-color: #9F9F9F;
+  } */
+  /* Specify the background color to be shown when checkbox is active */
+  .main-popup-CB input:active ~ .w3docs-popup-CB {
+    background-color: white;
+  }
+  /* Specify the background color to be shown when checkbox is checked */
+  .main-popup-CB input:checked ~ .w3docs-popup-CB {
+    background-color: #0083C7;
+  }
+  /* Checkmark to be shown in checkbox */
+  /* It is not be shown when not checked */
+  .w3docs-popup-CB:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  /* Display checkmark when checked */
+  .main-popup-CB input:checked ~ .w3docs-popup-CB:after {
+    display: block;
+  }
+  /* Styling the checkmark using webkit */
+  /* Rotated the rectangle by 45 degree and 
+  showing only two border to make it look
+  like a tickmark */
+  .main-popup-CB .w3docs-popup-CB:after {
+    left: 4px;
+    bottom: 1px;
+    width: 4px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  /*checkbox */
+  .main-popup-CB-3 {
+    display: block;
+    position: relative;
+    padding-left: 21px;
+    margin-top: 15px;
+    margin-left: 52px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+  } 
+  .text-dineout-popup-CB-3{
+    font-size: 12px;
+    margin-bottom: -16px;
+    padding-top: 1px;
+    color: #06386C;
+  }
+  /* Specify the background color to be shown when checkbox is active */
+  .main-popup-CB-3 input:active ~ .w3docs-popup-CB {
+    background-color: white;
+  }
+  /* Specify the background color to be shown when checkbox is checked */
+  .main-popup-CB-3 input:checked ~ .w3docs-popup-CB {
+    background-color: #0083C7;
+  }
+  /* Checkmark to be shown in checkbox */
+  /* It is not be shown when not checked */
+  .w3docs-popup-CB-3:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  /* Display checkmark when checked */
+  .main-popup-CB-3 input:checked ~ .w3docs-popup-CB:after {
+    display: block;
+  }
+  /* Styling the checkmark using webkit */
+  /* Rotated the rectangle by 45 degree and 
+  showing only two border to make it look
+  like a tickmark */
+  .main-popup-CB-3 .w3docs-popup-CB:after {
+    left: 4px;
+    bottom: 1px;
+    width: 4px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .form-dropDown {
+    max-width: 270px;
+    width: 100%;
+    /* margin-left: 15px; */
+    /* margin-bottom: 5px; */
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+  .form-dropDown .form-input-dropDown {
+      display: flex;
+      align-items: center;
+      height: 36px;
+  }
+  .form-dropDown .form-input-dropDown input {
+    flex-grow: 1;
+    padding: 20px 11px;
+    height: 100%;
+    border: none;
+    background: rgb(6 56 108 / 10%);
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+  }
+  .form-dropDown .form-input-dropDown input::placeholder{
+    color: #474747;
+  }
+  .form-dropDown .form-input-dropDown button {
+    margin-left: -5px;
+    width: 36px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: black;
+    font-size: 18px;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    padding: 20px;
+  }
+  .border-DD-small{
+    width: 14rem;
+    margin: 15px 20px;
+  }
+  .add-tax-sec{
+      display: flex;
+  }
+  
+  .add-tax-btn{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .blue-plus-btn-tax{
+    color: #06386C;
+    background: #ffffff00;
+    width: 36px;
+    height: 100%;
+    font-size: 22px;
+    border: none;
+    outline: none;
+  }
+
+.delete-tax-btn{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.blue-minus-btn-tax{
+  color: #06386C;
+  background: #ffffff00;
+  width: 36px;
+  height: 100%;
+  font-size: 22px;
+  border: none;
+  outline: none;
+}
+.border-DD-large{
+    width: 747px;
+    margin: 15px 20px;
+}
+.checkBox-addBtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.add-CB-group{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.blue-plus-btn-CB{
+    color: #06386C;
+    background: #ffffff00;
+    width: 36px;
+    height: 100%;
+    font-size: 22px;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    margin-right: -10px;
+}
+.border-CB-group{
+    background: rgb(6 56 108 / 10%);
+    padding: 0px 10px;
+}
+.dropDown-small-G{
+    display: flex;
+    inline-size: max-content;
+    grid-gap: 53px;
+}
+.dropDown-item-small-G{
+    display: flex;
+    align-items: center;
+    inline-size: max-content;
+}
+.label-dropDown-small-G{
+    color:#06386C;
+    font-size: 14px;
+    margin-right: 10px;
+}
+.border-dropDown-small-G{
+    width: 17rem;
+    margin: 15px 20px;
+  }
+
+  .form-dropDown-small-G {
+    
+    width: 60px;
+  }
+  .form-dropDown-small-G .form-input-dropDown-small-G {
+      display: flex;
+      align-items: center;
+      height: 36px;
+  }
+  .form-dropDown-small-G .form-input-dropDown-small-G input {
+    flex-grow: 1;
+    padding: 20px 11px;
+    height: 100%;
+    border: none;
+    background: rgb(6 56 108 / 10%);
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+  }
+  .form-dropDown-small-G .form-input-dropDown-small-G input::placeholder{
+    color: #474747;
+  }
+  .form-dropDown-small-G .form-input-dropDown-small-G button {
+    margin-left: -5px;
+    width: 36px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: black;
+    font-size: 18px;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    padding: 20px;
+  }

@@ -16,6 +16,11 @@ const [isSignpShowing, setSignupShowing] = useState(false)
 
 const [isLoginShowing, setLoginShowing] = useState(false)
 
+const [isSubmitted, setIsSubmitted] = useState(false);
+
+function submitForm() {
+  setIsSubmitted(true);
+}
 
 const showSearchBar = ()=> {
     if (window.scrollY >= 250) {
@@ -50,7 +55,7 @@ window.addEventListener('scroll', showSearchBar)
         <div>
            
         <Modal open={isSignpShowing} onClose={closeSignupPop} center styles = {{modal: {"margin-top": "80px"}}}>
-          <SignUp/>
+          <SignUp submitForm={submitForm} />
       </Modal>
 
       <Modal open={isLoginShowing} onClose={closeLoginPop} center styles = {{modal: {"margin-top": "80px"}}}>
