@@ -30,7 +30,7 @@ function PopupMenu() {
       <div className="border-back">
         <div className="dropDown">
           <div className="dropDown-item">
-            <span className="label-dropDown" style={{ marginRight: "44px" }}>
+            <span className="label-dropDown" style={{ marginRight: "105px" }}>
               Category
             </span>
             <div className="border-dropDown-add-menu">
@@ -52,7 +52,7 @@ function PopupMenu() {
       <div className="border-back">
         <div className="dropDown">
           <div className="dropDown-item">
-            <span className="label-dropDown" style={{ marginRight: "26px" }}>
+            <span className="label-dropDown" style={{ marginRight: "87px" }}>
               Food Type
             </span>
             <div className="content-dropDown">
@@ -84,7 +84,7 @@ function PopupMenu() {
                     style={{ mixBlendMode: "normal" }}
                   >
                     <path d="M0,172v-172h172v172z" fill="none"></path>
-                    <g fill="#34495e">
+                    <g fill="#000000">
                       <path d="M86,16.125c-16.125,0 -30.6375,12.3625 -41.3875,27.95c-10.75,15.5875 -17.7375,34.9375 -17.7375,52.675c0,18.8125 6.45,33.8625 17.2,44.075c11.2875,9.675 25.8,15.05 41.925,15.05c16.125,0 30.6375,-4.8375 41.925,-15.05c11.2875,-10.2125 17.2,-25.2625 17.2,-44.075c0,-17.7375 -6.9875,-37.0875 -17.7375,-52.675c-10.75,-15.5875 -25.2625,-27.95 -41.3875,-27.95zM86,26.875c10.2125,0 22.575,9.1375 32.25,23.1125c9.675,13.975 16.125,32.25 16.125,46.7625c0,16.6625 -5.375,28.4875 -13.975,36.0125c-8.6,8.0625 -20.425,12.3625 -34.4,12.3625c-13.975,0 -25.8,-4.3 -34.4,-12.3625c-8.6,-8.0625 -13.975,-19.8875 -13.975,-36.0125c0,-15.05 6.45,-32.7875 16.125,-46.7625c9.675,-13.975 22.0375,-23.1125 32.25,-23.1125z"></path>
                     </g>
                   </g>
@@ -171,25 +171,25 @@ function PopupMenu() {
       <div className="border-back">
         <div className="dropDown">
           <div className="dropDown-item">
-            <span className="label-dropDown" style={{ marginRight: "40px" }}>
-              Category
+            <span className="label-dropDown" style={{ marginRight: "79px" }}>
+              Service Type
             </span>
-            
-          <div className="checkBox-menu">
-            <label className="main-popup-menu">
-              <h6 className="text-dineout-popup-menu">Delivery</h6>
-              <input type="checkbox" />
-              <span className="w3docs-popup-menu"></span>
-            </label>
-          </div>
 
-          <div className="checkBox-menu">
-            <label className="main-popup-menu">
-              <h6 className="text-dineout-popup-menu">Takeaway</h6>
-              <input type="checkbox" />
-              <span className="w3docs-popup-menu"></span>
-            </label>
-          </div>
+            <div className="checkBox-menu">
+              <label className="main-popup-menu">
+                <h6 className="text-dineout-popup-menu">Delivery</h6>
+                <input type="checkbox" />
+                <span className="w3docs-popup-menu"></span>
+              </label>
+            </div>
+
+            <div className="checkBox-menu">
+              <label className="main-popup-menu">
+                <h6 className="text-dineout-popup-menu">Takeaway</h6>
+                <input type="checkbox" />
+                <span className="w3docs-popup-menu"></span>
+              </label>
+            </div>
           </div>
         </div>
       </div>
@@ -197,27 +197,557 @@ function PopupMenu() {
       <div className="border-back">
         <div className="dropDown">
           <div className="dropDown-item">
-            <span className="label-dropDown" style={{ marginRight: "40px" }}>
+            <span className="label-dropDown" style={{ marginRight: "56px" }}>
               Pricing
             </span>
           </div>
-          <div className="dropDown-item">
-            <span className="label-dropDown" style={{ marginRight: "44px" }}>
-              Category
+          <div className="dropDown-item-Pricing">
+            <span
+              className="label-dropDown"
+              style={{ marginRight: "16px", fontSize: "11px" }}
+            >
+              Base Price
             </span>
-            <div className="border-dropDown-add-menu">
-              <div className="content-dropDown">
-                <select>
-                  <option className="option">Category</option>
-                  <option className="option">Category</option>
-                  <option className="option">Category</option>
-                </select>
+            <div className="content-dropDown">
+              <div className="border-PK">
+                <h6 className="text-PK">PK</h6>
+              </div>
+              <form
+                action="#"
+                className="form-dropDown"
+                style={{ maxWidth: "177px", textAlignLast: "center" }}
+              >
+                <div className="form-input-PK">
+                  <input type="search" placeholder="250" />
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div className="dropDown-item-Pricing">
+            <span
+              className="label-dropDown"
+              style={{ marginRight: "16px", fontSize: "11px" }}
+            >
+              Terms & Charges
+            </span>
+            <div className="content-dropDown">
+              <div className="dropDown-item">
+                <div className="border-dropDown-T-and-C">
+                  <div className="content-dropDown">
+                    <select className="Tax-DD">
+                      <option className="option">Taxes</option>
+                      <option className="option">Taxes</option>
+                      <option className="option">Taxes</option>
+                    </select>
+                    <span>
+                      <img alt="down-arrow" src={arrow} />
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="dropDown-item">
+                <div className="border-dropDown-T-and-C">
+                  <div className="content-dropDown">
+                    <select className="Charges-DD">
+                      <option className="option">Charges</option>
+                      <option className="option">Charges</option>
+                      <option className="option">Charges</option>
+                    </select>
+                    <span>
+                      <img alt="down-arrow" src={arrow} />
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
+      <div className="border-back">
+        <div className="dropDown">
+          <div className="dropDown-item">
+            <span className="label-dropDown" style={{ marginRight: "-14px" }}>
+              Menu Description
+            </span>
+          </div>
+          <textarea
+            placeholder="Remember, be nice!"
+            className="menu-textArea"
+            rows="6"
+            cols="95"
+          ></textarea>
+        </div>
+      </div>
+
+      <div className="border-back">
+        <div className="dropDown">
+          <div className="dropDown-item">
+            <span className="label-dropDown" style={{ marginRight: "-9px" }}>
+              Image and Video
+            </span>
+          </div>
+          <div className="image-video">
+            <button className="btn-img-vid">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="96"
+                height="96"
+                viewBox="0 0 226 226"
+                style={{ fill: "#000000" }}
+                className="svg-img-vid"
+              >
+                <g
+                  fill="none"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style={{ mixBlendMode: "normal" }}
+                >
+                  <path d="M0,226v-226h226v226z" fill="none"></path>
+                  <g fill="#06386c">
+                    <path d="M37.66667,37.66667c-10.29301,0 -18.83333,8.54033 -18.83333,18.83333v113c0,10.29301 8.54033,18.83333 18.83333,18.83333h75.33333v-18.83333h-75.33333v-113h150.66667v56.5h18.83333v-56.5c0,-10.29301 -8.54032,-18.83333 -18.83333,-18.83333zM136.54167,103.58333l-32.95833,37.66667l-23.54167,-23.54167l-25.63835,32.95833h96.26335v-28.25zM169.5,131.83333v37.66667h-37.66667v18.83333h37.66667v37.66667h18.83333v-37.66667h37.66667v-18.83333h-37.66667v-37.66667z"></path>
+                  </g>
+                </g>
+              </svg>
+            </button>
+
+            <button className="btn-img-vid">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="96"
+                height="96"
+                viewBox="0 0 226 226"
+                style={{ fill: "#000000" }}
+                className="svg-img-vid"
+              >
+                <g
+                  fill="none"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style={{ mixBlendMode: "normal" }}
+                >
+                  <path d="M0,226v-226h226v226z" fill="none"></path>
+                  <g fill="#06386c">
+                    <path d="M37.66667,37.66667c-10.29301,0 -18.83333,8.54033 -18.83333,18.83333v113c0,10.29301 8.54033,18.83333 18.83333,18.83333h75.33333v-18.83333h-75.33333v-113h150.66667v56.5h18.83333v-56.5c0,-10.29301 -8.54032,-18.83333 -18.83333,-18.83333zM136.54167,103.58333l-32.95833,37.66667l-23.54167,-23.54167l-25.63835,32.95833h96.26335v-28.25zM169.5,131.83333v37.66667h-37.66667v18.83333h37.66667v37.66667h18.83333v-37.66667h37.66667v-18.83333h-37.66667v-37.66667z"></path>
+                  </g>
+                </g>
+              </svg>
+            </button>
+
+            <button className="btn-img-vid">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="96"
+                height="96"
+                viewBox="0 0 226 226"
+                style={{ fill: "#000000" }}
+                className="svg-img-vid"
+              >
+                <g
+                  fill="none"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style={{ mixBlendMode: "normal" }}
+                >
+                  <path d="M0,226v-226h226v226z" fill="none"></path>
+                  <g fill="#06386c">
+                    <path d="M37.66667,37.66667c-10.29301,0 -18.83333,8.54033 -18.83333,18.83333v113c0,10.29301 8.54033,18.83333 18.83333,18.83333h75.33333v-18.83333h-75.33333v-113h150.66667v56.5h18.83333v-56.5c0,-10.29301 -8.54032,-18.83333 -18.83333,-18.83333zM136.54167,103.58333l-32.95833,37.66667l-23.54167,-23.54167l-25.63835,32.95833h96.26335v-28.25zM169.5,131.83333v37.66667h-37.66667v18.83333h37.66667v37.66667h18.83333v-37.66667h37.66667v-18.83333h-37.66667v-37.66667z"></path>
+                  </g>
+                </g>
+              </svg>
+            </button>
+
+            <button className="btn-img-vid">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="96"
+                height="96"
+                viewBox="0 0 172 172"
+                style={{ fill: "#000000" }}
+                className="svg-img-vid"
+              >
+                <g
+                  fill="none"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style={{ mixBlendMode: "normal" }}
+                >
+                  <path d="M0,172v-172h172v172z" fill="none"></path>
+                  <g fill="#06386c">
+                    <path d="M30.45833,25.08333c-10.82086,0 -19.70833,8.88748 -19.70833,19.70833v82.41667c0,10.82086 8.88748,19.70833 19.70833,19.70833h111.08333c10.82086,0 19.70833,-8.88748 19.70833,-19.70833v-82.41667c0,-10.82086 -8.88748,-19.70833 -19.70833,-19.70833zM30.45833,35.83333h111.08333c5.01031,0 8.95833,3.94802 8.95833,8.95833v82.41667c0,5.01031 -3.94802,8.95833 -8.95833,8.95833h-111.08333c-5.01031,0 -8.95833,-3.94802 -8.95833,-8.95833v-82.41667c0,-5.01031 3.94802,-8.95833 8.95833,-8.95833zM75.15902,60.91667c-1.22774,0.01568 -2.44842,0.34361 -3.54134,0.98682c-2.18942,1.29 -3.53434,3.64285 -3.53434,6.17985v35.83333c0,2.537 1.34493,4.88985 3.53434,6.17985c1.118,0.65933 2.37457,0.98682 3.63232,0.98682c1.19683,0 2.39619,-0.30441 3.47835,-0.90283l32.25,-17.91667c2.27542,-1.26492 3.68831,-3.65875 3.68831,-6.26384c0,-2.60508 -1.4129,-4.99892 -3.68831,-6.26384l-32.25,-17.91667c-1.10904,-0.61633 -2.3416,-0.91851 -3.56934,-0.90283z"></path>
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-back">
+        <div className="dropDown">
+          <div className="dropDown-item">
+            <span className="label-dropDown" style={{ marginRight: "9px" }}>
+              Menu Timings
+            </span>
+          </div>
+          <div className="menu-timings">
+            <div className="title-menu-timings">
+              <span>Dining</span>
+            </div>
+            <hr className="line-menu-timings" />
+            <div className="content-menu-timings">
+              <div>
+                <input
+                  type="radio"
+                  id="restaurant-timings"
+                  name="menu-timings"
+                  value="restaurant-timings"
+                />
+                <span className="subtitle-menu-timings">
+                  Same as restaurant timings
+                </span>
+              </div>
+              <span className="details-menu-timings">
+                Restaurant timings (10:30 -19:00)
+              </span>
+            </div>
+            <hr className="line-menu-timings" />
+            <div className="content-menu-timings">
+              <div>
+                <input
+                  type="radio"
+                  id="customize-timings"
+                  name="menu-timings"
+                  value="customize-timings"
+                />
+                <span className="subtitle-menu-timings">
+                  Customize launch timings
+                </span>
+              </div>
+              <div>
+                <span
+                  className="details-menu-timings-Custom"
+                  style={{ borderRight: "1px solid #0000003d" }}
+                >
+                  Mon - Fri 12:30 pm - 3:30 pm
+                </span>
+                <span className="details-menu-timings-Custom">
+                  Sat - Sun 12:00 pm - 3:00 pm
+                </span>
+              </div>
+            </div>
+            <hr className="line-menu-timings" />
+            <div className="content-menu-timings">
+              <div className="allDay-radio-btns">
+                <div>
+                  <input
+                    type="radio"
+                    id="all-days"
+                    name="menu-timings"
+                    value="all-days"
+                  />
+                  <span className="subtitle-menu-timings">All Days</span>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="select-dates"
+                    name="menu-timings"
+                    value="select-dates"
+                  />
+                  <span className="subtitle-menu-timings">Select Dates</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-back">
+        <div className="dropDown">
+          <div className="dropDown-item">
+            <span className="label-dropDown" style={{ marginRight: "9px" }}>
+              Dish Details
+            </span>
+          </div>
+          <div>
+            <div className="dropDown-item-Pricing">
+              <span
+                className="label-dropDown"
+                style={{ marginRight: "16px", fontSize: "11px" }}
+              >
+                Category
+              </span>
+              <div className="border-dropDown-add-menu">
+                <div className="content-dropDown">
+                  <select>
+                    <option className="option">Category</option>
+                    <option className="option">Category</option>
+                    <option className="option">Category</option>
+                  </select>
+                  <span>
+                    <img alt="down-arrow" src={arrow} />
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="section-service-info">
+              <div className="dropDown-item-Pricing">
+                <span
+                  className="label-dropDown"
+                  style={{ marginRight: "16px", fontSize: "11px" }}
+                >
+                  Service Info
+                </span>
+                <div className="border-dropDown-add-menu">
+                  <div className="content-dropDown">
+                    <select>
+                      <option className="option">services</option>
+                      <option className="option">services</option>
+                      <option className="option">services</option>
+                    </select>
+                    <span>
+                      <img alt="down-arrow" src={arrow} />
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="dropDown-item-Pricing">
+                <span
+                  className="label-dropDown"
+                  style={{ marginRight: "16px", fontSize: "11px" }}
+                >
+                  Calorie Count
+                </span>
+                <div className="content-dropDown">
+                  <form
+                    action="#"
+                    className="form-calorie"
+                    style={{ textAlignLast: "center" }}
+                  >
+                    <div className="form-input-calorie">
+                      <input type="search" />
+                    </div>
+                  </form>
+                  <div className="border-calorie">
+                    <h6 className="text-PK">kCal</h6>
+                  </div>
+                </div>
+              </div>
+              <div className="dropDown-item-Pricing">
+                <span
+                  className="label-dropDown"
+                  style={{ marginRight: "16px", fontSize: "11px" }}
+                >
+                  Portion Size
+                </span>
+                <div className="content-dropDown">
+                  <form
+                    action="#"
+                    className="form-calorie"
+                    style={{ textAlignLast: "center" }}
+                  >
+                    <div className="form-input-calorie">
+                      <input type="search" />
+                    </div>
+                  </form>
+                  <div className="border-portion-size-DD">
+                    <div className="content-dropDown-portion-size">
+                      <select className="select-portion-size">
+                        <option className="option">ml</option>
+                        <option className="option">ml</option>
+                        <option className="option">ml</option>
+                      </select>
+                      <span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          x="0px"
+                          y="0px"
+                          width="50"
+                          height="50"
+                          viewBox="0 0 172 172"
+                          style={{ fill: "#000000" }}
+                        >
+                          <g
+                            fill="none"
+                            fill-rule="nonzero"
+                            stroke="none"
+                            stroke-width="1"
+                            stroke-linecap="butt"
+                            stroke-linejoin="miter"
+                            stroke-miterlimit="10"
+                            stroke-dasharray=""
+                            stroke-dashoffset="0"
+                            font-family="none"
+                            font-weight="none"
+                            font-size="none"
+                            text-anchor="none"
+                            style={{ mixBlendMode: "normal" }}
+                          >
+                            <path d="M0,172v-172h172v172z" fill="none"></path>
+                            <g fill="#ffffff">
+                              <path d="M136.09668,64.40202c-1.89036,0.04469 -3.68647,0.83458 -4.99707,2.19759l-45.09961,45.09961l-45.09961,-45.09961c-1.34928,-1.38698 -3.20203,-2.16948 -5.13704,-2.1696c-2.91628,0.00077 -5.54133,1.76841 -6.6387,4.47035c-1.09737,2.70194 -0.44825,5.79937 1.64163,7.83336l50.16667,50.16667c2.7988,2.79764 7.33531,2.79764 10.13411,0l50.16667,-50.16667c2.13023,-2.04844 2.78476,-5.19437 1.64831,-7.92247c-1.13645,-2.72809 -3.83085,-4.47896 -6.78536,-4.40924z"></path>
+                            </g>
+                          </g>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="dropDown-item-Pricing">
+              <span
+                className="label-dropDown"
+                style={{ marginRight: "16px", fontSize: "11px" }}
+              >
+                Preparation Time
+              </span>
+              <div className="border-dropDown-add-menu">
+                <div className="content-dropDown">
+                  <select>
+                    <option className="option">Add time</option>
+                    <option className="option">Add time</option>
+                    <option className="option">Add time</option>
+                  </select>
+                  <span>
+                    <img alt="down-arrow" src={arrow} />
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="drinks">
+              <span
+                className="label-dropDown"
+                style={{ marginRight: "16px", fontSize: "11px" }}
+              >
+                Drinks
+              </span>
+              <div className="align-content-drinks">
+              <div className="content-dropDown">
+                <button className="drinks-btn">Coke</button>
+              </div>
+              <div className="content-dropDown">
+                <button className="drinks-btn">Coke</button>
+              </div>
+              <div className="content-dropDown">
+                <button className="drinks-btn">Coke</button>
+              </div>
+              <div className="content-dropDown">
+                <button className="drinks-btn">Coke</button>
+              </div>
+              <div className="content-dropDown">
+                <button className="drinks-btn">Coke</button>
+              </div>
+              <div className="content-dropDown">
+                <button className="drinks-btn">Coke</button>
+              </div>
+              <div className="content-dropDown">
+                <button className="drinks-btn">Coke</button>
+              </div>
+              <div className="content-dropDown">
+                <button className="drinks-btn">Coke</button>
+              </div>
+              <div className="content-dropDown">
+                <button className="drinks-btn">Coke</button>
+              </div>
+              <div className="content-dropDown">
+                <button className="drinks-btn">Coke</button>
+              </div>
+              <div className="content-dropDown">
+                <button className="drinks-btn">Coke</button>
+              </div>
+              <div className="content-dropDown">
+                <button className="drinks-btn">Coke</button>
+              </div>
+              <div className="content-dropDown">
+                <button className="drinks-btn">Coke</button>
+              </div>
+              <div className="content-dropDown">
+                <button className="drinks-btn">Coke</button>
+              </div>
+              <div className="content-dropDown">
+                <button className="drinks-btn">Coke</button>
+              </div>
+              <div className="content-dropDown">
+                <button className="drinks-btn">Coke</button>
+              </div>
+              <div className="content-dropDown">
+                <button className="drinks-btn">Coke</button>
+              </div>
+              </div>
+            </div>
+            <div className="drinks">
+              <span
+                className="label-dropDown"
+                style={{ marginRight: "16px", fontSize: "11px" }}
+              >
+                Spice Level
+              </span>
+              <div className="align-content-drinks">
+              <div className="content-dropDown">
+                <button className="drinks-btn">Medium Spicy</button>
+              </div>
+              <div className="content-dropDown">
+                <button className="drinks-btn">Mild</button>
+              </div>
+              <div className="content-dropDown">
+                <button className="drinks-btn">Very Spicy</button>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
