@@ -3,10 +3,13 @@ import { useState } from "react";
 import "../styles/MenuComponent.css";
 import Modal from "react-responsive-modal";
 import PopupMenu from "./PopupMenu";
+import PopupCityOutlet from "./PopupCityOutlet";
+import PopupCompanyGroup from "./PopupCompanyGroup";
+import PopupNewBrand from "./PopupNewBrand";
+import PopupNewOutlet from "./PopupNewOutlet";
 
 function MenuComponent() {
-
-    const [isAddMenuShowing, setAddMenuShowing] = useState(false);
+  const [isAddMenuShowing, setAddMenuShowing] = useState(false);
 
   const handleAddMenuPop = (e) => {
     e.preventDefault();
@@ -15,6 +18,17 @@ function MenuComponent() {
 
   const closeAddMenuPop = () => {
     setAddMenuShowing(false);
+  };
+
+  const [isCityOultetShowing, setCityOultetShowing] = useState(false);
+
+  const handleCityOultetPop = (e) => {
+    e.preventDefault();
+    setCityOultetShowing(true);
+  };
+
+  const closeCityOultetPop = () => {
+    setCityOultetShowing(false);
   };
 
   return (
@@ -45,9 +59,13 @@ function MenuComponent() {
         </div>
 
         <div className="right-tools">
-          <button className="addMenuDetails-btn">Add menu details</button>
+          <button className="addMenuDetails-btn" onClick={handleCityOultetPop}>
+            Add menu details
+          </button>
 
-          <button className="addMenu-btn" onClick={handleAddMenuPop}>Add menu</button>
+          <button className="addMenu-btn" onClick={handleAddMenuPop}>
+            Add menu
+          </button>
 
           <button className="save-btn">Save</button>
         </div>
@@ -57,10 +75,21 @@ function MenuComponent() {
         onClose={closeAddMenuPop}
         center
         styles={{
-          modal: { "margin-top": "80px", "max-width": "1000px", width: "100%" },
+          modal: { "margin-top": "80px", "max-width": "955px", width: "100%" },
         }}
       >
         <PopupMenu />
+      </Modal>
+
+      <Modal
+        open={isCityOultetShowing}
+        onClose={closeCityOultetPop}
+        center
+        styles={{
+          modal: { "margin-top": "80px", "max-width": "955px", width: "100%" },
+        }}
+      >
+        <PopupNewOutlet/>
       </Modal>
     </div>
   );
