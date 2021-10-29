@@ -3,9 +3,7 @@ import { useState } from "react";
 import "../styles/AdminMenuItem.css";
 import dishImage from "../images/food_plate.png";
 import MenuCategoryItem from "../components/MenuCategoryItem";
-import SignUp from "./SignUp";
 import Modal from "react-responsive-modal";
-import Login from "./Login";
 import PopupMenuItem from "../components/PopupMenuItem";
 
 function AdminMenuItem() {
@@ -237,8 +235,7 @@ function AdminMenuItem() {
           modal: { "margin-top": "80px", "max-width": "1000px", width: "100%" },
         }}
       >
-        <PopupMenuItem
-         />
+        <PopupMenuItem />
       </Modal>
     </div>
   );

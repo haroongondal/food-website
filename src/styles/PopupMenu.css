@@ -1,432 +1,434 @@
-.align-content-popUp{
-    margin: 30px 0px;
+.align-content-popUp {
+  margin: 30px 0px;
 }
-.border-back{
-    background: rgb(6 56 108 / 10%);
-    margin: 20px 0px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 4px rgb(0 0 0 / 15%);
+.border-back {
+  background: rgb(6 56 108 / 10%);
+  margin: 20px 0px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgb(0 0 0 / 15%);
 }
-.border-dropDown-add-menu{
-    width: 17rem;
+.border-dropDown-add-menu {
+  width: 17rem;
 }
-.item-name{
-    margin: 0;
-    color: #06386C;
-    font-weight: bold;
+.item-name {
+  margin: 0;
+  color: #06386c;
+  font-weight: bold;
 }
-.egg-btn{
-    font-size: 14px;
-    border: none;
-    background-color: rgb(6 56 108 / 10%);
-    padding: 5px 10px;
-    margin: 0px 10px;
-    border-radius: 3px;
-    box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
+.egg-btn {
+  font-size: 14px;
+  border: none;
+  background-color: rgb(6 56 108 / 10%);
+  padding: 5px 10px;
+  margin: 0px 10px;
+  border-radius: 3px;
+  box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
 }
-.egg-btn:focus,.egg-btn:hover{
-    background: rgb(255 193 7 / 35%);
-    transition: all  0.3s ease;
-    transform: scale(1.001);
+.egg-btn:focus,
+.egg-btn:hover {
+  background: rgb(255 193 7 / 35%);
+  transition: all 0.3s ease;
+  transform: scale(1.001);
 }
-.veg-btn{
-    font-size: 14px;
-    border: none;
-    background-color: rgb(6 56 108 / 10%);
-    padding: 5px 10px;
-    margin: 0px 10px;
-    border-radius: 3px;
-    box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
+.veg-btn {
+  font-size: 14px;
+  border: none;
+  background-color: rgb(6 56 108 / 10%);
+  padding: 5px 10px;
+  margin: 0px 10px;
+  border-radius: 3px;
+  box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
 }
-.veg-btn:focus,.veg-btn:hover{
-    background: rgb(0 225 0 / 35%);
-    transition: all  0.3s ease;
-    transform: scale(1.001);
+.veg-btn:focus,
+.veg-btn:hover {
+  background: rgb(0 225 0 / 35%);
+  transition: all 0.3s ease;
+  transform: scale(1.001);
 }
-.non-veg-btn{
-    font-size: 14px;
-    border: none;
-    background-color: rgb(6 56 108 / 10%);
-    padding: 5px 10px;
-    margin: 0px 10px;
-    border-radius: 3px;
-    box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
+.non-veg-btn {
+  font-size: 14px;
+  border: none;
+  background-color: rgb(6 56 108 / 10%);
+  padding: 5px 10px;
+  margin: 0px 10px;
+  border-radius: 3px;
+  box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
 }
-.non-veg-btn:focus,.non-veg-btn:hover{
-    background: rgb(255 0 0 / 35%);
-    transition: all  0.3s ease;
-    transform: scale(1.001);
+.non-veg-btn:focus,
+.non-veg-btn:hover {
+  background: rgb(255 0 0 / 35%);
+  transition: all 0.3s ease;
+  transform: scale(1.001);
 }
-.svg-edit{
-    width: 18px;
-    height: 18px;
-    margin-right: 5px;
-    margin-top: -3px;
-    margin-left: -3px;
+.svg-edit {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  margin-top: -3px;
+  margin-left: -3px;
 }
-.svg-edit-veg{
-    width: 18px;
-    height: 18px;
-    margin-right: 8px;
-    margin-top: -3px;
-    margin-left: -3px;
+.svg-edit-veg {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  margin-top: -3px;
+  margin-left: -3px;
 }
 
-  /*checkbox */
+/*checkbox */
 .checkBox-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 40px;
 }
-  .main-popup-menu {
-    display: block;
-      position: relative;
-      padding-left: 27px;
-      margin-top: 8px;
-      margin-left: 5px;
-      margin-bottom: 8px;
-      cursor: pointer;
-      font-size: 14px;
-      align-items: center;
-      justify-content: center;
-      align-content: center;
-      justify-items: center;
-  }
-  .text-dineout-popup-menu{
-    font-size: 12px;
-    margin-bottom: -24px;
-    padding-top: 1px;
-    color: #06386C;
-  }
-  input[type=checkbox] {
-    visibility: hidden;
-  }
-  .w3docs-popup-menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 14px;
-    width: 14px;
-    background-color: white;
-    border-radius: 3px;
-    border: 1px solid #0325FF;
-  }
-  .main-popup-menu input:active ~ .w3docs-popup-menu {
-    background-color: white;
-  }
-  .main-popup-menu input:checked ~ .w3docs-popup-menu {
-    background-color: #0083C7;
-  }
-  .w3docs-popup-menu:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  .main-popup-menu input:checked ~ .w3docs-popup-menu:after {
-    display: block;
-  }
-  .main-popup-menu .w3docs-popup-menu:after {
-    left: 4px;
-    bottom: 1px;
-    width: 4px;
-    height: 12px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-.dropDown-item-Pricing{
-    align-items: center;
-    inline-size: max-content;
-    margin: 10px 0px;
+.main-popup-menu {
+  display: block;
+  position: relative;
+  padding-left: 27px;
+  margin-top: 8px;
+  margin-left: 5px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
 }
-.border-PK{
-    background: rgb(6 56 108 / 56%);
-    padding: 12px;
-    padding-bottom: 13px;
-    border-radius: 4px 0px 0px 4px;
+.text-dineout-popup-menu {
+  font-size: 12px;
+  margin-bottom: -24px;
+  padding-top: 1px;
+  color: #06386c;
 }
-.text-PK{
-    margin: 0;
-    font-size: 13px;
-    color: white;
+input[type="checkbox"] {
+  visibility: hidden;
+}
+.w3docs-popup-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 14px;
+  width: 14px;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid #0325ff;
+}
+.main-popup-menu input:active ~ .w3docs-popup-menu {
+  background-color: white;
+}
+.main-popup-menu input:checked ~ .w3docs-popup-menu {
+  background-color: #0083c7;
+}
+.w3docs-popup-menu:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.main-popup-menu input:checked ~ .w3docs-popup-menu:after {
+  display: block;
+}
+.main-popup-menu .w3docs-popup-menu:after {
+  left: 4px;
+  bottom: 1px;
+  width: 4px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.dropDown-item-Pricing {
+  align-items: center;
+  inline-size: max-content;
+  margin: 10px 0px;
+}
+.border-PK {
+  background: rgb(6 56 108 / 56%);
+  padding: 12px;
+  padding-bottom: 13px;
+  border-radius: 4px 0px 0px 4px;
+}
+.text-PK {
+  margin: 0;
+  font-size: 13px;
+  color: white;
 }
 
 .form-dropDown {
-    max-width: 272px;
-    width: 100%;
-    /* margin-left: 15px; */
-    /* margin-bottom: 5px; */
-    min-width: -moz-fit-content;
-    min-width: fit-content;
-  }
-  .form-dropDown .form-input-PK {
-      display: flex;
-      align-items: center;
-      height: 36px;
-  }
-  .form-dropDown .form-input-PK input {
-    flex-grow: 1;
-    padding: 20px 11px;
-    height: 100%;
-    border: none;
-    background: rgb(6 56 108 / 10%);
-    border-radius: 0px 4px 4px 0px;
-    outline: none;
-    width: 100%;
-    font-size: 13px;
-  }
-  .form-dropDown .form-input-PK input::placeholder{
-    color: #474747;
-  }
-  .form-dropDown .form-input-PK button {
-    margin-left: -5px;
-    width: 36px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    color: black;
-    font-size: 18px;
-    border: 1px solid grey;
-    outline: none;
-    border-radius: 0 5px 5px 0;
-    padding: 20px;
-  }
-  .border-dropDown-T-and-C{
-    width: 11rem;
-  }
-  .content-dropDown .Tax-DD{
-    font-size: 14px;
-    color: #474747;
-    width: 100%;
-    border: none;
-    border-right: 1px solid #80808040;
-    border-radius: 4px 0px 0px 4px;
-    height: 100%;
-    display: block;
-    background-color: rgb(6 56 108 / 10%);
-    resize: vertical;
-    box-sizing: border-box;
-    min-height: 40px;
-    padding: 0px 10px;
-    -webkit-appearance: none;
-    text-transform: none;
-    font-family: inherit;
-    line-height: 1.15;
-    margin: 0;
-  }
-  .content-dropDown .Tax-DD:focus{
-      outline:none;
-  }
-  .content-dropDown .Charges-DD{
-    font-size: 14px;
-    color: #474747;
-    width: 100%;
-    border: none;
-    border-radius: 0px 4px 4px 0px;
-    height: 100%;
-    display: block;
-    background-color: rgb(6 56 108 / 10%);
-    resize: vertical;
-    box-sizing: border-box;
-    min-height: 40px;
-    padding: 0px 10px;
-    -webkit-appearance: none;
-    text-transform: none;
-    font-family: inherit;
-    line-height: 1.15;
-    margin: 0;
-  }
-  .content-dropDown .Charges-DD:focus{
-      outline:none;
-  }
-  .menu-textArea{
-    border: none;
-    background: rgba(6, 56, 108, 0.1);
-    resize: none;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  .menu-textArea:focus{
-      outline: 1px solid #06386c6b;
-  }
-  .image-video{
-    display: flex;
-    grid-gap: 17px;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  .btn-img-vid{
-    background: rgb(6 56 108 / 10%);
-    padding: 20px 50px;
-    border-radius: 5px;
-    border: none;
-  }
-  .btn-img-vid:hover{
-    background: rgb(6 56 108 / 25%);
-    transition: all  0.3s ease;
-    transform: scale(1.006);
-  }
-  .svg-img-vid{
-    width: 60px;
-    height: 60px;
-  }
-  .menu-timings{
-    background: rgb(6 56 108 / 10%);
-    padding: 20px 0px;
-    border-radius: 10px;
-  }
-  .line-menu-timings{
-    background: #00000073;
-  }
-  .content-menu-timings{
-    padding: 0px 20px;
-  }
-  .title-menu-timings{
-    text-align: center;
-  }
-  .title-menu-timings span{
-    font-size: 14px;
-    color: #06386C;
-    font-weight: bold;
-  }
-  .subtitle-menu-timings{
-    font-size: 14px;
-    color: #06386C;
-    padding: 0px 15px;
-    font-weight: bold;
-  }
-  .details-menu-timings{
-    font-size: 12px;
-    color: #06386C;
-    padding: 0px 29px;
-  }
-  .details-menu-timings-Custom{
-    font-size: 12px;
-    color: #06386C;
-    padding: 0px 29px;
-  }
-  .allDay-radio-btns{
-    display: flex;
-    grid-gap: 35px;
-    flex-wrap: wrap;
-  }
-  .section-service-info{
-      display: flex;
-      grid-gap: 16px;
-  }
-  .border-calorie{
-    background: rgb(6 56 108 / 56%);
-    padding: 12px;
-    padding-bottom: 13px;
-    border-radius: 0px 4px 4px 0px;
-  }
-    .form-calorie .form-input-calorie {
-        display: flex;
-        align-items: center;
-        height: 36px;
-    }
-    .form-calorie .form-input-calorie input {
-      flex-grow: 1;
-      padding: 20px 11px;
-      height: 100%;
-      border: none;
-      background: rgb(6 56 108 / 10%);
-      border-radius: 4px 0px 0px 4px;
-      outline: none;
-      width: 125px;
-      font-size: 13px;
-    }
-    .form-calorie .form-input-calorie input::placeholder{
-      color: #474747;
-    }
-    .form-calorie .form-input-calorie button {
-      margin-left: -5px;
-      width: 36px;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: white;
-      color: black;
-      font-size: 18px;
-      border: 1px solid grey;
-      outline: none;
-      border-radius: 0 5px 5px 0;
-      padding: 20px;
-    }
-    .border-portion-size-DD{
-        width: 7rem;
-    }
-    
-  .content-dropDown-portion-size{
-    position: relative;
-      display: flex;
-      align-items: center;
-  }
-  .content-dropDown-portion-size .select-portion-size{
-    font-size: 14px;
-    color: white;
-    width: 100%;
-    border: none;
-    border-radius: 0px 4px 4px 0px;
-    height: 100%;
-    display: block;
-    background: rgb(6 56 108 / 56%);
-    resize: vertical;
-    box-sizing: border-box;
-    min-height: 40px;
-    text-align: center;
-    -webkit-appearance: none;
-    text-transform: none;
-    font-family: inherit;
-    line-height: 1.15;
-    margin: 0;
-  }
-  .content-dropDown-portion-size .select-portion-size:focus{
-      outline:none;
-  }
-  .content-dropDown-portion-size span{
-    position: absolute;
-    pointer-events: none;
-    right: 4px;
-    display: inline-block;
-      height: 1.5rem;
-      width: 1.5rem;
-      min-width: 1.5rem;
-      font-size: 0;
-      line-height: 1;
-  }
-  .content-dropDown-portion-size span svg{
-    width: 18px;
-    height: 18px;
-    margin-top: 3px;
-  }
-  .drinks{
-    width: 100%;
-    max-width: fit-content;
-    margin: 20px 0px;
-  }
-  .align-content-drinks{
-    display: flex;
-    flex-wrap: wrap;
-    grid-gap: 16px;
-  }
-  .drinks-btn{
-    font-size: 14px;
-    border: none;
-    background-color: rgb(6 56 108 / 10%);
-    color: black;
-    padding: 3px 10px;
-    border-radius: 5px;
-  }
-  .drinks-btn:focus{
-    background-color: #06386C;
-    color: white;
-  }
-  
+  max-width: 272px;
+  width: 100%;
+  /* margin-left: 15px; */
+  /* margin-bottom: 5px; */
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.form-dropDown .form-input-PK {
+  display: flex;
+  align-items: center;
+  height: 36px;
+}
+.form-dropDown .form-input-PK input {
+  flex-grow: 1;
+  padding: 20px 11px;
+  height: 100%;
+  border: none;
+  background: rgb(6 56 108 / 10%);
+  border-radius: 0px 4px 4px 0px;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+}
+.form-dropDown .form-input-PK input::placeholder {
+  color: #474747;
+}
+.form-dropDown .form-input-PK button {
+  margin-left: -5px;
+  width: 36px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  color: black;
+  font-size: 18px;
+  border: 1px solid grey;
+  outline: none;
+  border-radius: 0 5px 5px 0;
+  padding: 20px;
+}
+.border-dropDown-T-and-C {
+  width: 11rem;
+}
+.content-dropDown .Tax-DD {
+  font-size: 14px;
+  color: #474747;
+  width: 100%;
+  border: none;
+  border-right: 1px solid #80808040;
+  border-radius: 4px 0px 0px 4px;
+  height: 100%;
+  display: block;
+  background-color: rgb(6 56 108 / 10%);
+  resize: vertical;
+  box-sizing: border-box;
+  min-height: 40px;
+  padding: 0px 10px;
+  -webkit-appearance: none;
+  text-transform: none;
+  font-family: inherit;
+  line-height: 1.15;
+  margin: 0;
+}
+.content-dropDown .Tax-DD:focus {
+  outline: none;
+}
+.content-dropDown .Charges-DD {
+  font-size: 14px;
+  color: #474747;
+  width: 100%;
+  border: none;
+  border-radius: 0px 4px 4px 0px;
+  height: 100%;
+  display: block;
+  background-color: rgb(6 56 108 / 10%);
+  resize: vertical;
+  box-sizing: border-box;
+  min-height: 40px;
+  padding: 0px 10px;
+  -webkit-appearance: none;
+  text-transform: none;
+  font-family: inherit;
+  line-height: 1.15;
+  margin: 0;
+}
+.content-dropDown .Charges-DD:focus {
+  outline: none;
+}
+.menu-textArea {
+  border: none;
+  background: rgba(6, 56, 108, 0.1);
+  resize: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.menu-textArea:focus {
+  outline: 1px solid #06386c6b;
+}
+.image-video {
+  display: flex;
+  grid-gap: 17px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.btn-img-vid {
+  background: rgb(6 56 108 / 10%);
+  padding: 20px 50px;
+  border-radius: 5px;
+  border: none;
+}
+.btn-img-vid:hover {
+  background: rgb(6 56 108 / 25%);
+  transition: all 0.3s ease;
+  transform: scale(1.006);
+}
+.svg-img-vid {
+  width: 60px;
+  height: 60px;
+}
+.menu-timings {
+  background: rgb(6 56 108 / 10%);
+  padding: 20px 0px;
+  border-radius: 10px;
+}
+.line-menu-timings {
+  background: #00000073;
+}
+.content-menu-timings {
+  padding: 0px 20px;
+}
+.title-menu-timings {
+  text-align: center;
+}
+.title-menu-timings span {
+  font-size: 14px;
+  color: #06386c;
+  font-weight: bold;
+}
+.subtitle-menu-timings {
+  font-size: 14px;
+  color: #06386c;
+  padding: 0px 15px;
+  font-weight: bold;
+}
+.details-menu-timings {
+  font-size: 12px;
+  color: #06386c;
+  padding: 0px 29px;
+}
+.details-menu-timings-Custom {
+  font-size: 12px;
+  color: #06386c;
+  padding: 0px 29px;
+}
+.allDay-radio-btns {
+  display: flex;
+  grid-gap: 35px;
+  flex-wrap: wrap;
+}
+.section-service-info {
+  display: flex;
+  grid-gap: 16px;
+}
+.border-calorie {
+  background: rgb(6 56 108 / 56%);
+  padding: 12px;
+  padding-bottom: 13px;
+  border-radius: 0px 4px 4px 0px;
+}
+.form-calorie .form-input-calorie {
+  display: flex;
+  align-items: center;
+  height: 36px;
+}
+.form-calorie .form-input-calorie input {
+  flex-grow: 1;
+  padding: 20px 11px;
+  height: 100%;
+  border: none;
+  background: rgb(6 56 108 / 10%);
+  border-radius: 4px 0px 0px 4px;
+  outline: none;
+  width: 125px;
+  font-size: 13px;
+}
+.form-calorie .form-input-calorie input::placeholder {
+  color: #474747;
+}
+.form-calorie .form-input-calorie button {
+  margin-left: -5px;
+  width: 36px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  color: black;
+  font-size: 18px;
+  border: 1px solid grey;
+  outline: none;
+  border-radius: 0 5px 5px 0;
+  padding: 20px;
+}
+.border-portion-size-DD {
+  width: 7rem;
+}
+
+.content-dropDown-portion-size {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.content-dropDown-portion-size .select-portion-size {
+  font-size: 14px;
+  color: white;
+  width: 100%;
+  border: none;
+  border-radius: 0px 4px 4px 0px;
+  height: 100%;
+  display: block;
+  background: rgb(6 56 108 / 56%);
+  resize: vertical;
+  box-sizing: border-box;
+  min-height: 40px;
+  text-align: center;
+  -webkit-appearance: none;
+  text-transform: none;
+  font-family: inherit;
+  line-height: 1.15;
+  margin: 0;
+}
+.content-dropDown-portion-size .select-portion-size:focus {
+  outline: none;
+}
+.content-dropDown-portion-size span {
+  position: absolute;
+  pointer-events: none;
+  right: 4px;
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  font-size: 0;
+  line-height: 1;
+}
+.content-dropDown-portion-size span svg {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+}
+.drinks {
+  width: 100%;
+  max-width: fit-content;
+  margin: 20px 0px;
+}
+.align-content-drinks {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 16px;
+}
+.drinks-btn {
+  font-size: 14px;
+  border: none;
+  background-color: rgb(6 56 108 / 10%);
+  color: black;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+.drinks-btn:focus {
+  background-color: #06386c;
+  color: white;
+}

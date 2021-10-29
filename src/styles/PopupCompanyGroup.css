@@ -1,0 +1,52 @@
+.dropDown-block{
+    align-items: center;
+    inline-size: max-content;
+    margin: 10px 0px;
+}
+.label-dropDown-block{
+    color: #06386c;
+    font-size: 14px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.border-dropDown-block{
+    width: 17rem;
+}
+.block-border{
+    background-color: rgb(6 56 108 / 10%);
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    padding: 0px 10px;
+    resize: vertical;
+    box-sizing: border-box;
+    min-height: 40px;
+    cursor: pointer;
+}
+.block-border h6{
+    margin: 0;
+    padding: 12px 0px;
+    font-size: 13px;
+    color: #474747cc;
+}
+.content-dropDown .border-upload-img{
+    position: absolute;
+    pointer-events: none;
+    right: 0px;
+    border-radius: 4px;
+    display: inline-block;
+    height: 2.5rem;
+    width: 3rem;
+    min-width: 1.5rem;
+    font-size: 0;
+    line-height: 1;
+    background: rgb(6 56 108 / 56%);
+}
+.svg-upload{
+    width: 28px;
+    height: 28px;
+    margin: 6px 10px;
+}
+#margin-10-T{
+    margin-top: 10px;
+}

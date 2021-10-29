@@ -5,6 +5,8 @@ import arrow from "../images/down_arrow.svg";
 function PopupMenu() {
   return (
     <div className="align-content-popUp">
+
+    {/* Edit-text-Item-Name */}
       <div className="ET-item-name">
         <div className="border-back">
           <div className="dropDown">
@@ -23,10 +25,12 @@ function PopupMenu() {
         </div>
       </div>
 
+      {/* Text-Item-Name */}
       <div className="border-back">
         <h6 className="item-name">Hara Bhara kehbab</h6>
       </div>
 
+      {/* Category */}
       <div className="border-back">
         <div className="dropDown">
           <div className="dropDown-item">
@@ -49,6 +53,7 @@ function PopupMenu() {
         </div>
       </div>
 
+      {/* Food-Type */}
       <div className="border-back">
         <div className="dropDown">
           <div className="dropDown-item">
@@ -168,6 +173,7 @@ function PopupMenu() {
         </div>
       </div>
 
+      {/* Service-Type */}
       <div className="border-back">
         <div className="dropDown">
           <div className="dropDown-item">
@@ -194,6 +200,7 @@ function PopupMenu() {
         </div>
       </div>
 
+      {/* Pricing */}
       <div className="border-back">
         <div className="dropDown">
           <div className="dropDown-item">
@@ -265,6 +272,88 @@ function PopupMenu() {
         </div>
       </div>
 
+      {/* Menu Timings */}
+      <div className="border-back">
+        <div className="dropDown">
+          <div className="dropDown-item">
+            <span className="label-dropDown" style={{ marginRight: "9px" }}>
+              Menu Timings
+            </span>
+          </div>
+          <div className="menu-timings">
+            <div className="title-menu-timings">
+              <span>Dining</span>
+            </div>
+            <hr className="line-menu-timings" />
+            <div className="content-menu-timings">
+              <div>
+                <input
+                  type="radio"
+                  id="restaurant-timings"
+                  name="menu-timings"
+                  value="restaurant-timings"
+                />
+                <span className="subtitle-menu-timings">
+                  Same as restaurant timings
+                </span>
+              </div>
+              <span className="details-menu-timings">
+                Restaurant timings (10:30 -19:00)
+              </span>
+            </div>
+            <hr className="line-menu-timings" />
+            <div className="content-menu-timings">
+              <div>
+                <input
+                  type="radio"
+                  id="customize-timings"
+                  name="menu-timings"
+                  value="customize-timings"
+                />
+                <span className="subtitle-menu-timings">
+                  Customize launch timings
+                </span>
+              </div>
+              <div>
+                <span
+                  className="details-menu-timings-Custom"
+                  style={{ borderRight: "1px solid #0000003d" }}
+                >
+                  Mon - Fri 12:30 pm - 3:30 pm
+                </span>
+                <span className="details-menu-timings-Custom">
+                  Sat - Sun 12:00 pm - 3:00 pm
+                </span>
+              </div>
+            </div>
+            <hr className="line-menu-timings" />
+            <div className="content-menu-timings">
+              <div className="allDay-radio-btns">
+                <div>
+                  <input
+                    type="radio"
+                    id="all-days"
+                    name="menu-timings"
+                    value="all-days"
+                  />
+                  <span className="subtitle-menu-timings">All Days</span>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="select-dates"
+                    name="menu-timings"
+                    value="select-dates"
+                  />
+                  <span className="subtitle-menu-timings">Select Dates</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Menu Description */}
       <div className="border-back">
         <div className="dropDown">
           <div className="dropDown-item">
@@ -281,6 +370,7 @@ function PopupMenu() {
         </div>
       </div>
 
+      {/* Image and Video */}
       <div className="border-back">
         <div className="dropDown">
           <div className="dropDown-item">
@@ -432,86 +522,7 @@ function PopupMenu() {
         </div>
       </div>
 
-      <div className="border-back">
-        <div className="dropDown">
-          <div className="dropDown-item">
-            <span className="label-dropDown" style={{ marginRight: "9px" }}>
-              Menu Timings
-            </span>
-          </div>
-          <div className="menu-timings">
-            <div className="title-menu-timings">
-              <span>Dining</span>
-            </div>
-            <hr className="line-menu-timings" />
-            <div className="content-menu-timings">
-              <div>
-                <input
-                  type="radio"
-                  id="restaurant-timings"
-                  name="menu-timings"
-                  value="restaurant-timings"
-                />
-                <span className="subtitle-menu-timings">
-                  Same as restaurant timings
-                </span>
-              </div>
-              <span className="details-menu-timings">
-                Restaurant timings (10:30 -19:00)
-              </span>
-            </div>
-            <hr className="line-menu-timings" />
-            <div className="content-menu-timings">
-              <div>
-                <input
-                  type="radio"
-                  id="customize-timings"
-                  name="menu-timings"
-                  value="customize-timings"
-                />
-                <span className="subtitle-menu-timings">
-                  Customize launch timings
-                </span>
-              </div>
-              <div>
-                <span
-                  className="details-menu-timings-Custom"
-                  style={{ borderRight: "1px solid #0000003d" }}
-                >
-                  Mon - Fri 12:30 pm - 3:30 pm
-                </span>
-                <span className="details-menu-timings-Custom">
-                  Sat - Sun 12:00 pm - 3:00 pm
-                </span>
-              </div>
-            </div>
-            <hr className="line-menu-timings" />
-            <div className="content-menu-timings">
-              <div className="allDay-radio-btns">
-                <div>
-                  <input
-                    type="radio"
-                    id="all-days"
-                    name="menu-timings"
-                    value="all-days"
-                  />
-                  <span className="subtitle-menu-timings">All Days</span>
-                </div>
-                <div>
-                  <input
-                    type="radio"
-                    id="select-dates"
-                    name="menu-timings"
-                    value="select-dates"
-                  />
-                  <span className="subtitle-menu-timings">Select Dates</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      {/* Dish Details */}
       <div className="border-back">
         <div className="dropDown">
           <div className="dropDown-item">
@@ -520,6 +531,8 @@ function PopupMenu() {
             </span>
           </div>
           <div>
+
+            {/* Category */}
             <div className="dropDown-item-Pricing">
               <span
                 className="label-dropDown"
@@ -540,6 +553,8 @@ function PopupMenu() {
                 </div>
               </div>
             </div>
+
+            {/* Service Info */}
             <div className="section-service-info">
               <div className="dropDown-item-Pricing">
                 <span
@@ -645,6 +660,8 @@ function PopupMenu() {
                 </div>
               </div>
             </div>
+
+            {/* Preparation Time */}
             <div className="dropDown-item-Pricing">
               <span
                 className="label-dropDown"
@@ -665,6 +682,8 @@ function PopupMenu() {
                 </div>
               </div>
             </div>
+
+            {/* Drinks */}
             <div className="drinks">
               <span
                 className="label-dropDown"
@@ -726,6 +745,8 @@ function PopupMenu() {
               </div>
               </div>
             </div>
+
+            {/* Spice Level */}
             <div className="drinks">
               <span
                 className="label-dropDown"

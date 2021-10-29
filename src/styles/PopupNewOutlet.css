@@ -1,0 +1,39 @@
+.ET-Flex{
+    align-items: center;
+    margin: 20px 0px;
+}
+.label-ET-Flex{
+    color: #06386c;
+    font-size: 14px;
+    font-weight: bold;
+}
+.input-ET-Flex{
+    max-width: 17rem;
+    max-height: 2rem;
+    flex-grow: 1;
+    padding: 20px 11px;
+    height: 100%;
+    border: none;
+    background: rgb(6 56 108 / 10%);
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+}
+.border-DD-Flex{
+    width: 17rem;
+}
+.ET-Flex-Start{
+    margin: 20px 0px;
+}
+.text-OR{
+    font-size: 13px;
+    color: #06386c;
+    margin: 10px 0px;
+}
+#margin-20-TB{
+    margin: 20px 0px;
+}
+#margin-20-T{
+    margin-top: 20px;
+}
