@@ -21,14 +21,9 @@ function RestaurentDetailsPage() {
 
     const { data, isPending, error } = useFetch('https://api.masairapp.com/api/Restaurant/GetRestaurantById?id=' + id);
   
+    console.log(data)
     
-    const getCusines = () => {
-        var e = "";
-        for (var i in data.ListOfRestaurantCusine) {
-            e += i.Cusine + ", "
-        }
-        return e.substring(0, e.length - 2);;
-    }
+    
 
     return (
         <div>
@@ -43,14 +38,20 @@ function RestaurentDetailsPage() {
               <SecResDetails 
               RestaurantName = {data.RestaurantName}
               CostOfTwo = {data.CostOfTwo}
-              Cusines = {getCusines()}
+              Cusines = {data.ListOfRestaurantCusine}
               PrimaryAreaOfOutlet = {data.PrimaryAreaOfOutlet}
               PrimaryLocation = {data.PrimaryLocation}
               />
             }
               <SecResNavbar/>
                   
-              <SecResAbout/>
+              {error && console.log(error)}
+              {isPending && console.log("Data coming in a moment")}
+              {data && 
+              <SecResAbout 
+              Cusines = {data.ListOfRestaurantCusine != null ?  data.ListOfRestaurantCusine : null}
+              Features = {data.ListOfRestaurantFeature != null ?  data.ListOfRestaurantFeature : null}/>
+              }
               <SecResMenu/>
               <SecResLike/>
               <SecResRatingNReview/>

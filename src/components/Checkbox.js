@@ -1,7 +1,7 @@
 import { useState } from 'react/cjs/react.development'
 import '../styles/Checkbox.css'
 
-export default function Checkbox({filter_name= "", key}) {
+export default function Checkbox({filter_name= "", key, ids}) {
   const {checks, setChecked} = useState([]);
 
   const handleCheck = (isChecked) => {
@@ -14,7 +14,7 @@ export default function Checkbox({filter_name= "", key}) {
   }
     }
     setChecked(checks)
-
+    ids(checks)
     console.log(checks)
   }
     return (

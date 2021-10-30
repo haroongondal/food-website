@@ -5,9 +5,9 @@ import Checkbox from './Checkbox'
 import useFetch from '../Utils/useFetch'
 
 
-export default function FiltersItem({filter_name = ""}) {
+export default function FiltersItem({filter_name = "", ids}) {
 
-    const [IsOpened, setOpened] = useState(false)
+    const [IsOpened, setOpened] = useState(true)
 
     const [searchValue, setSearchValue] = useState("")
 
@@ -33,14 +33,15 @@ export default function FiltersItem({filter_name = ""}) {
     const { data, isPending, error } = useFetch(endPoint);
 
 function showFilters(dt) {
+    
     if (filter_name === quickFilters) {
-        <Checkbox key = {dt.Id} filter_name = {dt}/>
+        <Checkbox ids = {ids} key = {dt.Id} filter_name = {dt}/>
     } else if (filter_name === cusines) {
-        return <Checkbox key = {dt.Id} filter_name = {dt.Value}/>
+        return <Checkbox ids = {ids} key = {dt.Id} filter_name = {dt.Value}/>
     } else if (filter_name === tags) {
-        <Checkbox key = {dt.TagId} filter_name = {dt.Title}/>
+        <Checkbox ids = {ids} key = {dt.TagId} filter_name = {dt.Title}/>
     } else if (filter_name === features) {
-        <Checkbox key = {dt.FeatureId} filter_name = {dt.Title}/>
+        <Checkbox ids = {ids} key = {dt.FeatureId} filter_name = {dt.Title}/>
     }
 }
 

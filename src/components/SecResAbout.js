@@ -3,7 +3,7 @@ import '../styles/SecResAbout.css'
 import ResCuisineItem from './ResCuisineItem'
 import ResCuisineFacilities from './ResCuisineFacilities'
 import { useState } from 'react'
-function SecResAbout() {
+function SecResAbout(props) {
 
     const [isShowingAll, setShowingAll] = useState(false);
 
@@ -27,9 +27,9 @@ function SecResAbout() {
                         }
                         </p>
                         
-                        <ResCuisineItem/>
+                        <ResCuisineItem Cusines = {props.Cusines && props.Cusines}/>
 
-                        <ResCuisineFacilities/>
+                        <ResCuisineFacilities Features = {props.Features && props.Features}/>
                     </div>
                     </div>
         </div>

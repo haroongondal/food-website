@@ -1,6 +1,5 @@
 import '../styles/FollowersList.css'
 import FollowerItem from './FollowerItem'
-import React, { useState, useEffect } from "react";
 function FollowersList() {
     
 

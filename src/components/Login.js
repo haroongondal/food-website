@@ -20,8 +20,7 @@ export default function Login() {
         }
 
 
-        const formBody = Object.keys(object).
-        map(key => encodeURIComponent(key) + '='
+        const formBody = Object.keys(object).map(key => encodeURIComponent(key) + '='
          + encodeURIComponent(object[key])).join('&');
 
         fetch("https://api.masairapp.com/token",{
