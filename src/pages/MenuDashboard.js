@@ -1,6 +1,7 @@
 import React from 'react'
 import AdminNavbar from '../components/AdminNavbar'
 import AdminSidebar from '../components/AdminSidebar'
+import TableMenuDashboard from '../components/TableMenuDashboard'
 import '../styles/MenuDashboard.css'
 function MenuDashboard() {
     return (
@@ -99,7 +100,8 @@ function MenuDashboard() {
                     <button className="see-more">See More</button>
                     </div>
                 </div>
-                
+                <TableMenuDashboard/>
+                <TableMenuDashboard/>
             </main>
         </section>
         </div>
