@@ -1,0 +1,53 @@
+
+.content-selling-table{
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 15px 15px;
+ }
+
+.most-like-items{
+    background: white;
+    border-radius: 25px;
+    padding: 15px 0px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom:20px;
+ }
+
+ 
+table{
+    width:100%;
+    table-layout: fixed;
+  }
+  .tbl-header{
+    
+   }
+  .tbl-content{
+    height:200px;
+   
+   
+  }
+  th{
+    padding: 10px 40px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 12px;
+    color: #06386C;
+    text-transform: uppercase;
+    border-bottom: 1px solid  #b8b8b8 !important;
+    border-top: 1px solid #b8b8b8 !important;
+  }
+  td{
+    padding: 10px 40px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 12px;
+    color: #06386C;
+    border-bottom: 1px solid  #b8b8b8 !important;
+    
+  }
+  
