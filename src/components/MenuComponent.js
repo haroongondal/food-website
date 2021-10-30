@@ -4,9 +4,7 @@ import "../styles/MenuComponent.css";
 import Modal from "react-responsive-modal";
 import PopupMenu from "./PopupMenu";
 import PopupCityOutlet from "./PopupCityOutlet";
-import PopupCompanyGroup from "./PopupCompanyGroup";
-import PopupNewBrand from "./PopupNewBrand";
-import PopupNewOutlet from "./PopupNewOutlet";
+import PopupAddUser from "./PopupAddUser";
 
 function MenuComponent() {
   const [isAddMenuShowing, setAddMenuShowing] = useState(false);
@@ -89,7 +87,7 @@ function MenuComponent() {
           modal: { "margin-top": "80px", "max-width": "955px", width: "100%" },
         }}
       >
-        <PopupCityOutlet/>
+        <PopupAddUser/>
       </Modal>
     </div>
   );
