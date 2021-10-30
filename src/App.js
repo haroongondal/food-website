@@ -8,6 +8,7 @@ import AdminMenuPage from './pages/AdminMenuPage';
 import FilterPage from './pages/FilterPage';
 import RestaurentDetailsPage from './pages/RestaurentDetailsPage';
 import MyProfilePage from './pages/MyProfilePage';
+import MenuDashboard from './pages/MenuDashboard';
 
 
 
@@ -52,6 +53,10 @@ function App() {
 
         <Route exact path = "/AdminMenuPage">
         <AdminMenuPage/>
+        </Route>
+
+        <Route exact path = "/MenuDashboard">
+          <MenuDashboard/>
         </Route>
 
 
