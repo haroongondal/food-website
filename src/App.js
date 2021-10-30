@@ -10,6 +10,7 @@ import RestaurentDetailsPage from './pages/RestaurentDetailsPage';
 import MyProfilePage from './pages/MyProfilePage';
 import MenuDashboard from './pages/MenuDashboard';
 import OutletsPage from './pages/OutletsPage';
+import UserManagementPage from './pages/UserManagementPage';
 
 
 
@@ -62,10 +63,14 @@ function App() {
           <MenuDashboard/>
         </Route>
 
+
         <Route exact path = "/OutletsPage">
           <OutletsPage/>
         </Route>
 
+        <Route exact path = "/UserManagementPage">
+          <UserManagementPage />
+        </Route>
 
       </Switch>
     

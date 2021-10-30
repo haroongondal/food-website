@@ -26,41 +26,41 @@ function TableMenuDashboard() {
                        <div className="tbl-content">
                        <table cellpadding="0" cellspacing="0" border="0"> 
                        <tbody>
-                        <tr >
-                            <td>1</td>
-                            <td>Donor Kabab</td>
-                            <td>3</td>
-                            <td>0</td>
-                            <td>3</td>
+                        <tr>
+                            <td className ="">1</td>
+                            <td className ="">Donor Kabab</td>
+                            <td className ="">3</td>
+                            <td className ="">0</td>
+                            <td className ="">3</td>
                         </tr>
                         
                         <tr >
-                        <td>2</td>
-                            <td>Donor kabab </td>
-                            <td>3</td>
-                            <td>0</td>
-                            <td>3</td>
+                        <td className ="py-3 mr-5">2</td>
+                            <td className ="py-3 mr-5">Donor kabab </td>
+                            <td className ="py-3 mr-5">3</td>
+                            <td className ="py-3 mr-5">0</td>
+                            <td className ="py-3 mr-5">3</td>
                         </tr>
                         <tr >
-                            <td>3</td>
-                            <td>Donor Kabab</td>
-                            <td>3</td>
-                            <td>0</td>
-                            <td>3</td>
+                            <td className ="py-3 mr-5">3</td>
+                            <td className ="py-3 mr-5">Donor Kabab</td>
+                            <td className ="py-3 mr-5">3</td>
+                            <td className ="py-3 mr-5">0</td>
+                            <td className ="py-3 mr-5">3</td>
                         </tr>
                         <tr >
-                            <td>4</td>
-                            <td>Donor Kabab</td>
-                            <td>3</td>
-                            <td>0</td>
-                            <td>3</td>
+                            <td className ="py-3 mr-5">4</td>
+                            <td className ="py-3 mr-5">Donor Kabab</td>
+                            <td className ="py-3 mr-5">3</td>
+                            <td className ="py-3 mr-5">0</td>
+                            <td className ="py-3 mr-5">3</td>
                         </tr>
                         <tr >
-                            <td>5</td>
-                            <td>Donor Kabab</td>
-                            <td>3</td>
-                            <td>0</td>
-                            <td>3</td>
+                            <td className ="py-3 mr-5">5</td>
+                            <td className ="py-3 mr-5">Donor Kabab</td>
+                            <td className ="py-3 mr-5">3</td>
+                            <td className ="py-3 mr-5">0</td>
+                            <td className ="py-3 mr-5">3</td>
                         </tr>
                         </tbody>
                         </table>
