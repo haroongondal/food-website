@@ -1,12 +1,6 @@
 import React,{ useState} from 'react'
 
-import useFetch from "../Utils/useFetch"
-import usePostFetch from "../Utils/usePostFetch"
-
 export default function Login() {
-
-   
-
 
     const [username, setUserName] = useState("");
 
@@ -23,8 +17,7 @@ export default function Login() {
         }
 
 
-        const formBody = Object.keys(object).
-        map(key => encodeURIComponent(key) + '='
+        const formBody = Object.keys(object).map(key => encodeURIComponent(key) + '='
          + encodeURIComponent(object[key])).join('&');
 
         fetch("https://api.masairapp.com/token",{

@@ -1,6 +1,5 @@
 import '../styles/Heading_Restaurent_Near.css'
-import { Link, useRouteMatch, Switch, Route } from 'react-router-dom'
-import FilterPage from '../pages/FilterPage';
+import { Link} from 'react-router-dom'
 
 export default function Heading_Restaurent_Near({heading = ""}) {
 

@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/SecResDetails.css'
 import downIcon from '../images/down_arrow.svg'
 function SecResDetails(props) {
+
     return (
         
             <div id="top-section">
@@ -11,7 +12,7 @@ function SecResDetails(props) {
                        justifyContent: "space-between"}}>
                         <div className="text-section">
                             <h3>{props.RestaurantName}</h3>
-                            <h6 className="text-font-size">Rs {props.CostOfTwo} for 2 | <span style={{color:"gray"}}>{props.Cusines}</span></h6>
+                            <h6 className="text-font-size">Rs {props.CostOfTwo} for 2 | <span style={{color:"gray"}}>{"Cusines"}</span></h6>
                             <h6 className="text-font-size">
                             {props.PrimaryAreaOfOutlet == null ? (props.PrimaryLocation == null ? "Address not Available" : props.PrimaryLocation)
                             : (props.PrimaryLocation == null ? props.PrimaryAreaOfOutlet

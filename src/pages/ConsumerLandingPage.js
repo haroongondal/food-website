@@ -17,28 +17,13 @@ import HeadingWhyBook from '../components/Section_Why_Book';
 import useFetch from '../Utils/useFetch';
 import Skeleton from 'react-loading-skeleton';
 import useGeoLocation from '../Utils/useGeoLocation';
-import { useState, useEffect } from 'react/cjs/react.development';
 
 function ConsumerLandingPage() {
-
-  const [url, seturl] = useState("")
-
+ 
   const location = useGeoLocation();
 
-  console.log(location)
+  const { data, isPending, error } = useFetch(`https://api.masairapp.com/api/Restaurant/GetRestaurantsByCoordinate?latitude=${location.coordinates.lat}&longitude=${location.coordinates.lng}`);
 
-  // useEffect(() => {
-  //   if(location.loaded) {
-  //     if (!location.error) {
-  //     seturl(`https://api.masairapp.com/api/Restaurant/GetRestaurantsByCoordinate?latitude=${location.lat}&longitude=${location.lng}`)
-  //   }
-  // }
-  // }, [location.loaded, location.error])
- 
-  const { data, isPending, error } = useFetch(url);
-
-  
-  
   return (
     <div className="App">
       <header className="App-header">
