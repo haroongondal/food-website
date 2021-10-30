@@ -1,0 +1,73 @@
+
+.dark-blue-btn {
+    background: #06386C;
+    color: white;
+    font-weight: bolder;
+    border: white;
+    border-radius: 17px;
+    padding: 14px 25px;
+    font-size: 16px;
+    transition: background-color 0.3s linear;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1);
+  }
+  .dark-blue-btn:hover {
+    background: #1e558f;
+    box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.1);
+    transform: scale(1.008);
+    transition: all 0.2s ease;
+  }
+
+.border-back-white{
+    background: white;
+    border-radius: 30px;
+    padding: 14px 26px;
+    box-shadow: 2px 2px 18px rgb(0 0 0 / 10%);
+}
+.header-catch22{
+    display: flex;
+    justify-content: space-between;
+}
+.header-catch22 h6{
+    margin: 0;
+    place-self: center;
+    font-size: 16px;
+    color: #06386C;
+    font-weight: bold;
+}
+.header-catch22 span svg{
+    height: 40px;
+    width: 40px;
+}
+.outlets-header{
+    display: flex;
+    justify-content: space-between;
+}
+.outlets-header h6{
+    margin: 0;
+    place-self: center;
+    font-size: 18px;
+    color: #06386C;
+    font-weight: bold;
+}
+.add-context-btn{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: rgb(6 56 108 / 10%);
+    padding: 5px 20px 5px 7px;
+    border-radius: 5px;
+  }
+  .blue-plus-btn{
+    color: #06386C;
+    background: #ffffff00;
+    width: 36px;
+    height: 100%;
+    font-size: 18px;
+    border: none;
+    outline: none;
+  }
+  .add-context-btn span{
+    color: #06386C;
+    font-size: 13px;
+    font-weight: bold;
+  }

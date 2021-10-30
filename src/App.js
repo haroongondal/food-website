@@ -9,6 +9,7 @@ import FilterPage from './pages/FilterPage';
 import RestaurentDetailsPage from './pages/RestaurentDetailsPage';
 import MyProfilePage from './pages/MyProfilePage';
 import MenuDashboard from './pages/MenuDashboard';
+import OutletsPage from './pages/OutletsPage';
 
 
 
@@ -59,6 +60,10 @@ function App() {
 
         <Route exact path = "/MenuDashboard">
           <MenuDashboard/>
+        </Route>
+
+        <Route exact path = "/OutletsPage">
+          <OutletsPage/>
         </Route>
 
 

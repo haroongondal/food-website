@@ -20,6 +20,7 @@ button.accordion-menu {
     flex-wrap: wrap;
     grid-gap: 16px;
     border-radius: 25px;
+    box-shadow: 2px 2px 18px rgb(0 0 0 / 10%);
   }
   button.accordion-menu:hover, button.accordion-menu.is-open {
     box-shadow: 2px 2px 18px rgba(0,0,0,0.10);
