@@ -89,7 +89,7 @@ function MenuComponent() {
           modal: { "margin-top": "80px", "max-width": "955px", width: "100%" },
         }}
       >
-        <PopupNewOutlet/>
+        <PopupCityOutlet/>
       </Modal>
     </div>
   );
