@@ -1,14 +1,15 @@
 
 import '../styles/NavBar.css'
 import logo from '../images/logo.png'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import locationIcon from '../images/location_pin.svg'
 import downArrowIcon from '../images/down_arrow.svg'
 import SignUp from './SignUp';
 import Modal from 'react-responsive-modal';
 import Login from './Login';
 
-export default function NavBar() {
+
+export default function NavBar(props) {
 
 const [navbar, setNavbar] = useState(false)
 
@@ -22,12 +23,20 @@ function submitForm() {
   setIsSubmitted(true);
 }
 
+useEffect(() => {
+   if (!props.ShouldHideSearch) {
+    setNavbar(true)
+   }
+}, [props.ShouldHideSearch])
+
 const showSearchBar = ()=> {
+    if (props.ShouldHideSearch) {
     if (window.scrollY >= 250) {
         setNavbar(true)
     } else {
         setNavbar(false)
     }
+}
 }
 
 const handleSignUpPop = (e) => {

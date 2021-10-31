@@ -2,6 +2,8 @@ import React from 'react'
 import { useParams } from 'react-router'
 import BannerResturant from '../components/BannerResturant'
 import Breadcrumb from '../components/Breadcrumb'
+import Footer from '../components/Footer'
+import NavBar from '../components/NavBar'
 import ReservationItem from '../components/Reservation_Item'
 import SecResAbout from '../components/SecResAbout'
 import SecResDetails from '../components/SecResDetails'
@@ -27,6 +29,7 @@ function RestaurentDetailsPage() {
 
     return (
         <div>
+           <NavBar ShouldHideSearch = {false}/>
             <Breadcrumb/>
             <BannerResturant/>
             <div className="merge-section">
@@ -50,7 +53,8 @@ function RestaurentDetailsPage() {
               {data && 
               <SecResAbout 
               Cusines = {data.ListOfRestaurantCusine != null ?  data.ListOfRestaurantCusine : null}
-              Features = {data.ListOfRestaurantFeature != null ?  data.ListOfRestaurantFeature : null}/>
+              Features = {data.ListOfRestaurantFeature != null ?  data.ListOfRestaurantFeature : null}
+               description = {data.Description}/>
               }
               <SecResMenu/>
               <SecResLike/>
@@ -60,6 +64,7 @@ function RestaurentDetailsPage() {
               <ReservationItem/>
             
             </div>
+            <Footer/>
         </div>
     )
 }
