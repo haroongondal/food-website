@@ -1,0 +1,45 @@
+.toggle-brands{
+    display: flex;
+    grid-gap: 16px;
+}
+.brands-context-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: rgb(6 56 108 / 10%);
+    padding: 0px 7px 0px 20px;
+    border-radius: 40px;
+    transition: all  0.2s ease;
+  }
+  .brands-context-btn:hover{
+    background: rgb(6 56 108 / 25%);
+  }
+  .blue-cross-btn {
+    color: #06386c;
+    background: #ffffff00;
+    width: 36px;
+    height: 100%;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    padding: 0;
+    padding-top: 3px;
+  }
+  .brands-context-btn span {
+    color: #06386c;
+    font-size: 13px;
+  }
+  .outlets-header span{
+    font-weight: normal;
+  }
+  .blue-setting-btn{
+    color: #06386c;
+    background: rgb(6 56 108 / 10%);
+    width: 44px;
+    height: 100%;
+    font-size: 22px;
+    border: none;
+    outline: none;
+    padding-top: 4px;
+    border-radius: 5px;
+  }

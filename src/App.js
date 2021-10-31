@@ -11,6 +11,7 @@ import MyProfilePage from './pages/MyProfilePage';
 import MenuDashboard from './pages/MenuDashboard';
 import OutletsPage from './pages/OutletsPage';
 import UserManagementPage from './pages/UserManagementPage';
+import FeedbackPage from './pages/FeedbackPage';
 
 
 
@@ -68,6 +69,10 @@ function App() {
 
         <Route exact path = "/UserManagementPage">
           <UserManagementPage />
+        </Route>
+
+        <Route exact path = "/FeedbackPage">
+          <FeedbackPage />
         </Route>
 
       </Switch>

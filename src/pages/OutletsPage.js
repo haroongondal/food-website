@@ -10,14 +10,12 @@ import PopupNewBrand from "../components/PopupNewBrand";
 import PopupNewOutlet from "../components/PopupNewOutlet";
 
 export default function OutletsPage() {
-
-//   Open-Close-OutletBox
+  //   Open-Close-OutletBox
   const [IsOpened, setOpened] = useState(false);
 
   const handdleToggle = () => setOpened(!IsOpened);
 
-
-//   PopupCompanyGroup
+  //   PopupCompanyGroup
   const [isCompanyGroupShowing, setCompanyGroupShowing] = useState(false);
 
   const handleCompanyGroupPop = (e) => {
@@ -68,7 +66,10 @@ export default function OutletsPage() {
             <div className="border-back-white">
               <div className="header-catch22">
                 <h6>Catch22</h6>
-                <span style={{cursor:"pointer"}} onClick={handleCompanyGroupPop}>
+                <span
+                  style={{ cursor: "pointer" }}
+                  onClick={handleCompanyGroupPop}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
@@ -104,13 +105,7 @@ export default function OutletsPage() {
                 </span>
               </div>
             </div>
-            <div
-              className="border-back-white-outlet"
-              style={{
-                margin: "20px 0px 0px 0px",
-                borderRadius: "30px 30px 0px 0px",
-              }}
-            >
+            <div className="border-back-white-outlet">
               <div className="outlets-header">
                 <h6>Outlets</h6>
 

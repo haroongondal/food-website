@@ -24,10 +24,11 @@
  
 }
 
-.right-tools{
+.right-tools-catch{
     grid-gap: 16px;
     display: flex;
     flex-wrap: wrap;
+    align-self: end;
 }
 .top-tools{
     display: flex;
