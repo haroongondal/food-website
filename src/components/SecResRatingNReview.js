@@ -8,8 +8,8 @@ import Pagination from './Pagination'
 export default function SecResRatingNReview() {
 
     return (
-        <div class="border-rating-reviews" id="rating-review-section">
-                    <div class="content-rating-reviews">
+        <div className="border-rating-reviews" id="rating-review-section">
+                    <div className="content-rating-reviews">
                         <h6>Ratings and reviews</h6>
                         <h5><span>234</span> reviews</h5>
                         <hr/>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Route, Switch } from 'react-router-dom';
 import OrderHistoryPage from '../pages/OrderHistoryPage';
 import ReviewHistoryPage from '../pages/ReviewHistoryPage';
 import MyProfilePage from '../pages/MyProfilePage';
@@ -9,9 +9,7 @@ import BookmarkPage from '../pages/BookmarkPage';
 function UserDashboard() {
     return (
         <div>
-    
-    
-    
+
     <Switch>
 
 

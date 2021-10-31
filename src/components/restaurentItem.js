@@ -19,9 +19,9 @@ console.log(data.RestaurantName)
 
                     {/* heart-icon */}
 
-                    <section class="ac-footer">
-                    <div class="ac-footer-container ac-footer-brand">
-                         <span class="ac-icon ac-icon-love-dark"></span> 
+                    <section className="ac-footer">
+                    <div className="ac-footer-container ac-footer-brand">
+                         <span className="ac-icon ac-icon-love-dark"></span> 
 
                     </div>
   

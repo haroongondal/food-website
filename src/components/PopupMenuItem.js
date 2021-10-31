@@ -202,7 +202,7 @@ function PopupMenuItem() {
 
             <div className="add-tax-btn">
               <button type="submit" className="blue-plus-btn-tax">
-                <i class="bx bx-plus-circle"></i>
+                <i className="bx bx-plus-circle"></i>
               </button>
             </div>
           </div>
@@ -252,7 +252,7 @@ function PopupMenuItem() {
 
             <div className="delete-tax-btn">
               <button type="submit" className="blue-minus-btn-tax">
-                <i class="bx bx-minus-circle"></i>
+                <i className="bx bx-minus-circle"></i>
               </button>
             </div>
           </div>
@@ -428,7 +428,7 @@ function PopupMenuItem() {
 
             <div className="add-CB-group">
               <button type="submit" className="blue-plus-btn-CB">
-                <i class="bx bx-plus-circle"></i>
+                <i className="bx bx-plus-circle"></i>
               </button>
             </div>
           </div>
@@ -569,7 +569,7 @@ function PopupMenuItem() {
             <div className="checkBox-deleteBtn">
               <div className="add-CB-group">
                 <button type="submit" className="blue-plus-btn-CB">
-                  <i class="bx bx-minus-circle"></i>
+                  <i className="bx bx-minus-circle"></i>
                 </button>
               </div>
             </div>
@@ -722,7 +722,7 @@ function PopupMenuItem() {
 
             <div className="add-CB-group">
               <button type="submit" className="blue-plus-btn-CB">
-                <i class="bx bx-plus-circle"></i>
+                <i className="bx bx-plus-circle"></i>
               </button>
             </div>
           </div>

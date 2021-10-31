@@ -5,7 +5,7 @@ function FollowersList() {
 
     return (
         <>
-        <ul class="ul-for-followers">
+        <ul className="ul-for-followers">
        <FollowerItem/>
         </ul>
         <div id="loadMore">
