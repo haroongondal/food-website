@@ -4,12 +4,14 @@ import AdItem from '../components/Ad_Item';
 import FiltersItem from '../components/Filters_Item';
 import '../styles/FilterPage.css'
 import Sortby from '../components/Sort_by';
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 import HeadingFilterPage from '../components/Heading_Filter_Page';
 import FilterPageItem from '../components/Filter_Page_Item';
 import Pagination from '../components/Pagination';
 import useFetch from '../Utils/useFetch';
 import Skeleton from 'react-loading-skeleton';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Types from '../Utils/Types.json'
 
 
@@ -19,38 +21,90 @@ function FilterPage() {
   
 
 
-    const [url, seturl] = useState('https://api.masairapp.com/api/Restaurant/GetRestaurants');
-    const [sort, setSort] = useState(-1);
+    const [url, seturl] = useState(`https://api.masairapp.com/api/Restaurant/GetRestaurantsByFilters?cusineId=&RestaurantId=&featureId=&tagId=&offset=0&limit=10`);
     const [tagIds, setTagIds] = useState([])
     const [cusineIds, setCusineIds] = useState([])
     const [featureIds, setFeatureIds] = useState([])
     const { data, isPending, error } = useFetch(url);
         
-        // const urlUp = `https://api.masairapp.com/api/Restaurant/
-        //              GetRestaurantsByFilters?cusineId=${cusineIds}&RestaurantId=&
-        //              featureId=${featureIds}&tagId=${tagIds}&offset=0&limit=10`
-        //     seturl(urlUp)
+        const handleFilters = (isChecked, filterType, id) => {
+
+            if (Types.FilterTypes.QuickFilters === filterType) {
+                
+            }
+
+            if (Types.FilterTypes.CusineFilters === filterType) {
+                
+                if (isChecked) {
+                    setCusineIds(oldArray => [...oldArray, id]);
+                } else {
+                    const index = cusineIds.findIndex((id_) => id_ === id);
+                            if (index !== -1) {
+                            setCusineIds([
+                                ...cusineIds.slice(0, index),
+                                ...cusineIds.slice(index + 1)]);
+                            }
+                }
+                
+            }
+
+            if (Types.FilterTypes.FeatureFilters === filterType) {
+                
+            }
+
+            if (Types.FilterTypes.TagFilters === filterType) {
+                if (isChecked) {
+                    setTagIds(oldArray => [...oldArray, id]);
+                } else {
+                    const index = tagIds.findIndex((id_) => id_ === id);
+                            if (index !== -1) {
+                            setTagIds([
+                                ...tagIds.slice(0, index),
+                                ...tagIds.slice(index + 1)]);
+                            }
+                }
+            }
+            
+
+        }
+
         
-        if (!isPending && !error) {
+        useEffect(() => {
+            seturl(`https://api.masairapp.com/api/Restaurant/GetRestaurantsByFilters?cusineId=${cusineIds}&RestaurantId=&featureId=${featureIds.join()}&tagId=${tagIds.join()}&offset=0&limit=10`)
+        }, [cusineIds, featureIds, tagIds])
 
-        sort === Types.SortType.Popularity && data.sort((a, b) => (b.CostOfTwo - a.CostOfTwo))
+        const handleSorting = (sort) => {
         
-        sort === Types.SortType.Ratings && data.sort((a, b) => (b.CostOfTwo - a.CostOfTwo))
+        if (!isPending && !error && data) {
 
-        sort === Types.SortType.HighPrice && data.sort((a, b) => (a.CostOfTwo - b.CostOfTwo)) 
+            if (data.ListOfRestaurant.lenght > 1) {
+          
+            if (Types.SortType.Popularity == sort) {
+                console.log(sort)
+                data.sort((a, b) => (b.CostOfTwo - a.CostOfTwo))
+            }
+        
+            if (Types.SortType.Ratings == sort) {
+                console.log(sort)
+                data.sort((a, b) => (b.CostOfTwo - a.CostOfTwo))
+            }
 
-        sort === Types.SortType.LowPrice && data.sort((a, b) => (b.CostOfTwo - a.CostOfTwo))
-
-}
+            if (Types.SortType.HighPrice == sort) {
+                console.log(sort)
+                data.sort((a, b) => (b.CostOfTwo - a.CostOfTwo)) 
+            }
+         
+            if (Types.SortType.LowPrice == sort) {
+                console.log(sort)
+                data.sort((a, b) => (a.CostOfTwo - b.CostOfTwo))
+            }
+        }
+        }
+    }
       
-    // const location = useLocation().then((location => {
-    //     seturl(`https://api.masairapp.com/api/Restaurant/GetRestaurantsByCoordinate
-    //     ?latitude=${location.lat}&longitude=${location.long}`)
-    // }));
-    // console.log(location);
-    
     return (
         <div>
+             <NavBar ShouldHideSearch = {false}/>
             <Breadcrumb/>
 
             <div className="container">
@@ -63,10 +117,18 @@ function FilterPage() {
                 <div className="alignment listing_sidebar">
 
 
-                <FiltersItem filter_name = "Quick Filters" ids = {setTagIds}/>
-                <FiltersItem filter_name = "Cusines" ids = {setCusineIds}/>
-                <FiltersItem filter_name = "Tags" ids = {setTagIds}/>
-                <FiltersItem filter_name = "Features" ids = {setFeatureIds}/>
+                <FiltersItem 
+                filtertypes = {Types.FilterTypes.QuickFilters} 
+                handleFilters = {handleFilters}/>
+                <FiltersItem
+                filtertypes = {Types.FilterTypes.CusineFilters} 
+                handleFilters = {handleFilters}/>
+                <FiltersItem
+                filtertypes = {Types.FilterTypes.TagFilters} 
+                handleFilters = {handleFilters}/>
+                <FiltersItem
+                filtertypes = {Types.FilterTypes.FeatureFilters} 
+                handleFilters = {handleFilters}/>
                 </div>
 
 </div>
@@ -74,11 +136,11 @@ function FilterPage() {
                     <div className="div-top-boxes-content">
 
                     <HeadingFilterPage/>
-                    <Sortby setSort = {setSort}/>
+                    <Sortby getSortType = {handleSorting}/>
                     <div className="align-boxes">
                     {isPending && <div><Skeleton width={200} height={250}orientation={"horizontal"}/></div>}
                     {error && <div>{error}</div>}
-                    {data && data.map((rest) => <FilterPageItem key = {rest.Id} data = {rest}/>)}
+                    {data && data.ListOfRestaurant.map((rest) => <FilterPageItem key = {rest.Id} data = {rest}/>)}
                     </div>
                     </div>
                     <hr className="grey"/>
@@ -86,7 +148,7 @@ function FilterPage() {
                 </div>
                 </div>
             </div>
-
+<Footer/>
             </div>
     )
 }

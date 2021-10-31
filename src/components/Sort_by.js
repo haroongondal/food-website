@@ -9,7 +9,7 @@ function Sort_by(props) {
                     <div className="input-group">
                         <span className="text-sort-by">Sort By</span>
                         <div className="select">
-                            <select name="sort" id="res-sort" onChange = {(e) => props.setSort(e.target.value)}>
+                            <select name="sort" id="res-sort" onChange = {(e) => props.getSortType(e.target.value)}>
                                 <option value={Types.SortType.Popularity}>Popularity</option>
                                 <option value={Types.SortType.Ratings}>Rating</option>
                                 <option value={Types.SortType.LowPrice}>Price: Low to High</option>

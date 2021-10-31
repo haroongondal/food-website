@@ -32,16 +32,23 @@ const useForm = (callback, validate) => {
     //  + encodeURIComponent(values[key])).join('&');
 
      if(isSubmitting){
-    const data = fetch("https://api.masairapp.com/api/User/Signup",{
+       console.log(values)
+    fetch("/User/Signup",{
         method:"POST",
         headers:{
             "Content-Type":"application/json"
             
         },
         body:JSON.stringify(values)
+     
     }).then((result)=>{
-        result.json(data)
-    }).catch((error)=>{
+      
+      return result.json()
+    })
+    .then((data) => {
+      console.log(data)
+    })
+    .catch((error)=>{
         console.log(error)
     })
   }else{
@@ -56,7 +63,7 @@ const useForm = (callback, validate) => {
         callback();
       }
     },
-    [errors]
+    [callback, isSubmitting, errors]
   );
 
   return { handleChange, handleSubmit, values, errors };

@@ -27,7 +27,7 @@ function ConsumerLandingPage() {
   return (
     <div className="App">
       <header className="App-header">
-      <NavBar></NavBar>
+      <NavBar ShouldHideSearch = {true}/>
       <DashboardConsumer></DashboardConsumer>
       <div className="marginMain">
       <HeadingHiFoodie></HeadingHiFoodie>

@@ -7,8 +7,6 @@ function SecResAbout(props) {
 
     const [isShowingAll, setShowingAll] = useState(false);
 
-    const text_ = "Lorem ipsum dolor, adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis dolor. Maecenas  nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed  ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta."
-
     const handlestate = ()=> {
     setShowingAll(!isShowingAll)
     }
@@ -21,9 +19,14 @@ function SecResAbout(props) {
                         <p>
                         {
                         isShowingAll  ?
-                        <span><a onClick={handlestate}>{text_}Read less</a></span>
+                        <span><a onClick={handlestate}>{props.description}Read less</a></span>
                         :
-                        <span><a onClick={handlestate}>{text_.substring(0, 100)}...Read more</a></span>
+                        <span><a onClick={handlestate}>{
+                            props.description.lenght > 100 
+                            ? props.description.substring(0, 100) + "...Read more"
+                            : props.description
+                        }
+                            </a></span>
                         }
                         </p>
                         

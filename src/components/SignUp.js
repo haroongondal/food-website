@@ -14,7 +14,7 @@ function SignUp({submitForm}) {
       );
       
     
-    const {data, isPending, error} = useFetch("https://api.masairapp.com/api/Lov/GetCities");
+    const {data, isPending, error} = useFetch("/Lov/GetCities");
       
     return (
        
