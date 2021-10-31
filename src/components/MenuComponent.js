@@ -33,7 +33,7 @@ function MenuComponent() {
     <div>
       <div className="top-tools">
         <div className="left-tools">
-          <form class="search-menu" action="#">
+          <form className="search-menu" action="#">
             <div className="form-input">
               <input
                 type="search"
@@ -47,11 +47,11 @@ function MenuComponent() {
 
           <div className="Filters-menu">
             <button type="submit" className="filter-btn">
-              <i class="bx bx-filter"></i>
+              <i className="bx bx-filter"></i>
             </button>
             <span>Filters</span>
             <button type="submit" className="downArrow-btn">
-              <i class="bx bx-chevron-down"></i>
+              <i className="bx bx-chevron-down"></i>
             </button>
           </div>
         </div>

@@ -41,7 +41,7 @@ function AdminMenuItem() {
             <input type="search" placeholder="Enter category name" />
 
             <button type="submit" className="search-btn" onClick={onClick1}>
-              <i class="bx bx-right-arrow-alt"></i>
+              <i className="bx bx-right-arrow-alt"></i>
             </button>
           </div>
         </form>
@@ -62,7 +62,7 @@ function AdminMenuItem() {
       >
         <div className="Category-name">
           <button type="submit" className="small-down-btn">
-            <i class="bx bxs-down-arrow"></i>
+            <i className="bx bxs-down-arrow"></i>
           </button>
           <span>Starter</span>
         </div>
@@ -89,7 +89,7 @@ function AdminMenuItem() {
                     className="search-btn"
                     onClick={onClick2}
                   >
-                    <i class="bx bx-right-arrow-alt"></i>
+                    <i className="bx bx-right-arrow-alt"></i>
                   </button>
                 </div>
               </form>
@@ -113,7 +113,7 @@ function AdminMenuItem() {
       >
         <div className="Category-name">
           <button type="submit" className="small-down-btn">
-            <i class="bx bxs-down-arrow"></i>
+            <i className="bx bxs-down-arrow"></i>
           </button>
           <span>Veg Starter</span>
         </div>
@@ -147,7 +147,7 @@ function AdminMenuItem() {
                     className="search-btn"
                     onClick={onClick3}
                   >
-                    <i class="bx bx-right-arrow-alt"></i>
+                    <i className="bx bx-right-arrow-alt"></i>
                   </button>
                 </div>
               </form>
@@ -194,13 +194,13 @@ function AdminMenuItem() {
 
         <div className="right-menu-items">
           <h6>7:30 am - 11: 30 am</h6>
-          <label class="switch">
+          <label className="switch">
             <input type="checkbox" />
-            <span class="slider round"></span>
+            <span className="slider round"></span>
           </label>
           <div className="add-category-btn" onClick={handleSignUpPop}>
             <button type="submit" className="blue-plus-btn">
-              <i class="bx bx-plus-circle"></i>
+              <i className="bx bx-plus-circle"></i>
             </button>
             <span>Add</span>
           </div>
@@ -218,7 +218,7 @@ function AdminMenuItem() {
             ) : (
               <div className="add-category-btn" onClick={onClick}>
                 <button type="submit" className="blue-plus-btn">
-                  <i class="bx bx-plus-circle"></i>
+                  <i className="bx bx-plus-circle"></i>
                 </button>
                 <span>Add Menu Category</span>
               </div>

@@ -6,8 +6,8 @@ export default function PopupCompanyGroup() {
     <div>
       <div className="border-popup-city">
         {/* Company-Group-Name */}
-        <div class="dropDown-block">
-          <span class="label-dropDown-block">
+        <div className="dropDown-block">
+          <span className="label-dropDown-block">
             Please enter a Company Group name
           </span>
           <div className="dropDown-item" id="margin-10-T">
@@ -24,10 +24,10 @@ export default function PopupCompanyGroup() {
         </div>
 
         {/* Logo */}
-        <div class="dropDown-block mt-4 mb-4">
-          <span class="label-dropDown-block">Add Logo</span>
-          <div class="border-dropDown-block" id="margin-10-T">
-            <div class="content-dropDown">
+        <div className="dropDown-block mt-4 mb-4">
+          <span className="label-dropDown-block">Add Logo</span>
+          <div className="border-dropDown-block" id="margin-10-T">
+            <div className="content-dropDown">
               <div className="block-border">
                 <h6>Upload logo</h6>
               </div>
@@ -70,8 +70,8 @@ export default function PopupCompanyGroup() {
         </div>
 
         {/* Image */}
-        <div class="dropDown-block">
-          <span class="label-dropDown-block">Or</span>
+        <div className="dropDown-block">
+          <span className="label-dropDown-block">Or</span>
           <div className="dropDown-item" id="margin-10-T">
             <div className="border-dropDown-block">
               <div className="content-dropDown">
@@ -87,16 +87,16 @@ export default function PopupCompanyGroup() {
       </div>
 
       {/* Buttons */}
-      <div class="row m-auto">
-        <div class="col-md-12 d-flex mb-2 pr-0">
+      <div className="row m-auto">
+        <div className="col-md-12 d-flex mb-2 pr-0">
           <button
             type="submit"
-            class="blue-btn"
+            className="blue-btn"
             style={{ marginRight: "20px" }}
           >
             Save
           </button>
-          <button class="green-btn">Cancel</button>
+          <button className="green-btn">Cancel</button>
         </div>
       </div>
     </div>
