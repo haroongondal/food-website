@@ -12,9 +12,9 @@ function MenuDashboard() {
             <main>
             <div className="top-tools">
             <div className="left-tools">
-                <button className="overview">Overview</button>
+              <button className="dark-blue-btn">Overview</button>
             </div>
-            <div className="right-tools">
+            <div className="right-tools-catch">
                 <button className="catch-btn"><i class='bx bx-plus-circle'></i>Catch22-...+(4 more)</button>
                 <button className="catch-btn">10/13/21-10/13/21</button>
             </div>
