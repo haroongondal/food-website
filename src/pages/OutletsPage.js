@@ -8,7 +8,8 @@ import arrow from "../images/down_arrow.svg";
 import PopupCompanyGroup from "../components/PopupCompanyGroup";
 import PopupNewBrand from "../components/PopupNewBrand";
 import PopupNewOutlet from "../components/PopupNewOutlet";
-
+import EditSvgIcon from "../components/EditSvgIcon";
+import star from '../images/star.png';
 export default function OutletsPage() {
   //   Open-Close-OutletBox
   const [IsOpened, setOpened] = useState(false);
@@ -151,11 +152,9 @@ export default function OutletsPage() {
                 <h6>5 Outlets</h6>
               </div>
               <div className="right-tools-outlet-box">
+                <EditSvgIcon />
                 <span>
-                  <img alt="down-arrow" src={arrow} />
-                </span>
-                <span>
-                  <img alt="down-arrow" src={arrow} />
+                  <img alt="down-arrow" src={arrow} style={{margin: "0px 14px"}}/>
                 </span>
               </div>
             </button>
@@ -165,7 +164,77 @@ export default function OutletsPage() {
               style={{ maxHeight: "-webkit-fill-available" }}
             >
               <div className={IsOpened ? "abc" : "content-outlet-box-hide"}>
-                <h6>Hello</h6>
+              <table class="table">
+              <tbody>
+                    <tr className="tr-table">
+                      <th className="px-5 pt-3" >Logo</th>
+                      <th className="pt-3">Outlets</th>
+                      <th className="pt-3"></th>
+                      
+                      <th className="pt-3">Company</th>
+                      <th className="pt-3">Area</th>
+                      <th className="pt-3">City</th>
+                      <th className="px-5 pt-3"></th>
+                    </tr>
+                  
+                  
+                    <tr className="table-body">
+                      <td className="px-5"><img src={star} alt="" className="star-logo"/></td>
+                      <td >Catch22-Dubai</td>
+                      <td></td>
+                      <td>Dukin Brands</td>
+                      <td>Dubai-United Arab Emirates</td>
+                      <td>Dubai</td>
+                      <td className="px-5">
+                        <EditSvgIcon/> 
+                      </td>
+                    </tr>
+                    <tr className="table-body">
+                    <td className="px-5"><img src={star} alt="" className="star-logo"/></td>
+                      <td>Catch22-Dubai</td>
+                      <td></td>
+                      <td>Dukin Brands</td>
+                      <td>Dubai-United Arab Emirates</td>
+                      <td>Dubai</td>
+                      <td className="px-5">
+                        <EditSvgIcon/> 
+                      </td>
+                    </tr>
+                    <tr className="table-body">
+                    <td className="px-5"><img src={star} alt="" className="star-logo"/></td>
+                      <td>Catch22-Dubai</td>
+                      <td></td>
+                      <td>Dukin Brands</td>
+                      <td>Dubai-United Arab Emirates</td>
+                      <td>Dubai</td>
+                      <td className="px-5">
+                        <EditSvgIcon/> 
+                      </td>
+                    </tr>
+                    <tr className="table-body">
+                    <td className="px-5"><img src={star} alt="" className="star-logo"/></td>
+                      <td>Catch22-Dubai</td>
+                      <td></td>
+                      <td>Dukin Brands</td>
+                      <td>Dubai-United Arab Emirates</td>
+                      <td>Dubai</td>
+                      <td className="px-5">
+                        <EditSvgIcon/> 
+                      </td>
+                    </tr>
+                    <tr className="table-body">
+                    <td className="px-5"><img src={star} alt="" className="star-logo"/></td>
+                      <td>Catch22-Dubai</td>
+                      <td></td>
+                      <td>Dukin Brands</td>
+                      <td>Dubai-United Arab Emirates</td>
+                      <td>Dubai</td>
+                      <td className="px-5">
+                        <EditSvgIcon/> 
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
 
