@@ -23,14 +23,15 @@ function UserManagementPage() {
                     
                     <div className="tbl-header">
                     <table cellpadding="0" cellspacing="0" border="0">
-                    <thead>
+                    <thead >
                         <tr>
-                            <th className="mr-5">SL No</th>
-                            <th className="mr-5">Empolyee</th>
-                            <th className="mr-5">Email</th>
-                            <th className="mr-5">Phone</th>
-                            <th className="mr-5">Role</th>
-                            <th className="mr-5">Action</th>
+                            <th className="mr-5" style={{color:"#06386C", fontWeight:"bold"}}>SL No</th>
+                            <th className="mr-5" style={{color:"#06386C", fontWeight:"bold"}}>Empolyee</th>
+                            <th className="mr-5" style={{color:"#06386C", fontWeight:"bold"}}>Email</th>
+                            <th className="mr-5" style={{color:"#06386C", fontWeight:"bold"}}></th>
+                            <th className="mr-5" style={{color:"#06386C", fontWeight:"bold"}}>Phone</th>
+                            <th className="mr-5" style={{color:"#06386C", fontWeight:"bold"}}>Role</th>
+                            <th className="mr-5" style={{color:"#06386C", fontWeight:"bold"}}>Action</th>
                         </tr>
                        </thead>
                        </table>
@@ -40,12 +41,14 @@ function UserManagementPage() {
                        <table cellpadding="0" cellspacing="0" border="0"> 
                        <tbody>
                        <tr>
-                            <td style={{padding:"22px 40px"}} >1</td>
-                            <td style={{padding:"22px 40px"}}>Barsha@dukin.com</td>
-                            <td style={{padding:"22px 40px"}}>maghna.verma@dineout.co.in</td>
-                            <td style={{padding:"22px 40px"}}>909090909</td>
-                            <td style={{padding:"22px 40px"}}>View Role</td>
-                            <td style={{padding:"22px 40px"}}>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}} >1</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>Barsha@dukin.com</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"300"}}>maghna.verma@dineout.co.in</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}></td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>909090909</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>View Role</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>
+                            
                             <div style={{display: "flex"}}>   
                             <EditSvgIcon/>
                              <label class="switch">
@@ -57,12 +60,14 @@ function UserManagementPage() {
                         </tr>
                         
                         <tr >
-                        <td>1</td>
-                            <td className="py-3">Barsha@dukin.com</td>
-                            <td className="py-3">maghna.verma@dineout.co.in</td>
-                            <td className="py-3">909090909</td>
-                            <td className="py-3">View Role</td>
-                            <td className="py-3">
+                        <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}} >1</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>Barsha@dukin.com</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"300"}}>maghna.verma@dineout.co.in</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}></td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>909090909</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>View Role</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>
+                            
                             <div style={{display: "flex"}}>   
                             <EditSvgIcon/>
                              <label class="switch">
@@ -73,12 +78,14 @@ function UserManagementPage() {
                             </td>
                         </tr>
                         <tr >
-                            <td className="py-3">1</td>
-                            <td className="py-3">Barsha@dukin.com</td>
-                            <td className="py-3">maghna.verma@dineout.co.in</td>
-                            <td className="py-3">909090909</td>
-                            <td className="py-3">View Role</td>
-                            <td className="py-3">
+                        <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}} >1</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>Barsha@dukin.com</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"300"}}>maghna.verma@dineout.co.in</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}></td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>909090909</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>View Role</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>
+                            
                             <div style={{display: "flex"}}>   
                             <EditSvgIcon/>
                              <label class="switch">
@@ -89,12 +96,14 @@ function UserManagementPage() {
                             </td>
                         </tr>
                         <tr >
-                            <td className="py-3">1</td>
-                            <td className="py-3">Barsha@dukin.com</td>
-                            <td className="py-3">maghna.verma@dineout.co.in</td>
-                            <td className="py-3">909090909</td>
-                            <td className="py-3">View Role</td>
-                            <td className="py-3">
+                        <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}} >1</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>Barsha@dukin.com</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"300"}}>maghna.verma@dineout.co.in</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}></td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>909090909</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>View Role</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>
+                            
                             <div style={{display: "flex"}}>   
                             <EditSvgIcon/>
                              <label class="switch">
@@ -105,12 +114,14 @@ function UserManagementPage() {
                             </td>
                         </tr>
                         <tr >
-                            <td className="py-3">1</td>
-                            <td className="py-3">Barsha@dukin.com</td>
-                            <td className="py-3">maghna.verma@dineout.co.in</td>
-                            <td className="py-3">909090909</td>
-                            <td className="py-3">View Role</td>
-                            <td className="py-3">
+                        <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}} >1</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>Barsha@dukin.com</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"300"}}>maghna.verma@dineout.co.in</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}></td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>909090909</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>View Role</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>
+                            
                             <div style={{display: "flex"}}>   
                             <EditSvgIcon/>
                              <label class="switch">
@@ -121,12 +132,14 @@ function UserManagementPage() {
                             </td>
                         </tr>
                         <tr >
-                            <td className="py-3">1</td>
-                            <td className="py-3">Barsha@dukin.com</td>
-                            <td className="py-3">maghna.verma@dineout.co.in</td>
-                            <td className="py-3">909090909</td>
-                            <td className="py-3">View Role</td>
-                            <td className="py-3">
+                        <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}} >1</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>Barsha@dukin.com</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"300"}}>maghna.verma@dineout.co.in</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}></td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>909090909</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>View Role</td>
+                            <td style={{padding:"22px 40px",color:"#06386C", fontWeight:"bold"}}>
+                            
                             <div style={{display: "flex"}}>   
                             <EditSvgIcon/>
                              <label class="switch">

@@ -124,11 +124,6 @@ button.outlet-box.is-open {
 /* menu-content */
 .content-outlet-box {
   background-color: white;
-  border-left: 1px solid whitesmoke;
-  border-right: 1px solid whitesmoke;
-  padding-left: 8px;
-  margin-bottom: 10px;
-  max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-in-out;
   border-radius: 25px;
@@ -151,6 +146,35 @@ button.outlet-box.is-open {
   font-size: 13px;
   color: #06386c;
 }
+.right-tools-outlet-box{
+  display: flex;
+}
 .right-tools-outlet-box span img {
   width: 12px;
+ 
+}
+
+
+.tr-table{
+  height: 50px;
+  background-color: rgb(6 56 108 / 18%);
+  
+  
+}
+.tr-table th{
+  color: #06386c;
+  font-weight: bold;
+  
+}
+.table-body{
+  height: 70px; 
+}
+.table-body td{
+  color: #06386c;
+  font-weight: bold;
+}
+.star-logo{
+  height:35px;
+  width: 35px;
+  object-fit: cover;
 }
