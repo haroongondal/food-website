@@ -1,8 +1,18 @@
 import React from "react";
 import "../styles/PopupMenu.css";
 import arrow from "../images/down_arrow.svg";
+import { useState } from "react/cjs/react.development";
+import EditSvgIcon from "./EditSvgIcon";
 
 function PopupMenu() {
+
+  const [image, setImage] = useState(null)
+
+  const OnImageChange = (event) => {
+    if(event.target.files && event.target.files[0]) {
+      setImage(URL.createObjectURL(event.target.files[0]));
+    }
+  }
   return (
     <div className="align-content-popUp">
 
@@ -379,8 +389,9 @@ function PopupMenu() {
             </span>
           </div>
           <div className="image-video">
-            <button className="btn-img-vid">
-              <svg
+            <input className="btn-img-vid"  type="file" onChange={OnImageChange}/>
+            <img  src={image} alt="fileImage"/>
+              {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
                 y="0px"
@@ -411,8 +422,8 @@ function PopupMenu() {
                     <path d="M37.66667,37.66667c-10.29301,0 -18.83333,8.54033 -18.83333,18.83333v113c0,10.29301 8.54033,18.83333 18.83333,18.83333h75.33333v-18.83333h-75.33333v-113h150.66667v56.5h18.83333v-56.5c0,-10.29301 -8.54032,-18.83333 -18.83333,-18.83333zM136.54167,103.58333l-32.95833,37.66667l-23.54167,-23.54167l-25.63835,32.95833h96.26335v-28.25zM169.5,131.83333v37.66667h-37.66667v18.83333h37.66667v37.66667h18.83333v-37.66667h37.66667v-18.83333h-37.66667v-37.66667z"></path>
                   </g>
                 </g>
-              </svg>
-            </button>
+              </svg> */}
+            
 
             <button className="btn-img-vid">
               <svg

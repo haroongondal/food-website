@@ -5,6 +5,9 @@ import arrow from "../images/down_arrow.svg";
 export default function PopupNewOutlet() {
   return (
     <div>
+      <div className="title-popup">
+        <h6>Add New Outlet</h6>
+      </div>
       <div className="border-popup-city">
         {/* Company-Group-Name */}
 
@@ -73,7 +76,7 @@ export default function PopupNewOutlet() {
 
         <div className="col-md-12 m_t_20 d-flex ET-Flex-Start">
           <label className="col-md-3 label-ET-Flex">Add Logo</label>
-          <div className="col-md-7 p-0">
+          <div className="col-md-4 p-0">
             <div className="border-dropDown-block">
               <div className="content-dropDown">
                 <div className="block-border">
@@ -154,9 +157,8 @@ export default function PopupNewOutlet() {
               placeholder="Street Address"
               className="col-md-7 input-ET-Flex"
             />
-            <div  class="col-md-12 p-0">
+            <div class="col-md-12 p-0">
               <input
-                
                 type="text"
                 placeholder="Area"
                 class="input-ET-Flex"
@@ -164,43 +166,41 @@ export default function PopupNewOutlet() {
                 id="margin-20-TB"
               />
               <input
-                
                 type="text"
                 placeholder="Zone"
                 className="input-ET-Flex"
                 readonly=""
               />
               <div className="border-DD-Flex" id="margin-20-TB">
-            <div className="content-dropDown">
-              <select>
-                <option className="option">City</option>
-                <option className="option">City</option>
-                <option className="option">City</option>
-              </select>
-              <span>
-                <img alt="down-arrow" src={arrow} />
-              </span>
-            </div>
-          </div>
-          <input
-                
+                <div className="content-dropDown">
+                  <select>
+                    <option className="option">City</option>
+                    <option className="option">City</option>
+                    <option className="option">City</option>
+                  </select>
+                  <span>
+                    <img alt="down-arrow" src={arrow} />
+                  </span>
+                </div>
+              </div>
+              <input
                 type="text"
                 placeholder="Zip/Pincode"
                 className="input-ET-Flex"
                 readonly=""
               />
               <div className="border-DD-Flex" id="margin-20-T">
-            <div className="content-dropDown">
-              <select>
-                <option className="option">Country</option>
-                <option className="option">Country</option>
-                <option className="option">Country</option>
-              </select>
-              <span>
-                <img alt="down-arrow" src={arrow} />
-              </span>
-            </div>
-          </div>
+                <div className="content-dropDown">
+                  <select>
+                    <option className="option">Country</option>
+                    <option className="option">Country</option>
+                    <option className="option">Country</option>
+                  </select>
+                  <span>
+                    <img alt="down-arrow" src={arrow} />
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

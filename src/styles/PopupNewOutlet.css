@@ -1,6 +1,7 @@
 .ET-Flex{
     align-items: center;
     margin: 20px 0px;
+    place-content: center;
 }
 .label-ET-Flex{
     color: #06386c;
@@ -25,6 +26,7 @@
 }
 .ET-Flex-Start{
     margin: 20px 0px;
+    place-content: center;
 }
 .text-OR{
     font-size: 13px;
@@ -36,4 +38,9 @@
 }
 #margin-20-T{
     margin-top: 20px;
+}
+.dropDown-block-Outlet{
+    inline-size: max-content;
+    margin: 15px 0px;
+    text-align: left;
 }

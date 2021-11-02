@@ -9,7 +9,7 @@ export default function PopupFeedbackComSET() {
         <h6>Select Your Outlet</h6>
       </div>
       <div className="align-popup">
-        <div className="col-md-12 m_t_20 d-flex ET-Flex">
+        <div className="col-md-12 m_t_20 d-flex ET-Flex align-center">
           <label className="col-md-3 label-ET-Flex">Select Outlet</label>
           <div className="border-DD-Flex">
             <div className="content-dropDown">
@@ -46,24 +46,54 @@ export default function PopupFeedbackComSET() {
                 cols="44"
               ></textarea>
             </div>
+
+            {/* Buttons */}
+            <div className="row m-auto">
+              <div className="col-md-12 d-flex pr-0">
+                <button
+                  type="submit"
+                  className="green-btn"
+                  style={{ marginRight: "20px", padding: "14px 30px" }}
+                >
+                  Test Sms
+                </button>
+                <button className="blue-btn">Reset</button>
+              </div>
+            </div>
+            <div className="dontReceiveMsg">
+                <span>Didn't receive test message?</span>
+            </div>
           </div>
-          <div className="col-md-7 m_t_20 d-flex ET-Flex">
-          <label className="col-md-3 label-ET-Flex align-right">Select Outlet</label>
-          <div className="border-DD-Flex">
-            <div className="content-dropDown">
-              <select>
-                <option className="option">Catch22-Dubai</option>
-                <option className="option">Catch22-Dubai</option>
-                <option className="option">Catch22-Dubai</option>
-              </select>
-              <span>
-                <img alt="down-arrow" src={arrow} />
-              </span>
+          <div className="col-md-7 m_t_20 d-flex ET-Flex align-right mb-auto mt-0">
+            <label className="col-md-3 label-ET-Flex">Select Template</label>
+            <div className="border-DD-Flex">
+              <div className="content-dropDown">
+                <select>
+                  <option className="option">Thank you message</option>
+                  <option className="option">Sorry message content</option>
+                  <option className="option">
+                    Negative rating alert message
+                  </option>
+                </select>
+                <span>
+                  <img alt="down-arrow" src={arrow} />
+                </span>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+      <hr style={{ marginTop: "0px" }} />
+      <div className="row m-auto">
+        <div className="col-md-12 d-flex mb-4 mt-2 pr-0 justify-content-center">
+          <button
+            type="submit"
+            className="green-btn"
+            style={{ padding: "14px 60px" }}
+          >
+            Save
+          </button>
         </div>
-        
       </div>
     </div>
   );

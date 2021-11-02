@@ -9,11 +9,11 @@ function TableMenuDashboard() {
                         <button className="selling-img"><i class='bx bx-plus-circle'></i></button>
                     </div>
                     
-                    <div className="tbl-header">
+                    <div className="tbl-header" >
                     <table cellpadding="0" cellspacing="0" border="0">
                     <thead>
                         <tr>
-                            <th>SRNo</th>
+                            <th>SL.No.</th>
                             <th>Item</th>
                             <th>Likes</th>
                             <th>DisLikes</th>

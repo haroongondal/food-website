@@ -4,6 +4,10 @@ import "../styles/PopupCompanyGroup.css";
 export default function PopupCompanyGroup() {
   return (
     <div>
+      <div className="title-popup">
+        <h6>Edit Company Group</h6>
+      </div>
+      <div className="align-Popup">
       <div className="border-popup-city">
         {/* Company-Group-Name */}
         <div className="dropDown-block">
@@ -13,7 +17,7 @@ export default function PopupCompanyGroup() {
           <div className="dropDown-item" id="margin-10-T">
             <div className="border-dropDown-block">
               <div className="content-dropDown">
-                <form action="#" className="form-dropDown">
+                <form action="#" className="form-dropDown-M">
                   <div className="form-input-dropDown">
                     <input type="search" placeholder="Enter Company Group" />
                   </div>
@@ -75,7 +79,7 @@ export default function PopupCompanyGroup() {
           <div className="dropDown-item" id="margin-10-T">
             <div className="border-dropDown-block">
               <div className="content-dropDown">
-                <form action="#" className="form-dropDown">
+                <form action="#" className="form-dropDown-M">
                   <div className="form-input-dropDown">
                     <input type="search" placeholder="Enter image url" />
                   </div>
@@ -85,10 +89,11 @@ export default function PopupCompanyGroup() {
           </div>
         </div>
       </div>
+      </div>
 
       {/* Buttons */}
       <div className="row m-auto">
-        <div className="col-md-12 d-flex mb-2 pr-0">
+        <div className="col-md-12 d-flex mb-2 pr-0 justify-content-center">
           <button
             type="submit"
             className="blue-btn"
