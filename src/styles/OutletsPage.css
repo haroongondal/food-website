@@ -59,6 +59,7 @@
 .right-outlets-header {
   display: flex;
   grid-gap: 16px;
+  align-items: center;
 }
 .add-context-btn {
   display: flex;

@@ -1,0 +1,49 @@
+.title-popup{
+    text-align: center;
+    background: #06386C;
+    padding: 20px;
+}
+.title-popup h6{
+    margin: 0 auto;
+    color: white;
+    font-weight: bold;
+}
+.align-popup{
+    padding: 1.2rem;
+}
+.Switch-TextArea{
+    display: grid;
+    grid-gap: 16px;
+}
+.Messages-sec{
+    display: flex;
+}
+.msg-Text-Switch{
+    display: flex;
+    align-items: center;
+    grid-gap: 16px;
+    justify-content: center;
+}
+.msg-Text-Switch h6{
+    color: #06386c;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+.Messages-text-area{
+    text-align: left;
+}
+.messages-textArea {
+    border: none;
+    background: rgba(6, 56, 108, 0.1);
+    resize: none;
+    border-radius: 40px;
+    font-size: 13px;
+    padding: 20px;
+}
+.messages-textArea:focus {
+  outline: 1px solid #06386c6b;
+}
+.align-right{
+    justify-content: right;
+}
