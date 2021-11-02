@@ -8,11 +8,11 @@ function EditSvgIcon() {
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
-                    width="20"
-                    height="20"
+                    width="64"
+                    height="64"
                     viewBox="0 0 172 172"
-                    style={{fill:"#000000"}}
-                    className="svg-edit-icon"
+                    style={{fill:"#000000",width:"24px",height:"24px"}}
+                    
                   >
                     <g
                       fill="none"

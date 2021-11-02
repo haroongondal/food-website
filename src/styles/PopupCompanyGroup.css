@@ -1,7 +1,10 @@
+.align-Popup{
+  text-align: -webkit-center;
+}
 .dropDown-block{
-    align-items: center;
     inline-size: max-content;
-    margin: 10px 0px;
+    margin: 0 auto;
+    text-align: left;
 }
 .label-dropDown-block{
     color: #06386c;
@@ -10,7 +13,7 @@
     font-weight: bold;
 }
 .border-dropDown-block{
-    width: 17rem;
+    width: 24rem;
 }
 .block-border{
     background-color: rgb(6 56 108 / 10%);
@@ -50,3 +53,46 @@
 #margin-10-T{
     margin-top: 10px;
 }
+
+.form-dropDown-M {
+    max-width: 385px;
+    width: 100%;
+    /* margin-left: 15px; */
+    /* margin-bottom: 5px; */
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+  .form-dropDown-M .form-input-dropDown {
+    display: flex;
+    align-items: center;
+    height: 36px;
+  }
+  .form-dropDown-M .form-input-dropDown input {
+    flex-grow: 1;
+    padding: 20px 11px;
+    height: 100%;
+    border: none;
+    background: rgb(6 56 108 / 10%);
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+  }
+  .form-dropDown-M .form-input-dropDown input::placeholder {
+    color: #474747;
+  }
+  .form-dropDown-M .form-input-dropDown button {
+    margin-left: -5px;
+    width: 36px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: black;
+    font-size: 18px;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    padding: 20px;
+  }

@@ -8,53 +8,23 @@ import AdminNavbar from "../components/AdminNavbar";
 import AdminSidebar from "../components/AdminSidebar";
 import FeedbackReviewSec from "../components/FeedbackReviewSec";
 import PopupFeedbackComSET from "../components/PopupFeedbackComSET";
+import FeedbackComponents from "../components/FeedbackComponents";
+import CancelSvgIcon from "../components/CancelSvgIcon";
 
 function FeedbackPage() {
-  //   PopupNewOutlet
-  const [isNewOutletShowing, setNewOutletShowing] = useState(false);
+  //   PopupCommSetting
+  const [isCommSettingShowing, setCommSettingShowing] = useState(false);
 
-  const handleNewOutletPop = (e) => {
+  const handleCommSettingPop = (e) => {
     e.preventDefault();
-    setNewOutletShowing(true);
+    setCommSettingShowing(true);
   };
 
-  const closeNewOutletPop = () => {
-    setNewOutletShowing(false);
+  const closeCommSettingPop = () => {
+    setCommSettingShowing(false);
   };
 
-  const closeIcon = (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      x="0px"
-      y="0px"
-      width="30"
-      height="30"
-      viewBox="0 0 172 172"
-      style={{fill:"#000000"}}
-    >
-      <g
-        fill="none"
-        fill-rule="nonzero"
-        stroke="none"
-        stroke-width="1"
-        stroke-linecap="butt"
-        stroke-linejoin="miter"
-        stroke-miterlimit="10"
-        stroke-dasharray=""
-        stroke-dashoffset="0"
-        font-family="none"
-        font-weight="none"
-        font-size="none"
-        text-anchor="none"
-        style={{mixBlendMode: "normal"}}
-      >
-        <path d="M0,172v-172h172v172z" fill="none"></path>
-        <g fill="#ffffff">
-          <path d="M86,17.2c-37.9948,0 -68.8,30.8052 -68.8,68.8c0,37.9948 30.8052,68.8 68.8,68.8c37.9948,0 68.8,-30.8052 68.8,-68.8c0,-37.9948 -30.8052,-68.8 -68.8,-68.8zM94.10693,86c0,0 17.99693,17.99693 18.87987,18.87987c2.24173,2.24173 2.24173,5.87093 0,8.10693c-2.24173,2.24173 -5.87093,2.24173 -8.10693,0c-0.88293,-0.8772 -18.87987,-18.87987 -18.87987,-18.87987c0,0 -17.99693,17.99693 -18.87987,18.87987c-2.24173,2.24173 -5.87093,2.24173 -8.10693,0c-2.24173,-2.24173 -2.24173,-5.87093 0,-8.10693c0.8772,-0.88293 18.87987,-18.87987 18.87987,-18.87987c0,0 -17.99693,-17.99693 -18.87987,-18.87987c-2.24173,-2.24173 -2.24173,-5.87093 0,-8.10693c2.24173,-2.24173 5.87093,-2.24173 8.10693,0c0.88293,0.8772 18.87987,18.87987 18.87987,18.87987c0,0 17.99693,-17.99693 18.87987,-18.87987c2.24173,-2.24173 5.87093,-2.24173 8.10693,0c2.24173,2.24173 2.24173,5.87093 0,8.10693c-0.8772,0.88293 -18.87987,18.87987 -18.87987,18.87987z"></path>
-        </g>
-      </g>
-    </svg>
-  );
+  const closeIcon = <CancelSvgIcon />;
 
   return (
     <div>
@@ -62,17 +32,7 @@ function FeedbackPage() {
       <section id="content">
         <AdminNavbar />
         <main>
-          <div className="top-tools">
-            <div className="left-tools">
-              <button className="dark-blue-btn">Feedback</button>
-            </div>
-            <div className="right-tools-catch">
-              <button className="catch-btn">
-                <i class="bx bx-plus-circle"></i>Catch22-...+(4 more)
-              </button>
-              <button className="catch-btn">10/13/21-10/13/21</button>
-            </div>
-          </div>
+          <FeedbackComponents />
           <div className="Content-graph-boxes">
             <div className="border-back-white">
               <div className="toggle-brands">
@@ -97,7 +57,7 @@ function FeedbackPage() {
               style={{ padding: "14px 0px" }}
             >
               <div className="outlets-header" style={{ padding: "0px 26px" }}>
-                <h6>
+                <h6 className="title-outlets-header">
                   Summary <span>(5 Outlets selected)</span>
                 </h6>
 
@@ -110,7 +70,7 @@ function FeedbackPage() {
                   <button
                     type="submit"
                     className="blue-setting-btn"
-                    onClick={handleNewOutletPop}
+                    onClick={handleCommSettingPop}
                   >
                     <i class="bx bx-cog"></i>
                   </button>
@@ -221,7 +181,7 @@ function FeedbackPage() {
 
             <div className="border-back-white" style={{ padding: "14px 0px" }}>
               <div className="outlets-header" style={{ padding: "0px 26px" }}>
-                <h6>Feedback List</h6>
+                <h6 className="title-outlets-header">Feedback List</h6>
 
                 <div className="right-outlets-header">
                   <button type="submit" className="blue-setting-btn">
@@ -249,17 +209,19 @@ function FeedbackPage() {
           </div>
         </main>
       </section>
-      {/* PopupNewOutlet */}
+
+      {/* PopupCommSetting */}
       <Modal
-        open={isNewOutletShowing}
-        onClose={closeNewOutletPop}
+        open={isCommSettingShowing}
+        onClose={closeCommSettingPop}
         center
         closeIcon={closeIcon}
         styles={{
           modal: {
             "margin-top": "80px",
             "max-width": "955px",
-            width: "100%",padding: "0px"
+            width: "100%",
+            padding: "0px",
           },
         }}
       >

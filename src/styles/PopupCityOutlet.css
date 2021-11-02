@@ -1,9 +1,10 @@
 .border-popup-city {
   background: white;
   border-radius: 30px;
-  margin: 30px 0px;
+  margin: 30px 1.2rem;
   padding: 30px 30px;
   box-shadow: 2px 2px 18px rgb(0 0 0 / 10%);
+  width: max-content;
 }
 .search-city {
   max-width: 340px;
@@ -55,6 +56,7 @@
   border-radius: 30px;
   border: 1px solid #06386c;
   height: 280px;
+  width: 266px;
 }
 .title-city-box {
   background: rgb(6 56 108 / 10%);
@@ -193,8 +195,10 @@ input[type="checkbox"] {
   color: #3ec178;
   font-size: 10px;
   font-weight: 400;
+  margin: 0px 20px;
 }
 .green-btn {
+  width: 125px;
   background: #5d87dc;
   color: white;
   border: white;
@@ -211,6 +215,7 @@ input[type="checkbox"] {
   transition: all 0.2s ease;
 }
 .blue-btn {
+  width: 125px;
   background: #5ddc95;
   color: white;
   border: white;

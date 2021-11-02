@@ -58,7 +58,6 @@
  .border-selling-box{
     background: white;
     border-radius: 25px;
-    padding: 15px 0px;
     width: 100%;
     max-width: 480px
  }
@@ -69,7 +68,7 @@
     grid-gap: 16px;
     flex-wrap: wrap;
     align-items: center;
-    margin: 0px 15px;
+    margin: 0px 26px;
  }
  .title-selling-box{
     margin-bottom: 0px;
@@ -80,10 +79,11 @@
  }
  .selling-img{
     border: none;
-    background: aliceblue;
+    background: rgb(6 56 108 / 10%);
+    color: #06386C;
     padding: 2px 15px;
     padding-top: 5px;
-    border-radius: 10px;
+    border-radius: 8px;
  }
  .selling-graph{
     padding: 60px;
@@ -92,7 +92,6 @@
  .border-selling-box-large{
     background: white;
     border-radius: 25px;
-    padding: 15px 0px;
     width: 100%;
 
  }
@@ -100,7 +99,6 @@
  .top-recomendation{
     background: white;
     border-radius: 25px;
-    padding: 15px 0px;
     width: 100%;
     margin-top: 20px;
  }
@@ -133,11 +131,11 @@
 }
 .see-more{
     border: none;
-    background: aliceblue;
-    padding: 2px 15px;
+    background: rgb(6 56 108 / 10%);
+    padding: 5px 15px;
     padding-top: 5px;
-    border-radius: 10px;
-    font-size:10px;
-    align-items: right;
+    border-radius: 5px;
+    font-size: 10px;
+    color: #06386C;
 }
 

@@ -5,6 +5,9 @@ import arrow from "../images/down_arrow.svg";
 export default function PopupCityOutlet() {
   return (
     <div>
+    <div className="title-popup">
+        <h6>Select City / Outlet</h6>
+      </div>
       <div className="border-popup-city">
         {/* Search-bar */}
         <form class="search-city" action="#">
@@ -152,7 +155,7 @@ export default function PopupCityOutlet() {
                 </div>
               </div>
             </div>
-            <span class="selectedCity"> 0 / 1 Outlets Selected</span>
+            <span class="selectedCity"> 0 / 3 Outlets Selected</span>
           </div>
         </div>
       </div>

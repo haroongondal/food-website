@@ -7,9 +7,11 @@ import Modal from "react-responsive-modal";
 import arrow from "../images/down_arrow.svg";
 import PopupCompanyGroup from "../components/PopupCompanyGroup";
 import PopupNewBrand from "../components/PopupNewBrand";
-import PopupNewOutlet from "../components/PopupNewOutlet";
 import EditSvgIcon from "../components/EditSvgIcon";
 import star from '../images/star.png';
+import CancelSvgIcon from "../components/CancelSvgIcon";
+import PopupNewOutlet2 from "../components/PopupNewOutlet2";
+
 export default function OutletsPage() {
   //   Open-Close-OutletBox
   const [IsOpened, setOpened] = useState(false);
@@ -27,6 +29,8 @@ export default function OutletsPage() {
   const closeCompanyGroupPop = () => {
     setCompanyGroupShowing(false);
   };
+
+  const closeIcon = <CancelSvgIcon />;
 
   //   PopupNewBrand
   const [isNewBrandShowing, setNewBrandShowing] = useState(false);
@@ -108,7 +112,7 @@ export default function OutletsPage() {
             </div>
             <div className="border-back-white-outlet">
               <div className="outlets-header">
-                <h6>Outlets</h6>
+                <h6 className="title-outlets-header">Outlets</h6>
 
                 <div className="right-outlets-header">
                   <div className="d-flex ET-Flex-M">
@@ -243,11 +247,12 @@ export default function OutletsPage() {
               open={isCompanyGroupShowing}
               onClose={closeCompanyGroupPop}
               center
+              closeIcon={closeIcon}
               styles={{
                 modal: {
                   "margin-top": "80px",
-                  "max-width": "955px",
-                  width: "100%",
+                  "max-width": "815px",
+                  width: "100%", padding: "0px"
                 },
               }}
             >
@@ -259,11 +264,12 @@ export default function OutletsPage() {
               open={isNewBrandShowing}
               onClose={closeNewBrandPop}
               center
+              closeIcon={closeIcon}
               styles={{
                 modal: {
                   "margin-top": "80px",
-                  "max-width": "955px",
-                  width: "100%",
+                  "max-width": "815px",
+                  width: "100%", padding: "0px"
                 },
               }}
             >
@@ -275,15 +281,16 @@ export default function OutletsPage() {
               open={isNewOutletShowing}
               onClose={closeNewOutletPop}
               center
+              closeIcon={closeIcon}
               styles={{
                 modal: {
                   "margin-top": "80px",
-                  "max-width": "955px",
-                  width: "100%",
+                  "max-width": "815px",
+                  width: "100%", padding: "0px"
                 },
               }}
             >
-              <PopupNewOutlet />
+              <PopupNewOutlet2 />
             </Modal>
           </div>
         </main>

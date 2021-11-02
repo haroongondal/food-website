@@ -1,18 +1,20 @@
-import React from 'react'
+import React from "react";
 
 export default function PopupNewBrand() {
-    return (
-        <div>
+  return (
+    <div>
+      <div className="title-popup">
+        <h6>Add New Brand</h6>
+      </div>
+      <div className="align-Popup">
       <div className="border-popup-city">
         {/* Brand-Name */}
         <div className="dropDown-block">
-          <span className="label-dropDown-block">
-            Enter a Brand Name
-          </span>
+          <span className="label-dropDown-block">Enter a Brand Name</span>
           <div className="dropDown-item" id="margin-10-T">
             <div className="border-dropDown-block">
               <div className="content-dropDown">
-                <form action="#" className="form-dropDown">
+                <form action="#" className="form-dropDown-M">
                   <div className="form-input-dropDown">
                     <input type="search" placeholder="Enter Brand" />
                   </div>
@@ -74,7 +76,7 @@ export default function PopupNewBrand() {
           <div className="dropDown-item" id="margin-10-T">
             <div className="border-dropDown-block">
               <div className="content-dropDown">
-                <form action="#" className="form-dropDown">
+                <form action="#" className="form-dropDown-M" style={{maxWidth: "385px"}}>
                   <div className="form-input-dropDown">
                     <input type="search" placeholder="Enter image url" />
                   </div>
@@ -84,10 +86,11 @@ export default function PopupNewBrand() {
           </div>
         </div>
       </div>
+      </div>
 
       {/* Buttons */}
       <div className="row m-auto">
-        <div className="col-md-12 d-flex mb-2 pr-0">
+        <div className="col-md-12 d-flex mb-2 pr-0 justify-content-center">
           <button
             type="submit"
             className="blue-btn"
@@ -99,5 +102,5 @@ export default function PopupNewBrand() {
         </div>
       </div>
     </div>
-    )
+  );
 }

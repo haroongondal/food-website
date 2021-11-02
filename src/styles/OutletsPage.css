@@ -49,7 +49,7 @@
   display: flex;
   justify-content: space-between;
 }
-.outlets-header h6 {
+.outlets-header .title-outlets-header {
   margin: 0;
   place-self: center;
   font-size: 18px;
