@@ -61,7 +61,7 @@ function ResDetailReviews() {
                                     </div>
                                     </div>
                                     
-                                    <div style={{display: "-webkit-inline-box"}} className="comment-section">
+                                    <div className="comment-section">
                                     <div className="paragraph-comment">
                                         <p rows="4" cols="50" name="comment" form="usrform">
                                             Not bad, not great.

@@ -3,7 +3,6 @@ import { useState } from "react";
 import "../styles/MenuComponent.css";
 import Modal from "react-responsive-modal";
 import PopupMenu from "./PopupMenu";
-import PopupCityOutlet from "./PopupCityOutlet";
 import PopupAddUser from "./PopupAddUser";
 
 function MenuComponent() {
