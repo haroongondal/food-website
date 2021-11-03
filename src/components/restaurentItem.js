@@ -4,7 +4,7 @@ import restaurentImage from '../images/restaurant.jpg'
 import { Link } from 'react-router-dom'
 
 
-export default function RestaurentItem({key = "", data = ""}) {
+export default function RestaurentItem({data = ""}) {
 
 console.log(data.RestaurantName)
     return (
@@ -47,7 +47,7 @@ console.log(data.RestaurantName)
                     </div>
 
                     {/* distance */}
-                    <a href="#abc" className="restaurent-distance">0.5 km</a>
+                    <a href="#abc" className="restaurent-distance">{Math.round(data.Distance)}</a>
                         
                     </div>
                     

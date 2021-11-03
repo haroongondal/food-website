@@ -8,7 +8,7 @@ export default function CuisinesItem() {
            
             
            <div className="box-cuisines">
-                
+        
                 <div className="slide-img-cuisines">
             
                 <img className="image-cuisines" alt="2" src={foodPlateImg}/> 

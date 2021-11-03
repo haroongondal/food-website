@@ -54,7 +54,7 @@ function RestaurentDetailsPage() {
               <SecResAbout 
               Cusines = {data.ListOfRestaurantCusine != null ?  data.ListOfRestaurantCusine : null}
               Features = {data.ListOfRestaurantFeature != null ?  data.ListOfRestaurantFeature : null}
-               description = {data.Description}/>
+              description = {data.Description}/>
               }
               <SecResMenu/>
               <SecResLike/>
