@@ -24,6 +24,9 @@ function ConsumerLandingPage() {
 
   const { data, isPending, error } = useFetch(`https://api.masairapp.com/api/Restaurant/GetRestaurantsByCoordinate?latitude=${location.coordinates.lat}&longitude=${location.coordinates.lng}`);
 
+  const { cusData, isPending1, error1 } = useFetch(`https://api.masairapp.com/api/Restaurant/GetRestaurantsByCoordinate?latitude=${location.coordinates.lat}&longitude=${location.coordinates.lng}`);
+
+
   return (
     <div className="App">
       <header className="App-header">
