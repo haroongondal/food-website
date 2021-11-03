@@ -12,6 +12,7 @@ import MenuDashboard from './pages/MenuDashboard';
 import OutletsPage from './pages/OutletsPage';
 import UserManagementPage from './pages/UserManagementPage';
 import FeedbackPage from './pages/FeedbackPage';
+import BuissnessSignUP from './components/BuissnessSignUP';
 
 
 
@@ -73,6 +74,10 @@ function App() {
 
         <Route exact path = "/FeedbackPage">
           <FeedbackPage />
+        </Route>
+
+        <Route exact path = "/BuissnessSignUP">
+          <BuissnessSignUP/>
         </Route>
 
       </Switch>
