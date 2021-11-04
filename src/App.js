@@ -14,6 +14,7 @@ import UserManagementPage from './pages/UserManagementPage';
 import FeedbackPage from './pages/FeedbackPage';
 import BuissnessSignUP from './components/BuissnessSignUP';
 import ProtectedRoutes from './Utils/ProtectedRoutes';
+import ProfileSettings from './pages/ProfileSettings';
 
 
 
@@ -76,8 +77,12 @@ function App() {
           <FeedbackPage />
         </Route>
 
-        <Route exact path = "/BuissnessSignUP">
-          <BuissnessSignUP/>
+        <Route exact path = "/BusinessSignup">
+          <BusinessSignup/>
+        </Route>
+
+        <Route exact path = "/ProfileSettings">
+          <ProfileSettings/>
         </Route>
 
       </Switch>
