@@ -42,7 +42,7 @@ export default function Login(props) {
                 localStorage.setItem("jwt", res.access_token)
                 localStorage.setItem("username", res.userName)
                 localStorage.setItem("isLogedin", true)
-                props.setLogedIn(true)
+                props.setLogedIn("true")
             }
         })
         .catch((error)=>{

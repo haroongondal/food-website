@@ -15,7 +15,11 @@ function ProfileMenu() {
 
     const {url} = useRouteMatch();
     
-    
+    function handleLogout() {
+                localStorage.setItem("jwt", "")
+                localStorage.setItem("username", "")
+                localStorage.setItem("isLogedin", false)
+    }
     return (
         
         <div className="alignment listing_sidebar" style={{width:"25%"}}>
@@ -87,10 +91,13 @@ function ProfileMenu() {
                                     <h6>Messages</h6>
                                 </div>
 
-                                <div className="alignment-profile-data">
+
+                                <Link to = {`/`}>
+                                <div className="alignment-profile-data" onClick = {() => handleLogout()}>
                                     <img alt="logout-icon" src={logout}/>
                                     <h6>Logout</h6>
                                 </div>
+                                </Link>
 
                             </div>
                         </div>

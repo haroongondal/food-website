@@ -12,7 +12,8 @@ import MenuDashboard from './pages/MenuDashboard';
 import OutletsPage from './pages/OutletsPage';
 import UserManagementPage from './pages/UserManagementPage';
 import FeedbackPage from './pages/FeedbackPage';
-import BusinessSignup from './components/BusinessSignup';
+import BuissnessSignUP from './components/BuissnessSignUP';
+import ProtectedRoutes from './Utils/ProtectedRoutes';
 import ProfileSettings from './pages/ProfileSettings';
 
 
@@ -47,9 +48,8 @@ function App() {
         </Route>
 
 
-        <Route path = "/Dashboard">
-        <MyProfilePage/> 
-        </Route>
+        <ProtectedRoutes path = "/Dashboard" component = {MyProfilePage}/>
+        
 
 
         <Route exact path = "/BusinessLandingPage">

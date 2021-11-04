@@ -8,9 +8,9 @@
  },
 
  "SortType": {
-   "Popularity": 0,
-   "Ratings": 1,
-   "HighPrice": 2,
-   "LowPrice": 3
+   "Popularity": "0",
+   "Ratings": "1",
+   "HighPrice": "2",
+   "LowPrice": "3"
 }
 }

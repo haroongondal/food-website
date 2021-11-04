@@ -1,6 +1,5 @@
 import React from 'react'
 import { useParams } from 'react-router'
-import { useState } from 'react/cjs/react.development'
 import BannerResturant from '../components/BannerResturant'
 import Breadcrumb from '../components/Breadcrumb'
 import Footer from '../components/Footer'

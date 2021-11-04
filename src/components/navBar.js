@@ -14,7 +14,7 @@ export default function NavBar(props) {
 
 const [navbar, setNavbar] = useState(false)
 
-const [isLogedIn, setLogedIn] = useState(localStorage.getItem("isLogedin") ? true : false)
+const [isLogedIn, setLogedIn] = useState(localStorage.getItem("isLogedin"))
 
 const [isSignpShowing, setSignupShowing] = useState(false)
 
@@ -65,7 +65,7 @@ window.addEventListener('scroll', showSearchBar)
       </Modal>
 
       <Modal open={isLoginShowing} onClose={closeLoginPop} center styles = {{modal: {"margin-top": "80px"}}}>
-          <Login setLogedIn = {setLogedIn}/>
+          <Login setLogedIn = {setLogedIn} />
       </Modal>
 
            <div className="header">
@@ -114,7 +114,7 @@ window.addEventListener('scroll', showSearchBar)
 
     {/* Top-right-navigation-buttons */}
 
-    {isLogedIn  ?
+    {isLogedIn === "false" ?
                 <ul className="desktop-list">
                 <li><a href="#abc">786 100 4444</a></li>
                 <li><a href="#abc">Help</a></li>
