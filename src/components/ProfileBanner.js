@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/ProfileBanner.css'
 import profile from '../images/profile_pic.jpg'
 import location from '../images/locatioin_white.png'
-function ProfileBanner() {
+function ProfileBanner(props) {
 
    
     return (
@@ -24,7 +24,7 @@ function ProfileBanner() {
                 </div>
                 <div className="section-2-user-details " style={{marginLeft: "60px"}}>
                     <div style={{bottom: "1%", position: "absolute",width: "100%"}}>
-                    <h4 style={{color: "white",fontSize: "1.6rem"}}>Smith Leo</h4>
+                    <h4 style={{color: "white",fontSize: "1.6rem"}}>{props.name}</h4>
                     <h6 style={{color: "white",fontWeight: "300",fontSize: "0.96rem"}}><span style={{marginBottom: "5px"}}><img alt="location-icon" src={location} style={{height: "15px",width: "15px",marginBottom: "4px",marginRight: "5px"}}/></span>Lisbon, Portugal</h6>
                     <div style={{display: "-webkit-inline-box"}}>
                     <h6 style={{backgroundColor:" black",color: "white",padding: "10px 10px", borderRadius: "15px 0px 0px 15px"}}>0.5 Foodie</h6>

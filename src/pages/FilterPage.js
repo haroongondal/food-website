@@ -25,7 +25,7 @@ function FilterPage() {
     const [tagIds, setTagIds] = useState([])
     const [cusineIds, setCusineIds] = useState([])
     const [featureIds, setFeatureIds] = useState([])
-    const { data, isPending, error } = useFetch(url);
+    const restaurants = useFetch(url);
         
         const handleFilters = (isChecked, filterType, id) => {
 
@@ -75,28 +75,28 @@ function FilterPage() {
 
         const handleSorting = (sort) => {
         
-        if (!isPending && !error && data) {
+        if (!restaurants.isPending && !restaurants.error && restaurants.data) {
 
-            if (data.ListOfRestaurant.lenght > 1) {
+            if (restaurants.data.ListOfRestaurant.lenght > 1) {
           
             if (Types.SortType.Popularity == sort) {
                 console.log(sort)
-                data.sort((a, b) => (b.CostOfTwo - a.CostOfTwo))
+                restaurants.data.sort((a, b) => (b.CostOfTwo - a.CostOfTwo))
             }
         
             if (Types.SortType.Ratings == sort) {
                 console.log(sort)
-                data.sort((a, b) => (b.CostOfTwo - a.CostOfTwo))
+                restaurants.data.sort((a, b) => (b.CostOfTwo - a.CostOfTwo))
             }
 
             if (Types.SortType.HighPrice == sort) {
                 console.log(sort)
-                data.sort((a, b) => (b.CostOfTwo - a.CostOfTwo)) 
+                restaurants.data.sort((a, b) => (b.CostOfTwo - a.CostOfTwo)) 
             }
          
             if (Types.SortType.LowPrice == sort) {
                 console.log(sort)
-                data.sort((a, b) => (a.CostOfTwo - b.CostOfTwo))
+                restaurants.data.sort((a, b) => (a.CostOfTwo - b.CostOfTwo))
             }
         }
         }
@@ -138,9 +138,9 @@ function FilterPage() {
                     <HeadingFilterPage/>
                     <Sortby getSortType = {handleSorting}/>
                     <div className="align-boxes">
-                    {isPending && <div><Skeleton width={200} height={250}orientation={"horizontal"}/></div>}
-                    {error && <div>{error}</div>}
-                    {data && data.ListOfRestaurant.map((rest) => <FilterPageItem key = {rest.Id} data = {rest}/>)}
+                    {restaurants.isPending && <div><Skeleton width={200} height={250}orientation={"horizontal"}/></div>}
+                    {restaurants.error && <div>{restaurants.error}</div>}
+                    {restaurants.data && restaurants.data.ListOfRestaurant.map((rest) => <FilterPageItem key = {rest.Id} data = {rest}/>)}
                     </div>
                     </div>
                     <hr className="grey"/>

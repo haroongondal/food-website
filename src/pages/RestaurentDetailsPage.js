@@ -1,5 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router'
+import { useState } from 'react/cjs/react.development'
 import BannerResturant from '../components/BannerResturant'
 import Breadcrumb from '../components/Breadcrumb'
 import Footer from '../components/Footer'
@@ -21,44 +22,56 @@ function RestaurentDetailsPage() {
     // const { query, search } = useLocation(); 
     // console.log(id, query.backUrl, new URLSearchParams(search).get('id'))
 
-    const { data, isPending, error } = useFetch('https://api.masairapp.com/api/Restaurant/GetRestaurantById?id=' + id);
-  
-    console.log(data)
+   
+    const restaurantDetails = useFetch(`https://api.masairapp.com/api/Restaurant/GetRestaurantById?id=${id}`);
     
-    
+   
+   
 
     return (
         <div>
            <NavBar ShouldHideSearch = {false}/>
-            <Breadcrumb/>
+            {/* <Breadcrumb/> */}
             <BannerResturant/>
             <div className="merge-section">
 
               <div className="section-left-restaurent-details">
-                  {error && console.log(error)}
-                  {isPending && console.log("Data coming in a moment")}
-                  {data && 
+                  {restaurantDetails.error && console.log(restaurantDetails.error)}
+                  {restaurantDetails.isPending && console.log("Data coming in a moment")}
+                  {restaurantDetails.data && 
               <SecResDetails 
-              RestaurantName = {data.RestaurantName}
-              CostOfTwo = {data.CostOfTwo}
-              Cusines = {data.ListOfRestaurantCusine}
-              PrimaryAreaOfOutlet = {data.PrimaryAreaOfOutlet}
-              PrimaryLocation = {data.PrimaryLocation}
+              RestaurantName = {restaurantDetails.data.RestaurantName}
+              CostOfTwo = {restaurantDetails.data.CostOfTwo}
+              Cusines = {restaurantDetails.data.ListOfRestaurantCusine}
+              PrimaryAreaOfOutlet = {restaurantDetails.data.PrimaryAreaOfOutlet}
+              PrimaryLocation = {restaurantDetails.data.PrimaryLocation}
+              NoOfReviews = {restaurantDetails.data.NoOfReview}
+              AverageRating = {restaurantDetails.data.AverageRating}
+              Timing = {restaurantDetails.data.ListOfWorkingDays}
               />
             }
               <SecResNavbar/>
                   
-              {error && console.log(error)}
-              {isPending && console.log("Data coming in a moment")}
-              {data && 
+              {restaurantDetails.error && console.log(restaurantDetails.error)}
+              {restaurantDetails.isPending && console.log("Data coming in a moment")}
+              {restaurantDetails.data && 
               <SecResAbout 
-              Cusines = {data.ListOfRestaurantCusine != null ?  data.ListOfRestaurantCusine : null}
-              Features = {data.ListOfRestaurantFeature != null ?  data.ListOfRestaurantFeature : null}
-              description = {data.Description}/>
+              Cusines = {restaurantDetails.data.ListOfRestaurantCusine != null ?  restaurantDetails.data.ListOfRestaurantCusine : null}
+              Features = {restaurantDetails.data.ListOfRestaurantFeature != null ?  restaurantDetails.data.ListOfRestaurantFeature : null}
+              description = {restaurantDetails.data.Description}/>
               }
-              <SecResMenu/>
+              <SecResMenu id = {id}/>
               <SecResLike/>
-              <SecResRatingNReview/>
+              {restaurantDetails.error && console.log(restaurantDetails.error)}
+                  {restaurantDetails.isPending && console.log("Data coming in a moment")}
+                  {restaurantDetails.data && 
+              <SecResRatingNReview 
+              ReviewsList = {restaurantDetails.data.UserReviews}
+              NoOfReviews = {restaurantDetails.data.NoOfReview}
+              AverageRating = {restaurantDetails.data.AverageRating}
+              />
+            }
+              
               </div>
               
               <ReservationItem/>

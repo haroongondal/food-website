@@ -22,9 +22,9 @@ function ConsumerLandingPage() {
  
   const location = useGeoLocation();
 
-  const { data, isPending, error } = useFetch(`https://api.masairapp.com/api/Restaurant/GetRestaurantsByCoordinate?latitude=${location.coordinates.lat}&longitude=${location.coordinates.lng}`);
+  const restaurants = useFetch(`https://api.masairapp.com/api/Restaurant/GetRestaurantsByCoordinate?latitude=${location.coordinates.lat}&longitude=${location.coordinates.lng}`);
 
-  const { cusData, isPending1, error1 } = useFetch(`https://api.masairapp.com/api/Restaurant/GetRestaurantsByCoordinate?latitude=${location.coordinates.lat}&longitude=${location.coordinates.lng}`);
+  const popularCusines = useFetch(`https://api.masairapp.com/api/Lov/GetPopularCusine`);
 
 
   return (
@@ -51,9 +51,9 @@ function ConsumerLandingPage() {
       <HeadingRestaurentNear heading = {"Restaurants Near You"}/>
 
       <Carousel responsive={CarouselRestaurent}>
-        {isPending && <div><Skeleton width={200} height={250}/></div>}
-        {error && <div>{error}</div>}
-        {data && data.map((rest) => <RestaurentItem key = {rest.Id} data = {rest}/>)}
+        {restaurants.isPending && <div><Skeleton width={200} height={250}/></div>}
+        {restaurants.error && <div>{restaurants.error}</div>}
+        {restaurants.data && restaurants.data.map((r) => <RestaurentItem key = {r.Id} data = {r}/>)}
       
       </Carousel>
      
@@ -61,31 +61,25 @@ function ConsumerLandingPage() {
       <HeadingRestaurentNear heading = {"Featured Restaurants"}/>
 
       <Carousel responsive={CarouselRestaurent}>
-      {isPending && <div><Skeleton width={200} height={250}/></div>}
-        {error && <div>{error}</div>}
-        {data && data.filter((e) => e.IsFeature).map((rest) => <RestaurentItem key = {rest.Id} data = {rest}/>)}
+        {restaurants.isPending && <div><Skeleton width={200} height={250}/></div>}
+        {restaurants.error && <div>{restaurants.error}</div>}
+        {restaurants.data && restaurants.data.filter((e) => e.IsFeature).map((r) => <RestaurentItem key = {r.Id} data = {r}/>)}
       </Carousel>
 
       <HeadingRestaurentNear heading = {"Popular Cuisines"}/>
 
       <Carousel responsive={CarouselCuisines}>
-      <CuisinesItem name = {"Ali"}/>
-      <CuisinesItem name = {"Ali"}/>
-      <CuisinesItem name = {"Ali"}/>
-      <CuisinesItem name = {"Ali"}/>
-      <CuisinesItem name = {"Ali"}/>
-      <CuisinesItem name = {"Ali"}/>
-      <CuisinesItem name = {"Ali"}/>
-      <CuisinesItem name = {"Ali"}/>
-      <CuisinesItem name = {"Ali"}/>
+        {popularCusines.isPending && <div><Skeleton width={100} height={150}/></div>}
+        {popularCusines.error && <div>{popularCusines.error}</div>}
+        {popularCusines.data && popularCusines.data.map((c) => <CuisinesItem key = {c.Id} data = {c}/>)}
       </Carousel>
       
       <HeadingRestaurentNear heading = {"Popular Restaurants"}/>
 
       <Carousel responsive={CarouselRestaurent}>
-      {isPending && <div><Skeleton width={250} height={258}/></div>}
-        {error && <div>{error}</div>}
-        {data && data.map((rest) => <RestaurentItem key = {rest.Id} data = {rest}/>)}
+        {restaurants.isPending && <div><Skeleton width={250} height={258}/></div>}
+        {restaurants.error && <div>{restaurants.error}</div>}
+        {restaurants.data && restaurants.data.map((r) => <RestaurentItem key = {r.Id} data = {r}/>)}
       </Carousel>
 
       <HeadingWhyBook/>

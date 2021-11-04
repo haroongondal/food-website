@@ -23,8 +23,8 @@ function SecResDetails(props) {
                         <div className="rating-section" style={{display:"flex",
                         flexDirection: "column",
                         flexWrap: "wrap-reverse"}}>
-                            <h6 href="#" className="rating-3rd-page">4.5</h6>
-                            <h6 style={{color:" #0083C7",fontWeight: "700"}}>252 reviews</h6>    
+                            <h6 href="#" className="rating-3rd-page">{Math.round(props.AverageRating * 100) / 100}</h6>
+                            <h6 style={{color:" #0083C7",fontWeight: "700"}}>{`${props.NoOfReviews} Reviews`}</h6>    
                         </div>
                        </div>
                     </div>

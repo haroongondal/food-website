@@ -3,19 +3,74 @@ import '../styles/SignUp.css'
 import 'react-responsive-modal/styles.css'
 import React from 'react'
 import useFetch from '../Utils/useFetch'
-import validate from '../validateInfo';
-import useForm from '../useForm';
+import { useState } from 'react/cjs/react.development'
 
-function SignUp({submitForm}) {
+function SignUp(props) {
    
-    const { handleChange, handleSubmit, values, errors } = useForm(
-        submitForm,
-        validate
-      );
+    const [userName, setUserName] = useState("");
+    const [email, setEmail] = useState("");
+    const [check1, setCheck1] = useState(false);
+    const [check2, setCheck2] = useState(false);
+    const [fullName, setFullName] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
+    const [city, setCity] = useState();
       
     
     const {data, isPending, error} = useFetch("/Lov/GetCities");
-      
+
+    function validate() {
+        
+        if (!check1) {
+            console.log(" Check 1 is false")
+           return false
+        }
+        if (!check2) {
+            console.log(" Check 2 is false")
+            return false;
+        }
+        if (password !== confirmPassword) {
+            console.log(" Password Mismatch")
+            return false
+        }
+            return true;
+
+    }
+
+    function handleSignUp(e) {
+        e.preventDefault();
+        if(validate()) {
+            console.log("validated")
+            const values = {
+                userName: userName,
+                fullName: fullName,
+                email: email,
+                password: password,
+                AccountTypeId: 2,
+            }
+            fetch("/User/Signup",{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                    
+                },
+                body:JSON.stringify(values)
+             
+            }).then((result)=>{
+              
+              return result.json()
+            })
+            .then((data) => {
+             if (!data.ResponseMessage) {
+                
+             }
+            })
+            .catch((error)=>{
+                console.log(error)
+            })
+        } 
+    }
+   
     return (
        
        
@@ -30,47 +85,48 @@ function SignUp({submitForm}) {
                             <div className="modal-body">
                                 <h3 className="title">Welcome to FoodApp!</h3>
                                 <hr className="hr-for-sign-in-form"/>
-                                
+                                <form >
                                 <div className="content-of-form">
-                                <form onSubmit={handleSubmit} noValidate>
+                                
                                     <div className="form-group" style={{marginTop: "30px"}}>
                                         <span className="input-icon"><i className="bi bi-person"></i></span>
-                                        <input type="text" className="form-control" name='userName' placeholder="UserName" value={values.userName}
-                                         onChange={handleChange} />
-                                         {errors.userName && <p>{errors.userName}</p>}
+                                        <input type="text" className="form-control" placeholder="UserName" value={userName} required
+                                         onChange={(e) => setUserName(e.target.value)} />
+                                        
                                     </div>
                                     
                                     <div className="form-group">
                                         <span className="input-icon"><i className="bi bi-person"></i></span>
-                                        <input type="text" className="form-control" name="fullName" Value={values.fullName} onChange={handleChange} placeholder="FullName"  />
-                                        {errors.fullName && <p>{errors.fullName}</p>}
+                                        <input type="text" className="form-control" Value={fullName} required
+                                         onChange={(e) => setFullName(e.target.value)} placeholder="FullName"  />
+                                        
                                     </div>
                                     
                                     <div className="form-group">
                                         <span className="input-icon"><i className="bi bi-envelope"></i></span>
-                                        <input type="email" className="form-control" name="email" value={values.email}
-                                            onChange={handleChange} placeholder="Enter email *" />
-                                          {errors.email && <p>{errors.email}</p>}
+                                        <input type="email" className="form-control" value={email} required
+                                            onChange={(e) => setEmail(e.target.value)} placeholder="Enter email *" />
+                                         
                                     </div>
                                    
                                    
                                     <div className="form-group">
                                         <span className="input-icon"><i className="bi bi-key"></i></span>
-                                        <input type="password" className="form-control" value={values.password}
-                                         onChange={handleChange}  name='password' placeholder="Enter password *"/>
-                                        {errors.password && <p>{errors.password}</p>}
+                                        <input type="password" className="form-control" value={password} required
+                                         onChange={(e) => setPassword(e.target.value)} placeholder="Enter password *"/>
+                                        
                                     </div>
                                     
                                     <div className="form-group">
                                         <span className="input-icon"><i className="bi bi-key"></i></span>
-                                        <input type="password" className="form-control" name='password2' value={values.password2}
-                                         onChange={handleChange} placeholder="Re-enter password *"/>
-                                         {errors.password2 && <p>{errors.password2}</p>}
+                                        <input type="password" className="form-control"value={confirmPassword} required
+                                         onChange={(e) => setConfirmPassword(e.target.value)} placeholder="Re-enter password *"/>
+                                        
                                     </div>
                                     
                                     <div className="form-location">
                                         <span style={{marginTop:"3px"}} className="input-icon" ><i className="bi bi-geo-alt"></i></span>
-                                        <select >
+                                        <select onChange={(e) => setCity(e.target.value)} >
                                         
                                             {isPending && <option className="option">Pending</option>}
                                             {error && <option className="option">{error}</option>}
@@ -85,10 +141,10 @@ function SignUp({submitForm}) {
                                         </span>
                                     </div>
                                     <div className="form-group checkbox" style={{margiTop: "30px"}}>
-                                        <input type="checkbox"/>
+                                        <input type="checkbox" onChange={(e) => setCheck1(e.target.checked)} />
                                         <label>I am an administrative professional who books reservations for others.</label>
                                     </div>
-                                    <div className="form-group checkbox">
+                                    <div className="form-group checkbox" onChange={(e) => setCheck2(e.target.checked)}>
                                         <input type="checkbox"/>
                                         <label>Sign me up to receive exclusive dining offers and news
                                             on hot new restaurants on FoodApp.</label>
@@ -97,7 +153,7 @@ function SignUp({submitForm}) {
                                         <input type="checkbox"/>
                                         <label>Remember me</label>
                                     </div>
-                                    <button className="btn">Create Account</button>
+                                    <button className="btn" onClick = {(e) => handleSignUp(e)}>Create Account</button>
                                     <hr className="hr-for-sign-in-form"/>
                                     <h6 className="text-dont-want-form">Don't want to complete the form?</h6>
                                     <button className="social-button">
@@ -111,9 +167,9 @@ function SignUp({submitForm}) {
                                         {/* <img src="social_facebook_icon.svg" class="button-icon"> */}
                                         <span>Continue with Google</span>
                                     </button>
-                                    </form>
+                                   
                                 </div>
-                               
+                                </form>
                                 
                             </div>
                         </div>
