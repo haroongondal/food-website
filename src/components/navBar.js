@@ -7,21 +7,18 @@ import downArrowIcon from '../images/down_arrow.svg'
 import SignUp from './SignUp';
 import Modal from 'react-responsive-modal';
 import Login from './Login';
+import { Link } from 'react-router-dom';
 
 
 export default function NavBar(props) {
 
 const [navbar, setNavbar] = useState(false)
 
+const [isLogedIn, setLogedIn] = useState(localStorage.getItem("isLogedin") ? true : false)
+
 const [isSignpShowing, setSignupShowing] = useState(false)
 
 const [isLoginShowing, setLoginShowing] = useState(false)
-
-const [isSubmitted, setIsSubmitted] = useState(false);
-
-function submitForm() {
-  setIsSubmitted(true);
-}
 
 useEffect(() => {
    if (!props.ShouldHideSearch) {
@@ -64,11 +61,11 @@ window.addEventListener('scroll', showSearchBar)
         <div>
            
         <Modal open={isSignpShowing} onClose={closeSignupPop} center styles = {{modal: {"margin-top": "80px"}}}>
-          <SignUp submitForm={submitForm} />
+          <SignUp />
       </Modal>
 
       <Modal open={isLoginShowing} onClose={closeLoginPop} center styles = {{modal: {"margin-top": "80px"}}}>
-          <Login/>
+          <Login setLogedIn = {setLogedIn}/>
       </Modal>
 
            <div className="header">
@@ -117,13 +114,23 @@ window.addEventListener('scroll', showSearchBar)
 
     {/* Top-right-navigation-buttons */}
 
-            <ul className="desktop-list">
+    {isLogedIn  ?
+                <ul className="desktop-list">
                 <li><a href="#abc">786 100 4444</a></li>
                 <li><a href="#abc">Help</a></li>
                 <li><a href="/" onClick={handleLoginPop}>Login</a></li>
                 <li><a className="signup_buton" href="/" onClick={handleSignUpPop}>SignUp</a></li>
+                
+            </ul> 
+                : 
+                <ul className="desktop-list">
+                <li><a href="#abc">786 100 4444</a></li>
+                <li><a href="#abc">Help</a></li>
+                <li><Link to ={"/Dashboard"} className="signup_buton" href="/">My Dashboard</Link></li>
 
-            </ul>
+            </ul> 
+    }
+           
         
         </nav>
     

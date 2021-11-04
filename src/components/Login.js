@@ -1,17 +1,18 @@
 import React,{ useState} from 'react'
-export default function Login() {
+export default function Login(props) {
 
    
 
 
-     const [username, setUserName] = useState("");
-
+    const [username, setUserName] = useState("");
 
     const [password, setPassword] = useState("");
+
+    const [error, setError] = useState("")
    
     
-    function Login(){
-        
+    function Login(e){
+        e.preventDefault()
         
         const object = {
             grant_type: "password",
@@ -31,8 +32,21 @@ export default function Login() {
             },
             body:formBody
         }).then((result)=>{
-            result.json()
-        }).catch((error)=>{
+            return result.json()
+        })
+        .then((res) => {
+            console.log(res)
+            if(res.error) {
+                setError(res.error_description)
+            } else {
+                localStorage.setItem("jwt", res.access_token)
+                localStorage.setItem("username", res.userName)
+                localStorage.setItem("isLogedin", true)
+                props.setLogedIn(true)
+            }
+        })
+        .catch((error)=>{
+            setError(error.message)
             console.log(error)
         })
 
@@ -51,20 +65,22 @@ export default function Login() {
                 {/* <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> --> */}
                 <div className="modal-body">
                     <h3 className="title">Please sign in</h3>
+                   
                     <hr className="hr-for-sign-in-form"/>
                     <form>
                     <div className="content-of-form">
                     
                         <div className="form-group" style={{marginTop: "30px"}}>
                             <span className="input-icon"><i className="bi bi-person"></i></span>
-                            <input type="email" className="form-control" value={username} onChange={(e)=>setUserName(e.target.value)} placeholder="Email" required/>
+                            <input type="text" className="form-control" value={username} onChange={(e)=>setUserName(e.target.value)} placeholder="Email" required/>
                         </div>
                         <div className="form-group">
                             <span className="input-icon"><i className="bi bi-key"></i></span>
                             <input type="password" className="form-control" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="Password" required/>
                         </div>
+                        {error && <h6 className="title">{error}</h6>}
                         <a href="/" className="forgot-pass">Forgot Password?</a>
-                        <button className="btn" onClick={Login}>Sign In</button>
+                        <button className="btn" onClick={(e) => Login(e)}>Sign In</button>
                         <hr className="hr-for-sign-in-form"/>
                         <h6 className="text-dont-want-form">Don't want to complete the form?</h6>
                         <button className="social-button">

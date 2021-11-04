@@ -1,7 +1,23 @@
+import { useState } from 'react/cjs/react.development'
 import '../styles/SecResMenu.css'
+import useFetch from '../Utils/useFetch'
 import ResMenuItem from './ResMenuItem'
 
-export default function SecResMenu() {
+export default function SecResMenu(props) {
+
+    const [subCusineId, setSubCusineId] = useState(0)
+
+    const [subCusineName, setSubCusineName] = useState("")
+  //  const subCusines = useFetch(`https://api.masairapp.com/api/Lov/GetSubCusineByRestaurantId?id=${props.id}`)
+    
+    const subCusines = useFetch(`https://api.masairapp.com/api/Lov/GetSubCusine?id=1`)
+
+    const menuItems = useFetch(`https://api.masairapp.com/api/menu/GetMenuItemsBySubCusineId?id=${subCusineId}`)
+
+    function getMenuItems(id, name) {
+        setSubCusineId(id)
+        setSubCusineName(name)
+      }
 
     return (
         <div>
@@ -11,61 +27,21 @@ export default function SecResMenu() {
                         <h6>Menu</h6>
                         <hr className="hr-for-menu"/>
                         <div className="div-for-menu-buttons">
-                            <button className="menu-button">
-                                Dinner
-                            </button>
-                            <button className="menu-button">
-                                Dinner
-                            </button>
-                            <button className="menu-button">
-                                Dinner
-                            </button>
-                            <button className="menu-button">
-                                Dinner
-                            </button>
-                            <button className="menu-button">
-                                Dinner
-                            </button>
-                            <button className="menu-button">
-                                Dinner
-                            </button>
-                            <button className="menu-button">
-                                Dinner
-                            </button>
-                            <button className="menu-button">
-                                Dinner
-                            </button>
-                            <button className="menu-button">
-                                Dinner
-                            </button>
-                            <button className="menu-button">
-                                Dinner
-                            </button>
-                            <button className="menu-button">
-                                Dinner
-                            </button>
-                            <button className="menu-button">
-                                Dinner
-                            </button>
-                            <button className="menu-button">
-                                Dinner
-                            </button>
-                            <button className="menu-button">
-                                Dinner
-                            </button>
-                            <button className="menu-button">
-                                Dinner
-                            </button>
-                            <button className="menu-button">
-                                Dinner
-                            </button>
+                        {subCusines.error && console.log(subCusines.error)}
+                        {subCusines.isPending && console.log("Data coming in a moment")}
+                        {subCusines.data && subCusines.data.map((c) => 
+                            <button onClick = {() => getMenuItems(c.Id, c.Value)} className="menu-button">
+                                {c.Value}
+                            </button>)}
                         </div>
                         <hr className="hr-for-menu"/>
-                        <h5>Market Salads &amp; Starters</h5>
+                        <h5>{subCusineName}</h5>
                         <ul className="ul-for-menu">
-                            <ResMenuItem/>
-                            <ResMenuItem/>
-                            <ResMenuItem/>
+                        {menuItems.error && console.log(menuItems.error)}
+                        {menuItems.isPending && console.log("Data coming in a moment")}
+                        {menuItems.data && menuItems.data.map((c) => 
+                            <ResMenuItem data = {c}/>
+                        )}
                         </ul>
 
                         <div className="button-view-full-menu" style={{display: "none"}}>

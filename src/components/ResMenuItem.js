@@ -1,14 +1,14 @@
 import '../styles/SecResMenu.css'
 
-export default function ResMenuItem() {
+export default function ResMenuItem(props) {
 
     return (
         <li className="hide-show" style={{display: "list-item"}}>
                                 <h4>
-                                    <span>Baby Gem Caesar</span>
-                                    <span>Rs 20.00</span>
+                                    <span>{props.data.MenuName}</span>
+                                    <span>{`Rs ${props.data.Price}`}</span>
                                 </h4>
-                                <div className="div-for-rating-menu">
+                                {/* <div className="div-for-rating-menu">
                                 <div className="rate-for-menu">
                                     <input type="radio" id="star5" name="rate" value="5"/>
                                     <label for="star5" title="text">5 stars</label>
@@ -22,9 +22,8 @@ export default function ResMenuItem() {
                                     <label for="star1" title="text">1 star</label>
                                 </div>
                                 <p><span>123</span> Ratings</p>
-                                </div>
-                                <p className="text-menu-desc">parmigiano reggiano - lemon black pepper emulsion
-                                    herb crouton</p>
+                                </div> */}
+                                <p className="text-menu-desc">{props.data.MenuDescription}</p>
                                 <p className="text-menu-review">Chef's very special drumsticks tossed in a Rich Special Sauce</p>    
                             </li>
     )

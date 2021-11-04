@@ -4,18 +4,21 @@ import profile from '../images/profile_pic.jpg'
 import reviews from '../images/review.svg'
 import thumbs from '../images/thumbs.svg'
 import blackflag from '../images/black-flag.svg'
-function ResDetailReviews() {
+function ResDetailReviews(props) {
+
+    
+
     return (
         <div>
             <div className="content-review-section">
                             <div className="for-two-sections">
                                 <div className="left-profile-image">  
                                     <img className="profile-image" src={profile} alt="Avatar"/>
-                                    <p className="text-user-name">Nadeem</p>
+                                    <p className="text-user-name">{props.data.UserInformation.UserName}</p>
                                     <p className="text-city-name">New York</p>
                                     <div className="profile-review">
                                         <img alt="review-pic" className="review-image" src={reviews}/>
-                                        <p><span>1</span> review</p>
+                                        <p><span>{props.data.NoOfReviewOfUser}</span> review(s)</p>
                                     </div>
                                 </div>
                                 <div className="review-details">
@@ -64,9 +67,8 @@ function ResDetailReviews() {
                                     <div className="comment-section">
                                     <div className="paragraph-comment">
                                         <p rows="4" cols="50" name="comment" form="usrform">
-                                            Not bad, not great.
-                                            Given my experience at other locations, competition and prices, I expect better than mediocre.
-                                        </p>
+                                            {props.data.Feedback_Content}
+                                            </p>
                                         
                                     </div>
                                     </div>

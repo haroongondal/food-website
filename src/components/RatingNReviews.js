@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/RatingNReviews.css'
-function RatingNReviews() {
+function RatingNReviews(props) {
     return (
         <div>
             <div className="ratings-bars-rating-stars">
@@ -59,7 +59,7 @@ function RatingNReviews() {
                         </div>
                        
                         <div className="content-rating-stars">
-                            <h3 className="rating-number">4.5</h3>
+                            <h3 className="rating-number">{Math.round(props.data * 100) / 100}</h3>
                             <div className="rate-for-ratings-section">
                                 <input type="radio" id="star5" name="rate" value="5"/>
                                 <label for="star5" title="text">5 stars</label>

@@ -7,13 +7,18 @@ import ReviewHistory from '../components/ReviewHistory'
 import SectionFollower from '../components/SectionFollower'
 import SectionBookmark from '../components/SectionBookmark'
 import OrderHistory from '../components/OrderHistory'
+import useFetch from '../Utils/useFetch'
 
 function MyProfilePage() {
 
     const {path} = useRouteMatch();
+
+    const userInfo = useFetch(`https://api.masairapp.com/api/User/UserInformation?username=${localStorage.getItem("username")}`)
     return (
         <div>
-            <ProfileBanner/>
+            <ProfileBanner 
+             name = {userInfo.isPending ? "" : (userInfo.error ? userInfo.error : (userInfo.data && userInfo.data.FullName))}  
+            />
 
             <div className="container" style={{marginTop:"50px"}}>
 
