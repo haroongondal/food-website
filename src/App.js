@@ -13,6 +13,7 @@ import OutletsPage from './pages/OutletsPage';
 import UserManagementPage from './pages/UserManagementPage';
 import FeedbackPage from './pages/FeedbackPage';
 import BuissnessSignUP from './components/BuissnessSignUP';
+import ProtectedRoutes from './Utils/ProtectedRoutes';
 
 
 
@@ -46,9 +47,8 @@ function App() {
         </Route>
 
 
-        <Route path = "/Dashboard">
-        <MyProfilePage/> 
-        </Route>
+        <ProtectedRoutes path = "/Dashboard" component = {MyProfilePage}/>
+        
 
 
         <Route exact path = "/BusinessLandingPage">
