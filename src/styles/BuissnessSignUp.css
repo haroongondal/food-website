@@ -1,9 +1,13 @@
+.background-BS {
+  height: 400px;
+  background-color: black;
+}
 .Main-Sec-SignUp {
   width: 80%;
   margin: 0 auto;
   background: white;
-  margin-top: 70px;
-  border-radius: 60px 60px 0px 0px;
+  margin-top: -284px;
+  border-radius: 60px;
   text-align: center;
   box-shadow: 0 0 15px 1px rgb(0 0 0 / 40%);
 }
@@ -13,14 +17,60 @@
 }
 .heading-signup h3 {
   margin: 0;
+  font-weight: bold;
 }
-.Sec-BS{
-    padding: 10px 26px;
+.SecRow-BS {
+  padding: 10px 66px;
+}
+.Sec-BS {
+  padding: 10px 26px;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .input-BS {
   width: 100%;
   height: 100%;
-  padding: 8px 10px;
+  font-size: 14px;
+  padding: 12px 10px;
   border-radius: 5px;
-  border: 1px solid grey;
+  border: 1px solid #a7a7a7;
+}
+.text-detect-BS {
+  background: #2d2d2d;
+  border-radius: 4px;
+  position: absolute;
+  font-size: 0px;
+  line-height: 1;
+  right: 12px;
+  width: 120px;
+  height: 42px;
+  text-align: center;
+  margin: 0 auto;
+  display: grid;
+  align-content: center;
+}
+.text-detect-BS h6 {
+  margin: 0 auto;
+  color: white;
+}
+
+.black-btn {
+  width: 180px;
+  height: 46px;
+  background: #2d2d2d;
+  color: white;
+  border: white;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s linear;
+  font-family: Raleway;
+}
+.black-btn:hover {
+  background: white;
+  color: black;
+  border: 1px solid black;
+  box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.1);
+  transform: scale(1.008);
+  transition: all 0.3s ease;
 }

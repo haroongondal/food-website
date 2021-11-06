@@ -385,6 +385,7 @@ export default function RestaurentDetailsPS() {
                     allowFullScreen=""
                     aria-hidden="false"
                     tabIndex="0"
+                    title="Google Map"
                   />
                 </div>
               </div>

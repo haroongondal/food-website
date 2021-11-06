@@ -31,17 +31,10 @@ function ConsumerLandingPage() {
     <div className="App">
       <header className="App-header">
       <NavBar ShouldHideSearch = {true}/>
-      <DashboardConsumer></DashboardConsumer>
+      <DashboardConsumer/>
       <div className="marginMain">
       <HeadingHiFoodie></HeadingHiFoodie>
       <Carousel responsive={CarouselNearMe}>
-      <NearMe></NearMe>
-      <NearMe></NearMe>
-      <NearMe></NearMe>
-      <NearMe></NearMe>
-      <NearMe></NearMe>
-      <NearMe></NearMe>
-      <NearMe></NearMe>
       <NearMe></NearMe>
       <NearMe></NearMe>
       <NearMe></NearMe>
