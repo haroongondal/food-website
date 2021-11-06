@@ -5,8 +5,13 @@ import dishImage from "../images/food_plate.png";
 import MenuCategoryItem from "../components/MenuCategoryItem";
 import Modal from "react-responsive-modal";
 import PopupMenuItem from "../components/PopupMenuItem";
+import PopupMenu from "../components/PopupMenu";
+import CancelSvgIcon from "../components/CancelSvgIcon";
 
 function AdminMenuItem() {
+  // Popup Close-icon
+  const closeIcon = <CancelSvgIcon />;
+
   const [IsOpened, setOpened] = useState(false);
 
   const handdleToggle = () => setOpened(!IsOpened);
@@ -213,7 +218,7 @@ function AdminMenuItem() {
       >
         <div className={IsOpened ? "abc" : "accordion-content-menu-hide"}>
           <div className="align-content-menu">
-            {showResults ? (
+            {/* {showResults ? (
               <Results />
             ) : (
               <div className="add-category-btn" onClick={onClick}>
@@ -222,7 +227,11 @@ function AdminMenuItem() {
                 </button>
                 <span>Add Menu Category</span>
               </div>
-            )}
+            )} */}
+
+            <MenuCategoryItem />
+            <MenuCategoryItem />
+            <MenuCategoryItem />
             <div></div>
           </div>
         </div>
@@ -231,11 +240,17 @@ function AdminMenuItem() {
         open={isSignpShowing}
         onClose={closeSignupPop}
         center
+        closeIcon={closeIcon}
         styles={{
-          modal: { "margin-top": "80px", "max-width": "1000px", width: "100%" },
+          modal: {
+            "margin-top": "80px",
+            "max-width": "815px",
+            width: "100%",
+            padding: "0px",
+          },
         }}
       >
-        <PopupMenuItem />
+        <PopupMenu />
       </Modal>
     </div>
   );

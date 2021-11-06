@@ -4,8 +4,14 @@ import "../styles/MenuComponent.css";
 import Modal from "react-responsive-modal";
 import PopupMenu from "./PopupMenu";
 import PopupAddUser from "./PopupAddUser";
+import PopupMenuADD from "./PopupMenuADD";
+import CancelSvgIcon from "../components/CancelSvgIcon";
 
 function MenuComponent() {
+
+  // Popup Close-icon
+  const closeIcon = <CancelSvgIcon />;
+  
   const [isAddMenuShowing, setAddMenuShowing] = useState(false);
 
   const handleAddMenuPop = (e) => {
@@ -71,11 +77,12 @@ function MenuComponent() {
         open={isAddMenuShowing}
         onClose={closeAddMenuPop}
         center
+        closeIcon={closeIcon}
         styles={{
-          modal: { "margin-top": "80px", "max-width": "955px", width: "100%" },
+          modal: { "margin-top": "80px", "max-width": "815px", width: "100%",padding:"0px" },
         }}
       >
-        <PopupMenu />
+        <PopupMenuADD />
       </Modal>
 
       <Modal

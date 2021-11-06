@@ -14,7 +14,11 @@ function PopupMenu() {
     }
   }
   return (
-    <div className="align-content-popUp">
+    <div>
+
+<div className="title-popup">
+        <h6>Add Something</h6>
+      </div>
 
     {/* Edit-text-Item-Name */}
       <div className="ET-item-name">
@@ -36,12 +40,12 @@ function PopupMenu() {
       </div>
 
       {/* Text-Item-Name */}
-      <div className="border-back">
+      {/* <div className="border-back">
         <h6 className="item-name">Hara Bhara kehbab</h6>
-      </div>
+      </div> */}
 
       {/* Category */}
-      <div className="border-back">
+      {/* <div className="border-back">
         <div className="dropDown">
           <div className="dropDown-item">
             <span className="label-dropDown" style={{ marginRight: "105px" }}>
@@ -61,7 +65,7 @@ function PopupMenu() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Food-Type */}
       <div className="border-back">
@@ -283,7 +287,7 @@ function PopupMenu() {
       </div>
 
       {/* Menu Timings */}
-      <div className="border-back">
+      {/* <div className="border-back">
         <div className="dropDown">
           <div className="dropDown-item">
             <span className="label-dropDown" style={{ marginRight: "9px" }}>
@@ -361,7 +365,7 @@ function PopupMenu() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Menu Description */}
       <div className="border-back">
@@ -380,12 +384,12 @@ function PopupMenu() {
         </div>
       </div>
 
-      {/* Image and Video */}
+      {/* Image */}
       <div className="border-back">
         <div className="dropDown">
           <div className="dropDown-item">
             <span className="label-dropDown" style={{ marginRight: "-9px" }}>
-              Image and Video
+              Image
             </span>
           </div>
           <div className="image-video">
@@ -544,7 +548,7 @@ function PopupMenu() {
           <div>
 
             {/* Category */}
-            <div className="dropDown-item-Pricing">
+            {/* <div className="dropDown-item-Pricing">
               <span
                 className="label-dropDown"
                 style={{ marginRight: "16px", fontSize: "11px" }}
@@ -563,11 +567,11 @@ function PopupMenu() {
                   </span>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Service Info */}
             <div className="section-service-info">
-              <div className="dropDown-item-Pricing">
+              {/* <div className="dropDown-item-Pricing">
                 <span
                   className="label-dropDown"
                   style={{ marginRight: "16px", fontSize: "11px" }}
@@ -586,7 +590,7 @@ function PopupMenu() {
                     </span>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="dropDown-item-Pricing">
                 <span
                   className="label-dropDown"
