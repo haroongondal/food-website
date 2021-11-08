@@ -8,7 +8,7 @@ export default function PopupMenuADD() {
         <h6>Add Menu</h6>
       </div>
 
-      <div style={{textAlign:"-webkit-center"}}>
+      <div className="text-webkit-center">
       <div className="border-menu">
         <div className="col-md-12 Sec-menu mb-4">
           <div className="label-PS text-lg-start">Cuisines</div>

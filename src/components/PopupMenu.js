@@ -1,18 +1,26 @@
 import React from "react";
 import "../styles/PopupMenu.css";
 import arrow from "../images/down_arrow.svg";
+import addImage from "../images/add-image.png";
 import { useState } from "react/cjs/react.development";
 import EditSvgIcon from "./EditSvgIcon";
+import CancelSvgIcon from "./CancelSvgIcon";
+
+
 
 function PopupMenu() {
 
-  const [image, setImage] = useState(null)
+  const [image, setImage] = useState(addImage);
 
   const OnImageChange = (event) => {
     if(event.target.files && event.target.files[0]) {
       setImage(URL.createObjectURL(event.target.files[0]));
     }
   }
+
+  
+ 
+  
   return (
     <div>
 
@@ -393,8 +401,11 @@ function PopupMenu() {
             </span>
           </div>
           <div className="image-video">
-            <input className="btn-img-vid"  type="file" onChange={OnImageChange}/>
-            <img  src={image} alt="fileImage"/>
+            <div className="image-btn-menu">
+            <div className="image-menu"><img  src={image} alt="fileImage"/></div>
+            <input className="image-input-menu"  type="file" onChange={OnImageChange}/>
+            
+            </div>
               {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
