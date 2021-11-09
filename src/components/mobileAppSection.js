@@ -36,7 +36,7 @@ export default function MobileAppSection() {
     </div>
  </div>
 
- <div style={{marginTop:"30px"}}>
+ <div className="googlePlayBtn">
      <a href="#abc">
          <img alt="google-play-icon" src={googlePlayStoreImg}/>
      </a>
@@ -47,7 +47,7 @@ export default function MobileAppSection() {
 {/* 2-section */}
 
 <div style={{marginTop:"20px"}}>
-<img alt="app-screenshot" src={ss}/>
+<img className="app-screenshot" alt="app-screenshot" src={ss}/>
 </div>
 </div>
                 

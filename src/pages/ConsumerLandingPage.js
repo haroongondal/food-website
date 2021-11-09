@@ -17,6 +17,8 @@ import HeadingWhyBook from '../components/Section_Why_Book';
 import useFetch from '../Utils/useFetch';
 import Skeleton from 'react-loading-skeleton';
 import useGeoLocation from '../Utils/useGeoLocation';
+import BottomNavBar from '../components/BottomNavBar';
+import MobileTopNavBar from '../components/MobileTopNavBar';
 
 function ConsumerLandingPage() {
  
@@ -30,11 +32,14 @@ function ConsumerLandingPage() {
   return (
     <div className="App">
       <header className="App-header">
+      <MobileTopNavBar/>
       <NavBar ShouldHideSearch = {true}/>
       <DashboardConsumer/>
       <div className="marginMain">
       <HeadingHiFoodie></HeadingHiFoodie>
       <Carousel responsive={CarouselNearMe}>
+      <NearMe></NearMe>
+      <NearMe></NearMe>
       <NearMe></NearMe>
       <NearMe></NearMe>
       <NearMe></NearMe>
@@ -80,6 +85,7 @@ function ConsumerLandingPage() {
       </div>
       
       <MobileAppSection></MobileAppSection>
+      <BottomNavBar/>
       <Footer></Footer>
       </header>
     </div>
