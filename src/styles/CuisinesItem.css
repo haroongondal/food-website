@@ -1,51 +1,75 @@
-.box-cuisines{
+.box-cuisines {
+  width: 165px;
+  box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);
+  border-radius: 40px;
+  margin: 10px;
+  margin-top: 70px;
+  background-color: white;
+  cursor: pointer;
+}
+.box-cuisines:hover {
+  box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.1);
+  transform: scale(1.008);
+  transition: all 0.3s ease;
+}
+.slide-img-cuisines {
+  height: 90px;
+  position: relative;
+}
+.image-cuisines {
+  width: 80%;
+  margin-top: -50px;
+  margin-left: 12px;
+}
+.detail-box-cuisines {
+  width: 100%;
+  align-items: center;
+  padding: 10px 20px;
+  padding-top: 1px;
+  box-sizing: border-box;
+}
+.type-cuisines {
+  display: flex;
+  flex-direction: column;
+}
+.text-cuisines {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #222222;
+  margin: 5px 0px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-family: Raleway;
+}
+.text-cuisines:hover {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (min-width: 320px) {
+  .box-cuisines {
+    width: 165px;
+    box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);
+    border-radius: 40px;
+    margin: 0px;
+    margin-bottom: 10px;
+    margin-top: 70px;
+    background-color: white;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 992px) {
+  .box-cuisines {
     width: 165px;
     box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);
     border-radius: 40px;
     margin: 10px;
     margin-top: 70px;
     background-color: white;
-    cursor:pointer;
-}
-.box-cuisines:hover{
-    box-shadow: 2px 2px 18px rgba(0,0,0,0.10);
-    transform: scale(1.008);
-    transition: all  0.3s ease;
-}
-.slide-img-cuisines{
-    height: 90px;
-    position: relative;
-}
-.image-cuisines{
-    width: 80%;
-    margin-top: -50px;
-    margin-left: 12px;
-}
-.detail-box-cuisines{
-    width: 100%;
-	align-items: center;
-	padding: 10px 20px;
-    padding-top: 1px;
-	box-sizing: border-box;
-}
-.type-cuisines{
-    display: flex;
-	flex-direction: column;
-}
-.text-cuisines{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #222222;
-    margin: 5px 0px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-decoration: none;
-    font-size: 15px;
-    margin-bottom: 10px;
-    font-family:Raleway;
-}
-.text-cuisines:hover{
-    text-decoration: none;
-    color: black;
+    cursor: pointer;
+  }
 }
