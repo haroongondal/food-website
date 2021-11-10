@@ -29,7 +29,7 @@ console.log(data.RestaurantName)
 
                     {/* rating */}
                 <div className="rating">	
-                    <a href="#abc" className="restaurent-rating">4.5</a>	
+                    <a href="#abc" className="restaurent-rating">{Math.round(data.AverageRating * 100) / 100}</a>	
                     </div>
                     </div>
 

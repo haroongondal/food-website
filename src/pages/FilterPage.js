@@ -26,6 +26,7 @@ function FilterPage() {
     const [cusineIds, setCusineIds] = useState([])
     const [featureIds, setFeatureIds] = useState([])
     const {data, isPending, error} = useFetch(url);
+    const [sort, setSort] = useState("-1");
         
         const handleFilters = (isChecked, filterType, id) => {
 
@@ -72,32 +73,7 @@ function FilterPage() {
         }, [cusineIds, featureIds, tagIds])
 
         const handleSorting = (sort) => {
-        
-        if (!isPending && !error && data) {
-            let n = data.ListOfRestaurant.length
-            if (n > 1) {
-               
-            if (Types.SortType.Popularity === sort) {
-                console.log("sorttttttttttttttttttttttt => " + sort)
-                data.ListOfRestaurant.sort((a, b) => (b.CostOfTwo - a.CostOfTwo))
-            }
-        
-            if (Types.SortType.Ratings === sort) {
-                console.log("sorttttttttttttttttttttttt => " + sort)
-                data.ListOfRestaurant.sort((a, b) => (b.CostOfTwo - a.CostOfTwo))
-            }
-
-            if (Types.SortType.HighPrice === sort) {
-                console.log("sorttttttttttttttttttttttt => " + sort)
-                data.ListOfRestaurant.sort((a, b) => (b.CostOfTwo - a.CostOfTwo)) 
-            }
-         
-            if (Types.SortType.LowPrice === sort) {
-                console.log("sorttttttttttttttttttttttt => " + sort)
-                data.ListOfRestaurant.sort((a, b) => (a.CostOfTwo - b.CostOfTwo))
-            }
-        }
-        }
+       setSort(sort)
     }
       
     return (
@@ -138,7 +114,19 @@ function FilterPage() {
                     <div className="align-boxes">
                     {isPending && <div><Skeleton width={200} height={250}orientation={"horizontal"}/></div>}
                     {error && <div>{error}</div>}
-                    {data && data.ListOfRestaurant.map((rest) => <FilterPageItem key = {rest.Id} data = {rest}/>)}
+                    {sort === Types.SortType.HighPrice && data && data.ListOfRestaurant.sort((a, b) => 
+                    (b.CostOfTwo - a.CostOfTwo)).map((rest) => <FilterPageItem key = {rest.Id} data = {rest}/>) }
+
+                    {sort === Types.SortType.LowPrice && data && data.ListOfRestaurant.sort((a, b) => 
+                    (a.CostOfTwo - b.CostOfTwo)).map((rest) => <FilterPageItem key = {rest.Id} data = {rest}/>) }
+
+                    {sort === Types.SortType.Popularity && data && data.ListOfRestaurant.sort((a, b) =>
+                    (b.NoOfOrders - a.NoOfOrders)).map((rest) => <FilterPageItem key = {rest.Id} data = {rest}/>) }
+
+                    {sort === Types.SortType.Ratings && data && data.ListOfRestaurant.sort((a, b) => 
+                    (b.AverageRating - a.AverageRating)).map((rest) => <FilterPageItem key = {rest.Id} data = {rest}/>) }
+                    
+                    {sort === "-1" && data && data.ListOfRestaurant.map((rest) => <FilterPageItem key = {rest.Id} data = {rest}/>)}
                     </div>
                     </div>
                     <hr className="grey"/>
