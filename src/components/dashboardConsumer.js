@@ -10,6 +10,7 @@ export default function DashboardConsumer() {
       <div className="dashboard_image">
         <img alt="dashboard_image" src={dashboardImage} />
 
+        <div className="Sec-Crave-Search">
         <div className="div_Its_now_safe_to">
           <h1 className="heading_Its_now_safe_to">
             It's Now Safe To <span className="crave">Crave!</span>
@@ -33,7 +34,19 @@ export default function DashboardConsumer() {
               </span>
             </button>
           </div>
-          <SearchBoxItem/>
+          <div className="box-searchBar">
+            <ul class="align-box-searchBar">
+            <SearchBoxItem/>
+            <SearchBoxItem/>
+            <SearchBoxItem/>
+            <SearchBoxItem/>
+            <SearchBoxItem/>
+            <SearchBoxItem/>
+            <SearchBoxItem/>
+            <SearchBoxItem/>
+            </ul>
+            </div>
+        </div>
         </div>
       </div>
     </div>

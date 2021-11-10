@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/Pagination.css'
 function Pagination() {
     return ( 
-        <div>
+        <div className="Pagination">
             <nav style={{fontFamily: "monospace" ,display: "flex", justifyContent: "space-between"}}>
 
                         <ul className="pagination bottom mb-5 mt-5 decoration">

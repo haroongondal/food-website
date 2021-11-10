@@ -1,8 +1,30 @@
 import React from "react";
+import { useState } from "react";
 import '../styles/MobileTopNavBar.css'
 import profile from '../images/profile_pic.jpg'
+import Modal from "react-responsive-modal";
+import PopupMenuADD from "./PopupMenuADD";
+import CancelSvgIcon from "../components/CancelSvgIcon";
+import PopupSearch from "./PopupSearch";
 
 export default function MobileTopNavBar() {
+
+  const [open, setOpen] = React.useState(false);
+
+  // Popup Close-icon
+  const closeIcon = <CancelSvgIcon />;
+  
+  const [isSearchShowing, setSearchShowing] = useState(false);
+
+  const handleSearchPop = (e) => {
+    e.preventDefault();
+    setSearchShowing(true);
+  };
+
+  const closeSearchPop = () => {
+    setSearchShowing(false);
+  };
+
   return (
     <div>
       <div class="topNavBar-M">
@@ -10,23 +32,7 @@ export default function MobileTopNavBar() {
           <div class="upSec-topNavBar-M">
             <div class="location-topNavBar-M">
               <span>
-                Bangalore
-                <i>
-                  <svg
-                    width="8"
-                    height="5"
-                    viewBox="0 0 8 5"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 1L4 4L7 1"
-                      stroke="white"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                </i>
+                Lahore
                 <i class="_3sKP_">
                   <svg
                     width="8"
@@ -142,7 +148,7 @@ export default function MobileTopNavBar() {
               </div>
             </div>
           </div>
-          <div class="search-topNavBar-M">
+          <div class="search-topNavBar-M" onClick={handleSearchPop}>
             <i>
               <svg
                 width="17"
@@ -171,6 +177,22 @@ export default function MobileTopNavBar() {
           </div>
         </div>
       </div>
+      <Modal
+        open={isSearchShowing}
+        onClose={closeSearchPop}
+        center
+        classNames={{
+          modalAnimationIn: 'customEnterModalAnimation',
+          modalAnimationOut: 'customLeaveModalAnimation',
+        }}
+        animationDuration={1200}
+        closeIcon={closeIcon}
+        styles={{
+          modal: { margin: "0px",padding:"0px", width: "100%", height: "100%"},
+        }}
+      >
+        <PopupSearch />
+      </Modal>
     </div>
   );
 }

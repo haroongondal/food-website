@@ -84,7 +84,7 @@ function showFilters(dt) {
 
     return (
         
-<div className="container" style={{display: "contents"}}>
+<div className="container D-contents">
 
 <button className= { IsOpened ? "accordion is-open" : "accordion"} style={{outline: "0px auto -webkit-focus-ring-color"}} onClick={handdleToggle}>
     {filter_name}

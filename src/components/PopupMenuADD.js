@@ -34,6 +34,20 @@ export default function PopupMenuADD() {
           </div>
         </div>
       </div>
+
+      {/* Buttons */}
+      <div className="row m-auto">
+        <div className="col-md-12 d-flex mb-2 pr-0 justify-content-center">
+          <button
+            type="submit"
+            className="blue-btn"
+            style={{ marginRight: "20px" }}
+          >
+            Save
+          </button>
+          <button className="green-btn">Cancel</button>
+        </div>
+      </div>
       </div>
     
   );
