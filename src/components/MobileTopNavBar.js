@@ -9,7 +9,7 @@ import PopupSearch from "./PopupSearch";
 
 export default function MobileTopNavBar() {
 
-  const [open, setOpen] = React.useState(false);
+ 
 
   // Popup Close-icon
   const closeIcon = <CancelSvgIcon />;
@@ -27,13 +27,13 @@ export default function MobileTopNavBar() {
 
   return (
     <div>
-      <div class="topNavBar-M">
-        <div class="align-topNavBar-M">
-          <div class="upSec-topNavBar-M">
-            <div class="location-topNavBar-M">
+      <div className="topNavBar-M">
+        <div className="align-topNavBar-M">
+          <div className="upSec-topNavBar-M">
+            <div className="location-topNavBar-M">
               <span>
                 Lahore
-                <i class="_3sKP_">
+                <i className="_3sKP_">
                   <svg
                     width="8"
                     height="5"
@@ -51,8 +51,8 @@ export default function MobileTopNavBar() {
                 </i>
               </span>
             </div>
-            <div class="rightSec-topNavBar-M">
-              <div class="qrCode-topNavBar-M">
+            <div className="rightSec-topNavBar-M">
+              <div className="qrCode-topNavBar-M">
                 <a href="/scan_qr_to_pay" aria-label="Scan QR">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -143,12 +143,12 @@ export default function MobileTopNavBar() {
                   </svg>
                 </a>
               </div>
-              <div class="profileImage-topNavBar-M">
+              <div className="profileImage-topNavBar-M">
                 <img alt="user-pic" src={profile} />
               </div>
             </div>
           </div>
-          <div class="search-topNavBar-M" onClick={handleSearchPop}>
+          <div className="search-topNavBar-M" onClick={handleSearchPop}>
             <i>
               <svg
                 width="17"
@@ -181,7 +181,7 @@ export default function MobileTopNavBar() {
         open={isSearchShowing}
         onClose={closeSearchPop}
         center
-        classNames={{
+        classNameNames={{
           modalAnimationIn: 'customEnterModalAnimation',
           modalAnimationOut: 'customLeaveModalAnimation',
         }}
