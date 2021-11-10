@@ -5,38 +5,31 @@ import addImage from "../images/add-image.png";
 import { useState } from "react/cjs/react.development";
 import EditSvgIcon from "./EditSvgIcon";
 import CancelSvgIcon from "./CancelSvgIcon";
-import ImageUpload from 'image-upload-react'
+import ImageUpload from "image-upload-react";
 import { findByLabelText } from "@testing-library/dom";
 
-
-
 function PopupMenu() {
-
   const [image, setImage] = useState(addImage);
 
   const OnImageChange = (event) => {
-    if(event.target.files && event.target.files[0]) {
+    if (event.target.files && event.target.files[0]) {
       setImage(URL.createObjectURL(event.target.files[0]));
     }
-  }
+  };
 
-  const [imageSrc, setImageSrc] = useState()
+  const [imageSrc, setImageSrc] = useState();
 
   const handleImageSelect = (e) => {
-    setImageSrc(URL.createObjectURL(e.target.files[0]))
-  }
- 
-  
+    setImageSrc(URL.createObjectURL(e.target.files[0]));
+  };
+
   return (
     <div>
-
-<div className="title-popup">
+      <div className="title-popup">
         <h6>Add Something</h6>
       </div>
 
-      
-
-    {/* Edit-text-Item-Name */}
+      {/* Edit-text-Item-Name */}
       <div className="ET-item-name">
         <div className="border-back">
           <div className="dropDown">
@@ -409,27 +402,31 @@ function PopupMenu() {
             </span>
           </div>
           <div className="image-video">
-          
             <div className="image-btn-menu">
-            <div className="image-menu"><img  src={image} alt="fileImage"/></div>
-            <input className="image-input-menu"  type="file" onChange={OnImageChange}/>
-            
+              <div className="image-menu">
+                <img src={image} alt="fileImage" />
+              </div>
+              <input
+                className="image-input-menu"
+                type="file"
+                onChange={OnImageChange}
+              />
             </div>
 
             <ImageUpload
-      handleImageSelect={handleImageSelect}
-      imageSrc={imageSrc}
-      setImageSrc={setImageSrc}
-      style={{
-        width: 170,
-        height: 110,
-        background: 'grey',
-        display: 'flex',
-        marginTop: '0px',
-        borderRadius: '5px'
-      }}
-    />
-              {/* <svg
+              handleImageSelect={handleImageSelect}
+              imageSrc={imageSrc}
+              setImageSrc={setImageSrc}
+              style={{
+                width: 170,
+                height: 110,
+                background: "grey",
+                display: "flex",
+                marginTop: "0px",
+                borderRadius: "5px",
+              }}
+            />
+            {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
                 y="0px"
@@ -461,7 +458,6 @@ function PopupMenu() {
                   </g>
                 </g>
               </svg> */}
-            
 
             <button className="btn-img-vid">
               <svg
@@ -510,7 +506,6 @@ function PopupMenu() {
             </span>
           </div>
           <div>
-
             {/* Category */}
             {/* <div className="dropDown-item-Pricing">
               <span
@@ -671,57 +666,57 @@ function PopupMenu() {
                 Drinks
               </span>
               <div className="align-content-drinks">
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
               </div>
             </div>
 
@@ -734,18 +729,32 @@ function PopupMenu() {
                 Spice Level
               </span>
               <div className="align-content-drinks">
-              <div className="content-dropDown">
-                <button className="drinks-btn">Medium Spicy</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Mild</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Very Spicy</button>
-              </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Medium Spicy</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Mild</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Very Spicy</button>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Buttons */}
+      <div className="row m-auto">
+        <div className="col-md-12 d-flex mb-2 pr-0 justify-content-center">
+          <button
+            type="submit"
+            className="blue-btn"
+            style={{ marginRight: "20px" }}
+          >
+            Save
+          </button>
+          <button className="green-btn">Cancel</button>
         </div>
       </div>
     </div>
