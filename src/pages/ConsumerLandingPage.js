@@ -17,6 +17,9 @@ import HeadingWhyBook from '../components/Section_Why_Book';
 import useFetch from '../Utils/useFetch';
 import Skeleton from 'react-loading-skeleton';
 import useGeoLocation from '../Utils/useGeoLocation';
+import BottomNavBar from '../components/BottomNavBar';
+import MobileTopNavBar from '../components/MobileTopNavBar';
+import WhyBookItem from '../components/WhyBookItem';
 
 function ConsumerLandingPage() {
  
@@ -30,16 +33,12 @@ function ConsumerLandingPage() {
   return (
     <div className="App">
       <header className="App-header">
+      <MobileTopNavBar/>
       <NavBar ShouldHideSearch = {true}/>
-      <DashboardConsumer></DashboardConsumer>
+      <DashboardConsumer/>
       <div className="marginMain">
       <HeadingHiFoodie></HeadingHiFoodie>
-      <Carousel responsive={CarouselNearMe}>
-      <NearMe></NearMe>
-      <NearMe></NearMe>
-      <NearMe></NearMe>
-      <NearMe></NearMe>
-      <NearMe></NearMe>
+      <Carousel responsive={CarouselNearMe} removeArrowOnDeviceType={["tablet", "mobile"]} partialVisible={true}>
       <NearMe></NearMe>
       <NearMe></NearMe>
       <NearMe></NearMe>
@@ -50,7 +49,7 @@ function ConsumerLandingPage() {
 
       <HeadingRestaurentNear heading = {"Restaurants Near You"}/>
 
-      <Carousel responsive={CarouselRestaurent}>
+      <Carousel responsive={CarouselRestaurent} removeArrowOnDeviceType={["tablet", "mobile"]} partialVisible={true}>
         {restaurants.isPending && <div><Skeleton width={200} height={250}/></div>}
         {restaurants.error && <div>{restaurants.error}</div>}
         {restaurants.data && restaurants.data.map((r) => <RestaurentItem key = {r.Id} data = {r}/>)}
@@ -60,15 +59,15 @@ function ConsumerLandingPage() {
 
       <HeadingRestaurentNear heading = {"Featured Restaurants"}/>
 
-      <Carousel responsive={CarouselRestaurent}>
+      <Carousel responsive={CarouselRestaurent} removeArrowOnDeviceType={["tablet", "mobile"]} partialVisible={true}>
         {restaurants.isPending && <div><Skeleton width={200} height={250}/></div>}
         {restaurants.error && <div>{restaurants.error}</div>}
         {restaurants.data && restaurants.data.filter((e) => e.IsFeature).map((r) => <RestaurentItem key = {r.Id} data = {r}/>)}
       </Carousel>
 
-      <HeadingRestaurentNear heading = {"Popular Cuisines"}/>
+      <HeadingRestaurentNear heading = {"Popular Cuisines"}/ >
 
-      <Carousel responsive={CarouselCuisines}>
+      <Carousel responsive={CarouselCuisines} removeArrowOnDeviceType={["tablet", "mobile"]} partialVisible={true}>
         {popularCusines.isPending && <div><Skeleton width={100} height={150}/></div>}
         {popularCusines.error && <div>{popularCusines.error}</div>}
         {popularCusines.data && popularCusines.data.map((c) => <CuisinesItem key = {c.Id} data = {c}/>)}
@@ -76,7 +75,7 @@ function ConsumerLandingPage() {
       
       <HeadingRestaurentNear heading = {"Popular Restaurants"}/>
 
-      <Carousel responsive={CarouselRestaurent}>
+      <Carousel responsive={CarouselRestaurent} removeArrowOnDeviceType={["tablet", "mobile"]} partialVisible={true}>
         {restaurants.isPending && <div><Skeleton width={250} height={258}/></div>}
         {restaurants.error && <div>{restaurants.error}</div>}
         {restaurants.data && restaurants.data.sort((e, d) => d.NoOfOrders - e.NoOfOrders).map((r) => <RestaurentItem key = {r.Id} data = {r}/>)}
@@ -85,8 +84,11 @@ function ConsumerLandingPage() {
       <HeadingWhyBook/>
 
       </div>
+
+      <WhyBookItem/>
       
       <MobileAppSection></MobileAppSection>
+      <BottomNavBar/>
       <Footer></Footer>
       </header>
     </div>

@@ -1,22 +1,35 @@
 import React from "react";
 import "../styles/PopupMenu.css";
 import arrow from "../images/down_arrow.svg";
+import addImage from "../images/add-image.png";
 import { useState } from "react/cjs/react.development";
 import EditSvgIcon from "./EditSvgIcon";
+import CancelSvgIcon from "./CancelSvgIcon";
+import ImageUpload from "image-upload-react";
+import { findByLabelText } from "@testing-library/dom";
 
 function PopupMenu() {
-
-  const [image, setImage] = useState(null)
+  const [image, setImage] = useState(addImage);
 
   const OnImageChange = (event) => {
-    if(event.target.files && event.target.files[0]) {
+    if (event.target.files && event.target.files[0]) {
       setImage(URL.createObjectURL(event.target.files[0]));
     }
-  }
-  return (
-    <div className="align-content-popUp">
+  };
 
-    {/* Edit-text-Item-Name */}
+  const [imageSrc, setImageSrc] = useState();
+
+  const handleImageSelect = (e) => {
+    setImageSrc(URL.createObjectURL(e.target.files[0]));
+  };
+
+  return (
+    <div>
+      <div className="title-popup">
+        <h6>Add Something</h6>
+      </div>
+
+      {/* Edit-text-Item-Name */}
       <div className="ET-item-name">
         <div className="border-back">
           <div className="dropDown">
@@ -36,12 +49,12 @@ function PopupMenu() {
       </div>
 
       {/* Text-Item-Name */}
-      <div className="border-back">
+      {/* <div className="border-back">
         <h6 className="item-name">Hara Bhara kehbab</h6>
-      </div>
+      </div> */}
 
       {/* Category */}
-      <div className="border-back">
+      {/* <div className="border-back">
         <div className="dropDown">
           <div className="dropDown-item">
             <span className="label-dropDown" style={{ marginRight: "105px" }}>
@@ -61,7 +74,7 @@ function PopupMenu() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Food-Type */}
       <div className="border-back">
@@ -283,7 +296,7 @@ function PopupMenu() {
       </div>
 
       {/* Menu Timings */}
-      <div className="border-back">
+      {/* <div className="border-back">
         <div className="dropDown">
           <div className="dropDown-item">
             <span className="label-dropDown" style={{ marginRight: "9px" }}>
@@ -361,7 +374,7 @@ function PopupMenu() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Menu Description */}
       <div className="border-back">
@@ -380,18 +393,40 @@ function PopupMenu() {
         </div>
       </div>
 
-      {/* Image and Video */}
+      {/* Image */}
       <div className="border-back">
         <div className="dropDown">
           <div className="dropDown-item">
             <span className="label-dropDown" style={{ marginRight: "-9px" }}>
-              Image and Video
+              Image
             </span>
           </div>
           <div className="image-video">
-            <input className="btn-img-vid"  type="file" onChange={OnImageChange}/>
-            <img  src={image} alt="fileImage"/>
-              {/* <svg
+            <div className="image-btn-menu">
+              <div className="image-menu">
+                <img src={image} alt="fileImage" />
+              </div>
+              <input
+                className="image-input-menu"
+                type="file"
+                onChange={OnImageChange}
+              />
+            </div>
+
+            <ImageUpload
+              handleImageSelect={handleImageSelect}
+              imageSrc={imageSrc}
+              setImageSrc={setImageSrc}
+              style={{
+                width: 170,
+                height: 110,
+                background: "grey",
+                display: "flex",
+                marginTop: "0px",
+                borderRadius: "5px",
+              }}
+            />
+            {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
                 y="0px"
@@ -423,7 +458,6 @@ function PopupMenu() {
                   </g>
                 </g>
               </svg> */}
-            
 
             <button className="btn-img-vid">
               <svg
@@ -455,76 +489,6 @@ function PopupMenu() {
                   <path d="M0,226v-226h226v226z" fill="none"></path>
                   <g fill="#06386c">
                     <path d="M37.66667,37.66667c-10.29301,0 -18.83333,8.54033 -18.83333,18.83333v113c0,10.29301 8.54033,18.83333 18.83333,18.83333h75.33333v-18.83333h-75.33333v-113h150.66667v56.5h18.83333v-56.5c0,-10.29301 -8.54032,-18.83333 -18.83333,-18.83333zM136.54167,103.58333l-32.95833,37.66667l-23.54167,-23.54167l-25.63835,32.95833h96.26335v-28.25zM169.5,131.83333v37.66667h-37.66667v18.83333h37.66667v37.66667h18.83333v-37.66667h37.66667v-18.83333h-37.66667v-37.66667z"></path>
-                  </g>
-                </g>
-              </svg>
-            </button>
-
-            <button className="btn-img-vid">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="96"
-                height="96"
-                viewBox="0 0 226 226"
-                style={{ fill: "#000000" }}
-                className="svg-img-vid"
-              >
-                <g
-                  fill="none"
-                  fill-rule="nonzero"
-                  stroke="none"
-                  stroke-width="1"
-                  stroke-linecap="butt"
-                  stroke-linejoin="miter"
-                  stroke-miterlimit="10"
-                  stroke-dasharray=""
-                  stroke-dashoffset="0"
-                  font-family="none"
-                  font-weight="none"
-                  font-size="none"
-                  text-anchor="none"
-                  style={{ mixBlendMode: "normal" }}
-                >
-                  <path d="M0,226v-226h226v226z" fill="none"></path>
-                  <g fill="#06386c">
-                    <path d="M37.66667,37.66667c-10.29301,0 -18.83333,8.54033 -18.83333,18.83333v113c0,10.29301 8.54033,18.83333 18.83333,18.83333h75.33333v-18.83333h-75.33333v-113h150.66667v56.5h18.83333v-56.5c0,-10.29301 -8.54032,-18.83333 -18.83333,-18.83333zM136.54167,103.58333l-32.95833,37.66667l-23.54167,-23.54167l-25.63835,32.95833h96.26335v-28.25zM169.5,131.83333v37.66667h-37.66667v18.83333h37.66667v37.66667h18.83333v-37.66667h37.66667v-18.83333h-37.66667v-37.66667z"></path>
-                  </g>
-                </g>
-              </svg>
-            </button>
-
-            <button className="btn-img-vid">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="96"
-                height="96"
-                viewBox="0 0 172 172"
-                style={{ fill: "#000000" }}
-                className="svg-img-vid"
-              >
-                <g
-                  fill="none"
-                  fill-rule="nonzero"
-                  stroke="none"
-                  stroke-width="1"
-                  stroke-linecap="butt"
-                  stroke-linejoin="miter"
-                  stroke-miterlimit="10"
-                  stroke-dasharray=""
-                  stroke-dashoffset="0"
-                  font-family="none"
-                  font-weight="none"
-                  font-size="none"
-                  text-anchor="none"
-                  style={{ mixBlendMode: "normal" }}
-                >
-                  <path d="M0,172v-172h172v172z" fill="none"></path>
-                  <g fill="#06386c">
-                    <path d="M30.45833,25.08333c-10.82086,0 -19.70833,8.88748 -19.70833,19.70833v82.41667c0,10.82086 8.88748,19.70833 19.70833,19.70833h111.08333c10.82086,0 19.70833,-8.88748 19.70833,-19.70833v-82.41667c0,-10.82086 -8.88748,-19.70833 -19.70833,-19.70833zM30.45833,35.83333h111.08333c5.01031,0 8.95833,3.94802 8.95833,8.95833v82.41667c0,5.01031 -3.94802,8.95833 -8.95833,8.95833h-111.08333c-5.01031,0 -8.95833,-3.94802 -8.95833,-8.95833v-82.41667c0,-5.01031 3.94802,-8.95833 8.95833,-8.95833zM75.15902,60.91667c-1.22774,0.01568 -2.44842,0.34361 -3.54134,0.98682c-2.18942,1.29 -3.53434,3.64285 -3.53434,6.17985v35.83333c0,2.537 1.34493,4.88985 3.53434,6.17985c1.118,0.65933 2.37457,0.98682 3.63232,0.98682c1.19683,0 2.39619,-0.30441 3.47835,-0.90283l32.25,-17.91667c2.27542,-1.26492 3.68831,-3.65875 3.68831,-6.26384c0,-2.60508 -1.4129,-4.99892 -3.68831,-6.26384l-32.25,-17.91667c-1.10904,-0.61633 -2.3416,-0.91851 -3.56934,-0.90283z"></path>
                   </g>
                 </g>
               </svg>
@@ -542,9 +506,8 @@ function PopupMenu() {
             </span>
           </div>
           <div>
-
             {/* Category */}
-            <div className="dropDown-item-Pricing">
+            {/* <div className="dropDown-item-Pricing">
               <span
                 className="label-dropDown"
                 style={{ marginRight: "16px", fontSize: "11px" }}
@@ -563,11 +526,11 @@ function PopupMenu() {
                   </span>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Service Info */}
             <div className="section-service-info">
-              <div className="dropDown-item-Pricing">
+              {/* <div className="dropDown-item-Pricing">
                 <span
                   className="label-dropDown"
                   style={{ marginRight: "16px", fontSize: "11px" }}
@@ -586,7 +549,7 @@ function PopupMenu() {
                     </span>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="dropDown-item-Pricing">
                 <span
                   className="label-dropDown"
@@ -703,57 +666,57 @@ function PopupMenu() {
                 Drinks
               </span>
               <div className="align-content-drinks">
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Coke</button>
-              </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Coke</button>
+                </div>
               </div>
             </div>
 
@@ -766,18 +729,32 @@ function PopupMenu() {
                 Spice Level
               </span>
               <div className="align-content-drinks">
-              <div className="content-dropDown">
-                <button className="drinks-btn">Medium Spicy</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Mild</button>
-              </div>
-              <div className="content-dropDown">
-                <button className="drinks-btn">Very Spicy</button>
-              </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Medium Spicy</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Mild</button>
+                </div>
+                <div className="content-dropDown">
+                  <button className="drinks-btn">Very Spicy</button>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Buttons */}
+      <div className="row m-auto">
+        <div className="col-md-12 d-flex mb-2 pr-0 justify-content-center">
+          <button
+            type="submit"
+            className="blue-btn"
+            style={{ marginRight: "20px" }}
+          >
+            Save
+          </button>
+          <button className="green-btn">Cancel</button>
         </div>
       </div>
     </div>

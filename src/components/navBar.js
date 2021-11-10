@@ -8,6 +8,7 @@ import SignUp from './SignUp';
 import Modal from 'react-responsive-modal';
 import Login from './Login';
 import { Link } from 'react-router-dom';
+import SearchBoxItem from './SearchBoxItem';
 
 
 export default function NavBar(props) {
@@ -109,6 +110,7 @@ window.addEventListener('scroll', showSearchBar)
 
        </button>
       </div>
+      
     </div>
 
 

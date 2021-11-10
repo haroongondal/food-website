@@ -12,16 +12,40 @@ import MenuDashboard from './pages/MenuDashboard';
 import OutletsPage from './pages/OutletsPage';
 import UserManagementPage from './pages/UserManagementPage';
 import FeedbackPage from './pages/FeedbackPage';
-import BuissnessSignUP from './components/BusinessSignup';
+import BusinessSignup from './components/BusinessSignup';
 import ProtectedRoutes from './Utils/ProtectedRoutes';
 import ProfileSettings from './pages/ProfileSettings';
+import MediaQueryReact from 'media-query-react';
 
 
 
 function App() {
 
+  // pass screenSize object with custom device name and width.
+  const screenSize = {
+    mobile: { // custom device name
+      minWidth: 320,
+      maxWidth: 480,
+    },
+    mobileLandscape: {
+      minWidth: 481,
+      maxWidth: 767,
+    },
+    tablet: {
+      minWidth: 768,
+      maxWidth: 1024,
+    },
+    desktop: {
+      minWidth: 1025,
+      maxWidth: 2500,
+    },
+  };
+
   return (
     <div>
+
+<MediaQueryReact mediaQueries={screenSize}>
+        
       
     <Router>
     
@@ -90,6 +114,9 @@ function App() {
     
     
     </Router>
+
+    
+      </MediaQueryReact>
     
     </div>
   );

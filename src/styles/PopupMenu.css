@@ -3,10 +3,20 @@
 }
 .border-back {
   background: rgb(6 56 108 / 10%);
-  margin: 20px 0px;
+  margin: 20px 26px;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 2px 4px rgb(0 0 0 / 15%);
+}
+.border-menu {
+  margin: 20px 26px;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 2px 2px 18px rgb(0 0 0 / 10%);
+  width: 54%;
+}
+.Sec-menu {
+  margin-bottom: 0px;
 }
 .border-dropDown-add-menu {
   width: 17rem;
@@ -264,6 +274,31 @@ input[type="checkbox"] {
   grid-gap: 17px;
   flex-wrap: wrap;
   align-items: center;
+}
+.image-btn-menu {
+  position: relative;
+}
+.image-menu {
+  position: relative;
+  background: rgb(6 56 108 / 10%);
+  width: 170px;
+  height: 98px;
+  text-align: center;
+  border-radius: 5px;
+}
+.image-menu img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.image-input-menu {
+  padding: 0px;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }
 .btn-img-vid {
   background: rgb(6 56 108 / 10%);

@@ -29,7 +29,9 @@
     transform: scale(1.008);
     transition: all  0.3s ease;
   }
-  
+  .D-contents{
+    display: contents !important;
+  }
   .accordion-content {
     background-color: white;
     border-left: 1px solid whitesmoke;

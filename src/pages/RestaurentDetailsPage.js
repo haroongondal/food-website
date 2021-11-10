@@ -8,6 +8,7 @@ import ReservationItem from '../components/Reservation_Item'
 import SecResAbout from '../components/SecResAbout'
 import SecResDetails from '../components/SecResDetails'
 import SecResLike from '../components/SecResLike'
+import SecResListing from '../components/SecResListing'
 import SecResMenu from '../components/SecResMenu'
 import SecResNavbar from '../components/SecResNavbar'
 import SecResRatingNReview from '../components/SecResRatingNReview'
@@ -60,6 +61,7 @@ function RestaurentDetailsPage() {
               description = {restaurantDetails.data.Description}/>
               }
               <SecResMenu id = {id}/>
+              <SecResListing/>
               <SecResLike/>
               {restaurantDetails.error && console.log(restaurantDetails.error)}
                   {restaurantDetails.isPending && console.log("Data coming in a moment")}

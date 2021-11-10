@@ -131,6 +131,12 @@
   font-size: 13px;
   margin-left: 15px;
 }
+.verify-btn:hover {
+    background: #43cb7f;
+    box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.1);
+    transform: scale(1.008);
+    transition: all 0.2s ease;
+  }
 .dropdown-PS .upload-img-PS {
   background: #06386c;
   border-radius: 4px;
@@ -167,6 +173,12 @@
   transition: background-color 0.3s linear;
   font-family: Raleway;
 }
+.green-btn-S:hover {
+    background: #43cb7f;
+    box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.1);
+    transform: scale(1.008);
+    transition: all 0.2s ease;
+  }
 
 .align-CB-PS {
   padding-right: 5px;
@@ -269,4 +281,42 @@ input[type="checkbox"] {
   color: white;
   margin: 0 auto;
   font-size: 13px;
+}
+/* Timings */
+.Section-PS-Timings{
+    padding: 0px 26px;
+    margin: 40px 0px;
+}
+.time-input{
+    width: 100%;
+    background-color: rgb(6 56 108 / 10%);
+    border: none;
+    height: 38px;
+    border-radius: 4px;
+    padding: 0px 10px;
+    font-size: 13px;
+    color: #474747cc;
+}
+.width-20{
+    width: 20% !important;
+}
+.width-0{
+    width: 0% !important;
+}
+.dust-bin{
+    cursor: pointer;
+    background: #f0f8ff00;
+}
+.dust-bin:hover{
+    transform: scale(1.120);
+    transition: all  0.3s ease;
+}
+
+/* Restaurent Documents */
+.text-imageSize-PS{
+    margin: 0;
+    font-size: 10px;
+    font-weight: lighter;
+    align-self: center;
+    color: #06386c;
 }

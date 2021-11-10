@@ -14,9 +14,27 @@ import Skeleton from 'react-loading-skeleton';
 import { useState, useEffect } from 'react';
 import Types from '../Utils/Types.json'
 
+import Modal from "react-responsive-modal";
+import CancelSvgIcon from "../components/CancelSvgIcon";
+import { ForDevice } from 'media-query-react';
+
 
 
 function FilterPage() {
+
+    // Popup Close-icon
+  const closeIcon = <CancelSvgIcon />;
+  
+  const [isAddMenuShowing, setAddMenuShowing] = useState(false);
+
+  const handleAddMenuPop = (e) => {
+    e.preventDefault();
+    setAddMenuShowing(true);
+  };
+
+  const closeAddMenuPop = () => {
+    setAddMenuShowing(false);
+  };
 
   
 
@@ -79,12 +97,24 @@ function FilterPage() {
     return (
         <div>
              <NavBar ShouldHideSearch = {false}/>
-            <Breadcrumb/>
+            
 
-            <div className="container">
+            <div className="container container-padding">
                 <AdItem/>
 
                 <div className="main-section">
+
+                <ForDevice deviceName="mobile"><Modal
+        open={isAddMenuShowing}
+        onClose={closeAddMenuPop}
+        center
+        closeIcon={closeIcon}
+        styles={{
+          modal: { "margin-top": "80px", "max-width": "815px", width: "100%",padding:"0px" },
+        }}
+      >
+        
+      
 
                 <div className="adjust">
 
@@ -106,7 +136,32 @@ function FilterPage() {
                 </div>
 
 </div>
-                <div className="right-section">
+
+</Modal>
+</ForDevice>
+
+<ForDevice deviceName={['tablet', 'desktop']}>  <div className="adjust">
+
+<div className="alignment listing_sidebar">
+
+
+<FiltersItem 
+filtertypes = {Types.FilterTypes.QuickFilters} 
+handleFilters = {handleFilters}/>
+<FiltersItem
+filtertypes = {Types.FilterTypes.CusineFilters} 
+handleFilters = {handleFilters}/>
+<FiltersItem
+filtertypes = {Types.FilterTypes.TagFilters} 
+handleFilters = {handleFilters}/>
+<FiltersItem
+filtertypes = {Types.FilterTypes.FeatureFilters} 
+handleFilters = {handleFilters}/>
+</div>
+
+</div>
+</ForDevice>
+                                <div className="right-section">
                     <div className="div-top-boxes-content">
 
                     <HeadingFilterPage/>
