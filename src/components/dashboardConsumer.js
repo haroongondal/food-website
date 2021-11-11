@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/DashboardConsumer.css";
 import dashboardImage from "../images/dashboard_image.jpg";
 import searchIcon from "../images/search_icon.png";
 import SearchBoxItem from "./SearchBoxItem";
+import useFetch from "../Utils/useFetch";
+import Skeleton from "react-loading-skeleton";
 
 export default function DashboardConsumer() {
+
+  const [searchValues, setSearchValues] = useState("");
+  const {data, isPending, error} = useFetch(`https://api.masairapp.com/api/Restaurant/GetRestaurantFromOpenSearch?search=${searchValues}`)
+ 
+  const [isResultShowing, setResultShowing] = useState(false)
+
+  const handlechange = (value) => {
+    setSearchValues(value)
+    if (value !== null && value !== "") {
+        setResultShowing(true)
+    } else {
+      setResultShowing(false)
+    }
+  }
+ 
   return (
     <div>
       <div className="dashboard_image">
@@ -23,6 +40,7 @@ export default function DashboardConsumer() {
               type="text"
               className="searchTerm-top-search"
               placeholder="Search for Restaurants, Cuisines, Location "
+              onChange = {(e) => handlechange(e.target.value)}
             />
             <button type="submit" className="searchButton-top-search">
               <span className="text-search-link-top-search">
@@ -34,18 +52,15 @@ export default function DashboardConsumer() {
               </span>
             </button>
           </div>
+          {isResultShowing &&
           <div className="box-searchBar">
             <ul class="align-box-searchBar">
-            <SearchBoxItem/>
-            <SearchBoxItem/>
-            <SearchBoxItem/>
-            <SearchBoxItem/>
-            <SearchBoxItem/>
-            <SearchBoxItem/>
-            <SearchBoxItem/>
-            <SearchBoxItem/>
+            {isPending && <div><Skeleton/></div>}
+            {error && <div>{error}</div>}
+            {data && data.map(r => <SearchBoxItem data={r} />)}            
             </ul>
             </div>
+          }
         </div>
         </div>
       </div>

@@ -102,7 +102,7 @@ function App() {
         </Route>
 
         <Route exact path = "/BusinessSignup">
-          <BuissnessSignUP/>
+          <BusinessSignup/>
         </Route>
 
         <Route exact path = "/ProfileSettings">

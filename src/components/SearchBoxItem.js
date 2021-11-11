@@ -1,6 +1,7 @@
 import React from 'react'
 
-export default function SearchBoxItem() {
+export default function SearchBoxItem({data = ""}) {
+ 
     return (
         <div>
               <li class="list-box-searchBar">
@@ -14,13 +15,15 @@ export default function SearchBoxItem() {
                 </span>
                 <div class="details-box-searchBar">
                   <p class="title-name-searchBar">
-                    Firewood Biryani, Bishop Cotton Complex, Residency Road
+                    {data.RestaurantName}
                   </p>
                   <span class="title-location-box-searchBar">
-                    Residency Road, Central Bangalore
+                  {data.PrimaryAreaOfOutlet == null ? (data.PrimaryLocation == null ? "Address not Available" : data.PrimaryLocation)
+                      : (data.PrimaryLocation == null ? data.PrimaryAreaOfOutlet
+                      : data.PrimaryAreaOfOutlet + ", " + data.PrimaryLocation)}
                   </span>
                 </div>
-                <span class="rating-search-box">5</span>
+                <span class="rating-search-box">{Math.round(data.AverageRating * 100) / 100}</span>
               </li>
 </div>
     )
