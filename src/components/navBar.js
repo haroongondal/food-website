@@ -9,6 +9,8 @@ import Modal from 'react-responsive-modal';
 import Login from './Login';
 import { Link } from 'react-router-dom';
 import SearchBoxItem from './SearchBoxItem';
+import Skeleton from 'react-loading-skeleton';
+import useFetch from '../Utils/useFetch';
 
 
 export default function NavBar(props) {
@@ -21,6 +23,22 @@ const [isSignpShowing, setSignupShowing] = useState(false)
 
 const [isLoginShowing, setLoginShowing] = useState(false)
 
+const [searchValues, setSearchValues] = useState("");
+
+const {data, isPending, error} = useFetch(`https://api.masairapp.com/api/Restaurant/GetRestaurantFromOpenSearch?search=${searchValues}`)
+ 
+const [isResultShowing, setResultShowing] = useState(false)
+
+const handlechange = (value) => {
+    setSearchValues(value)
+    if (value !== null && value !== "") {
+        setResultShowing(true)
+    } else {
+      setResultShowing(false)
+    }
+  }
+ 
+
 useEffect(() => {
    if (!props.ShouldHideSearch) {
     setNavbar(true)
@@ -31,8 +49,16 @@ const showSearchBar = ()=> {
     if (props.ShouldHideSearch) {
     if (window.scrollY >= 250) {
         setNavbar(true)
+        if (searchValues !== null && searchValues !== "") {
+            setResultShowing(true)
+        } else {
+            setResultShowing(false)
+        }
     } else {
         setNavbar(false)
+        setResultShowing(false)
+        
+        
     }
 }
 }
@@ -104,7 +130,9 @@ window.addEventListener('scroll', showSearchBar)
 
     <div className="parent">
       <div className="search-box sticky-search" id="searchBar" style={{ display: navbar ? "inline" : "none"}}>
-        <input type="text" className="searchTerm-top" placeholder="Search for Restaurants, Cuisines, Location "/>
+        <input type="text" className="searchTerm-top" 
+        placeholder="Search for Restaurants, Cuisines, Location "
+        onChange = {(e) => handlechange(e.target.value)}/>
         <button type="submit" className="searchButton-top">
           <span className="text-search-button-top">Search</span>
 
@@ -112,6 +140,16 @@ window.addEventListener('scroll', showSearchBar)
       </div>
       
     </div>
+
+    {isResultShowing &&
+          <div className="box-searchBar">
+            <ul class="align-box-searchBar">
+            {isPending && <div><Skeleton/></div>}
+            {error && <div>{error}</div>}
+            {data && data.map(r => <SearchBoxItem data={r} />)}            
+            </ul>
+            </div>
+          }
 
 
     {/* Top-right-navigation-buttons */}

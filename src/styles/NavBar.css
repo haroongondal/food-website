@@ -130,6 +130,27 @@
     overflow-y: auto;
     margin-top: 100px;
 }
+.box-searchBar {
+    position: absolute;
+    background: #fff;
+    border-radius: 5px;
+    width: 68%;
+    left: 26px;
+    top: 57px;
+    height: 450px;
+    overflow-x: hidden;
+    overflow-y: overlay;
+    z-index: 1;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
+  }
+  .box-searchBar::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .align-box-searchBar {
+    padding: 20px;
+  }
 
 
 @media screen and (min-width: 320px) {
