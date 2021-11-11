@@ -1,9 +1,23 @@
 
-  .div-heading{
-    width: 68.5%;
-    padding-right: 30px;
+ 
+
+  @media screen and (min-width: 320px) {
+    .div-heading{
+      width: 100%;
+    }
+    .div-heading h1{
+      font-size: 10px;
+      padding-left: 12px;
+    }
   }
-  .div-heading h1{
-    font-size: 18px;
-    font-weight: 600;
+  
+  @media screen and (min-width: 992px) {
+    .div-heading{
+      width: 68.5%;
+      padding-right: 30px;
+    }
+    .div-heading h1{
+      font-size: 18px;
+      font-weight: 600;
+    }
   }

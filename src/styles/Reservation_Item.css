@@ -1,11 +1,5 @@
 
-.section-right-reservation{
-    width: 40%;
-    margin-left: 50px;
-    top: 80px;
-    height: calc(100vh - 3vh);
-    position: sticky;
-  }
+
   .border-reservation{
     background-color: white;
     border-radius: 5px;
@@ -226,3 +220,22 @@
     color: #E40E0E;
     cursor: pointer;
   }
+
+  
+@media screen and (min-width: 320px) {
+  .section-right-reservation{
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 992px) {
+  .section-right-reservation{
+    display:block;
+    width: 40%;
+    margin-left: 50px;
+    top: 80px;
+    height: calc(100vh - 3vh);
+    position: sticky;
+  }
+}

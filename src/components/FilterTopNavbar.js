@@ -1,9 +1,27 @@
 import React from "react";
+import { useState } from "react";
 import "../styles/FilterTopNavbar.css";
+import Modal from "react-responsive-modal";
+import CancelSvgIcon from "../components/CancelSvgIcon";
+import PopupSearch from "./PopupSearch";
 
 export default function FilterTopNavbar() {
+
+    // Popup Close-icon
+    const closeIcon = <CancelSvgIcon />;
+  
+    const [isSearchShowing, setSearchShowing] = useState(false);
+  
+    const handleSearchPop = (e) => {
+      e.preventDefault();
+      setSearchShowing(true);
+    };
+  
+    const closeSearchPop = () => {
+      setSearchShowing(false);
+    };
   return (
-    <div>
+    <div className="filterNavBar">
       <div className="topNavBar-F">
         <div className="align-topNavBar-F">
           <div>
@@ -52,7 +70,7 @@ export default function FilterTopNavbar() {
         <div className="Sec-search-filters">
           <div
             className="search-topNavBar-M"
-            style={{ padding: "8px 1rem", marginBottom: "5px" }}
+            style={{ padding: "8px 1rem", marginBottom: "5px" }} onClick={handleSearchPop}
           >
             <i>
               <svg
@@ -82,7 +100,7 @@ export default function FilterTopNavbar() {
           </div>
           <div className="filters-btns">
             <div className="sort-btn-F">
-              <i class="bx bx-filter-alt"></i>
+            <i class='bx bx-filter' ></i>
             </div>
             <div className="sort-btn-F">
               <i class="bx bx-filter-alt"></i>
@@ -90,6 +108,22 @@ export default function FilterTopNavbar() {
           </div>
         </div>
       </div>
+      <Modal
+        open={isSearchShowing}
+        onClose={closeSearchPop}
+        center
+        classNames={{
+          modalAnimationIn: 'customEnterModalAnimation',
+          modalAnimationOut: 'customLeaveModalAnimation',
+        }}
+        animationDuration={1200}
+        closeIcon={closeIcon}
+        styles={{
+          modal: { margin: "0px",padding:"0px", width: "100%", height: "100%"},
+        }}
+      >
+        <PopupSearch />
+      </Modal>
     </div>
   );
 }
