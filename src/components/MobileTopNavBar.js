@@ -3,7 +3,6 @@ import { useState } from "react";
 import '../styles/MobileTopNavBar.css'
 import profile from '../images/profile_pic.jpg'
 import Modal from "react-responsive-modal";
-import PopupMenuADD from "./PopupMenuADD";
 import CancelSvgIcon from "../components/CancelSvgIcon";
 import PopupSearch from "./PopupSearch";
 
@@ -181,7 +180,7 @@ export default function MobileTopNavBar() {
         open={isSearchShowing}
         onClose={closeSearchPop}
         center
-        classNameNames={{
+        classNames={{
           modalAnimationIn: 'customEnterModalAnimation',
           modalAnimationOut: 'customLeaveModalAnimation',
         }}

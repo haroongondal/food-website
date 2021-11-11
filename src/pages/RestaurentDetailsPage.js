@@ -4,6 +4,7 @@ import BannerResturant from '../components/BannerResturant'
 import Breadcrumb from '../components/Breadcrumb'
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
+import ResDetailTopNav from '../components/ResDetailTopNav'
 import ReservationItem from '../components/Reservation_Item'
 import SecResAbout from '../components/SecResAbout'
 import SecResDetails from '../components/SecResDetails'
@@ -32,6 +33,9 @@ function RestaurentDetailsPage() {
         <div>
            <NavBar ShouldHideSearch = {false}/>
             {/* <Breadcrumb/> */}
+
+            <ResDetailTopNav/>
+
             <BannerResturant/>
             <div className="merge-section">
 

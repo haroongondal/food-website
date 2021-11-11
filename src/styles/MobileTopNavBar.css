@@ -44,7 +44,7 @@
   vertical-align: middle;
   display: inline-block;
 }
-.location-topNavBar-M span i{
+.location-topNavBar-M span i {
   margin-left: 10px;
 }
 .rightSec-topNavBar-M {
@@ -97,28 +97,21 @@
 }
 
 /* examples/custom-animation.css */
-
-
-  
 @keyframes customEnterModalAnimation {
-  from {
+  0% {
     opacity: 0;
     transform: translateY(30%);
-      
-      
   }
-  to {
+  100% {
     opacity: 1;
-      
-      
   }
 }
 @keyframes customLeaveModalAnimation {
   0% {
-      transform: translateY(0%)
+    transform: translateY(0%);
   }
   100% {
-      transform: translateY(120%)
+    transform: translateY(120%);
   }
 }
 
@@ -130,3 +123,5 @@
     visibility: hidden;
   }
 }
+
+
