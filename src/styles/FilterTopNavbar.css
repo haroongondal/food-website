@@ -1,0 +1,33 @@
+.topNavBar-F {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: auto;
+  background: white;
+  top: 0;
+  padding: 1rem 12px 0.4rem;
+  z-index: 10;
+}
+.align-topNavBar-F {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Sec-search-filters {
+  display: flex;
+  padding: 8px 0px 0px 0px;
+  grid-gap: 18px;
+}
+.filters-btns {
+  display: flex;
+  align-items: center;
+  grid-gap: 8px;
+}
+.sort-btn-F {
+  background: aqua;
+  padding: 6px 8px 2px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
