@@ -3,6 +3,7 @@ import Breadcrumb from "../components/Breadcrumb";
 import AdItem from "../components/Ad_Item";
 import FiltersItem from "../components/Filters_Item";
 import "../styles/FilterPage.css";
+import "../styles/FilterTopNavbar.css";
 import Sortby from "../components/Sort_by";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -17,7 +18,6 @@ import Types from "../Utils/Types.json";
 import Modal from "react-responsive-modal";
 import CancelSvgIcon from "../components/CancelSvgIcon";
 import { ForDevice } from "media-query-react";
-import FilterTopNavbar from "../components/FilterTopNavbar";
 
 import PopupSearch from "../components/PopupSearch";
 
@@ -259,7 +259,6 @@ function FilterPage() {
           modalAnimationOut: 'customLeaveModalAnimation',
         }}
         animationDuration={800}
-              closeIcon={closeIcon}
               styles={{
                 modal: {
                   height: "100%",
@@ -270,8 +269,8 @@ function FilterPage() {
                 },
               }}
             >
-              <div className="adjust">
-                <div className="alignment listing_sidebar">
+              <div className="adjust-M">
+                <div className="listing_sidebar-M">
                   <FiltersItem
                     filtertypes={Types.FilterTypes.QuickFilters}
                     handleFilters={handleFilters}

@@ -1,5 +1,55 @@
-  
-  
+.D-contents {
+  display: contents !important;
+}
+.accordion-content {
+  background-color: white;
+  border-left: 1px solid whitesmoke;
+  border-right: 1px solid whitesmoke;
+  padding-left: 8px;
+  padding-bottom: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}
+.accordion-content-hide {
+  background-color: white;
+  border-left: 1px solid whitesmoke;
+  border-right: 1px solid whitesmoke;
+  padding-left: 8px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+  display: none;
+}
+
+@media screen and (min-width: 320px) {
+  button.accordion {
+    width: 50%;
+    background-color: white;
+    border: none;
+    outline: none;
+    text-align: left;
+    padding: 10px 12px 0px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #6c6c6c;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+  }
+  button.accordion:hover,
+  button.accordion.is-open {
+    display: block;
+  }
+  .searchTerm-quick-filters {
+    display: none;
+  }
+  .align-checkbox-F{
+    display:flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 992px) {
   button.accordion {
     width: 100%;
     background-color: white;
@@ -13,46 +63,23 @@
     cursor: pointer;
     transition: background-color 0.2s linear;
   }
-  
+  button.accordion:hover,
+  button.accordion.is-open {
+    box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.1);
+    transform: scale(1.008);
+    transition: all 0.3s ease;
+  }
   button.accordion:after {
-    content: '\f067';
+    content: "\f067";
     font-family: "fontawesome";
     font-size: 14px;
     float: right;
   }
   button.accordion.is-open:after {
-    content: '\f068';
+    content: "\f068";
   }
-  
-  button.accordion:hover, button.accordion.is-open {
-    box-shadow: 2px 2px 18px rgba(0,0,0,0.10);
-    transform: scale(1.008);
-    transition: all  0.3s ease;
-  }
-  .D-contents{
-    display: contents !important;
-  }
-  .accordion-content {
-    background-color: white;
-    border-left: 1px solid whitesmoke;
-    border-right: 1px solid whitesmoke;
-    padding-left: 8px;
-    padding-bottom: 10px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-in-out;
-  }
-  .accordion-content-hide {
-    background-color: white;
-    border-left: 1px solid whitesmoke;
-    border-right: 1px solid whitesmoke;
-    padding-left: 8px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-in-out;
-    display: none;
-  }
-  .searchTerm-quick-filters{
+  .searchTerm-quick-filters {
+    display: block;
     border: none;
     height: 35px;
     font-size: 13px;
@@ -60,6 +87,10 @@
     font-weight: 500;
     padding-left: 15px;
     margin-top: 10px;
-    background-color: #EFEFEF;
+    background-color: #efefef;
     border-radius: 5px;
+  }
+  .align-checkbox-F{
+    display:block;
+  }
 }

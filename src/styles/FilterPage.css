@@ -23,12 +23,7 @@
   align-content: flex-start;
   margin-bottom: 50px;
 }
-.align-boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0px -10px;
-}
+
 .grey {
   color: grey;
 }
@@ -87,6 +82,9 @@
     backface-visibility: hidden;
     visibility: hidden;
   }
+  .align-boxes {
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -114,5 +112,11 @@
     width: 71%;
     margin-left: 20px;
     padding-bottom: 50px;
+  }
+  .align-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px -10px;
   }
 }
