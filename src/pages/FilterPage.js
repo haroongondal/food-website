@@ -48,6 +48,7 @@ function FilterPage() {
   const closeFiltersPop = () => {
     setFiltersShowing(false);
   };
+<<<<<<< HEAD
 
   const [url, seturl] = useState(
     `https://api.masairapp.com/api/Restaurant/GetRestaurantsByFilters?cusineId=&RestaurantId=&featureId=&tagId=&offset=0&limit=10`
@@ -89,6 +90,61 @@ function FilterPage() {
       }
     }
   };
+=======
+  
+    const [url, seturl] = useState(`https://api.masairapp.com/api/Restaurant/GetRestaurantsByFilters?cusineId=&RestaurantId=&featureId=&tagId=&offset=0&limit=10`);
+    const [tagIds, setTagIds] = useState([])
+    const [cusineIds, setCusineIds] = useState([])
+    const [featureIds, setFeatureIds] = useState([])
+    const {data, isPending, error} = useFetch(url);
+    const [sort, setSort] = useState("-1");
+        
+        const handleFilters = (isChecked, filterType, id) => {
+
+            if (Types.FilterTypes.QuickFilters === filterType) {
+                
+            }
+
+            if (Types.FilterTypes.CusineFilters === filterType) {
+                
+                if (isChecked) {
+                    setCusineIds(oldArray => [...oldArray, id]);
+                } else {
+                    const index = cusineIds.findIndex((id_) => id_ === id);
+                            if (index !== -1) {
+                            setCusineIds([
+                                ...cusineIds.slice(0, index),
+                                ...cusineIds.slice(index + 1)]);
+                            }
+                }
+                
+            }
+
+            if (Types.FilterTypes.FeatureFilters === filterType) {
+                
+            }
+
+            if (Types.FilterTypes.TagFilters === filterType) {
+                if (isChecked) {
+                    setTagIds(oldArray => [...oldArray, id]);
+                } else {
+                    const index = tagIds.findIndex((id_) => id_ === id);
+                            if (index !== -1) {
+                            setTagIds([
+                                ...tagIds.slice(0, index),
+                                ...tagIds.slice(index + 1)]);
+                            }
+                }
+            }
+            
+
+        
+       
+        const handleSorting = (sort) => {
+       setSort(sort)
+    }
+ 
+>>>>>>> 6c6ca4af6e80475c5c97d0cb21afbf9c512b7cd1
 
   useEffect(() => {
     seturl(
@@ -281,6 +337,10 @@ function FilterPage() {
           </ForDevice>
 
           <ForDevice deviceName={["tablet", "desktop"]}>
+<<<<<<< HEAD
+=======
+           
+>>>>>>> 6c6ca4af6e80475c5c97d0cb21afbf9c512b7cd1
             <div className="adjust">
               <div className="alignment listing_sidebar">
                 <FiltersItem
@@ -300,8 +360,19 @@ function FilterPage() {
                   handleFilters={handleFilters}
                 />
               </div>
+<<<<<<< HEAD
             </div>
           </ForDevice>
+=======
+
+</div>
+
+</ForDevice>
+
+
+                                <div className="right-section">
+                    <div className="div-top-boxes-content">
+>>>>>>> 6c6ca4af6e80475c5c97d0cb21afbf9c512b7cd1
 
           <div className="right-section">
             <div className="div-top-boxes-content">
@@ -323,8 +394,16 @@ function FilterPage() {
                     (b.AverageRating - a.AverageRating)).map((rest) => <FilterPageItem key = {rest.Id} data = {rest}/>) }
                     
                     {sort === "-1" && data && data.ListOfRestaurant.map((rest) => <FilterPageItem key = {rest.Id} data = {rest}/>)}
+<<<<<<< HEAD
                     </div> */}
             </div>
+=======
+                    </div>
+                    
+
+
+          
+>>>>>>> 6c6ca4af6e80475c5c97d0cb21afbf9c512b7cd1
             <hr className="grey" />
             <Pagination />
           </div>
