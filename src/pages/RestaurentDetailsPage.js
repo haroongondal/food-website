@@ -11,6 +11,7 @@ import SecResDetails from '../components/SecResDetails'
 import SecResLike from '../components/SecResLike'
 import SecResListing from '../components/SecResListing'
 import SecResMenu from '../components/SecResMenu'
+import SecResMobileResveration from '../components/SecResMobileResveration'
 import SecResNavbar from '../components/SecResNavbar'
 import SecResRatingNReview from '../components/SecResRatingNReview'
 import '../styles/RestaurentDetailsPage.css'
@@ -55,6 +56,8 @@ function RestaurentDetailsPage() {
               />
             }
               <SecResNavbar/>
+
+              <SecResMobileResveration/>
                   
               {restaurantDetails.error && console.log(restaurantDetails.error)}
               {restaurantDetails.isPending && console.log("Data coming in a moment")}

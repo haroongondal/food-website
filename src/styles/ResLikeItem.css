@@ -1,93 +1,110 @@
+.slide-img-restaurent-3rd-page {
+  height: 180px;
+  position: relative;
+}
+.slide-img-restaurent-3rd-page img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.detail-box-restaurent-3rd-page {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+.type-restaurent-3rd-page {
+  display: flex;
+  flex-direction: column;
+}
+.type-restaurent-3rd-page p {
+  color: #222222;
+  margin: 5px 0px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding-right: 8px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-bottom: 1px;
+}
+.type-restaurent-3rd-page p:hover {
+  text-decoration: none;
+  color: black;
+}
+.over-rating-3rd-page {
+  top: 2%;
+  right: 2%;
+  position: absolute;
+}
+.over-rating-3rd-page a {
+  text-decoration: none;
+}
+.over-rating-3rd-page a:hover {
+  text-decoration: none;
+  color: white;
+}
+.buy-btn-restaurent-3rd-page {
+  width: 40px;
+  height: 30px;
+  display: flex;
+  background-color: #439548;
+  color: #ffffff;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.margao-details-3rd-page {
+  font-weight: 500;
+  color: #949494;
+  font-size: 10px;
+  line-height: 17px;
+}
+.flat-off-3rd-page {
+  font-weight: bolder;
+  color: #0083c7;
+  font-size: 11px;
+  margin-top: 17px;
+}
 
-.box-restaurent-3rd-page{
-    width: 250px;
-      box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);
-      border-radius: 5px;
-      overflow: hidden;
-      margin: 10px;
-      margin-top: 23px;
-      background-color: #FEEEEE;
+@media screen and (min-width: 320px) {
+  .box-restaurent-3rd-page {
+    width: auto;
+    box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 23px;
+    background-color: #feeeee;
   }
-  .box-restaurent-3rd-page a{
-      text-decoration:none;
-  }
-  .box-restaurent-3rd-page:hover{
-      box-shadow: 2px 2px 18px rgba(0,0,0,0.10);
-      transform: scale(1.008);
-      transition: all  0.3s ease;
-  }
-  .slide-img-restaurent-3rd-page{
-    height: 180px;
-      position: relative;
-  }
-  .slide-img-restaurent-3rd-page img{
-    width:100%;
-    height: 100%;
-    object-fit: cover;
-    box-sizing: border-box;
-      border-radius: 5px;
-  }
-  .detail-box-restaurent-3rd-page{
-    width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 5px 15px;
-      padding-bottom: 10px;
-      box-sizing: border-box;
-  }
-  .type-restaurent-3rd-page{
-    display: flex;
-    flex-direction: column;
-  }
-  .type-restaurent-3rd-page p{
-    color: #222222;
-      margin: 5px 0px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      padding-right: 8px;
-      text-decoration: none;
-      font-size: 17px;
-      margin-bottom: 1px;
-  }
-  .type-restaurent-3rd-page p:hover{
-      text-decoration: none;
-      color: black;
-  }
-  .over-rating-3rd-page {
-    top: 2%;
-    right: 2%;
-    position: absolute;
-  }
-  .over-rating-3rd-page a{
-      text-decoration: none;
-  }
-  .over-rating-3rd-page a:hover{
+  .box-restaurent-3rd-page a {
     text-decoration: none;
-    color: white;
   }
-  .buy-btn-restaurent-3rd-page{
-      width: 40px;
-      height: 30px;
-      display: flex;
-      background-color: #439548;
-      color: #FFFFFF;
-      font-weight: 400;
-      letter-spacing: 1px;
-      border-radius: 5px;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
+}
+
+@media screen and (min-width: 992px) {
+  .box-restaurent-3rd-page {
+    width: 250px;
+    box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px;
+    margin-top: 23px;
+    background-color: #feeeee;
   }
-  .margao-details-3rd-page{
-    font-weight: 500;
-    color: #949494;
-    font-size: 10px;
-    line-height: 17px
+  .box-restaurent-3rd-page a {
+    text-decoration: none;
   }
-  .flat-off-3rd-page{
-    font-weight: bolder;
-    color: #0083C7;
-    font-size: 11px;
-    margin-top: 17px;
+  .box-restaurent-3rd-page:hover {
+    box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.1);
+    transform: scale(1.008);
+    transition: all 0.3s ease;
   }
+}

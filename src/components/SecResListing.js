@@ -4,6 +4,7 @@ import "../styles/SecResListing.css";
 import Modal from "react-responsive-modal";
 import CancelSvgIcon from "../components/CancelSvgIcon";
 import PopupResListing from "./PopupResListing";
+import { ForDevice } from "media-query-react";
 
 export default function SecResListing() {
   // Popup Close-icon
@@ -32,10 +33,27 @@ export default function SecResListing() {
       </div>
 
       {/* Popup-Res-Listing */}
+      <ForDevice deviceName="mobile">
       <Modal
         open={isResListingShowing}
         onClose={closeResListingPop}
         center
+        className="colorBack"
+        closeIcon={closeIcon}
+        styles={{
+          modal: { height:"100%", width: "100%",padding:"0px", margin:"0px" },
+        }}
+      >
+        <PopupResListing />
+      </Modal>
+      </ForDevice>
+
+      <ForDevice deviceName={["tablet", "desktop"]}>
+      <Modal
+        open={isResListingShowing}
+        onClose={closeResListingPop}
+        center
+        className="colorBack"
         closeIcon={closeIcon}
         styles={{
           modal: { "margin-top": "80px","max-width": "500px", width: "100%",padding:"0px", borderRadius:"21px" },
@@ -43,6 +61,7 @@ export default function SecResListing() {
       >
         <PopupResListing />
       </Modal>
+      </ForDevice>
     </div>
   );
 }

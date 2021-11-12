@@ -12,7 +12,7 @@ export default function ResDetailTopNav() {
             title="JW Kitchen"
             class="no-img"
           />
-          <div class="back-btn-res-detail-M">
+          {/* <div class="back-btn-res-detail-M">
             <a>
               <img
                 src="https://im1.dineout.co.in/images/uploads/misc/2021/Feb/5/vector_(3).png"
@@ -21,7 +21,7 @@ export default function ResDetailTopNav() {
                 class="no-img"
               />
             </a>
-          </div>
+          </div> */}
           
           
           <div class="right-tools-res-detail-M">
@@ -47,7 +47,7 @@ export default function ResDetailTopNav() {
               </li>
             </ul>
           </div>
-          <div class="rating-res-detail-M">
+          {/* <div class="rating-res-detail-M">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="15"
@@ -62,8 +62,9 @@ export default function ResDetailTopNav() {
               ></path>
             </svg>
             4.4<span>(780)</span>
-          </div>
+          </div> */}
         </div>
+        <div style={{margin:"0px 12px"}}>
         <div class="topSec-res-detail-M">
           <div class="overview-res-detail-M">
             <ul>
@@ -71,7 +72,7 @@ export default function ResDetailTopNav() {
                 <a>Overview</a>
               </li>
               <li class=" ">
-                <a>Offers</a>
+                <a>About</a>
               </li>
               <li class=" ">
                 <a>Menu</a>
@@ -83,6 +84,7 @@ export default function ResDetailTopNav() {
           </div>
           
           
+        </div>
         </div>
       </section>
     </div>

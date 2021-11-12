@@ -115,6 +115,25 @@
   }
 }
 
+/* sortBy/custom-animation.css */
+@keyframes sortByEnterModalAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(60%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes sortByLeaveModalAnimation {
+  0% {
+    transform: translateY(60%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 992px) {
   .topNavBar-M {

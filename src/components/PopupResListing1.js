@@ -44,10 +44,10 @@ export default function PopupResListing1() {
           </div>
         </div>
         <div className="col-md-12 Sec-row-RL text-lg-start mb-0">
-          <span className="text-click-statement">
+          <h1 className="text-click-statement">
             Please click the statements below to indicate you understand and
             accept these terms.
-          </span>
+          </h1>
         </div>
         <div className="col-md-12 ">
           <div className="CheckBox-RL checkbox mt-2">

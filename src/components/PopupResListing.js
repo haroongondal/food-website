@@ -15,7 +15,7 @@ export default function PopupResListing() {
       <div className="text-webkit-center">
         <div className="border-popup-listing">
           
-          <PopupResListing3/>
+          <PopupResListing1/>
 
           {/* Next Button */}
           <div className="Sec-row-RL mb-0 pt-4">
