@@ -1,6 +1,5 @@
 .dashboard-res-detail-M {
   position: relative;
-  margin: 0 -1rem;
 }
 .dashboard-res-detail-M img {
   border-radius: 0 0 10px 10px;
@@ -17,11 +16,8 @@
   justify-content: center;
   background: rgba(0, 0, 0, 0.3);
   mix-blend-mode: normal;
-  backdrop-filter: blur(5px);
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  border-radius: 50px;
+  background: #000000ab;
+  border-radius: 5px;
   width: 30px;
   height: 30px;
   position: absolute;
@@ -48,13 +44,8 @@
   align-items: center;
   justify-content: center;
   margin-left: 1rem;
-  background: rgba(0, 0, 0, 0.3);
-  mix-blend-mode: normal;
-  backdrop-filter: blur(5px);
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  border-radius: 50px;
+  background: #000000ab;
+  border-radius: 5px;
   width: 30px;
   height: 30px;
 }
@@ -67,7 +58,7 @@
   border-radius: 0;
 }
 .rating-res-detail-M {
-    font-size: 14px;
+  font-size: 14px;
   font-weight: 500;
   color: #fff;
   bottom: 5.5rem;

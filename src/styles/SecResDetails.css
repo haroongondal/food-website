@@ -1,29 +1,86 @@
 
-  .border-restaurent-details{
+.content-restaurent-details {
+  padding: 20px;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media screen and (min-width: 320px) {
+  .border-restaurent-details {
     background-color: white;
     border-radius: 5px;
+    margin: 0px 12px;
   }
-  .content-restaurent-details{
-    padding: 20px;
+  .text-restaurent-title{
+    font-size: 1.2rem;
   }
-  .text-section{
+  .text-font-size {
+    font-size: 12px;
+  }
+  .rating-section {
+    text-align: center;
+  }
+  .rating-3rd-page {
+    width: 100%;
+    /* justify-self: right; */
+    /* float: right; */
+    padding: 8px 14px;
+    font-size: 14px;
     display: flex;
-    flex-direction: column;
+    background-color: #439548;
+    color: #ffffff;
+    /* font-weight: 400; */
+    /* letter-spacing: 1px; */
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
   }
-  .text-font-size{
+  .rating-reviews-3rd-page{
+    color: rgb(0, 131, 199);
+    font-weight: 700;
+    font-size: xx-small;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .border-restaurent-details {
+    background-color: white;
+    border-radius: 5px;
+    margin: 0px;
+  }
+  .text-restaurent-title{
+    font-size: calc(1.3rem + .6vw);
+  }
+  .text-font-size {
     font-size: 14px;
   }
-  .rating-3rd-page{
+  .rating-section {
+    display: flex;
+    flex-flow: column wrap-reverse;
+    align-items: center;
+  }
+  .rating-3rd-page {
     width: 50px;
     height: 40px;
+    padding: 0px;
     padding-bottom: 5px;
     display: flex;
     background-color: #439548;
-    color: #FFFFFF;
+    color: #ffffff;
     font-weight: 400;
     letter-spacing: 1px;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
     font-size: 20px;
+  }
+  .rating-reviews-3rd-page{
+    color: rgb(0, 131, 199);
+    font-weight: 700;
+    font-size: 14px;
+  }
 }

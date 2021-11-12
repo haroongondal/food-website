@@ -1,8 +1,16 @@
 import React from "react";
+import  { useState } from "react";
+import useFetch from "../Utils/useFetch";
+import Skeleton from "react-loading-skeleton";
 import "../styles/PopupSearch.css";
 import SearchBoxItem from "./SearchBoxItem";
 
 export default function PopupSearch() {
+
+  const [searchValues, setSearchValues] = useState("");
+  const {data, isPending, error} = useFetch(`https://api.masairapp.com/api/Restaurant/GetRestaurantFromOpenSearch?search=${searchValues}`)
+ 
+
   return (
     <div>
       <div className="title-popup-listing">
@@ -16,6 +24,7 @@ export default function PopupSearch() {
             placeholder="Search for Restaurants, Cuisines, Location..."
             autocomplete="off"
             maxlength="50"
+            onChange = {(e) => setSearchValues(e.target.value)}
           />
           
           <i>
@@ -39,13 +48,15 @@ export default function PopupSearch() {
 
       <hr/>
 
+    
       <div className="align-box-searchPop">
       <ul className="p-0">
-      <SearchBoxItem/>
-      <SearchBoxItem/>
-      <SearchBoxItem/>
+      {isPending && <div><Skeleton/></div>}
+            {error && <div>{error}</div>}
+            {data && data.map(r => <SearchBoxItem data={r} />)} 
       </ul>
       </div>
+      
     </div>
   );
 }

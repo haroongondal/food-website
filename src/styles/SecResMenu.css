@@ -1,8 +1,5 @@
 
-.border-menu-section{
-    background-color: #fff;
-    margin-bottom: 12px;
-  }
+
   .content-menu-section{
     padding: 20px;
   }
@@ -146,4 +143,20 @@
     color: white !important;
     text-decoration: none;
     box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);
+  }
+
+  @media screen and (min-width: 320px) {
+    .border-menu-section{
+      background-color: #fff;
+      margin: 0px 12px;
+      margin-bottom: 12px;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .border-menu-section{
+      background-color: #fff;
+      margin: 0px;
+      margin-bottom: 12px;
+    }
   }
