@@ -18,7 +18,7 @@ function SecResDetails(props) {
                             : (props.PrimaryLocation == null ? props.PrimaryAreaOfOutlet
                             : props.PrimaryAreaOfOutlet + ", " + props.PrimaryLocation)}<span style={{color: "#0083C7", fontWeight: "700"}}> Get Direction</span></h6>
                             <h6 className="text-font-size">Time: 12:00 PM to 12:00 AM <span style={{color: "#0083C7", fontWeight: "700"}}>(Open Now)</span>
-                            <span><img alt="blue-arrow" src={downIcon} style={{height: "11px",width: "11px",marginLeft: "5px",marginBottom: "5px"}}/></span></h6>
+                            <span><img className="openNow-arrow" alt="blue-arrow" src={downIcon}/></span></h6>
                         </div>
                         <div className="rating-section">
                             <h6 className="rating-3rd-page">{Math.round(props.AverageRating * 100) / 100}</h6>

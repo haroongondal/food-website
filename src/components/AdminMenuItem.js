@@ -18,13 +18,16 @@ function AdminMenuItem(props) {
   const [cusineId, setcusineId] = useState("");
 
   const handdleToggle = (id) => {
-    setcusineId(id)
-    setOpened(!IsOpened)
-  }
+    setcusineId(id);
+    setOpened(!IsOpened);
+  };
 
-  const {data, isPending, error} = useFetch(`https://api.masairapp.com/api/Lov/GetSubCusine?id=${cusineId}`)
+  const { data, isPending, error } = useFetch(
+    `https://api.masairapp.com/api/Lov/GetSubCusine?id=${cusineId}`
+  );
 
-  {/* const [IsOpened1, setOpened1] = useState(false);
+  {
+    /* const [IsOpened1, setOpened1] = useState(false);
 
  const handdleToggle1 = () => setOpened1(!IsOpened1);
 
@@ -177,7 +180,8 @@ function AdminMenuItem(props) {
         <MenuCategoryItem />
         <MenuCategoryItem />
       </div>
-    );*/}
+    );*/
+  }
 
   const [isAddMenuItemPopupShowing, setMenuItemPopupShowing] = useState(false);
 
@@ -195,7 +199,8 @@ function AdminMenuItem(props) {
       <button
         className={IsOpened ? "accordion-menu is-open" : "accordion-menu"}
         style={{ outline: "0px auto -webkit-focus-ring-color" }}
-        onClick={() => handdleToggle(props.data.Id)}>
+        onClick={() => handdleToggle(props.data.Id)}
+      >
         <div className="left-menu-items">
           <img className="dish-img-menu" alt="dish-img" src={dishImage} />
           <div className="menu-item-title">
@@ -225,7 +230,7 @@ function AdminMenuItem(props) {
       >
         <div className={IsOpened ? "abc" : "accordion-content-menu-hide"}>
           <div className="align-content-menu">
-             {/* {showResults ? (
+            {/* {showResults ? (
               <Results />
             ) : (
               <div className="add-category-btn" onClick={onClick}>
@@ -237,9 +242,13 @@ function AdminMenuItem(props) {
             )
           }  */}
 
-                    {isPending && <div><Skeleton/></div>}
-                    {error && <div>{error}</div>}
-                    {data && data.map(c => <MenuCategoryItem data = {c}/>)}
+            {isPending && (
+              <div>
+                <Skeleton />
+              </div>
+            )}
+            {error && <div>{error}</div>}
+            {data && data.map((c) => <MenuCategoryItem data={c} />)}
           </div>
         </div>
       </div>
@@ -260,10 +269,7 @@ function AdminMenuItem(props) {
         <PopupMenu />
       </Modal>
     </div>
-  )
-      }
-
-
-
+  );
+}
 
 export default AdminMenuItem;

@@ -5,7 +5,8 @@ import profileImage from '../images/profile_pic.jpg'
 function AdminNavbar() {
 	
     return (
-        <nav>
+        
+			<nav>
 			<i className="bx bx-menu"></i>
 			<h1 href="#" className="nav-link">Menu Dashboard</h1>
 			<ul>
@@ -23,7 +24,8 @@ function AdminNavbar() {
 			</ul>
 			
 			
-		</nav>
+		</nav> 
+		
     )
 }
 
