@@ -1,15 +1,5 @@
 
-.content-about-section {
-  padding: 20px;
-}
-.content-about-section h6 {
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-.content-about-section p {
-  font-size: 0.84rem;
-  color: #000;
-}
+
 
 #more {
   display: none;
@@ -94,6 +84,17 @@
     margin: 0px 12px;
     margin-bottom: 12px;
   }
+  .content-about-section {
+    padding: 20px 15px;
+  }
+  .content-about-section h6 {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  .content-about-section p {
+    font-size: 0.84rem;
+    color: #000;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -101,5 +102,16 @@
     background-color: #fff;
     margin: 0px;
     margin-bottom: 12px;
+  }
+  .content-about-section {
+    padding: 20px;
+  }
+  .content-about-section h6 {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  .content-about-section p {
+    font-size: 0.84rem;
+    color: #000;
   }
 }

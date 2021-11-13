@@ -88,18 +88,18 @@
   margin-left: 0.3rem;
 }
 .topSec-res-detail-M {
-  padding: 1rem;
+  padding: 1rem 15px 0px 15px;
   margin-top: -45px;
   position: relative;
   z-index: 3;
   background: white;
   width: 100%;
   border-radius: 5px 5px 0px 0px;
+  border-bottom: 1px solid #e1e1e1;
 }
 .overview-res-detail-M {
   padding-bottom: 7px;
   background: white;
-  border-bottom: 1px solid #e1e1e1;
 }
 .overview-res-detail-M ul {
   display: flex;

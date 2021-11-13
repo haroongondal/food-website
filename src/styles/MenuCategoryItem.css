@@ -4,7 +4,14 @@
     align-items: center;
     justify-content: space-between;
     grid-gap: 16px;
-    margin: 0px 20px;
+    margin: 5px 20px;
+  }
+  .Category-item.is-open{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 16px;
+    margin: 5px 20px;
   }
   .left-tools-category{
     display: flex;
@@ -40,4 +47,23 @@
     background: white;
     border: none;
     margin-top:5px;
+  }
+
+  .line-categoryItem{
+    margin : 0;
+  }
+
+   .hello {
+    background-color: white;
+    transition: max-height 0.2s ease-in-out;
+  }
+  .hello-hide {
+    background-color: white;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    padding-left: 8px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    display: none;
   }
