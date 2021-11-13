@@ -28,10 +28,6 @@ function FeedbackPage() {
 
   return (
     <div>
-      <AdminSidebar />
-      <section id="content">
-        <AdminNavbar />
-        <main>
           <FeedbackComponents />
           <div className="Content-graph-boxes">
             <div className="border-back-white">
@@ -207,8 +203,6 @@ function FeedbackPage() {
               <FeedbackReviewSec />
             </div>
           </div>
-        </main>
-      </section>
 
       {/* PopupCommSetting */}
       <Modal

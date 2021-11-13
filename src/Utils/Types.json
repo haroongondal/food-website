@@ -12,5 +12,15 @@
    "Ratings": "1",
    "HighPrice": "2",
    "LowPrice": "3"
+},
+"MenuItemType": {
+   "Veg": "0",
+   "Egg": "1",
+   "NonVeg": "2"
+},
+"SpiceType": {
+   "Low": "0",
+   "Mild": "1",
+   "High": "2"
 }
 }

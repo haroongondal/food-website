@@ -7,25 +7,33 @@ import Modal from "react-responsive-modal";
 import PopupMenuItem from "../components/PopupMenuItem";
 import PopupMenu from "../components/PopupMenu";
 import CancelSvgIcon from "../components/CancelSvgIcon";
+import useFetch from "../Utils/useFetch";
+import Skeleton from "react-loading-skeleton";
 
-function AdminMenuItem() {
+function AdminMenuItem(props) {
   // Popup Close-icon
   const closeIcon = <CancelSvgIcon />;
 
   const [IsOpened, setOpened] = useState(false);
+  const [cusineId, setcusineId] = useState("");
 
-  const handdleToggle = () => setOpened(!IsOpened);
+  const handdleToggle = (id) => {
+    setcusineId(id)
+    setOpened(!IsOpened)
+  }
 
-  const [IsOpened1, setOpened1] = useState(false);
+  const {data, isPending, error} = useFetch(`https://api.masairapp.com/api/Lov/GetSubCusine?id=${cusineId}`)
 
-  const handdleToggle1 = () => setOpened1(!IsOpened1);
+  {/* const [IsOpened1, setOpened1] = useState(false);
 
-  const [IsOpened2, setOpened2] = useState(false);
+ const handdleToggle1 = () => setOpened1(!IsOpened1);
 
-  const handdleToggle2 = () => setOpened2(!IsOpened2);
+ const [IsOpened2, setOpened2] = useState(false);
 
-  const [showResults, setShowResults] = useState(false);
-  const onClick = () => setShowResults(!showResults);
+ const handdleToggle2 = () => setOpened2(!IsOpened2);
+
+ const [showResults, setShowResults] = useState(false);
+ const onClick = () => setShowResults(!showResults);
 
   const [showResults1, setShowResults1] = useState(false);
   const onClick1 = () => setShowResults1(!showResults1);
@@ -105,7 +113,7 @@ function AdminMenuItem() {
     </div>
   );
 
-  const Results2 = () => (
+ const Results2 = () => (
     <div>
       <button
         className={
@@ -161,25 +169,25 @@ function AdminMenuItem() {
         </div>
       </div>
     </div>
-  );
+  );}
 
-  const Results3 = () => (
-    <div>
-      <MenuCategoryItem />
-      <MenuCategoryItem />
-      <MenuCategoryItem />
-    </div>
-  );
+    const Results3 = () => (
+      <div>
+        <MenuCategoryItem />
+        <MenuCategoryItem />
+        <MenuCategoryItem />
+      </div>
+    );*/}
 
-  const [isSignpShowing, setSignupShowing] = useState(false);
+  const [isAddMenuItemPopupShowing, setMenuItemPopupShowing] = useState(false);
 
-  const handleSignUpPop = (e) => {
+  const handleMenuItemPopup = (e) => {
     e.preventDefault();
-    setSignupShowing(true);
+    setMenuItemPopupShowing(true);
   };
 
-  const closeSignupPop = () => {
-    setSignupShowing(false);
+  const closeAddMenuItemPopup = () => {
+    setMenuItemPopupShowing(false);
   };
 
   return (
@@ -187,12 +195,11 @@ function AdminMenuItem() {
       <button
         className={IsOpened ? "accordion-menu is-open" : "accordion-menu"}
         style={{ outline: "0px auto -webkit-focus-ring-color" }}
-        onClick={handdleToggle}
-      >
+        onClick={() => handdleToggle(props.data.Id)}>
         <div className="left-menu-items">
           <img className="dish-img-menu" alt="dish-img" src={dishImage} />
           <div className="menu-item-title">
-            <h6>Breakfast Menu</h6>
+            <h6>{props.data.Value}</h6>
             <span>Regular - Food or Drinks</span>
           </div>
         </div>
@@ -203,7 +210,7 @@ function AdminMenuItem() {
             <input type="checkbox" />
             <span className="slider round"></span>
           </label>
-          <div className="add-category-btn" onClick={handleSignUpPop}>
+          <div className="add-category-btn" onClick={handleMenuItemPopup}>
             <button type="submit" className="blue-plus-btn">
               <i className="bx bx-plus-circle"></i>
             </button>
@@ -218,7 +225,7 @@ function AdminMenuItem() {
       >
         <div className={IsOpened ? "abc" : "accordion-content-menu-hide"}>
           <div className="align-content-menu">
-            {/* {showResults ? (
+             {/* {showResults ? (
               <Results />
             ) : (
               <div className="add-category-btn" onClick={onClick}>
@@ -227,18 +234,18 @@ function AdminMenuItem() {
                 </button>
                 <span>Add Menu Category</span>
               </div>
-            )} */}
+            )
+          }  */}
 
-            <MenuCategoryItem />
-            <MenuCategoryItem />
-            <MenuCategoryItem />
-            <div></div>
+                    {isPending && <div><Skeleton/></div>}
+                    {error && <div>{error}</div>}
+                    {data && data.map(c => <MenuCategoryItem data = {c}/>)}
           </div>
         </div>
       </div>
       <Modal
-        open={isSignpShowing}
-        onClose={closeSignupPop}
+        open={isAddMenuItemPopupShowing}
+        onClose={closeAddMenuItemPopup}
         center
         closeIcon={closeIcon}
         styles={{
@@ -253,7 +260,10 @@ function AdminMenuItem() {
         <PopupMenu />
       </Modal>
     </div>
-  );
-}
+  )
+      }
+
+
+
 
 export default AdminMenuItem;

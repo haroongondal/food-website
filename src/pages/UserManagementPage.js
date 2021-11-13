@@ -7,10 +7,6 @@ import EditSvgIcon from "../components/EditSvgIcon";
 function UserManagementPage() {
   return (
     <div>
-      <AdminSidebar />
-      <section id="content">
-        <AdminNavbar />
-        <main>
           <div className="top-tools">
             <div className="left-tools">
               <button className="dark-blue-btn">User Management</button>
@@ -510,8 +506,6 @@ function UserManagementPage() {
               </table>
             </div>
           </div>
-        </main>
-      </section>
     </div>
   );
 }

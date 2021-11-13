@@ -58,10 +58,6 @@ export default function OutletsPage() {
 
   return (
     <div>
-      <AdminSidebar />
-      <section id="content">
-        <AdminNavbar />
-        <main>
           <div className="top-tools">
             <div className="left-tools">
               <button className="dark-blue-btn">Outlets</button>
@@ -293,8 +289,6 @@ export default function OutletsPage() {
               <PopupNewOutlet2 />
             </Modal>
           </div>
-        </main>
-      </section>
     </div>
   );
 }

@@ -6,10 +6,13 @@ import { useState } from "react/cjs/react.development";
 import EditSvgIcon from "./EditSvgIcon";
 import CancelSvgIcon from "./CancelSvgIcon";
 import ImageUpload from "image-upload-react";
+import {MenuItemType} from "../Utils/Types.json"
 import { findByLabelText } from "@testing-library/dom";
 
 function PopupMenu() {
-  const [image, setImage] = useState(addImage);
+  const [image, setImage] = useState(addImage)
+
+  const [price, setPrice] = useState("")
 
   const OnImageChange = (event) => {
     if (event.target.files && event.target.files[0]) {
@@ -18,6 +21,17 @@ function PopupMenu() {
   };
 
   const [imageSrc, setImageSrc] = useState();
+
+  const [itemName, setItemName] = useState("")
+
+  const [itemType, setItemType] = useState("")
+
+  const [isDeliver, setDeliver] = useState(false)
+
+  const [isTakeAway, setTakeAway] = useState(false)
+
+  const [desc, setDesc] = useState("")
+
 
   const handleImageSelect = (e) => {
     setImageSrc(URL.createObjectURL(e.target.files[0]));
@@ -38,7 +52,8 @@ function PopupMenu() {
                 <div className="content-dropDown">
                   <form action="#" className="form-dropDown">
                     <div className="form-input-dropDown">
-                      <input type="search" placeholder="Enter item name" />
+                      <input type="search" placeholder="Enter item name" 
+                      value = {itemName} onChange = {(e) => setItemName(e.target.value)} required />
                     </div>
                   </form>
                 </div>
@@ -84,7 +99,8 @@ function PopupMenu() {
               Food Type
             </span>
             <div className="content-dropDown">
-              <button className="egg-btn">
+              <button className="egg-btn" onClick = {(e) => {e.preventDefault() 
+                setItemType(MenuItemType.Egg)}}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -120,7 +136,8 @@ function PopupMenu() {
                 Egg
               </button>
 
-              <button className="veg-btn">
+              <button className="veg-btn" onClick = {(e) => {e.preventDefault() 
+                setItemType(MenuItemType.Veg)}}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -156,7 +173,8 @@ function PopupMenu() {
                 Veg
               </button>
 
-              <button className="non-veg-btn">
+              <button className="non-veg-btn" onClick = {(e) => {e.preventDefault() 
+                setItemType(MenuItemType.NonVeg)}}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -207,7 +225,7 @@ function PopupMenu() {
             <div className="checkBox-menu">
               <label className="main-popup-menu">
                 <h6 className="text-dineout-popup-menu">Delivery</h6>
-                <input type="checkbox" />
+                <input type="checkbox" onChange = {(e) => setDeliver(e.target.checked)} required/>
                 <span className="w3docs-popup-menu"></span>
               </label>
             </div>
@@ -215,7 +233,7 @@ function PopupMenu() {
             <div className="checkBox-menu">
               <label className="main-popup-menu">
                 <h6 className="text-dineout-popup-menu">Takeaway</h6>
-                <input type="checkbox" />
+                <input type="checkbox" onChange = {(e) => setTakeAway(e.target.checked)} required/>
                 <span className="w3docs-popup-menu"></span>
               </label>
             </div>
@@ -248,7 +266,8 @@ function PopupMenu() {
                 style={{ maxWidth: "177px", textAlignLast: "center" }}
               >
                 <div className="form-input-PK">
-                  <input type="search" placeholder="250" />
+                  <input type="number" placeholder="250" 
+                  value = {price} onChange = {(e) => setPrice(e.target.value)} required />
                 </div>
               </form>
             </div>
@@ -389,6 +408,8 @@ function PopupMenu() {
             className="menu-textArea"
             rows="6"
             cols="95"
+            value = {desc}
+            onChange = {(e) => setDesc(e.target.value)}
           ></textarea>
         </div>
       </div>
@@ -564,7 +585,7 @@ function PopupMenu() {
                     style={{ textAlignLast: "center" }}
                   >
                     <div className="form-input-calorie">
-                      <input type="search" />
+                      <input type="number"  />
                     </div>
                   </form>
                   <div className="border-calorie">

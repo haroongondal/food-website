@@ -9,6 +9,8 @@ function BusinessLandingPage() {
             <BusinessNavbar/>
             <DashboardBusiness/>
             <BusinessMainSection/>
+
+            
         </div>
     )
 }

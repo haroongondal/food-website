@@ -35,10 +35,7 @@ function MenuDashboard() {
 
   return (
     <div>
-      <AdminSidebar />
-      <section id="content">
-        <AdminNavbar />
-        <main>
+      
           <FeedbackComponents />
 
           <div className="Content-graph-boxes">
@@ -163,8 +160,7 @@ function MenuDashboard() {
           </div>
           <TableMenuDashboard />
           <TableMenuDashboard />
-        </main>
-      </section>
+       
     </div>
   );
 }

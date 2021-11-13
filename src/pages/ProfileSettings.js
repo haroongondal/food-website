@@ -11,10 +11,6 @@ import "../styles/ProfileSettings.css";
 export default function ProfileSettings() {
   return (
     <div>
-      <AdminSidebar />
-      <section id="content">
-        <AdminNavbar />
-        <main>
           <div className="top-tools">
             <div className="left-tools">
               <button className="dark-blue-btn">Timings</button>
@@ -26,8 +22,6 @@ export default function ProfileSettings() {
           <RestaurentDetailsPS/>
           <TimingsPS/>          
           </div>
-        </main>
-      </section>
     </div>
   );
 }

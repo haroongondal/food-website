@@ -15,6 +15,7 @@ import FeedbackPage from './pages/FeedbackPage';
 import BusinessSignup from './components/BusinessSignup';
 import ProtectedRoutes from './Utils/ProtectedRoutes';
 import ProfileSettings from './pages/ProfileSettings';
+import CRMDashboard from "./pages/CRMDashboard"
 import MediaQueryReact from 'media-query-react';
 
 
@@ -73,40 +74,15 @@ function App() {
 
 
         <ProtectedRoutes path = "/Dashboard" component = {MyProfilePage}/>
+
+        <ProtectedRoutes path = "/CRM-Dashboard" component = {CRMDashboard}/>
         
-
-
-        <Route exact path = "/BusinessLandingPage">
+        <Route path = "/BusinessLandingPage">
         <BusinessLandingPage/>
         </Route>
 
-        <Route exact path = "/AdminMenuPage">
-        <AdminMenuPage/>
-        </Route>
-
-        <Route exact path = "/MenuDashboard">
-          <MenuDashboard/>
-        </Route>
-
-
-        <Route exact path = "/OutletsPage">
-          <OutletsPage/>
-        </Route>
-
-        <Route exact path = "/UserManagementPage">
-          <UserManagementPage />
-        </Route>
-
-        <Route exact path = "/FeedbackPage">
-          <FeedbackPage />
-        </Route>
-
-        <Route exact path = "/BusinessSignup">
-          <BusinessSignup/>
-        </Route>
-
-        <Route exact path = "/ProfileSettings">
-          <ProfileSettings/>
+        <Route exact path = "/Business-Signup" >
+        <BusinessSignup/>
         </Route>
 
       </Switch>

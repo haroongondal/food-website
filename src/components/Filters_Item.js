@@ -122,8 +122,7 @@ export default function FiltersItem(props) {
         {IsOpened ? error && <div>{error}</div> : ""}
         {IsOpened
           ? data &&
-            data
-              .filter((v) => {
+            data.filter((v) => {
                 return searchValue === ""
                   ? v
                   : v.Value.toLowerCase().includes(searchValue.toLowerCase());
