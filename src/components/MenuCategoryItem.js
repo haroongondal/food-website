@@ -20,7 +20,7 @@ function MenuCategoryItem(props) {
             name="fav_language"
             value="JavaScript"
           />
-          <h6>{props.data.Value}</h6>
+          <h6>{props.data.Name}</h6>
         </div>
 
         <div className="right-tools-category">

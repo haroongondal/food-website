@@ -4,17 +4,11 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ConsumerLandingPage from './pages/ConsumerLandingPage';
 import TestPage from './pages/TestPage';
 import BusinessLandingPage from './pages/BusinessLandingPage';
-import AdminMenuPage from './pages/AdminMenuPage';
 import FilterPage from './pages/FilterPage';
 import RestaurentDetailsPage from './pages/RestaurentDetailsPage';
 import MyProfilePage from './pages/MyProfilePage';
-import MenuDashboard from './pages/MenuDashboard';
-import OutletsPage from './pages/OutletsPage';
-import UserManagementPage from './pages/UserManagementPage';
-import FeedbackPage from './pages/FeedbackPage';
 import BusinessSignup from './components/BusinessSignup';
 import ProtectedRoutes from './Utils/ProtectedRoutes';
-import ProfileSettings from './pages/ProfileSettings';
 import CRMDashboard from "./pages/CRMDashboard"
 import MediaQueryReact from 'media-query-react';
 
@@ -73,9 +67,9 @@ function App() {
         </Route>
 
 
-        <ProtectedRoutes path = "/Dashboard" component = {MyProfilePage}/>
+        <ProtectedRoutes path = "/Dashboard" component = {MyProfilePage} _to = "userDashboard"/>
 
-        <ProtectedRoutes path = "/CRM-Dashboard" component = {CRMDashboard}/>
+        <ProtectedRoutes path = "/CRM-Dashboard" component = {CRMDashboard} _to = "crmDashboard"/>
         
         <Route path = "/BusinessLandingPage">
         <BusinessLandingPage/>

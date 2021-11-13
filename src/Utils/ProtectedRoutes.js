@@ -1,15 +1,28 @@
 import React from "react";
 import { Redirect, Route } from "react-router-dom";
 
-function ProtectedRoutes({ component: Component, ...restOfProps }) {
+function ProtectedRoutes({ component: Component, _to: to,  ...restOfProps }) {
   const isAuthenticated = localStorage.getItem("isLogedin");
-  console.log("this", isAuthenticated);
-
   return (
     <Route
       {...restOfProps}
       render={(props) =>
-        isAuthenticated === "true" ? <Component {...props} /> : <Redirect to="/" />
+
+        {
+          if (to === "crmDashboard") {
+            if (isAuthenticated === "true") {
+            return  <Component {...props} />
+            } else {
+            return  <Redirect to="/Business-Signup" />
+            }
+          } else if (to === "userDashboard") {
+            if (isAuthenticated === "true") {
+            return  <Component {...props} />
+            } else {
+            return  <Redirect to="/" />
+            }
+          }
+        }
       }
     />
   );

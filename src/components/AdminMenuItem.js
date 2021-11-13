@@ -4,7 +4,6 @@ import "../styles/AdminMenuItem.css";
 import dishImage from "../images/food_plate.png";
 import MenuCategoryItem from "../components/MenuCategoryItem";
 import Modal from "react-responsive-modal";
-import PopupMenuItem from "../components/PopupMenuItem";
 import PopupMenu from "../components/PopupMenu";
 import CancelSvgIcon from "../components/CancelSvgIcon";
 import useFetch from "../Utils/useFetch";
@@ -21,10 +20,6 @@ function AdminMenuItem(props) {
     setcusineId(id);
     setOpened(!IsOpened);
   };
-
-  const { data, isPending, error } = useFetch(
-    `https://api.masairapp.com/api/Lov/GetSubCusine?id=${cusineId}`
-  );
 
   {
     /* const [IsOpened1, setOpened1] = useState(false);
@@ -204,7 +199,7 @@ function AdminMenuItem(props) {
         <div className="left-menu-items">
           <img className="dish-img-menu" alt="dish-img" src={dishImage} />
           <div className="menu-item-title">
-            <h6>{props.data.Value}</h6>
+            <h6>{props.data.Cusine}</h6>
             <span>Regular - Food or Drinks</span>
           </div>
         </div>
@@ -241,14 +236,7 @@ function AdminMenuItem(props) {
               </div>
             )
           }  */}
-
-            {isPending && (
-              <div>
-                <Skeleton />
-              </div>
-            )}
-            {error && <div>{error}</div>}
-            {data && data.map((c) => <MenuCategoryItem data={c} />)}
+            {props.data.SubCusinesListByCusine && props.data.SubCusinesListByCusine.map((c) => <MenuCategoryItem data={c} />)}
           </div>
         </div>
       </div>
