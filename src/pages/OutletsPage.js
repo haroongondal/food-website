@@ -111,7 +111,7 @@ export default function OutletsPage() {
                 <h6 className="title-outlets-header">Outlets</h6>
 
                 <div className="right-outlets-header">
-                  <div className="d-flex ET-Flex-M">
+                  {/* <div className="d-flex ET-Flex-M">
                     <label className="col-md-3 label-ET-Flex-M">View By</label>
                     <div className="border-DD-Flex-M">
                       <div className="content-dropDown">
@@ -125,7 +125,7 @@ export default function OutletsPage() {
                         </span>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="add-context-btn" onClick={handleNewBrandPop}>
                     <button type="submit" className="blue-plus-btn">
                       <i class="bx bx-plus-circle"></i>

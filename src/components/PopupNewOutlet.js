@@ -20,7 +20,7 @@ export default function PopupNewOutlet() {
           />
         </div>
 
-        <div className="col-md-12 m_t_20 d-flex ET-Flex">
+        {/* <div className="col-md-12 m_t_20 d-flex ET-Flex">
           <label className="col-md-3 label-ET-Flex">Company</label>
           <div className="border-DD-Flex">
             <div className="content-dropDown">
@@ -34,7 +34,7 @@ export default function PopupNewOutlet() {
               </span>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="col-md-12 m_t_20 d-flex ET-Flex">
           <label className="col-md-3 label-ET-Flex">Brand</label>
