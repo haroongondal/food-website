@@ -40,7 +40,8 @@ export default function DashboardConsumer() {
               type="text"
               className="searchTerm-top-search"
               placeholder="Search for Restaurants, Cuisines, Location "
-              onChange = {(e) => handlechange(e.target.value)}
+              onChange = {(e) => handlechange(e.target.value)
+               }
             />
             <button type="submit" className="searchButton-top-search">
               <span className="text-search-link-top-search">
