@@ -4,8 +4,6 @@ import "../styles/FeedbackPage.css";
 import Modal from "react-responsive-modal";
 import dislikeThumb from "../images/dislike-thumb.svg";
 import likeThumb from "../images/like-thumb.svg";
-import AdminNavbar from "../components/AdminNavbar";
-import AdminSidebar from "../components/AdminSidebar";
 import FeedbackReviewSec from "../components/FeedbackReviewSec";
 import PopupFeedbackComSET from "../components/PopupFeedbackComSET";
 import FeedbackComponents from "../components/FeedbackComponents";

@@ -1,8 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import AdminNavbar from "../components/AdminNavbar";
-import AdminSidebar from "../components/AdminSidebar";
 import "../styles/OutletsPage.css";
+import "../styles/PopupMenuItem.css"
 import Modal from "react-responsive-modal";
 import arrow from "../images/down_arrow.svg";
 import PopupCompanyGroup from "../components/PopupCompanyGroup";

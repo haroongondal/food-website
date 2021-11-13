@@ -3,7 +3,6 @@ import { useState } from "react";
 import "../styles/MenuComponent.css";
 import downArrowWhite from "../images/down-arrow-white.png";
 import Modal from "react-responsive-modal";
-import PopupMenu from "./PopupMenu";
 import PopupAddUser from "./PopupAddUser";
 import PopupMenuADD from "./PopupMenuADD";
 import CancelSvgIcon from "../components/CancelSvgIcon";

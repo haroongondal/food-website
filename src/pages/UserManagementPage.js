@@ -1,7 +1,5 @@
 import React from "react";
 import "../styles/UserManagementPage.css";
-import AdminNavbar from "../components/AdminNavbar";
-import AdminSidebar from "../components/AdminSidebar";
 import EditSvgIcon from "../components/EditSvgIcon";
 
 function UserManagementPage() {

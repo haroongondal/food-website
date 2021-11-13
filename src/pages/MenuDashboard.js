@@ -1,7 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import AdminNavbar from "../components/AdminNavbar";
-import AdminSidebar from "../components/AdminSidebar";
 import FeedbackComponents from "../components/FeedbackComponents";
 import TableMenuDashboard from "../components/TableMenuDashboard";
 import { Pie } from "react-chartjs-2";
