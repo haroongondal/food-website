@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "../styles/MenuComponent.css";
+import downArrowWhite from "../images/down-arrow-white.png";
 import Modal from "react-responsive-modal";
 import PopupMenu from "./PopupMenu";
 import PopupAddUser from "./PopupAddUser";
@@ -8,10 +9,9 @@ import PopupMenuADD from "./PopupMenuADD";
 import CancelSvgIcon from "../components/CancelSvgIcon";
 
 function MenuComponent() {
-
   // Popup Close-icon
   const closeIcon = <CancelSvgIcon />;
-  
+
   const [isAddMenuShowing, setAddMenuShowing] = useState(false);
 
   const handleAddMenuPop = (e) => {
@@ -62,9 +62,27 @@ function MenuComponent() {
         </div>
 
         <div className="right-tools">
-          <button className="addMenuDetails-btn" onClick={handleCityOultetPop}>
-            Add menu details
-          </button>
+          <div className="menu-Components-DD">
+          <div class="dropdown-menu-Components">
+            <select>
+              <option class="option" value="1">
+                Savor Food
+              </option>
+              <option class="option" value="2">
+              Savor Food
+              </option>
+              <option class="option" value="10">
+              Savor Food
+              </option>
+            </select>
+            <span class="Darrow">
+              <img
+                alt="down-arrow"
+                src={downArrowWhite}
+              />
+            </span>
+          </div>
+          </div>
 
           <button className="addMenu-btn" onClick={handleAddMenuPop}>
             Add menu
@@ -79,7 +97,12 @@ function MenuComponent() {
         center
         closeIcon={closeIcon}
         styles={{
-          modal: { "margin-top": "80px", "max-width": "815px", width: "100%",padding:"0px" },
+          modal: {
+            "margin-top": "80px",
+            "max-width": "815px",
+            width: "100%",
+            padding: "0px",
+          },
         }}
       >
         <PopupMenuADD />
@@ -93,7 +116,7 @@ function MenuComponent() {
           modal: { "margin-top": "80px", "max-width": "955px", width: "100%" },
         }}
       >
-        <PopupAddUser/>
+        <PopupAddUser />
       </Modal>
     </div>
   );

@@ -279,10 +279,11 @@ function FilterPage() {
                 width: "100%",
                 padding: "0px",
                 margin: "0px",
+                borderRadius: "23px 23px 0px 0px"
               },
             }}
           >
-            <div className="mt-3">
+            <div className="mt-5">
               <span className="text-sort-by">Sort By</span>
               <div className="d-grid mt-4">
                 <button
@@ -331,16 +332,16 @@ function FilterPage() {
               animationDuration={800}
               styles={{
                 modal: {
-                  height: "100%",
+                  verticalAlign: "bottom",
                   width: "100%",
                   padding: "0px",
                   margin: "0px",
-                  transform: "translateY(104px)",
+                  borderRadius: "23px 23px 0px 0px"
                 },
               }}
             >
               <div className="adjust-M">
-                <div className="listing_sidebar-M">
+                <div className="listing_sidebar-M mt-4">
                   <FiltersItem
                     filtertypes={Types.FilterTypes.QuickFilters}
                     handleFilters={handleFilters}

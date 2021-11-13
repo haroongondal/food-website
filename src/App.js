@@ -17,6 +17,7 @@ import ProtectedRoutes from './Utils/ProtectedRoutes';
 import ProfileSettings from './pages/ProfileSettings';
 import CRMDashboard from "./pages/CRMDashboard"
 import MediaQueryReact from 'media-query-react';
+import BusinessLogin from './components/BusinessLogin';
 
 
 
@@ -83,6 +84,10 @@ function App() {
 
         <Route exact path = "/Business-Signup" >
         <BusinessSignup/>
+        </Route>
+
+        <Route exact path = "/Business-Login" >
+        <BusinessLogin/>
         </Route>
 
       </Switch>
