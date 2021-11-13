@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/BuissnessSignUp.css";
 import BusinessNavbar from "./BusinessNavbar";
-import backgroundImage from "../images/business-side-background.jpg";
 
 function BusinessSignup() {
   return (
@@ -37,7 +36,7 @@ function BusinessSignup() {
             <input
               className="input-BS"
               type="text"
-              placeholder="Please place the pin accurately at your outlet’s location on the map"
+              placeholder="Please place the pin accurately at your location on the map"
             />
             <span className="text-detect-BS">
               <h6>Detect</h6>
@@ -129,7 +128,7 @@ function BusinessSignup() {
         {/* Save Button */}
         <div className="Section-PS row pb-4 pt-4">
           <div className="col-md-12">
-            <button className="black-btn">Save</button>
+            <button className="black-btn">Sign up</button>
           </div>
         </div>
       </div>

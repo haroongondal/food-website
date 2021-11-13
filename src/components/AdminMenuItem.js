@@ -205,7 +205,7 @@ function AdminMenuItem(props) {
         </div>
 
         <div className="right-menu-items">
-          <h6>7:30 am - 11: 30 am</h6>
+          {/* <h6>7:30 am - 11: 30 am</h6> */}
           <label className="switch">
             <input type="checkbox" />
             <span className="slider round"></span>

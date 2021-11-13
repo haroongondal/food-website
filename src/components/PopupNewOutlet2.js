@@ -27,7 +27,7 @@ function PopupNewOutlet2() {
           </div>
 
           {/* Company */}
-          <div className="dropDown-block-Outlet">
+          {/* <div className="dropDown-block-Outlet">
             <span className="label-dropDown-block">Company</span>
             <div className="dropDown-item" id="margin-10-T">
               <div className="border-dropDown-block">
@@ -43,7 +43,7 @@ function PopupNewOutlet2() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Brand */}
           <div className="dropDown-block-Outlet">
