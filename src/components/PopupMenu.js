@@ -32,6 +32,30 @@ function PopupMenu() {
 
   const [desc, setDesc] = useState("")
 
+  const [img, setimg] = useState("")
+
+  const [img1, setimg1] = useState("")
+
+  const [img2, setimg2] = useState("")
+
+  const [calorieCount, setCalorieCount] = useState("")
+
+  const [portionSize, setPortionSize] = useState("")
+
+  const [prepTime, setPrepTime] = useState("")
+
+  const [spiceLevel, setSpiceLevel] = useState("")
+
+  const postMenuItem = (e) => {
+    e.preventDefault()
+
+    const obj = {
+      
+    }
+  }
+  
+  
+
 
   const handleImageSelect = (e) => {
     setImageSrc(URL.createObjectURL(e.target.files[0]));
@@ -585,7 +609,7 @@ function PopupMenu() {
                     style={{ textAlignLast: "center" }}
                   >
                     <div className="form-input-calorie">
-                      <input type="number"  />
+                      <input type="number"  onChange={(e) => setCalorieCount(e.target.value)}/>
                     </div>
                   </form>
                   <div className="border-calorie">
@@ -607,12 +631,12 @@ function PopupMenu() {
                     style={{ textAlignLast: "center" }}
                   >
                     <div className="form-input-calorie">
-                      <input type="search" />
+                      <input type="search" onChange={(e) => setPortionSize(e.target.value)}/>
                     </div>
                   </form>
                   <div className="border-portion-size-DD">
                     <div className="content-dropDown-portion-size">
-                      <select className="select-portion-size">
+                      <select className="select-portion-size" onChange={(e) => setCalorieCount(e.target.value)}>
                         <option className="option">ml</option>
                         <option className="option">ml</option>
                         <option className="option">ml</option>
@@ -666,7 +690,7 @@ function PopupMenu() {
               </span>
               <div className="border-dropDown-add-menu">
                 <div className="content-dropDown">
-                  <select>
+                  <select onChange={(e) => setPrepTime(e.target.value)}>
                     <option className="option">Add time</option>
                     <option className="option">Add time</option>
                     <option className="option">Add time</option>
@@ -751,13 +775,16 @@ function PopupMenu() {
               </span>
               <div className="align-content-drinks">
                 <div className="content-dropDown">
-                  <button className="drinks-btn">Medium Spicy</button>
+                  <button className="drinks-btn"onClick = {(e) => {e.preventDefault() 
+                    setSpiceLevel("Low Spicy")}} >Medium Spicy</button>
                 </div>
                 <div className="content-dropDown">
-                  <button className="drinks-btn">Mild</button>
+                  <button className="drinks-btn" onClick = {(e) => {e.preventDefault() 
+                    setSpiceLevel("Mild")}} >Mild</button>
                 </div>
                 <div className="content-dropDown">
-                  <button className="drinks-btn">Very Spicy</button>
+                  <button className="drinks-btn"  onClick = {(e) => {e.preventDefault() 
+                    setSpiceLevel("Very Spicy")}}>Very Spicy</button>
                 </div>
               </div>
             </div>
@@ -772,6 +799,7 @@ function PopupMenu() {
             type="submit"
             className="blue-btn"
             style={{ marginRight: "20px" }}
+            onClick = {(e) => postMenuItem(e)}
           >
             Save
           </button>

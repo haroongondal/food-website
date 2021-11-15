@@ -14,11 +14,12 @@ function MenuCategoryItem(props) {
         onClick={handdleToggle}
       >
         <div className="left-tools-category">
-          <h6>{props.data.Value}</h6>
+          <h6>{props.data.Name}</h6>
         </div>
       </div>
       {/* <hr className="line-categoryItem" /> */}
 
+      {props.data.MenuItemsBySubCusine.map((m) => (
       <div className="hello" style={{ maxHeight: "-webkit-fill-available" }}>
         <div className={IsOpened ? "abc" : "hello-hide"}>
           <div className="align-content-categoryItem">
@@ -58,11 +59,11 @@ function MenuCategoryItem(props) {
                   </g>
                 </svg>
               </button>
-                <h6>Veg & Starters</h6>
+                <h6>{m.MenuName}</h6>
               </div>
 
               <div className="right-tools-category">
-                <h6>Rs 200</h6>
+                <h6>Rs {m.Price}</h6>
 
                 <div>
                     <img className="dish-img-categoryItem" alt="dish-pic" src={dishImg}/>
@@ -74,6 +75,7 @@ function MenuCategoryItem(props) {
             </div>
           </div>
         </div>
+       ) )}
       </div>
     
   );

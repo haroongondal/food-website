@@ -7,16 +7,21 @@ export default function SecResMenu(props) {
 
     const [subCusineId, setSubCusineId] = useState(0)
 
-    const [subCusineName, setSubCusineName] = useState("")
+    const [subCusine, setSubCusine] = useState()
   //  const subCusines = useFetch(`https://api.masairapp.com/api/Lov/GetSubCusineByRestaurantId?id=${props.id}`)
     
-    const subCusines = useFetch(`https://api.masairapp.com/api/Lov/GetSubCusine?id=1`)
-
-    const menuItems = useFetch(`https://api.masairapp.com/api/menu/GetMenuItemsBySubCusineId?id=${subCusineId}`)
-
-    function getMenuItems(id, name) {
+    const {data, isPending, error} = useFetch(`https://api.masairapp.com/api/Lov/GetCusineByRestaurantId?id=${props.id}`)
+ 
+    function getMenuItems(id, list) {
         setSubCusineId(id)
-        setSubCusineName(name)
+        setSubCusine(list)
+
+        console.log(list)
+        return(
+            <div>
+                       
+                        </div>
+        )
       }
 
     return (
@@ -27,22 +32,20 @@ export default function SecResMenu(props) {
                         <h6>Menu</h6>
                         <hr className="hr-for-menu"/>
                         <div className="div-for-menu-buttons">
-                        {subCusines.error && console.log(subCusines.error)}
-                        {subCusines.isPending && console.log("Data coming in a moment")}
-                        {subCusines.data && subCusines.data.map((c) => 
-                            <button onClick = {() => getMenuItems(c.Id, c.Value)} className="menu-button">
-                                {c.Value}
+                        {error && console.log(error)}
+                        {isPending && console.log("Data coming in a moment")}
+                        {data && data.map((c) => 
+                            <button onClick = {() => getMenuItems(c.CusineId,c.SubCusinesListByCusine)} className="menu-button">
+                                {c.Cusine}
                             </button>)}
                         </div>
                         <hr className="hr-for-menu"/>
-                        <h5>{subCusineName}</h5>
-                        <ul className="ul-for-menu">
-                        {menuItems.error && console.log(menuItems.error)}
-                        {menuItems.isPending && console.log("Data coming in a moment")}
-                        {menuItems.data && menuItems.data.map((c) => 
+                        
+                       
+                        {subCusine && subCusine.map((c) => 
                             <ResMenuItem data = {c}/>
                         )}
-                        </ul>
+                       
 
                         <div className="button-view-full-menu" style={{display: "none"}}>
                             <a href>View Full Menu</a>
