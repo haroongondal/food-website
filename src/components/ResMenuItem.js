@@ -3,10 +3,14 @@ import '../styles/SecResMenu.css'
 export default function ResMenuItem(props) {
 
     return (
+        <div>
+            <h5 key = {props.data && props.data.Id}>{props.data && props.data.Name}</h5>
+            <ul className="ul-for-menu">
+        {props.data.MenuItemsBySubCusine && props.data.MenuItemsBySubCusine.map((m) => 
         <li className="hide-show" style={{display: "list-item"}}>
                                 <h4>
                                     <span>{props.data.MenuName}</span>
-                                    <span>{`Rs ${props.data.Price}`}</span>
+                                    <span>{`Rs ${m.Price}`}</span>
                                 </h4>
                                 {/* <div className="div-for-rating-menu">
                                 <div className="rate-for-menu">
@@ -23,8 +27,11 @@ export default function ResMenuItem(props) {
                                 </div>
                                 <p><span>123</span> Ratings</p>
                                 </div> */}
-                                <p className="text-menu-desc">{props.data.MenuDescription}</p>
-                                <p className="text-menu-review">Chef's very special drumsticks tossed in a Rich Special Sauce</p>    
+                                <p className="text-menu-desc">{m.MenuName}</p>
+                                <p className="text-menu-review">{m.MenuDescription}</p>    
                             </li>
+                            )}
+                            </ul>
+                            </div>
     )
 }
