@@ -58,7 +58,7 @@ function AdminSidebar() {
         <Link to={`${path}/Users-Management`}>
         <li className="have-children">
           <a href="#abc">
-            <span><i className='bx bx-user icon'></i></span>Users Management
+            <span><i className='bx bx-group icon'></i></span>Users Management
           </a>
           {/* <ul>
         <li><a href="#abc">Add Jury</a></li>
@@ -71,6 +71,18 @@ function AdminSidebar() {
         <li className="have-children">
           <a href="#abc">
             <span><i className='bx bx-like icon'></i></span>Feedback
+          </a>
+          {/* <ul>
+        <li><a href="#abc">Add Author</a></li>
+        <li><a href="#abc">View Authors</a></li>
+      </ul> */}
+        </li>
+        </Link>
+
+        <Link to={`${path}/Profile-Settings`}>
+        <li className="have-children">
+          <a href="#abc">
+            <span><i className='bx bx-user-circle icon'></i></span>Profile Settings
           </a>
           {/* <ul>
         <li><a href="#abc">Add Author</a></li>

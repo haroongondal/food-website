@@ -3,15 +3,12 @@ import { useState } from "react";
 import "../styles/AdminMenuItem.css";
 import dishImage from "../images/food_plate.png";
 import MenuCategoryItem from "../components/MenuCategoryItem";
-import Modal from "react-responsive-modal";
-import PopupMenu from "../components/PopupMenu";
-import CancelSvgIcon from "../components/CancelSvgIcon";
 import useFetch from "../Utils/useFetch";
 import Skeleton from "react-loading-skeleton";
 
 function AdminMenuItem(props) {
   // Popup Close-icon
-  const closeIcon = <CancelSvgIcon />;
+ 
 
   const [IsOpened, setOpened] = useState(false);
   const [cusineId, setcusineId] = useState("");
@@ -178,16 +175,6 @@ function AdminMenuItem(props) {
     );*/
   }
 
-  const [isAddMenuItemPopupShowing, setMenuItemPopupShowing] = useState(false);
-
-  const handleMenuItemPopup = (e) => {
-    e.preventDefault();
-    setMenuItemPopupShowing(true);
-  };
-
-  const closeAddMenuItemPopup = () => {
-    setMenuItemPopupShowing(false);
-  };
 
   return (
     <div className="item-menu">
@@ -206,16 +193,10 @@ function AdminMenuItem(props) {
 
         <div className="right-menu-items">
           {/* <h6>7:30 am - 11: 30 am</h6> */}
-          <label className="switch">
+          {/* <label className="switch">
             <input type="checkbox" />
             <span className="slider round"></span>
-          </label>
-          <div className="add-category-btn" onClick={handleMenuItemPopup}>
-            <button type="submit" className="blue-plus-btn">
-              <i className="bx bx-plus-circle"></i>
-            </button>
-            <span>Add</span>
-          </div>
+          </label> */}
         </div>
       </button>
 
@@ -240,22 +221,6 @@ function AdminMenuItem(props) {
           </div>
         </div>
       </div>
-      <Modal
-        open={isAddMenuItemPopupShowing}
-        onClose={closeAddMenuItemPopup}
-        center
-        closeIcon={closeIcon}
-        styles={{
-          modal: {
-            "margin-top": "80px",
-            "max-width": "815px",
-            width: "100%",
-            padding: "0px",
-          },
-        }}
-      >
-        <PopupMenu />
-      </Modal>
     </div>
   );
 }

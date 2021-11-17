@@ -102,13 +102,15 @@
 }
 .align-box-searchBar {
   padding: 20px;
+  text-align: left !important;
+  margin-top: 0px !important;
 }
 .list-box-searchBar {
   position: relative;
-  display: flex;
+  display: flex !important;
   flex-flow: row;
   align-items: center;
-  margin: 0 0 1rem;
+  margin: 0 0 1rem !important;
   padding: 0 0 1rem;
 }
 .img-box-searchBar {

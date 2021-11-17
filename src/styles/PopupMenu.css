@@ -2,11 +2,10 @@
   margin: 30px 0px;
 }
 .border-back {
-  background: rgb(6 56 108 / 10%);
-  margin: 20px 26px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 2px 4px rgb(0 0 0 / 15%);
+  margin: 20px 0px;
+  padding: 20px 44px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #80808054;
 }
 .border-menu {
   margin: 20px 26px;
@@ -28,10 +27,11 @@
 }
 .egg-btn {
   font-size: 14px;
-  border: none;
-  background-color: rgb(6 56 108 / 10%);
+  background: white;
+  border: 1px solid rgb(6 56 108 / 50%);
   padding: 5px 10px;
   margin: 0px 10px;
+  margin-left: 0px;
   border-radius: 3px;
   box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
 }
@@ -43,8 +43,8 @@
 }
 .veg-btn {
   font-size: 14px;
-  border: none;
-  background-color: rgb(6 56 108 / 10%);
+  background: white;
+  border: 1px solid rgb(6 56 108 / 50%);
   padding: 5px 10px;
   margin: 0px 10px;
   border-radius: 3px;
@@ -58,8 +58,8 @@
 }
 .non-veg-btn {
   font-size: 14px;
-  border: none;
-  background-color: rgb(6 56 108 / 10%);
+  background: white;
+  border: 1px solid rgb(6 56 108 / 50%);
   padding: 5px 10px;
   margin: 0px 10px;
   border-radius: 3px;
@@ -98,7 +98,7 @@
   position: relative;
   padding-left: 27px;
   margin-top: 8px;
-  margin-left: 5px;
+  margin-left: 0px;
   margin-bottom: 8px;
   cursor: pointer;
   font-size: 14px;
@@ -154,11 +154,10 @@ input[type="checkbox"] {
 .dropDown-item-Pricing {
   align-items: center;
   inline-size: max-content;
-  margin: 10px 0px;
 }
 .border-PK {
-  background: rgb(6 56 108 / 56%);
-  padding: 12px;
+  background: rgb(6 56 108);
+  padding: 14px 12px;
   padding-bottom: 13px;
   border-radius: 4px 0px 0px 4px;
 }
@@ -166,6 +165,19 @@ input[type="checkbox"] {
   margin: 0;
   font-size: 13px;
   color: white;
+}
+.input-add-menu {
+  height: 36px;
+}
+.input-add-menu input {
+  flex-grow: 1;
+  padding: 20px 11px;
+  height: 100%;
+  border: 1px solid rgb(6 56 108 / 50%);
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
 }
 
 .form-dropDown {
@@ -176,26 +188,59 @@ input[type="checkbox"] {
   min-width: -moz-fit-content;
   min-width: fit-content;
 }
-.form-dropDown .form-input-PK {
+.form-input-PK {
   display: flex;
   align-items: center;
   height: 36px;
 }
-.form-dropDown .form-input-PK input {
+.form-input-PK input {
   flex-grow: 1;
   padding: 20px 11px;
   height: 100%;
-  border: none;
-  background: rgb(6 56 108 / 10%);
+  border: 1px solid rgb(6 56 108 / 50%);
   border-radius: 0px 4px 4px 0px;
   outline: none;
   width: 100%;
   font-size: 13px;
 }
-.form-dropDown .form-input-PK input::placeholder {
+.form-input-PK input::placeholder {
   color: #474747;
 }
-.form-dropDown .form-input-PK button {
+.form-input-PK button {
+  margin-left: -5px;
+  width: 36px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  color: black;
+  font-size: 18px;
+  border: 1px solid grey;
+  outline: none;
+  border-radius: 0 5px 5px 0;
+  padding: 20px;
+}
+
+.form-input-dropDown {
+  display: flex;
+  align-items: center;
+  height: 36px;
+}
+.form-input-dropDown input {
+  flex-grow: 1;
+  padding: 20px 11px;
+  height: 100%;
+  border: 1px solid rgb(6 56 108 / 50%);
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+}
+.form-input-dropDown input::placeholder {
+  color: #474747;
+}
+.form-input-dropDown button {
   margin-left: -5px;
   width: 36px;
   height: 100%;
@@ -258,13 +303,23 @@ input[type="checkbox"] {
 .content-dropDown .Charges-DD:focus {
   outline: none;
 }
+.addTax-btn {
+  margin-left: 10px;
+  cursor: pointer;
+}
+.addTax-btn i {
+  font-size: 18px;
+  margin-top: 30px;
+  color: #06386C;
+}
 .menu-textArea {
-  border: none;
-  background: rgba(6, 56, 108, 0.1);
+  border: 1px solid rgb(6 56 108 / 50%);
+  background: rgb(6 56 108 / 5%);
   resize: none;
   border-radius: 5px;
   font-size: 14px;
   padding: 10px;
+  width: 100%;
 }
 .menu-textArea:focus {
   outline: 1px solid #06386c6b;
@@ -360,8 +415,8 @@ input[type="checkbox"] {
   grid-gap: 16px;
 }
 .border-calorie {
-  background: rgb(6 56 108 / 56%);
-  padding: 12px;
+  background: rgb(6 56 108);
+  padding: 14px 12px;
   padding-bottom: 13px;
   border-radius: 0px 4px 4px 0px;
 }
@@ -374,8 +429,7 @@ input[type="checkbox"] {
   flex-grow: 1;
   padding: 20px 11px;
   height: 100%;
-  border: none;
-  background: rgb(6 56 108 / 10%);
+  border: 1px solid rgb(6 56 108 / 50%);
   border-radius: 4px 0px 0px 4px;
   outline: none;
   width: 125px;
@@ -416,10 +470,10 @@ input[type="checkbox"] {
   border-radius: 0px 4px 4px 0px;
   height: 100%;
   display: block;
-  background: rgb(6 56 108 / 56%);
+  background: rgb(6 56 108);
   resize: vertical;
   box-sizing: border-box;
-  min-height: 40px;
+  min-height: 42px;
   text-align: center;
   -webkit-appearance: none;
   text-transform: none;
@@ -446,6 +500,45 @@ input[type="checkbox"] {
   height: 18px;
   margin-top: 3px;
 }
+.addMenu-DD {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.addMenu-DD select {
+  font-size: 13px;
+  color: #474747cc;
+  width: 100%;
+  border: 1px solid rgb(6 56 108 / 50%);
+  border-radius: 4px;
+  height: 100%;
+  display: block;
+  resize: vertical;
+  box-sizing: border-box;
+  min-height: 40px;
+  padding: 0px 10px;
+  -webkit-appearance: none;
+  text-transform: none;
+  font-family: inherit;
+  line-height: 1.15;
+  margin: 0;
+}
+.addMenu-DD span {
+  position: absolute;
+  pointer-events: none;
+  right: 4px;
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  font-size: 0;
+  line-height: 1;
+}
+.addMenu-DD span img {
+  width: 12px;
+  height: 12px;
+  margin-top: 6px;
+}
 .drinks {
   width: 100%;
   max-width: fit-content;
@@ -458,8 +551,8 @@ input[type="checkbox"] {
 }
 .drinks-btn {
   font-size: 14px;
-  border: none;
-  background-color: rgb(6 56 108 / 10%);
+  border: 1px solid rgb(6 56 108 / 50%);
+  background-color: white;
   color: black;
   padding: 3px 10px;
   border-radius: 5px;

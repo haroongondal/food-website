@@ -7,7 +7,7 @@ function AdminNavbar() {
     return (
         
 			<nav>
-			<i className="bx bx-menu"></i>
+			
 			<h1 href="#" className="nav-link">Menu Dashboard</h1>
 			<ul>
 				<li>

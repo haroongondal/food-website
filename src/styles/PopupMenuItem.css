@@ -15,18 +15,15 @@
 }
 .dropDown {
   display: flex;
-  inline-size: max-content;
-  grid-gap: 70px;
+  align-items: baseline;
 }
 .dropDown-item {
   display: flex;
   align-items: center;
-  inline-size: max-content;
 }
 .label-dropDown {
   color: #06386c;
   font-size: 14px;
-  margin-right: 10px;
   font-weight: bold;
 }
 .border-dropDown {

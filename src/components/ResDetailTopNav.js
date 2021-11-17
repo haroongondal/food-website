@@ -1,5 +1,6 @@
 import React from "react";
 import '../styles/ResDetailTopNav.css'
+import Scrollspy from 'react-scrollspy'
 
 export default function ResDetailTopNav() {
   return (
@@ -65,22 +66,24 @@ export default function ResDetailTopNav() {
           </div> */}
         </div>
         <div style={{margin:"0px 12px"}}>
-        <div class="topSec-res-detail-M">
-          <div class="overview-res-detail-M">
-            <ul>
-              <li class="bottom-color-res-detail-M">
-                <a>Overview</a>
+        <div className="topSec-res-detail-M-fixed">
+          <div className="overview-res-detail-M">
+            <Scrollspy
+        items={ ['top-section', 'about-section', 'menu-section', 'rating-review-section'] }
+        currentClassName="activeTab" className="">
+              <li className="bottom-color-res-detail-M">
+                <a href="#top-section">Overview</a>
               </li>
-              <li class=" ">
-                <a>About</a>
+              <li className=" bottom-color-res-detail-M">
+                <a href="#about-section">About</a>
               </li>
-              <li class=" ">
-                <a>Menu</a>
+              <li className="bottom-color-res-detail-M ">
+                <a href="#menu-section">Menu</a>
               </li>
-              <li class=" ">
-                <a>Reviews</a>
+              <li className=" bottom-color-res-detail-M">
+                <a href="#rating-review-section">Reviews</a>
               </li>
-            </ul>
+            </Scrollspy>
           </div>
           
           
