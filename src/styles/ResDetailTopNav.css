@@ -97,6 +97,16 @@
   border-radius: 5px 5px 0px 0px;
   border-bottom: 1px solid #e1e1e1;
 }
+.topSec-res-detail-M-fixed {
+  padding: 1rem 15px 0px 15px;
+  position: fixed;
+  bottom: 0%;
+  z-index: 3;
+  background: white;
+  width: 93%;
+  border-radius: 5px 5px 0px 0px;
+  border-bottom: 1px solid #e1e1e1;
+}
 .overview-res-detail-M {
   padding-bottom: 7px;
   background: white;
@@ -115,7 +125,11 @@
   text-align: center;
   position: relative;
 }
-.overview-res-detail-M ul li.bottom-color-res-detail-M::after {
+.overview-res-detail-M ul li.bottom-color-res-detail-M a{
+  text-decoration: none;
+  color: black;
+}
+/* .overview-res-detail-M ul li.bottom-color-res-detail-M::after {
   position: absolute;
   content: "";
   left: 0;
@@ -125,7 +139,7 @@
   background: url(https://im1.dineout.co.in/images/uploads/misc/2021/Feb/2/cta.png)
     left top no-repeat;
   background-size: 100% 100%;
-}
+} */
 
 @media screen and (min-width: 992px) {
   .res-detail-top-nav {

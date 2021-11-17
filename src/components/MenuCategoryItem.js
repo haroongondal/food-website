@@ -1,9 +1,32 @@
 import React from "react";
 import { useState } from "react";
+import Modal from "react-responsive-modal";
+import PopupMenu from "../components/PopupMenu";
+import CancelSvgIcon from "../components/CancelSvgIcon";
 import dishImg from '../images/kadai_chicken.jpg'
 import "../styles/MenuCategoryItem.css";
 
 function MenuCategoryItem(props) {
+
+    // Popup Close-icon
+  const closeIcon = <CancelSvgIcon />;
+
+  const [isAddMenuItemPopupShowing, setMenuItemPopupShowing] = useState(false);
+
+  const handleMenuItemPopup = (e) => {
+    e.preventDefault();
+    setMenuItemPopupShowing(true);
+  };
+
+  const closeAddMenuItemPopup = () => {
+    setMenuItemPopupShowing(false);
+  };
+
+  const closeAddMenuItemBtn = (e) => {
+    e.preventDefault();
+    setMenuItemPopupShowing(false);
+  };
+
   const [IsOpened, setOpened] = useState(false);
 
   const handdleToggle = () => setOpened(!IsOpened);
@@ -16,6 +39,22 @@ function MenuCategoryItem(props) {
         <div className="left-tools-category">
           <h6>{props.data.Name}</h6>
         </div>
+
+        <div className="right-tools-category">
+                
+
+                
+
+                <div className="add-category-btn" onClick={handleMenuItemPopup}>
+            <button type="submit" className="blue-plus-btn">
+              <i className="bx bx-plus-circle"></i>
+            </button>
+            <span>Add</span>
+          </div>
+                {/* <button type="submit" className="options-btn">
+                  <i className="bx bx-dots-vertical-rounded"></i>
+                </button> */}
+              </div>
       </div>
       {/* <hr className="line-categoryItem" /> */}
 
@@ -68,6 +107,11 @@ function MenuCategoryItem(props) {
                 <div>
                     <img className="dish-img-categoryItem" alt="dish-pic" src={dishImg}/>
                 </div>
+
+                <label className="switch-S">
+                          <input type="checkbox" />
+                          <span className="slider-S round-S"></span>
+                        </label>
                 {/* <button type="submit" className="options-btn">
                   <i className="bx bx-dots-vertical-rounded"></i>
                 </button> */}
@@ -76,6 +120,24 @@ function MenuCategoryItem(props) {
           </div>
         </div>
        ) )}
+
+       <Modal
+        open={isAddMenuItemPopupShowing}
+        onClose={closeAddMenuItemPopup}
+        center
+        closeIcon={closeIcon}
+        styles={{
+          modal: {
+            "margin-top": "80px",
+            "max-width": "815px",
+            width: "100%",
+            padding: "0px",
+            borderRadius:"23px"
+          },
+        }}
+      >
+        <PopupMenu click = {closeAddMenuItemBtn} subCuisineId = {props.data.Id} />
+      </Modal>
       </div>
     
   );

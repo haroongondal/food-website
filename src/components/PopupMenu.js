@@ -6,13 +6,16 @@ import { useState } from "react/cjs/react.development";
 import EditSvgIcon from "./EditSvgIcon";
 import CancelSvgIcon from "./CancelSvgIcon";
 import ImageUpload from "image-upload-react";
-import {MenuItemType} from "../Utils/Types.json"
+import { MenuItemType } from "../Utils/Types.json";
 import { findByLabelText } from "@testing-library/dom";
 
-function PopupMenu() {
-  const [image, setImage] = useState(addImage)
+function PopupMenu(props) {
 
-  const [price, setPrice] = useState("")
+  console.log("SubCusineId: " + props.subCuisineId)
+
+  const [image, setImage] = useState(addImage);
+
+  
 
   const OnImageChange = (event) => {
     if (event.target.files && event.target.files[0]) {
@@ -22,44 +25,90 @@ function PopupMenu() {
 
   const [imageSrc, setImageSrc] = useState();
 
-  const [itemName, setItemName] = useState("")
+  const [price, setPrice] = useState("");
 
-  const [itemType, setItemType] = useState("")
+  const [itemName, setItemName] = useState("");
 
-  const [isDeliver, setDeliver] = useState(false)
+  const [itemTax, setItemTax] = useState("");
 
-  const [isTakeAway, setTakeAway] = useState(false)
+  const [itemCharges, setItemCharges] = useState("");
 
-  const [desc, setDesc] = useState("")
+  const [itemType, setItemType] = useState("");
 
-  const [img, setimg] = useState("")
+  const [isDeliver, setDeliver] = useState(false);
 
-  const [img1, setimg1] = useState("")
+  const [isTakeAway, setTakeAway] = useState(false);
 
-  const [img2, setimg2] = useState("")
+  const [desc, setDesc] = useState("");
 
-  const [calorieCount, setCalorieCount] = useState("")
+  const [img, setimg] = useState("");
 
-  const [portionSize, setPortionSize] = useState("")
+  const [img1, setimg1] = useState("");
 
-  const [prepTime, setPrepTime] = useState("")
+  const [img2, setimg2] = useState("");
 
-  const [spiceLevel, setSpiceLevel] = useState("")
+  const [calorieCount, setCalorieCount] = useState("");
+
+  const [portionSize, setPortionSize] = useState("");
+
+  const [prepTime, setPrepTime] = useState("");
+
+  const [spiceLevel, setSpiceLevel] = useState("");
+
+  
+
+  const handleImage = (e) => {
+    setimg(URL.createObjectURL(e.target.files[0]));
+  };
+
+  const handleImage1 = (e) => {
+    setimg1(URL.createObjectURL(e.target.files[0]));
+  };
+
+  const handleImage2 = (e) => {
+    setimg2(URL.createObjectURL(e.target.files[0]));
+  };
 
   const postMenuItem = (e) => {
-    e.preventDefault()
+    e.preventDefault();
+    
+      const values = {
+        Id: 1,
+        MenuName: itemName,
+        MenuDescription: desc,
+        SubCusineId: props.subCuisineId,
+        Price: price,
+        UserId: 2,
+        IsActive: true,
+        UploadImage: null,
+        ResponseCode: 1,
+        ResponseMessage: null
+      }
 
-    const obj = {
-      
-    }
+    console.log(values)
+    fetch("https://api.masairapp.com/api/menu/PostMenuItem",{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json",
+            "Authorization":"Bearer 92fqP7-myXsDG2gP6NkxP5JEZvLzZkRU4iCDU3queuq545jO8O9mcYWzuOTLH-yuuS2ATp1F7jKUPU4Ec1llWI5WXKVgKtY8ZzigZSYi64_TFzvfSW9kYtQXUI0E7WGJOx4LPiw0Qvj0LcmnIJiBECMwrTbTHBFKfMwXB7QkmT8aCicLVgc5rUyD1K3WOkB6_hbyOCgyFddE1vOFTZyp7g"
+            
+        },
+        body:JSON.stringify(values)
+     
+    }).then((result)=> result.json())
+    .then((data) => {
+      console.log(data)
+     if (!data.ResponseMessage) {
+        
+     }
+    })
+    .catch((error)=>{
+        console.log(error)
+    })
+
+    
+    
   }
-  
-  
-
-
-  const handleImageSelect = (e) => {
-    setImageSrc(URL.createObjectURL(e.target.files[0]));
-  };
 
   return (
     <div>
@@ -70,20 +119,15 @@ function PopupMenu() {
       {/* Edit-text-Item-Name */}
       <div className="ET-item-name">
         <div className="border-back">
-          <div className="dropDown">
-            <div className="dropDown-item">
-              <div className="border-dropDown-add-menu">
-                <div className="content-dropDown">
-                  <form action="#" className="form-dropDown">
-                    <div className="form-input-dropDown">
-                      <input type="search" placeholder="Enter item name" 
-                      value = {itemName} onChange = {(e) => setItemName(e.target.value)} required />
+        <div className="input-add-menu col-md-4">
+                      <input
+                        type="search"
+                        placeholder="Enter item name"
+                        value={itemName}
+                        onChange={(e) => setItemName(e.target.value)}
+                        required
+                      />
                     </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -117,14 +161,18 @@ function PopupMenu() {
 
       {/* Food-Type */}
       <div className="border-back">
-        <div className="dropDown">
-          <div className="dropDown-item">
-            <span className="label-dropDown" style={{ marginRight: "87px" }}>
+      <div className="dropDown-item col-md-12">
+            <span className="label-dropDown col-md-3">
               Food Type
             </span>
             <div className="content-dropDown">
-              <button className="egg-btn" onClick = {(e) => {e.preventDefault() 
-                setItemType(MenuItemType.Egg)}}>
+              <button
+                className="egg-btn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setItemType(MenuItemType.Egg);
+                }}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -160,8 +208,13 @@ function PopupMenu() {
                 Egg
               </button>
 
-              <button className="veg-btn" onClick = {(e) => {e.preventDefault() 
-                setItemType(MenuItemType.Veg)}}>
+              <button
+                className="veg-btn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setItemType(MenuItemType.Veg);
+                }}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -197,8 +250,13 @@ function PopupMenu() {
                 Veg
               </button>
 
-              <button className="non-veg-btn" onClick = {(e) => {e.preventDefault() 
-                setItemType(MenuItemType.NonVeg)}}>
+              <button
+                className="non-veg-btn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setItemType(MenuItemType.NonVeg);
+                }}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -235,21 +293,23 @@ function PopupMenu() {
               </button>
             </div>
           </div>
-        </div>
       </div>
 
       {/* Service-Type */}
       <div className="border-back">
-        <div className="dropDown">
-          <div className="dropDown-item">
-            <span className="label-dropDown" style={{ marginRight: "79px" }}>
+      <div className="dropDown-item col-md-12">
+            <span className="label-dropDown col-md-3">
               Service Type
             </span>
 
             <div className="checkBox-menu">
               <label className="main-popup-menu">
                 <h6 className="text-dineout-popup-menu">Delivery</h6>
-                <input type="checkbox" onChange = {(e) => setDeliver(e.target.checked)} required/>
+                <input
+                  type="checkbox"
+                  onChange={(e) => setDeliver(e.target.checked)}
+                  required
+                />
                 <span className="w3docs-popup-menu"></span>
               </label>
             </div>
@@ -257,23 +317,26 @@ function PopupMenu() {
             <div className="checkBox-menu">
               <label className="main-popup-menu">
                 <h6 className="text-dineout-popup-menu">Takeaway</h6>
-                <input type="checkbox" onChange = {(e) => setTakeAway(e.target.checked)} required/>
+                <input
+                  type="checkbox"
+                  onChange={(e) => setTakeAway(e.target.checked)}
+                  required
+                />
                 <span className="w3docs-popup-menu"></span>
               </label>
             </div>
           </div>
-        </div>
       </div>
 
       {/* Pricing */}
       <div className="border-back">
-        <div className="dropDown">
-          <div className="dropDown-item">
-            <span className="label-dropDown" style={{ marginRight: "56px" }}>
+        <div className="dropDown col-md-12 align-items-center">
+          <div className="dropDown-item col-md-3">
+            <span className="label-dropDown">
               Pricing
             </span>
           </div>
-          <div className="dropDown-item-Pricing">
+          <div className="dropDown-item-Pricing" style={{marginRight:"30px"}}>
             <span
               className="label-dropDown"
               style={{ marginRight: "16px", fontSize: "11px" }}
@@ -284,23 +347,22 @@ function PopupMenu() {
               <div className="border-PK">
                 <h6 className="text-PK">PK</h6>
               </div>
-              <form
-                action="#"
-                className="form-dropDown"
-                style={{ maxWidth: "177px", textAlignLast: "center" }}
-              >
-                <div className="form-input-PK">
-                  <input type="number" placeholder="250" 
-                  value = {price} onChange = {(e) => setPrice(e.target.value)} required />
+              <div className="form-input-PK">
+                  <input
+                    type="number"
+                    placeholder="250"
+                    value={price}
+                    onChange={(e) => setPrice(e.target.value)}
+                    required
+                  />
                 </div>
-              </form>
             </div>
           </div>
 
           <div className="dropDown-item-Pricing">
             <span
               className="label-dropDown"
-              style={{ marginRight: "16px", fontSize: "11px" }}
+              style={{ fontSize: "11px" }}
             >
               Terms & Charges
             </span>
@@ -308,33 +370,37 @@ function PopupMenu() {
               <div className="dropDown-item">
                 <div className="border-dropDown-T-and-C">
                   <div className="content-dropDown">
-                    <select className="Tax-DD">
-                      <option className="option">Taxes</option>
-                      <option className="option">Taxes</option>
-                      <option className="option">Taxes</option>
-                    </select>
-                    <span>
-                      <img alt="down-arrow" src={arrow} />
-                    </span>
+                  <div className="form-input-dropDown">
+                      <input style={{borderRadius:"4px 0px 0px 4px",borderRight:"1px solid #8080806b"}}
+                        type="search"
+                        placeholder="Tax"
+                        value={itemTax}
+                        onChange={(e) => setItemTax(e.target.value)}
+                        required
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
               <div className="dropDown-item">
                 <div className="border-dropDown-T-and-C">
                   <div className="content-dropDown">
-                    <select className="Charges-DD">
-                      <option className="option">Charges</option>
-                      <option className="option">Charges</option>
-                      <option className="option">Charges</option>
-                    </select>
-                    <span>
-                      <img alt="down-arrow" src={arrow} />
-                    </span>
+                  <div className="form-input-dropDown">
+                      <input style={{borderRadius:"0px 4px 4px 0px"}}
+                        type="search"
+                        placeholder="Charges"
+                        value={itemCharges}
+                        onChange={(e) => setItemCharges(e.target.value)}
+                        required
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <div className="addTax-btn"><i class='bx bx-plus-circle'></i></div>
         </div>
       </div>
 
@@ -421,9 +487,9 @@ function PopupMenu() {
 
       {/* Menu Description */}
       <div className="border-back">
-        <div className="dropDown">
-          <div className="dropDown-item">
-            <span className="label-dropDown" style={{ marginRight: "-14px" }}>
+        <div className="dropDown col-md-12">
+          <div className="dropDown-item col-md-3">
+            <span className="label-dropDown">
               Menu Description
             </span>
           </div>
@@ -431,23 +497,23 @@ function PopupMenu() {
             placeholder="Remember, be nice!"
             className="menu-textArea"
             rows="6"
-            cols="95"
-            value = {desc}
-            onChange = {(e) => setDesc(e.target.value)}
+            cols="70"
+            value={desc}
+            onChange={(e) => setDesc(e.target.value)}
           ></textarea>
         </div>
       </div>
 
       {/* Image */}
       <div className="border-back">
-        <div className="dropDown">
-          <div className="dropDown-item">
-            <span className="label-dropDown" style={{ marginRight: "-9px" }}>
+        <div className="dropDown col-md-12">
+          <div className="dropDown-item col-md-3">
+            <span className="label-dropDown" style={{ marginRight: "60px" }}>
               Image
             </span>
           </div>
           <div className="image-video">
-            <div className="image-btn-menu">
+            {/* <div className="image-btn-menu">
               <div className="image-menu">
                 <img src={image} alt="fileImage" />
               </div>
@@ -456,21 +522,7 @@ function PopupMenu() {
                 type="file"
                 onChange={OnImageChange}
               />
-            </div>
-
-            <ImageUpload
-              handleImageSelect={handleImageSelect}
-              imageSrc={imageSrc}
-              setImageSrc={setImageSrc}
-              style={{
-                width: 170,
-                height: 110,
-                background: "grey",
-                display: "flex",
-                marginTop: "0px",
-                borderRadius: "5px",
-              }}
-            />
+            </div> */}
             {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -504,48 +556,55 @@ function PopupMenu() {
                 </g>
               </svg> */}
 
-            <button className="btn-img-vid">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="96"
-                height="96"
-                viewBox="0 0 226 226"
-                style={{ fill: "#000000" }}
-                className="svg-img-vid"
-              >
-                <g
-                  fill="none"
-                  fill-rule="nonzero"
-                  stroke="none"
-                  stroke-width="1"
-                  stroke-linecap="butt"
-                  stroke-linejoin="miter"
-                  stroke-miterlimit="10"
-                  stroke-dasharray=""
-                  stroke-dashoffset="0"
-                  font-family="none"
-                  font-weight="none"
-                  font-size="none"
-                  text-anchor="none"
-                  style={{ mixBlendMode: "normal" }}
-                >
-                  <path d="M0,226v-226h226v226z" fill="none"></path>
-                  <g fill="#06386c">
-                    <path d="M37.66667,37.66667c-10.29301,0 -18.83333,8.54033 -18.83333,18.83333v113c0,10.29301 8.54033,18.83333 18.83333,18.83333h75.33333v-18.83333h-75.33333v-113h150.66667v56.5h18.83333v-56.5c0,-10.29301 -8.54032,-18.83333 -18.83333,-18.83333zM136.54167,103.58333l-32.95833,37.66667l-23.54167,-23.54167l-25.63835,32.95833h96.26335v-28.25zM169.5,131.83333v37.66667h-37.66667v18.83333h37.66667v37.66667h18.83333v-37.66667h37.66667v-18.83333h-37.66667v-37.66667z"></path>
-                  </g>
-                </g>
-              </svg>
-            </button>
+            <ImageUpload
+              handleImageSelect={handleImage}
+              imageSrc={img}
+              setImageSrc={setimg}
+              style={{
+                width: 170,
+                height: 105,
+                background: "rgb(6 56 108 / 85%)",
+                display: "flex",
+                marginTop: "0px",
+                borderRadius: "5px",
+              }}
+            />
+
+            <ImageUpload
+              handleImageSelect={handleImage1}
+              imageSrc={img1}
+              setImageSrc={setimg1}
+              style={{
+                width: 170,
+                height: 105,
+                background: "rgb(6 56 108 / 85%)",
+                display: "flex",
+                marginTop: "0px",
+                borderRadius: "5px",
+              }}
+            />
+
+            <ImageUpload
+              handleImageSelect={handleImage2}
+              imageSrc={img2}
+              setImageSrc={setimg2}
+              style={{
+                width: 170,
+                height: 105,
+                background: "rgb(6 56 108 / 85%)",
+                display: "flex",
+                marginTop: "0px",
+                borderRadius: "5px",
+              }}
+            />
           </div>
         </div>
       </div>
 
       {/* Dish Details */}
       <div className="border-back">
-        <div className="dropDown">
-          <div className="dropDown-item">
+        <div className="dropDown col-md-12">
+          <div className="dropDown-item col-md-3">
             <span className="label-dropDown" style={{ marginRight: "9px" }}>
               Dish Details
             </span>
@@ -609,7 +668,10 @@ function PopupMenu() {
                     style={{ textAlignLast: "center" }}
                   >
                     <div className="form-input-calorie">
-                      <input type="number"  onChange={(e) => setCalorieCount(e.target.value)}/>
+                      <input
+                        type="number"
+                        onChange={(e) => setCalorieCount(e.target.value)}
+                      />
                     </div>
                   </form>
                   <div className="border-calorie">
@@ -631,12 +693,18 @@ function PopupMenu() {
                     style={{ textAlignLast: "center" }}
                   >
                     <div className="form-input-calorie">
-                      <input type="search" onChange={(e) => setPortionSize(e.target.value)}/>
+                      <input
+                        type="search"
+                        onChange={(e) => setPortionSize(e.target.value)}
+                      />
                     </div>
                   </form>
                   <div className="border-portion-size-DD">
                     <div className="content-dropDown-portion-size">
-                      <select className="select-portion-size" onChange={(e) => setCalorieCount(e.target.value)}>
+                      <select
+                        className="select-portion-size"
+                        onChange={(e) => setCalorieCount(e.target.value)}
+                      >
                         <option className="option">ml</option>
                         <option className="option">ml</option>
                         <option className="option">ml</option>
@@ -689,7 +757,7 @@ function PopupMenu() {
                 Preparation Time
               </span>
               <div className="border-dropDown-add-menu">
-                <div className="content-dropDown">
+                <div className="addMenu-DD">
                   <select onChange={(e) => setPrepTime(e.target.value)}>
                     <option className="option">Add time</option>
                     <option className="option">Add time</option>
@@ -775,16 +843,37 @@ function PopupMenu() {
               </span>
               <div className="align-content-drinks">
                 <div className="content-dropDown">
-                  <button className="drinks-btn"onClick = {(e) => {e.preventDefault() 
-                    setSpiceLevel("Low Spicy")}} >Medium Spicy</button>
+                  <button
+                    className="drinks-btn"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setSpiceLevel("Low Spicy");
+                    }}
+                  >
+                    Medium Spicy
+                  </button>
                 </div>
                 <div className="content-dropDown">
-                  <button className="drinks-btn" onClick = {(e) => {e.preventDefault() 
-                    setSpiceLevel("Mild")}} >Mild</button>
+                  <button
+                    className="drinks-btn"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setSpiceLevel("Mild");
+                    }}
+                  >
+                    Mild
+                  </button>
                 </div>
                 <div className="content-dropDown">
-                  <button className="drinks-btn"  onClick = {(e) => {e.preventDefault() 
-                    setSpiceLevel("Very Spicy")}}>Very Spicy</button>
+                  <button
+                    className="drinks-btn"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setSpiceLevel("Very Spicy");
+                    }}
+                  >
+                    Very Spicy
+                  </button>
                 </div>
               </div>
             </div>
@@ -799,11 +888,11 @@ function PopupMenu() {
             type="submit"
             className="blue-btn"
             style={{ marginRight: "20px" }}
-            onClick = {(e) => postMenuItem(e)}
+            onClick={(e) => postMenuItem(e)}
           >
             Save
           </button>
-          <button className="green-btn">Cancel</button>
+          <button className="green-btn"  onClick ={(e)=> props.click(e)}>Cancel</button>
         </div>
       </div>
     </div>
