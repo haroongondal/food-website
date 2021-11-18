@@ -1,9 +1,5 @@
 .border-popup-city {
-  background: white;
-  border-radius: 30px;
-  margin: 30px 1.2rem;
   padding: 30px 30px;
-  box-shadow: 2px 2px 18px rgb(0 0 0 / 10%);
   width: max-content;
 }
 .search-city {

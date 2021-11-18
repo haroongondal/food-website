@@ -2,7 +2,8 @@
 import '../styles/MobileAppSection.css'
 import mobileIcon from '../images/mobile_icon.png'
 import googlePlayStoreImg from '../images/google_playstore_image.png'
-import ss from '../images/screenshot_app.png'
+import ss from '../images/mobileSS.png'
+import ss2 from '../images/mobileSS2.png'
 
 
 export default function MobileAppSection() {
@@ -46,8 +47,9 @@ export default function MobileAppSection() {
 
 {/* 2-section */}
 
-<div style={{marginTop:"20px"}}>
+<div className="mobileSS">
 <img className="app-screenshot" alt="app-screenshot" src={ss}/>
+<img className="app-screenshot2" alt="app-screenshot2" src={ss2}/>
 </div>
 </div>
                 

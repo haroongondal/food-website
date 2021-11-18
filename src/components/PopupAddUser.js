@@ -4,6 +4,9 @@ import "../styles/PopupAddUser.css";
 function PopupAddUser() {
   return (
     <div>
+    <div className="title-popup">
+        <h6>Add New User</h6>
+      </div>
       <div className="border-popup-city">
         {/* Name */}
         <div className="col-md-12 m_t_20 d-flex ET-Flex">

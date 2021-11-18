@@ -7,10 +7,6 @@
     margin-bottom: 50px;
     padding: 0px;
   }
-  .app-screenshot{
-    width: 100%;
-    height: 100%;
-  }
   .div-1-section-mobile-app {
     padding: 30px;
   }
@@ -74,10 +70,24 @@
     font-size: 10px;
   }
   .searchTerm:focus {
-    color: #00b4cc;
+    color: black;
   }
   .googlePlayBtn{
     margin-top: 15px;
+  }
+  .mobileSS{
+    margin-top: 20px;
+    
+    text-align: center;
+  }
+  .app-screenshot{
+    width:32%;
+    object-fit: cover;
+  }
+  .app-screenshot2{
+    width: 28%;
+    position: relative;
+    transform: translate(-12px, 12px);
   }
 }
 
@@ -135,12 +145,12 @@
     padding-left: 35px;
     height: 35px;
     outline: none;
-    color: #9dbfaf;
+    color: #0000008f;
     font-size: smaller;
   }
   
   .searchTerm:focus {
-    color: #00b4cc;
+    color: black;
   }
   
   .searchButton {
@@ -161,11 +171,26 @@
   }
   /*Resize the wrap to see the search bar change!*/
   .wrap {
-    width: 90%;
+    width: 100%;
     position: relative;
   }
   .googlePlayBtn{
     margin-top: 30px;
+  }
+  .mobileSS{
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .app-screenshot{
+    width:40%;
+    object-fit: cover;
+  }
+  .app-screenshot2{
+    width: 19%;
+    right: 6%;
+    transform: translate(10px, 29px);
+    position: absolute;
   }
 }
 

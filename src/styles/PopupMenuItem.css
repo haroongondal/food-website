@@ -39,11 +39,10 @@
   font-size: 13px;
   color: #474747cc;
   width: 100%;
-  border: none;
+  border: 1px solid rgb(6 56 108 / 50%);
   border-radius: 4px;
   height: 100%;
   display: block;
-  background-color: rgb(6 56 108 / 10%);
   resize: vertical;
   box-sizing: border-box;
   min-height: 40px;
