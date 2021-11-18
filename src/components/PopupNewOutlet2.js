@@ -1,17 +1,25 @@
 import React from "react";
+import { useState } from "react";
 import arrow from "../images/down_arrow.svg";
 import "../styles/PopupNewOutlet.css";
 
-function PopupNewOutlet2() {
+function PopupNewOutlet2(props) {
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [pin, setPin] = useState("");
+  const [gstn, setGstn] = useState("");
+
+
   return (
     <div>
       <div className="title-popup">
         <h6>Add New Outlet</h6>
       </div>
       <div className="align-Popup">
-        <div className="border-popup-city">
+        <div className="border-popup-city" style={{borderBottom:"1px solid #00000026"}}>
           {/* Outlet-Name */}
-          <div className="dropDown-block">
+          {/* <div className="dropDown-block">
             <span className="label-dropDown-block">Outlet Name</span>
             <div className="dropDown-item" id="margin-10-T">
               <div className="border-dropDown-block">
@@ -24,7 +32,7 @@ function PopupNewOutlet2() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Company */}
           {/* <div className="dropDown-block-Outlet">
@@ -46,7 +54,7 @@ function PopupNewOutlet2() {
           </div> */}
 
           {/* Brand */}
-          <div className="dropDown-block-Outlet">
+          {/* <div className="dropDown-block-Outlet">
             <span className="label-dropDown-block">Brand</span>
             <div className="dropDown-item" id="margin-10-T">
               <div className="border-dropDown-block">
@@ -62,7 +70,7 @@ function PopupNewOutlet2() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Email */}
           <div className="dropDown-block-Outlet">
@@ -97,9 +105,9 @@ function PopupNewOutlet2() {
           </div>
         </div>
 
-        <div className="border-popup-city">
+        <div className="border-popup-city" style={{borderBottom:"1px solid #00000026"}}>
           {/* Logo */}
-          <div className="dropDown-block">
+          {/* <div className="dropDown-block">
             <span className="label-dropDown-block">Add Logo</span>
             <div className="border-dropDown-block" id="margin-10-T">
               <div className="content-dropDown">
@@ -142,10 +150,10 @@ function PopupNewOutlet2() {
                 </span>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Image */}
-          <div className="dropDown-block-Outlet">
+          {/* <div className="dropDown-block-Outlet">
             <span className="label-dropDown-block">Or</span>
             <div className="dropDown-item" id="margin-10-T">
               <div className="border-dropDown-block">
@@ -158,7 +166,7 @@ function PopupNewOutlet2() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* PIN */}
           <div className="dropDown-block-Outlet">
@@ -227,7 +235,7 @@ function PopupNewOutlet2() {
           </div>
 
           {/* Zone */}
-          <div className="dropDown-block-Outlet">
+          {/* <div className="dropDown-block-Outlet">
             <span className="label-dropDown-block">Zone</span>
             <div className="dropDown-item" id="margin-10-T">
               <div className="border-dropDown-block">
@@ -240,7 +248,7 @@ function PopupNewOutlet2() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* City */}
           <div className="dropDown-block-Outlet">
@@ -308,7 +316,7 @@ function PopupNewOutlet2() {
           >
             Save
           </button>
-          <button className="green-btn">Cancel</button>
+          <button className="green-btn" onClick={(e) => props.click(e)}>Cancel</button>
         </div>
       </div>
     </div>

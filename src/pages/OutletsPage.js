@@ -13,9 +13,9 @@ import PopupNewOutlet2 from "../components/PopupNewOutlet2";
 
 export default function OutletsPage() {
   //   Open-Close-OutletBox
-  const [IsOpened, setOpened] = useState(false);
+  // const [IsOpened, setOpened] = useState(true);
 
-  const handdleToggle = () => setOpened(!IsOpened);
+  // const handdleToggle = () => setOpened(!IsOpened);
 
   //   PopupCompanyGroup
   const [isCompanyGroupShowing, setCompanyGroupShowing] = useState(false);
@@ -26,6 +26,10 @@ export default function OutletsPage() {
   };
 
   const closeCompanyGroupPop = () => {
+    setCompanyGroupShowing(false);
+  };
+
+  const closeCompanyGroupBtn = (e) => {
     setCompanyGroupShowing(false);
   };
 
@@ -43,6 +47,10 @@ export default function OutletsPage() {
     setNewBrandShowing(false);
   };
 
+  const closeNewBrandBtn = (e) => {
+    setNewBrandShowing(false);
+  };
+
   //   PopupNewOutlet
   const [isNewOutletShowing, setNewOutletShowing] = useState(false);
 
@@ -55,6 +63,10 @@ export default function OutletsPage() {
     setNewOutletShowing(false);
   };
 
+  const closeNewOutletBtn = (e) => {
+    setNewOutletShowing(false);
+  };
+
   return (
     <div>
           <div className="top-tools">
@@ -63,7 +75,7 @@ export default function OutletsPage() {
             </div>
           </div>
           <div className="Content-graph-boxes">
-            <div className="border-back-white">
+            {/* <div className="border-back-white">
               <div className="header-catch22">
                 <h6>Catch22</h6>
                 <span
@@ -104,7 +116,7 @@ export default function OutletsPage() {
                   </svg>
                 </span>
               </div>
-            </div>
+            </div> */}
             <div className="border-back-white-outlet">
               <div className="outlets-header">
                 <h6 className="title-outlets-header">Outlets</h6>
@@ -125,12 +137,12 @@ export default function OutletsPage() {
                       </div>
                     </div>
                   </div> */}
-                  <div className="add-context-btn" onClick={handleNewBrandPop}>
+                  {/* <div className="add-context-btn" onClick={handleNewBrandPop}>
                     <button type="submit" className="blue-plus-btn">
                       <i class="bx bx-plus-circle"></i>
                     </button>
                     <span>Add Brand</span>
-                  </div>
+                  </div> */}
                   <div className="add-context-btn" onClick={handleNewOutletPop}>
                     <button type="submit" className="blue-plus-btn">
                       <i class="bx bx-plus-circle"></i>
@@ -142,11 +154,11 @@ export default function OutletsPage() {
             </div>
 
             <button
-              className={IsOpened ? "outlet-box is-open" : "outlet-box"}
+              className="outlet-box is-open"
               style={{ outline: "0px auto -webkit-focus-ring-color" }}
-              onClick={handdleToggle}
+              // onClick={handdleToggle}
             >
-              <div className="col-md-11 left-tools-outlet-box">
+              {/* <div className="col-md-11 left-tools-outlet-box">
                 <h6 className="col-md-3">Dunkin Brands</h6>
                 <h6>5 Outlets</h6>
               </div>
@@ -155,14 +167,13 @@ export default function OutletsPage() {
                 <span>
                   <img alt="down-arrow" src={arrow} style={{margin: "0px 14px"}}/>
                 </span>
-              </div>
-            </button>
+              </div> */}
 
-            <div
+              <div
               className="content-outlet-box"
               style={{ maxHeight: "-webkit-fill-available" }}
             >
-              <div className={IsOpened ? "abc" : "content-outlet-box-hide"}>
+              <div className="content-outlet-box">
               <table class="table">
               <tbody>
                     <tr className="tr-table">
@@ -236,6 +247,9 @@ export default function OutletsPage() {
                 </table>
               </div>
             </div>
+            </button>
+
+            
 
             {/* PopupCompanyGroup */}
             <Modal
@@ -246,12 +260,13 @@ export default function OutletsPage() {
               styles={{
                 modal: {
                   "margin-top": "80px",
-                  "max-width": "815px",
-                  width: "100%", padding: "0px"
+                  "max-width": "535px",
+                  width: "100%", padding: "0px",
+                  borderRadius:"23px"
                 },
               }}
             >
-              <PopupCompanyGroup />
+              <PopupCompanyGroup click={closeCompanyGroupBtn}/>
             </Modal>
 
             {/* PopupNewBrand */}
@@ -263,12 +278,13 @@ export default function OutletsPage() {
               styles={{
                 modal: {
                   "margin-top": "80px",
-                  "max-width": "815px",
-                  width: "100%", padding: "0px"
+                  "max-width": "535px",
+                  width: "100%", padding: "0px",
+                  borderRadius:"23px"
                 },
               }}
             >
-              <PopupNewBrand />
+              <PopupNewBrand click={closeNewBrandBtn}/>
             </Modal>
 
             {/* PopupNewOutlet */}
@@ -280,12 +296,13 @@ export default function OutletsPage() {
               styles={{
                 modal: {
                   "margin-top": "80px",
-                  "max-width": "815px",
-                  width: "100%", padding: "0px"
+                  "max-width": "535px",
+                  width: "100%", padding: "0px",
+                  borderRadius:"23px"
                 },
               }}
             >
-              <PopupNewOutlet2 />
+              <PopupNewOutlet2 click={closeNewOutletBtn}/>
             </Modal>
           </div>
     </div>

@@ -22,6 +22,12 @@ function MenuComponent() {
     setAddMenuShowing(false);
   };
 
+
+  const closeAddMenuBtn = (e) => {
+    setAddMenuShowing(false);
+  };
+
+
   const [isCityOultetShowing, setCityOultetShowing] = useState(false);
 
   const handleCityOultetPop = (e) => {
@@ -98,13 +104,14 @@ function MenuComponent() {
         styles={{
           modal: {
             "margin-top": "80px",
-            "max-width": "815px",
+            "max-width": "535px",
             width: "100%",
             padding: "0px",
+            borderRadius:"23px"
           },
         }}
       >
-        <PopupMenuADD />
+        <PopupMenuADD click={closeAddMenuBtn}/>
       </Modal>
 
       <Modal

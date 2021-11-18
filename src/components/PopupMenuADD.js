@@ -4,7 +4,7 @@ import { useState } from "react/cjs/react.development";
 import arrow from "../images/down_arrow.svg";
 import useFetch from "../Utils/useFetch";
 
-export default function PopupMenuADD() {
+export default function PopupMenuADD(props) {
 
   const {data, isPending, error} = useFetch("https://api.masairapp.com/api/Lov/GetCusine")
 
@@ -99,7 +99,7 @@ export default function PopupMenuADD() {
           >
             Save
           </button>
-          <button className="green-btn">Cancel</button>
+          <button className="green-btn" onClick={(e) => props.click(e)}>Cancel</button>
         </div>
       </div>
       </div>

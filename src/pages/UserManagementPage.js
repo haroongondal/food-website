@@ -1,8 +1,32 @@
 import React from "react";
+import { useState } from "react";
 import "../styles/UserManagementPage.css";
 import EditSvgIcon from "../components/EditSvgIcon";
+import CancelSvgIcon from "../components/CancelSvgIcon";
+import Modal from "react-responsive-modal";
+import PopupAddUser from "../components/PopupAddUser";
+
 
 function UserManagementPage() {
+
+  //   Cancel Icon
+  const closeIcon = <CancelSvgIcon />;
+
+   //   PopupAddUser
+   const [isAddUserShowing, setAddUserShowing] = useState(false);
+
+   const handleAddUserPop = (e) => {
+     e.preventDefault();
+     setAddUserShowing(true);
+   };
+ 
+   const closeAddUserPop = () => {
+     setAddUserShowing(false);
+   };
+ 
+   const closeAddUserBtn = (e) => {
+     setAddUserShowing(false);
+   };
   return (
     <div>
           <div className="top-tools">
@@ -24,7 +48,7 @@ function UserManagementPage() {
                     <span className="w3docs-city-CB"></span>
                   </label>
                 </div>
-                <div className="add-context-btn">
+                <div className="add-context-btn" onClick={handleAddUserPop}>
                   <button type="submit" className="blue-plus-btn">
                     <i class="bx bx-plus-circle"></i>
                   </button>
@@ -504,6 +528,23 @@ function UserManagementPage() {
               </table>
             </div>
           </div>
+          {/* PopupAddUser */}
+          <Modal
+              open={isAddUserShowing}
+              onClose={closeAddUserPop}
+              center
+              closeIcon={closeIcon}
+              styles={{
+                modal: {
+                  "margin-top": "80px",
+                  "max-width": "535px",
+                  width: "100%", padding: "0px",
+                  borderRadius:"23px"
+                },
+              }}
+            >
+              <PopupAddUser click={closeAddUserBtn}/>
+            </Modal>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function PopupNewBrand() {
+export default function PopupNewBrand(props) {
   return (
     <div>
       <div className="title-popup">
@@ -98,7 +98,7 @@ export default function PopupNewBrand() {
           >
             Save
           </button>
-          <button className="green-btn">Cancel</button>
+          <button className="green-btn" onClick={(e) => props.click(e)}>Cancel</button>
         </div>
       </div>
     </div>

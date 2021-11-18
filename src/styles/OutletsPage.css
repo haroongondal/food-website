@@ -38,7 +38,6 @@
   width: 40px;
 }
 .border-back-white-outlet {
-  margin: 20px 0px 0px 0px;
   border-radius: 30px 30px 0px 0px;
   background: white;
   padding: 16px 26px;
@@ -105,7 +104,7 @@ button.outlet-box {
   border: none;
   outline: none;
   text-align: left;
-  padding: 26px;
+  padding: 0px !important;
   /* margin-top: 10px; */
   font-size: 15px;
   font-weight: 600;
@@ -127,7 +126,7 @@ button.outlet-box.is-open {
   background-color: white;
   overflow: hidden;
   transition: max-height 0.2s ease-in-out;
-  border-radius: 25px;
+  border-radius: 0px 0px 30px 30px;
 }
 .content-outlet-box-hide {
   background-color: white;

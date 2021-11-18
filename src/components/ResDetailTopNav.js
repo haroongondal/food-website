@@ -1,8 +1,28 @@
 import React from "react";
+import { useEffect } from "react";
 import '../styles/ResDetailTopNav.css'
 import Scrollspy from 'react-scrollspy'
 
 export default function ResDetailTopNav() {
+
+  const Header = () => {
+    
+    // Sticky Menu Area
+    useEffect(() => {
+        window.addEventListener('scroll', isSticky);
+        return () => {
+            window.removeEventListener('scroll', isSticky);
+        };
+    });
+
+           
+    /* Method that will fix header after a specific scrollable */
+           const isSticky = (e) => {
+                const header = document.querySelector('.res-detail-top-nav');
+                const scrollTop = window.scrollY;
+                scrollTop >= 250 ? header.classList.add('dashboard-res-detail-M-fixed') : header.classList.remove('dashboard-res-detail-M-fixed');
+            };  
+}
   return (
     <div>
       <section className="res-detail-top-nav">
@@ -66,7 +86,7 @@ export default function ResDetailTopNav() {
           </div> */}
         </div>
         <div style={{margin:"0px 12px"}}>
-        <div className="topSec-res-detail-M-fixed">
+        <div className="topSec-res-detail-M">
           <div className="overview-res-detail-M">
             <Scrollspy
         items={ ['top-section', 'about-section', 'menu-section', 'rating-review-section'] }

@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/PopupCompanyGroup.css";
 
-export default function PopupCompanyGroup() {
+export default function PopupCompanyGroup(props) {
   return (
     <div>
       <div className="title-popup">
@@ -101,7 +101,7 @@ export default function PopupCompanyGroup() {
           >
             Save
           </button>
-          <button className="green-btn">Cancel</button>
+          <button className="green-btn" onClick={(e) => props.click(e)}>Cancel</button>
         </div>
       </div>
     </div>
