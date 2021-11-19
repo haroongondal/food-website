@@ -1,20 +1,27 @@
 import React from "react";
+import { useState } from "react";
+import Types from '../Utils/Types.json'
 
 export default function TimingsItemPS() {
+  const [day, setDay] = useState("");
+  const [firstTime, setFirstTime] = useState("");
+  const [secondTime, setSecondTime] = useState("");
+  const [active, setActive] = useState(false);
+
   return (
     <div>
       <div className="Section-PS-Timings row col-md-12 justify-content-between">
         {/* Days */}
         <div className="width-20">
           <div class="dropdown-PS">
-            <select>
-              <option class="option">Monday</option>
-              <option class="option">Tuesday</option>
-              <option class="option">Wednesday</option>
-              <option class="option">Thursday</option>
-              <option class="option">Friday</option>
-              <option class="option">Saturday</option>
-              <option class="option">Sunday</option>
+            <select onChange={(e) => setDay(e.target.value)}>
+              <option class="option" value={Types.Days.Monday}>Monday</option>
+              <option class="option" value={Types.Days.Tuesday}>Tuesday</option>
+              <option class="option" value={Types.Days.Wednesday}>Wednesday</option>
+              <option class="option" value={Types.Days.Thursday}>Thursday</option>
+              <option class="option" value={Types.Days.Friday}>Friday</option>
+              <option class="option" value={Types.Days.Saturday}>Saturday</option>
+              <option class="option" value={Types.Days.Sunday}>Sunday</option>
             </select>
             <span className="Darrow">
               <img
@@ -33,6 +40,8 @@ export default function TimingsItemPS() {
             id="appt"
             name="appt"
             placeholder="12:00AM"
+            value={firstTime}
+            onChange={(e) => setFirstTime(e.target.value)}
           />
         </div>
 
@@ -49,15 +58,17 @@ export default function TimingsItemPS() {
             id="appt"
             name="appt"
             placeholder="12:00AM"
+            value={secondTime}
+            onChange={(e) => setSecondTime(e.target.value)}
           />
         </div>
 
         {/* Active / Inactive */}
         <div className="width-20">
           <div class="dropdown-PS">
-            <select>
-              <option class="option">Active</option>
-              <option class="option">Inactive</option>
+            <select onChange={(e) => setActive(e.target.value)}>
+              <option class="option" value={true}>Active</option>
+              <option class="option" value={false}>Inactive</option>
             </select>
             <span className="Darrow">
               <img
@@ -70,9 +81,9 @@ export default function TimingsItemPS() {
 
         {/* Dustbin Icon */}
         <div className="width-0 align-self-center">
-          <span >
+          <span>
             <svg
-            className="dust-bin"
+              className="dust-bin"
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
