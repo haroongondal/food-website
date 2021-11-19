@@ -107,12 +107,12 @@
 .menu-Components-DD {
   width: 43%;
 }
-.dropdown-menu-Components {
+.dropdown-menu-Components{
   position: relative;
   display: flex;
   align-items: center;
 }
-.dropdown-menu-Components select {
+.dropdown-menu-Components select{
   box-shadow: 0px 6px 6px rgb(0 0 0 / 10%);
   font-size: 13px;
   color: white;
@@ -131,6 +131,21 @@
   font-family: inherit;
   line-height: 1.15;
   margin: 0;
+}
+
+.dropdown-menu-Components select:focus{
+  outline: none;
+}
+option:before {
+  content: ">";
+  font-size: 20px;
+  display: none;
+  padding-right: 10px;
+  padding-left: 5px;
+  color: #fff;
+}
+option:hover:before {
+  display: inline;
 }
 .dropdown-menu-Components .Darrow {
   position: absolute;

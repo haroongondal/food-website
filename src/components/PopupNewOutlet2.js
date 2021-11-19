@@ -4,12 +4,53 @@ import arrow from "../images/down_arrow.svg";
 import "../styles/PopupNewOutlet.css";
 
 function PopupNewOutlet2(props) {
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [pin, setPin] = useState("");
   const [gstn, setGstn] = useState("");
+  const [address, setAddress] = useState("");
+  const [area, setArea] = useState("");
+  const [city, setCity] = useState("");
+  const [pincode, setPincode] = useState("");
+  const [country, setCountry] = useState("");
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (email !== "" && password !== "") {
+      console.log("OkDone");
+      const values = {
+        email: email,
+        password: password,
+        pin: pin,
+        gstn: gstn,
+        address: address,
+        area: area,
+        city: city,
+        pincode: pincode,
+        country: country,
+      };
+
+      // Please Add Link of API
+
+      fetch("/User/Signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      })
+        .then((result) => {
+          return result.json();
+        })
+        .then((data) => {
+          if (!data.ResponseMessage) {
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  }
 
   return (
     <div>
@@ -17,7 +58,10 @@ function PopupNewOutlet2(props) {
         <h6>Add New Outlet</h6>
       </div>
       <div className="align-Popup">
-        <div className="border-popup-city" style={{borderBottom:"1px solid #00000026"}}>
+        <div
+          className="border-popup-city"
+          style={{ borderBottom: "1px solid #00000026" }}
+        >
           {/* Outlet-Name */}
           {/* <div className="dropDown-block">
             <span className="label-dropDown-block">Outlet Name</span>
@@ -80,7 +124,12 @@ function PopupNewOutlet2(props) {
                 <div className="content-dropDown">
                   <form action="#" className="form-dropDown-M">
                     <div className="form-input-dropDown">
-                      <input type="search" placeholder="Enter Email" />
+                      <input
+                        type="email"
+                        placeholder="Enter Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                      />
                     </div>
                   </form>
                 </div>
@@ -96,7 +145,12 @@ function PopupNewOutlet2(props) {
                 <div className="content-dropDown">
                   <form action="#" className="form-dropDown-M">
                     <div className="form-input-dropDown">
-                      <input type="search" placeholder="Enter Password" />
+                      <input
+                        type="password"
+                        placeholder="Enter Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                      />
                     </div>
                   </form>
                 </div>
@@ -105,7 +159,10 @@ function PopupNewOutlet2(props) {
           </div>
         </div>
 
-        <div className="border-popup-city" style={{borderBottom:"1px solid #00000026"}}>
+        <div
+          className="border-popup-city"
+          style={{ borderBottom: "1px solid #00000026" }}
+        >
           {/* Logo */}
           {/* <div className="dropDown-block">
             <span className="label-dropDown-block">Add Logo</span>
@@ -176,7 +233,12 @@ function PopupNewOutlet2(props) {
                 <div className="content-dropDown">
                   <form action="#" className="form-dropDown-M">
                     <div className="form-input-dropDown">
-                      <input type="search" placeholder="Enter PIN" />
+                      <input
+                        type="number"
+                        placeholder="Enter PIN"
+                        value={pin}
+                        onChange={(e) => setPin(e.target.value)}
+                      />
                     </div>
                   </form>
                 </div>
@@ -192,7 +254,12 @@ function PopupNewOutlet2(props) {
                 <div className="content-dropDown">
                   <form action="#" className="form-dropDown-M">
                     <div className="form-input-dropDown">
-                      <input type="search" placeholder="Enter GSTN" />
+                      <input
+                        type="number"
+                        placeholder="Enter GSTN"
+                        value={gstn}
+                        onChange={(e) => setGstn(e.target.value)}
+                      />
                     </div>
                   </form>
                 </div>
@@ -210,7 +277,12 @@ function PopupNewOutlet2(props) {
                 <div className="content-dropDown">
                   <form action="#" className="form-dropDown-M">
                     <div className="form-input-dropDown">
-                      <input type="search" placeholder="Enter Street Address" />
+                      <input
+                        type="text"
+                        placeholder="Enter Street Address"
+                        value={address}
+                        onChange={(e) => setAddress(e.target.value)}
+                      />
                     </div>
                   </form>
                 </div>
@@ -226,7 +298,12 @@ function PopupNewOutlet2(props) {
                 <div className="content-dropDown">
                   <form action="#" className="form-dropDown-M">
                     <div className="form-input-dropDown">
-                      <input type="search" placeholder="Enter Area" />
+                      <input
+                        type="text"
+                        placeholder="Enter Area"
+                        value={area}
+                        onChange={(e) => setArea(e.target.value)}
+                      />
                     </div>
                   </form>
                 </div>
@@ -256,7 +333,7 @@ function PopupNewOutlet2(props) {
             <div className="dropDown-item" id="margin-10-T">
               <div className="border-dropDown-block">
                 <div className="content-dropDown">
-                  <select>
+                  <select onChange={(e) => setCity(e.target.value)}>
                     <option className="option">City</option>
                     <option className="option">City</option>
                     <option className="option">City</option>
@@ -277,7 +354,12 @@ function PopupNewOutlet2(props) {
                 <div className="content-dropDown">
                   <form action="#" className="form-dropDown-M">
                     <div className="form-input-dropDown">
-                      <input type="search" placeholder="Enter Zip/Pincode" />
+                      <input
+                        type="number"
+                        placeholder="Enter Zip/Pincode"
+                        value={pincode}
+                        onChange={(e) => setPincode(e.target.value)}
+                      />
                     </div>
                   </form>
                 </div>
@@ -291,7 +373,7 @@ function PopupNewOutlet2(props) {
             <div className="dropDown-item" id="margin-10-T">
               <div className="border-dropDown-block">
                 <div className="content-dropDown">
-                  <select>
+                  <select onChange={(e) => setCountry(e.target.value)}>
                     <option className="option">Country</option>
                     <option className="option">Country</option>
                     <option className="option">Country</option>
@@ -312,11 +394,14 @@ function PopupNewOutlet2(props) {
           <button
             type="submit"
             className="blue-btn"
+            onClick={(e) => handleSubmit(e)}
             style={{ marginRight: "20px" }}
           >
             Save
           </button>
-          <button className="green-btn" onClick={(e) => props.click(e)}>Cancel</button>
+          <button className="green-btn" onClick={(e) => props.click(e)}>
+            Cancel
+          </button>
         </div>
       </div>
     </div>
