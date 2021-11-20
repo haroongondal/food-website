@@ -24,15 +24,15 @@
   border: 0.0625rem solid #d8d9db;
 }
 .menu-button:focus {
-  border: 1px solid #da3743;
+  border: 1px solid #439548;
   outline: none;
 }
 .menu-button-active {
-  border: 1px solid #da3743;
+  border: 1px solid #439548;
   padding: calc(8px - 1px) calc(16px - 1px);
 }
 .menu-button:hover {
-  border: 1px solid #da3743;
+  border: 1px solid #439548;
 }
 .hr-for-menu {
   margin: 25px 0px;

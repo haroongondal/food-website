@@ -3,6 +3,7 @@ import { useState } from "react";
 import Modal from "react-responsive-modal";
 import CancelSvgIcon from "../components/CancelSvgIcon";
 import PopupCityOutlet from "./PopupCityOutlet";
+import downArrow from "../images/down_arrow.svg";
 
 export default function FeedbackComponents() {
   //   PopupCityOutlet
@@ -20,14 +21,31 @@ export default function FeedbackComponents() {
   const closeIcon = <CancelSvgIcon />;
   return (
     <div className="top-tools">
-      <div className="left-tools">
+      <div className="left-tools-catch">
         <button className="dark-blue-btn">Feedback</button>
       </div>
       <div className="right-tools-catch">
-        <button className="catch-btn" onClick={handleCityOutletPop}>
-          <i class="bi bi-geo-alt" style={{ marginRight: "5px" }}></i>
-          Catch22-...+(4 more)
-        </button>
+      <div className="feedback-Components-DD">
+          <div class="dropdown-feedback-Components">
+            <select>
+              <option class="option" value="1">
+                Catch 22
+              </option>
+              <option class="option" value="2">
+              Catch 22
+              </option>
+              <option class="option" value="10">
+              Catch 22
+              </option>
+            </select>
+            <span class="Darrow">
+              <img
+                alt="down-arrow"
+                src={downArrow}
+              />
+            </span>
+          </div>
+          </div>
         <button className="catch-btn">10/13/21-10/13/21</button>
       </div>
       {/* PopupCityOutlet */}

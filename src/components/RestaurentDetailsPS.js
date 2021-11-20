@@ -19,7 +19,7 @@ export default function RestaurentDetailsPS() {
   function handleSubmit(e) {
     e.preventDefault();
     {
-      console.log("OkDone");
+      
       const values = {
         restName: restName,
         averagePrice: averagePrice,
@@ -28,6 +28,7 @@ export default function RestaurentDetailsPS() {
         delivery: delivery,
       };
 
+      console.log(values);
       // Please Add Link of API
 
       fetch("/User/Signup", {

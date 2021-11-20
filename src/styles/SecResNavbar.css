@@ -36,9 +36,9 @@
     text-decoration: none;
   }
   .activeTab{
-    color: #00e0b4;
+    color: #439548;
     display: inline-block;
-    border-bottom: 5px solid #00e0b4;
+    border-bottom: 2px solid #439548;
     text-decoration: none;
   }
   

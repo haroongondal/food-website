@@ -17,7 +17,7 @@ function PopupNewOutlet2(props) {
   function handleSubmit(e) {
     e.preventDefault();
     if (email !== "" && password !== "") {
-      console.log("OkDone");
+      
       const values = {
         email: email,
         password: password,
@@ -29,6 +29,8 @@ function PopupNewOutlet2(props) {
         pincode: pincode,
         country: country,
       };
+
+      console.log(values);
 
       // Please Add Link of API
 
@@ -129,6 +131,7 @@ function PopupNewOutlet2(props) {
                         placeholder="Enter Email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
+                        required
                       />
                     </div>
                   </form>
@@ -150,6 +153,7 @@ function PopupNewOutlet2(props) {
                         placeholder="Enter Password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
+                        required
                       />
                     </div>
                   </form>
@@ -238,6 +242,7 @@ function PopupNewOutlet2(props) {
                         placeholder="Enter PIN"
                         value={pin}
                         onChange={(e) => setPin(e.target.value)}
+                        required
                       />
                     </div>
                   </form>
@@ -259,6 +264,7 @@ function PopupNewOutlet2(props) {
                         placeholder="Enter GSTN"
                         value={gstn}
                         onChange={(e) => setGstn(e.target.value)}
+                        required
                       />
                     </div>
                   </form>
@@ -282,6 +288,7 @@ function PopupNewOutlet2(props) {
                         placeholder="Enter Street Address"
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
+                        required
                       />
                     </div>
                   </form>
@@ -303,6 +310,7 @@ function PopupNewOutlet2(props) {
                         placeholder="Enter Area"
                         value={area}
                         onChange={(e) => setArea(e.target.value)}
+                        required
                       />
                     </div>
                   </form>
@@ -359,6 +367,7 @@ function PopupNewOutlet2(props) {
                         placeholder="Enter Zip/Pincode"
                         value={pincode}
                         onChange={(e) => setPincode(e.target.value)}
+                        required
                       />
                     </div>
                   </form>

@@ -89,7 +89,6 @@ export default function PopupFeedbackComSET() {
           <button
             type="submit"
             className="green-btn"
-            style={{ padding: "14px 60px" }}
           >
             Save
           </button>

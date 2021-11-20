@@ -21,6 +21,7 @@ import { ForDevice } from "media-query-react";
 
 import PopupSearch from "../components/PopupSearch";
 
+// Filter-Page-Search
 function FilterPage() {
   const [isSearchShowing, setSearchShowing] = useState(false);
 
@@ -35,6 +36,8 @@ function FilterPage() {
   // Popup Close-icon
   const closeIcon = <CancelSvgIcon />;
 
+
+// Popup Sort-By-Mobile
   const [isSortByShowing, setSortByShowing] = useState(false);
 
   const handleSortByPop = (e) => {
@@ -46,6 +49,7 @@ function FilterPage() {
     setSortByShowing(false);
   };
 
+  // Popup Filters-Mobile
   const [isFiltersShowing, setFiltersShowing] = useState(false);
 
   const handleFiltersPop = (e) => {
@@ -97,6 +101,7 @@ function FilterPage() {
         }
       }
     }
+
   };
 
   const handleSorting = (e, sort) => {
@@ -226,7 +231,7 @@ function FilterPage() {
                     ></path>
                   </svg>
                 </i>
-                <span>search anything...</span>
+                <span>Search anything...</span>
               </div>
               <div className="filters-btns">
                 <div className="sort-btn-F" onClick={handleSortByPop}>
@@ -268,6 +273,7 @@ function FilterPage() {
             open={isSortByShowing}
             onClose={closeSortByPop}
             center
+            closeIcon={closeIcon}
             classNames={{
               modalAnimationIn: "sortByEnterModalAnimation",
               modalAnimationOut: "sortByLeaveModalAnimation",
@@ -279,13 +285,15 @@ function FilterPage() {
                 width: "100%",
                 padding: "0px",
                 margin: "0px",
-                borderRadius: "23px 23px 0px 0px"
+                borderRadius: "23px 23px 0px 0px",
               },
             }}
           >
-            <div className="mt-5">
-              <span className="text-sort-by">Sort By</span>
-              <div className="d-grid mt-4">
+            <div className="">
+              <div className="title-popup-listing">
+                <h6 className="text-search-SP">Sort By</h6>
+              </div>
+              <div className="d-grid">
                 <button
                   className="btn-for-sortBy"
                   onClick={(e) => handleSorting(e, Types.SortType.Popularity)}
@@ -316,14 +324,13 @@ function FilterPage() {
         </ForDevice>
 
         <div className="main-section">
-
-        {/* MOBILE CHECKBOX-FILTERS */}
-
+          {/* MOBILE CHECKBOX-FILTERS */}
 
           <ForDevice deviceName="mobile">
             <Modal
               open={isFiltersShowing}
               onClose={closeFiltersPop}
+              closeIcon={closeIcon}
               center
               classNames={{
                 modalAnimationIn: "customEnterModalAnimation",
@@ -336,10 +343,13 @@ function FilterPage() {
                   width: "100%",
                   padding: "0px",
                   margin: "0px",
-                  borderRadius: "23px 23px 0px 0px"
+                  borderRadius: "23px 23px 0px 0px",
                 },
               }}
             >
+            <div className="title-popup-listing">
+                <h6 className="text-search-SP">Filters</h6>
+              </div>
               <div className="adjust-M">
                 <div className="listing_sidebar-M mt-4">
                   <FiltersItem
@@ -359,6 +369,9 @@ function FilterPage() {
                     handleFilters={handleFilters}
                   />
                 </div>
+              </div>
+              <div className="apply-filters-btn" >
+              <button>Apply Filters</button>
               </div>
             </Modal>
           </ForDevice>
@@ -388,12 +401,10 @@ function FilterPage() {
             </div>
           </ForDevice>
 
-
-
           <div className="right-section">
             <div className="div-top-boxes-content">
               <HeadingFilterPage />
-              
+
               {/* DESKTOP SORT-BY */}
 
               <Sortby getSortType={handleSorting} />

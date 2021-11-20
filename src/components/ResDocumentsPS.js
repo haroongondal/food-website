@@ -10,12 +10,13 @@ export default function ResDocumentsPS() {
   function handleSubmit(e) {
     e.preventDefault();
     {
-      console.log("OkDone");
+      
       const values = {
         smes: smes,
         license: license,
         gstNo: gstNo,
       };
+      console.log(values);
 
       // Please Add Link of API
 

@@ -3,13 +3,13 @@
   align-items: center;
   justify-content: space-between;
   grid-gap: 16px;
-  flex-wrap: wrap;
   width: 100%;
 }
 .left-tools {
   display: flex;
   align-items: center;
   grid-gap: 16px;
+  width: 34%;
 }
 .search-menu {
   max-width: 340px;
@@ -103,16 +103,17 @@
   display: flex;
   flex-wrap: wrap;
   width: 39%;
+  justify-content: right;
 }
 .menu-Components-DD {
   width: 43%;
 }
-.dropdown-menu-Components{
+.dropdown-menu-Components {
   position: relative;
   display: flex;
   align-items: center;
 }
-.dropdown-menu-Components select{
+.dropdown-menu-Components select {
   box-shadow: 0px 6px 6px rgb(0 0 0 / 10%);
   font-size: 13px;
   color: white;
@@ -133,19 +134,8 @@
   margin: 0;
 }
 
-.dropdown-menu-Components select:focus{
+.dropdown-menu-Components select:focus {
   outline: none;
-}
-option:before {
-  content: ">";
-  font-size: 20px;
-  display: none;
-  padding-right: 10px;
-  padding-left: 5px;
-  color: #fff;
-}
-option:hover:before {
-  display: inline;
 }
 .dropdown-menu-Components .Darrow {
   position: absolute;
@@ -159,9 +149,9 @@ option:hover:before {
   line-height: 1;
 }
 .dropdown-menu-Components .Darrow img {
-  width: 18px;
-  height: 18px;
-  margin-top: 4px;
+  width: 16px;
+  height: 16px;
+  margin-top: 5px;
 }
 .addMenuDetails-btn {
   background: #5d87dc;
@@ -212,4 +202,14 @@ option:hover:before {
   box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.1);
   transform: scale(1.008);
   transition: all 0.2s ease;
+}
+.buttons-menu-components {
+  background: #06386C;
+  padding: 6px 8px 2px;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0px 6px 6px rgb(0 0 0 / 10%);
+}
+.buttons-menu-components i{
+    color: white;
 }
