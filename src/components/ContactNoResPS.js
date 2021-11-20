@@ -8,11 +8,12 @@ export default function ContactNoResPS() {
   function handleSubmit(e) {
     e.preventDefault();
     {
-      console.log("OkDone");
+      
       const values = {
         restMobile: restMobile,
         restLandline: restLandline,
       };
+      console.log(values);
 
       // Please Add Link of API
 

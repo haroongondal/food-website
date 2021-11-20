@@ -3,34 +3,61 @@
     overflow: hidden;
     border-radius: 5px;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
     display: -webkit-box;
     display: -ms-flexbox;
+    justify-content: right !important;
   }
   .text-sort-by{
     color: #6e6e6e;
     padding: 10px;
   }
-  .select{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    position: relative;
-  }
-  .select>select {
-    padding: 10px;
-    outline: 0;
-    -moz-appearance: none;
-    border: 0;
-    width: 100%;
-    cursor: pointer;
-    border-radius: 3px;
-  }
+  
+.dropdown-FilterPage {
+  width: 65%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.dropdown-FilterPage select {
+  font-size: 14px;
+  color: #474747cc;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  height: 100%;
+  display: block;
+  resize: vertical;
+  box-sizing: border-box;
+  min-height: 38px;
+  padding: 0px 10px;
+  -webkit-appearance: none;
+  text-transform: none;
+  font-family: inherit;
+  line-height: 1.15;
+  margin: 0;
+}
+.dropdown-FilterPage select:focus{
+  outline: none;
+}
+.dropdown-FilterPage .Darrow {
+  position: absolute;
+  pointer-events: none;
+  right: -4px;
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  font-size: 0;
+  line-height: 1;
+}
+.dropdown-FilterPage .Darrow img {
+  width: 10px;
+  height: 10px;
+  margin-top: 8px;
+}
 
   @media screen and (min-width: 320px) {
     .div-sort-by {
@@ -40,7 +67,6 @@
 
   @media screen and (min-width: 992px) {
     .div-sort-by{
-      width: 33%;
-      display: contents;
+      display:block;
     }
   }

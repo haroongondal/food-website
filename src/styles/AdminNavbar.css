@@ -1,4 +1,7 @@
 
+
+@media only screen and (min-width: 320px) {
+
 /* NAVBAR */
 #content nav {
 	height: 56px;
@@ -33,6 +36,116 @@
 #content nav .bx.bx-menu {
 	cursor: pointer;
 	color: white;
+	display: block;
+}
+#content nav .nav-link {
+	font-size: 14px;
+	transition: .3s ease;
+	margin: 0 auto;
+	color: white;
+}
+#content nav .nav-link:hover {
+	letter-spacing: 1px;
+}
+#content nav form {
+	max-width: 400px;
+	width: 100%;
+	margin-right: auto;
+}
+#content nav form .form-input {
+	display: flex;
+	align-items: center;
+	height: 36px;
+}
+#content nav form .form-input input {
+	flex-grow: 1;
+	padding: 0 16px;
+	height: 100%;
+	border: none;
+	background: var(--grey);
+	border-radius: 36px 0 0 36px;
+	outline: none;
+	width: 100%;
+}
+#content nav form .form-input button {
+	width: 36px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--blue);
+	color: var(--light);
+	font-size: 18px;
+	border: none;
+	outline: none;
+	border-radius: 0 36px 36px 0;
+	cursor: pointer;
+}
+#content nav .notification {
+	font-size: 20px;
+	position: relative;
+}
+#content nav .notification .num {
+	position: absolute;
+	top: -6px;
+	right: -6px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid var(--light);
+	background: #db504a;
+	color: white;
+	font-weight: 700;
+	font-size: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#content nav .profile img {
+	width: 36px;
+	height: 36px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+/* NAVBAR */
+}
+@media only screen and (min-width: 992px) {
+
+/* NAVBAR */
+#content nav {
+	height: 56px;
+	background: #06386C;
+	padding: 0 24px;
+	display: flex;
+	align-items: center;
+	grid-gap: 24px;
+	font-family: var(--lato);
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+#content nav::before {
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	bottom: -40px;
+	left: 0;
+	border-radius: 50%;
+	box-shadow: -20px -20px 0 var(--light);
+}
+#content nav ul{
+	display: contents;
+	list-style: none;
+}
+#content nav a {
+	color: var(--dark);
+}
+#content nav .bx.bx-menu {
+	cursor: pointer;
+	color: white;
+	display:none;
 }
 #content nav .nav-link {
 	font-size: 16px;
@@ -105,3 +218,4 @@
 	border-radius: 50%;
 }
 /* NAVBAR */
+}

@@ -96,7 +96,7 @@ export default function FilterTopNavbar() {
                 ></path>
               </svg>
             </i>
-            <span>search anything...</span>
+            <span>Search anything...</span>
           </div>
           <div className="filters-btns">
             <div className="sort-btn-F">

@@ -15,6 +15,7 @@ function AdminSidebar() {
   };
 
   return (
+    
     <section id="sidebar">
       <a href="#abcabc" className="brand">
         <span className="logo-text">FoodApp</span>

@@ -16,6 +16,7 @@
   align-items: center;
 }
 .Sec-search-filters {
+  width: 100%;
   display: flex;
   padding: 8px 0px 0px 0px;
   grid-gap: 18px;
@@ -26,7 +27,7 @@
   grid-gap: 8px;
 }
 .sort-btn-F {
-  background: #2d2d2dab;
+  background: #439548;
   padding: 6px 8px 2px;
   margin: 0 auto;
   border-radius: 5px;

@@ -26,7 +26,8 @@
   }
   .heading_restaurent_near h6 {
     font-size: 14px;
-    color: #1d1d1f;
+    border-bottom: 1px solid;
+    color: #439548;
     font-weight: 600;
     letter-spacing: 0.5px;
     cursor: pointer;
@@ -34,7 +35,7 @@
     margin: 0px;
   }
   .heading_restaurent_near h6:hover {
-    color: blue;
+    color: #439548;
     letter-spacing: 1px;
   }
   .heading_restaurent_near a {
@@ -70,15 +71,16 @@
   }
   .heading_restaurent_near h6 {
     font-size: 0.8rem;
-    color: #1d1d1f;
+    color: #439548;
+    border-bottom: 1px solid;
     font-weight: 600;
     letter-spacing: 0.5px;
     cursor: pointer;
     transition: all 0.3s ease;
   }
   .heading_restaurent_near h6:hover {
-    color: blue;
     letter-spacing: 1px;
+    color: #439548;
   }
   .heading_restaurent_near a {
     text-decoration: none;

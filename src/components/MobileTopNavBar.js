@@ -172,7 +172,7 @@ export default function MobileTopNavBar() {
                 ></path>
               </svg>
             </i>
-            <span>search anything...</span>
+            <span>Search anything...</span>
           </div>
         </div>
       </div>
