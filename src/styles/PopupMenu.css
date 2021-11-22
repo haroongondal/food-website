@@ -4,7 +4,7 @@
   }
   .border-back {
     margin: 20px 0px;
-    padding: 20px 44px;
+    padding: 0px 12px;
     padding-bottom: 35px;
     border-bottom: 1px solid #80808054;
   }
@@ -30,6 +30,7 @@
     margin: 0px 10px;
     margin-left: 0px;
     border-radius: 3px;
+    flex: 0 0 auto;
     box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
   }
   .egg-btn:focus,
@@ -45,6 +46,7 @@
     padding: 5px 10px;
     margin: 0px 10px;
     border-radius: 3px;
+    flex: 0 0 auto;
     box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
   }
   .veg-btn:focus,
@@ -60,6 +62,7 @@
     padding: 5px 10px;
     margin: 0px 10px;
     border-radius: 3px;
+    flex: 0 0 auto;
     box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
   }
   .non-veg-btn:focus,
@@ -84,6 +87,9 @@
   }
 
   /*checkbox */
+  .serviceType-checkboxes {
+    display: flex;
+  }
   .checkBox-menu {
     display: flex;
     justify-content: space-between;
@@ -150,7 +156,8 @@
   }
   .dropDown-item-Pricing {
     align-items: center;
-    inline-size: max-content;
+    inline-size: auto;
+    margin-top: 2%;
   }
   .border-PK {
     background: rgb(6 56 108);
@@ -189,6 +196,7 @@
     display: flex;
     align-items: center;
     height: 36px;
+    width: 100%;
   }
   .form-input-PK input {
     flex-grow: 1;
@@ -253,7 +261,7 @@
     padding: 20px;
   }
   .border-dropDown-T-and-C {
-    width: 11rem;
+    width: 100%;
   }
   .content-dropDown .Tax-DD {
     font-size: 14px;
@@ -306,7 +314,7 @@
   }
   .addTax-btn i {
     font-size: 18px;
-    margin-top: 30px;
+    margin-top: 8px;
     color: #06386c;
   }
   .menu-textArea {
@@ -317,15 +325,19 @@
     font-size: 14px;
     padding: 10px;
     width: 100%;
+    margin-top: 2%;
   }
   .menu-textArea:focus {
     outline: 1px solid #06386c6b;
   }
   .image-video {
     display: flex;
-    grid-gap: 17px;
+    grid-gap: 23px;
     flex-wrap: wrap;
     align-items: center;
+    place-content: center;
+    justify-content: left;
+    margin-top: 2%;
   }
   .image-btn-menu {
     position: relative;
@@ -429,7 +441,7 @@
     border: 1px solid rgb(6 56 108 / 50%);
     border-radius: 4px 0px 0px 4px;
     outline: none;
-    width: 125px;
+    width: 100%;
     font-size: 13px;
   }
   .form-calorie .form-input-calorie input::placeholder {
@@ -591,6 +603,7 @@
     margin: 0px 10px;
     margin-left: 0px;
     border-radius: 3px;
+    flex: 0 0 auto;
     box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
   }
   .egg-btn:focus,
@@ -606,6 +619,7 @@
     padding: 5px 10px;
     margin: 0px 10px;
     border-radius: 3px;
+    flex: 0 0 auto;
     box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
   }
   .veg-btn:focus,
@@ -621,6 +635,7 @@
     padding: 5px 10px;
     margin: 0px 10px;
     border-radius: 3px;
+    flex: 0 0 auto;
     box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
   }
   .non-veg-btn:focus,
@@ -645,6 +660,9 @@
   }
 
   /*checkbox */
+  .serviceType-checkboxes {
+    display: flex;
+  }
   .checkBox-menu {
     display: flex;
     justify-content: space-between;
@@ -712,6 +730,7 @@
   .dropDown-item-Pricing {
     align-items: center;
     inline-size: max-content;
+    margin-top: 0%;
   }
   .border-PK {
     background: rgb(6 56 108);
@@ -867,7 +886,7 @@
   }
   .addTax-btn i {
     font-size: 18px;
-    margin-top: 30px;
+    margin-top: 8px;
     color: #06386c;
   }
   .menu-textArea {
@@ -878,15 +897,17 @@
     font-size: 14px;
     padding: 10px;
     width: 100%;
+    margin-top: 0%;
   }
   .menu-textArea:focus {
     outline: 1px solid #06386c6b;
   }
   .image-video {
     display: flex;
-    grid-gap: 17px;
+    grid-gap: 26px;
     flex-wrap: wrap;
     align-items: center;
+    margin-top: 0%;
   }
   .image-btn-menu {
     position: relative;
@@ -1115,8 +1136,12 @@
     padding: 3px 10px;
     border-radius: 5px;
   }
-  .drinks-btn:focus {
+  .drinks-btn-active {
+    font-size: 14px;
+    border: 1px solid rgb(6 56 108 / 50%);
     background-color: #06386c;
     color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
   }
 }

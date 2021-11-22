@@ -1,15 +1,16 @@
 import React from "react";
 import { useState } from "react";
 import "../styles/OutletsPage.css";
-import "../styles/PopupMenuItem.css"
+import "../styles/PopupMenuItem.css";
 import Modal from "react-responsive-modal";
 import arrow from "../images/down_arrow.svg";
 import PopupCompanyGroup from "../components/PopupCompanyGroup";
 import PopupNewBrand from "../components/PopupNewBrand";
 import EditSvgIcon from "../components/EditSvgIcon";
-import star from '../images/star.png';
+import star from "../images/star.png";
 import CancelSvgIcon from "../components/CancelSvgIcon";
 import PopupNewOutlet2 from "../components/PopupNewOutlet2";
+import { ForDevice } from "media-query-react";
 
 export default function OutletsPage() {
   //   Open-Close-OutletBox
@@ -69,13 +70,13 @@ export default function OutletsPage() {
 
   return (
     <div>
-          <div className="top-tools">
-            <div className="left-tools">
-              <button className="dark-blue-btn">Outlets</button>
-            </div>
-          </div>
-          <div className="Content-graph-boxes">
-            {/* <div className="border-back-white">
+      <div className="top-tools">
+        <div className="left-tools">
+          <button className="dark-blue-btn">Outlets</button>
+        </div>
+      </div>
+      <div className="Content-graph-boxes">
+        {/* <div className="border-back-white">
               <div className="header-catch22">
                 <h6>Catch22</h6>
                 <span
@@ -117,12 +118,12 @@ export default function OutletsPage() {
                 </span>
               </div>
             </div> */}
-            <div className="border-back-white-outlet">
-              <div className="outlets-header">
-                <h6 className="title-outlets-header">Outlets</h6>
+        <div className="border-back-white-outlet">
+          <div className="outlets-header">
+            <h6 className="title-outlets-header">Outlets</h6>
 
-                <div className="right-outlets-header">
-                  {/* <div className="d-flex ET-Flex-M">
+            <div className="right-outlets-header">
+              {/* <div className="d-flex ET-Flex-M">
                     <label className="col-md-3 label-ET-Flex-M">View By</label>
                     <div className="border-DD-Flex-M">
                       <div className="content-dropDown">
@@ -137,28 +138,28 @@ export default function OutletsPage() {
                       </div>
                     </div>
                   </div> */}
-                  {/* <div className="add-context-btn" onClick={handleNewBrandPop}>
+              {/* <div className="add-context-btn" onClick={handleNewBrandPop}>
                     <button type="submit" className="blue-plus-btn">
                       <i class="bx bx-plus-circle"></i>
                     </button>
                     <span>Add Brand</span>
                   </div> */}
-                  <div className="add-context-btn" onClick={handleNewOutletPop}>
-                    <button type="submit" className="blue-plus-btn">
-                      <i class="bx bx-plus-circle"></i>
-                    </button>
-                    <span>Add Outlet</span>
-                  </div>
-                </div>
+              <div className="add-context-btn" onClick={handleNewOutletPop}>
+                <button type="submit" className="blue-plus-btn">
+                  <i class="bx bx-plus-circle"></i>
+                </button>
+                <span>Add Outlet</span>
               </div>
             </div>
+          </div>
+        </div>
 
-            <button
-              className="outlet-box is-open"
-              style={{ outline: "0px auto -webkit-focus-ring-color" }}
-              // onClick={handdleToggle}
-            >
-              {/* <div className="col-md-11 left-tools-outlet-box">
+        <button
+          className="outlet-box is-open"
+          style={{ outline: "0px auto -webkit-focus-ring-color" }}
+          // onClick={handdleToggle}
+        >
+          {/* <div className="col-md-11 left-tools-outlet-box">
                 <h6 className="col-md-3">Dunkin Brands</h6>
                 <h6>5 Outlets</h6>
               </div>
@@ -169,12 +170,12 @@ export default function OutletsPage() {
                 </span>
               </div> */}
 
-              <div
-              className="content-outlet-box"
-              style={{ maxHeight: "-webkit-fill-available" }}
-            >
-              <div className="content-outlet-box">
-              <table class="table">
+          <div
+            className="content-outlet-box"
+            style={{ maxHeight: "-webkit-fill-available" }}
+          >
+            <div className="content-outlet-box">
+              {/* <table class="table">
               <tbody>
                     <tr className="tr-table">
                       <th className="px-5 pt-3" >Logo</th>
@@ -244,67 +245,161 @@ export default function OutletsPage() {
                       </td>
                     </tr>
                   </tbody>
-                </table>
-              </div>
+                </table> */}
+
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col" className="col-md-2">
+                      Logo
+                    </th>
+                    <th scope="col" className="col-md-3">
+                      Outlet
+                    </th>
+                    <th scope="col" className="col-md-2">
+                      Company
+                    </th>
+                    <th scope="col" className="col-md-2">
+                      Area
+                    </th>
+                    <th scope="col">City</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Logo">
+                      <img src={star} alt="" className="star-logo" />
+                    </td>
+                    <td data-label="Outlet">Catch22</td>
+                    <td data-label="Company">Dunkin Brands</td>
+                    <td data-label="Area">Dubai -United Arab Emirates</td>
+                    <td data-label="City">Dubai</td>
+                    <td data-label="Edit">
+                      <EditSvgIcon />{" "}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Logo">
+                      <img src={star} alt="" className="star-logo" />
+                    </td>
+                    <td data-label="Outlet">Catch22</td>
+                    <td data-label="Company">Dunkin Brands</td>
+                    <td data-label="Area">Dubai -United Arab Emirates</td>
+                    <td data-label="City">Dubai</td>
+                    <td data-label="Edit">
+                      <EditSvgIcon />{" "}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Logo">
+                      <img src={star} alt="" className="star-logo" />
+                    </td>
+                    <td data-label="Outlet">Catch22</td>
+                    <td data-label="Company">Dunkin Brands</td>
+                    <td data-label="Area">Dubai -United Arab Emirates</td>
+                    <td data-label="City">Dubai</td>
+                    <td data-label="Edit">
+                      <EditSvgIcon />{" "}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Logo">
+                      <img src={star} alt="" className="star-logo" />
+                    </td>
+                    <td data-label="Outlet">Catch22</td>
+                    <td data-label="Company">Dunkin Brands</td>
+                    <td data-label="Area">Dubai -United Arab Emirates</td>
+                    <td data-label="City">Dubai</td>
+                    <td data-label="Edit">
+                      <EditSvgIcon />{" "}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            </button>
-
-            
-
-            {/* PopupCompanyGroup */}
-            <Modal
-              open={isCompanyGroupShowing}
-              onClose={closeCompanyGroupPop}
-              center
-              closeIcon={closeIcon}
-              styles={{
-                modal: {
-                  "margin-top": "80px",
-                  "max-width": "535px",
-                  width: "100%", padding: "0px",
-                  borderRadius:"23px"
-                },
-              }}
-            >
-              <PopupCompanyGroup click={closeCompanyGroupBtn}/>
-            </Modal>
-
-            {/* PopupNewBrand */}
-            <Modal
-              open={isNewBrandShowing}
-              onClose={closeNewBrandPop}
-              center
-              closeIcon={closeIcon}
-              styles={{
-                modal: {
-                  "margin-top": "80px",
-                  "max-width": "535px",
-                  width: "100%", padding: "0px",
-                  borderRadius:"23px"
-                },
-              }}
-            >
-              <PopupNewBrand click={closeNewBrandBtn}/>
-            </Modal>
-
-            {/* PopupNewOutlet */}
-            <Modal
-              open={isNewOutletShowing}
-              onClose={closeNewOutletPop}
-              center
-              closeIcon={closeIcon}
-              styles={{
-                modal: {
-                  "margin-top": "80px",
-                  "max-width": "535px",
-                  width: "100%", padding: "0px",
-                  borderRadius:"23px"
-                },
-              }}
-            >
-              <PopupNewOutlet2 click={closeNewOutletBtn}/>
-            </Modal>
           </div>
+        </button>
+
+        {/* PopupCompanyGroup */}
+        <Modal
+          open={isCompanyGroupShowing}
+          onClose={closeCompanyGroupPop}
+          center
+          closeIcon={closeIcon}
+          styles={{
+            modal: {
+              "margin-top": "80px",
+              "max-width": "535px",
+              width: "100%",
+              padding: "0px",
+              borderRadius: "23px",
+            },
+          }}
+        >
+          <PopupCompanyGroup click={closeCompanyGroupBtn} />
+        </Modal>
+
+        {/* PopupNewBrand */}
+        <Modal
+          open={isNewBrandShowing}
+          onClose={closeNewBrandPop}
+          center
+          closeIcon={closeIcon}
+          styles={{
+            modal: {
+              "margin-top": "80px",
+              "max-width": "535px",
+              width: "100%",
+              padding: "0px",
+              borderRadius: "23px",
+            },
+          }}
+        >
+          <PopupNewBrand click={closeNewBrandBtn} />
+        </Modal>
+
+        <ForDevice deviceName={["tablet", "desktop"]}>
+          {/* PopupNewOutlet */}
+          <Modal
+            open={isNewOutletShowing}
+            onClose={closeNewOutletPop}
+            center
+            closeIcon={closeIcon}
+            styles={{
+              modal: {
+                "margin-top": "80px",
+                "max-width": "535px",
+                width: "100%",
+                padding: "0px",
+                borderRadius: "23px",
+              },
+            }}
+          >
+            <PopupNewOutlet2 click={closeNewOutletBtn} />
+          </Modal>
+        </ForDevice>
+
+        <ForDevice deviceName="mobile">
+          {/* PopupNewOutlet */}
+          <Modal
+            open={isNewOutletShowing}
+            onClose={closeNewOutletPop}
+            center
+            closeIcon={closeIcon}
+            styles={{
+              modal: {
+                width: "100%",
+                height: "100%",
+                padding: "0px",
+                margin: "0px",
+              },
+            }}
+          >
+            <PopupNewOutlet2 click={closeNewOutletBtn} />
+          </Modal>
+        </ForDevice>
+      </div>
     </div>
   );
 }

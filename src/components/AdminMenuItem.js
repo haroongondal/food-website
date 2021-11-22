@@ -177,7 +177,7 @@ function AdminMenuItem(props) {
 
 
   return (
-    <div className="item-menu">
+    <div className="item-menu" >
       <button
         className={IsOpened ? "accordion-menu is-open" : "accordion-menu"}
         style={{ outline: "0px auto -webkit-focus-ring-color" }}
@@ -187,7 +187,7 @@ function AdminMenuItem(props) {
           <img className="dish-img-menu" alt="dish-img" src={dishImage} />
           <div className="menu-item-title">
             <h6>{props.data.Cusine}</h6>
-            <span>Regular - Food or Drinks</span>
+            <span >Regular - Food or Drinks</span>
           </div>
         </div>
 
@@ -202,7 +202,8 @@ function AdminMenuItem(props) {
 
       <div
         className="accordion-content-menu"
-        style={{ maxHeight: "-webkit-fill-available" }}
+        style={{ maxHeight: "-webkit-fill-available" }} 
+        
       >
         <div className={IsOpened ? "abc" : "accordion-content-menu-hide"}>
           <div className="align-content-menu">
