@@ -13,14 +13,8 @@
   inline-size: max-content;
   align-items: center;
 }
-.dropDown {
-  display: flex;
-  align-items: baseline;
-}
-.dropDown-item {
-  display: flex;
-  align-items: center;
-}
+
+
 .label-dropDown {
   color: #06386c;
   font-size: 14px;
@@ -29,48 +23,6 @@
 .border-dropDown {
   width: 17rem;
   margin: 15px 20px;
-}
-.content-dropDown {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.content-dropDown select {
-  font-size: 13px;
-  color: #474747cc;
-  width: 100%;
-  border: 1px solid rgb(6 56 108 / 50%);
-  border-radius: 4px;
-  height: 100%;
-  display: block;
-  resize: vertical;
-  box-sizing: border-box;
-  min-height: 40px;
-  padding: 0px 10px;
-  -webkit-appearance: none;
-  text-transform: none;
-  font-family: inherit;
-  line-height: 1.15;
-  margin: 0;
-}
-.content-dropDown select:focus {
-  outline: none;
-}
-.content-dropDown span {
-  position: absolute;
-  pointer-events: none;
-  right: 4px;
-  display: inline-block;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  font-size: 0;
-  line-height: 1;
-}
-.content-dropDown span img {
-  width: 12px;
-  height: 12px;
-  margin-top: 6px;
 }
 /*checkbox */
 .main-popup-CB {
@@ -393,4 +345,112 @@ input[type="checkbox"] {
 }
 .tab-switch-btn:focus {
   background: red;
+}
+@media only screen and (min-width: 320px) {
+  .dropDown-item {
+    display: block;
+    align-items: center;
+  }
+
+  .content-dropDown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+  }
+  .content-dropDown select {
+    font-size: 13px;
+    color: #474747cc;
+    width: 100%;
+    border: 1px solid rgb(6 56 108 / 50%);
+    border-radius: 4px;
+    height: 100%;
+    display: block;
+    resize: vertical;
+    box-sizing: border-box;
+    min-height: 40px;
+    padding: 0px 10px;
+    -webkit-appearance: none;
+    text-transform: none;
+    font-family: inherit;
+    line-height: 1.15;
+    margin: 0;
+  }
+  .content-dropDown select:focus {
+    outline: none;
+  }
+  .content-dropDown span {
+    position: absolute;
+    pointer-events: none;
+    right: 0%;
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    min-width: 1.5rem;
+    font-size: 0;
+    line-height: 1;
+  }
+  .content-dropDown span img {
+    width: 12px;
+    height: 12px;
+    margin-top: 6px;
+  }
+  .dropDown {
+    display: block;
+    align-items: baseline;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .dropDown-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .content-dropDown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 0%;
+  }
+  .content-dropDown select {
+    font-size: 13px;
+    color: #474747cc;
+    width: 100%;
+    border: 1px solid rgb(6 56 108 / 50%);
+    border-radius: 4px;
+    height: 100%;
+    display: block;
+    resize: vertical;
+    box-sizing: border-box;
+    min-height: 40px;
+    padding: 0px 10px;
+    -webkit-appearance: none;
+    text-transform: none;
+    font-family: inherit;
+    line-height: 1.15;
+    margin: 0;
+  }
+  .content-dropDown select:focus {
+    outline: none;
+  }
+  .content-dropDown span {
+    position: absolute;
+    pointer-events: none;
+    right: 4px;
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    min-width: 1.5rem;
+    font-size: 0;
+    line-height: 1;
+  }
+  .content-dropDown span img {
+    width: 12px;
+    height: 12px;
+    margin-top: 6px;
+  }
+  .dropDown {
+    display: flex;
+    align-items: baseline;
+  }
 }

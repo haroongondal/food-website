@@ -78,7 +78,7 @@ input:checked + .slider-S:before {
     align-items: center;
 }
  
-table{
+/* table{
     width:100%;
     table-layout: fixed;
   }
@@ -91,5 +91,5 @@ table{
     color: #06386C;
     border-bottom: 1px solid  #b8b8b8 !important;
     
-  }
+  } */
  
