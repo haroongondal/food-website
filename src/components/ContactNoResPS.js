@@ -40,7 +40,7 @@ export default function ContactNoResPS() {
     <div>
       {/* Contact number at restaurent */}
       <div className="border-back-white" style={{ padding: "14px 0px" }}>
-        <div className="header-PS" style={{ padding: "0px 26px" }}>
+        <div className="header-PS">
           <h6 className="title-header-PS">Contact number at restaurent</h6>
           <h6 className="title-details-PS">
             Your customer will call on this for general enquiries
@@ -73,7 +73,7 @@ export default function ContactNoResPS() {
           </div>
 
           {/* Landline Number at Restaurent */}
-          <div className="col-md-6">
+          <div className="col-md-6" id="margin-top-5">
             <div className="label-PS">Landline Number at Restaurent</div>
             <div className="dropdown-PS">
               <span className="CountryCode-PS">

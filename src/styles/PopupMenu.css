@@ -15,7 +15,7 @@
     margin-bottom: 0px;
   }
   .border-dropDown-add-menu {
-    width: 17rem;
+    width: 100%;
   }
   .item-name {
     margin: 0;
@@ -339,6 +339,10 @@
     justify-content: left;
     margin-top: 2%;
   }
+  .text-max-size-menu{
+    font-size: 10px !important;
+    font-weight: 100 !important;
+  }
   .image-btn-menu {
     position: relative;
   }
@@ -566,9 +570,13 @@
     padding: 3px 10px;
     border-radius: 5px;
   }
-  .drinks-btn:focus {
+  .active-drinks {
+    font-size: 14px;
+    border: 1px solid rgb(6 56 108 / 50%);
     background-color: #06386c;
     color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -582,7 +590,7 @@
     border-bottom: 1px solid #80808054;
   }
   .border-menu {
-    padding: 30px 75px;
+    padding: 30px 30px;
   }
   .Sec-menu {
     margin-bottom: 0px;
@@ -1136,7 +1144,7 @@
     padding: 3px 10px;
     border-radius: 5px;
   }
-  .drinks-btn-active {
+  .active-drinks {
     font-size: 14px;
     border: 1px solid rgb(6 56 108 / 50%);
     background-color: #06386c;

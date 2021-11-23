@@ -7,7 +7,7 @@ function PopupSelectCuisine(props) {
       <div className="title-popup">
         <h6>Select Cuisines</h6>
       </div>
-      <div className="border-popup-city pb-0">
+      <div className="border-popup-features pb-0">
         {/* Search-bar */}
         <form class="search-city" action="#">
           <div className="form-input-city">

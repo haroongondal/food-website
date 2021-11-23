@@ -8,19 +8,10 @@ import CancelSvgIcon from "./CancelSvgIcon";
 import ImageUpload from "image-upload-react";
 import { MenuItemType } from "../Utils/Types.json";
 import { findByLabelText } from "@testing-library/dom";
+import { ForDevice } from "media-query-react";
 
 function PopupMenu(props) {
   console.log("SubCusineId: " + props.subCuisineId);
-
-  const [image, setImage] = useState(addImage);
-
-  const OnImageChange = (event) => {
-    if (event.target.files && event.target.files[0]) {
-      setImage(URL.createObjectURL(event.target.files[0]));
-    }
-  };
-
-  const [imageSrc, setImageSrc] = useState();
 
   const [price, setPrice] = useState("");
 
@@ -52,18 +43,6 @@ function PopupMenu(props) {
 
   const [spiceLevel, setSpiceLevel] = useState("");
 
-  const handleImage = (e) => {
-    setimg(URL.createObjectURL(e.target.files[0]));
-  };
-
-  const handleImage1 = (e) => {
-    setimg1(URL.createObjectURL(e.target.files[0]));
-  };
-
-  const handleImage2 = (e) => {
-    setimg2(URL.createObjectURL(e.target.files[0]));
-  };
-
   const postMenuItem = (e) => {
     e.preventDefault();
 
@@ -75,9 +54,9 @@ function PopupMenu(props) {
       Price: price,
       UserId: 2,
       IsActive: true,
-      UploadImageBase64String: "img",
-      UploadImage2Base64String: "img1",
-      UploadImage3Base64String: "img2",
+      UploadImageBase64String: img.split(",")[1],
+      UploadImage2Base64String: img1.split(",")[1],
+      UploadImage3Base64String: img2.split(",")[1],
       FoodType: itemType,
       ServiceType: isDeliver,
       Calories: calorieCount,
@@ -108,13 +87,54 @@ function PopupMenu(props) {
       });
   };
 
+  // ------Images-Handles------
+
+  const uploadImage = async (e) => {
+    const file = e.target.files[0];
+    const base64 = await convertBase64(file);
+    setimg(base64);
+  };
+
+  const uploadImage1 = async (e) => {
+    const file = e.target.files[0];
+    const base64 = await convertBase64(file);
+    setimg1(base64);
+  };
+
+  const uploadImage2 = async (e) => {
+    const file = e.target.files[0];
+    const base64 = await convertBase64(file);
+    setimg2(base64);
+  };
+
+  const convertBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+
+      fileReader.onload = () => {
+        resolve(fileReader.result);
+      };
+
+      fileReader.onerror = (error) => {
+        reject(error);
+      };
+    });
+  };
+
+  // ------------STATES-FOR-BUTTON-CLICK---------
+
+  const [IsDrinks, setDrinks] = useState(false);
+
+  const [isSpice, setSpice] = useState(false);
+
   return (
     <div>
       <div className="title-popup">
         <h6>Add Something</h6>
       </div>
 
-      {/* Edit-text-Item-Name */}
+      {/*---------------Edit-text-Item-Name----------*/}
       <div className="ET-item-name">
         <div className="border-back">
           <div className="input-add-menu col-md-4">
@@ -157,7 +177,7 @@ function PopupMenu(props) {
         </div>
       </div> */}
 
-      {/* Food-Type */}
+      {/*-----------Food-Type----------*/}
       <div className="border-back">
         <div className="dropDown-item col-md-12">
           <span className="label-dropDown col-md-3 col-3">Food Type</span>
@@ -291,7 +311,7 @@ function PopupMenu(props) {
         </div>
       </div>
 
-      {/* Service-Type */}
+      {/*----------Service-Type-----------*/}
       <div className="border-back">
         <div className="dropDown-item col-md-12 col-12">
           <span className="label-dropDown col-md-3">Service Type</span>
@@ -324,7 +344,7 @@ function PopupMenu(props) {
         </div>
       </div>
 
-      {/* Pricing */}
+      {/*------------Pricing---------*/}
       <div className="border-back">
         <div className="dropDown col-md-12 col-12 align-items-center">
           <div className="dropDown-item col-md-3">
@@ -485,7 +505,7 @@ function PopupMenu(props) {
         </div>
       </div> */}
 
-      {/* Menu Description */}
+      {/*------------Menu Description---------*/}
       <div className="border-back">
         <div className="dropDown col-md-12 col-12">
           <div className="dropDown-item col-md-3">
@@ -502,12 +522,25 @@ function PopupMenu(props) {
         </div>
       </div>
 
-      {/* Image */}
+      {/*--------------Images---------*/}
       <div className="border-back">
         <div className="dropDown col-md-12 col-12">
           <div className="dropDown-item col-md-3">
             <span className="label-dropDown" style={{ marginRight: "60px" }}>
-              Image
+              <ForDevice deviceName={["tablet", "desktop"]}>
+                Image <br />
+                <span className="text-max-size-menu">Max-size: 1MB</span>
+              </ForDevice>
+
+              <ForDevice deviceName="mobile">
+                Image
+                <span
+                  style={{ marginLeft: "5px" }}
+                  className="text-max-size-menu"
+                >
+                  Max-size: 1MB
+                </span>
+              </ForDevice>
             </span>
           </div>
           <div className="image-video">
@@ -555,7 +588,7 @@ function PopupMenu(props) {
               </svg> */}
 
             <ImageUpload
-              handleImageSelect={handleImage}
+              handleImageSelect={uploadImage}
               imageSrc={img}
               setImageSrc={setimg}
               style={{
@@ -569,7 +602,7 @@ function PopupMenu(props) {
             />
 
             <ImageUpload
-              handleImageSelect={handleImage1}
+              handleImageSelect={uploadImage1}
               imageSrc={img1}
               setImageSrc={setimg1}
               style={{
@@ -583,7 +616,7 @@ function PopupMenu(props) {
             />
 
             <ImageUpload
-              handleImageSelect={handleImage2}
+              handleImageSelect={uploadImage2}
               imageSrc={img2}
               setImageSrc={setimg2}
               style={{
@@ -599,7 +632,7 @@ function PopupMenu(props) {
         </div>
       </div>
 
-      {/* Dish Details */}
+      {/*-----------Dish Details-----------*/}
       <div className="border-back">
         <div className="dropDown col-md-12 col-12">
           <div className="dropDown-item col-md-3">
@@ -630,7 +663,7 @@ function PopupMenu(props) {
               </div>
             </div> */}
 
-            {/* Service Info */}
+            {/*--------Service Info------*/}
             <div className="section-service-info">
               {/* <div className="dropDown-item-Pricing">
                 <span
@@ -746,7 +779,7 @@ function PopupMenu(props) {
               </div>
             </div>
 
-            {/* Preparation Time */}
+            {/*-----------Preparation Time----------*/}
             <div className="dropDown-item-Pricing">
               <span
                 className="label-dropDown"
@@ -768,7 +801,7 @@ function PopupMenu(props) {
               </div>
             </div>
 
-            {/* Drinks */}
+            {/*---------Drinks-------*/}
             <div className="drinks">
               <span
                 className="label-dropDown"
@@ -778,7 +811,12 @@ function PopupMenu(props) {
               </span>
               <div className="align-content-drinks">
                 <div className="content-dropDown">
-                  <button className="drinks-btn ">Coke</button>
+                  <button
+                    className={IsDrinks ? "active-drinks" : "drinks-btn"}
+                    onClick={() => setDrinks(!IsDrinks)}
+                  >
+                    Coke
+                  </button>
                 </div>
                 <div className="content-dropDown">
                   <button className="drinks-btn">Coke</button>
@@ -831,7 +869,7 @@ function PopupMenu(props) {
               </div>
             </div>
 
-            {/* Spice Level */}
+            {/*-----------Spice Level--------*/}
             <div className="drinks">
               <span
                 className="label-dropDown"
@@ -842,10 +880,13 @@ function PopupMenu(props) {
               <div className="align-content-drinks">
                 <div className="content-dropDown">
                   <button
-                    className="drinks-btn"
+                    className={isSpice ? "active-drinks" : "drinks-btn"}
+                    
+                  
                     onClick={(e) => {
                       e.preventDefault();
                       setSpiceLevel("Low Spicy");
+                      setSpice(!isSpice);
                     }}
                   >
                     Medium Spicy
@@ -879,7 +920,7 @@ function PopupMenu(props) {
         </div>
       </div>
 
-      {/* Buttons */}
+      {/*--------Buttons---------*/}
       <div className="row m-auto">
         <div className="col-md-12 d-flex mb-2 pr-0 justify-content-center">
           <button
