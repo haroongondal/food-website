@@ -42,8 +42,8 @@ export default function ResDocumentsPS() {
     return (
         <div>
             {/* Restaurant Documents */}
-      <div className="border-back-white" style={{ padding: "14px 0px" }}>
-        <div className="header-PS" style={{ padding: "0px 26px" }}>
+      <div className="border-back-white" id="margin-20-T" style={{ padding: "14px 0px" }}>
+        <div className="header-PS" >
           <h6 className="title-header-PS">Restaurant Documents</h6>
           <h6 className="title-details-PS">
             Please provide the required documents of your restaurent
@@ -75,7 +75,7 @@ export default function ResDocumentsPS() {
           </div>
 
           {/* Restaurants License */}
-          <div className="col-md-6 ">
+          <div className="col-md-6" id="margin-top-5">
             <div className="d-flex justify-content-between">
               <div className="label-PS">Restaurants License</div>
               <div className="text-imageSize-PS">Image size: 2MB</div>

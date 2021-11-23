@@ -11,7 +11,7 @@ export default function ProfileSettings() {
   return (
     <div>
           <div className="top-tools">
-            <div className="left-tools">
+            <div className="left-tools col-md-12 col-12">
               <button className="dark-blue-btn">Profile Settings</button>
             </div>
           </div>
@@ -21,7 +21,6 @@ export default function ProfileSettings() {
           <OwnerDetailsPS/>
           <RestaurentDetailsPS/>
           <ContactNoResPS/>
-          <TimingsPS/> 
           <ResDocumentsPS/>         
           </div>
     </div>

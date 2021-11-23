@@ -2,15 +2,7 @@
   height: 400px;
   background-color: black;
 }
-.Main-Sec-SignUp {
-  width: 80%;
-  margin: 0 auto;
-  background: white;
-  margin-top: -284px;
-  border-radius: 60px;
-  text-align: center;
-  box-shadow: 0 0 15px 1px rgb(0 0 0 / 40%);
-}
+
 .heading-signup {
   padding: 26px 26px;
   padding-bottom: 12px;
@@ -19,9 +11,7 @@
   margin: 0;
   font-weight: bold;
 }
-.SecRow-BS {
-  padding: 10px 66px;
-}
+
 .Sec-BS {
   padding: 10px 26px;
   position: relative;
@@ -73,4 +63,32 @@
   box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.1);
   transform: scale(1.008);
   transition: all 0.3s ease;
+}
+@media screen and (min-width: 320px) {
+  .Main-Sec-SignUp {
+    width: 95%;
+    margin: 0 auto;
+    background: white;
+    margin-top: -284px;
+    border-radius: 23px;
+    text-align: center;
+    box-shadow: 0 0 15px 1px rgb(0 0 0 / 40%);
+  }
+  .SecRow-BS {
+    padding: 0px 26px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .Main-Sec-SignUp {
+    width: 80%;
+    margin: 0 auto;
+    background: white;
+    margin-top: -284px;
+    border-radius: 60px;
+    text-align: center;
+    box-shadow: 0 0 15px 1px rgb(0 0 0 / 40%);
+  }
+  .SecRow-BS {
+    padding: 10px 66px;
+  }
 }

@@ -51,7 +51,7 @@ export default function OwnerDetailsPS() {
     <div>
       {/* Outlet Owner Details */}
       <div className="border-back-white" style={{ padding: "14px 0px" }}>
-        <div className="header-PS" style={{ padding: "0px 26px" }}>
+        <div className="header-PS">
           <h6 className="title-header-PS">Outlet Owner Details</h6>
           <h6 className="title-details-PS">
             This will be used to share revenue related communication
@@ -75,7 +75,7 @@ export default function OwnerDetailsPS() {
           </div>
 
           {/* Email Address */}
-          <div className="col-md-6">
+          <div className="col-md-6" id="margin-top-5">
             <div className="label-PS">Enter Outlet Owner email address</div>
             <input
               type="text"
@@ -119,11 +119,11 @@ export default function OwnerDetailsPS() {
           </div>
 
           {/* Restaurant Owner ID card */}
-          <div className="col-md-6 align-self-end">
+          <div className="col-md-6 align-self-end" id="margin-top-5">
             <div className="label-PS">Restaurant Owner ID card</div>
-            <div className="d-flex">
+            <div className="front-back-img">
               {/* (Front) */}
-              <div className="col-md-6 " style={{ paddingRight: "7px" }}>
+              <div className="col-md-6 " id="padding-right-7">
                 <div className="label-PS">(Front)</div>
                 <div className="dropdown-PS">
                   <input
@@ -141,7 +141,7 @@ export default function OwnerDetailsPS() {
               </div>
 
               {/* (Back) */}
-              <div className="col-md-6" style={{ paddingLeft: "7px" }}>
+              <div className="col-md-6" id="margin-top-5">
                 <div className="label-PS">(Back)</div>
                 <div className="dropdown-PS">
                   <input
@@ -163,7 +163,7 @@ export default function OwnerDetailsPS() {
 
         {/* WhatsApp checkbox */}
         <div className="Section-PS row">
-          <div className="col-md-12">
+          <div className="col-md-12" id="margin-top-5">
             <div className=" align-checkbox-city">
               <label className="content-CB-PS" style={{ marginLeft: "0px" }}>
                 <h6 className="label-CB-PS">
