@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import UploadSvgIcon from "../components/UploadSvgIcon";
+import ImageUpload from "image-upload-react";
 
 export default function OwnerDetailsPS() {
   const [ownerFullName, setOwnerFullName] = useState("");
@@ -11,10 +12,15 @@ export default function OwnerDetailsPS() {
   const [sameAsBtn, setSameAsBtn] = useState(false);
   const [whatsAppCheckbox, setWhatsAppCheckbox] = useState(false);
 
+  const [imgFront, setImgFront] = useState("");
+
+  const [imgBack, setImgBack] = useState("");
+
+  
+
   function handleSubmit(e) {
     e.preventDefault();
     {
-      
       const values = {
         ownerFullName: ownerFullName,
         ownerEmail: ownerEmail,
@@ -46,6 +52,37 @@ export default function OwnerDetailsPS() {
         });
     }
   }
+
+  // ------Images-Handles------
+
+  const uploadImageFront = async (e) => {
+    const file = e.target.files[0];
+    const base64 = await convertBase64(file);
+    setImgFront(base64);
+  };
+
+  const uploadImageBack = async (e) => {
+    const file = e.target.files[0];
+    const base64 = await convertBase64(file);
+    setImgBack(base64);
+  };
+
+  
+
+  const convertBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+
+      fileReader.onload = () => {
+        resolve(fileReader.result);
+      };
+
+      fileReader.onerror = (error) => {
+        reject(error);
+      };
+    });
+  };
 
   return (
     <div>
@@ -89,14 +126,65 @@ export default function OwnerDetailsPS() {
         </div>
 
         <div className="Section-PS row">
-          {/* Radio Button */}
-          <div className="col-md-6">
-            <div className="radio-PS">
-              <input type="radio" id="mobile" name="mobile" required
-              onChange={(e) => setSameAsBtn(e.target.checked)}/> {" "}
-              <label for="html">Same as restaurent mobile number</label>
-            </div>
+          {/* Restaurant Owner ID card */}
+          
+              {/* (Front) */}
+              <div className="col-md-6 " id="padding-right-7" style={{alignSelf:"end"}}>
+              <div className="label-PS">Restaurant Owner ID card</div>
+                <div className="label-PS">(Front)</div>
+                <ImageUpload
+                  handleImageSelect={uploadImageFront}
+                  imageSrc={imgFront}
+                  setImageSrc={setImgFront}
+                  style={{
+                    width: "100%",
+                    height: 130,
+                    background: "rgb(6 56 108 / 85%)",
+                    display: "flex",
+                    marginTop: "0px",
+                    borderRadius: "5px",
+                  }}
+                />
+              </div>
 
+              {/* (Back) */}
+              <div className="col-md-6" id="margin-top-5">
+                <div className="label-PS">(Back)</div>
+                <ImageUpload
+                  handleImageSelect={uploadImageBack}
+                  imageSrc={imgBack}
+                  setImageSrc={setImgBack}
+                  style={{
+                    width: "100%",
+                    height: 130,
+                    background: "rgb(6 56 108 / 85%)",
+                    display: "flex",
+                    marginTop: "0px",
+                    borderRadius: "5px",
+                  }}
+                />
+              </div>
+            
+          
+
+          
+        </div>
+
+        <div className="Section-PS row">
+
+        
+        <div className="col-md-6">
+        {/* Radio Button */}
+        <div className="radio-PS">
+              <input
+                type="radio"
+                id="mobile"
+                name="mobile"
+                required
+                onChange={(e) => setSameAsBtn(e.target.checked)}
+              />
+                <label for="html">Same as restaurent mobile number</label>
+            </div>
             {/* Mobile Number */}
             <div className="label-PS">Mobile Number of Owner</div>
             <div className="dropdown-PS">
@@ -117,70 +205,37 @@ export default function OwnerDetailsPS() {
               <button className="verify-btn">Verify</button>
             </div>
           </div>
-
-          {/* Restaurant Owner ID card */}
-          <div className="col-md-6 align-self-end" id="margin-top-5">
-            <div className="label-PS">Restaurant Owner ID card</div>
-            <div className="front-back-img">
-              {/* (Front) */}
-              <div className="col-md-6 " id="padding-right-7">
-                <div className="label-PS">(Front)</div>
-                <div className="dropdown-PS">
-                  <input
-                    type="text"
-                    placeholder="Upload image"
-                    className="input-PS"
-                    value={uploadImgFront}
-                    onChange={(e) => setUploadImgFront(e.target.value)}
-                    required
-                  />
-                  <span className="upload-img-PS">
-                    <UploadSvgIcon />
-                  </span>
-                </div>
-              </div>
-
-              {/* (Back) */}
-              <div className="col-md-6" id="margin-top-5">
-                <div className="label-PS">(Back)</div>
-                <div className="dropdown-PS">
-                  <input
-                    type="text"
-                    placeholder="Upload image"
-                    className="input-PS"
-                    value={uploadImgBack}
-                    onChange={(e) => setUploadImgBack(e.target.value)}
-                    required
-                  />
-                  <span className="upload-img-PS">
-                    <UploadSvgIcon />
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* WhatsApp checkbox */}
-        <div className="Section-PS row">
-          <div className="col-md-12" id="margin-top-5">
+          
+          <div className="col-md-6" id="whatsapp-CB-Margin">
             <div className=" align-checkbox-city">
               <label className="content-CB-PS" style={{ marginLeft: "0px" }}>
                 <h6 className="label-CB-PS">
                   Yes, I would like to receive important updates and
                   notifications from FoodApp on my WhatsApp
                 </h6>
-                <input type="checkbox" onChange={(e) => setWhatsAppCheckbox(e.target.checked)} required/>
+                <input
+                  type="checkbox"
+                  onChange={(e) => setWhatsAppCheckbox(e.target.checked)}
+                  required
+                />
                 <span className="checkbox-CB-PS"></span>
               </label>
             </div>
           </div>
+          
         </div>
+
+        
+
+        {/* WhatsApp checkbox */}
+        <div className="Section-PS row"></div>
 
         {/* Save Button */}
         <div className="Section-PS row mb-0 mt-5">
           <div className="col-md-12">
-            <button className="green-btn-S" onClick={(e) => handleSubmit(e)}>Save</button>
+            <button className="green-btn-S" onClick={(e) => handleSubmit(e)}>
+              Save
+            </button>
           </div>
         </div>
       </div>

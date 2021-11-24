@@ -22,12 +22,19 @@
     color: #E31C79;
     background: rgb(227 28 121 / 10%);
   }
-  button.like-btn:focus{
-    color: #E31C79;
-    background: rgb(227 28 121 / 10%);
-  }
   
   .reply-btn{
+    color: #06386c;
+    background: rgb(6 56 108 / 10%);
+    border: none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    font-size: 13px;
+    width: 86px;
+    height: 38px;
+    transition: all  0.3s ease;
+  }
+  .reply-btn.is-open{
     color: #06386c;
     background: rgb(6 56 108 / 10%);
     border: none;
@@ -42,15 +49,38 @@
     background: rgb(13 110 253 / 100%);
     background: rgb(13 110 253 / 15%);
   }
-  button.reply-btn:focus{
-    background: rgb(13 110 253 / 100%);
-    background: rgb(13 110 253 / 15%);
+  .done-btn{
+    
+    margin-bottom: 10px;
+    color: white;
+    background: #06386c;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    font-size: 13px;
+    width: 86px;
+    height: 38px;
+    transition: all  0.3s ease;
+  }
+  button.done-btn:hover{
+    color: white;
+    background: #06386c;
+    transform: scale(1.008);
+  }
+  button.done-btn:focus{
+    color: white;
+    background: #06386c;
   }
   .btn-margin{
     margin-right: 8px;
   }
   .reply-text-area{
     text-align: center;
+    display: flex;
+    place-content: center;
+  }
+  .replay-text-area-hide{
+    display: none;
   }
   .comment-section-feedback{
     padding-right: 50px;
@@ -62,7 +92,15 @@
   border-radius: 5px;
   font-size: 14px;
   padding: 10px;
+  width: 100%;
+  margin-left: 2%;
 }
 .feedback-textArea:focus {
   outline: 1px solid #06386c6b;
+}
+.done-btn-feedback{
+  padding: 0% 2%;
+}
+.disabled {
+  pointer-events: none;
 }

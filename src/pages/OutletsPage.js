@@ -11,6 +11,7 @@ import star from "../images/star.png";
 import CancelSvgIcon from "../components/CancelSvgIcon";
 import PopupNewOutlet2 from "../components/PopupNewOutlet2";
 import { ForDevice } from "media-query-react";
+import PopupTimings from "../components/PopupTimings";
 
 export default function OutletsPage() {
   //   Open-Close-OutletBox
@@ -67,6 +68,23 @@ export default function OutletsPage() {
   const closeNewOutletBtn = (e) => {
     setNewOutletShowing(false);
   };
+
+
+   //   PopupTimings
+   const [isTimingsShowing, setTimingsShowing] = useState(false);
+
+   const handleTimingsPop = (e) => {
+     e.preventDefault();
+     setTimingsShowing(true);
+   };
+ 
+   const closeTimingsPop = () => {
+     setTimingsShowing(false);
+   };
+ 
+   const closeTimingsBtn = (e) => {
+     setTimingsShowing(false);
+   };
 
   return (
     <div>
@@ -256,10 +274,7 @@ export default function OutletsPage() {
                     <th scope="col" className="col-md-3">
                       Outlet
                     </th>
-                    <th scope="col" className="col-md-2">
-                      Company
-                    </th>
-                    <th scope="col" className="col-md-2">
+                    <th scope="col" className="col-md-3">
                       Area
                     </th>
                     <th scope="col">City</th>
@@ -272,11 +287,13 @@ export default function OutletsPage() {
                       <img src={star} alt="" className="star-logo" />
                     </td>
                     <td data-label="Outlet">Catch22</td>
-                    <td data-label="Company">Dunkin Brands</td>
                     <td data-label="Area">Dubai -United Arab Emirates</td>
                     <td data-label="City">Dubai</td>
                     <td data-label="Edit">
-                      <EditSvgIcon />{" "}
+                      <div className="edit-time-btns">
+                      <i class="bi bi-pencil-square" onClick={handleNewOutletPop}></i>
+                      <i class="bi bi-stopwatch" onClick={handleTimingsPop}></i>
+                      </div>
                     </td>
                   </tr>
                   <tr>
@@ -284,35 +301,43 @@ export default function OutletsPage() {
                       <img src={star} alt="" className="star-logo" />
                     </td>
                     <td data-label="Outlet">Catch22</td>
-                    <td data-label="Company">Dunkin Brands</td>
                     <td data-label="Area">Dubai -United Arab Emirates</td>
                     <td data-label="City">Dubai</td>
                     <td data-label="Edit">
-                      <EditSvgIcon />{" "}
+                      <div className="edit-time-btns">
+                      <i class="bi bi-pencil-square" onClick={handleNewOutletPop}></i>
+                      <i class="bi bi-stopwatch" onClick={handleTimingsPop}></i>
+                      </div>
                     </td>
                   </tr>
+
                   <tr>
                     <td data-label="Logo">
                       <img src={star} alt="" className="star-logo" />
                     </td>
                     <td data-label="Outlet">Catch22</td>
-                    <td data-label="Company">Dunkin Brands</td>
                     <td data-label="Area">Dubai -United Arab Emirates</td>
                     <td data-label="City">Dubai</td>
                     <td data-label="Edit">
-                      <EditSvgIcon />{" "}
+                      <div className="edit-time-btns">
+                      <i class="bi bi-pencil-square" onClick={handleNewOutletPop}></i>
+                      <i class="bi bi-stopwatch" onClick={handleTimingsPop}></i>
+                      </div>
                     </td>
                   </tr>
+
                   <tr>
                     <td data-label="Logo">
                       <img src={star} alt="" className="star-logo" />
                     </td>
                     <td data-label="Outlet">Catch22</td>
-                    <td data-label="Company">Dunkin Brands</td>
                     <td data-label="Area">Dubai -United Arab Emirates</td>
                     <td data-label="City">Dubai</td>
                     <td data-label="Edit">
-                      <EditSvgIcon />{" "}
+                      <div className="edit-time-btns">
+                      <i class="bi bi-pencil-square" onClick={handleNewOutletPop}></i>
+                      <i class="bi bi-stopwatch" onClick={handleTimingsPop}></i>
+                      </div>
                     </td>
                   </tr>
                 </tbody>
@@ -360,7 +385,7 @@ export default function OutletsPage() {
         </Modal>
 
         <ForDevice deviceName={["tablet", "desktop"]}>
-          {/* PopupNewOutlet */}
+          {/* PopupNewOutlet----DESKTOP */}
           <Modal
             open={isNewOutletShowing}
             onClose={closeNewOutletPop}
@@ -376,12 +401,12 @@ export default function OutletsPage() {
               },
             }}
           >
-            <PopupNewOutlet2 click={closeNewOutletBtn} />
+            <PopupNewOutlet2 click={closeNewOutletBtn}/>
           </Modal>
         </ForDevice>
 
         <ForDevice deviceName="mobile">
-          {/* PopupNewOutlet */}
+          {/* PopupNewOutlet----MOBILE */}
           <Modal
             open={isNewOutletShowing}
             onClose={closeNewOutletPop}
@@ -397,6 +422,47 @@ export default function OutletsPage() {
             }}
           >
             <PopupNewOutlet2 click={closeNewOutletBtn} />
+          </Modal>
+        </ForDevice>
+
+        <ForDevice deviceName={["tablet", "desktop"]}>
+          {/* PopupTimings----DESKTOP */}
+          <Modal
+            open={isTimingsShowing}
+            onClose={closeTimingsPop}
+            center
+            closeIcon={closeIcon}
+            styles={{
+              modal: {
+                "margin-top": "80px",
+                "max-width": "535px",
+                width: "100%",
+                padding: "0px",
+                borderRadius: "23px",
+              },
+            }}
+          >
+            <PopupTimings click={closeTimingsBtn} />
+          </Modal>
+        </ForDevice>
+
+        <ForDevice deviceName="mobile">
+          {/* PopupTimings----MOBILE */}
+          <Modal
+            open={isTimingsShowing}
+            onClose={closeTimingsPop}
+            center
+            closeIcon={closeIcon}
+            styles={{
+              modal: {
+                width: "100%",
+                height: "100%",
+                padding: "0px",
+                margin: "0px",
+              },
+            }}
+          >
+            <PopupTimings click={closeTimingsBtn} />
           </Modal>
         </ForDevice>
       </div>

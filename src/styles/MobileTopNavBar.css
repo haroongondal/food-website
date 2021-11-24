@@ -3,6 +3,7 @@
   background: white;
   top: 0;
   box-shadow: 0 10px 40px rgb(0 0 0 / 10%);
+  border-radius: 0 0 23px 23px;
   width: 100%;
   min-height: 130px;
   z-index: 10;

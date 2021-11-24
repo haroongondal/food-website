@@ -14,10 +14,10 @@
     box-shadow: 0 0 15px 1px rgb(0 0 0 / 40%);
   }
   .SecRow-BL {
-    padding: 5px 26px 0px 26px;
+    padding: 0 26px;
   }
   .forget-pass-BL {
-    padding: 10px 26px;
+    padding: 10px 28px;
   }
   .forget-pass-BL h6 {
     font-size: 12px;
@@ -43,10 +43,10 @@
     box-shadow: 0 0 15px 1px rgb(0 0 0 / 40%);
   }
   .SecRow-BL {
-    padding: 5px 66px 0px 66px;
+    padding: 5px 10px 0px;
   }
   .forget-pass-BL {
-    padding: 10px 66px;
+    padding: 10px 38px;
   }
   .forget-pass-BL h6 {
     font-size: 12px;
