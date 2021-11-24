@@ -8,8 +8,16 @@ import FeedbackReviewSec from "../components/FeedbackReviewSec";
 import PopupFeedbackComSET from "../components/PopupFeedbackComSET";
 import FeedbackComponents from "../components/FeedbackComponents";
 import CancelSvgIcon from "../components/CancelSvgIcon";
+import useFetch from "../Utils/useFetch";
+import Skeleton from "react-loading-skeleton";
 
 function FeedbackPage() {
+
+
+  const {data, isPending, error} = useFetch(`https://api.masairapp.com/api/Restaurant/GetRestaurantById?id=1`);
+
+  
+
   //   PopupCommSetting
   const [isCommSettingShowing, setCommSettingShowing] = useState(false);
 
@@ -28,7 +36,7 @@ function FeedbackPage() {
     <div>
           <FeedbackComponents />
           <div className="Content-graph-boxes">
-            <div className="border-back-white">
+            {/* <div className="border-back-white">
               <div className="toggle-brands">
                 <div className="brands-context-btn">
                   <span>Catch22-Dubai</span>
@@ -43,16 +51,18 @@ function FeedbackPage() {
                   </button>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <div
               className="border-back-white"
-              id="margin-20-TB"
               style={{ padding: "14px 0px" }}
             >
               <div className="outlets-header" style={{ padding: "0px 26px" }}>
                 <h6 className="title-outlets-header">
-                  Summary <span>(5 Outlets selected)</span>
+                  Summary <span>
+                  {isPending && <div><Skeleton/></div>}
+                  {error && <div>{error}</div>}
+                  {data && "("+data.RestaurantName+" "+data.PrimaryAreaOfOutlet+", "+data.PrimaryLocation+")"}</span>
                 </h6>
 
                 <div className="right-outlets-header">
@@ -123,7 +133,9 @@ function FeedbackPage() {
                       </svg>
                     </span>
                     <div className="details-feedback-box">
-                      <h1>23</h1>
+                      <h1>{isPending && <div><Skeleton/></div>}
+                  {error && <div>{error}</div>}
+                  {data && data.UserReviews.length}</h1>
                       <h2>Total Feebacks</h2>
                     </div>
                   </div>
@@ -165,7 +177,9 @@ function FeedbackPage() {
                       </svg>
                     </span>
                     <div className="details-feedback-box">
-                      <h1>2.71</h1>
+                      <h1>{isPending && <div><Skeleton/></div>}
+                  {error && <div>{error}</div>}
+                  {data && Math.round(data.AverageRating * 100) / 100}</h1>
                       <h2>Average Rating</h2>
                     </div>
                   </div>
@@ -173,7 +187,7 @@ function FeedbackPage() {
               </div>
             </div>
 
-            <div className="border-back-white" style={{ padding: "14px 0px" }}>
+            <div className="border-back-white" id="margin-20-T" style={{ padding: "14px 0px" }}>
               <div className="outlets-header" style={{ padding: "0px 26px" }}>
                 <h6 className="title-outlets-header">Feedback List</h6>
 
@@ -196,9 +210,11 @@ function FeedbackPage() {
 
               <hr />
 
-              <FeedbackReviewSec />
-              <FeedbackReviewSec />
-              <FeedbackReviewSec />
+              {isPending && <div><Skeleton/></div>}
+                  {error && <div>{error}</div>}
+                  {data && data.UserReviews.map(c=> <FeedbackReviewSec data = {c}/>)
+              
+                  }
             </div>
           </div>
 

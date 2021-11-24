@@ -116,13 +116,13 @@
 .dropdown-menu-Components select {
   box-shadow: 0px 6px 6px rgb(0 0 0 / 10%);
   font-size: 13px;
-  color: white;
+  color: color;
   width: 100%;
   border: none;
   border-radius: 17px;
   height: 100%;
   display: block;
-  background-color: #5d87dc;
+  background-color: white;
   resize: vertical;
   box-sizing: border-box;
   min-height: 38px;
@@ -149,9 +149,9 @@
   line-height: 1;
 }
 .dropdown-menu-Components .Darrow img {
-  width: 16px;
-  height: 16px;
-  margin-top: 5px;
+  width: 12px;
+  height: 12px;
+  margin-top: 6px;
 }
 .addMenuDetails-btn {
   background: #5d87dc;

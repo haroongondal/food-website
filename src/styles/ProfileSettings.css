@@ -290,6 +290,7 @@
 }
 .time-input:focus{
   color: black;
+  outline: none;
 }
 .width-20 {
   width: 20% !important;

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "../styles/MenuComponent.css";
-import downArrowWhite from "../images/down-arrow-white.png";
+import downArrow from "../images/down_arrow.svg";
 import Modal from "react-responsive-modal";
 import PopupMenuADD from "./PopupMenuADD";
 import CancelSvgIcon from "../components/CancelSvgIcon";
@@ -83,7 +83,7 @@ function MenuComponent(props) {
                   </option>
                 </select>
                 <span class="Darrow">
-                  <img alt="down-arrow" src={downArrowWhite} />
+                  <img alt="down-arrow" src={downArrow} />
                 </span>
               </div>
             </div>

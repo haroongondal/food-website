@@ -77,7 +77,7 @@ function BusinessLogin(props) {
           <h3>Login</h3>
         </div>
         <hr />
-        <div className="row SecRow-BL">
+        <div className="SecRow-BL">
           <div className="col-md-12 Sec-BS">
             <input
               className="input-BS"
@@ -90,7 +90,7 @@ function BusinessLogin(props) {
           </div>
         </div>
 
-        <div className="row SecRow-BL">
+        <div className="SecRow-BL">
           <div className="col-md-12 Sec-BS">
             <input
               className="input-BS"
@@ -110,7 +110,7 @@ function BusinessLogin(props) {
         </div>
 
         {/* Save Button */}
-        <div className="Section-PS row pb-4 pt-4">
+        <div className="Section-PS pb-4" id="padding-top-40">
           <div className="col-md-12">
             <button className="black-btn" onClick={(e) => Login(e)}>
               Log in

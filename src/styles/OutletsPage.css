@@ -45,6 +45,8 @@ table td {
   padding-left: 26px;
 }
 
+
+
 @media screen and (max-width: 600px){
 
   .border-back-white-outlet {
@@ -271,6 +273,14 @@ table td {
   table td:last-child {
     border-bottom: 0;
   }
+  .edit-time-btns{
+    display: inline-flex;
+      align-items: center;
+      grid-gap: 10px;
+  }
+  .edit-time-btns i{
+    font-size: 20px;
+  }
 }
 @media screen and (min-width: 992px) {
   .border-back-white-outlet {
@@ -448,5 +458,12 @@ table td {
     width: 35px;
     object-fit: cover;
   }
-
+  .edit-time-btns{
+    display: inline-flex;
+      align-items: center;
+      grid-gap: 40px;
+  }
+  .edit-time-btns i{
+    font-size: 20px;
+  }
 }

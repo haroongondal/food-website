@@ -1,11 +1,16 @@
 import React from 'react'
 import { useState } from 'react';
+import ImageUpload from "image-upload-react";
 import UploadSvgIcon from "../components/UploadSvgIcon";
 
 export default function ResDocumentsPS() {
     const [smes, setSmes] = useState("");
   const [license, setLicense] = useState("");
   const [gstNo, setGstNo] = useState("");
+
+  const [imgSMES, setImgSMES] = useState("");
+
+  const [imgLicence, setImgLicence] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -39,6 +44,33 @@ export default function ResDocumentsPS() {
         });
     }
   }
+
+  const uploadImageSMES = async (e) => {
+    const file = e.target.files[0];
+    const base64 = await convertBase64(file);
+    setImgSMES(base64);
+  };
+
+  const uploadImageLicence = async (e) => {
+    const file = e.target.files[0];
+    const base64 = await convertBase64(file);
+    setImgLicence(base64);
+  };
+
+  const convertBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+
+      fileReader.onload = () => {
+        resolve(fileReader.result);
+      };
+
+      fileReader.onerror = (error) => {
+        reject(error);
+      };
+    });
+  };
     return (
         <div>
             {/* Restaurant Documents */}
@@ -57,42 +89,42 @@ export default function ResDocumentsPS() {
           <div className="col-md-6 ">
             <div className="d-flex justify-content-between">
               <div className="label-PS">SMES</div>
-              <div className="text-imageSize-PS">Image size: 2MB</div>
+              <div className="text-imageSize-PS">Image size: 1MB</div>
             </div>
-            <div className="dropdown-PS">
-              <input
-                type="text"
-                placeholder="Upload image"
-                className="input-PS"
-                value={smes}
-                onChange={(e) => setSmes(e.target.value)}
-                required
-              />
-              <span className="upload-img-PS">
-                <UploadSvgIcon />
-              </span>
-            </div>
+            <ImageUpload
+                  handleImageSelect={uploadImageSMES}
+                  imageSrc={imgSMES}
+                  setImageSrc={setImgSMES}
+                  style={{
+                    width: "100%",
+                    height: 130,
+                    background: "rgb(6 56 108 / 85%)",
+                    display: "flex",
+                    marginTop: "0px",
+                    borderRadius: "5px",
+                  }}
+                />
           </div>
 
           {/* Restaurants License */}
           <div className="col-md-6" id="margin-top-5">
             <div className="d-flex justify-content-between">
               <div className="label-PS">Restaurants License</div>
-              <div className="text-imageSize-PS">Image size: 2MB</div>
+              <div className="text-imageSize-PS">Image size: 1MB</div>
             </div>
-            <div className="dropdown-PS">
-              <input
-                type="text"
-                placeholder="Upload image"
-                className="input-PS"
-                value={license}
-                onChange={(e) => setLicense(e.target.value)}
-                required
-              />
-              <span className="upload-img-PS">
-                <UploadSvgIcon />
-              </span>
-            </div>
+            <ImageUpload
+                  handleImageSelect={uploadImageLicence}
+                  imageSrc={imgLicence}
+                  setImageSrc={setImgLicence}
+                  style={{
+                    width: "100%",
+                    height: 130,
+                    background: "rgb(6 56 108 / 85%)",
+                    display: "flex",
+                    marginTop: "0px",
+                    borderRadius: "5px",
+                  }}
+                />
           </div>
         </div>
 

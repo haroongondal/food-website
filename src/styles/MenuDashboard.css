@@ -42,11 +42,11 @@
   font-size: 13px;
   width: 100%;
   color: #06386c;
-  border: #06386c 1px solid;
+  border: none;
   border-radius: 17px;
   height: 100%;
   display: block;
-  background-color: #ffffff00;
+  background-color: white;
   resize: vertical;
   box-sizing: border-box;
   min-height: 38px;
@@ -56,6 +56,7 @@
   font-family: inherit;
   line-height: 1.15;
   margin: 0;
+  box-shadow: 0px 6px 6px rgb(0 0 0 / 10%);
 }
 
 .dropdown-feedback-Components select:focus {

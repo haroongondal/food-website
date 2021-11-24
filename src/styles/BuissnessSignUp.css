@@ -12,12 +12,7 @@
   font-weight: bold;
 }
 
-.Sec-BS {
-  padding: 10px 26px;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
+
 .input-BS {
   width: 100%;
   height: 100%;
@@ -76,6 +71,13 @@
   }
   .SecRow-BS {
     padding: 0px 26px;
+    display: block;
+  }
+  .Sec-BS {
+    padding: 10px 0px;
+    position: relative;
+    display: flex;
+    align-items: center;
   }
 }
 @media screen and (min-width: 992px) {
@@ -89,6 +91,13 @@
     box-shadow: 0 0 15px 1px rgb(0 0 0 / 40%);
   }
   .SecRow-BS {
-    padding: 10px 66px;
+    padding: 10px 10px;
+    display: flex;
+  }
+  .Sec-BS {
+    padding: 10px 26px;
+    position: relative;
+    display: flex;
+    align-items: center;
   }
 }

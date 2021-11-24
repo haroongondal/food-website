@@ -18,9 +18,9 @@ function BusinessMainSection() {
             </div>
             <div className="items_services center">
     
-                <div className="row row-box">
+                <div className="row-box">
                   {/* Item One */}
-                  <div className="col-md-2 item_service">
+                  <div className="col-md-2 col-9 item_service">
                     <div className="content-box">
                         <div className="icon_service">
                             <img src={revenueImage} alt="box-pic"/>
@@ -33,7 +33,7 @@ function BusinessMainSection() {
                   {/* Item One */}
       
                   {/* Item Two */}
-                  <div className="col-md-2 item_service">
+                  <div className="col-md-2 col-9 item_service">
                     <div className="content-box">
                         <div className="icon_service">
                             <img src={revenueImage} alt="box-pic"/>
@@ -46,7 +46,7 @@ function BusinessMainSection() {
                   {/* Item Two */}
       
                   {/* Item Three */}
-                  <div className="col-md-2 item_service">
+                  <div className="col-md-2 col-9 item_service">
                     <div className="content-box">
                         <div className="icon_service">
                             <img src={revenueImage} alt="box-pic"/>
@@ -59,7 +59,7 @@ function BusinessMainSection() {
                   {/* Item Three */}
     
                   {/* Item four */}
-                  <div className="col-md-2 item_service">
+                  <div className="col-md-2 col-9 item_service">
                     <div className="icon_service">
                         <div className="content-box">
                             <div className="icon_service">
@@ -86,7 +86,7 @@ function BusinessMainSection() {
             </div>
             <div className="items_services center">
     
-                <div className="row row-box">
+                <div className="row-box">
                   {/* Item One */}
                   <div className="col-md-3 item_service-2">
                     <div className="content-box-2">
@@ -141,7 +141,7 @@ function BusinessMainSection() {
             </div>
             <div className="items_services center">
     
-                <div className="row row-box">
+                <div className="row-box">
                   {/* Item One */}
                   <div className="item_service col-md-3 ">
                     <div className="content-box-2">

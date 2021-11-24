@@ -3,7 +3,6 @@ import ContactNoResPS from "../components/ContactNoResPS";
 import OwnerDetailsPS from "../components/OwnerDetailsPS";
 import ResDocumentsPS from "../components/ResDocumentsPS";
 import RestaurentDetailsPS from "../components/RestaurentDetailsPS";
-import TimingsPS from "../components/TimingsPS";
 
 import "../styles/ProfileSettings.css";
 
