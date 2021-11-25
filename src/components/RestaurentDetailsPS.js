@@ -84,7 +84,7 @@ export default function RestaurentDetailsPS() {
         id="margin-20-TB"
         style={{ padding: "14px 0px" }}
       >
-        <div className="header-PS">
+        <div className="header-PS" style={{ padding: "0px 26px" }}>
           <h6 className="title-header-PS">Restaurant Details</h6>
           <h6 className="title-details-PS">Name, address, location</h6>
         </div>
@@ -92,8 +92,8 @@ export default function RestaurentDetailsPS() {
         <hr />
 
         {/* Restaurent Name */}
-        <div className="Section-PS row">
-          <div className="col-md-6">
+        <div className="Section-PS">
+          <div className="col-md-6" id="front-img-padding-R">
             <div className="label-PS">Enter Restaurent Name</div>
             <input
               type="text"
@@ -106,7 +106,7 @@ export default function RestaurentDetailsPS() {
           </div>
 
           {/* Average Price */}
-          <div className="col-md-6" id="margin-top-5">
+          <div className="col-md-6 margin-top-5" id="back-img-padding-L">
             <div className="label-PS">Average Price For 2 persons</div>
             <input
               type="text"
@@ -131,9 +131,9 @@ export default function RestaurentDetailsPS() {
           </div> */}
         </div>
 
-        <div className="Section-PS row">
+        <div className="Section-PS">
           {/* Select Cuisines */}
-          <div className="col-md-6 d-flex align-items-center">
+          <div className="col-md-6 d-flex align-items-center" id="front-img-padding-R">
             <button
               className="select-cuisine-btn"
               onClick={handleSelectCuisinePop}
@@ -144,8 +144,8 @@ export default function RestaurentDetailsPS() {
 
           {/* Select Features */}
           <div
-            className="col-md-6 d-flex align-items-center "
-            id="margin-top-5"
+            className="col-md-6 d-flex align-items-center margin-top-5"
+            id="back-img-padding-L"
           >
             <button
               className="select-cuisine-btn"
@@ -156,9 +156,10 @@ export default function RestaurentDetailsPS() {
           </div>
         </div>
 
+        
+        <div className="Section-PS">
         {/* Delivery Type */}
-        <div className="Section-PS row">
-          <div className="col-md-6">
+          <div className="col-md-6" id="front-img-padding-R">
             <div className="label-PS">Delivery Type</div>
             <div className="align-CB-PS p-0">
               <label
@@ -188,7 +189,7 @@ export default function RestaurentDetailsPS() {
           </div>
 
           {/* Establishment type */}
-          <div className="col-md-6">
+          <div className="col-md-6 margin-top-5" id="back-img-padding-L">
             <div className="label-PS">Establishment type</div>
             <div className="align-CB-PS p-0">
               <label
@@ -205,7 +206,7 @@ export default function RestaurentDetailsPS() {
               </label>
 
               <label
-                className="col-md-4 col-5 content-CB-PS mx-1"
+                className="col-md-4 content-CB-PS mx-1"
                 style={{ marginLeft: "0px" }}
               >
                 <h6 className="label-CB-PS">Restaurant</h6>
@@ -221,14 +222,14 @@ export default function RestaurentDetailsPS() {
         </div>
 
         {/* Restaurant Description */}
-        <div className="Section-PS row">
+        <div className="Section-PS">
           <div className="col-md-12">
             <div className="label-PS">Restaurant Description</div>
             <textarea
               placeholder="Remember, be nice!"
               className="PS-textArea"
               rows="5"
-              cols="95"
+              cols="9"
               value={desc}
               onChange={(e) => setDesc(e.target.value)}
             ></textarea>

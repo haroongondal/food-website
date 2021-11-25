@@ -137,7 +137,7 @@ export default function OutletsPage() {
               </div>
             </div> */}
         <div className="border-back-white-outlet">
-          <div className="outlets-header">
+          <div className="outlets-header p-0">
             <h6 className="title-outlets-header">Outlets</h6>
 
             <div className="right-outlets-header">

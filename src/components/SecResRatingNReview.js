@@ -5,6 +5,7 @@ import ResDetailFilter from './ResDetailFilter'
 import ResDetailReviews from '../components/ResDetailReviews'
 import Pagination from './Pagination'
 
+
 export default function SecResRatingNReview(props) {
 
     return (
@@ -21,7 +22,7 @@ export default function SecResRatingNReview(props) {
                             {props.ReviewsList.map((r) =>
                             <ResDetailReviews data = {r}/>
                             )}
-                          
+                            
                         </div>
                         <Pagination/>
                     </div>

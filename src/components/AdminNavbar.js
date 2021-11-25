@@ -36,7 +36,7 @@ function AdminNavbar() {
         href="#"
         className="nav-link"
       >
-        Menu Dashboard
+        Outlet Dashboard
       </h1>
       <ul>
         {/* <li>

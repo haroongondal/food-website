@@ -49,9 +49,9 @@ export default function ContactNoResPS() {
 
         <hr />
 
-        <div className="Section-PS row">
+        <div className="Section-PS">
           {/* Mobile Number at Restaurent */}
-          <div className="col-md-6">
+          <div className="col-md-6" id="front-img-padding-R">
             <div className="label-PS">Mobile Number at Restaurent</div>
             <div className="dropdown-PS">
               <span className="CountryCode-PS">
@@ -73,7 +73,7 @@ export default function ContactNoResPS() {
           </div>
 
           {/* Landline Number at Restaurent */}
-          <div className="col-md-6" id="margin-top-5">
+          <div className="col-md-6 margin-top-5" id="back-img-padding-L">
             <div className="label-PS">Landline Number at Restaurent</div>
             <div className="dropdown-PS">
               <span className="CountryCode-PS">
@@ -96,7 +96,7 @@ export default function ContactNoResPS() {
         </div>
 
         {/* Save Button*/}
-        <div className="Section-PS row mb-0 mt-5">
+        <div className="Section-PS mb-0 mt-5">
           <div className="col-md-12">
             <button className="green-btn-S" onClick={(e) => handleSubmit(e)}>Save</button>
           </div>
