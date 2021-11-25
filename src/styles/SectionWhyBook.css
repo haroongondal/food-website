@@ -61,6 +61,7 @@
 .type-why-book {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 .text-why-book {
   display: flex;
@@ -83,6 +84,7 @@
   justify-content: center;
   display: flex;
   font-size: 12px;
+  margin-top: 10px;
   margin-bottom: 8px;
   font-family: "Raleway";
 }
@@ -151,6 +153,7 @@
 .type-why-book {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 .text-why-book {
   display: flex;
@@ -173,6 +176,7 @@
   justify-content: center;
   display: flex;
   font-size: 15px;
+  margin-top: 10px;
   margin-bottom: 8px;
   font-family: "Raleway";
 }

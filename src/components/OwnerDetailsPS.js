@@ -1,20 +1,15 @@
 import React from "react";
 import { useState } from "react";
-import UploadSvgIcon from "../components/UploadSvgIcon";
 import ImageUpload from "image-upload-react";
 
 export default function OwnerDetailsPS() {
   const [ownerFullName, setOwnerFullName] = useState("");
   const [ownerEmail, setOwnerEmail] = useState("");
   const [ownerMobile, setOwnerMobile] = useState("");
-  const [uploadImgFront, setUploadImgFront] = useState("");
-  const [uploadImgBack, setUploadImgBack] = useState("");
+  const [imgFront, setImgFront] = useState("");
+  const [imgBack, setImgBack] = useState("");
   const [sameAsBtn, setSameAsBtn] = useState(false);
   const [whatsAppCheckbox, setWhatsAppCheckbox] = useState(false);
-
-  const [imgFront, setImgFront] = useState("");
-
-  const [imgBack, setImgBack] = useState("");
 
   
 
@@ -25,8 +20,8 @@ export default function OwnerDetailsPS() {
         ownerFullName: ownerFullName,
         ownerEmail: ownerEmail,
         ownerMobile: ownerMobile,
-        uploadImgFront: uploadImgFront,
-        uploadImgBack: uploadImgBack,
+        ImgFront: imgFront.split(",")[1],
+        ImgBack: imgBack.split(",")[1],
         sameAsBtn: sameAsBtn,
         whatsAppCheckbox: whatsAppCheckbox,
       };
@@ -67,8 +62,6 @@ export default function OwnerDetailsPS() {
     setImgBack(base64);
   };
 
-  
-
   const convertBase64 = (file) => {
     return new Promise((resolve, reject) => {
       const fileReader = new FileReader();
@@ -97,9 +90,9 @@ export default function OwnerDetailsPS() {
 
         <hr />
 
-        <div className="Section-PS row">
+        <div className="Section-PS">
           {/* FullName */}
-          <div className="col-md-6">
+          <div className="col-md-6" id="front-img-padding-R">
             <div className="label-PS">Enter Outlet Owner full name</div>
             <input
               type="text"
@@ -112,7 +105,7 @@ export default function OwnerDetailsPS() {
           </div>
 
           {/* Email Address */}
-          <div className="col-md-6" id="margin-top-5">
+          <div className="col-md-6 margin-top-5" id="back-img-padding-L">
             <div className="label-PS">Enter Outlet Owner email address</div>
             <input
               type="text"
@@ -125,57 +118,61 @@ export default function OwnerDetailsPS() {
           </div>
         </div>
 
-        <div className="Section-PS row">
+        <div className="Section-PS">
           {/* Restaurant Owner ID card */}
-          
-              {/* (Front) */}
-              <div className="col-md-6 " id="padding-right-7" style={{alignSelf:"end"}}>
-              <div className="label-PS">Restaurant Owner ID card</div>
-                <div className="label-PS">(Front)</div>
-                <ImageUpload
-                  handleImageSelect={uploadImageFront}
-                  imageSrc={imgFront}
-                  setImageSrc={setImgFront}
-                  style={{
-                    width: "100%",
-                    height: 130,
-                    background: "rgb(6 56 108 / 85%)",
-                    display: "flex",
-                    marginTop: "0px",
-                    borderRadius: "5px",
-                  }}
-                />
-              </div>
 
-              {/* (Back) */}
-              <div className="col-md-6" id="margin-top-5">
-                <div className="label-PS">(Back)</div>
-                <ImageUpload
-                  handleImageSelect={uploadImageBack}
-                  imageSrc={imgBack}
-                  setImageSrc={setImgBack}
-                  style={{
-                    width: "100%",
-                    height: 130,
-                    background: "rgb(6 56 108 / 85%)",
-                    display: "flex",
-                    marginTop: "0px",
-                    borderRadius: "5px",
-                  }}
-                />
-              </div>
-            
-          
+          {/* (Front) */}
+          <div className="col-md-6 " id="front-img-padding-R">
+            <div className="label-PS">Restaurant Owner ID card</div>
+            <div className="d-flex justify-content-between">
+              <div className="label-PS">(Front)</div>
+              <div className="text-imageSize-PS">Image size: 1MB</div>
+            </div>
+            <ImageUpload
+              handleImageSelect={uploadImageFront}
+              imageSrc={imgFront}
+              setImageSrc={setImgFront}
+              style={{
+                width: "100%",
+                height: 130,
+                background: "rgb(6 56 108 / 85%)",
+                display: "flex",
+                marginTop: "0px",
+                borderRadius: "5px",
+              }}
+            />
+          </div>
 
-          
+          {/* (Back) */}
+          <div
+            className="col-md-6 margin-top-5"
+            id="back-img-padding-L"
+            style={{ alignSelf: "flex-end" }}
+          >
+            <div className="d-flex justify-content-between">
+              <div className="label-PS">(Back)</div>
+              <div className="text-imageSize-PS">Image size: 1MB</div>
+            </div>
+            <ImageUpload
+              handleImageSelect={uploadImageBack}
+              imageSrc={imgBack}
+              setImageSrc={setImgBack}
+              style={{
+                width: "100%",
+                height: 130,
+                background: "rgb(6 56 108 / 85%)",
+                display: "flex",
+                marginTop: "0px",
+                borderRadius: "5px",
+              }}
+            />
+          </div>
         </div>
 
-        <div className="Section-PS row">
-
-        
-        <div className="col-md-6">
-        {/* Radio Button */}
-        <div className="radio-PS">
+        <div className="Section-PS">
+          <div className="col-md-6" id="front-img-padding-R">
+            {/* Radio Button */}
+            <div className="radio-PS">
               <input
                 type="radio"
                 id="mobile"
@@ -205,8 +202,10 @@ export default function OwnerDetailsPS() {
               <button className="verify-btn">Verify</button>
             </div>
           </div>
-          
-          <div className="col-md-6" id="whatsapp-CB-Margin">
+
+
+          {/* WhatsApp checkbox */}
+          <div className="col-md-6 whatsapp-CB-Margin" id="back-img-padding-L">
             <div className=" align-checkbox-city">
               <label className="content-CB-PS" style={{ marginLeft: "0px" }}>
                 <h6 className="label-CB-PS">
@@ -222,16 +221,13 @@ export default function OwnerDetailsPS() {
               </label>
             </div>
           </div>
-          
         </div>
 
         
-
-        {/* WhatsApp checkbox */}
-        <div className="Section-PS row"></div>
+        
 
         {/* Save Button */}
-        <div className="Section-PS row mb-0 mt-5">
+        <div className="Section-PS mb-0 mt-5">
           <div className="col-md-12">
             <button className="green-btn-S" onClick={(e) => handleSubmit(e)}>
               Save

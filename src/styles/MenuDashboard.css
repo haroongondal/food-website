@@ -23,61 +23,8 @@
   font-size: 14px;
 }
 
-.right-tools-catch {
-  grid-gap: 16px;
-  display: flex;
-  flex-wrap: wrap;
-  width: 39%;
-  justify-content: right;
-}
-.feedback-Components-DD {
-  width: 43%;
-}
-.dropdown-feedback-Components {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.dropdown-feedback-Components select {
-  font-size: 13px;
-  width: 100%;
-  color: #06386c;
-  border: none;
-  border-radius: 17px;
-  height: 100%;
-  display: block;
-  background-color: white;
-  resize: vertical;
-  box-sizing: border-box;
-  min-height: 38px;
-  padding: 17px 15px;
-  -webkit-appearance: none;
-  text-transform: none;
-  font-family: inherit;
-  line-height: 1.15;
-  margin: 0;
-  box-shadow: 0px 6px 6px rgb(0 0 0 / 10%);
-}
 
-.dropdown-feedback-Components select:focus {
-  outline: none;
-}
-.dropdown-feedback-Components .Darrow {
-  position: absolute;
-  pointer-events: none;
-  right: 4px;
-  display: inline-block;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  font-size: 0;
-  line-height: 1;
-}
-.dropdown-feedback-Components .Darrow img {
-  width: 12px;
-  height: 12px;
-  margin-top: 6px;
-}
+
 .top-tools {
   display: flex;
   align-items: center;
@@ -183,4 +130,118 @@
   border-radius: 5px;
   font-size: 10px;
   color: #06386c;
+}
+@media only screen and (min-width: 320px) {
+  .feedback-Components-DD {
+    width: 50%;
+  }
+  .right-tools-catch {
+    grid-gap: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: right;
+  }
+.dropdown-feedback-Components {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.dropdown-feedback-Components select {
+  font-size: 13px;
+  width: 100%;
+  color: #06386c;
+  border: none;
+  border-radius: 17px;
+  height: 100%;
+  display: block;
+  background-color: white;
+  resize: vertical;
+  box-sizing: border-box;
+  min-height: 38px;
+  padding: 17px 15px;
+  -webkit-appearance: none;
+  text-transform: none;
+  font-family: inherit;
+  line-height: 1.15;
+  margin: 0;
+  box-shadow: 0px 6px 6px rgb(0 0 0 / 10%);
+}
+
+.dropdown-feedback-Components select:focus {
+  outline: none;
+}
+.dropdown-feedback-Components .Darrow {
+  position: absolute;
+  pointer-events: none;
+  right: 0%;
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  font-size: 0;
+  line-height: 1;
+}
+.dropdown-feedback-Components .Darrow img {
+  width: 12px;
+  height: 12px;
+  margin-top: 6px;
+}
+}
+@media only screen and (min-width: 992px) {
+  .feedback-Components-DD {
+    width: 43%;
+  }
+  .right-tools-catch {
+    grid-gap: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 38%;
+    justify-content: right;
+  }
+.dropdown-feedback-Components {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.dropdown-feedback-Components select {
+  font-size: 13px;
+  width: 100%;
+  color: #06386c;
+  border: none;
+  border-radius: 17px;
+  height: 100%;
+  display: block;
+  background-color: white;
+  resize: vertical;
+  box-sizing: border-box;
+  min-height: 38px;
+  padding: 17px 15px;
+  -webkit-appearance: none;
+  text-transform: none;
+  font-family: inherit;
+  line-height: 1.15;
+  margin: 0;
+  box-shadow: 0px 6px 6px rgb(0 0 0 / 10%);
+}
+
+.dropdown-feedback-Components select:focus {
+  outline: none;
+}
+.dropdown-feedback-Components .Darrow {
+  position: absolute;
+  pointer-events: none;
+  right: 4px;
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  font-size: 0;
+  line-height: 1;
+}
+.dropdown-feedback-Components .Darrow img {
+  width: 12px;
+  height: 12px;
+  margin-top: 6px;
+}
 }

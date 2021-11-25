@@ -52,7 +52,7 @@ table td {
   .border-back-white-outlet {
     border-radius: 30px 30px 0px 0px;
     background: white;
-    padding: 16px 18px;
+    padding: 14px 18px;
     box-shadow: 2px 2px 18px rgb(0 0 0 / 10%);
     border-bottom: 1px solid #b8b8b8;
   }
@@ -64,7 +64,7 @@ table td {
     border: white;
     border-radius: 17px;
     padding: 14px 18px;
-    font-size: 16px;
+    font-size: 14px;
     transition: background-color 0.3s linear;
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1);
   }
@@ -96,20 +96,10 @@ table td {
     width: 40px;
   }
   
-  .outlets-header {
-    display: flex;
-    justify-content: space-between;
-  }
-  .outlets-header .title-outlets-header {
-    margin: 0;
-    place-self: center;
-    font-size: 18px;
-    color: #06386c;
-    font-weight: bold;
-  }
+  
   .right-outlets-header {
     display: flex;
-    grid-gap: 16px;
+    grid-gap: 10px;
     align-items: center;
   }
   .add-context-btn {
@@ -281,12 +271,24 @@ table td {
   .edit-time-btns i{
     font-size: 20px;
   }
+  .outlets-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 18px;
+  }
+  .outlets-header .title-outlets-header {
+    margin: 0;
+    place-self: center;
+    font-size: 14px;
+    color: #06386c;
+    font-weight: bold;
+  }
 }
 @media screen and (min-width: 992px) {
   .border-back-white-outlet {
     border-radius: 30px 30px 0px 0px;
     background: white;
-    padding: 16px 26px;
+    padding: 14px 26px;
     box-shadow: 2px 2px 18px rgb(0 0 0 / 10%);
     border-bottom: 1px solid #b8b8b8;
   }
@@ -465,5 +467,17 @@ table td {
   }
   .edit-time-btns i{
     font-size: 20px;
+  }
+  .outlets-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 26px;
+  }
+  .outlets-header .title-outlets-header {
+    margin: 0;
+    place-self: center;
+    font-size: 18px;
+    color: #06386c;
+    font-weight: bold;
   }
 }

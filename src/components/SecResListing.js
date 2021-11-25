@@ -33,6 +33,23 @@ export default function SecResListing() {
       </div>
 
       {/* Popup-Res-Listing */}
+
+      <ForDevice deviceName={["tablet", "desktop"]}>
+      <Modal
+        open={isResListingShowing}
+        onClose={closeResListingPop}
+        center
+        className="colorBack"
+        closeIcon={closeIcon}
+        styles={{
+          modal: { "margin-top": "80px","max-width": "535px", width: "100%",padding:"0px", borderRadius:"21px" },
+        }}
+      >
+        <PopupResListing />
+      </Modal>
+      </ForDevice>
+
+      
       <ForDevice deviceName="mobile">
       <Modal
         open={isResListingShowing}
@@ -48,20 +65,7 @@ export default function SecResListing() {
       </Modal>
       </ForDevice>
 
-      <ForDevice deviceName={["tablet", "desktop"]}>
-      <Modal
-        open={isResListingShowing}
-        onClose={closeResListingPop}
-        center
-        className="colorBack"
-        closeIcon={closeIcon}
-        styles={{
-          modal: { "margin-top": "80px","max-width": "500px", width: "100%",padding:"0px", borderRadius:"21px" },
-        }}
-      >
-        <PopupResListing />
-      </Modal>
-      </ForDevice>
+      
     </div>
   );
 }

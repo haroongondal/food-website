@@ -4,21 +4,20 @@ import ImageUpload from "image-upload-react";
 import UploadSvgIcon from "../components/UploadSvgIcon";
 
 export default function ResDocumentsPS() {
-    const [smes, setSmes] = useState("");
-  const [license, setLicense] = useState("");
-  const [gstNo, setGstNo] = useState("");
 
   const [imgSMES, setImgSMES] = useState("");
 
   const [imgLicence, setImgLicence] = useState("");
+
+  const [gstNo, setGstNo] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
     {
       
       const values = {
-        smes: smes,
-        license: license,
+        smes: imgSMES.split(",")[1],
+        license: imgLicence.split(",")[1],
         gstNo: gstNo,
       };
       console.log(values);
@@ -84,9 +83,9 @@ export default function ResDocumentsPS() {
 
         <hr />
 
-        <div className="Section-PS row">
+        <div className="Section-PS">
           {/* SMES */}
-          <div className="col-md-6 ">
+          <div className="col-md-6" id="front-img-padding-R">
             <div className="d-flex justify-content-between">
               <div className="label-PS">SMES</div>
               <div className="text-imageSize-PS">Image size: 1MB</div>
@@ -107,7 +106,7 @@ export default function ResDocumentsPS() {
           </div>
 
           {/* Restaurants License */}
-          <div className="col-md-6" id="margin-top-5">
+          <div className="col-md-6 margin-top-5" id="back-img-padding-L">
             <div className="d-flex justify-content-between">
               <div className="label-PS">Restaurants License</div>
               <div className="text-imageSize-PS">Image size: 1MB</div>
@@ -128,8 +127,8 @@ export default function ResDocumentsPS() {
           </div>
         </div>
 
-        <div className="Section-PS row">
-          <div className="col-md-6">
+        <div className="Section-PS">
+          <div className="col-md-6" id="front-img-padding-R">
             {/* Mobile Number */}
             <div className="label-PS">GST Number</div>
             <div className="dropdown-PS">
@@ -150,7 +149,7 @@ export default function ResDocumentsPS() {
         </div>
 
         {/* Save Button */}
-        <div className="Section-PS row mb-0 mt-5">
+        <div className="Section-PS mb-0 mt-5">
           <div className="col-md-12">
             <button className="green-btn-S" onClick={(e)=> handleSubmit(e)}>Save</button>
           </div>

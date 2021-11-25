@@ -1,9 +1,121 @@
 
+  
+  
+ 
+  
+  
+  .btn-margin{
+    margin-right: 8px;
+  }
+  .reply-text-area{
+    text-align: center;
+    display: flex;
+    place-content: center;
+  }
+  .replay-text-area-hide{
+    display: none;
+  }
+  .comment-section-feedback{
+    padding-right: 50px;
+  }
+
+
+.disabled {
+  pointer-events: none;
+}
+@media screen and (min-width: 320px) {
+  .feedback-reviews{
+    padding: 0px 18px;
+  }
+  .like-replay-btns{
+    display: flex;
+    justify-content: space-between;
+  }
+  .like-btn{
+    margin-bottom: 10px;
+    color: #06386c;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0;
+    font-size: 13px;
+    width: auto;
+    transition: all  0.3s ease;
+  }
+  button.like-btn:hover{
+    color: #E31C79;
+    background: rgb(227 28 121 / 10%);
+  }
+  .reply-btn{
+    color: #06386c;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0;
+    font-size: 13px;
+    width: auto;
+    transition: all  0.3s ease;
+  }
+  .reply-btn.is-open{
+    color: #06386c;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0;
+    font-size: 13px;
+    width: auto;
+    transition: all  0.3s ease;
+  }
+  button.reply-btn:hover{
+    background: white;
+  }
+  .done-btn-feedback{
+    padding: 0% 0% 0% 2%;
+  }
+  
+  .done-btn{
+    
+    margin-bottom: 10px;
+    color: white;
+    background: #06386c;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    font-size: 13px;
+    width: 74px;
+    height: 38px;
+    transition: all  0.3s ease;
+  }
+  button.done-btn:hover{
+    color: white;
+    background: #06386c;
+    transform: scale(1.008);
+  }
+  button.done-btn:focus{
+    color: white;
+    background: #06386c;
+  }
+  .feedback-textArea {
+    border: none;
+    background: rgba(6, 56, 108, 0.1);
+    resize: none;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+    margin-left: 0%;
+  }
+  .feedback-textArea:focus {
+    outline: 1px solid #06386c6b;
+  }
+}
+@media screen and (min-width: 992px) {
   .feedback-reviews{
     padding: 0px 26px;
   }
   .like-replay-btns{
-    
+    display: block;
+    justify-content: space-between;
   }
   .like-btn{
     
@@ -22,7 +134,6 @@
     color: #E31C79;
     background: rgb(227 28 121 / 10%);
   }
-  
   .reply-btn{
     color: #06386c;
     background: rgb(6 56 108 / 10%);
@@ -49,6 +160,10 @@
     background: rgb(13 110 253 / 100%);
     background: rgb(13 110 253 / 15%);
   }
+  .done-btn-feedback{
+    padding: 0% 2%;
+  }
+  
   .done-btn{
     
     margin-bottom: 10px;
@@ -71,36 +186,17 @@
     color: white;
     background: #06386c;
   }
-  .btn-margin{
-    margin-right: 8px;
+  .feedback-textArea {
+    border: none;
+    background: rgba(6, 56, 108, 0.1);
+    resize: none;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+    margin-left: 2%;
   }
-  .reply-text-area{
-    text-align: center;
-    display: flex;
-    place-content: center;
+  .feedback-textArea:focus {
+    outline: 1px solid #06386c6b;
   }
-  .replay-text-area-hide{
-    display: none;
-  }
-  .comment-section-feedback{
-    padding-right: 50px;
-  }
-.feedback-textArea {
-  border: none;
-  background: rgba(6, 56, 108, 0.1);
-  resize: none;
-  border-radius: 5px;
-  font-size: 14px;
-  padding: 10px;
-  width: 100%;
-  margin-left: 2%;
-}
-.feedback-textArea:focus {
-  outline: 1px solid #06386c6b;
-}
-.done-btn-feedback{
-  padding: 0% 2%;
-}
-.disabled {
-  pointer-events: none;
 }
