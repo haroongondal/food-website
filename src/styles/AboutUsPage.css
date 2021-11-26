@@ -1,0 +1,209 @@
+
+@media screen and (min-width: 320px) {
+  .dashboard_image-AboutUs {
+    height: 460px;
+  }
+  .dashboard_image-AboutUs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .text-about-us {
+    position: ABSOLUTE;
+    top: 40%;
+    left: 30%;
+  }
+  .text-about-us h6 {
+    color: white;
+    font-size: 30px;
+  }
+  .story-section h2 {
+    font-weight: 400;
+    margin-bottom: 25px;
+    font-size: 26px;
+  }
+  .story-section p {
+    margin-bottom: 25px;
+    color: #757575;
+    font-size: 13px;
+    line-height: 25px;
+  }
+  .story-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 25px;
+  }
+  .story-section ul li {
+    font-size: 13px;
+    color: #141723;
+    margin-bottom: 10px;
+  }
+  .foodies-section {
+    margin-bottom: 30px;
+    display: inline-block;
+    width: 100%;
+  }
+  .foodies-section h2 {
+    font-weight: 400;
+    margin-bottom: 25px;
+    font-size: 26px;
+    margin-top: 20px;
+  }
+  .row:after,
+  .row:before {
+    display: table;
+    content: " ";
+  }
+  .foodies-section img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .foodies-section p {
+    font-size: 13px;
+    color: #757575;
+    text-align: center;
+  }
+  .ourteam-section {
+    margin-bottom: 50px;
+  }
+  .ourteam-section h2 {
+    font-weight: 400;
+    margin-bottom: 25px;
+    font-size: 26px;
+    margin-top: 20px;
+  }
+  .ourteam-section p {
+    margin-bottom: 25px;
+    color: #757575;
+    font-size: 13px;
+    line-height: 25px;
+  }
+  .ourteam-section span {
+    display: block;
+  }
+  .ourteam-section img {
+    width: 100%;
+  }
+  .join-us-section {
+    margin-bottom: 100px;
+  }
+  .join-us-section h2 {
+    font-weight: 400;
+    margin-bottom: 25px;
+    font-size: 26px;
+    margin-top: 20px;
+  }
+  .join-us-section p {
+    color: #757575;
+    font-size: 13px;
+    line-height: 25px;
+  }
+  .join-us-section p a {
+    color: #fa5757;
+    text-decoration: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .dashboard_image-AboutUs {
+    height: 460px;
+  }
+  .dashboard_image-AboutUs img {
+    width: 100%;
+    height: 100%;
+    object-fit: unset;
+  }
+  .text-about-us {
+    position: ABSOLUTE;
+    top: 35%;
+    left: 42%;
+  }
+  .text-about-us h6 {
+    color: white;
+    font-size: 2.5rem;
+  }
+  .story-section h2 {
+    font-weight: 400;
+    margin-bottom: 25px;
+    font-size: 30px;
+  }
+  .story-section p {
+    margin-bottom: 25px;
+    color: #757575;
+    font-size: 17px;
+    line-height: 25px;
+  }
+  .story-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 25px;
+  }
+  .story-section ul li {
+    font-size: 17px;
+    color: #141723;
+    margin-bottom: 10px;
+  }
+  .foodies-section {
+    margin-bottom: 30px;
+    display: inline-block;
+    width: 100%;
+  }
+  .foodies-section h2 {
+    font-weight: 400;
+    margin-bottom: 25px;
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .row:after,
+  .row:before {
+    display: table;
+    content: " ";
+  }
+  .foodies-section img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .foodies-section p {
+    font-size: 14px;
+    color: #757575;
+    text-align: center;
+  }
+  .ourteam-section {
+    margin-bottom: 50px;
+  }
+  .ourteam-section h2 {
+    font-weight: 400;
+    margin-bottom: 25px;
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .ourteam-section p {
+    margin-bottom: 25px;
+    color: #757575;
+    font-size: 17px;
+    line-height: 25px;
+  }
+  .ourteam-section span {
+    display: block;
+  }
+  .ourteam-section img {
+    width: 100%;
+  }
+  .join-us-section {
+    margin-bottom: 100px;
+  }
+  .join-us-section h2 {
+    font-weight: 400;
+    margin-bottom: 25px;
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .join-us-section p {
+    color: #757575;
+    font-size: 17px;
+    line-height: 25px;
+  }
+  .join-us-section p a {
+    color: #fa5757;
+    text-decoration: none;
+  }
+}

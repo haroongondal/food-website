@@ -13,7 +13,7 @@
   width: 60px;
 }
 .items_services {
-  background: #0000005e;
+  background: #202020;
 }
 .content-box h3 {
   font-size: 0.8rem;
@@ -22,6 +22,7 @@
 }
 .content-box p {
   font-size: 0.55rem;
+  color: #777777;
 }
 .content-box-2 {
   text-align: -webkit-center;
@@ -34,6 +35,7 @@
 }
 .content-box-2 p {
   font-size: 0.72rem;
+  color: #777777;
 }
 
 .faq-alignment {

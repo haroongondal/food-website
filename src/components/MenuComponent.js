@@ -8,6 +8,7 @@ import CancelSvgIcon from "../components/CancelSvgIcon";
 import { ForDevice } from "media-query-react";
 
 function MenuComponent(props) {
+  
   // Popup Close-icon
   const closeIcon = <CancelSvgIcon />;
 

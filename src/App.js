@@ -12,6 +12,9 @@ import ProtectedRoutes from './Utils/ProtectedRoutes';
 import CRMDashboard from "./pages/CRMDashboard"
 import MediaQueryReact from 'media-query-react';
 import BusinessLogin from './components/BusinessLogin';
+import AboutUsPage from './pages/AboutUsPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsAndCondPage from './pages/TermsAndCondPage';
 
 
 
@@ -82,6 +85,18 @@ function App() {
 
         <Route exact path = "/Business-Login" >
         <BusinessLogin/>
+        </Route>
+
+        <Route exact path = "/About-Us" >
+        <AboutUsPage/>
+        </Route>
+
+        <Route exact path = "/Privacy-Policy" >
+        <PrivacyPolicyPage/>
+        </Route>
+
+        <Route exact path = "/Terms-And-Conditions" >
+        <TermsAndCondPage/>
         </Route>
 
       </Switch>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function ResLikeItem() {
   return (
-    <div>
+    
       <div className="box-restaurent-3rd-page">
         <Link to="/Dashboard">
           {/* img-box */}
@@ -35,6 +35,6 @@ export default function ResLikeItem() {
       </div>
 
       
-    </div>
+    
   );
 }
