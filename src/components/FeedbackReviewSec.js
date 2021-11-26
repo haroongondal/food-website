@@ -7,6 +7,7 @@ import { useState } from "react";
 import { ForDevice } from "media-query-react";
 
 export default function FeedbackReviewSec({ data }) {
+
   const [IsOpened, setOpened] = useState(false);
 
   const handdleToggle = () => setOpened(!IsOpened);
@@ -148,7 +149,7 @@ export default function FeedbackReviewSec({ data }) {
 
       <div className={IsOpened ? "reply-text-area" : "replay-text-area-hide"}>
         <textarea 
-          placeholder="Write a Reply!"
+          placeholder="Write a reply..."
           className=" feedback-textArea"
           rows="4"
           cols="12"

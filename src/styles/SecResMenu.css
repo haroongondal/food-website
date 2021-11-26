@@ -41,27 +41,6 @@
   font-weight: 700;
   font-size: 1rem;
 }
-.ul-for-menu {
-  list-style: none;
-  padding: 0;
-  margin: 16px 0 0;
-  column-count: 2;
-  column-fill: balance;
-  column-gap: 32px;
-}
-.ul-for-menu li {
-  margin-bottom: 16px;
-  page-break-inside: avoid;
-  break-inside: avoid;
-  display: none;
-}
-.ul-for-menu li h4 {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
-}
 .div-for-rating-menu {
   display: flex;
   justify-content: unset;
@@ -108,9 +87,11 @@
 .text-menu-desc {
   font-size: 0.8rem;
   margin-bottom: 3px;
+  color: black;
 }
 .text-menu-review {
   font-size: 0.9rem;
+  color: black;
 }
 .button-view-full-menu {
   padding-bottom: 30px;
@@ -150,6 +131,28 @@
     font-weight: 700;
     font-size: 1.2rem;
   }
+  
+.ul-for-menu {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  column-count: 1;
+  column-fill: balance;
+  column-gap: 32px;
+}
+.ul-for-menu li {
+  margin-bottom: 16px;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  display: none;
+}
+.ul-for-menu li h4 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
 }
 
 @media screen and (min-width: 992px) {
@@ -165,4 +168,26 @@
     font-weight: 700;
     font-size: 1.2rem;
   }
+  
+.ul-for-menu {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  column-count: 2;
+  column-fill: balance;
+  column-gap: 32px;
+}
+.ul-for-menu li {
+  margin-bottom: 16px;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  display: none;
+}
+.ul-for-menu li h4 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
 }

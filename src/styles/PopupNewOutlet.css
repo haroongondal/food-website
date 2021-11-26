@@ -43,6 +43,9 @@
   #margin-right-30{
       margin-right: 30px;
   }
+  .aboutUs-M-T{
+    margin-top: 50px;
+  }
   .dropDown-block-Outlet {
     inline-size: auto;
     margin: 15px 0px;
@@ -142,6 +145,9 @@
   }
   .margin-top-5{
     margin-top: 0%;
+  }
+  .aboutUs-M-T{
+    margin-top: 50px;
   }
   .whatsapp-CB-Margin{
     margin-top: 56px;

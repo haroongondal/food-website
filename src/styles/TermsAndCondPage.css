@@ -1,0 +1,62 @@
+
+  @media screen and (min-width: 320px) {.text-terms-and-conditons{
+    POSITION: ABSOLUTE;
+      TOP: 40%;
+      LEFT: 23%;
+  }
+  .text-terms-and-conditons h6{
+    COLOR: white;
+    font-size: 30px;
+    text-align: center;
+  }
+  .content-terms-and-conditons h4{
+    font-size: 1.1rem;
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  .content-terms-and-conditons p{
+    margin-bottom: 1.5rem;
+    font-size: 13px;
+    line-height: 1.6rem;
+      color: #636363;
+  }
+  .content-terms-and-conditons ul{
+    list-style-type: disc;
+      margin-bottom: 1.5rem;
+      padding-left: 20px;
+  }
+  .content-terms-and-conditons ul li{
+    margin-bottom: 1rem;
+    font-size: 13px;
+  }}
+    @media screen and (min-width: 992px) {.text-terms-and-conditons{
+        POSITION: ABSOLUTE;
+          TOP: 35%;
+          LEFT: 32%;
+      }
+      .text-terms-and-conditons h6{
+        COLOR: white;
+        font-size: 2.5rem;
+      }
+      .content-terms-and-conditons h4{
+        font-size: 1.1rem;
+        color: #000;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+      }
+      .content-terms-and-conditons p{
+        margin-bottom: 1.5rem;
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+          color: #636363;
+      }
+      .content-terms-and-conditons ul{
+        list-style-type: disc;
+          margin-bottom: 1.5rem;
+          padding-left: 20px;
+      }
+      .content-terms-and-conditons ul li{
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+      }}

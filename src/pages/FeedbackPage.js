@@ -10,13 +10,9 @@ import FeedbackComponents from "../components/FeedbackComponents";
 import CancelSvgIcon from "../components/CancelSvgIcon";
 import useFetch from "../Utils/useFetch";
 import Skeleton from "react-loading-skeleton";
+import { ForDevice } from "media-query-react";
 
 function FeedbackPage() {
- 
-
-  
-
-
   const { data, isPending, error } = useFetch(
     `https://api.masairapp.com/api/Restaurant/GetRestaurantById?id=1`
   );
@@ -93,7 +89,17 @@ function FeedbackPage() {
               </button>
             </div>
           </div>
-          <hr />
+
+
+          <ForDevice deviceName={["tablet", "desktop"]}>
+            <hr />
+          </ForDevice>
+
+          <ForDevice deviceName="mobile">
+            <hr className="mb-0" />
+          </ForDevice>
+
+          
           <div className="like-dislike">
             <div className="d-flex like-sec" style={{ width: "50.00%" }}>
               <img src={likeThumb} alt="" />
@@ -237,7 +243,13 @@ function FeedbackPage() {
             </div>
           </div>
 
-          <hr />
+          <ForDevice deviceName={["tablet", "desktop"]}>
+            <hr />
+          </ForDevice>
+
+          <ForDevice deviceName="mobile">
+            <hr className="mb-0" />
+          </ForDevice>
 
           {isPending && (
             <div>
@@ -246,7 +258,6 @@ function FeedbackPage() {
           )}
           {error && <div>{error}</div>}
           {data && data.UserReviews.map((c) => <FeedbackReviewSec data={c} />)}
-          
         </div>
       </div>
 
