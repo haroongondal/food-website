@@ -239,8 +239,8 @@ export default function FeedbackReviewSec({ data }) {
               <textarea
                 placeholder="Write a Reply!"
                 className=" feedback-textArea"
-                rows="4"
-                cols="12"
+                rows="5"
+                cols="9"
                 value={reply}
                 onChange={(e) => setReply(e.target.value)}
               ></textarea>

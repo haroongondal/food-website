@@ -32,6 +32,16 @@ function AdminSidebar() {
         <li><a href="#abc">View Exhibitions</a></li>
       </ul> 
     </li> */}
+
+    <Link to={`${path}/`}>
+          <li className="have-children">
+            <a href="#abc">
+              <span ><i className='bx bxs-dashboard icon'></i></span>Dashboard
+            </a>
+          </li>
+        </Link>
+
+
         <Link to={`${path}/Add-Menu`}>
           <li className="have-children">
             <a href="#abc">
