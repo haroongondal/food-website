@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import arrow from "../images/down_arrow.svg";
 import "../styles/PopupNewOutlet.css";
+import ImageUpload from "image-upload-react";
 
 function PopupNewOutlet2(props) {
   const [email, setEmail] = useState("");
@@ -9,35 +10,96 @@ function PopupNewOutlet2(props) {
   const [pin, setPin] = useState("");
   const [gstn, setGstn] = useState("");
   const [address, setAddress] = useState("");
+  const [phoneNo, setPhoneNo] = useState("");
   const [area, setArea] = useState("");
   const [city, setCity] = useState("");
   const [pincode, setPincode] = useState("");
   const [country, setCountry] = useState("");
-
+  const [imgFracade, setImgFracade] = useState("");
+  const [imgKitchen, setImgKitchen] = useState("");
+  const [imgDinning, setImgDinning] = useState("");
+  const [imgLocality, setImgLocality] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (email !== "" && password !== "") {
+    {
       const values = {
-        email: email,
-        password: password,
-        pin: pin,
-        gstn: gstn,
-        address: address,
-        area: area,
-        city: city,
-        pincode: pincode,
-        country: country,
+        Id: 0,
+        RestaurantName: null,
+        OwnerName: null,
+        PrimaryLocation: null,
+        //
+        PhoneNumber: phoneNo,
+        //
+        Email: email,
+        //
+        CityId: 2,
+        //
+        WebSiteLink: null,
+        NoOfOutlets: 0,
+        //
+        EstablishmentTypeId: 2,
+        //
+        PrimaryAreaOfOutlet: area,
+        //
+        HomeDelivery: "Yes",
+        //
+        CostOfTwo: 200.0,
+        //
+        RegistrationDate : null,
+        //
+        // ShopLicense: imgLicence.split(",")[1],
+        Fssai: null,
+        Tin: null,
+        FracadeImageStringBase64: null,
+        KitchenImageStringBase64: null,
+        DinningImageStringBase64: null,
+        LocalityImageStringBase64: null,
+        UserId: 1,
+        IsActive: true,
+        //
+        CusinesCSV: null,
+        //
+        IsFeature: false,
+        //
+        ListOfRestaurantCusine: null,
+        //
+        ListOfRestaurantTags: null,
+        //
+        ListOfRestaurantFeature: null,
+        //
+        RestaurantCusine: null,
+        //
+        Longitude: 200.0,
+        Latitude: 200.0,
+        Distance: 200.0,
+        UnitOfLength: null,
+        Description: null,
+        ListOfWorkingDays: null,
+        UserReviews: null,
+        NoOfReview: 0,
+        //
+        AverageRating: 200.0,
+        //
+        NoOfOrders: 0,
+        //
+        // RestaurantOwnerIDFrontStringBase64: imgFront.split(",")[1],
+        // RestaurantOwnerIDBackStringBase64: imgBack.split(",")[1],
+        ParentId: 0,
+        //
+        IsBlocked: false,
+        //
+        ResponseCode: 0,
+        ResponseMessage: null,
       };
-
       console.log(values);
-
       // Please Add Link of API
 
-      fetch("/User/Signup", {
+      fetch("https://api.masairapp.com/api/Restaurant/PostRestaurantInfo", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Authorization: "Bearer "+localStorage.getItem("jwt")
         },
         body: JSON.stringify(values),
       })
@@ -45,6 +107,7 @@ function PopupNewOutlet2(props) {
           return result.json();
         })
         .then((data) => {
+          console.log(data)
           if (!data.ResponseMessage) {
           }
         })
@@ -53,6 +116,47 @@ function PopupNewOutlet2(props) {
         });
     }
   }
+
+  // ------Images-Handles------
+
+  const uploadImageFracade = async (e) => {
+    const file = e.target.files[0];
+    const base64 = await convertBase64(file);
+    setImgFracade(base64);
+  };
+
+  const uploadImageKitchen = async (e) => {
+    const file = e.target.files[0];
+    const base64 = await convertBase64(file);
+    setImgKitchen(base64);
+  };
+
+  const uploadImageDinning = async (e) => {
+    const file = e.target.files[0];
+    const base64 = await convertBase64(file);
+    setImgDinning(base64);
+  };
+
+  const uploadImageLocality = async (e) => {
+    const file = e.target.files[0];
+    const base64 = await convertBase64(file);
+    setImgLocality(base64);
+  };
+
+  const convertBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+
+      fileReader.onload = () => {
+        resolve(fileReader.result);
+      };
+
+      fileReader.onerror = (error) => {
+        reject(error);
+      };
+    });
+  };
 
   return (
     <div>
@@ -117,6 +221,90 @@ function PopupNewOutlet2(props) {
               </div>
             </div>
           </div> */}
+
+          <div className="align-popOutlet-images">
+            {/* Fracade Image */}
+            <div className="dropDown-block-Outlet">
+              <span className="label-dropDown-block">Fracade Image</span>
+              <div className="dropDown-item" id="margin-10-T">
+                <ImageUpload
+                  handleImageSelect={uploadImageFracade}
+                  imageSrc={imgFracade}
+                  setImageSrc={setImgFracade}
+                  style={{
+                    width: "100%",
+                    height: 130,
+                    background: "rgb(6 56 108 / 85%)",
+                    display: "flex",
+                    marginTop: "0px",
+                    borderRadius: "5px",
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* Kitchen Image */}
+            <div className="dropDown-block-Outlet">
+              <span className="label-dropDown-block">Kitchen Image</span>
+              <div className="dropDown-item" id="margin-10-T">
+                <ImageUpload
+                  handleImageSelect={uploadImageKitchen}
+                  imageSrc={imgKitchen}
+                  setImageSrc={setImgKitchen}
+                  style={{
+                    width: "100%",
+                    height: 130,
+                    background: "rgb(6 56 108 / 85%)",
+                    display: "flex",
+                    marginTop: "0px",
+                    borderRadius: "5px",
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="align-popOutlet-images">
+            {/* Dinning Image */}
+          <div className="dropDown-block-Outlet">
+            <span className="label-dropDown-block">Dinning Image</span>
+            <div className="dropDown-item" id="margin-10-T">
+              <ImageUpload
+                handleImageSelect={uploadImageDinning}
+                imageSrc={imgDinning}
+                setImageSrc={setImgDinning}
+                style={{
+                  width: "100%",
+                  height: 130,
+                  background: "rgb(6 56 108 / 85%)",
+                  display: "flex",
+                  marginTop: "0px",
+                  borderRadius: "5px",
+                }}
+              />
+            </div>
+          </div>
+
+          {/* Locality Image */}
+          <div className="dropDown-block-Outlet">
+            <span className="label-dropDown-block">Locality Image</span>
+            <div className="dropDown-item" id="margin-10-T">
+              <ImageUpload
+                handleImageSelect={uploadImageLocality}
+                imageSrc={imgLocality}
+                setImageSrc={setImgLocality}
+                style={{
+                  width: "100%",
+                  height: 130,
+                  background: "rgb(6 56 108 / 85%)",
+                  display: "flex",
+                  marginTop: "0px",
+                  borderRadius: "5px",
+                }}
+              />
+            </div>
+          </div>
+          </div>
 
           {/* Email */}
           <div className="dropDown-block-Outlet">
@@ -297,6 +485,28 @@ function PopupNewOutlet2(props) {
             </div>
           </div>
 
+          {/* Phone Number */}
+          <div className="dropDown-block-Outlet">
+            <span className="label-dropDown-block">Phone Number</span>
+            <div className="dropDown-item" id="margin-10-T">
+              <div className="border-dropDown-block">
+                <div className="content-dropDown">
+                  <form action="#" className="form-dropDown-M">
+                    <div className="form-input-dropDown">
+                      <input
+                        type="number"
+                        placeholder="Enter Phone Number"
+                        value={phoneNo}
+                        onChange={(e) => setPhoneNo(e.target.value)}
+                        required
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Area */}
           <div className="dropDown-block-Outlet">
             <span className="label-dropDown-block">Area</span>
@@ -395,7 +605,6 @@ function PopupNewOutlet2(props) {
             </div>
           </div>
         </div>
-
       </div>
 
       {/* Buttons */}

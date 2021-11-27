@@ -6,8 +6,12 @@ import Modal from "react-responsive-modal";
 import PopupMenuADD from "./PopupMenuADD";
 import CancelSvgIcon from "../components/CancelSvgIcon";
 import { ForDevice } from "media-query-react";
+import useFetch from "../Utils/useFetch";
+import Skeleton from "react-loading-skeleton";
 
 function MenuComponent(props) {
+
+  const {data, isPending, error} = useFetch(`https://api.masairapp.com/api/Restaurant/GetOutLetsByRestaurantId?id=1`)
   
   // Popup Close-icon
   const closeIcon = <CancelSvgIcon />;
@@ -38,6 +42,8 @@ function MenuComponent(props) {
     e.preventDefault();
     setSelectOutletShowing(false);
   };
+
+  
 
   return (
     <div>
@@ -72,16 +78,23 @@ function MenuComponent(props) {
           <div className="right-tools">
             <div className="menu-Components-DD">
               <div class="dropdown-menu-Components">
-                <select>
-                  <option class="option" value="1">
-                    Savor Food
-                  </option>
-                  <option class="option" value="2">
-                    Savor Food
-                  </option>
-                  <option class="option" value="10">
-                    Savor Food
-                  </option>
+                <select> {isPending && 
+                  
+                    <Skeleton />
+                
+                }
+                {error && <div>{error}</div>}
+                 {data && data.map(c=> <option class="option" value="1">
+                {
+                    c.RestaurantName +
+                    " " +
+                    c.PrimaryAreaOfOutlet +
+                    ", " +
+                    c.PrimaryLocation 
+                   }
+                  </option>)}
+                  
+                  
                 </select>
                 <span class="Darrow">
                   <img alt="down-arrow" src={downArrow} />
