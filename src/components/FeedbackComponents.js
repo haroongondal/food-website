@@ -49,7 +49,15 @@ export default function FeedbackComponents(props) {
         </div>
       )}
       {error && <div>{error}</div>} 
-      {data && data.map((dt) =>  <option class="option" value={dt.Id}>{dt.Description}</option>)}
+      {data && data.map((dt) =>  <option class="option" value={dt.Id}>
+      {
+                    dt.RestaurantName +
+                    " " +
+                    dt.PrimaryAreaOfOutlet +
+                    ", " +
+                    dt.PrimaryLocation 
+                   }
+      </option>)}
             </select>
             <span class="Darrow">
               <img

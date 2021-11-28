@@ -168,7 +168,7 @@ export default function NavBar(props) {
 
           {/* Top-right-navigation-buttons */}
 
-          {isLogedIn === "false" ? (
+          {isLogedIn === "false" && localStorage.getItem("userObj").AccountType.Id === 5 ? (
             <ul className="desktop-list">
               <li>
                 <a href="#abc">786 100 4444</a>

@@ -3,7 +3,7 @@ import '../styles/SignUp.css'
 import 'react-responsive-modal/styles.css'
 import React from 'react'
 import useFetch from '../Utils/useFetch'
-import { useState } from 'react/cjs/react.development'
+import { useState } from 'react'
 
 function SignUp(props) {
    
@@ -46,9 +46,9 @@ function SignUp(props) {
                 fullName: fullName,
                 email: email,
                 password: password,
-                AccountTypeId: 2,
+                AccountTypeId: 5,
             }
-            fetch("/User/Signup",{
+            fetch("https://api.masairapp.com/api/User/Signup",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"

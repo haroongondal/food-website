@@ -1,4 +1,5 @@
 import React,{ useState} from 'react'
+import useFetch from '../Utils/useFetch';
 export default function Login(props) {
 
    
@@ -40,9 +41,6 @@ export default function Login(props) {
                 setError(res.error_description)
             } else {
                 localStorage.setItem("jwt", res.access_token)
-                localStorage.setItem("username", res.userName)
-                localStorage.setItem("isLogedin", true)
-                props.setLogedIn("true")
             }
         })
         .catch((error)=>{
@@ -54,6 +52,18 @@ export default function Login(props) {
         
     }
 
+    
+    const {data, isPending, error1} = useFetch("https://api.masairapp.comapi/User/UserInformation?username=" + username)
+
+    if (!isPending) {
+        if (!error1) {
+            if (data) {
+                localStorage.setItem("userObj", data)
+                localStorage.setItem("isLogedin", true);
+                props.setLogedIn("true")
+            }
+        }
+    }
     return (
         
         <div className="row" style={{width: "500px"}}>

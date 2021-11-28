@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import ContactNoResPS from "../components/ContactNoResPS";
 import OwnerDetailsPS from "../components/OwnerDetailsPS";
 import ResDocumentsPS from "../components/ResDocumentsPS";

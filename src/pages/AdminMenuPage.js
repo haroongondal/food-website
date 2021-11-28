@@ -9,14 +9,17 @@ import Skeleton from "react-loading-skeleton";
 function AdminMenuPage() {
   const [searchValue, setSearchValue] = useState("");
 
+  
+  const [outLetId, setOutLetId] = useState();
+  
+  const handleId = (value) => setOutLetId(value);
   const { data, isPending, error } = useFetch(
-    "https://api.masairapp.com/api/Lov/GetCusineByRestaurantId?id=6"
+    "https://api.masairapp.com/api/Lov/GetCusineByRestaurantId?id=" + outLetId
   );
-
   console.log(searchValue);
   return (
     <div>
-      <MenuComponent
+      <MenuComponent setOutLetId = {handleId}
         setSearchValue={setSearchValue}
         searchValue={searchValue}
       />

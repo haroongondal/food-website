@@ -13,6 +13,7 @@ import PopupNewOutlet2 from "../components/PopupNewOutlet2";
 import { ForDevice } from "media-query-react";
 import PopupTimings from "../components/PopupTimings";
 import useFetch from "../Utils/useFetch";
+import Skeleton from "react-loading-skeleton";
 
 export default function OutletsPage() {
   //   Open-Close-OutletBox
@@ -285,13 +286,16 @@ export default function OutletsPage() {
                   </tr>
                 </thead>
                 <tbody>
+                  {isPending && <Skeleton/>}
+                  {error && <div>{error}</div>}
+                  {data && data.map((c) => 
                   <tr>
                     <td data-label="Logo">
                       <img src={star} alt="" className="star-logo" />
                     </td>
-                    <td data-label="Outlet">Catch22</td>
-                    <td data-label="Area">Dubai -United Arab Emirates</td>
-                    <td data-label="City">Dubai</td>
+                    <td data-label="Outlet">{c.RestaurantName}</td>
+                    <td data-label="Area">{c.PrimaryAreaOfOutlet}</td>
+                    <td data-label="City">{c.PrimaryLocation}</td>
                     <td data-label="Edit">
                       <div className="edit-time-btns">
                       <i class="bi bi-pencil-square" onClick={handleNewOutletPop}></i>
@@ -299,50 +303,7 @@ export default function OutletsPage() {
                       </div>
                     </td>
                   </tr>
-                  <tr>
-                    <td data-label="Logo">
-                      <img src={star} alt="" className="star-logo" />
-                    </td>
-                    <td data-label="Outlet">Catch22</td>
-                    <td data-label="Area">Dubai -United Arab Emirates</td>
-                    <td data-label="City">Dubai</td>
-                    <td data-label="Edit">
-                      <div className="edit-time-btns">
-                      <i class="bi bi-pencil-square" onClick={handleNewOutletPop}></i>
-                      <i class="bi bi-stopwatch" onClick={handleTimingsPop}></i>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td data-label="Logo">
-                      <img src={star} alt="" className="star-logo" />
-                    </td>
-                    <td data-label="Outlet">Catch22</td>
-                    <td data-label="Area">Dubai -United Arab Emirates</td>
-                    <td data-label="City">Dubai</td>
-                    <td data-label="Edit">
-                      <div className="edit-time-btns">
-                      <i class="bi bi-pencil-square" onClick={handleNewOutletPop}></i>
-                      <i class="bi bi-stopwatch" onClick={handleTimingsPop}></i>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td data-label="Logo">
-                      <img src={star} alt="" className="star-logo" />
-                    </td>
-                    <td data-label="Outlet">Catch22</td>
-                    <td data-label="Area">Dubai -United Arab Emirates</td>
-                    <td data-label="City">Dubai</td>
-                    <td data-label="Edit">
-                      <div className="edit-time-btns">
-                      <i class="bi bi-pencil-square" onClick={handleNewOutletPop}></i>
-                      <i class="bi bi-stopwatch" onClick={handleTimingsPop}></i>
-                      </div>
-                    </td>
-                  </tr>
+                 )}
                 </tbody>
               </table>
             </div>

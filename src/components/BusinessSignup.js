@@ -36,7 +36,7 @@ function BusinessSignup() {
             password: password,
             AccountTypeId: 2,
         }
-        fetch("/User/Signup",{
+        fetch("https://api.masairapp.com/api/User/Signup",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"

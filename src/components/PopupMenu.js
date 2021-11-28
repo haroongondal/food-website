@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/PopupMenu.css";
 import arrow from "../images/down_arrow.svg";
 import addImage from "../images/add-image.png";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import EditSvgIcon from "./EditSvgIcon";
 import CancelSvgIcon from "./CancelSvgIcon";
 import ImageUpload from "image-upload-react";

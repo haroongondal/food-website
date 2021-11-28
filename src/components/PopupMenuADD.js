@@ -1,6 +1,6 @@
 import React from "react";
 import Skeleton from "react-loading-skeleton";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import arrow from "../images/down_arrow.svg";
 import useFetch from "../Utils/useFetch";
 
@@ -34,7 +34,7 @@ export default function PopupMenuADD(props) {
         method:"POST",
         headers:{
             "Content-Type":"application/json",
-            "Authorization":"Bearer 92fqP7-myXsDG2gP6NkxP5JEZvLzZkRU4iCDU3queuq545jO8O9mcYWzuOTLH-yuuS2ATp1F7jKUPU4Ec1llWI5WXKVgKtY8ZzigZSYi64_TFzvfSW9kYtQXUI0E7WGJOx4LPiw0Qvj0LcmnIJiBECMwrTbTHBFKfMwXB7QkmT8aCicLVgc5rUyD1K3WOkB6_hbyOCgyFddE1vOFTZyp7g"
+            Authorization:"Bearer " + localStorage.getItem("jwt")
             
         },
         body:JSON.stringify(values)

@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useHistory} from "react-router-dom";
 import "../styles/BusinessLogin.css";
+import useFetch from "../Utils/useFetch";
 import BusinessNavbar from "./BusinessNavbar";
 
 function BusinessLogin(props) {
@@ -51,19 +52,26 @@ function BusinessLogin(props) {
           
           setError(res.error_description);
         } else {
-          
           localStorage.setItem("jwt", res.access_token);
-          localStorage.setItem("username", res.userName);
-          localStorage.setItem("isLogedin", true);
-          routeChange()
-          console.log("okDone")
-          // props.setLogedIn("true");
+        
         }
       })
       .catch((error) => {
         setError(error.message);
         console.log(error);
       });
+
+      const {data, isPending, error} = useFetch("https://api.masairapp.comapi/User/UserInformation?username=" + username)
+
+    if (!isPending) {
+        if (!error) {
+            if (data) {
+                localStorage.setItem("userObj", data)
+                localStorage.setItem("isLogedin", true);
+                routeChange()
+            }
+        }
+    }
   }
 
   return (

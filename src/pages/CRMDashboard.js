@@ -8,11 +8,13 @@ import OutletsPage from './OutletsPage'
 import UserManagementPage from './UserManagementPage'
 import FeedbackPage from './FeedbackPage'
 import ProfileSettings from './ProfileSettings'
+import useFetch from '../Utils/useFetch'
 
 function CRMDashboard() {
 
     const {path} = useRouteMatch();
 
+    
     return (
         <div>
             

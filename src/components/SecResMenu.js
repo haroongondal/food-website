@@ -1,4 +1,5 @@
-import { useState } from 'react/cjs/react.development'
+
+import { useState } from 'react'
 import '../styles/SecResMenu.css'
 import useFetch from '../Utils/useFetch'
 import ResMenuItem from './ResMenuItem'

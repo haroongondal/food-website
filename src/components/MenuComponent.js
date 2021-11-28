@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../styles/MenuComponent.css";
 import downArrow from "../images/down_arrow.svg";
 import Modal from "react-responsive-modal";
@@ -12,6 +12,16 @@ import Skeleton from "react-loading-skeleton";
 function MenuComponent(props) {
 
   const {data, isPending, error} = useFetch(`https://api.masairapp.com/api/Restaurant/GetOutLetsByRestaurantId?id=1`)
+  useEffect(() => {
+    if (!isPending) {
+      if(!error) {
+        if (data) {
+          props.setOutLetId(data[0].Id)
+        }
+      }
+    }
+  }, [data, isPending, error, props])
+  
   
   // Popup Close-icon
   const closeIcon = <CancelSvgIcon />;
@@ -43,6 +53,7 @@ function MenuComponent(props) {
     setSelectOutletShowing(false);
   };
 
+  
   
 
   return (
@@ -78,13 +89,13 @@ function MenuComponent(props) {
           <div className="right-tools">
             <div className="menu-Components-DD">
               <div class="dropdown-menu-Components">
-                <select> {isPending && 
+                <select onChange = {(e) => props.setOutLetId(e.target.value)}> {isPending && 
                   
                     <Skeleton />
                 
                 }
                 {error && <div>{error}</div>}
-                 {data && data.map(c=> <option class="option" value="1">
+                 {data && data.map(c=> <option class="option" value={c.Id}>
                 {
                     c.RestaurantName +
                     " " +
