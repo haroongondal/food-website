@@ -13,13 +13,15 @@ import Skeleton from "react-loading-skeleton";
 import { ForDevice } from "media-query-react";
 
 function FeedbackPage() {
+  const [outLetId, setOutLetId] = useState();
   const { data, isPending, error } = useFetch(
-    `https://api.masairapp.com/api/Restaurant/GetRestaurantById?id=1`
+    `https://api.masairapp.com/api/Restaurant/GetRestaurantById?id=${outLetId}`
   );
-
+  
   //   PopupCommSetting
   const [isCommSettingShowing, setCommSettingShowing] = useState(false);
 
+  console.log(outLetId)
   const handleCommSettingPop = (e) => {
     e.preventDefault();
     setCommSettingShowing(true);
@@ -29,11 +31,13 @@ function FeedbackPage() {
     setCommSettingShowing(false);
   };
 
+  const handleId = (value) => setOutLetId(value);
+
   const closeIcon = <CancelSvgIcon />;
 
   return (
     <div>
-      <FeedbackComponents />
+      <FeedbackComponents setOutLetId = {handleId} />
       <div className="Content-graph-boxes">
         {/* <div className="border-back-white">
               <div className="toggle-brands">

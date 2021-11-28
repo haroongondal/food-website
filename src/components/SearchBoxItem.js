@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export default function SearchBoxItem({data = ""}) {
+export default function SearchBoxItem({data}) {
  
     return (
         <div>
+           <Link to = {`/RestaurentDetailsPage/${data.Id}`}>
               <li class="list-box-searchBar">
                 <span class="img-box-searchBar">
                   <img
@@ -25,6 +27,7 @@ export default function SearchBoxItem({data = ""}) {
                 </div>
                 <span class="rating-search-box">{Math.round(data.AverageRating * 100) / 100}</span>
               </li>
+              </Link>
 </div>
     )
 }
