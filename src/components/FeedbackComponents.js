@@ -1,11 +1,13 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "react-responsive-modal";
 import CancelSvgIcon from "../components/CancelSvgIcon";
 import PopupCityOutlet from "./PopupCityOutlet";
 import downArrow from "../images/down_arrow.svg";
+import useFetch from "../Utils/useFetch";
+import Skeleton from "react-loading-skeleton";
 
-export default function FeedbackComponents() {
+export default function FeedbackComponents(props) {
   //   PopupCityOutlet
   const [isCityOutletShowing, setCityOutletShowing] = useState(false);
 
@@ -18,6 +20,19 @@ export default function FeedbackComponents() {
     setCityOutletShowing(false);
   };
 
+  
+  const {data, isPending, error} = useFetch("https://api.masairapp.com/api/Restaurant/GetOutLetsByRestaurantId?id=1")
+
+  useEffect(() => {
+    if (!isPending) {
+      if(!error) {
+        if (data) {
+          props.setOutLetId(data[0].Id)
+        }
+      }
+    }
+  }, [data, isPending, error, props])
+  
   const closeIcon = <CancelSvgIcon />;
   return (
     <div className="top-tools">
@@ -27,16 +42,14 @@ export default function FeedbackComponents() {
       <div className="right-tools-catch">
       <div className="feedback-Components-DD">
           <div class="dropdown-feedback-Components">
-            <select>
-              <option class="option" value="1">
-                Catch 22
-              </option>
-              <option class="option" value="2">
-              Catch 22
-              </option>
-              <option class="option" value="10">
-              Catch 22
-              </option>
+            <select onChange = {(e) => props.setOutLetId(e.target.value)}>
+            {isPending && (
+        <div>
+          <Skeleton />
+        </div>
+      )}
+      {error && <div>{error}</div>} 
+      {data && data.map((dt) =>  <option class="option" value={dt.Id}>{dt.Description}</option>)}
             </select>
             <span class="Darrow">
               <img

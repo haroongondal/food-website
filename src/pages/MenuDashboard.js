@@ -4,7 +4,11 @@ import FeedbackComponents from "../components/FeedbackComponents";
 import TableMenuDashboard from "../components/TableMenuDashboard";
 import { Pie } from "react-chartjs-2";
 import "../styles/MenuDashboard.css";
+import useFetch from "../Utils/useFetch";
 function MenuDashboard() {
+
+  const [outLetId, setOutLetId] = useState();
+
   const [data, changeData] = useState({
     labels: [
       "Boston",
@@ -30,11 +34,12 @@ function MenuDashboard() {
       },
     ],
   });
+  const handleId = (value) => setOutLetId(value);
 
   return (
     <div>
       
-          <FeedbackComponents />
+          <FeedbackComponents setOutLetId = {handleId} />
 
           <div className="Content-graph-boxes">
             <div className="selling-box">
