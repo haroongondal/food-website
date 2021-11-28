@@ -12,6 +12,7 @@ import CancelSvgIcon from "../components/CancelSvgIcon";
 import PopupNewOutlet2 from "../components/PopupNewOutlet2";
 import { ForDevice } from "media-query-react";
 import PopupTimings from "../components/PopupTimings";
+import useFetch from "../Utils/useFetch";
 
 export default function OutletsPage() {
   //   Open-Close-OutletBox
@@ -34,6 +35,8 @@ export default function OutletsPage() {
   const closeCompanyGroupBtn = (e) => {
     setCompanyGroupShowing(false);
   };
+
+  const {data, isPending, error} = useFetch("https://api.masairapp.com/api/Restaurant/GetOutLetsByRestaurantId?id=1")
 
   const closeIcon = <CancelSvgIcon />;
 
