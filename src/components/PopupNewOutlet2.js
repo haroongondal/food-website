@@ -12,6 +12,8 @@ function PopupNewOutlet2(props) {
   const [address, setAddress] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [area, setArea] = useState("");
+  const [logitude, setLogitude] = useState("");
+  const [latitude, setLatitude] = useState("");
   const [city, setCity] = useState("");
   const [pincode, setPincode] = useState("");
   const [country, setCountry] = useState("");
@@ -520,6 +522,50 @@ function PopupNewOutlet2(props) {
                         placeholder="Enter Area"
                         value={area}
                         onChange={(e) => setArea(e.target.value)}
+                        required
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Logitude */}
+          <div className="dropDown-block-Outlet">
+            <span className="label-dropDown-block">Logitude</span>
+            <div className="dropDown-item" id="margin-10-T">
+              <div className="border-dropDown-block">
+                <div className="content-dropDown">
+                  <form action="#" className="form-dropDown-M">
+                    <div className="form-input-dropDown">
+                      <input
+                        type="email"
+                        placeholder="Enter Logitude"
+                        value={logitude}
+                        onChange={(e) => setLogitude(e.target.value)}
+                        required
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Latitude */}
+          <div className="dropDown-block-Outlet">
+            <span className="label-dropDown-block">Latitude</span>
+            <div className="dropDown-item" id="margin-10-T">
+              <div className="border-dropDown-block">
+                <div className="content-dropDown">
+                  <form action="#" className="form-dropDown-M">
+                    <div className="form-input-dropDown">
+                      <input
+                        type="email"
+                        placeholder="Enter Latitude"
+                        value={latitude}
+                        onChange={(e) => setLatitude(e.target.value)}
                         required
                       />
                     </div>
