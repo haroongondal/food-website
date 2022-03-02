@@ -28,17 +28,17 @@
   height: 100%;
   object-fit: cover;
   box-sizing: border-box;
-  border-radius: 30px;
+  border-radius: 4px;
 }
 .detail-box-restaurent {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 20px;
+  padding: 10px 15px;
   padding-right: 12px;
-  padding-bottom: 7px;
   box-sizing: border-box;
+  flex-wrap: wrap;
 }
 .restaurent-details {
   display: flex;
@@ -47,12 +47,12 @@
 .restaurent-details a {
   color: #222222;
   margin: 5px 0px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.5px;
   padding-right: 8px;
   text-decoration: none;
-  font-size: 17px;
-  margin-bottom: -1px;
+  font-size: 20px;
+  margin-bottom: 1px;
   width: 170px;
   white-space: nowrap;
   overflow: hidden;
@@ -68,7 +68,7 @@
   font-weight: 600;
   font-size: 11px;
   letter-spacing: 0.5px;
-  margin-top: -35px;
+  margin-top: 0px;
   background-color: #c8dec9;
   padding: 0px 5px;
   padding-top: px;
@@ -99,21 +99,22 @@
 .rating a:hover {
   color: white;
   cursor: text;
-}
-.restaurent-rating {
-  width: 40px;
+}.restaurent-rating {
+  width: 45px;
   height: 30px;
   display: flex;
   background-color: #439548;
   color: #ffffff;
   font-weight: 400;
   letter-spacing: 1px;
-  border-radius: 20px;
-  transform: translate(10px, -35px);
+  border-radius: 6px;
   align-items: center;
   justify-content: center;
   font-size: 14px;
   cursor: text;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 .restaurent-location {
   font-weight: 500;
@@ -123,8 +124,11 @@
 .restaurent-discount {
   font-weight: bolder;
   color: #439548;
-  font-size: 11px;
-  margin-top: 3px;
+  font-size: 14px;
+  padding-top: 10px;
+  border-top: 1px solid #94949430;  width: 100%;
+  display: block;
+  margin-top: 10px;
 }
 .ac-footer .ac-icon {
   position: absolute;
@@ -205,7 +209,7 @@
   .box-restaurent {
     width: 95%;
     box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);
-    border-radius: 30px;
+    border-radius: 10px;
     overflow: hidden;
     margin: 0px;
     margin-bottom: 10px;
@@ -216,13 +220,13 @@
 }
 @media screen and (min-width: 992px) {
   .box-restaurent {
-    width: 240px;
+    width: 95%;
     box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);
-    border-radius: 30px;
+    border-radius: 10px;
     overflow: hidden;
     margin: 10px;
     margin-top: 23px;
     background-color: #fff;
     cursor: pointer;
-  }
+}
 }

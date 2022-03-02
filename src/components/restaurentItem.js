@@ -43,12 +43,12 @@ console.log(data.RestaurantName)
                         {data.PrimaryAreaOfOutlet == null ? (data.PrimaryLocation == null ? "Address not Available" : data.PrimaryLocation)
                       : (data.PrimaryLocation == null ? data.PrimaryAreaOfOutlet
                       : data.PrimaryAreaOfOutlet + ", " + data.PrimaryLocation)}</span>
-                    <span className="restaurent-discount">Flat 25% Off the Total bill</span>
+                  
                     </div>
 
                     {/* distance */}
                     <a href="#abc" className="restaurent-distance">{Math.round(data.Distance)}</a>
-                        
+                    <span className="restaurent-discount">Flat 25% Off the Total bill</span>
                     </div>
                     
                 </div>

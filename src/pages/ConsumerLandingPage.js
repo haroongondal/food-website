@@ -74,13 +74,13 @@ function ConsumerLandingPage() {
       </Carousel>
       
       <HeadingRestaurentNear heading = {"Popular Restaurants"}/>
-
+  <div className='restaurants-links'>
       <Carousel responsive={CarouselRestaurent} removeArrowOnDeviceType={["tablet", "mobile"]} partialVisible={true}>
         {restaurants.isPending && <div><Skeleton width={250} height={258}/></div>}
         {restaurants.error && <div>{restaurants.error}</div>}
         {restaurants.data && restaurants.data.sort((e, d) => d.NoOfOrders - e.NoOfOrders).map((r) => <RestaurentItem key = {r.Id} data = {r}/>)}
       </Carousel>
-
+      </div>
       <HeadingWhyBook/>
 
       </div>

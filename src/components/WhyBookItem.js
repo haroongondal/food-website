@@ -3,7 +3,7 @@ import dealsImage from "../images/near_me.png";
 
 export default function WhyBookItem() {
   return (
-    <div className="div-for-why-book-boxes">
+    <div className="div-for-why-book-boxes mobile-hide">
       {/* 1st-Box */}
 
       <div className="div-box-why-book">

@@ -12,14 +12,15 @@ function ProtectedRoutes({ component: Component, _to: to,  ...restOfProps }) {
 
         {
           if (to === "crmDashboard") {
-            if (isAuthenticated === "true") {
+            if (isAuthenticated === "false") {
             //  if (userObj.AccountType.Id === 2) {
                 return  <Component {...props} />
             //  }
             } else {
             return  <Redirect to="/Business-Signup" />
             }
-          } else if (to === "userDashboard") {
+          }
+           else if (to === "userDashboard") {
             if (isAuthenticated === "true") {
            //   if (userObj.AccountType.Id === 5) {
                 return  <Component {...props} />

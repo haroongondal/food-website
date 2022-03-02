@@ -148,7 +148,7 @@
     height: 35px;
     outline: none;
     color: #0000008f;
-    font-size: smaller;
+    font-size: smaller;border-radius: 6px 0px 0px 6px;
   }
   
   .searchTerm:focus {
@@ -163,7 +163,7 @@
     text-align: center;
     color: #fff;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 20px;border-radius: 0px 6px 6px 0;
   }
   .text-search-link {
     justify-content: center;

@@ -22,7 +22,7 @@
         text-decoration: none;
         display: flex;
         justify-content: space-between;
-        margin-top: -10px;
+        margin-top: -10px;border-radius: 6px;
     }
     .details-location{
         display: flex;
@@ -67,7 +67,7 @@
     font-size: 13px;
     width: 100%;
     font-weight: 300;
-    padding-left: 15px;
+    padding-left: 15px;border-radius: 6px;
     }
     .searchButton-top{
         background-color: #439548;
@@ -75,7 +75,7 @@
         height: 40px;
         width: 100px;
     position: absolute;
-    margin-left: -5px;
+    margin-left: -5px;border-radius: 0px 6px 6px 0;
     }
     .text-search-button-top{
         color: white;
@@ -92,7 +92,7 @@
     }
     .signup_buton {
         background-color: #439548;
-        padding: 5px 15px;
+        padding: 10px 15px;
         color: white;
         border-radius: 50px;
     }

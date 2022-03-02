@@ -10,7 +10,7 @@ export default function MobileAppSection() {
 
 
     return (
-        <div>
+        <div className='mobile-hide'>
 
            <hr className="line-grey"/>
 

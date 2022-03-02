@@ -306,10 +306,12 @@ button.title-faq.is-open {
     padding: 0px;
     padding-top: 40px;
   }
+  .row-box .col-md-3{width: 21%;}
+  .row-box .col-md-4{width: 29.333333%;}
   .item_service {
-    margin: 40px 30px;
-    border-radius: 15px;
-    max-width: fit-content;
+    margin: 40px 15px;
+    border-radius: 10px;
+    /* max-width: fit-content; */
     background: white;
     box-shadow: 0px 10px 8px rgb(255 255 255 / 10%);
   }
@@ -319,8 +321,8 @@ button.title-faq.is-open {
     transition: all 0.3s ease;
   }
   .item_service-2 {
-    margin: 40px 20px;
-    border-radius: 15px;
+    margin: 40px 15px;
+    border-radius: 10px;
     background: white;
     box-shadow: 0px 10px 8px rgb(255 255 255 / 10%);
   }

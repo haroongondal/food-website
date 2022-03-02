@@ -44,7 +44,7 @@ export default function Filter_Page_Item({data = ""}) {
 
                             <span className="filter-P-offer">1 offer avaiable</span>
 
-                            <div style={{marginTop: "5px"}}>
+                            <div className='booked-box' style={{marginTop: "5px"}}>
                                 <span><img alt="bookmark-icon" src={bookmarkIcon} height="13px" width="13px"/></span>
                                 <span className="filter-P-text-booked">Booked 1 time today</span>
                             </div>

@@ -20,7 +20,7 @@ function BusinessMainSection() {
     
                 <div className="row-box">
                   {/* Item One */}
-                  <div className="col-md-2 col-9 item_service">
+                  <div className="col-md-3 col-9 item_service">
                     <div className="content-box">
                         <div className="icon_service">
                             <img src={revenueImage} alt="box-pic"/>
@@ -33,7 +33,7 @@ function BusinessMainSection() {
                   {/* Item One */}
       
                   {/* Item Two */}
-                  <div className="col-md-2 col-9 item_service">
+                  <div className="col-md-3 col-9 item_service">
                     <div className="content-box">
                         <div className="icon_service">
                             <img src={revenueImage} alt="box-pic"/>
@@ -46,7 +46,7 @@ function BusinessMainSection() {
                   {/* Item Two */}
       
                   {/* Item Three */}
-                  <div className="col-md-2 col-9 item_service">
+                  <div className="col-md-3 col-9 item_service">
                     <div className="content-box">
                         <div className="icon_service">
                             <img src={revenueImage} alt="box-pic"/>
@@ -59,7 +59,7 @@ function BusinessMainSection() {
                   {/* Item Three */}
     
                   {/* Item four */}
-                  <div className="col-md-2 col-9 item_service">
+                  <div className="col-md-3 col-9 item_service">
                     <div className="icon_service">
                         <div className="content-box">
                             <div className="icon_service">
@@ -88,7 +88,7 @@ function BusinessMainSection() {
     
                 <div className="row-box">
                   {/* Item One */}
-                  <div className="col-md-3 item_service-2">
+                  <div className="col-md-4 item_service-2">
                     <div className="content-box-2">
                         <div className="icon_service">
                             <img src={revenueImage} alt="box-pic"/>
@@ -102,7 +102,7 @@ function BusinessMainSection() {
                   {/* Item One */}
       
                   {/* Item Two */}
-                  <div className="col-md-3 item_service-2">
+                  <div className="col-md-4 item_service-2">
                     <div className="content-box-2">
                         <div className="icon_service">
                             <img src={revenueImage} alt="box-pic"/>
@@ -116,7 +116,7 @@ function BusinessMainSection() {
                   {/* Item Two */}
       
                   {/* Item Three */}
-                  <div className="col-md-3 item_service-2">
+                  <div className="col-md-4 item_service-2">
                     <div className="content-box-2">
                         <div className="icon_service">
                             <img src={revenueImage} alt="box-pic"/>
@@ -143,7 +143,7 @@ function BusinessMainSection() {
     
                 <div className="row-box">
                   {/* Item One */}
-                  <div className="item_service col-md-3 ">
+                  <div className="item_service col-md-4 ">
                     <div className="content-box-2">
                         <div className="icon_service">
                             <img src={checkMarkImage} alt="check-mark"/>
@@ -158,7 +158,7 @@ function BusinessMainSection() {
                   {/* Item One */}
       
                   {/* Item Two */}
-                  <div className="item_service col-md-3 ">
+                  <div className="item_service col-md-4 ">
                     <div className="content-box-2">
                         <div className="icon_service">
                             <img src={checkMarkImage} alt="check-mark"/>
@@ -173,7 +173,7 @@ function BusinessMainSection() {
                   {/* Item Two */}
       
                   {/* Item Three */}
-                  <div className="item_service col-md-3 ">
+                  <div className="item_service col-md-4 ">
                     <div className="content-box-2">
                         <div className="icon_service">
                             <img src={checkMarkImage} alt="check-mark"/>
