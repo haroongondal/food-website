@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/RestaurentItem.css";
 import restaurentImage from "../images/restaurant.jpg";
 import { Link } from "react-router-dom";
-import ReactStars from 'react-stars'
+import ReactStars from "react-stars";
 
 export default function RestaurentItem({ data = "" }) {
   return (
@@ -20,22 +20,6 @@ export default function RestaurentItem({ data = "" }) {
                 <span className="ac-icon ac-icon-love-dark"></span>
               </div>
             </section>
-
-            {/* rating */}
-            <div className="rating">
-              <div className="content-rating-stars">
-                <div className="rate-for-ratings-section">
-                  <ReactStars
-                    count={5}
-                    size={30}
-                    value={Math.round(data.AverageRating * 100) / 100}
-                    edit={false}
-                    half={true}
-                    color2={"#439548"}
-                  />
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* detail-box */}
@@ -43,6 +27,18 @@ export default function RestaurentItem({ data = "" }) {
             {/* restaurent-name */}
             <div className="restaurent-details">
               <a href="#abc">{data.RestaurantName}</a>
+              {/* rating */}
+              <div className="mb-1 rate-for-ratings-section">
+                <ReactStars
+                  count={5}
+                  size={30}
+                  value={Math.round(data.AverageRating * 100) / 100}
+                  edit={false}
+                  half={true}
+                  color2={"#439548"}
+                />
+              </div>
+
               <span className="restaurent-location">
                 {data.PrimaryAreaOfOutlet == null
                   ? data.PrimaryLocation == null

@@ -65,15 +65,21 @@
   justify-content: center;
   font-size: 14px;
 }
-.filter-page-box .rating{
+.filter-page-box .rate-for-ratings-section {
+  margin: 0 ;
+}
+.filter-page-box .rate-for-ratings-section > span{
   position: absolute;
-  top: 5px;
-  right: 5px;
+  right: 0;
+  top: 7px;
+  font-size: 13px;
+  color: black;
+  font-weight: 500;
 }
-.filter-page-box .content-rating-stars{
-  margin-top: 0 !important;
+.filter-page-box .react-stars > span {
+  font-size: 25px !important;
 }
-.filter-page-box .content-rating-stars span{
+.filter-page-box .rate-for-ratings-section span{
   line-height: 1;
 }
 .filter-P-restaurent-location {
@@ -121,7 +127,16 @@
     transition: all 0.3s ease;
   }
 }
-
+@media screen and (min-width:992px) and (max-width:1200px){
+  .filter-page-box .rate-for-ratings-section > span{
+    position: unset;
+  }
+}
+@media screen and (max-width:991px){
+  .filter-P-restaurent-detail-box{
+    display: block;
+  }
+}
 @media screen and (min-width: 992px) {
   .filter-page-box {
     width: 30.83%;

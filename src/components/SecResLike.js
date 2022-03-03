@@ -9,20 +9,15 @@ export default function SecResLike() {
       breakpoint: { max: 3000, min: 2000 },
       items: 4,
     },
-    superLargeDesktop: {
+    desktop: {
       // the naming can be any, depends on you.
-      breakpoint: { max: 2000, min: 1500 },
-      items: 3,
-    },
-
-    tablet_tablet: {
-      breakpoint: { max: 1500, min: 577 },
+      breakpoint: { max: 1200, min: 767 },
       items: 2,
     },
-    mobile: {
-      breakpoint: { max: 576, min: 0 },
+
+    mobile_table: {
+      breakpoint: { max: 767, min: 0 },
       items: 1,
-      partialVisibilityGutter: 60,
     },
   };
   return (

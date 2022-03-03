@@ -73,15 +73,10 @@
   font-size: 11px;
   margin-top: 17px;
 }
-.box-restaurent-3rd-page .rating{
-  position: absolute;
-  top: 5px;
-  right: 5px;
+.box-restaurent-3rd-page .rate-for-ratings-section {
+  margin: 0 ;
 }
-.box-restaurent-3rd-page .content-rating-stars{
-  margin-top: 0 !important;
-}
-.box-restaurent-3rd-page .content-rating-stars span{
+.box-restaurent-3rd-page .rate-for-ratings-section span{
   line-height: 1;
 }
 @media screen and (min-width: 320px) {

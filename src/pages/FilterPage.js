@@ -21,7 +21,6 @@ import { ForDevice } from "media-query-react";
 
 import PopupSearch from "../components/PopupSearch";
 import Carousel from "react-multi-carousel";
-import CarouselRestaurent from "../styles/Carousel_Restaurent";
 
 // Filter-Page-Search
 function FilterPage() {
@@ -142,7 +141,23 @@ function FilterPage() {
   //       }
   //     }
   //   };
+  const responsive = {
+    largeScreen: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 3000, min: 2000 },
+      items: 4,
+    },
+    desktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 1200, min: 767 },
+      items: 2,
+    },
 
+    mobile_table: {
+      breakpoint: { max: 767, min: 0 },
+      items: 1,
+    },
+  };
   return (
     <div>
       <NavBar ShouldHideSearch={false} />
@@ -383,26 +398,26 @@ function FilterPage() {
           {/* DESKTOP CHECKBOX-FILTERS */}
 
           {/* <ForDevice deviceName={["tablet", "desktop"]}> */}
-            <div className="adjust d-lg-block d-none">
-              <div className="alignment listing_sidebar">
-                <FiltersItem
-                  filtertypes={Types.FilterTypes.QuickFilters}
-                  handleFilters={handleFilters}
-                />
-                <FiltersItem
-                  filtertypes={Types.FilterTypes.CusineFilters}
-                  handleFilters={handleFilters}
-                />
-                <FiltersItem
-                  filtertypes={Types.FilterTypes.TagFilters}
-                  handleFilters={handleFilters}
-                />
-                <FiltersItem
-                  filtertypes={Types.FilterTypes.FeatureFilters}
-                  handleFilters={handleFilters}
-                />
-              </div>
+          <div className="adjust d-lg-block d-none">
+            <div className="alignment listing_sidebar">
+              <FiltersItem
+                filtertypes={Types.FilterTypes.QuickFilters}
+                handleFilters={handleFilters}
+              />
+              <FiltersItem
+                filtertypes={Types.FilterTypes.CusineFilters}
+                handleFilters={handleFilters}
+              />
+              <FiltersItem
+                filtertypes={Types.FilterTypes.TagFilters}
+                handleFilters={handleFilters}
+              />
+              <FiltersItem
+                filtertypes={Types.FilterTypes.FeatureFilters}
+                handleFilters={handleFilters}
+              />
             </div>
+          </div>
           {/* </ForDevice> */}
 
           <div className="right-section">
@@ -410,7 +425,10 @@ function FilterPage() {
               <HeadingFilterPage />
 
               {/* DESKTOP SORT-BY */}
-              <Sortby className="d-lg-block d-none" getSortType={handleSorting} />
+              <Sortby
+                className="d-lg-block d-none"
+                getSortType={handleSorting}
+              />
               {/* FILTER PAGE BOXES */}
 
               {/* <div className="align-boxes"> */}
@@ -426,7 +444,7 @@ function FilterPage() {
               {error && <div>{error}</div>}
               <div className="d-lg-none d-block">
                 <Carousel
-                  responsive={CarouselRestaurent}
+                  responsive={responsive}
                   removeArrowOnDeviceType={["tablet", "mobile"]}
                   partialVisible={true}
                 >
