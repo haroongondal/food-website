@@ -107,8 +107,8 @@
     font-size: 14px;
     /* margin: 0 auto; */
     text-align: center;
-    padding-left: 10px;
-    margin-top: 12px;
+    padding: 0 15px 0 6px;
+    margin-top: 11px;
     margin-bottom: 0px;
     color: black;
   }
@@ -137,6 +137,7 @@
   .paragraph-comment p {
     font-size: 12px;
     color: black;
+    margin-top: 12px;
   }
   .helpful-review {
     display: flex;

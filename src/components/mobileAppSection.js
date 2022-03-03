@@ -14,7 +14,7 @@ export default function MobileAppSection() {
 
            <hr className="line-grey"/>
 
-           <div className="div-boxes-mobile-app">
+           <div className="div-boxes-mobile-app align-items-center">
 
 {/* 1-section */}
 
@@ -36,7 +36,7 @@ export default function MobileAppSection() {
       </button>
     </div>
  </div>
-<div className='coming_soon'>
+<div className='coming_soon mt-3'>
         Coming Soon...
 </div>
  {/* <div className="googlePlayBtn">

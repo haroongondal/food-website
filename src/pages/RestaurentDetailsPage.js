@@ -26,7 +26,6 @@ function RestaurentDetailsPage() {
 
    
     const restaurantDetails = useFetch(`https://api.masairapp.com/api/Restaurant/GetRestaurantById?id=${id}`);
-    
     return (
         <div>
            <NavBar ShouldHideSearch = {false}/>
