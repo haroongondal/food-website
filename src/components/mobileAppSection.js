@@ -36,12 +36,14 @@ export default function MobileAppSection() {
       </button>
     </div>
  </div>
-
- <div className="googlePlayBtn">
+<div className='coming_soon'>
+        Coming Soon...
+</div>
+ {/* <div className="googlePlayBtn">
      <a href="#abc">
          <img alt="google-play-icon" src={googlePlayStoreImg}/>
      </a>
- </div>
+ </div> */}
 
 </div>
 

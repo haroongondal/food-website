@@ -65,6 +65,17 @@
   justify-content: center;
   font-size: 14px;
 }
+.filter-page-box .rating{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.filter-page-box .content-rating-stars{
+  margin-top: 0 !important;
+}
+.filter-page-box .content-rating-stars span{
+  line-height: 1;
+}
 .filter-P-restaurent-location {
   font-weight: 500;
   color: #949494;

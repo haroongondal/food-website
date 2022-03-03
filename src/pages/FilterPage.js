@@ -20,6 +20,8 @@ import CancelSvgIcon from "../components/CancelSvgIcon";
 import { ForDevice } from "media-query-react";
 
 import PopupSearch from "../components/PopupSearch";
+import Carousel from "react-multi-carousel";
+import CarouselRestaurent from "../styles/Carousel_Restaurent";
 
 // Filter-Page-Search
 function FilterPage() {
@@ -36,8 +38,7 @@ function FilterPage() {
   // Popup Close-icon
   const closeIcon = <CancelSvgIcon />;
 
-
-// Popup Sort-By-Mobile
+  // Popup Sort-By-Mobile
   const [isSortByShowing, setSortByShowing] = useState(false);
 
   const handleSortByPop = (e) => {
@@ -101,7 +102,6 @@ function FilterPage() {
         }
       }
     }
-
   };
 
   const handleSorting = (e, sort) => {
@@ -257,7 +257,7 @@ function FilterPage() {
               modal: {
                 margin: "0px",
                 padding: "0px",
-                width: "100%",
+                width: "90%",
                 height: "100%",
               },
             }}
@@ -268,7 +268,8 @@ function FilterPage() {
 
         {/* MOBILE SORT-BY */}
 
-        <ForDevice deviceName="mobile">
+        {/* <ForDevice deviceName="mobile"> */}
+        <div className="d-lg-none d-block">
           <Modal
             open={isSortByShowing}
             onClose={closeSortByPop}
@@ -278,11 +279,11 @@ function FilterPage() {
               modalAnimationIn: "sortByEnterModalAnimation",
               modalAnimationOut: "sortByLeaveModalAnimation",
             }}
-            animationDuration={800}
+            animationDuration={300}
             styles={{
               modal: {
-                verticalAlign: "bottom",
-                width: "100%",
+                verticalAlign: "center",
+                width: "90%",
                 padding: "0px",
                 margin: "0px",
                 borderRadius: "23px 23px 0px 0px",
@@ -321,12 +322,14 @@ function FilterPage() {
               </div>
             </div>
           </Modal>
-        </ForDevice>
+        </div>
+        {/* </ForDevice> */}
 
         <div className="main-section">
           {/* MOBILE CHECKBOX-FILTERS */}
 
-          <ForDevice deviceName="mobile">
+          {/* <ForDevice deviceName="mobile"> */}
+          <div className="d-lg-none d-block">
             <Modal
               open={isFiltersShowing}
               onClose={closeFiltersPop}
@@ -336,18 +339,18 @@ function FilterPage() {
                 modalAnimationIn: "customEnterModalAnimation",
                 modalAnimationOut: "customLeaveModalAnimation",
               }}
-              animationDuration={800}
+              animationDuration={300}
               styles={{
                 modal: {
-                  verticalAlign: "bottom",
-                  width: "100%",
+                  verticalAlign: "center",
+                  width: "90%",
                   padding: "0px",
                   margin: "0px",
                   borderRadius: "23px 23px 0px 0px",
                 },
               }}
             >
-            <div className="title-popup-listing">
+              <div className="title-popup-listing">
                 <h6 className="text-search-SP">Filters</h6>
               </div>
               <div className="adjust-M">
@@ -370,16 +373,17 @@ function FilterPage() {
                   />
                 </div>
               </div>
-              <div className="apply-filters-btn" >
-              <button>Apply Filters</button>
+              <div className="apply-filters-btn">
+                <button>Apply Filters</button>
               </div>
             </Modal>
-          </ForDevice>
+          </div>
+          {/* </ForDevice> */}
 
           {/* DESKTOP CHECKBOX-FILTERS */}
 
-          <ForDevice deviceName={["tablet", "desktop"]}>
-            <div className="adjust">
+          {/* <ForDevice deviceName={["tablet", "desktop"]}> */}
+            <div className="adjust d-lg-block d-none">
               <div className="alignment listing_sidebar">
                 <FiltersItem
                   filtertypes={Types.FilterTypes.QuickFilters}
@@ -399,29 +403,73 @@ function FilterPage() {
                 />
               </div>
             </div>
-          </ForDevice>
+          {/* </ForDevice> */}
 
           <div className="right-section">
             <div className="div-top-boxes-content">
               <HeadingFilterPage />
 
               {/* DESKTOP SORT-BY */}
-
-              <Sortby getSortType={handleSorting} />
-
+              <Sortby className="d-lg-block d-none" getSortType={handleSorting} />
               {/* FILTER PAGE BOXES */}
 
-              <div className="align-boxes">
-                {isPending && (
-                  <div>
-                    <Skeleton
-                      width={200}
-                      height={250}
-                      orientation={"horizontal"}
-                    />
-                  </div>
-                )}
-                {error && <div>{error}</div>}
+              {/* <div className="align-boxes"> */}
+              {isPending && (
+                <div>
+                  <Skeleton
+                    width={200}
+                    height={250}
+                    orientation={"horizontal"}
+                  />
+                </div>
+              )}
+              {error && <div>{error}</div>}
+              <div className="d-lg-none d-block">
+                <Carousel
+                  responsive={CarouselRestaurent}
+                  removeArrowOnDeviceType={["tablet", "mobile"]}
+                  partialVisible={true}
+                >
+                  {sort === Types.SortType.HighPrice &&
+                    data &&
+                    data.ListOfRestaurant.sort(
+                      (a, b) => b.CostOfTwo - a.CostOfTwo
+                    ).map((rest) => (
+                      <FilterPageItem key={rest.Id} data={rest} />
+                    ))}
+
+                  {sort === Types.SortType.LowPrice &&
+                    data &&
+                    data.ListOfRestaurant.sort(
+                      (a, b) => a.CostOfTwo - b.CostOfTwo
+                    ).map((rest) => (
+                      <FilterPageItem key={rest.Id} data={rest} />
+                    ))}
+
+                  {sort === Types.SortType.Popularity &&
+                    data &&
+                    data.ListOfRestaurant.sort(
+                      (a, b) => b.NoOfOrders - a.NoOfOrders
+                    ).map((rest) => (
+                      <FilterPageItem key={rest.Id} data={rest} />
+                    ))}
+
+                  {sort === Types.SortType.Ratings &&
+                    data &&
+                    data.ListOfRestaurant.sort(
+                      (a, b) => b.AverageRating - a.AverageRating
+                    ).map((rest) => (
+                      <FilterPageItem key={rest.Id} data={rest} />
+                    ))}
+
+                  {sort === "-1" &&
+                    data &&
+                    data.ListOfRestaurant.map((rest) => (
+                      <FilterPageItem key={rest.Id} data={rest} />
+                    ))}
+                </Carousel>
+              </div>
+              <div className="d-lg-flex d-none">
                 {sort === Types.SortType.HighPrice &&
                   data &&
                   data.ListOfRestaurant.sort(
@@ -454,8 +502,8 @@ function FilterPage() {
               </div>
             </div>
 
-            <hr className="grey" />
-            <Pagination />
+            {/* <hr className="grey" /> */}
+            {/* <Pagination /> */}
           </div>
         </div>
       </div>

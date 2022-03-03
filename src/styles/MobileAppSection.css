@@ -97,7 +97,7 @@
   .div-boxes-mobile-app {
     display: flex;
     justify-content: space-between;
-    padding: 20px 100px;
+    padding: 10px 100px;
     margin-bottom: 50px;
   }
   .line-grey {
@@ -106,12 +106,16 @@
   .div-boxes-mobile-app {
     display: flex;
     justify-content: space-between;
-    padding: 20px 100px;
+    padding: 10px 100px;
     margin-bottom: 50px;
   }
   .div-1-section-mobile-app {
-    padding: 50px;
+    padding: 40px 50px;
   }
+  .coming_soon {
+    font-size: 24px;
+    font-weight: 500;
+}
   .text-explore {
     font-size: 22px;
     margin-bottom: 3px;
@@ -191,7 +195,7 @@
     position: relative;
   }
   .app-screenshot2{
-    width: 19%;
+    width: 18%;
     right: 6%;
     transform: translate(10px, 29px);
     position: absolute;

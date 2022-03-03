@@ -2,6 +2,7 @@ import '../styles/Filter_Page_Item.css'
 import restaurentImage from '../images/restaurant.jpg'
 import bookmarkIcon from '../images/bookmark.png'
 import { Link } from 'react-router-dom'
+import ReactStars from 'react-stars'
 
 export default function Filter_Page_Item({data = ""}) {
 
@@ -11,7 +12,6 @@ export default function Filter_Page_Item({data = ""}) {
     // for (let c in cusinesList) {
     //     cusines += c.
     // }
-    
 
     return (
         
@@ -25,8 +25,19 @@ export default function Filter_Page_Item({data = ""}) {
                             <img alt="restaurent-pic" src={restaurentImage}/>
                             
                             {/* rating */}
-                        <div className="filter-P-rating-box">	
-                            <h6 href="#" className="filter-P-rating">4.5</h6>
+                        <div className="rating">
+                            <div className="content-rating-stars">
+                                <div className="rate-for-ratings-section">
+                                <ReactStars
+                                    count={5}
+                                    size={30}
+                                    value={Math.round(data.AverageRating * 100) / 100}
+                                    edit={false}
+                                    half={true}
+                                    color2={"#439548"}
+                                />
+                                </div>
+                            </div>
                             </div>
                             </div>
                             {/* detail-box */}

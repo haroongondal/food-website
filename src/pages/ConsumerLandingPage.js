@@ -27,6 +27,8 @@ function ConsumerLandingPage() {
 
   const restaurants = useFetch(`https://api.masairapp.com/api/Restaurant/GetRestaurantsByCoordinate?latitude=${location.coordinates.lat}&longitude=${location.coordinates.lng}`);
 
+  console.log('restaurents: ',restaurants);
+
   const popularCusines = useFetch(`https://api.masairapp.com/api/Lov/GetPopularCusine`);
 
 
@@ -37,15 +39,15 @@ function ConsumerLandingPage() {
       <NavBar ShouldHideSearch = {true}/>
       <DashboardConsumer/>
       <div className="marginMain">
-      <HeadingHiFoodie></HeadingHiFoodie>
-      <Carousel responsive={CarouselNearMe} removeArrowOnDeviceType={["tablet", "mobile"]} partialVisible={true}>
+      {/* <HeadingHiFoodie></HeadingHiFoodie> */}
+      {/* <Carousel responsive={CarouselNearMe} removeArrowOnDeviceType={["tablet", "mobile"]} partialVisible={true}>
       <NearMe></NearMe>
       <NearMe></NearMe>
       <NearMe></NearMe>
       <NearMe></NearMe>
       <NearMe></NearMe>
       <NearMe></NearMe>
-      </Carousel>
+      </Carousel> */}
 
       <HeadingRestaurentNear heading = {"Restaurants Near You"}/>
 

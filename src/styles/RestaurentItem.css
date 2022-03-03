@@ -82,6 +82,17 @@
   text-decoration: none;
   color: black;
 }
+.restaurent_item .rating{
+  position: absolute;
+  top: 5px;
+  right: 35px;
+}
+.restaurent_item .content-rating-stars{
+  margin-top: 0 !important;
+}
+.restaurent_item .content-rating-stars span{
+  line-height: 1;
+}
 .heart-icon {
   position: absolute;
   right: 0%;

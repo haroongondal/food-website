@@ -27,9 +27,6 @@ function RestaurentDetailsPage() {
    
     const restaurantDetails = useFetch(`https://api.masairapp.com/api/Restaurant/GetRestaurantById?id=${id}`);
     
-   
-   
-
     return (
         <div>
            <NavBar ShouldHideSearch = {false}/>
@@ -79,11 +76,8 @@ function RestaurentDetailsPage() {
               AverageRating = {restaurantDetails.data.AverageRating}
               />
             }
-              
               </div>
-              
               <ReservationItem/>
-            
             </div>
             <Footer/>
         </div>

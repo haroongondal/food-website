@@ -1,6 +1,7 @@
 import "../styles/ResLikeItem.css";
 import restaurentImage from "../images/restaurant.jpg";
 import { Link } from "react-router-dom";
+import ReactStars from 'react-stars'
 
 export default function ResLikeItem() {
   return (
@@ -12,12 +13,23 @@ export default function ResLikeItem() {
             <img alt="4" src={restaurentImage} />
 
             {/* overlayer */}
-            <div className="over-rating-3rd-page">
+            {/* <div className="over-rating-3rd-page"> */}
               {/* rating */}
-              <h6 href="#" className="buy-btn-restaurent-3rd-page">
-                4.5
-              </h6>
+              <div className="rating">
+              <div className="content-rating-stars">
+                <div className="rate-for-ratings-section">
+                  <ReactStars
+                    count={5}
+                    size={30}
+                    value={Math.round(0 * 100) / 100}
+                    edit={false}
+                    half={true}
+                    color2={"#439548"}
+                  />
+                </div>
+              </div>
             </div>
+            {/* </div> */}
           </div>
 
           {/* detail-box */}
