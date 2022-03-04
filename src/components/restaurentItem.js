@@ -28,7 +28,7 @@ export default function RestaurentItem({ data = "" }) {
             <div className="restaurent-details">
               <a href="#abc">{data.RestaurantName}</a>
               {/* rating */}
-              <div className="mb-1 rate-for-ratings-section">
+              <div className="mb-1 rate-for-ratings-section position-relative">
                 <ReactStars
                   count={5}
                   size={30}
@@ -36,7 +36,15 @@ export default function RestaurentItem({ data = "" }) {
                   edit={false}
                   half={true}
                   color2={"#439548"}
+                  className="react-stars"
                 />
+                {data.UserReviews ? (
+                  <span className="user-reviews">
+                    {data.UserReviews.length} Reviews
+                  </span>
+                ) : (
+                  <span className="user-reviews">0 Reviews</span>
+                )}
               </div>
 
               <span className="restaurent-location">

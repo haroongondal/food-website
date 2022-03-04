@@ -70,7 +70,8 @@ export default function FilterTopNavbar() {
         <div className="Sec-search-filters">
           <div
             className="search-topNavBar-M"
-            style={{ padding: "8px 1rem", marginBottom: "5px" }} onClick={handleSearchPop}
+            style={{ padding: "8px 1rem", marginBottom: "5px" }}
+            onClick={handleSearchPop}
           >
             <i>
               <svg
@@ -99,10 +100,10 @@ export default function FilterTopNavbar() {
             <span>Search anything...</span>
           </div>
           <div className="filters-btns">
-            <div className="sort-btn-F">
-            <i class='bx bx-filter' ></i>
+            <div className="filter-btn-F">
+              <i class="bx bx-filter"></i>
             </div>
-            <div className="sort-btn-F">
+            <div className="filter-btn-F">
               <i class="bx bx-filter-alt"></i>
             </div>
           </div>
@@ -113,13 +114,18 @@ export default function FilterTopNavbar() {
         onClose={closeSearchPop}
         center
         classNames={{
-          modalAnimationIn: 'customEnterModalAnimation',
-          modalAnimationOut: 'customLeaveModalAnimation',
+          modalAnimationIn: "customEnterModalAnimation",
+          modalAnimationOut: "customLeaveModalAnimation",
         }}
         animationDuration={1200}
         closeIcon={closeIcon}
         styles={{
-          modal: { margin: "0px",padding:"0px", width: "100%", height: "100%"},
+          modal: {
+            margin: "0px",
+            padding: "0px",
+            width: "100%",
+            height: "100%",
+          },
         }}
       >
         <PopupSearch />

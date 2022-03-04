@@ -6,7 +6,7 @@ import downArrowIcon from "../images/down_arrow.svg";
 import SignUp from "./SignUp";
 import Modal from "react-responsive-modal";
 import Login from "./Login";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import SearchBoxItem from "./SearchBoxItem";
 import Skeleton from "react-loading-skeleton";
 import useFetch from "../Utils/useFetch";
@@ -106,31 +106,43 @@ export default function NavBar(props) {
               <img alt="food_app" style={{ maxWidth: "145px" }} src={logo} />
             </a>
           </div>
-
           {/* Location-Box */}
-
-          <a href="#abc" className="section-location">
-            <div className="details-location">
-              <span className="image-location">
-                <img
-                  alt="Location pin"
-                  src={locationIcon}
-                  style={{ height: "20px", width: "20px" }}
-                />
-              </span>
-              <span className="city-loaction">
-                <span className="text-main-city">Delhi</span>
-                <span className="text-city-details">Connaught Place (C..</span>
-              </span>
-              <span className="image-arrow">
-                <img
-                  alt="down-arrow"
-                  src={downArrowIcon}
-                  style={{ width: "10px", height: "10px" }}
-                />
-              </span>
+          <div class="dropdown">
+            <button
+              class="section-location dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <div className="details-location">
+                <span className="image-location">
+                  <img
+                    alt="Location pin"
+                    src={locationIcon}
+                    style={{ height: "20px", width: "20px" }}
+                  />
+                </span>
+                <span className="city-loaction">
+                  <span className="text-main-city">Delhi</span>
+                  <span className="text-city-details">
+                    Connaught Place (C..
+                  </span>
+                </span>
+              </div>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">
+                Action
+              </a>
+              <a class="dropdown-item" href="#">
+                Another action
+              </a>
+              <a class="dropdown-item" href="#">
+                Something else here
+              </a>
             </div>
-          </a>
+          </div>
 
           {/* Search-bar */}
 
@@ -168,7 +180,7 @@ export default function NavBar(props) {
 
           {/* Top-right-navigation-buttons */}
 
-          {isLogedIn === "false"  ? (
+          {isLogedIn === "false" ? (
             <ul className="desktop-list">
               <li>
                 <a href="#abc">786 100 4444</a>
@@ -196,9 +208,9 @@ export default function NavBar(props) {
                 <a href="#abc">Help</a>
               </li>
               <li>
-                <Link to={"/Dashboard"} className="signup_buton" href="/">
+                <NavLink to={"/Dashboard"} className="signup_buton" href="/">
                   My Dashboard
-                </Link>
+                </NavLink>
               </li>
             </ul>
           )}

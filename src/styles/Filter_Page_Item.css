@@ -127,11 +127,6 @@
     transition: all 0.3s ease;
   }
 }
-@media screen and (min-width:992px) and (max-width:1200px){
-  .filter-page-box .rate-for-ratings-section > span{
-    position: unset;
-  }
-}
 @media screen and (max-width:991px){
   .filter-P-restaurent-detail-box{
     display: block;

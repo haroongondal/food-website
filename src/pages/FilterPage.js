@@ -14,13 +14,10 @@ import useFetch from "../Utils/useFetch";
 import Skeleton from "react-loading-skeleton";
 import { useState, useEffect } from "react";
 import Types from "../Utils/Types.json";
-
 import Modal from "react-responsive-modal";
 import CancelSvgIcon from "../components/CancelSvgIcon";
 import { ForDevice } from "media-query-react";
-
 import PopupSearch from "../components/PopupSearch";
-import Carousel from "react-multi-carousel";
 
 // Filter-Page-Search
 function FilterPage() {
@@ -160,14 +157,15 @@ function FilterPage() {
   };
   return (
     <div>
-      <NavBar ShouldHideSearch={false} />
+      <NavBar className="d-md-block d-none" ShouldHideSearch={false} />
 
       <div className="container container-padding">
         <AdItem />
 
         {/* MOBILE TOP NAV-BAR */}
 
-        <div className="filterNavBar">
+        {/* <ForDevice deviceName="mobile"> */}
+        <div className="filterNavBar d-md-none d-block">
           <div className="topNavBar-F">
             <div className="align-topNavBar-F">
               <div>
@@ -191,10 +189,7 @@ function FilterPage() {
                   </svg>
                 </a>
               </div>
-              <div
-                className="location-topNavBar-M"
-                style={{ marginLeft: "auto" }}
-              >
+              <div className="location-topNavBar-M mb-1 me-auto ms-4">
                 <span>
                   Lahore
                   <i className="_3sKP_">
@@ -216,75 +211,83 @@ function FilterPage() {
                 </span>
               </div>
             </div>
-            <div className="Sec-search-filters">
-              <div
-                className="search-topNavBar-M"
-                style={{ padding: "8px 1rem", marginBottom: "5px" }}
-                onClick={handleSearchPop}
-              >
-                <i>
-                  <svg
-                    width="17"
-                    height="17"
-                    viewBox="0 0 17 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M13.4722 7.11106C13.4722 10.6242 10.6243 13.4721 7.11112 13.4721C3.59796 13.4721 0.75 10.6242 0.75 7.11106C0.75 3.59795 3.59796 0.75 7.11112 0.75C10.6243 0.75 13.4722 3.59795 13.4722 7.11106Z"
-                      stroke="#999999"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                    <path
-                      d="M16 16L12.1333 12.1334"
-                      stroke="#999999"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                </i>
-                <span>Search anything...</span>
+            <div className="d-flex justify-content-between">
+              <div className="sort-btn-F" onClick={handleSortByPop}>
+                <i class="bx bx-filter"></i>
               </div>
-              <div className="filters-btns">
-                <div className="sort-btn-F" onClick={handleSortByPop}>
-                  <i class="bx bx-filter"></i>
+              <div className="d-flex navbar-suggetions-wrapper">
+                {/* <Carousel
+            responsive={responsive}
+            removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
+            partialVisible={true}
+          > */}
+                <div className="d-flex navbar-suggetions flex-shrink-0">
+                  <div className="px-3 py-1 mx-2 rounded-pill">
+                    Dinoute Passport
+                  </div>
+                  <div className="px-3 py-1 mx-2 rounded-pill">Super Saver</div>
+                  <div className="px-3 py-1 mx-2 rounded-pill">Dineout Pay</div>
+                  <div className="px-3 py-1 mx-2 rounded-pill">
+                    Safe to Eat out
+                  </div>
+                  <div className="px-3 py-1 mx-2 rounded-pill">Super Saver</div>
+                  <div className="px-3 py-1 mx-2 rounded-pill">Dineout Pay</div>
                 </div>
-                <div className="sort-btn-F" onClick={handleFiltersPop}>
-                  <i class="bx bx-filter-alt"></i>
-                </div>
+
+                {/* </Carousel> */}
+              </div>
+              <div className="filter-btn-F ms-2" onClick={handleFiltersPop}>
+                <i class="bx bx-filter-alt"></i>
               </div>
             </div>
           </div>
           <Modal
-            open={isSearchShowing}
-            onClose={closeSearchPop}
+            open={isFiltersShowing}
+            onClose={closeFiltersPop}
+            closeIcon={closeIcon}
             center
             classNames={{
               modalAnimationIn: "customEnterModalAnimation",
               modalAnimationOut: "customLeaveModalAnimation",
             }}
-            animationDuration={1200}
-            closeIcon={closeIcon}
+            animationDuration={300}
             styles={{
               modal: {
-                margin: "0px",
-                padding: "0px",
+                verticalAlign: "center",
                 width: "90%",
-                height: "100%",
+                padding: "0px",
+                margin: "0px",
+                borderRadius: "23px 23px 0px 0px",
               },
             }}
           >
-            <PopupSearch />
+            <div className="title-popup-listing">
+              <h6 className="text-search-SP">Filters</h6>
+            </div>
+            <div className="adjust-M">
+              <div className="listing_sidebar-M mt-4">
+                <FiltersItem
+                  filtertypes={Types.FilterTypes.QuickFilters}
+                  handleFilters={handleFilters}
+                />
+                <FiltersItem
+                  filtertypes={Types.FilterTypes.CusineFilters}
+                  handleFilters={handleFilters}
+                />
+                <FiltersItem
+                  filtertypes={Types.FilterTypes.TagFilters}
+                  handleFilters={handleFilters}
+                />
+                <FiltersItem
+                  filtertypes={Types.FilterTypes.FeatureFilters}
+                  handleFilters={handleFilters}
+                />
+              </div>
+            </div>
+            <div className="apply-filters-btn">
+              <button>Apply Filters</button>
+            </div>
           </Modal>
-        </div>
-
-        {/* MOBILE SORT-BY */}
-
-        {/* <ForDevice deviceName="mobile"> */}
-        <div className="d-lg-none d-block">
           <Modal
             open={isSortByShowing}
             onClose={closeSortByPop}
@@ -343,62 +346,12 @@ function FilterPage() {
         <div className="main-section">
           {/* MOBILE CHECKBOX-FILTERS */}
 
-          {/* <ForDevice deviceName="mobile"> */}
-          <div className="d-lg-none d-block">
-            <Modal
-              open={isFiltersShowing}
-              onClose={closeFiltersPop}
-              closeIcon={closeIcon}
-              center
-              classNames={{
-                modalAnimationIn: "customEnterModalAnimation",
-                modalAnimationOut: "customLeaveModalAnimation",
-              }}
-              animationDuration={300}
-              styles={{
-                modal: {
-                  verticalAlign: "center",
-                  width: "90%",
-                  padding: "0px",
-                  margin: "0px",
-                  borderRadius: "23px 23px 0px 0px",
-                },
-              }}
-            >
-              <div className="title-popup-listing">
-                <h6 className="text-search-SP">Filters</h6>
-              </div>
-              <div className="adjust-M">
-                <div className="listing_sidebar-M mt-4">
-                  <FiltersItem
-                    filtertypes={Types.FilterTypes.QuickFilters}
-                    handleFilters={handleFilters}
-                  />
-                  <FiltersItem
-                    filtertypes={Types.FilterTypes.CusineFilters}
-                    handleFilters={handleFilters}
-                  />
-                  <FiltersItem
-                    filtertypes={Types.FilterTypes.TagFilters}
-                    handleFilters={handleFilters}
-                  />
-                  <FiltersItem
-                    filtertypes={Types.FilterTypes.FeatureFilters}
-                    handleFilters={handleFilters}
-                  />
-                </div>
-              </div>
-              <div className="apply-filters-btn">
-                <button>Apply Filters</button>
-              </div>
-            </Modal>
-          </div>
           {/* </ForDevice> */}
 
           {/* DESKTOP CHECKBOX-FILTERS */}
 
           {/* <ForDevice deviceName={["tablet", "desktop"]}> */}
-          <div className="adjust d-lg-block d-none">
+          <div className="adjust d-md-block d-none">
             <div className="alignment listing_sidebar">
               <FiltersItem
                 filtertypes={Types.FilterTypes.QuickFilters}
@@ -426,7 +379,7 @@ function FilterPage() {
 
               {/* DESKTOP SORT-BY */}
               <Sortby
-                className="d-lg-block d-none"
+                className="d-md-block d-none"
                 getSortType={handleSorting}
               />
               {/* FILTER PAGE BOXES */}
@@ -442,7 +395,7 @@ function FilterPage() {
                 </div>
               )}
               {error && <div>{error}</div>}
-              <div className="d-lg-none d-block">
+              {/* <div className="d-lg-none d-block">
                 <Carousel
                   responsive={responsive}
                   removeArrowOnDeviceType={["tablet", "mobile"]}
@@ -486,38 +439,38 @@ function FilterPage() {
                       <FilterPageItem key={rest.Id} data={rest} />
                     ))}
                 </Carousel>
-              </div>
-              <div className="d-lg-flex d-none">
-                {sort === Types.SortType.HighPrice &&
-                  data &&
-                  data.ListOfRestaurant.sort(
-                    (a, b) => b.CostOfTwo - a.CostOfTwo
-                  ).map((rest) => <FilterPageItem key={rest.Id} data={rest} />)}
+              </div> */}
+              {/* <div className="d-lg-flex d-none"> */}
+              {sort === Types.SortType.HighPrice &&
+                data &&
+                data.ListOfRestaurant.sort(
+                  (a, b) => b.CostOfTwo - a.CostOfTwo
+                ).map((rest) => <FilterPageItem key={rest.Id} data={rest} />)}
 
-                {sort === Types.SortType.LowPrice &&
-                  data &&
-                  data.ListOfRestaurant.sort(
-                    (a, b) => a.CostOfTwo - b.CostOfTwo
-                  ).map((rest) => <FilterPageItem key={rest.Id} data={rest} />)}
+              {sort === Types.SortType.LowPrice &&
+                data &&
+                data.ListOfRestaurant.sort(
+                  (a, b) => a.CostOfTwo - b.CostOfTwo
+                ).map((rest) => <FilterPageItem key={rest.Id} data={rest} />)}
 
-                {sort === Types.SortType.Popularity &&
-                  data &&
-                  data.ListOfRestaurant.sort(
-                    (a, b) => b.NoOfOrders - a.NoOfOrders
-                  ).map((rest) => <FilterPageItem key={rest.Id} data={rest} />)}
+              {sort === Types.SortType.Popularity &&
+                data &&
+                data.ListOfRestaurant.sort(
+                  (a, b) => b.NoOfOrders - a.NoOfOrders
+                ).map((rest) => <FilterPageItem key={rest.Id} data={rest} />)}
 
-                {sort === Types.SortType.Ratings &&
-                  data &&
-                  data.ListOfRestaurant.sort(
-                    (a, b) => b.AverageRating - a.AverageRating
-                  ).map((rest) => <FilterPageItem key={rest.Id} data={rest} />)}
+              {sort === Types.SortType.Ratings &&
+                data &&
+                data.ListOfRestaurant.sort(
+                  (a, b) => b.AverageRating - a.AverageRating
+                ).map((rest) => <FilterPageItem key={rest.Id} data={rest} />)}
 
-                {sort === "-1" &&
-                  data &&
-                  data.ListOfRestaurant.map((rest) => (
-                    <FilterPageItem key={rest.Id} data={rest} />
-                  ))}
-              </div>
+              {sort === "-1" &&
+                data &&
+                data.ListOfRestaurant.map((rest) => (
+                  <FilterPageItem key={rest.Id} data={rest} />
+                ))}
+              {/* </div> */}
             </div>
 
             {/* <hr className="grey" /> */}

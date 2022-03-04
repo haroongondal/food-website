@@ -1,22 +1,19 @@
 const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 10
-    },
-    desktop: {
-      breakpoint: { max: 1500, min: 1024 },
-      items: 4
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 4
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      partialVisibilityGutter: 60
-    }
-  };
+  largeScreen: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 3000, min: 2000 },
+    items: 4,
+  },
+  desktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 1200, min: 767 },
+    items: 3,
+  },
+
+  mobile_table: {
+    breakpoint: { max: 767, min: 0 },
+    items: 1,
+  },
+};
 
   export default responsive;

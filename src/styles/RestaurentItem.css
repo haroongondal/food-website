@@ -88,6 +88,14 @@
 .restaurent_item .rate-for-ratings-section span{
   line-height: 1;
 }
+.restaurent_item .rate-for-ratings-section > span {
+  position: absolute;
+  right: -75px;
+  top: 7px;
+  font-size: 13px;
+  color: black;
+  font-weight: 500;
+}
 .heart-icon {
   position: absolute;
   right: 0%;

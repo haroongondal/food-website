@@ -1,28 +1,29 @@
-
-import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import ConsumerLandingPage from './pages/ConsumerLandingPage';
-import TestPage from './pages/TestPage';
-import BusinessLandingPage from './pages/BusinessLandingPage';
-import FilterPage from './pages/FilterPage';
-import RestaurentDetailsPage from './pages/RestaurentDetailsPage';
-import MyProfilePage from './pages/MyProfilePage';
-import BusinessSignup from './components/BusinessSignup';
-import ProtectedRoutes from './Utils/ProtectedRoutes';
-import CRMDashboard from "./pages/CRMDashboard"
-import MediaQueryReact from 'media-query-react';
-import BusinessLogin from './components/BusinessLogin';
-import AboutUsPage from './pages/AboutUsPage';
-import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
-import TermsAndCondPage from './pages/TermsAndCondPage';
-
-
+import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ConsumerLandingPage from "./pages/ConsumerLandingPage";
+import TestPage from "./pages/TestPage";
+import BusinessLandingPage from "./pages/BusinessLandingPage";
+import FilterPage from "./pages/FilterPage";
+import RestaurentDetailsPage from "./pages/RestaurentDetailsPage";
+import MyProfilePage from "./pages/MyProfilePage";
+import BusinessSignup from "./components/BusinessSignup";
+import ProtectedRoutes from "./Utils/ProtectedRoutes";
+import CRMDashboard from "./pages/CRMDashboard";
+import MediaQueryReact from "media-query-react";
+import BusinessLogin from "./components/BusinessLogin";
+import AboutUsPage from "./pages/AboutUsPage";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import TermsAndCondPage from "./pages/TermsAndCondPage";
+import NavBar from "./components/NavBar";
+import BottomNavBar from "./components/BottomNavBar";
+import MobileTopNavBar from "./components/MobileTopNavBar";
+import { useState } from "react";
 
 function App() {
-
   // pass screenSize object with custom device name and width.
   const screenSize = {
-    mobile: { // custom device name
+    mobile: {
+      // custom device name
       minWidth: 320,
       maxWidth: 480,
     },
@@ -39,79 +40,74 @@ function App() {
       maxWidth: 2500,
     },
   };
-
+  const [headerShow, setHeaderShow] = useState(true);
+  function showHeader(isShow) {
+    setHeaderShow(isShow);
+  }
   return (
     <div>
+      <MediaQueryReact mediaQueries={screenSize}>
+        <Router>
+        <NavBar ShouldHideSearch={true} />
+        {headerShow ? <MobileTopNavBar /> : ""}
+          <Switch>
+            <Route exact path="/">
+              <ConsumerLandingPage />
+            </Route>
 
-<MediaQueryReact mediaQueries={screenSize}>
-        
-      
-    <Router >
-    
-    
-     <Switch>
+            <Route exact path="/FilterPage">
+              <FilterPage />
+            </Route>
 
+            <Route path="/RestaurentDetailsPage/:id">
+              <RestaurentDetailsPage />
+            </Route>
 
-        <Route exact path = "/">
-        <ConsumerLandingPage/>
-        </Route>
+            <Route exact path="/TestPage">
+              <TestPage />
+            </Route>
 
-        <Route exact path = "/FilterPage">
-        <FilterPage/>
-        </Route>
+            <ProtectedRoutes
+              path="/Dashboard"
+              component={MyProfilePage}
+              _to="userDashboard"
+            />
 
-        <Route path = "/RestaurentDetailsPage/:id">
-        <RestaurentDetailsPage/>
-        </Route>
+            <ProtectedRoutes
+              path="/CRM-Dashboard"
+              component={CRMDashboard}
+              _to="crmDashboard"
+            />
 
-        
+            <Route path="/BusinessLandingPage">
+              <BusinessLandingPage />
+            </Route>
 
-        <Route exact path = "/TestPage">
-        <TestPage/>
-        </Route>
+            <Route exact path="/Business-Signup">
+              <BusinessSignup />
+            </Route>
 
+            <Route exact path="/Business-Login">
+              <BusinessLogin />
+            </Route>
 
-        <ProtectedRoutes path = "/Dashboard" component = {MyProfilePage} _to = "userDashboard"/>
+            <Route exact path="/About-Us">
+              <AboutUsPage />
+            </Route>
 
-        <ProtectedRoutes path = "/CRM-Dashboard" component = {CRMDashboard} _to = "crmDashboard"/>
-        
-        <Route path = "/BusinessLandingPage">
-        <BusinessLandingPage/>
-        </Route>
+            <Route exact path="/Privacy-Policy">
+              <PrivacyPolicyPage />
+            </Route>
 
-        <Route exact path = "/Business-Signup" >
-        <BusinessSignup/>
-        </Route>
-
-        <Route exact path = "/Business-Login" >
-        <BusinessLogin/>
-        </Route>
-
-        <Route exact path = "/About-Us" >
-        <AboutUsPage/>
-        </Route>
-
-        <Route exact path = "/Privacy-Policy" >
-        <PrivacyPolicyPage/>
-        </Route>
-
-        <Route exact path = "/Terms-And-Conditions" >
-        <TermsAndCondPage/>
-        </Route>
-
-      </Switch>
-    
-    
-    
-    </Router>
-
-    
+            <Route exact path="/Terms-And-Conditions">
+              <TermsAndCondPage />
+            </Route>
+          </Switch>
+        </Router>
+        <BottomNavBar />
       </MediaQueryReact>
-    
     </div>
   );
 }
 
 export default App;
-
-  

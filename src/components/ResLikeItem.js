@@ -23,7 +23,7 @@ export default function ResLikeItem() {
           <div className="type-restaurent-3rd-page">
             <p>JW Kitchen</p>
             {/* rating */}
-            <div className="rate-for-ratings-section mb-1">
+            <div className="rate-for-ratings-section mb-1 position-relative w-100">
               <ReactStars
                 count={5}
                 size={30}
@@ -31,7 +31,16 @@ export default function ResLikeItem() {
                 edit={false}
                 half={true}
                 color2={"#439548"}
+                className="react-stars"
               />
+              {/* {data.UserReviews ? (
+                <span className="user-reviews">
+                  {data.UserReviews} 'Reviews'
+                </span>
+              ) : (
+                <span className="user-reviews">0 Reviews</span>
+              )} */}
+              <span className="user-reviews">4 Reviews</span>
             </div>
             <span className="margao-details-3rd-page">
               JW Marriott Hotel, Vital Mallya Road, Central.

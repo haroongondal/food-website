@@ -131,6 +131,9 @@
   right: 0;
   content: "";
 }
+.search-link{
+  text-decoration: none;
+}
 .title-name-searchBar {
   margin: 0;
   font-size: 14px;
