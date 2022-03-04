@@ -124,22 +124,34 @@ export default function NavBar(props) {
                   />
                 </span>
                 <span className="city-loaction">
-                  <span className="text-main-city">Delhi</span>
-                  <span className="text-city-details">
-                    Connaught Place (C..
-                  </span>
+                  {/* <span className="text-main-city">Delhi</span> */}
+                  <span className="text-city-details text-left">Lahore</span>
                 </span>
               </div>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <div>Recent</div>
               <a class="dropdown-item" href="#">
-                Action
+                Islamabad
+              </a>
+              <div>Popular</div>
+              <a class="dropdown-item" href="#">
+                Rawalpindi
               </a>
               <a class="dropdown-item" href="#">
-                Another action
+                Karachi
               </a>
               <a class="dropdown-item" href="#">
-                Something else here
+                Peshawar
+              </a>
+              <a class="dropdown-item" href="#">
+                Hayderabad
+              </a>
+              <a class="dropdown-item" href="#">
+                Multan
+              </a>
+              <a class="dropdown-item" href="#">
+                Quetta
               </a>
             </div>
           </div>
