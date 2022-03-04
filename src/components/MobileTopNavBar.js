@@ -2,27 +2,9 @@ import React from "react";
 import { useState } from "react";
 import '../styles/MobileTopNavBar.css'
 import profile from '../images/profile_pic.jpg'
-import Modal from "react-responsive-modal";
-import CancelSvgIcon from "../components/CancelSvgIcon";
-import PopupSearch from "./PopupSearch";
+
 
 export default function MobileTopNavBar() {
-
- 
-
-  // Popup Close-icon
-  const closeIcon = <CancelSvgIcon />;
-  
-  const [isSearchShowing, setSearchShowing] = useState(false);
-
-  const handleSearchPop = (e) => {
-    e.preventDefault();
-    setSearchShowing(true);
-  };
-
-  const closeSearchPop = () => {
-    setSearchShowing(false);
-  };
 
   return (
     <div>
@@ -147,7 +129,7 @@ export default function MobileTopNavBar() {
               </div>
             </div>
           </div>
-          <div className="search-topNavBar-M" onClick={handleSearchPop}>
+          {/* <div className="search-topNavBar-M" onClick={handleSearchPop}>
             <i>
               <svg
                 width="17"
@@ -173,25 +155,9 @@ export default function MobileTopNavBar() {
               </svg>
             </i>
             <span>Search anything...</span>
-          </div>
+          </div> */}
         </div>
       </div>
-      <Modal
-        open={isSearchShowing}
-        onClose={closeSearchPop}
-        center
-        classNames={{
-          modalAnimationIn: 'customEnterModalAnimation',
-          modalAnimationOut: 'customLeaveModalAnimation',
-        }}
-        animationDuration={1200}
-        closeIcon={closeIcon}
-        styles={{
-          modal: { margin: "0px",padding:"0px", width: "100%", height: "100%"},
-        }}
-      >
-        <PopupSearch />
-      </Modal>
     </div>
   );
 }

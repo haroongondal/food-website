@@ -8,40 +8,7 @@ import Skeleton from "react-loading-skeleton";
 
 export default function DashboardConsumer() {
   const [searchValues, setSearchValues] = useState("");
-  // let data = [
-  //   {
-  //     Id: 1,
-  //     RestaurantName: "Savour Food",
-  //     AverageRating: 4.9,
-  //   },
-  //   {
-  //     Id: 2,
-  //     RestaurantName: "Chikachino Food",
-  //     AverageRating: 4.5,
-  //   },
-  //   {
-  //     Id: 3,
-  //     RestaurantName: "Rehman Food",
-  //     AverageRating: 4.3,
-  //   },
-  //   {
-  //     Id: 4,
-  //     RestaurantName: "Wil Wings",
-  //     AverageRating: 4.6,
-  //   },
-  //   {
-  //     Id: 5,
-  //     RestaurantName: "KFC",
-  //     AverageRating: 5.0,
-  //   },
-  //   {
-  //     Id: 6,
-  //     RestaurantName: "MC Donald",
-  //     AverageRating: 4.9,
-  //   },
-  // ];
   const {data, isPending, error} = useFetch(`https://api.masairapp.com/api/Restaurant/GetRestaurantFromOpenSearch?search=${searchValues}`)
-  console.log("search data: ", isPending);
   const [isResultShowing, setResultShowing] = useState(false);
 
   const handlechange = (value) => {
