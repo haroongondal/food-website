@@ -1,7 +1,7 @@
 import '../styles/ConsumerLandingPage.css';
 import NearMe from '../components/NearMeItem';
 import CuisinesItem from '../components/CuisinesItem';
-import RestaurentItem from '../components/RestaurentItem';
+import RestaurentItem from '../components/restaurentItem';
 import MobileAppSection from '../components/MobileAppSection';
 import Footer from '../components/Footer';
 import Carousel from 'react-multi-carousel';
