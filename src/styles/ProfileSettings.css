@@ -114,12 +114,12 @@
 
 .green-btn-S {
   width: 114px;
-  height: 46px;
+  /* height: 46px; */
   background: #5ddc95;
   color: white;
   border: white;
   border-radius: 17px;
-  padding: 14px 40px;
+  padding: 10px 40px;
   font-size: 14px;
   transition: background-color 0.3s linear;
   font-family: Raleway;

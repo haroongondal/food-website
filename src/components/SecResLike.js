@@ -29,6 +29,7 @@ export default function SecResLike() {
           responsive={responsive}
           removeArrowOnDeviceType={["tablet", "mobile"]}
           partialVisible={true}
+          className="resLikeItem-carousel"
         >
           {/* {restaurants.isPending && <div><Skeleton width={200} height={250}/></div>}
         {restaurants.error && <div>{restaurants.error}</div>} */}

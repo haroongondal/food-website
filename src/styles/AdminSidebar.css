@@ -1,6 +1,7 @@
 @media screen and (min-width: 320px) {
   #sidebar {
     display: none;
+    background-color: white;
   }
    /* sidebar-Mobile */
    #sidebar-Mobile {
@@ -10,7 +11,7 @@
     left: 0;
     width: 280px;
     height: 100%;
-    background: #06386c;
+    background: white;
     transition: 0.3s ease;
     overflow-x: hidden;
     scrollbar-width: none;
@@ -23,7 +24,7 @@
   }
   .logo-text {
     background: #5ddc95;
-    color: white;
+    color: #052b52;
     padding: 8px 20px;
     border-radius: 38px;
     font-size: large;
@@ -104,7 +105,7 @@
     overflow-x: hidden;
   }
   #sidebar-Mobile .side-menu.top li.active a {
-    color: white;
+    color: #052b52;
   }
   #sidebar-Mobile.hide .side-menu li a {
     width: calc(48px - (4px * 2));
@@ -114,7 +115,7 @@
     color: var(--red);
   }
   #sidebar-Mobile .side-menu.top li a:hover {
-    color: white;
+    color: #052b52;
   }
   #sidebar-Mobile .side-menu li a .bx {
     min-width: calc(60px - ((4px + 6px) * 2));
@@ -135,22 +136,22 @@
   }
   .icon {
     width: 16%;
-    color: #fff;
+    color: white;
     font-size: 18px;
   }
   .sidebar-menu li a {
-    background-color: #06386c;
+    background-color: white;
     padding: 20px 25px;
     display: block;
     text-decoration: none;
-    color: #fff;
+    color: #052b52;
   }
   .sidebar-menu li a:hover {
     background-color: #052b52;
     padding: 20px 25px;
     display: block;
     text-decoration: none;
-    color: #fff;
+    color: white;
     transition: 0.3s ease;
   }
   li.have-children ul {
@@ -161,7 +162,7 @@
     padding-left: 62px;
   }
   li.have-children ul li a:hover {
-    color: #fff;
+    color: #052b52;
     background-color: #52565d;
     padding-left: 62px;
   }
@@ -173,7 +174,7 @@
   position: absolute;
   right: 30px;
   content: "\f078";
-  color: #fff;
+  color: #052b52;
   transition: all .5s;
   transform: rotate(180deg);
 } */
@@ -215,7 +216,7 @@
     left: 0;
     width: 280px;
     height: 100%;
-    background: #06386c;
+    background: white;
     transition: 0.3s ease;
     overflow-x: hidden;
     scrollbar-width: none;
@@ -228,7 +229,7 @@
   }
   .logo-text {
     background: #5ddc95;
-    color: white;
+    color: #052b52;
     padding: 8px 20px;
     border-radius: 38px;
     font-size: large;
@@ -243,7 +244,7 @@
     position: sticky;
     top: 0;
     left: 0;
-    background: #06386c;
+    background: white;
     z-index: 500;
     padding-top: 10px;
     padding-bottom: 20px;
@@ -306,7 +307,7 @@
     overflow-x: hidden;
   }
   #sidebar .side-menu.top li.active a {
-    color: white;
+    color: #052b52;
   }
   #sidebar.hide .side-menu li a {
     width: calc(48px - (4px * 2));
@@ -316,7 +317,7 @@
     color: var(--red);
   }
   #sidebar .side-menu.top li a:hover {
-    color: white;
+    color: #052b52;
   }
   #sidebar .side-menu li a .bx {
     min-width: calc(60px - ((4px + 6px) * 2));
@@ -337,33 +338,33 @@
   }
   .icon {
     width: 16%;
-    color: #fff;
+    color: #052b52;
     font-size: 18px;
   }
   .sidebar-menu li a {
-    background-color: #06386c;
+    background-color: white;
     padding: 20px 25px;
     display: block;
     text-decoration: none;
-    color: #fff;
+    color: #052b52;
   }
   .sidebar-menu li a:hover {
-    background-color: #052b52;
+    background-color: white;
     padding: 20px 25px;
     display: block;
     text-decoration: none;
-    color: #fff;
+    color: #052b52;
     transition: 0.3s ease;
   }
   li.have-children ul {
     padding: 0px;
   }
   li.have-children ul li a {
-    background-color: #0a2542;
+    background-color: white;
     padding-left: 62px;
   }
   li.have-children ul li a:hover {
-    color: #fff;
+    color: #052b52;
     background-color: #52565d;
     padding-left: 62px;
   }
@@ -375,7 +376,7 @@
   position: absolute;
   right: 30px;
   content: "\f078";
-  color: #fff;
+  color: #052b52;
   transition: all .5s;
   transform: rotate(180deg);
 } */

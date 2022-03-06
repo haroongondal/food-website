@@ -164,7 +164,7 @@ function UserManagementPage() {
                     </td>
                     <td
                       style={{
-                        padding: "22px 40px",
+                        padding: "22px 15px",
                         color: "#06386C",
                         fontWeight: "bold",
                       }}
@@ -234,7 +234,7 @@ function UserManagementPage() {
                     </td>
                     <td
                       style={{
-                        padding: "22px 40px",
+                        padding: "22px 15px",
                         color: "#06386C",
                         fontWeight: "bold",
                       }}
@@ -303,7 +303,7 @@ function UserManagementPage() {
                     </td>
                     <td
                       style={{
-                        padding: "22px 40px",
+                        padding: "22px 15px",
                         color: "#06386C",
                         fontWeight: "bold",
                       }}
@@ -372,7 +372,7 @@ function UserManagementPage() {
                     </td>
                     <td
                       style={{
-                        padding: "22px 40px",
+                        padding: "22px 15px",
                         color: "#06386C",
                         fontWeight: "bold",
                       }}
@@ -441,7 +441,7 @@ function UserManagementPage() {
                     </td>
                     <td
                       style={{
-                        padding: "22px 40px",
+                        padding: "22px 15px",
                         color: "#06386C",
                         fontWeight: "bold",
                       }}
@@ -510,7 +510,7 @@ function UserManagementPage() {
                     </td>
                     <td
                       style={{
-                        padding: "22px 40px",
+                        padding: "22px 15px",
                         color: "#06386C",
                         fontWeight: "bold",
                       }}

@@ -27,7 +27,6 @@ export default function NavBar(props) {
   );
 
   const [isResultShowing, setResultShowing] = useState(false);
-
   const handlechange = (value) => {
     setSearchValues(value);
     if (value !== null && value !== "") {
@@ -80,154 +79,183 @@ export default function NavBar(props) {
   window.addEventListener("scroll", showSearchBar);
 
   return (
-    <div>
-      <Modal
-        open={isSignpShowing}
-        onClose={closeSignupPop}
-        center
-        styles={{ modal: { "margin-top": "80px" } }}
-      >
-        <SignUp />
-      </Modal>
-
-      <Modal
-        open={isLoginShowing}
-        onClose={closeLoginPop}
-        center
-        styles={{ modal: { "margin-top": "80px" } }}
-      >
-        <Login setLogedIn={setLogedIn} />
-      </Modal>
-
-      <div className="header">
-        <nav className="navbar">
-          <div className="logo_image">
-            <a href="https://www.food_app.com">
-              <img alt="food_app" style={{ maxWidth: "145px" }} src={logo} />
-            </a>
-          </div>
-          {/* Location-Box */}
-          <div class="dropdown">
-            <button
-              class="section-location dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <div className="details-location">
-                <span className="image-location">
+        <div>
+          <Modal
+            open={isSignpShowing}
+            onClose={closeSignupPop}
+            center
+            styles={{ modal: { "margin-top": "80px" } }}
+          >
+            <SignUp />
+          </Modal>
+          <Modal
+            open={isLoginShowing}
+            onClose={closeLoginPop}
+            center
+            styles={{ modal: { "margin-top": "80px" } }}
+          >
+            <Login setLogedIn={setLogedIn} />
+          </Modal>
+          <div className="header">
+            <nav className="navbar">
+              <div className="logo_image">
+                <a href="https://www.food_app.com">
                   <img
-                    alt="Location pin"
-                    src={locationIcon}
-                    style={{ height: "20px", width: "20px" }}
+                    alt="food_app"
+                    style={{ maxWidth: "145px" }}
+                    src={logo}
                   />
-                </span>
-                <span className="city-loaction">
-                  {/* <span className="text-main-city">Delhi</span> */}
-                  <span className="text-city-details text-left">Lahore</span>
-                </span>
+                </a>
               </div>
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <div>Recent</div>
-              <a class="dropdown-item" href="#">
-                Islamabad
-              </a>
-              <div>Popular</div>
-              <a class="dropdown-item" href="#">
-                Rawalpindi
-              </a>
-              <a class="dropdown-item" href="#">
-                Karachi
-              </a>
-              <a class="dropdown-item" href="#">
-                Peshawar
-              </a>
-              <a class="dropdown-item" href="#">
-                Hayderabad
-              </a>
-              <a class="dropdown-item" href="#">
-                Multan
-              </a>
-              <a class="dropdown-item" href="#">
-                Quetta
-              </a>
-            </div>
-          </div>
-
-          {/* Search-bar */}
-
-          <div className="parent">
-            <div
-              className="search-box sticky-search"
-              id="searchBar"
-              style={{ display: navbar ? "inline" : "none" }}
-            >
-              <input
-                type="text"
-                className="searchTerm-top"
-                placeholder="Search for Restaurants, Cuisines, Location "
-                onChange={(e) => handlechange(e.target.value)}
-              />
-              <button type="submit" className="searchButton-top">
-                <span className="text-search-button-top">Search</span>
-              </button>
-            </div>
-          </div>
-
-          {isResultShowing && (
-            <div className="box-searchBar">
-              <ul class="align-box-searchBar">
-                {isPending && (
-                  <div>
-                    <Skeleton />
+              {/* Location-Box */}
+              <div class="dropdown">
+                <button
+                  class="section-location dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <div className="details-location">
+                    <i className="fa fa-map-marker"></i>
+                    <span className="city-loaction">
+                      {/* <span className="text-main-city">Delhi</span> */}
+                      <span className="text-city-details text-left">
+                        Lahore
+                      </span>
+                    </span>
                   </div>
-                )}
-                {error && <div>{error}</div>}
-                {data && data.map((r) => <SearchBoxItem data={r} />)}
-              </ul>
-            </div>
-          )}
+                </button>
+                <div
+                  class="dropdown-menu locations-dropdown"
+                  aria-labelledby="dropdownMenuLink"
+                >
+                  <div className="p-1">
+                    <div className="px-3 py-2 rounded-3">
+                      Use my current location
+                    </div>
+                  </div>
+                  <div className="px-3 py-1 heading">Recent</div>
+                  <div className="location-item-wrapper">
+                    <a class="dropdown-item px-3 py-2" href="#">
+                      Islamabad
+                    </a>
+                  </div>
+                  <div className="px-3 py-1 heading">Popular</div>
+                  <div className="location-item-wrapper">
+                    <a class="dropdown-item px-3 py-2" href="#">
+                      Rawalpindi
+                    </a>
+                  </div>
+                  <div className="location-item-wrapper">
+                    <a class="dropdown-item px-3 py-2" href="#">
+                      Karachi
+                    </a>
+                  </div>
+                  <div className="location-item-wrapper">
+                    <a class="dropdown-item px-3 py-2" href="#">
+                      Peshawar
+                    </a>
+                  </div>
+                  <div className="location-item-wrapper">
+                    <a class="dropdown-item px-3 py-2" href="#">
+                      Hayderabad
+                    </a>
+                  </div>
+                  <div className="location-item-wrapper">
+                    <a class="dropdown-item px-3 py-2" href="#">
+                      Multan
+                    </a>
+                  </div>
+                  <div className="location-item-wrapper">
+                    <a class="dropdown-item px-3 py-2" href="#">
+                      Quetta
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-          {/* Top-right-navigation-buttons */}
+              {/* Search-bar */}
 
-          {isLogedIn === "false" ? (
-            <ul className="desktop-list">
-              <li>
-                <a href="#abc">786 100 4444</a>
-              </li>
-              <li>
-                <a href="#abc">Help</a>
-              </li>
-              <li>
-                <a href="/" onClick={handleLoginPop}>
-                  Login
-                </a>
-              </li>
-              <li>
-                <a className="signup_buton" href="/" onClick={handleSignUpPop}>
-                  SignUp
-                </a>
-              </li>
-            </ul>
-          ) : (
-            <ul className="desktop-list">
-              <li>
-                <a href="#abc">786 100 4444</a>
-              </li>
-              <li>
-                <a href="#abc">Help</a>
-              </li>
-              <li>
-                <NavLink to={"/Dashboard"} className="signup_buton" href="/">
-                  My Dashboard
-                </NavLink>
-              </li>
-            </ul>
-          )}
-        </nav>
-      </div>
-    </div>
+              <div className="parent">
+                <div
+                  className="search-box sticky-search"
+                  id="searchBar"
+                  style={{ display: navbar ? "inline" : "none" }}
+                >
+                  <input
+                    type="text"
+                    className="searchTerm-top"
+                    placeholder="Search for Restaurants, Cuisines, Location "
+                    onChange={(e) => handlechange(e.target.value)}
+                  />
+                  <button type="submit" className="searchButton-top">
+                    <span className="text-search-button-top">Search</span>
+                  </button>
+                </div>
+              </div>
+
+              {isResultShowing && (
+                <div className="box-searchBar">
+                  <ul class="align-box-searchBar">
+                    {isPending && (
+                      <div>
+                        <Skeleton />
+                      </div>
+                    )}
+                    {error && <div>{error}</div>}
+                    {data && data.map((r) => <SearchBoxItem data={r} />)}
+                  </ul>
+                </div>
+              )}
+
+              {/* Top-right-navigation-buttons */}
+
+              {isLogedIn === "false" ? (
+                <ul className="desktop-list">
+                  <li>
+                    <a href="#abc">786 100 4444</a>
+                  </li>
+                  <li>
+                    <a href="/business-Login">Help</a>
+                  </li>
+                  <li>
+                    <a href="/" onClick={handleLoginPop}>
+                      Login
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="signup_buton"
+                      href="/"
+                      onClick={handleSignUpPop}
+                    >
+                      SignUp
+                    </a>
+                  </li>
+                </ul>
+              ) : (
+                <ul className="desktop-list">
+                  <li className="d-xl-inline d-sm-none">
+                    <a href="#abc">786 100 4444</a>
+                  </li>
+                  <li>
+                    <a href="/business-Login">Help</a>
+                  </li>
+                  <li>
+                    <NavLink
+                      to={"/business-Signup"}
+                      className="signup_buton"
+                      href="/"
+                    >
+                      My Dashboard
+                    </NavLink>
+                  </li>
+                </ul>
+              )}
+            </nav>
+          </div>{" "}
+        </div>
+
   );
 }

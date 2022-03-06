@@ -1,4 +1,4 @@
-@media screen and (min-width: 577px) and (max-width: 1200px) {
+@media screen and (min-width: 577px) {
   .react-multi-carousel-item {
     max-width: 300px;
     margin-right: 30px;

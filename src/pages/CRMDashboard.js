@@ -1,57 +1,59 @@
-import React from 'react'
-import { Route, Switch, useRouteMatch } from 'react-router'
-import AdminSidebar from '../components/AdminSidebar'
-import AdminNavbar from '../components/AdminNavbar'
-import AdminMenuPage from './AdminMenuPage'
-import MenuDashboard from './MenuDashboard'
-import OutletsPage from './OutletsPage'
-import UserManagementPage from './UserManagementPage'
-import FeedbackPage from './FeedbackPage'
-import ProfileSettings from './ProfileSettings'
-import useFetch from '../Utils/useFetch'
+import {React,useEffect} from "react";
+import { Route, Switch, useRouteMatch } from "react-router";
+import AdminSidebar from "../components/AdminSidebar";
+import AdminNavbar from "../components/AdminNavbar";
+import AdminMenuPage from "./AdminMenuPage";
+import MenuDashboard from "./MenuDashboard";
+import OutletsPage from "./OutletsPage";
+import UserManagementPage from "./UserManagementPage";
+import FeedbackPage from "./FeedbackPage";
+import ProfileSettings from "./ProfileSettings";
+import BottomNavBarCRM from "../components/BottomNavbarCRM";
 
-function CRMDashboard() {
+import useFetch from "../Utils/useFetch";
 
-    const {path} = useRouteMatch();
+function CRMDashboard(props) {
+  const { path } = useRouteMatch();
+  useEffect(function () {
+    props.showHeader(false);
+    props.showBottomNav(false);
+  });
+  return (
+    <div>
+      <AdminSidebar />
+      <section id="content">
+        <AdminNavbar />
+        <main>
+          <Switch>
+            <Route exact path={`${path}/Add-Menu`}>
+              <AdminMenuPage />
+            </Route>
 
-    
-    return (
-        <div>
-            
-            <AdminSidebar/>
-            <section id="content">
-                <AdminNavbar/>
-                <main>
-                <Switch>
-                <Route exact path = {`${path}/Add-Menu`} >
-                  <AdminMenuPage/>
-                  </Route>
+            <Route exact path={`${path}/`}>
+              <MenuDashboard />
+            </Route>
 
-                  <Route exact path = {`${path}/`} >
-                  <MenuDashboard/>
-                  </Route>
+            <Route exact path={`${path}/My-Outlets`}>
+              <OutletsPage />
+            </Route>
 
-                  <Route exact path = {`${path}/My-Outlets`} >
-                  <OutletsPage/>
-                  </Route>
+            <Route exact path={`${path}/Users-Management`}>
+              <UserManagementPage />
+            </Route>
 
-                  <Route exact path = {`${path}/Users-Management`} >
-                  <UserManagementPage/>
-                  </Route>
+            <Route exact path={`${path}/Feedback`}>
+              <FeedbackPage />
+            </Route>
 
-                  <Route exact path = {`${path}/Feedback`} >
-                  <FeedbackPage/>
-                  </Route>
-
-                  <Route exact path = {`${path}/Profile-Settings`} >
-                  <ProfileSettings/>
-                  </Route>
-                  </Switch>
-                </main>
-            </section>
-        
-        </div>
-    )
+            <Route exact path={`${path}/Profile-Settings`}>
+              <ProfileSettings />
+            </Route>
+          </Switch>
+          <BottomNavBarCRM />
+        </main>
+      </section>
+    </div>
+  );
 }
 
-export default CRMDashboard
+export default CRMDashboard;

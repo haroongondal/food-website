@@ -70,7 +70,7 @@ function PopupAddUser() {
 
       {/* Buttons */}
       <div className="row m-auto">
-        <div className="col-md-12 d-flex mb-2 pr-0">
+        <div className="col-md-12 d-flex mb-2 pr-0 justify-content-center">
           <button
             type="submit"
             className="blue-btn"

@@ -1,12 +1,13 @@
 body{
   font-family:Raleway;
   background-color: #ECECEC;
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 460px){
-.mobile-hide {
+/* .mobile-hide {
     display: none !important;
-}
+} */
 .restaurants-links {
   margin-bottom: 90px;
 }

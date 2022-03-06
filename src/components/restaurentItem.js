@@ -17,7 +17,7 @@ export default function RestaurentItem({ data = "" }) {
 
             <section className="ac-footer">
               <div className="ac-footer-container ac-footer-brand">
-                <span className="ac-icon ac-icon-love-dark"></span>
+                <i className="fa fa-heart-o p-1 border"></i>
               </div>
             </section>
           </div>

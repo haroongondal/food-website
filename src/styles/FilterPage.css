@@ -6,7 +6,7 @@
   }
   .main-section {
     display: flex;
-    margin-top: 120px;
+    margin-top: 85px;
     text-rendering: optimizespeed;
     display: -ms-flexbox;
     -ms-flex-flow: row wrap;
@@ -41,6 +41,8 @@
     -ms-flex-line-pack: start;
     align-content: flex-start;
     margin-bottom: 50px;
+    padding: 10px 8px 0 8px;
+
   }
   .apply-filters-btn{
     margin: 20px
@@ -53,22 +55,44 @@
     border: none;
     border-radius: 30px;
   }
-  
-  .btn-for-sortBy {
-    width: 100%;
-    background: white;
-    border-top: 1px solid grey;
-    border-right: none;
-    border-left: none;
-    border-bottom: none;
-    padding: 10px;
+  .filter-modal .react-responsive-modal-modal {
+    border-radius: 0 !important;
+    border-top: 6px solid #439548;
   }
-  .btn-for-sortBy:focus {
-    border: none;
-    outline: none;
+
+  label > input[type="radio"] {
+    display: none;
+  }
+  label > input[type="radio"]:checked + *::before {
+    background: radial-gradient(#439548 0%, #439548 40%, transparent 50%, transparent);
+    border-color: #439548;
+  }
+  label > input[type="radio"]:checked + * {
+    color: #439548;
+  }
+  label > input[type="radio"] + *::before {
+    content: "";
+    display: inline-block;
+    vertical-align: center;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-right: 0.7rem;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: #439548;
+  }
+  .filter-modal label {
+    padding: 5px 0;
+  }
+  .filter-modal label span,.cancelSort{
+    font-size: 14px;
+  }
+  .cancelSort{
+    font-weight: bold;
+    cursor: pointer;
   }
 }
-
 @media screen and (min-width: 992px) {
   .container-padding {
     padding: 0px 12px 0px 12px !important;

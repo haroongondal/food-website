@@ -20,14 +20,16 @@ import { ForDevice } from "media-query-react";
 import PopupSearch from "../components/PopupSearch";
 
 // Filter-Page-Search
-function FilterPage() {
+function FilterPage(props) {
   const [isSearchShowing, setSearchShowing] = useState(false);
 
   const handleSearchPop = (e) => {
     e.preventDefault();
     setSearchShowing(true);
   };
-
+  useEffect(function () {
+    props.showHeader(false);
+  });
   const closeSearchPop = () => {
     setSearchShowing(false);
   };
@@ -101,11 +103,14 @@ function FilterPage() {
   };
 
   const handleSorting = (e, sort) => {
-    e.preventDefault();
+    // e.preventDefault();
     setSort(sort);
+    // e.querySelectorAll('input').checked = true;;
+    // setSortByShowing(false);
+  };
+  const cancelSort = () => {
     setSortByShowing(false);
   };
-
   useEffect(() => {
     seturl(
       `https://api.masairapp.com/api/Restaurant/GetRestaurantsByFilters?cusineId=${cusineIds}&RestaurantId=&featureId=${featureIds.join()}&tagId=${tagIds.join()}&offset=0&limit=10`
@@ -247,14 +252,15 @@ function FilterPage() {
             closeIcon={closeIcon}
             center
             classNames={{
+              root: "filter-modal",
               modalAnimationIn: "customEnterModalAnimation",
               modalAnimationOut: "customLeaveModalAnimation",
             }}
             animationDuration={300}
             styles={{
               modal: {
-                verticalAlign: "center",
-                width: "90%",
+                verticalAlign: "bottom",
+                width: "100%",
                 padding: "0px",
                 margin: "0px",
                 borderRadius: "23px 23px 0px 0px",
@@ -294,14 +300,15 @@ function FilterPage() {
             center
             closeIcon={closeIcon}
             classNames={{
+              root: "filter-modal",
               modalAnimationIn: "sortByEnterModalAnimation",
               modalAnimationOut: "sortByLeaveModalAnimation",
             }}
             animationDuration={300}
             styles={{
               modal: {
-                verticalAlign: "center",
-                width: "90%",
+                verticalAlign: "bottom",
+                width: "100%",
                 padding: "0px",
                 margin: "0px",
                 borderRadius: "23px 23px 0px 0px",
@@ -312,31 +319,45 @@ function FilterPage() {
               <div className="title-popup-listing">
                 <h6 className="text-search-SP">Sort By</h6>
               </div>
-              <div className="d-grid">
-                <button
-                  className="btn-for-sortBy"
+              <form className="px-3 pt-2">
+                <label
+                  for="popularity"
                   onClick={(e) => handleSorting(e, Types.SortType.Popularity)}
                 >
-                  Popularity
-                </button>
-                <button
-                  className="btn-for-sortBy"
+                  <input id="popularity" type="radio" name="sorting" />
+                  <span className="btn-for-sortBy">Popularity</span>
+                </label>
+                <br />
+                {/* <div className="d-grid"> */}
+                <label
+                  for="Ratings"
                   onClick={(e) => handleSorting(e, Types.SortType.Ratings)}
                 >
-                  Rating
-                </button>
-                <button
-                  className="btn-for-sortBy"
+                  <input id="Ratings" type="radio" name="sorting" />
+                  <span className="btn-for-sortBy">Ratings</span>
+                </label>
+                <br />
+
+                <label
+                  for="LowPrice"
                   onClick={(e) => handleSorting(e, Types.SortType.LowPrice)}
                 >
-                  Price: Low to High
-                </button>
-                <button
-                  className="btn-for-sortBy"
+                  <input id="LowPrice" type="radio" name="sorting" />
+                  <span className="btn-for-sortBy">LowPrice</span>
+                </label>
+                <br />
+
+                <label
+                  for="HighPrice"
                   onClick={(e) => handleSorting(e, Types.SortType.HighPrice)}
                 >
-                  Price: High to Low
-                </button>
+                  <input id="HighPrice" type="radio" name="sorting" />
+                  <span className="btn-for-sortBy">HighPrice</span>
+                </label>
+                {/* </div> */}
+              </form>
+              <div className="text-center py-3 cancelSort" onClick={cancelSort}>
+                Cancel
               </div>
             </div>
           </Modal>
@@ -375,7 +396,7 @@ function FilterPage() {
 
           <div className="right-section">
             <div className="div-top-boxes-content">
-              <HeadingFilterPage />
+              <HeadingFilterPage className="d-md-block d-none" />
 
               {/* DESKTOP SORT-BY */}
               <Sortby

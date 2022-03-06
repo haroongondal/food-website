@@ -2,13 +2,15 @@ import React from "react";
 import "../styles/PopupMenu.css";
 import arrow from "../images/down_arrow.svg";
 import addImage from "../images/add-image.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import EditSvgIcon from "./EditSvgIcon";
 import CancelSvgIcon from "./CancelSvgIcon";
 import ImageUpload from "image-upload-react";
 import { MenuItemType } from "../Utils/Types.json";
 import { findByLabelText } from "@testing-library/dom";
 import { ForDevice } from "media-query-react";
+// import FileUpload from "../components/FileUpload";
+import ImageUploader from 'react-images-upload';
 
 function PopupMenu(props) {
   console.log("SubCusineId: " + props.subCuisineId);
@@ -90,19 +92,19 @@ function PopupMenu(props) {
   // ------Images-Handles------
 
   const uploadImage = async (e) => {
-    const file = e.target.files[0];
+    const file = e[e.length-1];
     const base64 = await convertBase64(file);
     setimg(base64);
   };
 
   const uploadImage1 = async (e) => {
-    const file = e.target.files[0];
+    const file = e[e.length-1];
     const base64 = await convertBase64(file);
     setimg1(base64);
   };
 
   const uploadImage2 = async (e) => {
-    const file = e.target.files[0];
+    const file = e[e.length-1];
     const base64 = await convertBase64(file);
     setimg2(base64);
   };
@@ -121,7 +123,11 @@ function PopupMenu(props) {
       };
     });
   };
-
+  useEffect(() => {
+    console.log("img: ", img);
+    console.log("img1: ", img1);
+    console.log("img2: ", img2);
+  });
   // ------------STATES-FOR-BUTTON-CLICK---------
 
   const [IsDrinks, setDrinks] = useState(false);
@@ -135,8 +141,9 @@ function PopupMenu(props) {
       </div>
 
       {/*---------------Edit-text-Item-Name----------*/}
-      <div className="ET-item-name">
-        <div className="border-back">
+      <div className="border-back">
+        <div className="dropDown-item col-md-12">
+          <span className="label-dropDown col-md-3 col-3">Item Name</span>
           <div className="input-add-menu col-md-4">
             <input
               type="search"
@@ -544,6 +551,46 @@ function PopupMenu(props) {
             </span>
           </div>
           <div className="image-video">
+            {/* <FileUpload
+              key="1"
+              uploadImage={setimg}
+              message="file 1"
+            ></FileUpload>
+
+            <FileUpload
+              key="2"
+              uploadImage={setimg1}
+              message="file 2"
+            ></FileUpload>
+
+
+            <FileUpload
+              key="3"
+              uploadImage={setimg2}
+              message="file 3"
+            ></FileUpload> */}
+
+<ImageUploader
+                withIcon={true}
+                buttonText='Choose image'
+                onChange={uploadImage}
+                imgExtension={['.jpg', '.gif', '.png', '.gif']}
+                maxFileSize={5242880}
+            />
+            <ImageUploader
+                withIcon={true}
+                buttonText='Choose image'
+                onChange={uploadImage1}
+                imgExtension={['.jpg', '.gif', '.png', '.gif']}
+                maxFileSize={5242880}
+            />
+                        <ImageUploader
+                withIcon={true}
+                buttonText='Choose image'
+                onChange={uploadImage2}
+                imgExtension={['.jpg', '.gif', '.png', '.gif']}
+                maxFileSize={5242880}
+            />
             {/* <div className="image-btn-menu">
               <div className="image-menu">
                 <img src={image} alt="fileImage" />
@@ -586,7 +633,7 @@ function PopupMenu(props) {
                   </g>
                 </g>
               </svg> */}
-
+            {/* 
             <ImageUpload
               handleImageSelect={uploadImage}
               imageSrc={img}
@@ -599,9 +646,8 @@ function PopupMenu(props) {
                 marginTop: "0px",
                 borderRadius: "5px",
               }}
-            />
-
-            <ImageUpload
+            /> */}
+            {/* <ImageUpload
               handleImageSelect={uploadImage1}
               imageSrc={img1}
               setImageSrc={setimg1}
@@ -627,7 +673,7 @@ function PopupMenu(props) {
                 marginTop: "0px",
                 borderRadius: "5px",
               }}
-            />
+            /> */}
           </div>
         </div>
       </div>
@@ -881,8 +927,6 @@ function PopupMenu(props) {
                 <div className="content-dropDown">
                   <button
                     className={isSpice ? "active-drinks" : "drinks-btn"}
-                    
-                  
                     onClick={(e) => {
                       e.preventDefault();
                       setSpiceLevel("Low Spicy");

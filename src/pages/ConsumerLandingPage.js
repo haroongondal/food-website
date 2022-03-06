@@ -1,13 +1,13 @@
 import '../styles/ConsumerLandingPage.css';
 import NearMe from '../components/NearMeItem';
 import CuisinesItem from '../components/CuisinesItem';
-import RestaurentItem from '../components/RestaurentItem';
+import RestaurentItem from '../components/restaurentItem';
 import MobileAppSection from '../components/MobileAppSection';
 import Footer from '../components/Footer';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import NavBar from '../components/NavBar';
-import DashboardConsumer from "../components/dashboardConsumer";
+import DashboardConsumer from "../components/DashboardConsumer";
 import CarouselNearMe from "../styles/Carousel_NearMe";
 import HeadingHiFoodie from "../components/Heading_Hi_Foodie";
 import CarouselRestaurent from "../styles/Carousel_Restaurent";
@@ -57,6 +57,7 @@ function ConsumerLandingPage() {
             responsive={CarouselRestaurent}
             removeArrowOnDeviceType={["tablet", "mobile"]}
             partialVisible={true}
+            className="restaurentItem-carousel"
           >
             {restaurants.isPending && (
               <div>
@@ -76,6 +77,7 @@ function ConsumerLandingPage() {
             responsive={CarouselRestaurent}
             removeArrowOnDeviceType={["tablet", "mobile"]}
             partialVisible={true}
+            className="restaurentItem-carousel"
           >
             {restaurants.isPending && (
               <div>
@@ -95,6 +97,7 @@ function ConsumerLandingPage() {
             responsive={CarouselCuisines}
             removeArrowOnDeviceType={["tablet", "mobile"]}
             partialVisible={true}
+            
           >
             {popularCusines.isPending && (
               <div>
@@ -114,6 +117,7 @@ function ConsumerLandingPage() {
               responsive={CarouselRestaurent}
               removeArrowOnDeviceType={["tablet", "mobile"]}
               partialVisible={true}
+              className="restaurentItem-carousel"
             >
               {restaurants.isPending && (
                 <div>

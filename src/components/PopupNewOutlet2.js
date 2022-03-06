@@ -3,6 +3,7 @@ import { useState } from "react";
 import arrow from "../images/down_arrow.svg";
 import "../styles/PopupNewOutlet.css";
 import ImageUpload from "image-upload-react";
+import ImageUploader from "react-images-upload";
 
 function PopupNewOutlet2(props) {
   const [email, setEmail] = useState("");
@@ -48,7 +49,7 @@ function PopupNewOutlet2(props) {
         //
         CostOfTwo: 200.0,
         //
-        RegistrationDate : null,
+        RegistrationDate: null,
         //
         // ShopLicense: imgLicence.split(",")[1],
         Fssai: null,
@@ -101,7 +102,7 @@ function PopupNewOutlet2(props) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer "+localStorage.getItem("jwt")
+          Authorization: "Bearer " + localStorage.getItem("jwt"),
         },
         body: JSON.stringify(values),
       })
@@ -109,7 +110,7 @@ function PopupNewOutlet2(props) {
           return result.json();
         })
         .then((data) => {
-          console.log(data)
+          console.log(data);
           if (!data.ResponseMessage) {
           }
         })
@@ -122,25 +123,25 @@ function PopupNewOutlet2(props) {
   // ------Images-Handles------
 
   const uploadImageFracade = async (e) => {
-    const file = e.target.files[0];
+    const file = e[e.length - 1];
     const base64 = await convertBase64(file);
     setImgFracade(base64);
   };
 
   const uploadImageKitchen = async (e) => {
-    const file = e.target.files[0];
+    const file = e[e.length - 1];
     const base64 = await convertBase64(file);
     setImgKitchen(base64);
   };
 
   const uploadImageDinning = async (e) => {
-    const file = e.target.files[0];
+    const file = e[e.length - 1];
     const base64 = await convertBase64(file);
     setImgDinning(base64);
   };
 
   const uploadImageLocality = async (e) => {
-    const file = e.target.files[0];
+    const file = e[e.length - 1];
     const base64 = await convertBase64(file);
     setImgLocality(base64);
   };
@@ -229,7 +230,7 @@ function PopupNewOutlet2(props) {
             <div className="dropDown-block-Outlet">
               <span className="label-dropDown-block">Fracade Image</span>
               <div className="dropDown-item" id="margin-10-T">
-                <ImageUpload
+                {/* <ImageUpload
                   handleImageSelect={uploadImageFracade}
                   imageSrc={imgFracade}
                   setImageSrc={setImgFracade}
@@ -241,6 +242,13 @@ function PopupNewOutlet2(props) {
                     marginTop: "0px",
                     borderRadius: "5px",
                   }}
+                /> */}
+                <ImageUploader
+                  withIcon={true}
+                  buttonText="Choose image"
+                  onChange={uploadImageFracade}
+                  imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+                  maxFileSize={5242880}
                 />
               </div>
             </div>
@@ -249,7 +257,7 @@ function PopupNewOutlet2(props) {
             <div className="dropDown-block-Outlet">
               <span className="label-dropDown-block">Kitchen Image</span>
               <div className="dropDown-item" id="margin-10-T">
-                <ImageUpload
+                {/* <ImageUpload
                   handleImageSelect={uploadImageKitchen}
                   imageSrc={imgKitchen}
                   setImageSrc={setImgKitchen}
@@ -261,6 +269,13 @@ function PopupNewOutlet2(props) {
                     marginTop: "0px",
                     borderRadius: "5px",
                   }}
+                /> */}
+                <ImageUploader
+                  withIcon={true}
+                  buttonText="Choose image"
+                  onChange={uploadImageKitchen}
+                  imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+                  maxFileSize={5242880}
                 />
               </div>
             </div>
@@ -268,10 +283,10 @@ function PopupNewOutlet2(props) {
 
           <div className="align-popOutlet-images">
             {/* Dinning Image */}
-          <div className="dropDown-block-Outlet">
-            <span className="label-dropDown-block">Dinning Image</span>
-            <div className="dropDown-item" id="margin-10-T">
-              <ImageUpload
+            <div className="dropDown-block-Outlet">
+              <span className="label-dropDown-block">Dinning Image</span>
+              <div className="dropDown-item" id="margin-10-T">
+                {/* <ImageUpload
                 handleImageSelect={uploadImageDinning}
                 imageSrc={imgDinning}
                 setImageSrc={setImgDinning}
@@ -283,15 +298,22 @@ function PopupNewOutlet2(props) {
                   marginTop: "0px",
                   borderRadius: "5px",
                 }}
-              />
+              /> */}
+                <ImageUploader
+                  withIcon={true}
+                  buttonText="Choose image"
+                  onChange={uploadImageDinning}
+                  imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+                  maxFileSize={5242880}
+                />
+              </div>
             </div>
-          </div>
 
-          {/* Locality Image */}
-          <div className="dropDown-block-Outlet">
-            <span className="label-dropDown-block">Locality Image</span>
-            <div className="dropDown-item" id="margin-10-T">
-              <ImageUpload
+            {/* Locality Image */}
+            <div className="dropDown-block-Outlet">
+              <span className="label-dropDown-block">Locality Image</span>
+              <div className="dropDown-item" id="margin-10-T">
+                {/* <ImageUpload
                 handleImageSelect={uploadImageLocality}
                 imageSrc={imgLocality}
                 setImageSrc={setImgLocality}
@@ -303,62 +325,71 @@ function PopupNewOutlet2(props) {
                   marginTop: "0px",
                   borderRadius: "5px",
                 }}
-              />
+              /> */}
+                <ImageUploader
+                  withIcon={true}
+                  buttonText="Choose image"
+                  onChange={uploadImageLocality}
+                  imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+                  maxFileSize={5242880}
+                />
+              </div>
             </div>
           </div>
-          </div>
+          <div
+            className="border-popup-city"
+            style={{ borderBottom: "1px solid #00000026" }}
+          >
+            {/* Email */}
+            <div className="dropDown-block-Outlet">
+              <span className="label-dropDown-block">Email</span>
+              <div className="dropDown-item" id="margin-10-T">
+                <div className="border-dropDown-block">
+                  <div className="content-dropDown">
+                    <form action="#" className="form-dropDown-M">
+                      <div className="form-input-dropDown">
+                        <input
+                          type="email"
+                          placeholder="Enter Email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          required
+                        />
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-          {/* Email */}
-          <div className="dropDown-block-Outlet">
-            <span className="label-dropDown-block">Email</span>
-            <div className="dropDown-item" id="margin-10-T">
-              <div className="border-dropDown-block">
-                <div className="content-dropDown">
-                  <form action="#" className="form-dropDown-M">
-                    <div className="form-input-dropDown">
-                      <input
-                        type="email"
-                        placeholder="Enter Email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                      />
-                    </div>
-                  </form>
+            {/* Password */}
+            <div className="dropDown-block-Outlet">
+              <span className="label-dropDown-block">Password</span>
+              <div className="dropDown-item" id="margin-10-T">
+                <div className="border-dropDown-block">
+                  <div className="content-dropDown">
+                    <form action="#" className="form-dropDown-M">
+                      <div className="form-input-dropDown">
+                        <input
+                          type="password"
+                          placeholder="Enter Password"
+                          value={password}
+                          onChange={(e) => setPassword(e.target.value)}
+                          required
+                        />
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* Password */}
-          <div className="dropDown-block-Outlet">
-            <span className="label-dropDown-block">Password</span>
-            <div className="dropDown-item" id="margin-10-T">
-              <div className="border-dropDown-block">
-                <div className="content-dropDown">
-                  <form action="#" className="form-dropDown-M">
-                    <div className="form-input-dropDown">
-                      <input
-                        type="password"
-                        placeholder="Enter Password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                      />
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          className="border-popup-city"
-          style={{ borderBottom: "1px solid #00000026" }}
-        >
-          {/* Logo */}
-          {/* <div className="dropDown-block">
+          <div
+            className="border-popup-city"
+            style={{ borderBottom: "1px solid #00000026" }}
+          >
+            {/* Logo */}
+            {/* <div className="dropDown-block">
             <span className="label-dropDown-block">Add Logo</span>
             <div className="border-dropDown-block" id="margin-10-T">
               <div className="content-dropDown">
@@ -403,8 +434,8 @@ function PopupNewOutlet2(props) {
             </div>
           </div> */}
 
-          {/* Image */}
-          {/* <div className="dropDown-block-Outlet">
+            {/* Image */}
+            {/* <div className="dropDown-block-Outlet">
             <span className="label-dropDown-block">Or</span>
             <div className="dropDown-item" id="margin-10-T">
               <div className="border-dropDown-block">
@@ -419,164 +450,164 @@ function PopupNewOutlet2(props) {
             </div>
           </div> */}
 
-          {/* PIN */}
-          <div className="dropDown-block-Outlet">
-            <span className="label-dropDown-block">PIN</span>
-            <div className="dropDown-item" id="margin-10-T">
-              <div className="border-dropDown-block">
-                <div className="content-dropDown">
-                  <form action="#" className="form-dropDown-M">
-                    <div className="form-input-dropDown">
-                      <input
-                        type="number"
-                        placeholder="Enter PIN"
-                        value={pin}
-                        onChange={(e) => setPin(e.target.value)}
-                        required
-                      />
-                    </div>
-                  </form>
+            {/* PIN */}
+            <div className="dropDown-block-Outlet">
+              <span className="label-dropDown-block">PIN</span>
+              <div className="dropDown-item" id="margin-10-T">
+                <div className="border-dropDown-block">
+                  <div className="content-dropDown">
+                    <form action="#" className="form-dropDown-M">
+                      <div className="form-input-dropDown">
+                        <input
+                          type="number"
+                          placeholder="Enter PIN"
+                          value={pin}
+                          onChange={(e) => setPin(e.target.value)}
+                          required
+                        />
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* GSTN */}
+            <div className="dropDown-block-Outlet">
+              <span className="label-dropDown-block">GSTN</span>
+              <div className="dropDown-item" id="margin-10-T">
+                <div className="border-dropDown-block">
+                  <div className="content-dropDown">
+                    <form action="#" className="form-dropDown-M">
+                      <div className="form-input-dropDown">
+                        <input
+                          type="number"
+                          placeholder="Enter GSTN"
+                          value={gstn}
+                          onChange={(e) => setGstn(e.target.value)}
+                          required
+                        />
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* GSTN */}
-          <div className="dropDown-block-Outlet">
-            <span className="label-dropDown-block">GSTN</span>
-            <div className="dropDown-item" id="margin-10-T">
-              <div className="border-dropDown-block">
-                <div className="content-dropDown">
-                  <form action="#" className="form-dropDown-M">
-                    <div className="form-input-dropDown">
-                      <input
-                        type="number"
-                        placeholder="Enter GSTN"
-                        value={gstn}
-                        onChange={(e) => setGstn(e.target.value)}
-                        required
-                      />
-                    </div>
-                  </form>
+          <div className="border-popup-city">
+            {/* Address */}
+            <div className="dropDown-block">
+              <span className="label-dropDown-block">Address</span>
+              <div className="dropDown-item" id="margin-10-T">
+                <div className="border-dropDown-block">
+                  <div className="content-dropDown">
+                    <form action="#" className="form-dropDown-M">
+                      <div className="form-input-dropDown">
+                        <input
+                          type="text"
+                          placeholder="Enter Street Address"
+                          value={address}
+                          onChange={(e) => setAddress(e.target.value)}
+                          required
+                        />
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <div className="border-popup-city">
-          {/* Address */}
-          <div className="dropDown-block">
-            <span className="label-dropDown-block">Address</span>
-            <div className="dropDown-item" id="margin-10-T">
-              <div className="border-dropDown-block">
-                <div className="content-dropDown">
-                  <form action="#" className="form-dropDown-M">
-                    <div className="form-input-dropDown">
-                      <input
-                        type="text"
-                        placeholder="Enter Street Address"
-                        value={address}
-                        onChange={(e) => setAddress(e.target.value)}
-                        required
-                      />
-                    </div>
-                  </form>
+            {/* Phone Number */}
+            <div className="dropDown-block-Outlet">
+              <span className="label-dropDown-block">Phone Number</span>
+              <div className="dropDown-item" id="margin-10-T">
+                <div className="border-dropDown-block">
+                  <div className="content-dropDown">
+                    <form action="#" className="form-dropDown-M">
+                      <div className="form-input-dropDown">
+                        <input
+                          type="number"
+                          placeholder="Enter Phone Number"
+                          value={phoneNo}
+                          onChange={(e) => setPhoneNo(e.target.value)}
+                          required
+                        />
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Phone Number */}
-          <div className="dropDown-block-Outlet">
-            <span className="label-dropDown-block">Phone Number</span>
-            <div className="dropDown-item" id="margin-10-T">
-              <div className="border-dropDown-block">
-                <div className="content-dropDown">
-                  <form action="#" className="form-dropDown-M">
-                    <div className="form-input-dropDown">
-                      <input
-                        type="number"
-                        placeholder="Enter Phone Number"
-                        value={phoneNo}
-                        onChange={(e) => setPhoneNo(e.target.value)}
-                        required
-                      />
-                    </div>
-                  </form>
+            {/* Area */}
+            <div className="dropDown-block-Outlet">
+              <span className="label-dropDown-block">Area</span>
+              <div className="dropDown-item" id="margin-10-T">
+                <div className="border-dropDown-block">
+                  <div className="content-dropDown">
+                    <form action="#" className="form-dropDown-M">
+                      <div className="form-input-dropDown">
+                        <input
+                          type="text"
+                          placeholder="Enter Area"
+                          value={area}
+                          onChange={(e) => setArea(e.target.value)}
+                          required
+                        />
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Area */}
-          <div className="dropDown-block-Outlet">
-            <span className="label-dropDown-block">Area</span>
-            <div className="dropDown-item" id="margin-10-T">
-              <div className="border-dropDown-block">
-                <div className="content-dropDown">
-                  <form action="#" className="form-dropDown-M">
-                    <div className="form-input-dropDown">
-                      <input
-                        type="text"
-                        placeholder="Enter Area"
-                        value={area}
-                        onChange={(e) => setArea(e.target.value)}
-                        required
-                      />
-                    </div>
-                  </form>
+            {/* Logitude */}
+            <div className="dropDown-block-Outlet">
+              <span className="label-dropDown-block">Logitude</span>
+              <div className="dropDown-item" id="margin-10-T">
+                <div className="border-dropDown-block">
+                  <div className="content-dropDown">
+                    <form action="#" className="form-dropDown-M">
+                      <div className="form-input-dropDown">
+                        <input
+                          type="email"
+                          placeholder="Enter Logitude"
+                          value={logitude}
+                          onChange={(e) => setLogitude(e.target.value)}
+                          required
+                        />
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Logitude */}
-          <div className="dropDown-block-Outlet">
-            <span className="label-dropDown-block">Logitude</span>
-            <div className="dropDown-item" id="margin-10-T">
-              <div className="border-dropDown-block">
-                <div className="content-dropDown">
-                  <form action="#" className="form-dropDown-M">
-                    <div className="form-input-dropDown">
-                      <input
-                        type="email"
-                        placeholder="Enter Logitude"
-                        value={logitude}
-                        onChange={(e) => setLogitude(e.target.value)}
-                        required
-                      />
-                    </div>
-                  </form>
+            {/* Latitude */}
+            <div className="dropDown-block-Outlet">
+              <span className="label-dropDown-block">Latitude</span>
+              <div className="dropDown-item" id="margin-10-T">
+                <div className="border-dropDown-block">
+                  <div className="content-dropDown">
+                    <form action="#" className="form-dropDown-M">
+                      <div className="form-input-dropDown">
+                        <input
+                          type="email"
+                          placeholder="Enter Latitude"
+                          value={latitude}
+                          onChange={(e) => setLatitude(e.target.value)}
+                          required
+                        />
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Latitude */}
-          <div className="dropDown-block-Outlet">
-            <span className="label-dropDown-block">Latitude</span>
-            <div className="dropDown-item" id="margin-10-T">
-              <div className="border-dropDown-block">
-                <div className="content-dropDown">
-                  <form action="#" className="form-dropDown-M">
-                    <div className="form-input-dropDown">
-                      <input
-                        type="email"
-                        placeholder="Enter Latitude"
-                        value={latitude}
-                        onChange={(e) => setLatitude(e.target.value)}
-                        required
-                      />
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Zone */}
-          {/* <div className="dropDown-block-Outlet">
+            {/* Zone */}
+            {/* <div className="dropDown-block-Outlet">
             <span className="label-dropDown-block">Zone</span>
             <div className="dropDown-item" id="margin-10-T">
               <div className="border-dropDown-block">
@@ -591,49 +622,49 @@ function PopupNewOutlet2(props) {
             </div>
           </div> */}
 
-          {/* City */}
-          <div className="dropDown-block-Outlet">
-            <span className="label-dropDown-block">City</span>
-            <div className="dropDown-item" id="margin-10-T">
-              <div className="border-dropDown-block">
-                <div className="content-dropDown">
-                  <select onChange={(e) => setCity(e.target.value)}>
-                    <option className="option">City</option>
-                    <option className="option">City</option>
-                    <option className="option">City</option>
-                  </select>
-                  <span>
-                    <img alt="down-arrow" src={arrow} />
-                  </span>
+            {/* City */}
+            <div className="dropDown-block-Outlet">
+              <span className="label-dropDown-block">City</span>
+              <div className="dropDown-item" id="margin-10-T">
+                <div className="border-dropDown-block">
+                  <div className="content-dropDown">
+                    <select onChange={(e) => setCity(e.target.value)}>
+                      <option className="option">City</option>
+                      <option className="option">City</option>
+                      <option className="option">City</option>
+                    </select>
+                    <span>
+                      <img alt="down-arrow" src={arrow} />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Zip/Pincode */}
-          <div className="dropDown-block-Outlet">
-            <span className="label-dropDown-block">Zip/Pincode</span>
-            <div className="dropDown-item" id="margin-10-T">
-              <div className="border-dropDown-block">
-                <div className="content-dropDown">
-                  <form action="#" className="form-dropDown-M">
-                    <div className="form-input-dropDown">
-                      <input
-                        type="number"
-                        placeholder="Enter Zip/Pincode"
-                        value={pincode}
-                        onChange={(e) => setPincode(e.target.value)}
-                        required
-                      />
-                    </div>
-                  </form>
+            {/* Zip/Pincode */}
+            <div className="dropDown-block-Outlet">
+              <span className="label-dropDown-block">Zip/Pincode</span>
+              <div className="dropDown-item" id="margin-10-T">
+                <div className="border-dropDown-block">
+                  <div className="content-dropDown">
+                    <form action="#" className="form-dropDown-M">
+                      <div className="form-input-dropDown">
+                        <input
+                          type="number"
+                          placeholder="Enter Zip/Pincode"
+                          value={pincode}
+                          onChange={(e) => setPincode(e.target.value)}
+                          required
+                        />
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Country */}
-          <div className="dropDown-block-Outlet">
+            {/* Country */}
+            {/* <div className="dropDown-block-Outlet">
             <span className="label-dropDown-block">Country</span>
             <div className="dropDown-item" id="margin-10-T">
               <div className="border-dropDown-block">
@@ -649,24 +680,25 @@ function PopupNewOutlet2(props) {
                 </div>
               </div>
             </div>
+          </div> */}
           </div>
         </div>
-      </div>
 
-      {/* Buttons */}
-      <div className="row m-auto">
-        <div className="col-md-12 d-flex mb-2 pr-0 justify-content-center">
-          <button
-            type="submit"
-            className="blue-btn"
-            onClick={(e) => handleSubmit(e)}
-            style={{ marginRight: "20px" }}
-          >
-            Save
-          </button>
-          <button className="green-btn" onClick={(e) => props.click(e)}>
-            Cancel
-          </button>
+        {/* Buttons */}
+        <div className="row m-auto">
+          <div className="col-md-12 d-flex mb-2 pr-0 justify-content-center">
+            <button
+              type="submit"
+              className="blue-btn"
+              onClick={(e) => handleSubmit(e)}
+              style={{ marginRight: "20px" }}
+            >
+              Save
+            </button>
+            <button className="green-btn" onClick={(e) => props.click(e)}>
+              Cancel
+            </button>
+          </div>
         </div>
       </div>
     </div>

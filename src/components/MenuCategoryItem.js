@@ -126,6 +126,7 @@ function MenuCategoryItem(props) {
         open={isAddMenuItemPopupShowing}
         onClose={closeAddMenuItemPopup}
         center
+        className="add-menu-modal"
         closeIcon={closeIcon}
         styles={{
           modal: {

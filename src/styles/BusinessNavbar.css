@@ -75,25 +75,30 @@
   @media screen and (min-width: 320px) {
     .header-business{
       display: none;
-      height: 55px;
+      height: 80px;
         padding-top: 10px;
         position: relative;
         width: 100%;
         overflow: hidden;
-        /* z-index: 9999; */
+        /* z-index: 3; */
         /* color: #e50808; */
         background: #000000;
     }
   }
+  @media screen and (min-width: 320px) and (max-width: 400px) {
+    /* .Main-Sec-SignUp {
+      margin-right: 0% !important;
+    } */
+  }
   @media screen and (min-width: 992px) {
     .header-business{
       display: block;
-      height: 55px;
+      height: 65px;
         padding-top: 10px;
         position: relative;
         width: 100%;
         overflow: hidden;
-        /* z-index: 9999; */
+        /* z-index: 3; */
         /* color: #e50808; */
         background: #000000;
     }

@@ -18,6 +18,7 @@ import NavBar from "./components/NavBar";
 import BottomNavBar from "./components/BottomNavBar";
 import MobileTopNavBar from "./components/MobileTopNavBar";
 import { useState } from "react";
+import { useRouteMatch } from "react-router";
 
 function App() {
   // pass screenSize object with custom device name and width.
@@ -44,19 +45,31 @@ function App() {
   function showHeader(isShow) {
     setHeaderShow(isShow);
   }
+  const [bottomNav, setBottomNav] = useState(true);
+  function showBottomNav(isShow) {
+    setBottomNav(isShow);
+  }
+  // const { path } = useRouteMatch();
+  // console.log('path: ',path);
+  // let navBar = '';
+  // if (path != "CRM-Dashboard" && path != "filterPage") {
+  //   navBar = <NavBar ShouldHideSearch={true} />;
+  // }
   return (
     <div>
       <MediaQueryReact mediaQueries={screenSize}>
         <Router>
-        <NavBar ShouldHideSearch={true} />
-        {headerShow ? <MobileTopNavBar /> : ""}
+          {headerShow && (
+            <NavBar showHeader={showHeader} ShouldHideSearch={true} />
+          )}
+          {headerShow && <MobileTopNavBar/>}
           <Switch>
             <Route exact path="/">
               <ConsumerLandingPage />
             </Route>
 
             <Route exact path="/FilterPage">
-              <FilterPage />
+              <FilterPage  showHeader={showHeader} />
             </Route>
 
             <Route path="/RestaurentDetailsPage/:id">
@@ -77,6 +90,8 @@ function App() {
               path="/CRM-Dashboard"
               component={CRMDashboard}
               _to="crmDashboard"
+              showHeader={showHeader}
+              showBottomNav={showBottomNav}
             />
 
             <Route path="/BusinessLandingPage">
@@ -84,11 +99,11 @@ function App() {
             </Route>
 
             <Route exact path="/Business-Signup">
-              <BusinessSignup />
+              <BusinessSignup showBottomNav={showBottomNav}/>
             </Route>
 
             <Route exact path="/Business-Login">
-              <BusinessLogin />
+              <BusinessLogin showBottomNav={showBottomNav}/>
             </Route>
 
             <Route exact path="/About-Us">
@@ -104,7 +119,7 @@ function App() {
             </Route>
           </Switch>
         </Router>
-        <BottomNavBar />
+        {bottomNav && <BottomNavBar />}
       </MediaQueryReact>
     </div>
   );

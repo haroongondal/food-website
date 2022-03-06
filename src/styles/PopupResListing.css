@@ -1,11 +1,11 @@
 .title-popup-listing {
-  text-align: center;
-  background: #439548;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
 }
 .title-popup-listing h6 {
   margin: 0 auto;
-  color: white;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
 }
 .text-webkit-center {
   text-align: -webkit-center;

@@ -93,7 +93,7 @@
 @media screen and (min-width: 320px) {
   .box-restaurent-3rd-page {
     width: auto;
-    box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);
+    /* box-shadow: 0px 0px 6px rgb(0 0 0 / 20%); */
     border-radius: 5px;
     overflow: hidden;
     margin: 0 auto;
@@ -107,13 +107,19 @@
 
 @media screen and (min-width: 992px) {
   .box-restaurent-3rd-page {
-    width: 250px;
-    box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);
+    width: 270px;
+    /* box-shadow: 0px 0px 6px rgb(0 0 0 / 20%); */
     border-radius: 5px;
     overflow: hidden;
     margin: 10px;
     margin-top: 23px;
     background-color: #feeeee;
+  }
+  .box-restaurent-3rd-page .slide-img-restaurent-3rd-page{
+    height: 170px;
+  }
+  .resLikeItem-carousel li{
+    width: 270px !important;
   }
   .box-restaurent-3rd-page a {
     text-decoration: none;

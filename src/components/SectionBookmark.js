@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/SectionBookmark.css'
-import RestaurentItem from './RestaurentItem'
+import RestaurentItem from './restaurentItem'
 
 function SectionBookmark() {
     return (
