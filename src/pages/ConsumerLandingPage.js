@@ -116,6 +116,7 @@ function ConsumerLandingPage() {
               responsive={CarouselRestaurent}
               removeArrowOnDeviceType={["tablet", "mobile"]}
               partialVisible={true}
+              infinite={true}
               className="restaurentItem-carousel"
             >
               {restaurants.isPending && (
