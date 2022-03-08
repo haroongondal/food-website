@@ -1,0 +1,56 @@
+/* @media screen and (min-width: 577px) { */
+  .restaurent_detail_page .react-multi-carousel-item {
+    max-width: 300px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+/* } */
+@media screen and (min-width: 320px) {
+  .border-like-restaurents {
+    background-color: #fff;
+    margin: 0px 12px;
+    margin-bottom: 12px;
+  }
+  .boxes-like-restaurents {
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .content-like-restaurents {
+    padding: 20px 15px;
+  }
+  .content-like-restaurents h6 {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  .content-like-restaurents h5 {
+    font-size: 0.75rem;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .border-like-restaurents {
+    background-color: #fff;
+    margin: 0px;
+    margin-bottom: 12px;
+  }
+  .boxes-like-restaurents {
+    display: flex;
+    padding: 0;
+    column-gap: 12px;
+    margin: -8px;
+    margin-bottom: 10px;
+  }
+  .content-like-restaurents {
+    padding: 20px;
+  }
+  .content-like-restaurents h6 {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  .content-like-restaurents h5 {
+    font-size: 0.75rem;
+    margin-top: 20px;
+  }
+}

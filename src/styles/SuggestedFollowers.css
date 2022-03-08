@@ -1,0 +1,34 @@
+
+  
+.alignment-suggested-followers{
+    display: inline-flex;
+    margin: 5px 0px;
+    cursor: pointer;
+  }
+  .alignment-suggested-followers:hover{
+    padding-top: 10px;
+    padding-left: 20px;
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 60%);
+    transition: all 0.25s ease-out;
+    border: 1px solid white;
+  }
+  .alignment-suggested-followers img{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .alignment-suggested-followers h6{
+    margin-left: 12px;
+    color: white;
+    margin-bottom: 0px;
+    font-weight: 400;
+    font-size: 0.96rem;
+  }
+  .alignment-suggested-followers p{
+    margin-left: 15px;
+    font-size: 0.6rem;
+    color: #8A8888;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }

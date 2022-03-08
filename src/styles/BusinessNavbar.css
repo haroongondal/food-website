@@ -1,0 +1,105 @@
+
+  .nav-business{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 70px;
+  }
+  .logo-business img{
+    width: 50px;
+    height: 40px;
+  }
+  .center-nav-content ul{
+    display: flex;
+      justify-content: space-evenly;
+      list-style: none;
+      margin-right: -200px;
+      margin-bottom: -2px;
+  }
+  .center-nav-content ul li{
+    margin: 0px 20px;
+    cursor: pointer;
+  }
+  .center-nav-content ul li:hover{
+    color: white;
+    transform: scale(1.018);
+    transition: all  0.3s ease-in;
+  }
+  .center-nav-content ul li a{
+    color: white;
+    text-decoration:none;
+  }
+  .center-nav-content ul li a:hover{
+    color: white;
+    transform: scale(1.008);
+    transition: all  0.3s ease;
+  }
+  .center-nav-content ul li a span{
+    margin-left: 10px;
+  }
+  .center-nav-content ul li a span img{
+    width: 8px;
+    height: 8px;
+    transform: rotate(90deg);
+  }
+  .login-btn{
+    background: white;
+    color: black;
+      border: none;
+      border-radius: 24px;
+      padding: 6px 20px;
+      font-family: 'Raleway';
+      font-size: 0.95rem;
+      transition: all 0.6s ease 0s;
+  }
+  .login-btn:hover{
+    color: white;
+    background: #232323;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  .create-act-btn{
+    background: #232323;
+      border: none;
+      border-radius: 24px;
+      padding: 6px 20px;
+      font-family: 'Raleway';
+      font-size: 0.95rem;
+      color: white;
+      transition: all 0.6s ease 0s;
+  }
+  .create-act-btn:hover{
+    color: black;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  @media screen and (min-width: 320px) {
+    .header-business{
+      display: none;
+      height: 80px;
+        padding-top: 10px;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        /* z-index: 3; */
+        /* color: #e50808; */
+        background: #000000;
+    }
+  }
+  @media screen and (min-width: 320px) and (max-width: 400px) {
+    /* .Main-Sec-SignUp {
+      margin-right: 0% !important;
+    } */
+  }
+  @media screen and (min-width: 992px) {
+    .header-business{
+      display: block;
+      height: 65px;
+        padding-top: 10px;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        /* z-index: 3; */
+        /* color: #e50808; */
+        background: #000000;
+    }
+  }

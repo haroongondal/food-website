@@ -1,0 +1,198 @@
+@media only screen and (min-width: 320px) {
+  .align-Popup {
+    text-align: -webkit-center;
+  }
+  .dropDown-block {
+    inline-size: auto;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .label-dropDown-block {
+    color: #06386c;
+    font-size: 14px;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  .border-dropDown-block {
+    width: 100%;
+  }
+  .block-border {
+    border: 1px solid rgb(6 56 108 / 50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    padding: 0px 10px;
+    resize: vertical;
+    box-sizing: border-box;
+    min-height: 40px;
+    cursor: pointer;
+  }
+  .block-border h6 {
+    margin: 0;
+    padding: 12px 0px;
+    font-size: 13px;
+    color: #474747cc;
+  }
+  .content-dropDown .border-upload-img {
+    position: absolute;
+    pointer-events: none;
+    right: 0px;
+    border-radius: 4px;
+    display: inline-block;
+    height: 2.5rem;
+    width: 3rem;
+    min-width: 1.5rem;
+    font-size: 0;
+    line-height: 1;
+    background: rgb(6 56 108);
+  }
+  .svg-upload {
+    width: 28px;
+    height: 28px;
+    margin: 6px 10px;
+  }
+  #margin-10-T {
+    margin-top: 10px;
+  }
+
+  .form-dropDown-M {
+    max-width: 385px;
+    width: 100%;
+    /* margin-left: 15px; */
+    /* margin-bottom: 5px; */
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+  .form-dropDown-M .form-input-dropDown {
+    display: flex;
+    align-items: center;
+    height: 36px;
+  }
+  .form-dropDown-M .form-input-dropDown input {
+    flex-grow: 1;
+    padding: 20px 11px;
+    height: 100%;
+    border: 1px solid rgb(6 56 108 / 50%);
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+  }
+  .form-dropDown-M .form-input-dropDown input::placeholder {
+    color: #474747;
+  }
+  .form-dropDown-M .form-input-dropDown button {
+    margin-left: -5px;
+    width: 36px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: black;
+    font-size: 18px;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    padding: 20px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .align-Popup {
+    text-align: -webkit-center;
+  }
+  .dropDown-block {
+    inline-size: auto;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .label-dropDown-block {
+    color: #06386c;
+    font-size: 14px;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  .border-dropDown-block {
+    width: 100%;
+  }
+  .block-border {
+    border: 1px solid rgb(6 56 108 / 50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    padding: 0px 10px;
+    resize: vertical;
+    box-sizing: border-box;
+    min-height: 40px;
+    cursor: pointer;
+  }
+  .block-border h6 {
+    margin: 0;
+    padding: 12px 0px;
+    font-size: 13px;
+    color: #474747cc;
+  }
+  .content-dropDown .border-upload-img {
+    position: absolute;
+    pointer-events: none;
+    right: 0px;
+    border-radius: 4px;
+    display: inline-block;
+    height: 2.5rem;
+    width: 3rem;
+    min-width: 1.5rem;
+    font-size: 0;
+    line-height: 1;
+    background: rgb(6 56 108);
+  }
+  .svg-upload {
+    width: 28px;
+    height: 28px;
+    margin: 6px 10px;
+  }
+  #margin-10-T {
+    margin-top: 10px;
+  }
+
+  .form-dropDown-M {
+    max-width: 100%;
+    width: 100%;
+    /* margin-left: 15px; */
+    /* margin-bottom: 5px; */
+    min-width: -moz-fit-content;
+    min-width: 100%;
+  }
+  .form-dropDown-M .form-input-dropDown {
+    display: flex;
+    align-items: center;
+    height: 36px;
+  }
+  .form-dropDown-M .form-input-dropDown input {
+    flex-grow: 1;
+    padding: 20px 11px;
+    height: 100%;
+    border: 1px solid rgb(6 56 108 / 50%);
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+  }
+  .form-dropDown-M .form-input-dropDown input::placeholder {
+    color: #474747;
+  }
+  .form-dropDown-M .form-input-dropDown button {
+    margin-left: -5px;
+    width: 36px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: black;
+    font-size: 18px;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,186 @@
+
+
+@media screen and (min-width: 320px) {
+  .container-padding {
+    padding: 0 !important;
+  }
+  .main-section {
+    display: flex;
+    margin-top: 85px;
+    text-rendering: optimizespeed;
+    display: -ms-flexbox;
+    -ms-flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row wrap;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+  }
+  .right-section {
+    width: 100%;
+  }
+
+  .Ad-item-image {
+    display: none;
+    backface-visibility: hidden;
+    visibility: hidden;
+  }
+  .align-boxes {
+    margin: 0 auto;
+    padding: 12px;
+  }
+  .div-top-boxes-content {
+    align-items: center;
+    display: block;
+    text-rendering: optimizespeed;
+    display: -ms-flexbox;
+    -ms-flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row wrap;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    margin-bottom: 50px;
+    padding: 10px 8px 0 8px;
+
+  }
+  .apply-filters-btn{
+    margin: 20px
+  }
+  .apply-filters-btn button{
+    width: 100%;
+    height: 45px;
+    background: #439548;
+    color: white;
+    border: none;
+    border-radius: 30px;
+  }
+  .filter-modal .react-responsive-modal-modal {
+    border-radius: 0 !important;
+    border-top: 6px solid #439548;
+  }
+
+  label > input[type="radio"] {
+    display: none;
+  }
+  label > input[type="radio"]:checked + *::before {
+    background: radial-gradient(#439548 0%, #439548 40%, transparent 50%, transparent);
+    border-color: #439548;
+  }
+  label > input[type="radio"]:checked + * {
+    color: #439548;
+  }
+  /* label > input[type="radio"] + *::before {
+    content: "";
+    display: inline-block;
+    vertical-align: center;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-right: 0.7rem;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: #439548;
+  } */
+  .filter-modal label {
+    padding: 5px 0;
+  }
+  .filter-modal label span,.cancelSort{
+    font-size: 14px;
+  }
+  .cancelSort{
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container-padding {
+    padding: 0px 12px 0px 12px !important;
+  }
+  .Ad-item-image {
+    display: block;
+    backface-visibility: visible;
+    visibility: visible;
+  }
+  .main-section {
+    display: flex;
+    margin-top: 30px;
+    text-rendering: optimizespeed;
+    display: -ms-flexbox;
+    -ms-flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row wrap;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+  }
+  .right-section {
+    width: 71%;
+    margin-left: 20px;
+    padding-bottom: 50px;
+  }
+  .align-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px -10px;
+    padding: 0px;
+  }
+  .div-top-boxes-content {
+    align-items: center;
+    display: flex;
+    text-rendering: optimizespeed;
+    display: -ms-flexbox;
+    -ms-flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row wrap;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    margin-bottom: 50px;
+  }
+  .color {
+    font-family: Raleway;
+    background-color: #ececec;
+  }
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .grey {
+    color: grey;
+  }
+  .adjust {
+    width: 25%;
+  }
+  .alignment {
+    display: inline-block;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+  }
+  .listing_sidebar {
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 3vh);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: -webkit-fill-available;
+  }
+  .listing_sidebar::-webkit-scrollbar {
+    width: 8px;
+    background: #ececec;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .listing_sidebar::-webkit-scrollbar-thumb {
+    background: #c3c3c39c;
+    border-radius: 0 8px 8px 0;
+  }
+}

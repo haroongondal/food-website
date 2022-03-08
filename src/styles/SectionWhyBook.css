@@ -1,0 +1,229 @@
+
+
+
+@media screen and (min-width: 320px) {
+  .heading_why-book {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1105px;
+    margin-left: 0px;
+    margin-top: 30px;
+    align-items: center;
+  }
+
+  .heading_why-book h3 {
+    font-size: 20px;
+    color: #1d1d1f;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 34px;
+  }
+
+  .div-for-why-book-boxes {
+    margin-bottom: 80px;
+    display: block;
+  }
+
+  .box-why-book {
+    width: 288px;
+    box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: white;
+  }
+
+    
+.heading_why-book h6 {
+  font-size: 0.8rem;
+  color: #1d1d1f;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.div-box-why-book {
+  margin-top: 25px;
+}
+.slide-img-why-book {
+  position: relative;
+  text-align: center;
+}
+.slide-img-why-book svg{
+  margin-top: -36px;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  border-radius: 100%;
+}
+.slide-img-why-book svg {
+  animation: blue-anim 1s ease infinite !important;
+}
+@keyframes blue-anim {
+  0% {
+    box-shadow: 0 0 0 0 rgba(67, 149, 72, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 30px rgba(67, 149, 72, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(67, 149, 72, 0);
+  }
+}
+.slide-img-why-book img {
+  width: 18%;
+  margin-top: -40px;
+}
+.detail-box-why-book {
+  width: 100%;
+  align-items: center;
+  padding: 10px 20px;
+  padding-top: 1px;
+  box-sizing: border-box;
+}
+.type-why-book {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 5px;
+}
+.text-why-book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #222222;
+  margin: 0px 0px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 2px;
+  font-family: "Raleway";
+}
+.text-why-book:hover {
+  color: black;
+}
+.discount-details-why-book {
+  color: black;
+  justify-content: center;
+  display: flex;
+  font-size: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-family: "Raleway";
+}
+}
+
+@media screen and (min-width: 992px) {
+  .heading_why-book {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1105px;
+    margin-left: 15px;
+    margin-top: 60px;
+    align-items: center;
+  }
+  .heading_why-book h3 {
+    font-size: 1.45rem;
+    color: #1d1d1f;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 34px;
+  }
+
+  .div-for-why-book-boxes {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+
+  .box-why-book {
+    width: 335px;
+    box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    margin: 0px 20px;
+    margin-top: 50px;
+    background-color: white;
+}
+
+  
+.heading_why-book h6 {
+  font-size: 0.8rem;
+  color: #1d1d1f;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.div-box-why-book {
+  margin-top: 25px;
+}
+.slide-img-why-book {
+  height: 30px;
+  position: relative;
+}
+.slide-img-why-book svg{
+  margin-top: -36px;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  border-radius: 100%;
+}
+.slide-img-why-book svg {
+  animation: blue-anim 1s ease infinite !important;
+}
+@keyframes blue-anim {
+  0% {
+    box-shadow: 0 0 0 0 rgba(67, 149, 72, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 30px rgba(67, 149, 72, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(67, 149, 72, 0);
+  }
+}
+.slide-img-why-book img {
+  width: 20%;
+  margin-top: -40px;
+  text-align: center;
+}
+.detail-box-why-book {
+  width: 100%;
+  align-items: center;
+  padding: 10px 20px;
+  padding-top: 1px;
+  box-sizing: border-box;
+}
+.type-why-book {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 5px;
+}
+.text-why-book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #222222;
+  margin: 0px 0px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 2px;
+  font-family: "Raleway";
+}
+.text-why-book:hover {
+  color: black;
+}
+.discount-details-why-book {
+  color: black;
+  justify-content: center;
+  display: flex;
+  font-size: 15px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-family: "Raleway";
+}
+}

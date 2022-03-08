@@ -1,0 +1,44 @@
+
+.border-overview-navbar{
+    background: #fff;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      margin-top: 10px;
+  }
+  .ul-overview-navbar{
+    background: #fff;
+      border-radius: 4px;
+      display: flex;
+      flex-flow: row;
+      list-style: none;
+      padding: 0px;
+      margin-bottom:0px;
+  }
+  .ul-overview-navbar li{
+    border-right: 1px solid #cfcfcf5e;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+  }
+  .ul-overview-navbar li a{
+    color: #202020;
+    padding: 10px 30px 8px;
+    display: inline-block;
+    border-bottom: 5px solid #fff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .ul-overview-navbar li a:hover{
+    color: #00e0b4;
+    display: inline-block;
+    border-bottom: 5px solid #00e0b4;
+    text-decoration: none;
+  }
+  .activeTab{
+    color: #439548;
+    display: inline-block;
+    border-bottom: 2px solid #439548;
+    text-decoration: none;
+  }
+  

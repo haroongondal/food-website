@@ -1,0 +1,24 @@
+
+  
+  
+
+  @media screen and (min-width: 320px) {
+    .merge-section{
+      display: flex;
+    }
+    .section-left-restaurent-details{
+      width: 100%;
+    }
+  }
+  
+  
+  @media screen and (min-width: 992px) {
+    .merge-section{
+      display: flex;
+      margin: 0px 90px;
+      margin-top: -80px;
+    }
+    .section-left-restaurent-details{
+      width: 65%;
+    }
+  }

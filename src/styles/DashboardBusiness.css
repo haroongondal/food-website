@@ -1,0 +1,81 @@
+
+
+
+  @media screen and (min-width: 320px){
+    .dashboard-text-section{
+      display:none;
+    }
+    .dashboard-image-business { 
+      background-color: #000000;
+      position: relative; 
+    }
+    .dashboard-image-business img{
+      opacity: 0.5; 
+      width: 100%;
+    }
+
+  }
+  @media screen and (min-width: 992px){
+    .dashboard-image-business { 
+      background-color: #000000;
+      position: relative; 
+    }
+    .dashboard-image-business img{
+      opacity: 0.5; 
+      width: 100%;
+    }
+    .dashboard-text-section{
+      display: table-caption;
+      position: absolute;
+      bottom: 150px;
+      left: 45%;
+      transform: translateX(-450px);
+    }
+    .dashboard-text-section .up h1{
+          color: white;
+          margin-bottom: 8px;
+    }
+    .dashboard-text-section .up h6{
+      margin: 0;
+      font-size: initial;
+      color: #BFBFBF;
+      font-weight: 500;
+    }
+    .dashboard-text-section .down{
+      display: table-caption;
+      padding-top: 40px;
+    }
+    .Register-btn{
+      background: white;
+        border: none;
+        border-radius: 24px;
+        padding: 10px 20px;
+        font-family: 'Raleway';
+        font-size: 0.95rem;
+        width: max-content;
+        margin: 5px 0px;
+        transition: all 0.6s ease 0s;
+    }
+    .Register-btn:hover{
+      color: white;
+      background: #232323;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    .Restaurant-login-btn{
+      background: #232323;
+        border: none;
+        border-radius: 24px;
+        padding: 10px 20px;
+        font-family: 'Raleway';
+        font-size: 0.95rem;
+        color: white;
+        width: max-content;
+        margin: 5px 0px;
+        transition: all 0.6s ease 0s;
+    }
+    .Restaurant-login-btn:hover{
+      color: black;
+      background: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+  }

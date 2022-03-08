@@ -1,0 +1,151 @@
+
+
+
+.side {
+  padding: 3px;
+  font-weight: 600;
+}
+.middle {
+  margin-top: 10px;
+  float: left;
+  width: 70%;
+  margin-left: 5px;
+}
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+}
+/* Individual bars */
+.bar5 {
+  width: 60%;
+}
+.bar4 {
+  width: 40%;
+}
+.bar3 {
+  width: 30%;
+}
+.bar2 {
+  width: 20%;
+}
+.bar1 {
+  width: 70%;
+}
+.bar-alignment {
+  height: 14px;
+  background-color: #439548;
+  border-radius: 5px;
+}
+
+.rating-number {
+  width: 45px;
+  height: 35px;
+  display: flex;
+  background-color: #439548;
+  color: #ffffff;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  margin: 0 auto;
+  font-weight: 600;
+}
+.rate-for-ratings-section {
+  width: fit-content;
+  margin: 0 auto;
+}
+.rate-for-ratings-section:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+.rate-for-ratings-section:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 35px;
+  color: #ccc;
+}
+.rate-for-ratings-section:not(:checked) > label:before {
+  content: "★ ";
+}
+.rate-for-ratings-section > input:checked ~ label {
+  color: #439548;
+}
+.rate-for-ratings-section:not(:checked) > label:hover,
+.rate-for-ratings-section:not(:checked) > label:hover ~ label {
+  color: #509955;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #3db645;
+}
+
+@media screen and (min-width: 320px) {
+  .ratings-bars-rating-stars {
+    padding: 20px 0px;
+    margin: 0 auto;
+  }
+  .content-rating-bars {
+    width: 100%;
+  }
+  .bar {
+    display: flex;
+    width: 100%;
+    place-content: center;
+  }
+  .content-rating-stars {
+    min-width: fit-content;
+    display: grid;
+    margin-top: 40px;
+  }
+  
+  .content-rating-stars h2 {
+    font-size: 0.75rem;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+  .content-rating-stars h2 span {
+    font-weight: 700;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .ratings-bars-rating-stars {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0px 30px;
+  }
+  .content-rating-bars {
+    width: 60%;
+  }
+  .bar {
+    display: -webkit-inline-box;
+    width: 100%;
+  }
+  .content-rating-stars {
+    min-width: fit-content;
+    display: grid;
+    margin-top: 7px;
+  }
+  
+  .content-rating-stars h2 {
+    font-size: 0.75rem;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+  .content-rating-stars h2 span {
+    font-weight: 700;
+  }
+}

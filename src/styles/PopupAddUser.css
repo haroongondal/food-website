@@ -1,0 +1,12 @@
+.pin_text_box{
+    border: none;
+    background: rgb(6 56 108 / 10%);
+    margin-right: 26px;
+    box-shadow: none;
+    width: 40px;
+    text-align: center;
+    color: #5b5b5b;
+    font-size: 13px;
+    outline: none;
+    height: 35px;
+}

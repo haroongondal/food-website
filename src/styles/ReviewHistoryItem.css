@@ -1,0 +1,118 @@
+.div-border-review-history-box{
+  margin: 20px 40px;background-color: white;padding: 20px 0px;box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);overflow: hidden;
+}
+.div-kadai-chicken-review-history{
+  display: flex;justify-content: space-between;padding: 0px 20px;margin-top: 8px;
+}
+.text-kadai-chicken-review-history{
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: -5px;
+}
+
+.rate-review-history {
+  float: left;
+  height: 5px;
+  margin-top: -8px;
+  margin-right: 5px;
+}
+.rate-review-history:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.rate-review-history:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:20px;
+  color:#ccc;
+}
+.rate-review-history:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate-review-history > input:checked ~ label {
+  color: #439548;    
+}
+.rate-review-history:not(:checked) > label:hover,
+.rate-review-history:not(:checked) > label:hover ~ label {
+  color: #509955;  
+}
+.rate-review-history > input:checked + label:hover,
+.rate-review-history > input:checked + label:hover ~ label,
+.rate-review-history > input:checked ~ label:hover,
+.rate-review-history > input:checked ~ label:hover ~ label,
+.rate-review-history > label:hover ~ input:checked ~ label {
+  color: #3db645;
+}
+.black-circle{
+  content: "\25CF";
+  font-size: 10px;
+}
+.for-3-sections-review-history{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+  margin-bottom: 10px;
+}
+.section-1-image-review-history img{
+  border-radius: 10%;
+  object-fit: cover;
+}
+.div-for-butter-chicken-part-1-review-history{
+  margin-top: 3px
+}
+.div-for-butter-chicken-part-1-review-history h4{
+  color: black;
+  font-size: 1.0rem;
+  inline-size: max-content;
+  margin-bottom: .3rem;
+}
+.section-overall{
+  display: flex;
+}
+.div-overall{
+  display: flex;
+  margin-right: 5px;
+}
+
+.text-overall{
+  margin-right: 5px;
+  font-weight: 600;
+  color: #000;
+}
+.text-number{
+  margin-right: 5px;
+  font-weight: 700;
+  color: #D10909;
+}
+.div-for-butter-chicken-part-1-review-history h6{
+  font-size: 0.7rem;
+}
+.black-circle-overall{
+  content: "\25CF";
+  font-size: 7px;
+  margin-top: 2px;
+}
+.button-order-history-review-history a{
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.button-order-history-review-history a:hover{
+  box-shadow: 1px 1px 3px black;
+  transform: scale(2.008);
+  transition: all  0.3s ease;
+  padding: 11px 15px;
+}
+.image-triangle-arrow-review-history{
+  height: 10px; width: 10px;
+}
+#edit {
+  outline: none;
+  font-size: 10px;
+  width: 200%;
+  font-weight: 600;
+}

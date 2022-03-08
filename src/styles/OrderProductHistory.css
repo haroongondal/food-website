@@ -1,0 +1,101 @@
+.div-border-order-history-box{
+  margin: 20px 40px;background-color: white;padding: 20px 0px;box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);overflow: hidden;
+}
+.div-kadai-chicken{
+  display: flex;justify-content: space-between;padding: 0px 20px;margin-top: 8px;
+}
+.text-kadai-chicken{
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: -5px;
+}
+.text-dish-price{
+  background-color: #439548;
+  color: white;
+  padding: 8px 30px;
+  border-radius: 5px;
+  margin-top: -15px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.hr-order-history{
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+.for-3-sections-order-history{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+  margin-bottom: 10px;
+}
+.section-1-image-order-history img{
+  border-radius: 10%;
+  object-fit: cover;
+}
+.div-for-butter-chicken-part-1{
+  margin-top: 3px
+}
+.div-for-butter-chicken-part-1 h4{
+  color: black;
+  font-size: 1.0rem;
+  inline-size: max-content;
+}
+.div-for-butter-chicken-part-1 h6{
+  color: black;
+  font-weight: 300;
+  font-size: 0.76rem;
+}
+.div-for-delivery-rating-part-2{
+  margin-top: 32px;
+}
+
+.rate {
+  float: left;
+  height: 5px;
+  margin-left: 10px;
+}
+.rate:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:20px;
+  color:#ccc;
+}
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate > input:checked ~ label {
+  color: #439548;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #509955;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #3db645;
+}
+.image-triangle-arrow{
+  height: 10px; width: 10px;
+}
+.button-order-history a{
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.button-order-history a:hover{
+  box-shadow: 1px 1px 3px black;
+  transform: scale(2.008);
+  transition: all  0.3s ease;
+  padding: 11px 15px;
+}

@@ -1,0 +1,35 @@
+ {
+ 
+ "FilterTypes": {
+    "QuickFilters": 0,
+    "TagFilters": 1,
+    "CusineFilters": 2,
+    "FeatureFilters": 3
+ },
+
+ "SortType": {
+   "Popularity": "0",
+   "Ratings": "1",
+   "HighPrice": "2",
+   "LowPrice": "3"
+},
+"MenuItemType": {
+   "Veg": "0",
+   "Egg": "1",
+   "NonVeg": "2"
+},
+"SpiceType": {
+   "Low": "0",
+   "Mild": "1",
+   "High": "2"
+},
+"Days": {
+   "Monday": "1",
+   "Tuesday": "2",
+   "Wednesday": "3",
+   "Thursday": "4",
+   "Friday": "5",
+   "Saturday": "6",
+   "Sunday": "7"
+}
+}

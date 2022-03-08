@@ -1,0 +1,69 @@
+.topNavBar-F {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: auto;
+  background: white;
+  top: 0;
+  padding: 1rem 12px 0.4rem;
+  z-index: 10;
+}
+.align-topNavBar-F {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-suggetions-wrapper {
+  overflow-x: scroll;
+}
+.navbar-suggetions-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.navbar-suggetions > div{
+  background-color: #dbdbdb;
+  font-size: 14px;
+  line-height: 1.6;
+}
+/* Hide scrollbar for IE, Edge add Firefox */
+.navbar-suggetions {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+.Sec-search-filters {
+  width: 100%;
+  display: flex;
+  padding: 8px 0px 0px 0px;
+  grid-gap: 18px;
+}
+.filters-btns {
+  display: flex;
+  align-items: center;
+  grid-gap: 8px;
+}
+.filter-btn-F {
+  background: #439548;
+  padding: 6px 8px 2px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.sort-btn-F {
+  padding: 6px 8px 2px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.filter-btn-F i {
+  color: white;
+}
+.sort-btn-F i {
+  color: black;
+}
+
+@media screen and (min-width: 992px) {
+  .filterNavBar {
+    display: none;
+    visibility: hidden;
+    backface-visibility: hidden;
+  }
+}

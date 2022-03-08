@@ -1,0 +1,29 @@
+
+  
+
+  @media screen and (min-width: 320px) {
+    .Ad-item-image {
+      display: none;
+      backface-visibility: hidden;
+      visibility: hidden;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .banner_image{
+      position: relative;
+      width: 97.7%;
+      height:100px;
+    }
+    .Ad-item-image{
+      margin-top: 85px;
+      display: block;
+      backface-visibility: visible;
+      visibility: visible;
+    }
+    .image-banner{
+      width: 100%;
+      height: 100%;
+    object-fit: cover;
+    }
+  }

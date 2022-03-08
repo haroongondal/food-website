@@ -1,0 +1,148 @@
+.dashboard-res-detail-M {
+  position: relative;
+}
+.dashboard-res-detail-M img {
+  border-radius: 0 0 10px 10px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  object-fit: cover;
+}
+.back-btn-res-detail-M {
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  mix-blend-mode: normal;
+  background: #000000ab;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 2;
+}
+.dashboard-res-detail-M .back-btn-res-detail-M img {
+  width: 5px;
+  height: 11px;
+}
+.right-tools-res-detail-M {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+}
+.right-tools-res-detail-M ul {
+  display: flex;
+}
+.right-tools-res-detail-M ul li {
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  background: #363636a6;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+.right-tools-res-detail-M ul li img {
+  width: 15px;
+  height: 13px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+}
+.rating-res-detail-M {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  bottom: 5.5rem;
+  text-align: left;
+  line-height: 1;
+  padding: 6px 10px;
+  right: 2rem;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  position: absolute;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  z-index: 2;
+  background: #78ba68;
+}
+.rating-res-detail-M svg {
+  margin-right: 0.5rem;
+  margin-top: 1px;
+  width: 15px;
+}
+.rating-res-detail-M span {
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 0.3rem;
+}
+.topSec-res-detail-M {
+  padding: 1rem 15px 0px 15px;
+  margin-top: -45px;
+  position: relative;
+  z-index: 3;
+  background: white;
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+  border-bottom: 1px solid #e1e1e1;
+}
+.topSec-res-detail-M-fixed {
+  padding: 1rem 15px 0px 15px;
+  position: fixed;
+  bottom: 0%;
+  z-index: 3;
+  background: white;
+  width: 93%;
+  border-radius: 5px 5px 0px 0px;
+  border-bottom: 1px solid #e1e1e1;
+}
+.overview-res-detail-M {
+  padding-bottom: 7px;
+  background: white;
+}
+.overview-res-detail-M ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.overview-res-detail-M ul li {
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+}
+.overview-res-detail-M ul li.bottom-color-res-detail-M a{
+  text-decoration: none;
+  color: black;
+}
+/* .overview-res-detail-M ul li.bottom-color-res-detail-M::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 27px;
+  width: 100%;
+  height: 2px;
+  background: url(https://im1.dineout.co.in/images/uploads/misc/2021/Feb/2/cta.png)
+    left top no-repeat;
+  background-size: 100% 100%;
+} */
+
+@media screen and (min-width: 992px) {
+  .res-detail-top-nav {
+    display: none;
+  }
+}

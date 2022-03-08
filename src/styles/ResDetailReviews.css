@@ -1,0 +1,314 @@
+.review-res-detail-M {
+  padding: 15px 0px 5px 0px;
+  border-top: 1px solid #00000026;
+}
+
+.section-rating-star h4 {
+  color: black;
+  font-size: 1rem;
+  inline-size: max-content;
+}
+
+.div-overall-review {
+  display: flex;
+  margin-right: 5px;
+  font-size: 0.8rem;
+}
+.text-overall-review {
+  margin-right: 5px;
+  font-weight: 600;
+  color: #000;
+}
+.text-number-review {
+  margin-right: 5px;
+  font-weight: 700;
+  color: #d10909;
+}
+.comment-section {
+}
+.paragraph-comment {
+}
+
+.report-section {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.section-rating-star h4 {
+  color: black;
+  font-size: 1rem;
+  inline-size: max-content;
+}
+
+.hr-for-review-section {
+  margin: 30px 0px;
+}
+/* .fixed{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 20;
+  } */
+
+@media screen and (min-width: 320px) {
+  .content-review-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    background: #fff;
+  }
+  .for-two-sections {
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+  .review-details {
+    margin-left: 0px;
+    width: 100%;
+  }
+  .section-review-details {
+    width: 100%;
+    margin-top: 0px;
+  }
+  .section-rating-star {
+    width: 100%;
+  }
+  .section-rating-stars-dined-a-day {
+    text-align: right;
+    float: right;
+  }
+
+  .black-circle-reviewSec {
+    content: "";
+    display: none;
+  }
+  .text-dined-a-day {
+    font-size: 0.75rem;
+    margin-left: 0px;
+    margin-top: 0px;
+    font-weight: 500;
+    color: black;
+  }
+  .section-overall-review {
+    display: none;
+    margin-bottom: -10px;
+  }
+  .profile-image {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 42px;
+    height: 42px;
+  }
+  .text-user-name {
+    font-size: 14px;
+    /* margin: 0 auto; */
+    text-align: center;
+    padding: 0 15px 0 6px;
+    margin-top: 11px;
+    margin-bottom: 0px;
+    color: black;
+  }
+  .text-city-name {
+    display: none;
+  }
+  .profile-review {
+    display: none;
+    align-items: center;
+  }
+  .review-image {
+    height: 7px;
+    width: 7px;
+  }
+  .profile-review p {
+    display: flex;
+    margin-bottom: 0px;
+    font-size: 10px;
+    margin-left: 5px;
+    color: black;
+  }
+  .left-profile-image {
+    text-align: center;
+    display: flex;
+  }
+  .paragraph-comment p {
+    font-size: 12px;
+    color: black;
+    margin-top: 12px;
+  }
+  .helpful-review {
+    display: flex;
+    border: none;
+    border-radius: 50px;
+    align-items: center;
+    padding: 5px;
+    margin: 0px;
+    cursor: pointer;
+  }
+  .helpful-review img {
+    width: 13px;
+    height: 13px;
+  }
+  .helpful-review p {
+    margin: 0px 5px;
+    font-size: 0.7rem;
+    color: black;
+  }
+  .report-review {
+    display: flex;
+    border: none;
+    border-radius: 50px;
+    align-items: center;
+    padding: 5px;
+    margin: 0px;
+    cursor: pointer;
+  }
+  .report-review p {
+    margin: 0px 5px;
+    font-size: 0.7rem;
+    color: black;
+  }
+  .report-image {
+    width: 10px;
+    height: 10px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .content-review-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    background: #fff;
+  }
+  .for-two-sections {
+    display: flex;
+    position: relative;
+  }
+  .review-details {
+    margin-left: 50px;
+  }
+  .section-review-details {
+    width: 100%;
+  }
+  .section-rating-star {
+    width: 100%;
+  }
+  .section-rating-stars-dined-a-day {
+    display: flex;
+    align-items: center;
+    float: inherit;
+  }
+
+  .black-circle-reviewSec {
+    content: "\25CF";
+    display: block;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-top: 3px;
+  }
+  .black-circle-overall-review {
+    font-size: 12px;
+  }
+  .text-dined-a-day {
+    font-size: 0.75rem;
+    margin-left: 8px;
+    margin-top: 4px;
+    margin-bottom: 0px;
+    font-weight: 500;
+    color: black;
+  }
+  .section-overall-review {
+    display: flex;
+    margin-bottom: -10px;
+  }
+  .profile-image {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 60px;
+    height: 60px;
+  }
+  .text-user-name {
+    font-size: 0.9rem;
+    /* margin: 0 auto; */
+    text-align: center;
+    padding-left: 0px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    color: black;
+  }
+  .text-city-name {
+    display: block;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 0px;
+    color: #000000a6;
+  }
+  .profile-review {
+    display: flex;
+    align-items: center;
+  }
+  .review-image {
+    height: 9px;
+    width: 9px;
+  }
+  .profile-review p {
+    display: flex;
+    margin-bottom: 0px;
+    font-size: 0.71rem;
+    margin-left: 5px;
+    color: black;
+  }
+  .profile-review p span {
+    margin-right: 3px;
+  }
+  .left-profile-image {
+    text-align: center;
+    display: block;
+  }
+  .paragraph-comment p {
+    font-size: 0.8rem;
+    color: black;
+  }
+  .helpful-review {
+    display: flex;
+    border: 1px solid #c1c1c1;
+    border-radius: 50px;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  .helpful-review img {
+    width: 13px;
+    height: 13px;
+  }
+  .helpful-review p {
+    margin: 0px 5px;
+    font-size: 0.7rem;
+    color: black;
+  }
+  .report-review {
+    display: flex;
+    border: 1px solid #c1c1c1;
+    border-radius: 50px;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  .report-review p {
+    margin: 0px 5px;
+    font-size: 0.7rem;
+    color: black;
+  }
+  .report-image {
+    width: 10px;
+    height: 10px;
+  }
+}

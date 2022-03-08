@@ -1,0 +1,202 @@
+@media screen and (min-width: 320px) {
+  .div-boxes-mobile-app {
+    display: block;
+    margin-bottom: 50px;
+    padding: 0px;
+  }
+  .div-1-section-mobile-app {
+    padding: 30px;
+  }
+  .text-explore {
+    font-size: 20px;
+    margin-bottom: 3px;
+    font-weight: 500;
+  }
+  .text-logo-mobile-app {
+    font-size: 20px;
+    color: #ff3d31;
+    font-weight: bold;
+  }
+  .text-details-mobile-app {
+    font-size: 8px;
+    color: #5a5a5a;
+    font-weight: normal;
+    margin-top: 5px;
+  }
+  /*Resize the wrap to see the search bar change!*/
+  .wrap {
+    width: 100%;
+    position: relative;
+  }
+  .search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+
+  .image-mobile {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+  }
+  .searchTerm {
+    width: 100%;
+    border: 1px solid #70707063;
+    border-right: none;
+    padding: 5px;
+    padding-left: 35px;
+    height: 35px;
+    outline: none;
+    color: #9dbfaf;
+    font-size: 10px;
+  }
+  .searchButton {
+    width: 100px;
+    /* height: 47px; */
+    border: 1px solid #439548;
+    background: #439548;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .text-search-link {
+    justify-content: center;
+    color: white;
+    display: flex;
+    font-size: 10px;
+  }
+  .searchTerm:focus {
+    color: black;
+  }
+  .googlePlayBtn {
+    margin-top: 15px;
+  }
+  .mobileSS {
+    margin-top: 20px;
+
+    text-align: center;
+  }
+  .app-screenshot {
+    width: 32%;
+    object-fit: cover;
+    z-index: 1;
+    position: relative;
+  }
+  .app-screenshot2 {
+    width: 28%;
+    position: relative;
+    transform: translate(-12px, 12px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .div-boxes-mobile-app {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 100px;
+    margin-bottom: 50px;
+  }
+  .line-grey {
+    color: grey;
+  }
+  .div-boxes-mobile-app {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 100px;
+    margin-bottom: 50px;
+  }
+  .div-1-section-mobile-app {
+    padding: 40px 50px;
+  }
+  .coming_soon {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .text-explore {
+    font-size: 22px;
+    margin-bottom: 3px;
+    font-weight: 500;
+  }
+  .text-logo-mobile-app {
+    font-size: 30px;
+    color: #ff3d31;
+    font-weight: bold;
+  }
+  .text-details-mobile-app {
+    font-size: 11px;
+    color: #5a5a5a;
+    font-weight: normal;
+    margin-top: 5px;
+  }
+  .search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+
+  .image-mobile {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+  }
+  .searchTerm {
+    width: 100%;
+    border: 1px solid #70707063;
+    border-right: none;
+    padding: 5px;
+    padding-left: 35px;
+    height: 35px;
+    outline: none;
+    color: #0000008f;
+    font-size: smaller;
+    border-radius: 6px 0px 0px 6px;
+  }
+
+  .searchTerm:focus {
+    color: black;
+  }
+
+  .searchButton {
+    width: 150px;
+    /* height: 47px; */
+    border: 1px solid #439548;
+    background: #439548;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 0px 6px 6px 0;
+  }
+  .text-search-link {
+    justify-content: center;
+    color: white;
+    display: flex;
+    font-size: 15px;
+  }
+  /*Resize the wrap to see the search bar change!*/
+  .wrap {
+    width: 100%;
+    position: relative;
+  }
+  .googlePlayBtn {
+    margin-top: 30px;
+  }
+  .mobileSS {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .app-screenshot {
+    width: 26%;
+    object-fit: cover;
+    z-index: 1;
+    position: relative;
+  }
+  .app-screenshot2 {
+    width: 11%;
+    right: 17%;
+    transform: translate(10px, 20px);
+    position: absolute;
+  }
+}

@@ -1,0 +1,1158 @@
+@media only screen and (min-width: 320px) {
+  .align-content-popUp {
+    margin: 30px 0px;
+  }
+  .border-back {
+    margin: 20px 0px;
+    padding: 0px 12px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #80808054;
+  }
+  .border-menu {
+    padding: 30px 24px;
+  }
+  .Sec-menu {
+    margin-bottom: 0px;
+  }
+  .border-dropDown-add-menu {
+    width: 100%;
+  }
+  .item-name {
+    margin: 0;
+    color: #06386c;
+    font-weight: bold;
+  }
+  .egg-btn {
+    font-size: 14px;
+    background: white;
+    border: 1px solid rgb(6 56 108 / 50%);
+    padding: 5px 10px;
+    margin: 0px 10px;
+    margin-left: 0px;
+    border-radius: 3px;
+    flex: 0 0 auto;
+    box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
+  }
+  .egg-btn:focus,
+  .egg-btn:hover {
+    background: rgb(255 193 7 / 35%);
+    transition: all 0.3s ease;
+    transform: scale(1.001);
+  }
+  .veg-btn {
+    font-size: 14px;
+    background: white;
+    border: 1px solid rgb(6 56 108 / 50%);
+    padding: 5px 10px;
+    margin: 0px 10px;
+    border-radius: 3px;
+    flex: 0 0 auto;
+    box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
+  }
+  .veg-btn:focus,
+  .veg-btn:hover {
+    background: rgb(0 225 0 / 35%);
+    transition: all 0.3s ease;
+    transform: scale(1.001);
+  }
+  .non-veg-btn {
+    font-size: 14px;
+    background: white;
+    border: 1px solid rgb(6 56 108 / 50%);
+    padding: 5px 10px;
+    margin: 0px 10px;
+    border-radius: 3px;
+    flex: 0 0 auto;
+    box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
+  }
+  .non-veg-btn:focus,
+  .non-veg-btn:hover {
+    background: rgb(255 0 0 / 35%);
+    transition: all 0.3s ease;
+    transform: scale(1.001);
+  }
+  .svg-edit {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    margin-top: -3px;
+    margin-left: -3px;
+  }
+  .svg-edit-veg {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    margin-top: -3px;
+    margin-left: -3px;
+  }
+
+  /*checkbox */
+  .serviceType-checkboxes {
+    display: flex;
+  }
+  .checkBox-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 40px;
+  }
+  .main-popup-menu {
+    display: block;
+    position: relative;
+    padding-left: 27px;
+    margin-top: 8px;
+    margin-left: 0px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+  }
+  .text-dineout-popup-menu {
+    font-size: 12px;
+    margin-bottom: -24px;
+    padding-top: 1px;
+    color: #06386c;
+  }
+  input[type="checkbox"] {
+    visibility: hidden;
+  }
+  .w3docs-popup-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 14px;
+    width: 14px;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid #0325ff;
+  }
+  .main-popup-menu input:active ~ .w3docs-popup-menu {
+    background-color: white;
+  }
+  .main-popup-menu input:checked ~ .w3docs-popup-menu {
+    background-color: #0083c7;
+  }
+  .add-menu-item .fileUploader{
+    width: auto !important;
+  }
+  .w3docs-popup-menu:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  .main-popup-menu input:checked ~ .w3docs-popup-menu:after {
+    display: block;
+  }
+  .main-popup-menu .w3docs-popup-menu:after {
+    left: 4px;
+    bottom: 1px;
+    width: 4px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .dropDown-item-Pricing {
+    align-items: center;
+    inline-size: auto;
+    margin-top: 2%;
+  }
+  .border-PK {
+    background: rgb(6 56 108);
+    padding: 14px 12px;
+    padding-bottom: 13px;
+    border-radius: 4px 0px 0px 4px;
+  }
+  .text-PK {
+    margin: 0;
+    font-size: 13px;
+    color: white;
+  }
+  .input-add-menu {
+    height: 36px;
+  }
+  .input-add-menu input {
+    flex-grow: 1;
+    padding: 20px 11px;
+    height: 100%;
+    border: 1px solid rgb(6 56 108 / 50%);
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .form-dropDown {
+    max-width: 272px;
+    width: 100%;
+    /* margin-left: 15px; */
+    /* margin-bottom: 5px; */
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+  .form-input-PK {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    width: 100%;
+  }
+  .form-input-PK input {
+    flex-grow: 1;
+    padding: 20px 11px;
+    height: 100%;
+    border: 1px solid rgb(6 56 108 / 50%);
+    border-radius: 0px 4px 4px 0px;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+  }
+  .form-input-PK input::placeholder {
+    color: #474747;
+  }
+  .form-input-PK button {
+    margin-left: -5px;
+    width: 36px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: black;
+    font-size: 18px;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    padding: 20px;
+  }
+
+  .form-input-dropDown {
+    display: flex;
+    align-items: center;
+    height: 36px;
+  }
+  .form-input-dropDown input {
+    flex-grow: 1;
+    padding: 20px 11px;
+    height: 100%;
+    border: 1px solid rgb(6 56 108 / 50%);
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+  }
+  .form-input-dropDown input::placeholder {
+    color: #474747;
+  }
+  .form-input-dropDown button {
+    margin-left: -5px;
+    width: 36px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: black;
+    font-size: 18px;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    padding: 20px;
+  }
+  .border-dropDown-T-and-C {
+    width: 100%;
+  }
+  .content-dropDown .Tax-DD {
+    font-size: 14px;
+    color: #474747;
+    width: 100%;
+    border: none;
+    border-right: 1px solid #80808040;
+    border-radius: 4px 0px 0px 4px;
+    height: 100%;
+    display: block;
+    background-color: rgb(6 56 108 / 10%);
+    resize: vertical;
+    box-sizing: border-box;
+    min-height: 40px;
+    padding: 0px 10px;
+    -webkit-appearance: none;
+    text-transform: none;
+    font-family: inherit;
+    line-height: 1.15;
+    margin: 0;
+  }
+  .content-dropDown .Tax-DD:focus {
+    outline: none;
+  }
+  .content-dropDown .Charges-DD {
+    font-size: 14px;
+    color: #474747;
+    width: 100%;
+    border: none;
+    border-radius: 0px 4px 4px 0px;
+    height: 100%;
+    display: block;
+    background-color: rgb(6 56 108 / 10%);
+    resize: vertical;
+    box-sizing: border-box;
+    min-height: 40px;
+    padding: 0px 10px;
+    -webkit-appearance: none;
+    text-transform: none;
+    font-family: inherit;
+    line-height: 1.15;
+    margin: 0;
+  }
+  .content-dropDown .Charges-DD:focus {
+    outline: none;
+  }
+  .addTax-btn {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .addTax-btn i {
+    font-size: 18px;
+    margin-top: 8px;
+    color: #06386c;
+  }
+  .menu-textArea {
+    border: 1px solid rgb(6 56 108 / 50%);
+    background: rgb(6 56 108 / 5%);
+    resize: none;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 2%;
+  }
+  .menu-textArea:focus {
+    outline: 1px solid #06386c6b;
+  }
+  .image-video {
+    display: flex;
+    grid-gap: 23px;
+    flex-wrap: wrap;
+    align-items: center;
+    place-content: center;
+    justify-content: center;
+    margin-top: 2%;
+  }
+  .text-max-size-menu{
+    font-size: 10px !important;
+    font-weight: 100 !important;
+  }
+  .image-btn-menu {
+    position: relative;
+  }
+  .image-menu {
+    position: relative;
+    background: rgb(6 56 108 / 10%);
+    width: 170px;
+    height: 98px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .image-menu img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  .image-input-menu {
+    padding: 0px;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+  .btn-img-vid {
+    background: rgb(6 56 108 / 10%);
+    padding: 20px 50px;
+    border-radius: 5px;
+    border: none;
+  }
+  .btn-img-vid:hover {
+    background: rgb(6 56 108 / 25%);
+    transition: all 0.3s ease;
+    transform: scale(1.006);
+  }
+  .svg-img-vid {
+    width: 60px;
+    height: 60px;
+  }
+  .menu-timings {
+    background: rgb(6 56 108 / 10%);
+    padding: 20px 0px;
+    border-radius: 10px;
+  }
+  .line-menu-timings {
+    background: #00000073;
+  }
+  .content-menu-timings {
+    padding: 0px 20px;
+  }
+  .title-menu-timings {
+    text-align: center;
+  }
+  .title-menu-timings span {
+    font-size: 14px;
+    color: #06386c;
+    font-weight: bold;
+  }
+  .subtitle-menu-timings {
+    font-size: 14px;
+    color: #06386c;
+    padding: 0px 15px;
+    font-weight: bold;
+  }
+  .details-menu-timings {
+    font-size: 12px;
+    color: #06386c;
+    padding: 0px 29px;
+  }
+  .details-menu-timings-Custom {
+    font-size: 12px;
+    color: #06386c;
+    padding: 0px 29px;
+  }
+  .allDay-radio-btns {
+    display: flex;
+    grid-gap: 35px;
+    flex-wrap: wrap;
+  }
+  .section-service-info {
+    display: flex;
+    grid-gap: 16px;
+  }
+  .border-calorie {
+    background: rgb(6 56 108);
+    padding: 14px 12px;
+    padding-bottom: 13px;
+    border-radius: 0px 4px 4px 0px;
+  }
+  .form-calorie .form-input-calorie {
+    display: flex;
+    align-items: center;
+    height: 36px;
+  }
+  .form-calorie .form-input-calorie input {
+    flex-grow: 1;
+    padding: 20px 11px;
+    height: 100%;
+    border: 1px solid rgb(6 56 108 / 50%);
+    border-radius: 4px 0px 0px 4px;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+  }
+  .form-calorie .form-input-calorie input::placeholder {
+    color: #474747;
+  }
+  .form-calorie .form-input-calorie button {
+    margin-left: -5px;
+    width: 36px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: black;
+    font-size: 18px;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    padding: 20px;
+  }
+  .border-portion-size-DD {
+    width: 7rem;
+  }
+
+  .content-dropDown-portion-size {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .content-dropDown-portion-size .select-portion-size {
+    font-size: 14px;
+    color: white;
+    width: 100%;
+    border: none;
+    border-radius: 0px 4px 4px 0px;
+    height: 100%;
+    display: block;
+    background: rgb(6 56 108);
+    resize: vertical;
+    box-sizing: border-box;
+    min-height: 42px;
+    text-align: center;
+    -webkit-appearance: none;
+    text-transform: none;
+    font-family: inherit;
+    line-height: 1.15;
+    margin: 0;
+  }
+  .content-dropDown-portion-size .select-portion-size:focus {
+    outline: none;
+  }
+  .content-dropDown-portion-size span {
+    position: absolute;
+    pointer-events: none;
+    right: 4px;
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    min-width: 1.5rem;
+    font-size: 0;
+    line-height: 1;
+  }
+  .content-dropDown-portion-size span svg {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+  }
+  .addMenu-DD {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .addMenu-DD select {
+    font-size: 13px;
+    color: #474747cc;
+    width: 100%;
+    border: 1px solid rgb(6 56 108 / 50%);
+    border-radius: 4px;
+    height: 100%;
+    display: block;
+    resize: vertical;
+    box-sizing: border-box;
+    min-height: 40px;
+    padding: 0px 10px;
+    -webkit-appearance: none;
+    text-transform: none;
+    font-family: inherit;
+    line-height: 1.15;
+    margin: 0;
+  }
+  .addMenu-DD span {
+    position: absolute;
+    pointer-events: none;
+    right: 4px;
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    min-width: 1.5rem;
+    font-size: 0;
+    line-height: 1;
+  }
+  .addMenu-DD span img {
+    width: 12px;
+    height: 12px;
+    margin-top: 6px;
+  }
+  .drinks {
+    width: 100%;
+    max-width: fit-content;
+    margin: 20px 0px;
+  }
+  .align-content-drinks {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 16px;
+  }
+  .drinks-btn {
+    font-size: 14px;
+    border: 1px solid rgb(6 56 108 / 50%);
+    background-color: white;
+    color: black;
+    padding: 3px 10px;
+    border-radius: 5px;
+  }
+  .active-drinks {
+    font-size: 14px;
+    border: 1px solid rgb(6 56 108 / 50%);
+    background-color: #06386c;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .align-content-popUp {
+    margin: 30px 0px;
+  }
+  .border-back {
+    margin: 20px 0px;
+    padding: 20px 44px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #80808054;
+  }
+  .border-menu {
+    padding: 30px 30px;
+  }
+  .Sec-menu {
+    margin-bottom: 0px;
+  }
+  .border-dropDown-add-menu {
+    width: 17rem;
+  }
+  .item-name {
+    margin: 0;
+    color: #06386c;
+    font-weight: bold;
+  }
+  .egg-btn {
+    font-size: 14px;
+    background: white;
+    border: 1px solid rgb(6 56 108 / 50%);
+    padding: 5px 10px;
+    margin: 0px 10px;
+    margin-left: 0px;
+    border-radius: 3px;
+    flex: 0 0 auto;
+    box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
+  }
+  .egg-btn:focus,
+  .egg-btn:hover {
+    background: rgb(255 193 7 / 35%);
+    transition: all 0.3s ease;
+    transform: scale(1.001);
+  }
+  .veg-btn {
+    font-size: 14px;
+    background: white;
+    border: 1px solid rgb(6 56 108 / 50%);
+    padding: 5px 10px;
+    margin: 0px 10px;
+    border-radius: 3px;
+    flex: 0 0 auto;
+    box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
+  }
+  .veg-btn:focus,
+  .veg-btn:hover {
+    background: rgb(0 225 0 / 35%);
+    transition: all 0.3s ease;
+    transform: scale(1.001);
+  }
+  .non-veg-btn {
+    font-size: 14px;
+    background: white;
+    border: 1px solid rgb(6 56 108 / 50%);
+    padding: 5px 10px;
+    margin: 0px 10px;
+    border-radius: 3px;
+    flex: 0 0 auto;
+    box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
+  }
+  .non-veg-btn:focus,
+  .non-veg-btn:hover {
+    background: rgb(255 0 0 / 35%);
+    transition: all 0.3s ease;
+    transform: scale(1.001);
+  }
+  .svg-edit {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    margin-top: -3px;
+    margin-left: -3px;
+  }
+  .svg-edit-veg {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    margin-top: -3px;
+    margin-left: -3px;
+  }
+
+  /*checkbox */
+  .serviceType-checkboxes {
+    display: flex;
+  }
+  .checkBox-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 40px;
+  }
+  .main-popup-menu {
+    display: block;
+    position: relative;
+    padding-left: 27px;
+    margin-top: 8px;
+    margin-left: 0px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+  }
+  .text-dineout-popup-menu {
+    font-size: 12px;
+    margin-bottom: -24px;
+    padding-top: 1px;
+    color: #06386c;
+  }
+  input[type="checkbox"] {
+    visibility: hidden;
+  }
+  .w3docs-popup-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 14px;
+    width: 14px;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid #0325ff;
+  }
+  .main-popup-menu input:active ~ .w3docs-popup-menu {
+    background-color: white;
+  }
+  .main-popup-menu input:checked ~ .w3docs-popup-menu {
+    background-color: #0083c7;
+  }
+  .w3docs-popup-menu:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  .main-popup-menu input:checked ~ .w3docs-popup-menu:after {
+    display: block;
+  }
+  .main-popup-menu .w3docs-popup-menu:after {
+    left: 4px;
+    bottom: 1px;
+    width: 4px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .dropDown-item-Pricing {
+    align-items: center;
+    inline-size: max-content;
+    margin-top: 0%;
+  }
+  .border-PK {
+    background: rgb(6 56 108);
+    padding: 14px 12px;
+    padding-bottom: 13px;
+    border-radius: 4px 0px 0px 4px;
+  }
+  .text-PK {
+    margin: 0;
+    font-size: 13px;
+    color: white;
+  }
+  .input-add-menu {
+    height: 36px;
+  }
+  .input-add-menu input {
+    flex-grow: 1;
+    padding: 20px 11px;
+    height: 100%;
+    border: 1px solid rgb(6 56 108 / 50%);
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .form-dropDown {
+    max-width: 272px;
+    width: 100%;
+    /* margin-left: 15px; */
+    /* margin-bottom: 5px; */
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+  .form-input-PK {
+    display: flex;
+    align-items: center;
+    height: 36px;
+  }
+  .form-input-PK input {
+    flex-grow: 1;
+    padding: 20px 11px;
+    height: 100%;
+    border: 1px solid rgb(6 56 108 / 50%);
+    border-radius: 0px 4px 4px 0px;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+  }
+  .form-input-PK input::placeholder {
+    color: #474747;
+  }
+  .form-input-PK button {
+    margin-left: -5px;
+    width: 36px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: black;
+    font-size: 18px;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    padding: 20px;
+  }
+
+  .form-input-dropDown {
+    display: flex;
+    align-items: center;
+    height: 36px;
+  }
+  .form-input-dropDown input {
+    flex-grow: 1;
+    padding: 20px 11px;
+    height: 100%;
+    border: 1px solid rgb(6 56 108 / 50%);
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+  }
+  .form-input-dropDown input::placeholder {
+    color: #474747;
+  }
+  .form-input-dropDown button {
+    margin-left: -5px;
+    width: 36px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: black;
+    font-size: 18px;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    padding: 20px;
+  }
+  .border-dropDown-T-and-C {
+    width: 11rem;
+  }
+  .content-dropDown .Tax-DD {
+    font-size: 14px;
+    color: #474747;
+    width: 100%;
+    border: none;
+    border-right: 1px solid #80808040;
+    border-radius: 4px 0px 0px 4px;
+    height: 100%;
+    display: block;
+    background-color: rgb(6 56 108 / 10%);
+    resize: vertical;
+    box-sizing: border-box;
+    min-height: 40px;
+    padding: 0px 10px;
+    -webkit-appearance: none;
+    text-transform: none;
+    font-family: inherit;
+    line-height: 1.15;
+    margin: 0;
+  }
+  .content-dropDown .Tax-DD:focus {
+    outline: none;
+  }
+  .content-dropDown .Charges-DD {
+    font-size: 14px;
+    color: #474747;
+    width: 100%;
+    border: none;
+    border-radius: 0px 4px 4px 0px;
+    height: 100%;
+    display: block;
+    background-color: rgb(6 56 108 / 10%);
+    resize: vertical;
+    box-sizing: border-box;
+    min-height: 40px;
+    padding: 0px 10px;
+    -webkit-appearance: none;
+    text-transform: none;
+    font-family: inherit;
+    line-height: 1.15;
+    margin: 0;
+  }
+  .content-dropDown .Charges-DD:focus {
+    outline: none;
+  }
+  .addTax-btn {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .addTax-btn i {
+    font-size: 18px;
+    margin-top: 8px;
+    color: #06386c;
+  }
+  .menu-textArea {
+    border: 1px solid rgb(6 56 108 / 50%);
+    background: rgb(6 56 108 / 5%);
+    resize: none;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 0%;
+  }
+  .menu-textArea:focus {
+    outline: 1px solid #06386c6b;
+  }
+  .image-video {
+    display: flex;
+    grid-gap: 26px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 0%;
+  }
+  .image-btn-menu {
+    position: relative;
+  }
+  .image-menu {
+    position: relative;
+    background: rgb(6 56 108 / 10%);
+    width: 170px;
+    height: 98px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .image-menu img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  .image-input-menu {
+    padding: 0px;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+  .btn-img-vid {
+    background: rgb(6 56 108 / 10%);
+    padding: 20px 50px;
+    border-radius: 5px;
+    border: none;
+  }
+  .btn-img-vid:hover {
+    background: rgb(6 56 108 / 25%);
+    transition: all 0.3s ease;
+    transform: scale(1.006);
+  }
+  .svg-img-vid {
+    width: 60px;
+    height: 60px;
+  }
+  .menu-timings {
+    background: rgb(6 56 108 / 10%);
+    padding: 20px 0px;
+    border-radius: 10px;
+  }
+  .line-menu-timings {
+    background: #00000073;
+  }
+  .content-menu-timings {
+    padding: 0px 20px;
+  }
+  .title-menu-timings {
+    text-align: center;
+  }
+  .title-menu-timings span {
+    font-size: 14px;
+    color: #06386c;
+    font-weight: bold;
+  }
+  .subtitle-menu-timings {
+    font-size: 14px;
+    color: #06386c;
+    padding: 0px 15px;
+    font-weight: bold;
+  }
+  .details-menu-timings {
+    font-size: 12px;
+    color: #06386c;
+    padding: 0px 29px;
+  }
+  .details-menu-timings-Custom {
+    font-size: 12px;
+    color: #06386c;
+    padding: 0px 29px;
+  }
+  .allDay-radio-btns {
+    display: flex;
+    grid-gap: 35px;
+    flex-wrap: wrap;
+  }
+  .section-service-info {
+    display: flex;
+    grid-gap: 16px;
+  }
+  .border-calorie {
+    background: rgb(6 56 108);
+    padding: 14px 12px;
+    padding-bottom: 13px;
+    border-radius: 0px 4px 4px 0px;
+  }
+  .form-calorie .form-input-calorie {
+    display: flex;
+    align-items: center;
+    height: 36px;
+  }
+  .form-calorie .form-input-calorie input {
+    flex-grow: 1;
+    padding: 20px 11px;
+    height: 100%;
+    border: 1px solid rgb(6 56 108 / 50%);
+    border-radius: 4px 0px 0px 4px;
+    outline: none;
+    width: 125px;
+    font-size: 13px;
+  }
+  .form-calorie .form-input-calorie input::placeholder {
+    color: #474747;
+  }
+  .form-calorie .form-input-calorie button {
+    margin-left: -5px;
+    width: 36px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: black;
+    font-size: 18px;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    padding: 20px;
+  }
+  .border-portion-size-DD {
+    width: 7rem;
+  }
+
+  .content-dropDown-portion-size {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .content-dropDown-portion-size .select-portion-size {
+    font-size: 14px;
+    color: white;
+    width: 100%;
+    border: none;
+    border-radius: 0px 4px 4px 0px;
+    height: 100%;
+    display: block;
+    background: rgb(6 56 108);
+    resize: vertical;
+    box-sizing: border-box;
+    min-height: 42px;
+    text-align: center;
+    -webkit-appearance: none;
+    text-transform: none;
+    font-family: inherit;
+    line-height: 1.15;
+    margin: 0;
+  }
+  .content-dropDown-portion-size .select-portion-size:focus {
+    outline: none;
+  }
+  .content-dropDown-portion-size span {
+    position: absolute;
+    pointer-events: none;
+    right: 4px;
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    min-width: 1.5rem;
+    font-size: 0;
+    line-height: 1;
+  }
+  .content-dropDown-portion-size span svg {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+  }
+  .addMenu-DD {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .addMenu-DD select {
+    font-size: 13px;
+    color: #474747cc;
+    width: 100%;
+    border: 1px solid rgb(6 56 108 / 50%);
+    border-radius: 4px;
+    height: 100%;
+    display: block;
+    resize: vertical;
+    box-sizing: border-box;
+    min-height: 40px;
+    padding: 0px 10px;
+    -webkit-appearance: none;
+    text-transform: none;
+    font-family: inherit;
+    line-height: 1.15;
+    margin: 0;
+  }
+  .addMenu-DD span {
+    position: absolute;
+    pointer-events: none;
+    right: 4px;
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    min-width: 1.5rem;
+    font-size: 0;
+    line-height: 1;
+  }
+  .addMenu-DD span img {
+    width: 12px;
+    height: 12px;
+    margin-top: 6px;
+  }
+  .drinks {
+    width: 100%;
+    max-width: fit-content;
+    margin: 20px 0px;
+  }
+  .align-content-drinks {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 16px;
+  }
+  .drinks-btn {
+    font-size: 14px;
+    border: 1px solid rgb(6 56 108 / 50%);
+    background-color: white;
+    color: black;
+    padding: 3px 10px;
+    border-radius: 5px;
+  }
+  .active-drinks {
+    font-size: 14px;
+    border: 1px solid rgb(6 56 108 / 50%);
+    background-color: #06386c;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+  }
+}

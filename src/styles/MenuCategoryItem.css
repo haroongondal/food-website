@@ -1,0 +1,205 @@
+@media only screen and (min-width: 320px) {
+  .Category-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+    border-bottom: 1px solid #7070704d;
+    cursor: pointer;
+  }
+  .Category-item.is-open {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 10px;
+    border-bottom: 1px solid #7070704d;
+    cursor: pointer;
+  }
+  .left-tools-category {
+    display: flex;
+    align-items: center;
+    grid-gap: 6px;
+  }
+  .left-tools-category h6 {
+    font-size: 13px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    color: #06386c;
+  }
+  .drag-btn {
+    background: white;
+    border: none;
+    margin-top: 5px;
+    margin-right: 20px;
+  }
+  .right-tools-category {
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+  }
+  .right-tools-category h6 {
+    font-size: 13px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    color: #06386c;
+  }
+  .options-btn {
+    background: white;
+    border: none;
+    margin-top: 5px;
+  }
+
+  .line-categoryItem {
+    margin: 0;
+  }
+
+  .hello {
+    background-color: white;
+    transition: max-height 0.2s ease-in-out;
+  }
+  .hello-hide {
+    background-color: white;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    padding-left: 8px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    display: none;
+  }
+  .align-content-categoryItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0px;
+    padding-right: 10px;
+    border-bottom: 1px solid #7070704d;
+  }
+  .line-content-categoryItem {
+    margin-left: 76px;
+  }
+  .egg-btn-categoryItem {
+    font-size: 14px;
+    border: none;
+    background-color: rgb(255 193 7 / 35%);
+    padding: 0px 6px;
+    margin: 0px 10px;
+    border-radius: 3px;
+    box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
+  }
+  .svg-edit-categoryItem {
+    width: 15px;
+    height: 15px;
+  }
+  .dish-img-categoryItem {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    object-fit: cover;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .Category-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0px;
+    margin-left: 112px;
+    border-bottom: 1px solid #7070704d;
+    cursor: pointer;
+  }
+  .Category-item.is-open {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0px;
+    margin-left: 112px;
+    border-bottom: 1px solid #7070704d;
+    cursor: pointer;
+  }
+  .left-tools-category {
+    display: flex;
+    align-items: center;
+    grid-gap: 6px;
+  }
+  .left-tools-category h6 {
+    font-size: 13px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    color: #06386c;
+  }
+  .drag-btn {
+    background: white;
+    border: none;
+    margin-top: 5px;
+    margin-right: 20px;
+  }
+  .right-tools-category {
+    display: flex;
+    align-items: center;
+    grid-gap: 70px;
+    margin-right: 50px;
+  }
+  .right-tools-category h6 {
+    font-size: 13px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    color: #06386c;
+  }
+  .options-btn {
+    background: white;
+    border: none;
+    margin-top: 5px;
+  }
+
+  .line-categoryItem {
+    margin: 0;
+  }
+
+  .hello {
+    background-color: white;
+    transition: max-height 0.2s ease-in-out;
+  }
+  .hello-hide {
+    background-color: white;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    padding-left: 8px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    display: none;
+  }
+  .align-content-categoryItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0px;
+    margin-left: 154px;
+    border-bottom: 1px solid #7070704d;
+  }
+  .line-content-categoryItem {
+    margin-left: 76px;
+  }
+  .egg-btn-categoryItem {
+    font-size: 14px;
+    border: none;
+    background-color: rgb(255 193 7 / 35%);
+    padding: 0px 6px;
+    margin: 0px 10px;
+    border-radius: 3px;
+    box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
+  }
+  .svg-edit-categoryItem {
+    width: 15px;
+    height: 15px;
+  }
+  .dish-img-categoryItem {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    object-fit: cover;
+  }
+}
