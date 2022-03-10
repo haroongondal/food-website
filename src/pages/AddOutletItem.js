@@ -202,7 +202,7 @@ function AddOutletItem(props) {
     <div className="add-outlet-item">
       <div className="align-Popup">
         <div className="border-popup-city">
-          <div className="align-popOutlet-images border-popup-city">
+          <div className="align-popOutlet-images border-popup-city flex-sm-row flex-column justify-content-between align-items-center">
             {/* Fracade Image */}
             <div className="dropDown-block-Outlet">
               <span className="label-dropDown-block">Fracade Image</span>
@@ -232,7 +232,7 @@ function AddOutletItem(props) {
             </div>
           </div>
 
-          <div className="align-popOutlet-images border-popup-city">
+          <div className="align-popOutlet-images border-popup-city flex-sm-row flex-column  justify-content-between align-items-center">
             {/* Dinning Image */}
             <div className="dropDown-block-Outlet">
               <span className="label-dropDown-block">Dinning Image</span>
@@ -262,19 +262,37 @@ function AddOutletItem(props) {
             </div>
           </div>
           <div className="border-popup-city row">
-            {/* Email */}
+            {/* City */}
             <div className="dropDown-block-Outlet col-sm-6 col-12">
-              <span className="label-dropDown-block">Email</span>
+              <span className="label-dropDown-block">City</span>
+              <div className="dropDown-item" id="margin-10-T">
+                <div className="border-dropDown-block">
+                  <div className="content-dropDown">
+                    <select onChange={(e) => setCity(e.target.value)}>
+                      <option className="option">City</option>
+                      <option className="option">City</option>
+                      <option className="option">City</option>
+                    </select>
+                    <span>
+                      <img alt="down-arrow" src={arrow} />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Area */}
+            <div className="dropDown-block-Outlet col-sm-6 col-12">
+              <span className="label-dropDown-block">Area</span>
               <div className="dropDown-item" id="margin-10-T">
                 <div className="border-dropDown-block">
                   <div className="content-dropDown">
                     <form action="#" className="form-dropDown-M">
                       <div className="form-input-dropDown">
                         <input
-                          type="email"
-                          placeholder="Enter Email"
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
+                          type="text"
+                          placeholder="Enter Area"
+                          value={area}
+                          onChange={(e) => setArea(e.target.value)}
                           required
                         />
                       </div>
@@ -283,51 +301,6 @@ function AddOutletItem(props) {
                 </div>
               </div>
             </div>
-
-            {/* Password */}
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
-              <span className="label-dropDown-block">Password</span>
-              <div className="dropDown-item" id="margin-10-T">
-                <div className="border-dropDown-block">
-                  <div className="content-dropDown">
-                    <form action="#" className="form-dropDown-M">
-                      <div className="form-input-dropDown">
-                        <input
-                          type="password"
-                          placeholder="Enter Password"
-                          value={password}
-                          onChange={(e) => setPassword(e.target.value)}
-                          required
-                        />
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="border-popup-city row">
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
-              <span className="label-dropDown-block">PIN</span>
-              <div className="dropDown-item" id="margin-10-T">
-                <div className="border-dropDown-block">
-                  <div className="content-dropDown">
-                    <form action="#" className="form-dropDown-M">
-                      <div className="form-input-dropDown">
-                        <input
-                          type="number"
-                          placeholder="Enter PIN"
-                          value={pin}
-                          onChange={(e) => setPin(e.target.value)}
-                          required
-                        />
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* GSTN */}
             <div className="dropDown-block-Outlet col-sm-6 col-12">
               <span className="label-dropDown-block">GSTN</span>
@@ -349,10 +322,70 @@ function AddOutletItem(props) {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="border-popup-city row">
+            {/* Zip/Pincode */}
+            <div className="dropDown-block-Outlet col-sm-6 col-12">
+              <span className="label-dropDown-block">Zip/Pincode</span>
+              <div className="dropDown-item" id="margin-10-T">
+                <div className="border-dropDown-block">
+                  <div className="content-dropDown">
+                    <form action="#" className="form-dropDown-M">
+                      <div className="form-input-dropDown">
+                        <input
+                          type="number"
+                          placeholder="Enter Zip/Pincode"
+                          value={pincode}
+                          onChange={(e) => setPincode(e.target.value)}
+                          required
+                        />
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
             {/* Address */}
+            {/* Logitude */}
+            <div className="dropDown-block-Outlet col-sm-6 col-12">
+              <span className="label-dropDown-block">Logitude</span>
+              <div className="dropDown-item" id="margin-10-T">
+                <div className="border-dropDown-block">
+                  <div className="content-dropDown">
+                    <form action="#" className="form-dropDown-M">
+                      <div className="form-input-dropDown">
+                        <input
+                          type="email"
+                          placeholder="Enter Logitude"
+                          value={logitude}
+                          onChange={(e) => setLogitude(e.target.value)}
+                          required
+                        />
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Latitude */}
+            <div className="dropDown-block-Outlet col-sm-6 col-12">
+              <span className="label-dropDown-block">Latitude</span>
+              <div className="dropDown-item" id="margin-10-T">
+                <div className="border-dropDown-block">
+                  <div className="content-dropDown">
+                    <form action="#" className="form-dropDown-M">
+                      <div className="form-input-dropDown">
+                        <input
+                          type="email"
+                          placeholder="Enter Latitude"
+                          value={latitude}
+                          onChange={(e) => setLatitude(e.target.value)}
+                          required
+                        />
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="dropDown-block col-sm-6 col-12">
               <span className="label-dropDown-block">Address</span>
               <div className="dropDown-item" id="margin-10-T">
@@ -410,109 +443,82 @@ function AddOutletItem(props) {
                 </label>
               </div>
             </div>
-            {/* Area */}
-            <div className="dropDown-block-Outlet col-12">
-              <span className="label-dropDown-block">Area</span>
-              <div className="dropDown-item" id="margin-10-T">
-                <div className="border-dropDown-block">
-                  <div className="content-dropDown">
-                    <form action="#" className="form-dropDown-M">
-                      <div className="form-input-dropDown">
-                        <input
-                          type="text"
-                          placeholder="Enter Area"
-                          value={area}
-                          onChange={(e) => setArea(e.target.value)}
-                          required
-                        />
-                      </div>
-                    </form>
+            {/* Outlet Details */}
+            <div className="dropDown-block-Outlet">
+              <h4 className="sectionHeading my-2">Restaurent Details</h4>
+            </div>
+            <div className="border-popup-city row">
+              {/* Email */}
+              <div className="dropDown-block-Outlet col-sm-6 col-12">
+                <span className="label-dropDown-block">Email</span>
+                <div className="dropDown-item" id="margin-10-T">
+                  <div className="border-dropDown-block">
+                    <div className="content-dropDown">
+                      <form action="#" className="form-dropDown-M">
+                        <div className="form-input-dropDown">
+                          <input
+                            type="email"
+                            placeholder="Enter Email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                          />
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Password */}
+              <div className="dropDown-block-Outlet col-sm-6 col-12">
+                <span className="label-dropDown-block">Password</span>
+                <div className="dropDown-item" id="margin-10-T">
+                  <div className="border-dropDown-block">
+                    <div className="content-dropDown">
+                      <form action="#" className="form-dropDown-M">
+                        <div className="form-input-dropDown">
+                          <input
+                            type="password"
+                            placeholder="Enter Password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                          />
+                        </div>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            {/* Logitude */}
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
-              <span className="label-dropDown-block">Logitude</span>
-              <div className="dropDown-item" id="margin-10-T">
-                <div className="border-dropDown-block">
-                  <div className="content-dropDown">
-                    <form action="#" className="form-dropDown-M">
-                      <div className="form-input-dropDown">
-                        <input
-                          type="email"
-                          placeholder="Enter Logitude"
-                          value={logitude}
-                          onChange={(e) => setLogitude(e.target.value)}
-                          required
-                        />
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Latitude */}
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
-              <span className="label-dropDown-block">Latitude</span>
-              <div className="dropDown-item" id="margin-10-T">
-                <div className="border-dropDown-block">
-                  <div className="content-dropDown">
-                    <form action="#" className="form-dropDown-M">
-                      <div className="form-input-dropDown">
-                        <input
-                          type="email"
-                          placeholder="Enter Latitude"
-                          value={latitude}
-                          onChange={(e) => setLatitude(e.target.value)}
-                          required
-                        />
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* City */}
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
-              <span className="label-dropDown-block">City</span>
-              <div className="dropDown-item" id="margin-10-T">
-                <div className="border-dropDown-block">
-                  <div className="content-dropDown">
-                    <select onChange={(e) => setCity(e.target.value)}>
-                      <option className="option">City</option>
-                      <option className="option">City</option>
-                      <option className="option">City</option>
-                    </select>
-                    <span>
-                      <img alt="down-arrow" src={arrow} />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Zip/Pincode */}
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
-              <span className="label-dropDown-block">Zip/Pincode</span>
-              <div className="dropDown-item" id="margin-10-T">
-                <div className="border-dropDown-block">
-                  <div className="content-dropDown">
-                    <form action="#" className="form-dropDown-M">
-                      <div className="form-input-dropDown">
-                        <input
-                          type="number"
-                          placeholder="Enter Zip/Pincode"
-                          value={pincode}
-                          onChange={(e) => setPincode(e.target.value)}
-                          required
-                        />
-                      </div>
-                    </form>
+            {/* Pin */}
+            <div className="border-popup-city row">
+              <div className="dropDown-block-Outlet col-sm-6 col-12">
+                <span className="label-dropDown-block">PIN</span>
+                <div className="dropDown-item" id="margin-10-T">
+                  <div className="border-dropDown-block">
+                    <div className="content-dropDown">
+                      <form action="#" className="form-dropDown-M">
+                        <div className="form-input-dropDown">
+                          <input
+                            type="number"
+                            placeholder="Enter PIN"
+                            value={pin}
+                            onChange={(e) => setPin(e.target.value)}
+                            required
+                          />
+                        </div>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             {/* Restaurant Details */}
+            <div className="dropDown-block-Outlet">
+              <h4 className="sectionHeading my-2">Restaurent Details</h4>
+            </div>
             <div className="dropDown-block-Outlet col-sm-6 col-12">
               {/* Restaurent Name */}
 
@@ -623,76 +629,13 @@ function AddOutletItem(props) {
               </button>
             </div>
             <div className="dropDown-block-Outlet col-sm-6 col-12">
-            <div className="label-PS">Delivery Type</div>
-                  <div className="align-CB-PS p-0">
-                    <label
-                      className="col-md-6 col-12 content-CB-PS my-3"
-                      style={{ marginLeft: "0px" }}
-                    >
-                      <h6 className="label-CB-PS">Take Away</h6>
-                      <input
-                        type="radio"
-                        name="d_type"
-                        onChange={(e) => setTakeAway(e.target.checked)}
-                      />
-                      <span className="checkbox-CB-PS"></span>
-                    </label>
-
-                    <label
-                      className="col-md-6 col-12 content-CB-PS my-3"
-                      style={{ marginLeft: "0px" }}
-                    >
-                      <h6 className="label-CB-PS">Home Delivery</h6>
-                      <input
-                        type="radio"
-                        name="d_type"
-                        onChange={(e) => setDelivery(e.target.checked)}
-                      />
-                      <span className="checkbox-CB-PS"></span>
-                    </label>
-                  </div>
-            </div>
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
-                   <div className="label-PS">Establishment type</div>
-                  <div className="align-CB-PS p-0">
-                    <label
-                      className="col-md-6 col-12 content-CB-PS my-3"
-                      style={{ marginLeft: "0px" }}
-                    >
-                      <h6 className="label-CB-PS">Cafe</h6>
-                      <input
-                        type="radio"
-                        name="fav_language"
-                        onChange={(e) => setCafe(e.target.checked)}
-                      />
-                      <span className="checkbox-CB-PS"></span>
-                    </label>
-
-                    <label
-                      className="col-md-6  col-12 content-CB-PS my-3"
-                      style={{ marginLeft: "0px" }}
-                    >
-                      <h6 className="label-CB-PS">Restaurant</h6>
-                      <input
-                        type="radio"
-                        name="fav_language"
-                        onChange={(e) => setRestaurent(e.target.checked)}
-                      />
-                      <span className="checkbox-CB-PS"></span>
-                    </label>
-                  </div>
-            </div>
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
-              <div className="label-PS">
-                {" "}
-                What meal does this restaurant Serve
-              </div>
+              <div className="label-PS">Delivery Type</div>
               <div className="align-CB-PS p-0">
                 <label
-                  className="col-md-6 col-12 content-CB-PS my-3"
+                  className="col-md-6 col-12 content-CB-PS my-2"
                   style={{ marginLeft: "0px" }}
                 >
-                  <h6 className="label-CB-PS">Breakfast</h6>
+                  <h6 className="label-CB-PS">Take Away</h6>
                   <input
                     type="radio"
                     name="d_type"
@@ -702,62 +645,10 @@ function AddOutletItem(props) {
                 </label>
 
                 <label
-                  className="col-md-6 col-12 content-CB-PS my-3"
+                  className="col-md-6 col-12 content-CB-PS my-2"
                   style={{ marginLeft: "0px" }}
                 >
-                  <h6 className="label-CB-PS">Lunch</h6>
-                  <input
-                    type="radio"
-                    name="d_type"
-                    onChange={(e) => setDelivery(e.target.checked)}
-                  />
-                  <span className="checkbox-CB-PS"></span>
-                </label>
-
-                <label
-                  className="col-md-6 col-12 content-CB-PS my-3"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Drinks</h6>
-                  <input
-                    type="radio"
-                    name="d_type"
-                    onChange={(e) => setDelivery(e.target.checked)}
-                  />
-                  <span className="checkbox-CB-PS"></span>
-                </label>
-
-                <label
-                  className="col-md-6 col-12 content-CB-PS my-3"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Buffet /Brunch</h6>
-                  <input
-                    type="radio"
-                    name="d_type"
-                    onChange={(e) => setDelivery(e.target.checked)}
-                  />
-                  <span className="checkbox-CB-PS"></span>
-                </label>
-
-                <label
-                  className="col-md-6 col-12 content-CB-PS my-3"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Dinner</h6>
-                  <input
-                    type="radio"
-                    name="d_type"
-                    onChange={(e) => setDelivery(e.target.checked)}
-                  />
-                  <span className="checkbox-CB-PS"></span>
-                </label>
-
-                <label
-                  className="col-md-6 col-12 content-CB-PS my-3"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Late Night</h6>
+                  <h6 className="label-CB-PS">Home Delivery</h6>
                   <input
                     type="radio"
                     name="d_type"
@@ -768,13 +659,13 @@ function AddOutletItem(props) {
               </div>
             </div>
             <div className="dropDown-block-Outlet col-sm-6 col-12">
-              <div className="label-PS">What is this restaurant Good for</div>
+              <div className="label-PS">Establishment type</div>
               <div className="align-CB-PS p-0">
                 <label
-                  className="col-md-6 col-12 content-CB-PS my-3"
+                  className="col-md-6 col-12 content-CB-PS my-2"
                   style={{ marginLeft: "0px" }}
                 >
-                  <h6 className="label-CB-PS">Business meetings</h6>
+                  <h6 className="label-CB-PS">Cafe</h6>
                   <input
                     type="radio"
                     name="fav_language"
@@ -784,94 +675,10 @@ function AddOutletItem(props) {
                 </label>
 
                 <label
-                  className="col-md-6  col-12 content-CB-PS my-3"
+                  className="col-md-6  col-12 content-CB-PS my-2"
                   style={{ marginLeft: "0px" }}
                 >
-                  <h6 className="label-CB-PS"> Families with Children's</h6>
-                  <input
-                    type="radio"
-                    name="fav_language"
-                    onChange={(e) => setRestaurent(e.target.checked)}
-                  />
-                  <span className="checkbox-CB-PS"></span>
-                </label>
-                <label
-                  className="col-md-6  col-12 content-CB-PS my-3"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Hidden Jems</h6>
-                  <input
-                    type="radio"
-                    name="fav_language"
-                    onChange={(e) => setRestaurent(e.target.checked)}
-                  />
-                  <span className="checkbox-CB-PS"></span>
-                </label>
-                <label
-                  className="col-md-6  col-12 content-CB-PS my-3"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Hot new restaurant</h6>
-                  <input
-                    type="radio"
-                    name="fav_language"
-                    onChange={(e) => setRestaurent(e.target.checked)}
-                  />
-                  <span className="checkbox-CB-PS"></span>
-                </label>
-                <label
-                  className="col-md-6  col-12 content-CB-PS my-3"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Kids</h6>
-                  <input
-                    type="radio"
-                    name="fav_language"
-                    onChange={(e) => setRestaurent(e.target.checked)}
-                  />
-                  <span className="checkbox-CB-PS"></span>
-                </label>
-                <label
-                  className="col-md-6  col-12 content-CB-PS my-3"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Large Group</h6>
-                  <input
-                    type="radio"
-                    name="fav_language"
-                    onChange={(e) => setRestaurent(e.target.checked)}
-                  />
-                  <span className="checkbox-CB-PS"></span>
-                </label>
-                <label
-                  className="col-md-6  col-12 content-CB-PS my-3"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Local Cuisine</h6>
-                  <input
-                    type="radio"
-                    name="fav_language"
-                    onChange={(e) => setRestaurent(e.target.checked)}
-                  />
-                  <span className="checkbox-CB-PS"></span>
-                </label>
-                <label
-                  className="col-md-6  col-12 content-CB-PS my-3"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">scenic view</h6>
-                  <input
-                    type="radio"
-                    name="fav_language"
-                    onChange={(e) => setRestaurent(e.target.checked)}
-                  />
-                  <span className="checkbox-CB-PS"></span>
-                </label>
-                <label
-                  className="col-md-6  col-12 content-CB-PS my-3"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Special Occasions</h6>
+                  <h6 className="label-CB-PS">Restaurant</h6>
                   <input
                     type="radio"
                     name="fav_language"
@@ -881,8 +688,206 @@ function AddOutletItem(props) {
                 </label>
               </div>
             </div>
-            <div className="dropDown-block-Outlet row" id="margin-20-TB">
+            <div className="dropDown-block-Outlet col-sm-6 col-12">
+              <div className="label-PS mt-3">
+                {" "}
+                What meal does this restaurant Serve
+              </div>
+              <div className="align-CB-PS p-0">
+                <label
+                  className="col-md-6 col-12 content-CB-PS my-2"
+                  style={{ marginLeft: "0px" }}
+                >
+                  <h6 className="label-CB-PS">Breakfast</h6>
+                  <input
+                    type="checkbox"
+                    name="r_serve[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
 
+                <label
+                  className="col-md-6 col-12 content-CB-PS my-2"
+                  style={{ marginLeft: "0px" }}
+                >
+                  <h6 className="label-CB-PS">Lunch</h6>
+                  <input
+                    type="checkbox"
+                    name="r_serve[]"
+                    onChange={(e) => setDelivery(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+
+                <label
+                  className="col-md-6 col-12 content-CB-PS my-2"
+                  style={{ marginLeft: "0px" }}
+                >
+                  <h6 className="label-CB-PS">Drinks</h6>
+                  <input
+                    type="checkbox"
+                    name="r_serve[]"
+                    onChange={(e) => setDelivery(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+
+                <label
+                  className="col-md-6 col-12 content-CB-PS my-2"
+                  style={{ marginLeft: "0px" }}
+                >
+                  <h6 className="label-CB-PS">Buffet /Brunch</h6>
+                  <input
+                    type="checkbox"
+                    name="r_serve[]"
+                    onChange={(e) => setDelivery(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+
+                <label
+                  className="col-md-6 col-12 content-CB-PS my-2"
+                  style={{ marginLeft: "0px" }}
+                >
+                  <h6 className="label-CB-PS">Dinner</h6>
+                  <input
+                    type="checkbox"
+                    name="r_serve[]"
+                    onChange={(e) => setDelivery(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+
+                <label
+                  className="col-md-6 col-12 content-CB-PS my-2"
+                  style={{ marginLeft: "0px" }}
+                >
+                  <h6 className="label-CB-PS">Late Night</h6>
+                  <input
+                    type="checkbox"
+                    name="r_serve[]"
+                    onChange={(e) => setDelivery(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+            </div>
+            <div className="dropDown-block-Outlet col-sm-6 col-12">
+              <div className="label-PS mt-3">What is this restaurant Good for</div>
+              <div className="align-CB-PS p-0">
+                <label
+                  className="col-md-6 col-12 content-CB-PS my-2"
+                  style={{ marginLeft: "0px" }}
+                >
+                  <h6 className="label-CB-PS">Business meetings</h6>
+                  <input
+                    type="checkbox"
+                    name="r_good[]"
+                    onChange={(e) => setCafe(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+
+                <label
+                  className="col-md-6  col-12 content-CB-PS my-2"
+                  style={{ marginLeft: "0px" }}
+                >
+                  <h6 className="label-CB-PS"> Families with Children's</h6>
+                  <input
+                    type="checkbox"
+                    name="r_good[]"
+                    onChange={(e) => setRestaurent(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+                <label
+                  className="col-md-6  col-12 content-CB-PS my-2"
+                  style={{ marginLeft: "0px" }}
+                >
+                  <h6 className="label-CB-PS">Hidden Jems</h6>
+                  <input
+                    type="checkbox"
+                    name="r_good[]"
+                    onChange={(e) => setRestaurent(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+                <label
+                  className="col-md-6  col-12 content-CB-PS my-2"
+                  style={{ marginLeft: "0px" }}
+                >
+                  <h6 className="label-CB-PS">Hot new restaurant</h6>
+                  <input
+                    type="checkbox"
+                    name="r_good[]"
+                    onChange={(e) => setRestaurent(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+                <label
+                  className="col-md-6  col-12 content-CB-PS my-2"
+                  style={{ marginLeft: "0px" }}
+                >
+                  <h6 className="label-CB-PS">Kids</h6>
+                  <input
+                    type="checkbox"
+                    name="r_good[]"
+                    onChange={(e) => setRestaurent(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+                <label
+                  className="col-md-6  col-12 content-CB-PS my-2"
+                  style={{ marginLeft: "0px" }}
+                >
+                  <h6 className="label-CB-PS">Large Group</h6>
+                  <input
+                    type="checkbox"
+                    name="r_good[]"
+                    onChange={(e) => setRestaurent(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+                <label
+                  className="col-md-6  col-12 content-CB-PS my-2"
+                  style={{ marginLeft: "0px" }}
+                >
+                  <h6 className="label-CB-PS">Local Cuisine</h6>
+                  <input
+                    type="checkbox"
+                    name="r_good[]"
+                    onChange={(e) => setRestaurent(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+                <label
+                  className="col-md-6  col-12 content-CB-PS my-2"
+                  style={{ marginLeft: "0px" }}
+                >
+                  <h6 className="label-CB-PS">scenic view</h6>
+                  <input
+                    type="checkbox"
+                    name="r_good[]"
+                    onChange={(e) => setRestaurent(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+                <label
+                  className="col-md-6  col-12 content-CB-PS my-2"
+                  style={{ marginLeft: "0px" }}
+                >
+                  <h6 className="label-CB-PS">Special Occasions</h6>
+                  <input
+                    type="checkbox"
+                    name="r_good[]"
+                    onChange={(e) => setRestaurent(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+            </div>
+            <div className="dropDown-block-Outlet row" id="margin-20-TB">
               {/* Restaurant Description */}
               <div className="Section-PS px-0">
                 <div className="col-12">

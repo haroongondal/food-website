@@ -149,8 +149,8 @@
   justify-items: center;
 }
 .label-CB-PS {
-  font-size: 12px;
-  margin-bottom: -24px;
+  font-size: 14px;
+  margin-bottom: -17px;
   color: #06386c;
 }
 .content-CB-PS input[type="radio"] {
@@ -160,8 +160,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 12px;
-  width: 12px;
+  height: 14px;
+  width: 14px;
   background-color: white;
   border-radius: 3px;
   border: 1px solid #06386c;
@@ -300,7 +300,7 @@
 .PS-textArea {
   width: 100%;
   border: 1px solid rgb(6 56 108 / 50%);
-  background: rgba(6, 56, 108, 0.1);
+  /* background: rgba(6, 56, 108, 0.1); */
   resize: none;
   border-radius: 5px;
   font-size: 12px;
@@ -427,7 +427,7 @@
 .PS-textArea {
   width: 100%;
   border: 1px solid rgb(6 56 108 / 50%);
-  background: rgba(6, 56, 108, 0.1);
+  /* background: rgba(6, 56, 108, 0.1); */
   resize: none;
   border-radius: 5px;
   font-size: 14px;
