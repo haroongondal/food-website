@@ -91,7 +91,7 @@
 .restaurent_item .rate-for-ratings-section > span {
   position: absolute;
   right: -75px;
-  top: 7px;
+  top: 9px;
   font-size: 13px;
   color: black;
   font-weight: 500;
@@ -239,7 +239,7 @@
     overflow: hidden;
     margin: 0px;
     margin-bottom: 10px;
-    margin-top: 23px;
+    margin-top: 6px;
     background-color: #fff;
     cursor: pointer;
   }

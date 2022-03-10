@@ -8,8 +8,8 @@
 @media screen and (min-width: 320px) {
   .marginMain {
     padding: 0px 0px 0px 12px;
-    padding-top: 150px;
-    margin: 0 auto;
+    padding-top: 90px;
+    margin: 0 auto 97px auto;
   }
 }
 @media screen and (min-width: 576px) {

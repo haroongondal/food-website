@@ -261,7 +261,7 @@
   .Section-PS {
     padding: 0px 18px;
     margin: 0 0 5% 0;
-    display: block;
+    display: flex;
     flex-wrap: wrap;
   }
   .verify-btn {

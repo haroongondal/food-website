@@ -6,7 +6,7 @@ import ReactStars from "react-stars";
 export default function ResLikeItem() {
   return (
     <div className="box-restaurent-3rd-page">
-      <Link to="/Dashboard">
+      <Link to="/RestaurentDetailsPage/1">
         {/* img-box */}
         <div className="slide-img-restaurent-3rd-page">
           <img alt="4" src={restaurentImage} />

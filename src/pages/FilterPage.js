@@ -499,7 +499,9 @@ function FilterPage(props) {
           </div>
         </div>
       </div>
-      <Footer />
+      <div className="d-md-block d-none">
+        <Footer />
+      </div>
     </div>
   );
 }

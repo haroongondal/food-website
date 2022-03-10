@@ -6,7 +6,7 @@
   }
   .main-section {
     display: flex;
-    margin-top: 85px;
+    margin-top: 90px;
     text-rendering: optimizespeed;
     display: -ms-flexbox;
     -ms-flex-flow: row wrap;
@@ -15,6 +15,7 @@
     flex-flow: row wrap;
     -ms-flex-line-pack: start;
     align-content: flex-start;
+    margin-bottom: 50px;
   }
   .right-section {
     width: 100%;

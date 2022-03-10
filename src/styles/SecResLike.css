@@ -28,7 +28,11 @@
     margin-top: 20px;
   }
 }
-
+@media screen and (max-width:767px){
+  .restaurent_detail_page{
+    margin-bottom: 60px;
+  }
+}
 @media screen and (min-width: 992px) {
   .border-like-restaurents {
     background-color: #fff;

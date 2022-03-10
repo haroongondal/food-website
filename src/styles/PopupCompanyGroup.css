@@ -63,6 +63,9 @@
     min-width: -moz-fit-content;
     min-width: fit-content;
   }
+  .col-12 .form-dropDown-M {
+    max-width: 100%;
+  }
   .form-dropDown-M .form-input-dropDown {
     display: flex;
     align-items: center;
