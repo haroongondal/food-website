@@ -206,7 +206,7 @@ function AddOutletItem(props) {
             {/* Fracade Image */}
             <div className="dropDown-block-Outlet">
               <span className="label-dropDown-block">Fracade Image</span>
-              <div className="dropDown-item" id="margin-10-T">
+              <div className="" id="margin-10-T">
                 <ImageUploader
                   withIcon={true}
                   buttonText="Choose image"
@@ -220,7 +220,7 @@ function AddOutletItem(props) {
             {/* Kitchen Image */}
             <div className="dropDown-block-Outlet">
               <span className="label-dropDown-block">Kitchen Image</span>
-              <div className="dropDown-item" id="margin-10-T">
+              <div className="" id="margin-10-T">
                 <ImageUploader
                   withIcon={true}
                   buttonText="Choose image"
@@ -236,7 +236,7 @@ function AddOutletItem(props) {
             {/* Dinning Image */}
             <div className="dropDown-block-Outlet">
               <span className="label-dropDown-block">Dinning Image</span>
-              <div className="dropDown-item" id="margin-10-T">
+              <div className="" id="margin-10-T">
                 <ImageUploader
                   withIcon={true}
                   buttonText="Choose image"
@@ -250,7 +250,7 @@ function AddOutletItem(props) {
             {/* Locality Image */}
             <div className="dropDown-block-Outlet">
               <span className="label-dropDown-block">Locality Image</span>
-              <div className="dropDown-item" id="margin-10-T">
+              <div className="" id="margin-10-T">
                 <ImageUploader
                   withIcon={true}
                   buttonText="Choose image"
@@ -265,8 +265,8 @@ function AddOutletItem(props) {
             {/* City */}
             <div className="dropDown-block-Outlet col-sm-6 col-12">
               <span className="label-dropDown-block">City</span>
-              <div className="dropDown-item" id="margin-10-T">
-                <div className="border-dropDown-block">
+              <div className="" id="margin-10-T">
+                <div className="">
                   <div className="content-dropDown">
                     <select onChange={(e) => setCity(e.target.value)}>
                       <option className="option">City</option>
@@ -283,9 +283,9 @@ function AddOutletItem(props) {
             {/* Area */}
             <div className="dropDown-block-Outlet col-sm-6 col-12">
               <span className="label-dropDown-block">Area</span>
-              <div className="dropDown-item" id="margin-10-T">
-                <div className="border-dropDown-block">
-                  <div className="content-dropDown">
+              <div className="" id="margin-10-T">
+                <div className="">
+                  <div className="position-unset position-sm-relative ">
                     <form action="#" className="form-dropDown-M">
                       <div className="form-input-dropDown">
                         <input
@@ -301,12 +301,14 @@ function AddOutletItem(props) {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="border-popup-city row">
             {/* GSTN */}
             <div className="dropDown-block-Outlet col-sm-6 col-12">
               <span className="label-dropDown-block">GSTN</span>
-              <div className="dropDown-item" id="margin-10-T">
-                <div className="border-dropDown-block">
-                  <div className="content-dropDown">
+              <div className="" id="margin-10-T">
+                <div className="">
+                  <div className="position-unset position-sm-relative ">
                     <form action="#" className="form-dropDown-M">
                       <div className="form-input-dropDown">
                         <input
@@ -325,9 +327,9 @@ function AddOutletItem(props) {
             {/* Zip/Pincode */}
             <div className="dropDown-block-Outlet col-sm-6 col-12">
               <span className="label-dropDown-block">Zip/Pincode</span>
-              <div className="dropDown-item" id="margin-10-T">
-                <div className="border-dropDown-block">
-                  <div className="content-dropDown">
+              <div className="" id="margin-10-T">
+                <div className="">
+                  <div className="position-unset position-sm-relative ">
                     <form action="#" className="form-dropDown-M">
                       <div className="form-input-dropDown">
                         <input
@@ -343,13 +345,15 @@ function AddOutletItem(props) {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="border-popup-city row">
             {/* Address */}
             {/* Logitude */}
             <div className="dropDown-block-Outlet col-sm-6 col-12">
               <span className="label-dropDown-block">Logitude</span>
-              <div className="dropDown-item" id="margin-10-T">
-                <div className="border-dropDown-block">
-                  <div className="content-dropDown">
+              <div className="" id="margin-10-T">
+                <div className="">
+                  <div className="position-unset position-sm-relative ">
                     <form action="#" className="form-dropDown-M">
                       <div className="form-input-dropDown">
                         <input
@@ -368,9 +372,9 @@ function AddOutletItem(props) {
             {/* Latitude */}
             <div className="dropDown-block-Outlet col-sm-6 col-12">
               <span className="label-dropDown-block">Latitude</span>
-              <div className="dropDown-item" id="margin-10-T">
-                <div className="border-dropDown-block">
-                  <div className="content-dropDown">
+              <div className="" id="margin-10-T">
+                <div className="">
+                  <div className="position-unset position-sm-relative ">
                     <form action="#" className="form-dropDown-M">
                       <div className="form-input-dropDown">
                         <input
@@ -386,11 +390,13 @@ function AddOutletItem(props) {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="border-popup-city row">
             <div className="dropDown-block col-sm-6 col-12">
               <span className="label-dropDown-block">Address</span>
-              <div className="dropDown-item" id="margin-10-T">
-                <div className="border-dropDown-block">
-                  <div className="content-dropDown">
+              <div className="" id="margin-10-T">
+                <div className="">
+                  <div className="position-unset position-sm-relative ">
                     <form action="#" className="form-dropDown-M">
                       <div className="form-input-dropDown">
                         <input
@@ -409,9 +415,9 @@ function AddOutletItem(props) {
             {/* Phone Number */}
             <div className="dropDown-block-Outlet col-sm-6 col-12">
               <span className="label-dropDown-block">Phone Number</span>
-              <div className="dropDown-item" id="margin-10-T">
-                <div className="border-dropDown-block">
-                  <div className="content-dropDown">
+              <div className="" id="margin-10-T">
+                <div className="">
+                  <div className="position-unset position-sm-relative ">
                     <form action="#" className="form-dropDown-M">
                       <div className="form-input-dropDown">
                         <input
@@ -427,107 +433,37 @@ function AddOutletItem(props) {
                 </div>
               </div>
             </div>
-            <div className="dropDown-block-Outlet col-12">
-              <div className=" align-checkbox-city">
-                <label className="content-CB-PS" style={{ marginLeft: "0px" }}>
-                  <h6 className="label-CB-PS">
-                    Yes, I would like to receive important updates and
-                    notifications from FoodApp on my WhatsApp
-                  </h6>
-                  <input
-                    type="checkbox"
-                    // onChange={(e) => setWhatsAppCheckbox(e.target.checked)}
-                    required
-                  />
-                  <span className="checkbox-CB-PS"></span>
-                </label>
-              </div>
+          </div>
+          <div className="border-popup-city dropDown-block-Outlet w-100">
+            <div className=" align-checkbox-city">
+              <label className="content-CB-PS" style={{ marginLeft: "0px" }}>
+                <h6 className="label-CB-PS">
+                  Yes, I would like to receive important updates and
+                  notifications from FoodApp on my WhatsApp
+                </h6>
+                <input
+                  type="checkbox"
+                  // onChange={(e) => setWhatsAppCheckbox(e.target.checked)}
+                  required
+                />
+                <span className="checkbox-CB-PS"></span>
+              </label>
             </div>
-            {/* Outlet Details */}
-            <div className="dropDown-block-Outlet">
-              <h4 className="sectionHeading my-2">Restaurent Details</h4>
-            </div>
-            <div className="border-popup-city row">
-              {/* Email */}
-              <div className="dropDown-block-Outlet col-sm-6 col-12">
-                <span className="label-dropDown-block">Email</span>
-                <div className="dropDown-item" id="margin-10-T">
-                  <div className="border-dropDown-block">
-                    <div className="content-dropDown">
-                      <form action="#" className="form-dropDown-M">
-                        <div className="form-input-dropDown">
-                          <input
-                            type="email"
-                            placeholder="Enter Email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                          />
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Password */}
-              <div className="dropDown-block-Outlet col-sm-6 col-12">
-                <span className="label-dropDown-block">Password</span>
-                <div className="dropDown-item" id="margin-10-T">
-                  <div className="border-dropDown-block">
-                    <div className="content-dropDown">
-                      <form action="#" className="form-dropDown-M">
-                        <div className="form-input-dropDown">
-                          <input
-                            type="password"
-                            placeholder="Enter Password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            required
-                          />
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Pin */}
-            <div className="border-popup-city row">
-              <div className="dropDown-block-Outlet col-sm-6 col-12">
-                <span className="label-dropDown-block">PIN</span>
-                <div className="dropDown-item" id="margin-10-T">
-                  <div className="border-dropDown-block">
-                    <div className="content-dropDown">
-                      <form action="#" className="form-dropDown-M">
-                        <div className="form-input-dropDown">
-                          <input
-                            type="number"
-                            placeholder="Enter PIN"
-                            value={pin}
-                            onChange={(e) => setPin(e.target.value)}
-                            required
-                          />
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Restaurant Details */}
-            <div className="dropDown-block-Outlet">
-              <h4 className="sectionHeading my-2">Restaurent Details</h4>
-            </div>
+          </div>
+          {/* Restaurant Details */}
+          <div className="border-popup-city dropDown-block-Outlet">
+            <h4 className="sectionHeading my-2">Restaurent Details</h4>
+          </div>
+          <div className="border-popup-city row">
             <div className="dropDown-block-Outlet col-sm-6 col-12">
               {/* Restaurent Name */}
 
               <span className="label-dropDown-block">
                 Enter Restaurent Name
               </span>
-              <div className="dropDown-item" id="margin-10-T">
-                <div className="border-dropDown-block">
-                  <div className="content-dropDown">
+              <div className="" id="margin-10-T">
+                <div className="">
+                  <div className="position-unset position-sm-relative ">
                     <form action="#" className="form-dropDown-M">
                       <div className="form-input-dropDown">
                         <input
@@ -548,9 +484,9 @@ function AddOutletItem(props) {
               <span className="label-dropDown-block">
                 Average Price For 2 persons
               </span>
-              <div className="dropDown-item" id="margin-10-T">
-                <div className="border-dropDown-block">
-                  <div className="content-dropDown">
+              <div className="" id="margin-10-T">
+                <div className="">
+                  <div className="position-unset position-sm-relative ">
                     <form action="#" className="form-dropDown-M">
                       <div className="form-input-dropDown">
                         <input
@@ -567,13 +503,15 @@ function AddOutletItem(props) {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="border-popup-city row">
             <div className="dropDown-block-Outlet col-sm-6 col-12">
               <span className="label-dropDown-block">
                 Restaurent Opening Time
               </span>
-              <div className="dropDown-item" id="margin-10-T">
-                <div className="border-dropDown-block">
-                  <div className="content-dropDown">
+              <div className="" id="margin-10-T">
+                <div className="">
+                  <div className="position-unset position-sm-relative ">
                     <form action="#" className="form-dropDown-M">
                       <div className="form-input-dropDown">
                         <input
@@ -593,8 +531,8 @@ function AddOutletItem(props) {
               <span className="label-dropDown-block">
                 Restaurent Closing Time
               </span>
-              <div className="dropDown-item" id="margin-10-T">
-                <div className="border-dropDown-block">
+              <div className="" id="margin-10-T">
+                <div className="">
                   <div className="content-dropDown">
                     <form action="#" className="form-dropDown-M">
                       <div className="form-input-dropDown">
@@ -612,6 +550,8 @@ function AddOutletItem(props) {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="border-popup-city row">
             <div className="dropDown-block-Outlet col-sm-6 col-12 py-3">
               <button
                 className="select-cuisine-btn"
@@ -628,11 +568,13 @@ function AddOutletItem(props) {
                 Select Features
               </button>
             </div>
+          </div>
+          <div className="border-popup-city row">
             <div className="dropDown-block-Outlet col-sm-6 col-12">
               <div className="label-PS">Delivery Type</div>
               <div className="align-CB-PS p-0">
                 <label
-                  className="col-md-6 col-12 content-CB-PS my-2"
+                  className="col-md-6 col-12 content-CB-PS my-3"
                   style={{ marginLeft: "0px" }}
                 >
                   <h6 className="label-CB-PS">Take Away</h6>
@@ -645,7 +587,7 @@ function AddOutletItem(props) {
                 </label>
 
                 <label
-                  className="col-md-6 col-12 content-CB-PS my-2"
+                  className="col-md-6 col-12 content-CB-PS my-3"
                   style={{ marginLeft: "0px" }}
                 >
                   <h6 className="label-CB-PS">Home Delivery</h6>
@@ -658,11 +600,11 @@ function AddOutletItem(props) {
                 </label>
               </div>
             </div>
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
+            <div className="dropDown-block-Outlet col-sm-6 col-12 mt-sm-0 mt-3">
               <div className="label-PS">Establishment type</div>
               <div className="align-CB-PS p-0">
                 <label
-                  className="col-md-6 col-12 content-CB-PS my-2"
+                  className="col-md-6 col-12 content-CB-PS my-3"
                   style={{ marginLeft: "0px" }}
                 >
                   <h6 className="label-CB-PS">Cafe</h6>
@@ -675,7 +617,7 @@ function AddOutletItem(props) {
                 </label>
 
                 <label
-                  className="col-md-6  col-12 content-CB-PS my-2"
+                  className="col-md-6  col-12 content-CB-PS mt-sm-3 mt-2"
                   style={{ marginLeft: "0px" }}
                 >
                   <h6 className="label-CB-PS">Restaurant</h6>
@@ -688,8 +630,10 @@ function AddOutletItem(props) {
                 </label>
               </div>
             </div>
+          </div>
+          <div className="border-popup-city row">
             <div className="dropDown-block-Outlet col-sm-6 col-12">
-              <div className="label-PS mt-3">
+              <div className="label-PS mt-sm-3 mt-2">
                 {" "}
                 What meal does this restaurant Serve
               </div>
@@ -774,7 +718,9 @@ function AddOutletItem(props) {
               </div>
             </div>
             <div className="dropDown-block-Outlet col-sm-6 col-12">
-              <div className="label-PS mt-3">What is this restaurant Good for</div>
+              <div className="label-PS mt-3">
+                What is this restaurant Good for
+              </div>
               <div className="align-CB-PS p-0">
                 <label
                   className="col-md-6 col-12 content-CB-PS my-2"
@@ -887,7 +833,8 @@ function AddOutletItem(props) {
                 </label>
               </div>
             </div>
-            <div className="dropDown-block-Outlet row" id="margin-20-TB">
+          </div>
+          <div className="border-popup-city row">
               {/* Restaurant Description */}
               <div className="Section-PS px-0">
                 <div className="col-12">
@@ -902,7 +849,6 @@ function AddOutletItem(props) {
                   ></textarea>
                 </div>
               </div>
-            </div>
             {/* Popup Select-Cuisines*/}
             <ForDevice deviceName={["tablet", "desktop"]}>
               <Modal
@@ -914,7 +860,6 @@ function AddOutletItem(props) {
                   modal: {
                     "margin-top": "80px",
                     "max-width": "535px",
-                    width: "100%",
                     padding: "0px",
                     borderRadius: "23px",
                   },
@@ -958,7 +903,6 @@ function AddOutletItem(props) {
                   modal: {
                     "margin-top": "80px",
                     "max-width": "535px",
-                    width: "100%",
                     padding: "0px",
                     borderRadius: "23px",
                   },
@@ -992,22 +936,21 @@ function AddOutletItem(props) {
               </Modal>
             </ForDevice>
           </div>
-        </div>
-
-        {/* Buttons */}
-        <div className="row m-auto">
-          <div className="col-md-12 d-flex mb-2 pr-0 justify-content-center">
-            <button
-              type="submit"
-              className="blue-btn"
-              onClick={(e) => handleSubmit(e)}
-              style={{ marginRight: "20px" }}
-            >
-              Save
-            </button>
-            {/* <button className="green-btn" onClick={(e) => props.click(e)}>
+          {/* Buttons */}
+          <div className="row m-auto">
+            <div className="col-md-12 d-flex mb-2 pr-0 justify-content-center">
+              <button
+                type="submit"
+                className="blue-btn"
+                onClick={(e) => handleSubmit(e)}
+                style={{ marginRight: "20px" }}
+              >
+                Save
+              </button>
+              {/* <button className="green-btn" onClick={(e) => props.click(e)}>
               Cancel
             </button> */}
+            </div>
           </div>
         </div>
       </div>

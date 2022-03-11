@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/PopupNewOutlet.css";
+import "../styles/AddNewOutlet.css";
 import arrow from "../images/down_arrow.svg";
 
 export default function PopupNewOutlet() {

@@ -12,7 +12,7 @@
     font-size: 14px;
     font-weight: bold;
   }
-  .sectionHeading{
+  .sectionHeading {
     color: #06386c;
     font-weight: bold;
     text-decoration: underline;
@@ -56,7 +56,7 @@
   }
   .dropDown-block-Outlet {
     inline-size: auto;
-    margin: 15px 0px;
+    /* margin: 15px 0px; */
     text-align: left;
   }
   #margin-top-5 {
@@ -129,7 +129,7 @@
 } */
 @media only screen and (min-width: 992px) {
   .add-outlet-item {
-    margin-bottom: 85px;
+    margin-bottom: 0px;
   }
   .ET-Flex {
     align-items: center;
@@ -198,7 +198,7 @@
   }
   .dropDown-block-Outlet {
     inline-size: auto;
-    margin: 15px 0px;
+    /* margin: 15px 0px; */
     text-align: left;
   }
   .border-days {
@@ -235,4 +235,20 @@
   .add-outlet-item .fileContainer {
     height: 250px;
   }
+}
+@media screen and (min-width: 1300px) {
+  .add-outlet-item .fileUploader {
+    width: 500px;
+    height: 250px;
+  }
+}
+@media (min-width: 576px) {
+  .col-sm-6 {
+    flex: 0 0 auto;
+    width: 50% !important;
+  }
+}
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
 }

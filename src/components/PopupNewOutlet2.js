@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import arrow from "../images/down_arrow.svg";
-import "../styles/PopupNewOutlet.css";
+import "../styles/AddNewOutlet.css";
 import ImageUpload from "image-upload-react";
 import ImageUploader from "react-images-upload";
 
