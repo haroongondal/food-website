@@ -40,7 +40,7 @@ function ConsumerLandingPage() {
         <MobileTopNavBar />
         <NavBar ShouldHideSearch={true} />
         <DashboardConsumer />
-        <div className="marginMain">
+        <div className="marginMain mb-0">
           {/* <HeadingHiFoodie></HeadingHiFoodie> */}
           {/* <Carousel responsive={CarouselNearMe} removeArrowOnDeviceType={["tablet", "mobile"]} partialVisible={true}>
       <NearMe></NearMe>

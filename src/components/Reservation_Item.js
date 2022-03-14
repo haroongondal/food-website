@@ -70,9 +70,9 @@ export default function ReservationItem() {
                         <div className="border-find-table">
                             <h6>Find a table</h6>
                         </div>
-                        <h6 className="text-booked-reservation">Booked <span>148</span> times today</h6>
+                        <h6 className="text-booked-reservation d-none">Booked <span>148</span> times today</h6>
                         <hr/>
-                        <h6 className="text-special-offers">Special offers available. <span>See details</span></h6>
+                        <h6 className="text-special-offers d-none">Special offers available. <span>See details</span></h6>
                     </div>
                 </div>
             </div> 
