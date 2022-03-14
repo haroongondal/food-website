@@ -231,12 +231,12 @@ function FilterPage(props) {
                     Dinoute Passport
                   </div>
                   <div className="px-3 py-1 mx-2 rounded-pill">Super Saver</div>
-                  <div className="px-3 py-1 mx-2 rounded-pill">Dineout Pay</div>
+                  <div className="px-3 py-1 mx-2 rounded-pill">DeaseApp Pay</div>
                   <div className="px-3 py-1 mx-2 rounded-pill">
                     Safe to Eat out
                   </div>
                   <div className="px-3 py-1 mx-2 rounded-pill">Super Saver</div>
-                  <div className="px-3 py-1 mx-2 rounded-pill">Dineout Pay</div>
+                  <div className="px-3 py-1 mx-2 rounded-pill">DeaseApp Pay</div>
                 </div>
 
                 {/* </Carousel> */}

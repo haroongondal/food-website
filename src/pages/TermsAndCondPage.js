@@ -26,10 +26,10 @@ function TermsAndCondPage() {
           <h4>User Agreement</h4>
           <h4>Updated on 25/03/2021</h4>
           <p>
-            These terms of use (Terms) constitute a legally binding agreement between you and the company regarding your use of the web site i.e. www.dineout.co.in (“Dineout”) and it’s mobile applications offered by the company including but not limited to delivery of content via the Site, any mobile or internet connected device or otherwise (the "the Service"). By accessing the site or service and/or by clicking "I agree", you agree to be bound by these terms. “User” or “You” means any person who access or avail this site of the company for the purpose of hosting, publishing, sharing, transacting, displaying or uploading information or views and includes other persons jointly participating in using the site of the company. You hereby represent and warrant to the company that you are at least eighteen (18) years of age or above and are capable of entering, performing and adhering to these Terms and that you agree to be bound by the following terms and conditions. While individuals under the age of 18 may utilize Dineout services, they shall do so only with the involvement & guidance of their parents and / or legal guardians, under such Parent / Legal guardian’s registered account. You agree to register prior to uploading any content and / or comment and any other use or services of this site and provide your details including but not limited to complete name, age, email address, residential address, contact number.
+            These terms of use (Terms) constitute a legally binding agreement between you and the company regarding your use of the web site i.e. www.DeaseApp.co.in (“DeaseApp”) and it’s mobile applications offered by the company including but not limited to delivery of content via the Site, any mobile or internet connected device or otherwise (the "the Service"). By accessing the site or service and/or by clicking "I agree", you agree to be bound by these terms. “User” or “You” means any person who access or avail this site of the company for the purpose of hosting, publishing, sharing, transacting, displaying or uploading information or views and includes other persons jointly participating in using the site of the company. You hereby represent and warrant to the company that you are at least eighteen (18) years of age or above and are capable of entering, performing and adhering to these Terms and that you agree to be bound by the following terms and conditions. While individuals under the age of 18 may utilize DeaseApp services, they shall do so only with the involvement & guidance of their parents and / or legal guardians, under such Parent / Legal guardian’s registered account. You agree to register prior to uploading any content and / or comment and any other use or services of this site and provide your details including but not limited to complete name, age, email address, residential address, contact number.
           </p>
           <p>
-            Dineout may add to or change or update these Terms of Use, from time to time entirely at its own discretion. You are responsible for checking these Terms of Use periodically to remain in compliance with these terms. Your use of a site after any amendment to the Terms of Use shall constitute your acceptance of these terms and you also agree to be bound by any such changes/revisions.
+            DeaseApp may add to or change or update these Terms of Use, from time to time entirely at its own discretion. You are responsible for checking these Terms of Use periodically to remain in compliance with these terms. Your use of a site after any amendment to the Terms of Use shall constitute your acceptance of these terms and you also agree to be bound by any such changes/revisions.
           </p>
           <h4>Changes</h4>
           <p>
@@ -52,13 +52,13 @@ function TermsAndCondPage() {
           </p>
           <h4>Sharing of Personal Information</h4>
           <p>
-            Dineout is designed to help you find the best of restaurants, nightlife, events and movies around you and your city. In order to do this, Dineout requires the use of such information including, but not limited to, your email, password and or other informations that was used while Signing Up with the services. Dineout offers Sign Up process with our own sign up system and other platforms such as Facebook and Google+.
+            DeaseApp is designed to help you find the best of restaurants, nightlife, events and movies around you and your city. In order to do this, DeaseApp requires the use of such information including, but not limited to, your email, password and or other informations that was used while Signing Up with the services. DeaseApp offers Sign Up process with our own sign up system and other platforms such as Facebook and Google+.
           </p>
           <p>
-            Dineout uses Facebook Connect and Google+ platforms as a medium for signing up only. The user data collected by Dineout shall only be through the above mediums which will be be provided by the intended user through their Facebook or Google+ profile, no other data shall be collected/used by Dineout apart from those that was permitted during Sign Up process.
+            DeaseApp uses Facebook Connect and Google+ platforms as a medium for signing up only. The user data collected by DeaseApp shall only be through the above mediums which will be be provided by the intended user through their Facebook or Google+ profile, no other data shall be collected/used by DeaseApp apart from those that was permitted during Sign Up process.
           </p>
           <p>
-            However, kindly note that the manner in which Facebook and Google+ uses, stores and discloses your information is governed solely by its policies, and TIL/Dineout bears no liabilities/responsibility for its privacy practices and/or other actions of any third-party site or service that may be enabled within the service.
+            However, kindly note that the manner in which Facebook and Google+ uses, stores and discloses your information is governed solely by its policies, and TIL/DeaseApp bears no liabilities/responsibility for its privacy practices and/or other actions of any third-party site or service that may be enabled within the service.
           </p>
           <p>
             For certain services such as email, personal web pages, contests and shopping, signing up by the visitor is required. To sign up for these services you have to open an account by completing the signing up process (i.e. by providing us with current, complete and accurate information as prompted by the applicable registration form). You also will choose a password. You are entirely responsible for maintaining the confidentiality of your password and account. By Signing Up, you agree to the following terms in addition to any other specific terms which shall be posted at an appropriate location of the Site. Each sign up is for a single individual user only. To access these
@@ -66,11 +66,11 @@ function TermsAndCondPage() {
           </p>
           <div><ul>
             <li>Any other person sharing your account and password;</li>
-            <li>Any part of the site being cached in proxy servers and accessed by individuals who have not registered with Dineout as users of the site; or</li>
+            <li>Any part of the site being cached in proxy servers and accessed by individuals who have not registered with DeaseApp as users of the site; or</li>
             <li>Access through a single account and password being made available to multiple users on a network.</li>
           </ul>
           <p>
-            If Dineout reasonably believe that an account and password is being used / misused in any manner, Dineout shall reserve the right to cancel access rights immediately without notice, and block access to all users from that IP address.
+            If DeaseApp reasonably believe that an account and password is being used / misused in any manner, DeaseApp shall reserve the right to cancel access rights immediately without notice, and block access to all users from that IP address.
           </p>
         </div>
         </div>

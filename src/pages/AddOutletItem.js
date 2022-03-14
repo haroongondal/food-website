@@ -9,6 +9,8 @@ import PopupSelectFeatures from "../components/PopupSelectFeatures";
 import { ForDevice } from "media-query-react";
 import Modal from "react-responsive-modal";
 import CancelSvgIcon from "../components/CancelSvgIcon";
+import useFetch from "../Utils/useFetch";
+import Skeleton from "react-loading-skeleton";
 
 function AddOutletItem(props) {
   const [email, setEmail] = useState("");
@@ -27,6 +29,13 @@ function AddOutletItem(props) {
   const [imgKitchen, setImgKitchen] = useState("");
   const [imgDinning, setImgDinning] = useState("");
   const [imgLocality, setImgLocality] = useState("");
+  const { data, isPending, error } = useFetch(
+    "https://api.masairapp.com/api/Lov/GetCusine"
+  );
+
+  const [subCusine, setSubCusine] = useState("");
+
+  const [cusineId, setCusineId] = useState("-1");
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -202,65 +211,71 @@ function AddOutletItem(props) {
     <div className="add-outlet-item">
       <div className="align-Popup">
         <div className="border-popup-city">
-          <div className="align-popOutlet-images border-popup-city flex-sm-row flex-column justify-content-between align-items-center">
-            {/* Fracade Image */}
-            <div className="dropDown-block-Outlet">
-              <span className="label-dropDown-block">Fracade Image</span>
-              <div className="" id="margin-10-T">
-                <ImageUploader
-                  withIcon={true}
-                  buttonText="Choose image"
-                  onChange={uploadImageFracade}
-                  imgExtension={[".jpg", ".gif", ".png", ".gif"]}
-                  maxFileSize={5242880}
-                />
+          <div className="row">
+            <div className="col-xl-6 col-12">
+              <div className="align-popOutlet-images border-popup-city flex-sm-row flex-column justify-content-between align-items-center">
+                {/* Fracade Image */}
+                <div className="dropDown-block-Outlet">
+                  <span className="label-dropDown-block">Fracade Image</span>
+                  <div className="" id="margin-10-T">
+                    <ImageUploader
+                      withIcon={true}
+                      buttonText="Choose image"
+                      onChange={uploadImageFracade}
+                      imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+                      maxFileSize={5242880}
+                    />
+                  </div>
+                </div>
+
+                {/* Kitchen Image */}
+                <div className="dropDown-block-Outlet">
+                  <span className="label-dropDown-block">Kitchen Image</span>
+                  <div className="" id="margin-10-T">
+                    <ImageUploader
+                      withIcon={true}
+                      buttonText="Choose image"
+                      onChange={uploadImageKitchen}
+                      imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+                      maxFileSize={5242880}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
+            <div className="col-xl-6 col-12">
+              <div className="align-popOutlet-images border-popup-city flex-sm-row flex-column  justify-content-between align-items-center">
+                {/* Dinning Image */}
+                <div className="dropDown-block-Outlet">
+                  <span className="label-dropDown-block">Dinning Image</span>
+                  <div className="" id="margin-10-T">
+                    <ImageUploader
+                      withIcon={true}
+                      buttonText="Choose image"
+                      onChange={uploadImageDinning}
+                      imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+                      maxFileSize={5242880}
+                    />
+                  </div>
+                </div>
 
-            {/* Kitchen Image */}
-            <div className="dropDown-block-Outlet">
-              <span className="label-dropDown-block">Kitchen Image</span>
-              <div className="" id="margin-10-T">
-                <ImageUploader
-                  withIcon={true}
-                  buttonText="Choose image"
-                  onChange={uploadImageKitchen}
-                  imgExtension={[".jpg", ".gif", ".png", ".gif"]}
-                  maxFileSize={5242880}
-                />
+                {/* Locality Image */}
+                <div className="dropDown-block-Outlet">
+                  <span className="label-dropDown-block">Locality Image</span>
+                  <div className="" id="margin-10-T">
+                    <ImageUploader
+                      withIcon={true}
+                      buttonText="Choose image"
+                      onChange={uploadImageLocality}
+                      imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+                      maxFileSize={5242880}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="align-popOutlet-images border-popup-city flex-sm-row flex-column  justify-content-between align-items-center">
-            {/* Dinning Image */}
-            <div className="dropDown-block-Outlet">
-              <span className="label-dropDown-block">Dinning Image</span>
-              <div className="" id="margin-10-T">
-                <ImageUploader
-                  withIcon={true}
-                  buttonText="Choose image"
-                  onChange={uploadImageDinning}
-                  imgExtension={[".jpg", ".gif", ".png", ".gif"]}
-                  maxFileSize={5242880}
-                />
-              </div>
-            </div>
-
-            {/* Locality Image */}
-            <div className="dropDown-block-Outlet">
-              <span className="label-dropDown-block">Locality Image</span>
-              <div className="" id="margin-10-T">
-                <ImageUploader
-                  withIcon={true}
-                  buttonText="Choose image"
-                  onChange={uploadImageLocality}
-                  imgExtension={[".jpg", ".gif", ".png", ".gif"]}
-                  maxFileSize={5242880}
-                />
-              </div>
-            </div>
-          </div>
           <div className="border-popup-city row">
             {/* City */}
             <div className="dropDown-block-Outlet col-sm-6 col-12">
@@ -448,6 +463,59 @@ function AddOutletItem(props) {
                 />
                 <span className="checkbox-CB-PS"></span>
               </label>
+            </div>
+          </div>
+          {/* Add Menu */}
+          <div className="border-popup-city dropDown-block-Outlet">
+            <h4 className="sectionHeading my-2">Add Menu</h4>
+          </div>
+          <div className="border-popup-city row ">
+            <div className="dropDown-block-Outlet col-sm-6 col-12">
+              <div className="label-PS text-lg-start">Cuisines</div>
+              <div className="dropdown-PS">
+                <select onChange={(e) => setCusineId(e.target.value)}>
+                  {isPending && (
+                    <div>
+                      <Skeleton />
+                    </div>
+                  )}
+                  {error && <div>{error}</div>}
+                  {data &&
+                    data.map((c) => (
+                      <option className="option" value={c.Id}>
+                        {c.Value}
+                      </option>
+                    ))}
+                </select>
+                <span className="Darrow">
+                  <img
+                    alt="down-arrow"
+                    src="/static/media/down_arrow.5b0512cf.svg"
+                  />
+                </span>
+              </div>
+            </div>
+            <div className="dropDown-block-Outlet col-sm-6 col-12">
+              <div className="label-PS text-lg-start">Category Name</div>
+              <input
+                type="text"
+                placeholder="Pizza"
+                onChange={(e) => setSubCusine(e.target.value)}
+                className="input-PS"
+                required
+              />
+            </div>
+            <div className="dropDown-block-Outlet col-12">
+              <span className="label-dropDown-block">Menu Images</span>
+              <div className="" id="margin-10-T">
+                <ImageUploader
+                  withIcon={true}
+                  buttonText="Choose image"
+                  // onChange={uploadImageFracade}
+                  imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+                  maxFileSize={5242880}
+                />
+              </div>
             </div>
           </div>
           {/* Restaurant Details */}
@@ -835,20 +903,20 @@ function AddOutletItem(props) {
             </div>
           </div>
           <div className="border-popup-city row">
-              {/* Restaurant Description */}
-              <div className="Section-PS px-0">
-                <div className="col-12">
-                  <div className="label-PS">Restaurant Description</div>
-                  <textarea
-                    placeholder="Remember, be nice!"
-                    className="PS-textArea"
-                    rows="5"
-                    cols="9"
-                    value={desc}
-                    onChange={(e) => setDesc(e.target.value)}
-                  ></textarea>
-                </div>
+            {/* Restaurant Description */}
+            <div className="Section-PS px-0">
+              <div className="col-12">
+                <div className="label-PS">Restaurant Description</div>
+                <textarea
+                  placeholder="Remember, be nice!"
+                  className="PS-textArea"
+                  rows="5"
+                  cols="9"
+                  value={desc}
+                  onChange={(e) => setDesc(e.target.value)}
+                ></textarea>
               </div>
+            </div>
             {/* Popup Select-Cuisines*/}
             <ForDevice deviceName={["tablet", "desktop"]}>
               <Modal

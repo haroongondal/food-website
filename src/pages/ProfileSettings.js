@@ -37,7 +37,8 @@ export default function ProfileSettings() {
   const [imgSMES, setImgSMES] = useState("");
   const [imgLicence, setImgLicence] = useState("");
   const [gstNo, setGstNo] = useState("");
-
+  const [ReferalEmail, setReferalEmail] = useState(false);
+  console.log("referal email: ", ReferalEmail);
   function handleSubmit(e) {
     e.preventDefault();
     {
@@ -204,7 +205,7 @@ export default function ProfileSettings() {
   };
 
   return (
-    <div>
+    <div className="profile-settings">
       <div className="top-tools">
         <div className="left-tools col-md-12 col-12">
           <button className="dark-blue-btn">Profile Settings</button>
@@ -225,7 +226,7 @@ export default function ProfileSettings() {
 
           <div className="Section-PS">
             {/* FullName */}
-            <div className="col-md-6" id="front-img-padding-R">
+            <div className="col-sm-6 col-12 px-2" id="">
               <div className="label-PS">Enter Outlet Owner full name</div>
               <input
                 type="text"
@@ -238,7 +239,7 @@ export default function ProfileSettings() {
             </div>
 
             {/* Email Address */}
-            <div className="col-md-6 margin-top-5" id="back-img-padding-L">
+            <div className="col-sm-6 col-12 px-2 margin-top-5" id="back-img-padding-L">
               <div className="label-PS">Enter Outlet Owner email address</div>
               <input
                 type="text"
@@ -255,7 +256,7 @@ export default function ProfileSettings() {
             {/* Restaurant Owner ID card */}
 
             {/* (Front) */}
-            <div className="col-md-6 " id="front-img-padding-R">
+            <div className="col-sm-6 col-12 px-2 " id="">
               <div className="label-PS">Restaurant Owner ID card</div>
               <div className="d-flex justify-content-between">
                 <div className="label-PS">(Front)</div>
@@ -285,7 +286,7 @@ export default function ProfileSettings() {
 
             {/* (Back) */}
             <div
-              className="col-md-6 margin-top-5"
+              className="col-sm-6 col-12 px-2 margin-top-5"
               id="back-img-padding-L"
               style={{ alignSelf: "flex-end" }}
             >
@@ -317,7 +318,7 @@ export default function ProfileSettings() {
           </div>
 
           <div className="Section-PS">
-            <div className="col-md-6" id="front-img-padding-R">
+            <div className="col-sm-6 col-12 px-2" id="">
               {/* Radio Button */}
               <div className="radio-PS">
                 <input
@@ -348,11 +349,77 @@ export default function ProfileSettings() {
                 {/* Verify Button */}
                 <button className="verify-btn">Verify</button>
               </div>
+              {/* <div className="label-PS mt-3 mb-0">
+                Write your Referal Email Or Code ?
+              </div>
+              <div className="align-CB-PS p-0">
+                <label
+                  className="col-sm-6 col-12 px-2 col-12 content-CB-PS my-3"
+                  style={{ marginLeft: "0px" }}
+                >
+                  <h6 className="label-CB-PS">Yes</h6>
+                  <input
+                    type="radio"
+                    name="referal"
+                    value="true"
+                    onChange={(e) => setReferalEmail(true)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+
+                <label
+                  className="col-sm-6 col-12 px-2 col-12 content-CB-PS my-3"
+                  style={{ marginLeft: "0px" }}
+                >
+                  <h6 className="label-CB-PS">No</h6>
+                  <input
+                    type="radio"
+                    name="referal"
+                    value="false"
+                    onChange={(e) => setReferalEmail(false)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+                <label
+                  className="col-sm-6 col-12 px-2 col-12 content-CB-PS my-3"
+                  style={{ marginLeft: "0px" }}
+                >
+                  <div className="dropdown-PS">
+                    <span className="CountryCode-PS">
+                      <h6>Enter Email Here</h6>
+                    </span>
+                    <input
+                      type="email"
+                      placeholder="user@mail.com"
+                      className="input-PS"
+                      style={{ paddingLeft: "64px" }}
+                      // value={email}
+                      // onChange={(e) => setGstNo(e.target.value)}
+                      required
+                    />
+                  </div>
+                </label>
+              </div> */}
+
+              {/* <div className="dropdown-PS mt-3">
+                <span className="CountryCode-PS">
+                  <h6>@</h6>
+                </span>
+                <input
+                  type="email"
+                  placeholder="user@mail.com"
+                  className="input-PS"
+                  style={{ paddingLeft: "64px" }}
+                  // value={email}
+                  // onChange={(e) => setGstNo(e.target.value)}
+                  required
+                />
+              </div> */}
             </div>
 
             {/* WhatsApp checkbox */}
             <div
-              className="col-md-6 whatsapp-CB-Margin"
+              className="col-sm-6 col-12 px-2 whatsapp-CB-Margin"
               id="back-img-padding-L"
             >
               <div className=" align-checkbox-city">
@@ -370,6 +437,65 @@ export default function ProfileSettings() {
                 </label>
               </div>
             </div>
+          </div>
+          <div className="Section-PS">
+            {/* FullName */}
+            <div className="col-sm-6 col-12 px-2">
+              <div className="label-PS">
+                {" "}
+                Write your Referal Email Or Code ?
+              </div>
+              <div className="align-CB-PS p-0">
+                <label
+                  className="col-sm-6 col-12 col-12 content-CB-PS my-3"
+                  style={{ marginLeft: "0px" }}
+                >
+                  <h6 className="label-CB-PS">Yes</h6>
+                  <input
+                    type="radio"
+                    name="referal"
+                    value="true"
+                    onChange={(e) => setReferalEmail(true)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+
+                <label
+                  className="col-sm-6 col-12 col-12 content-CB-PS my-3"
+                  style={{ marginLeft: "0px" }}
+                >
+                  <h6 className="label-CB-PS">No</h6>
+                  <input
+                    type="radio"
+                    name="referal"
+                    value="false"
+                    onChange={(e) => setReferalEmail(false)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+            </div>
+
+            {/* Email Address */}
+            {ReferalEmail && (
+              <div className="col-sm-6 col-12 px-2 margin-top-5" id="back-img-padding-L">
+                <div className="label-PS">Enter Referal Email Here</div>
+                <div className="dropdown-PS">
+                  <span class="CountryCode-PS">
+                    <h6>@</h6>
+                  </span>
+                  <input
+                    type="email"
+                    placeholder="user@mail.com"
+                    className="input-PS"
+                    style={{ paddingLeft: "64px" }}
+                    // value={email}
+                    // onChange={(e) => setGstNo(e.target.value)}
+                    required
+                  />
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
@@ -390,7 +516,7 @@ export default function ProfileSettings() {
 
           <div className="Section-PS">
             {/* SMES */}
-            <div className="col-md-6" id="front-img-padding-R">
+            <div className="col-sm-6 col-12 px-2" id="">
               <div className="d-flex justify-content-between">
                 <div className="label-PS">SMES</div>
                 <div className="text-imageSize-PS">Image size: 1MB</div>
@@ -418,7 +544,7 @@ export default function ProfileSettings() {
             </div>
 
             {/* Restaurants License */}
-            <div className="col-md-6 margin-top-5" id="back-img-padding-L">
+            <div className="col-sm-6 col-12 px-2 margin-top-5" id="back-img-padding-L">
               <div className="d-flex justify-content-between">
                 <div className="label-PS">Restaurants License</div>
                 <div className="text-imageSize-PS">Image size: 1MB</div>
@@ -447,7 +573,7 @@ export default function ProfileSettings() {
           </div>
 
           <div className="Section-PS">
-            <div className="col-md-6" id="front-img-padding-R">
+            <div className="col-sm-6 col-12 px-2" id="">
               {/* Mobile Number */}
               <div className="label-PS">GST Number</div>
               <div className="dropdown-PS">

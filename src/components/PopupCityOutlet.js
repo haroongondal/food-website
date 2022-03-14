@@ -45,7 +45,7 @@ export default function PopupCityOutlet() {
                     <div className="col-12 align-section-city-box">
                       <div className="col-11 align-checkbox-city">
                         <label className="main-city-CB">
-                          <h6 className="text-dineout-city-CB">Dunkin Brands</h6>
+                          <h6 className="text-DeaseApp-city-CB">Dunkin Brands</h6>
                           <input type="checkbox" />
                           <span className="w3docs-city-CB"></span>
                         </label>
@@ -82,7 +82,7 @@ export default function PopupCityOutlet() {
                     <div className="col-12 align-section-city-box">
                       <div className="col-11 align-checkbox-city">
                         <label className="main-city-CB">
-                          <h6 className="text-dineout-city-CB">Dunkin Brands</h6>
+                          <h6 className="text-DeaseApp-city-CB">Dunkin Brands</h6>
                           <input type="checkbox" />
                           <span className="w3docs-city-CB"></span>
                         </label>
@@ -119,7 +119,7 @@ export default function PopupCityOutlet() {
                     <div className="col-12 align-section-city-box">
                       <div className="col-11 align-checkbox-city">
                         <label className="main-city-CB">
-                          <h6 className="text-dineout-city-CB">Dunkin Brands</h6>
+                          <h6 className="text-DeaseApp-city-CB">Dunkin Brands</h6>
                           <input type="checkbox" />
                           <span className="w3docs-city-CB"></span>
                         </label>
@@ -132,7 +132,7 @@ export default function PopupCityOutlet() {
                     <div className="col-12 align-section-city-box">
                       <div className="col-11 align-checkbox-city">
                         <label className="main-city-CB">
-                          <h6 className="text-dineout-city-CB">Dunkin Brands</h6>
+                          <h6 className="text-DeaseApp-city-CB">Dunkin Brands</h6>
                           <input type="checkbox" />
                           <span className="w3docs-city-CB"></span>
                         </label>
@@ -145,7 +145,7 @@ export default function PopupCityOutlet() {
                     <div className="col-12 align-section-city-box">
                       <div className="col-11 align-checkbox-city">
                         <label className="main-city-CB">
-                          <h6 className="text-dineout-city-CB">Dunkin Brands</h6>
+                          <h6 className="text-DeaseApp-city-CB">Dunkin Brands</h6>
                           <input type="checkbox" />
                           <span className="w3docs-city-CB"></span>
                         </label>

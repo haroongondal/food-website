@@ -23,8 +23,8 @@ export default function MobileAppSection() {
 <div className="text-box-explore">
     <h4 className="text-explore">Explore more food with</h4>
     <span className="text-logo-mobile-app">Logo mobile app</span>
-    <h4 className="text-details-mobile-app">Download the Dineout App to get latest updates on offers, deals and
-        trending restaurants. Also get Rs.200 in your Dineout Wallet.</h4>
+    <h4 className="text-details-mobile-app">Download the DeaseApp App to get latest updates on offers, deals and
+        trending restaurants. Also get Rs.200 in your DeaseApp Wallet.</h4>
 </div>
 
 <div className="wrap">

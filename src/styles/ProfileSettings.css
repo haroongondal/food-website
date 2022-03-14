@@ -1,10 +1,19 @@
+.profile-settings{
+  margin-bottom:80px;
+}
 .header-PS {
   display: block;
   padding: 0px 26px;
 }
+.profile-settings .fileUploader{
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
 
-
-
+.profile-settings .fileContainer{
+  height: 250px;
+}
 .down-arrow-PS {
   position: absolute;
   pointer-events: none;
@@ -44,7 +53,7 @@
   line-height: 1.15;
   margin: 0;
 }
-.dropdown-PS select:focus{
+.dropdown-PS select:focus {
   outline: none;
 }
 .dropdown-PS .Darrow {
@@ -70,8 +79,6 @@
   font-size: 12px;
   color: #06386c;
 }
-
-
 
 .select-cuisine-btn {
   background: #06386c;
@@ -131,8 +138,6 @@
   transition: all 0.2s ease;
 }
 
-
-
 /*checkbox */
 .content-CB-PS {
   display: block;
@@ -152,6 +157,8 @@
   font-size: 14px;
   margin-bottom: -17px;
   color: #06386c;
+  line-height: 1.5;
+  margin-left: 5px;
 }
 .content-CB-PS input[type="radio"] {
   visibility: hidden;
@@ -160,8 +167,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 14px;
-  width: 14px;
+  height: 20px;
+  width: 20px;
   background-color: white;
   border-radius: 3px;
   border: 1px solid #06386c;
@@ -181,9 +188,9 @@
   display: block;
 }
 .content-CB-PS .checkbox-CB-PS:after {
-  left: 4px;
-  bottom: 1px;
-  width: 4px;
+  left: 6px;
+  bottom: 4px;
+  width: 6px;
   height: 12px;
   border: solid white;
   border-width: 0 2px 2px 0;
@@ -279,11 +286,10 @@
     transform: scale(1.008);
     transition: all 0.2s ease;
   }
-  .front-back-img{
-    display:block;
+  .front-back-img {
+    display: block;
   }
   .align-CB-PS {
-  
     align-self: center !important;
     display: flex !important;
     flex-wrap: wrap;
@@ -296,76 +302,76 @@
     border-bottom: 1px solid #808080a8;
     padding-bottom: 5%;
   }
-  
-.PS-textArea {
-  width: 100%;
-  border: 1px solid rgb(6 56 108 / 50%);
-  /* background: rgba(6, 56, 108, 0.1); */
-  resize: none;
-  border-radius: 5px;
-  font-size: 12px;
-  padding: 10px;
-}
-.PS-textArea:focus {
-  outline: 1px solid #06386c6b;
-}
-.dropdown-PS .CountryCode-PS {
-  background: #06386c;
-  border-radius: 4px;
-  position: absolute;
-  pointer-events: none;
-  display: inline-block;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  font-size: 0;
-  line-height: 1;
-  width: 50px;
-  height: 35px;
-  text-align: center;
-  margin: 0 auto;
-  display: grid;
-  align-content: center;
-}
-.dropdown-PS .CountryCode-PS h6 {
-  color: white;
-  margin: 0 auto;
-  font-size: 10px;
-}
-.label-PS {
-  color: #06386c;
-  font-size: 12px;
-  margin-right: 10px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-align: left;
-}
-.input-PS {
-  flex-grow: 1;
-  padding: 11px;
-  height: 100%;
-  border: 1px solid rgb(6 56 108 / 50%);
-  border-radius: 4px;
-  outline: none;
-  width: 100%;
-  font-size: 10px;
-  max-height: 38px;
-}
-/* Timings */
 
-.time-input {
-  width: 100%;
-  border: 1px solid rgb(6 56 108 / 50%);
-  height: 38px;
-  border-radius: 4px;
-  padding: 0px 10px;
-  font-size: 12px;
-  color: #474747cc;
-}
-.time-input:focus{
-  color: black;
-  outline: none;
-}
+  .PS-textArea {
+    width: 100%;
+    border: 1px solid rgb(6 56 108 / 50%);
+    /* background: rgba(6, 56, 108, 0.1); */
+    resize: none;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 10px;
+  }
+  .PS-textArea:focus {
+    outline: 1px solid #06386c6b;
+  }
+  .dropdown-PS .CountryCode-PS {
+    background: #06386c;
+    border-radius: 4px;
+    position: absolute;
+    pointer-events: none;
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    min-width: 1.5rem;
+    font-size: 0;
+    line-height: 1;
+    width: 50px;
+    height: 35px;
+    text-align: center;
+    margin: 0 auto;
+    display: grid;
+    align-content: center;
+  }
+  .dropdown-PS .CountryCode-PS h6 {
+    color: white;
+    margin: 0 auto;
+    font-size: 10px;
+  }
+  .label-PS {
+    color: #06386c;
+    font-size: 12px;
+    margin-right: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .input-PS {
+    flex-grow: 1;
+    padding: 11px;
+    height: 100%;
+    border: 1px solid rgb(6 56 108 / 50%);
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    font-size: 10px;
+    max-height: 38px;
+  }
+  /* Timings */
+
+  .time-input {
+    width: 100%;
+    border: 1px solid rgb(6 56 108 / 50%);
+    height: 38px;
+    border-radius: 4px;
+    padding: 0px 10px;
+    font-size: 12px;
+    color: #474747cc;
+  }
+  .time-input:focus {
+    color: black;
+    outline: none;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -406,11 +412,10 @@
     transform: scale(1.008);
     transition: all 0.2s ease;
   }
-  .front-back-img{
-    display:flex;
+  .front-back-img {
+    display: flex;
   }
   .align-CB-PS {
-  
     align-self: center !important;
     display: flex !important;
     flex-wrap: wrap;
@@ -423,74 +428,74 @@
     border-bottom: 0;
     padding-bottom: 0%;
   }
-  
-.PS-textArea {
-  width: 100%;
-  border: 1px solid rgb(6 56 108 / 50%);
-  /* background: rgba(6, 56, 108, 0.1); */
-  resize: none;
-  border-radius: 5px;
-  font-size: 14px;
-  padding: 10px;
-}
-.PS-textArea:focus {
-  outline: 1px solid #06386c6b;
-}
-.dropdown-PS .CountryCode-PS {
-  background: #06386c;
-  border-radius: 4px;
-  position: absolute;
-  pointer-events: none;
-  display: inline-block;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  font-size: 0;
-  line-height: 1;
-  width: 50px;
-  height: 38px;
-  text-align: center;
-  margin: 0 auto;
-  display: grid;
-  align-content: center;
-}
-.dropdown-PS .CountryCode-PS h6 {
-  color: white;
-  margin: 0 auto;
-  font-size: 13px;
-}
-.label-PS {
-  color: #06386c;
-  font-size: 14px;
-  margin-right: 10px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-align: left;
-}
-.input-PS {
-  flex-grow: 1;
-  padding: 11px;
-  height: 100%;
-  border: 1px solid rgb(6 56 108 / 50%);
-  border-radius: 4px;
-  outline: none;
-  width: 100%;
-  font-size: 14px;
-  max-height: 38px;
-}
-/* Timings */
 
-.time-input {
-  width: 100%;
-  border: 1px solid rgb(6 56 108 / 50%);
-  height: 38px;
-  border-radius: 4px;
-  padding: 0px 10px;
-  font-size: 13px;
-  color: #474747cc;
-}
-.time-input:focus{
-  color: black;
-  outline: none;
-}
+  .PS-textArea {
+    width: 100%;
+    border: 1px solid rgb(6 56 108 / 50%);
+    /* background: rgba(6, 56, 108, 0.1); */
+    resize: none;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+  }
+  .PS-textArea:focus {
+    outline: 1px solid #06386c6b;
+  }
+  .dropdown-PS .CountryCode-PS {
+    background: #06386c;
+    border-radius: 4px;
+    position: absolute;
+    pointer-events: none;
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    min-width: 1.5rem;
+    font-size: 0;
+    line-height: 1;
+    width: 50px;
+    height: 38px;
+    text-align: center;
+    margin: 0 auto;
+    display: grid;
+    align-content: center;
+  }
+  .dropdown-PS .CountryCode-PS h6 {
+    color: white;
+    margin: 0 auto;
+    font-size: 13px;
+  }
+  .label-PS {
+    color: #06386c;
+    font-size: 14px;
+    margin-right: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .input-PS {
+    flex-grow: 1;
+    padding: 11px;
+    height: 100%;
+    border: 1px solid rgb(6 56 108 / 50%);
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    max-height: 38px;
+  }
+  /* Timings */
+
+  .time-input {
+    width: 100%;
+    border: 1px solid rgb(6 56 108 / 50%);
+    height: 38px;
+    border-radius: 4px;
+    padding: 0px 10px;
+    font-size: 13px;
+    color: #474747cc;
+  }
+  .time-input:focus {
+    color: black;
+    outline: none;
+  }
 }

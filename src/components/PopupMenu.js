@@ -326,7 +326,7 @@ function PopupMenu(props) {
           <div className="serviceType-checkboxes">
             <div className="checkBox-menu">
               <label className="main-popup-menu">
-                <h6 className="text-dineout-popup-menu">Delivery</h6>
+                <h6 className="text-DeaseApp-popup-menu">Delivery</h6>
                 <input
                   type="checkbox"
                   onChange={(e) => setDeliver(e.target.checked)}
@@ -338,7 +338,7 @@ function PopupMenu(props) {
 
             <div className="checkBox-menu">
               <label className="main-popup-menu">
-                <h6 className="text-dineout-popup-menu">Takeaway</h6>
+                <h6 className="text-DeaseApp-popup-menu">Takeaway</h6>
                 <input
                   type="checkbox"
                   onChange={(e) => setTakeAway(e.target.checked)}

@@ -28,7 +28,7 @@ export default function ResDetailTopNav() {
       <section className="res-detail-top-nav">
         <div class="dashboard-res-detail-M" id="scroll-header">
           <img
-            src="https://im1.dineout.co.in/images/uploads/restaurant/sharpen/1/w/o/p13437-1635482277617b7aa51ce75.jpg?tr=tr:n-large"
+            src="https://im1.DeaseApp.co.in/images/uploads/restaurant/sharpen/1/w/o/p13437-1635482277617b7aa51ce75.jpg?tr=tr:n-large"
             alt="JW Kitchen"
             title="JW Kitchen"
             class="no-img"
@@ -36,9 +36,9 @@ export default function ResDetailTopNav() {
           {/* <div class="back-btn-res-detail-M">
             <a>
               <img
-                src="https://im1.dineout.co.in/images/uploads/misc/2021/Feb/5/vector_(3).png"
-                alt="Dineout"
-                title="Dineout"
+                src="https://im1.DeaseApp.co.in/images/uploads/misc/2021/Feb/5/vector_(3).png"
+                alt="DeaseApp"
+                title="DeaseApp"
                 class="no-img"
               />
             </a>
@@ -49,7 +49,7 @@ export default function ResDetailTopNav() {
             <ul>
               <li>
                 <img
-                  src="https://im1.dineout.co.in/images/uploads/misc/2021/Feb/5/vector.png"
+                  src="https://im1.DeaseApp.co.in/images/uploads/misc/2021/Feb/5/vector.png"
                   alt="Share"
                   title="Share"
                   class="no-img"
@@ -59,7 +59,7 @@ export default function ResDetailTopNav() {
               </li>
               <li class="">
                 <img
-                  src="https://im1.dineout.co.in/images/uploads/misc/2021/Feb/5/vector_(1).png"
+                  src="https://im1.DeaseApp.co.in/images/uploads/misc/2021/Feb/5/vector_(1).png"
                   alt="Favourite"
                   title="Favourite"
                   width="15"

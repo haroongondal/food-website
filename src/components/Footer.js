@@ -131,7 +131,7 @@ export default function Footer() {
         <hr style={{ marginTop: "50px" }} />
         <div className="container">
           <div className="row">
-            <div className="col-md-12 col-sm-6 col-xs-12">
+            <div className="col-lg-8 col-md-12 col-xs-12 mx-auto text-center">
               <p className="copyright-text">
                 Copyright © By continuing past this page, you agree to our Terms
                 of Service, Cookie Policy, Privacy Policy and Content Policies.

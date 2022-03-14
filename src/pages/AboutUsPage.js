@@ -28,9 +28,9 @@ export default function AboutUsPage() {
              <ul>
                 <li>Connecting diners to the best-in-the-city restaurant discounts &amp; deals</li>
                 <li>Giving diners a cashless payment experience across restaurants &amp; an opportunity to earn cashback on every payment</li>
-                <li>A unique membership - Dineout Passport - with massive benefits for the real connoisseur of food.  </li>
+                <li>A unique membership - DeaseApp Passport - with massive benefits for the real connoisseur of food.  </li>
              </ul>
-             <p>Dineout was founded by Ankit Mehrotra, Nikhil Bakshi, Sahil Jain and Vivek Kapoor in 2012 and was acquired by Times Internet Limited in 2014. Times Internet is India’s largest digital products company and the digital venture of Times of India, India's largest media and entertainment group.</p>
+             <p>DeaseApp was founded by Ankit Mehrotra, Nikhil Bakshi, Sahil Jain and Vivek Kapoor in 2012 and was acquired by Times Internet Limited in 2014. Times Internet is India’s largest digital products company and the digital venture of Times of India, India's largest media and entertainment group.</p>
         </div>
         <div className="foodies-section">
             <h2>Foodies Love Us!</h2>
@@ -41,11 +41,11 @@ export default function AboutUsPage() {
                 </div>
                 <div className="col-md-4 col-sm-4">
                    <img src={smartPayImage} alt="" title=""/>
-                   <p>Dineout users save at least 30% of their dining out expenses over a regular person</p>
+                   <p>DeaseApp users save at least 30% of their dining out expenses over a regular person</p>
                 </div>
                 <div className="col-md-4 col-sm-4">
                    <img src={offersImage} alt="" title=""/>
-                   <p>Dineout users save at least 30% of their dining out expenses over a regular person</p>
+                   <p>DeaseApp users save at least 30% of their dining out expenses over a regular person</p>
                 </div>
              </div>
         </div>

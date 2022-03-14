@@ -3,7 +3,7 @@ import { useState } from "react";
 import "../styles/BuissnessSignUp.css";
 import BusinessNavbar from "./BusinessNavbar";
 import betaTestImage from "../images/betaTest.png";
-import Footer from '../components/Footer';
+import Footer from "../components/Footer";
 
 function BusinessSignup(props) {
   const [restName, setRestName] = useState("");
@@ -73,13 +73,14 @@ function BusinessSignup(props) {
         <div className="col-md-5 col-12 d-md-block d-none">
           <div class="row align-items-center beta-section">
             <div class="col-md-4 col-12 d-md-block d-none">
-              <img
-                src={betaTestImage}
-                alt="beta-test"
-                class="beta-img"
-              />
+              <img src={betaTestImage} alt="beta-test" class="beta-img" />
             </div>
             <div class="col-md-8 col-12">
+              <div className="beta-heading">
+                DeaseApp Extended <br /> <span>Beta</span><br /><span> Program</span>
+              </div>
+            </div>
+            <div className="col-12">
               <div class="beta-text">
                 DeaseApp. Beta Program We are currently in closed beta to gather
                 user feedback and improve the app for everyone. You can sign up
@@ -226,8 +227,7 @@ function BusinessSignup(props) {
         {/* <div className="col-md-1 d-md-block d-none"></div> */}
       </div>
       <div className="d-md-block d-none">
-      <Footer className="d-md-block d-none"></Footer>
-
+        <Footer className="d-md-block d-none"></Footer>
       </div>
     </div>
   );

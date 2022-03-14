@@ -1,5 +1,5 @@
 .logo_image {
-  margin-top: -10px;
+  margin-top: -12px;
 }
 .logo_image a img {
   height: 40%;
@@ -29,6 +29,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 5px 0;
 }
 .details-location .fa-map-marker {
   color: #439548;
@@ -76,6 +77,10 @@
   padding-left: 15px;
   border-radius: 6px;
 }
+.searchTerm-top:focus-visible{
+  outline: none;
+  border: none;
+}
 .searchButton-top {
   background-color: #439548;
   border: none;
@@ -116,7 +121,7 @@
 .navbar ul {
   flex: 1;
   text-align: right;
-  margin-top: 5px;
+  margin-top: 3px;
 }
 .navbar ul li {
   display: inline-block;
@@ -144,7 +149,7 @@
   border-radius: 5px;
   width: 68%;
   left: 26px;
-  top: 57px;
+  top: 56px;
   height: 450px;
   overflow-x: hidden;
   overflow-y: overlay;

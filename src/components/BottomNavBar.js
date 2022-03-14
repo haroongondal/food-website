@@ -29,7 +29,7 @@ export default function BottomNavBar() {
           </li>
           <li>
             <a
-              href="/bangalore/dineout-passport"
+              href="/bangalore/DeaseApp-passport"
               aria-label="Booking"
             >
               <i className="bx bx-book-add"></i>

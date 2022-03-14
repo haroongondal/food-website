@@ -26,13 +26,13 @@ function PopupMenuItem() {
 
             <div>
               <label className="main-popup-CB">
-                <h6 className="text-dineout-popup-CB">Customer facing</h6>
+                <h6 className="text-DeaseApp-popup-CB">Customer facing</h6>
                 <input type="checkbox" />
                 <span className="w3docs-popup-CB"></span>
               </label>
 
               <label className="main-popup-CB">
-                <h6 className="text-dineout-popup-CB">Recommended</h6>
+                <h6 className="text-DeaseApp-popup-CB">Recommended</h6>
                 <input type="checkbox" />
                 <span className="w3docs-popup-CB"></span>
               </label>
@@ -150,7 +150,7 @@ function PopupMenuItem() {
           <div className="dropDown-checkBox">
             <div>
               <label className="main-popup-CB">
-                <h6 className="text-dineout-popup-CB">Tax Group</h6>
+                <h6 className="text-DeaseApp-popup-CB">Tax Group</h6>
                 <input type="checkbox" />
                 <span className="w3docs-popup-CB"></span>
               </label>
@@ -421,7 +421,7 @@ function PopupMenuItem() {
 
           <div className="checkBox-addBtn">
             <label className="main-popup-CB">
-              <h6 className="text-dineout-popup-CB">Add-ons</h6>
+              <h6 className="text-DeaseApp-popup-CB">Add-ons</h6>
               <input type="checkbox" />
               <span className="w3docs-popup-CB"></span>
             </label>
@@ -452,19 +452,19 @@ function PopupMenuItem() {
               </div>
 
               <label className="main-popup-CB-3">
-                <h6 className="text-dineout-popup-CB-3">Default</h6>
+                <h6 className="text-DeaseApp-popup-CB-3">Default</h6>
                 <input type="checkbox" />
                 <span className="w3docs-popup-CB"></span>
               </label>
 
               <label className="main-popup-CB-3">
-                <h6 className="text-dineout-popup-CB-3">Conditional</h6>
+                <h6 className="text-DeaseApp-popup-CB-3">Conditional</h6>
                 <input type="checkbox" />
                 <span className="w3docs-popup-CB"></span>
               </label>
 
               <label className="main-popup-CB-3">
-                <h6 className="text-dineout-popup-CB-3">Multiple</h6>
+                <h6 className="text-DeaseApp-popup-CB-3">Multiple</h6>
                 <input type="checkbox" />
                 <span className="w3docs-popup-CB"></span>
               </label>
@@ -593,19 +593,19 @@ function PopupMenuItem() {
                 </div>
 
                 <label className="main-popup-CB-3">
-                  <h6 className="text-dineout-popup-CB-3">Default</h6>
+                  <h6 className="text-DeaseApp-popup-CB-3">Default</h6>
                   <input type="checkbox" />
                   <span className="w3docs-popup-CB"></span>
                 </label>
 
                 <label className="main-popup-CB-3">
-                  <h6 className="text-dineout-popup-CB-3">Conditional</h6>
+                  <h6 className="text-DeaseApp-popup-CB-3">Conditional</h6>
                   <input type="checkbox" />
                   <span className="w3docs-popup-CB"></span>
                 </label>
 
                 <label className="main-popup-CB-3">
-                  <h6 className="text-dineout-popup-CB-3">Multiple</h6>
+                  <h6 className="text-DeaseApp-popup-CB-3">Multiple</h6>
                   <input type="checkbox" />
                   <span className="w3docs-popup-CB"></span>
                 </label>
@@ -715,7 +715,7 @@ function PopupMenuItem() {
 
           <div className="checkBox-addBtn">
             <label className="main-popup-CB">
-              <h6 className="text-dineout-popup-CB">Customizations</h6>
+              <h6 className="text-DeaseApp-popup-CB">Customizations</h6>
               <input type="checkbox" />
               <span className="w3docs-popup-CB"></span>
             </label>
@@ -746,19 +746,19 @@ function PopupMenuItem() {
               </div>
 
               <label className="main-popup-CB-3">
-                <h6 className="text-dineout-popup-CB-3">Default</h6>
+                <h6 className="text-DeaseApp-popup-CB-3">Default</h6>
                 <input type="checkbox" />
                 <span className="w3docs-popup-CB"></span>
               </label>
 
               <label className="main-popup-CB-3">
-                <h6 className="text-dineout-popup-CB-3">Conditional</h6>
+                <h6 className="text-DeaseApp-popup-CB-3">Conditional</h6>
                 <input type="checkbox" />
                 <span className="w3docs-popup-CB"></span>
               </label>
 
               <label className="main-popup-CB-3">
-                <h6 className="text-dineout-popup-CB-3">Multiple</h6>
+                <h6 className="text-DeaseApp-popup-CB-3">Multiple</h6>
                 <input type="checkbox" />
                 <span className="w3docs-popup-CB"></span>
               </label>
@@ -861,7 +861,7 @@ function PopupMenuItem() {
 
           <div className="checkBox-addBtn">
             <label className="main-popup-CB">
-              <h6 className="text-dineout-popup-CB">Recommendations</h6>
+              <h6 className="text-DeaseApp-popup-CB">Recommendations</h6>
               <input type="checkbox" />
               <span className="w3docs-popup-CB"></span>
             </label>
@@ -871,7 +871,7 @@ function PopupMenuItem() {
 
           <div className="checkBox-addBtn">
             <label className="main-popup-CB">
-              <h6 className="text-dineout-popup-CB">Custom KOT messages</h6>
+              <h6 className="text-DeaseApp-popup-CB">Custom KOT messages</h6>
               <input type="checkbox" />
               <span className="w3docs-popup-CB"></span>
             </label>

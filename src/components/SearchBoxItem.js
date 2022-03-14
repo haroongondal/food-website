@@ -11,8 +11,8 @@ export default function SearchBoxItem({data}) {
               <img
                 style={{ borderRadius: "50%", width: "42px", height: "42px" }}
                 alt=""
-                data-src="https://im1.dineout.co.in/images/uploads/restaurant/sharpen/3/r/e/p35430-150719749559d60237e67d2.jpg?tr=tr:n-small"
-                src="https://im1.dineout.co.in/images/uploads/restaurant/sharpen/3/r/e/p35430-150719749559d60237e67d2.jpg?tr=tr:n-small"
+                data-src="https://im1.DeaseApp.co.in/images/uploads/restaurant/sharpen/3/r/e/p35430-150719749559d60237e67d2.jpg?tr=tr:n-small"
+                src="https://im1.DeaseApp.co.in/images/uploads/restaurant/sharpen/3/r/e/p35430-150719749559d60237e67d2.jpg?tr=tr:n-small"
               />
             </span>
             <div class="details-box-searchBar">

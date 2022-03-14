@@ -41,7 +41,7 @@ function UserManagementPage() {
               <div className="right-outlets-header">
                 <div className=" align-checkbox-city">
                   <label className="main-city-CB">
-                    <h6 className="text-dineout-city-CB">
+                    <h6 className="text-DeaseApp-city-CB">
                       Show inactive employees
                     </h6>
                     <input type="checkbox" />
@@ -135,7 +135,7 @@ function UserManagementPage() {
                         fontWeight: "300",
                       }}
                     >
-                      maghna.verma@dineout.co.in
+                      maghna.verma@DeaseApp.co.in
                     </td>
                     <td
                       style={{
@@ -205,7 +205,7 @@ function UserManagementPage() {
                         fontWeight: "300",
                       }}
                     >
-                      maghna.verma@dineout.co.in
+                      maghna.verma@DeaseApp.co.in
                     </td>
                     <td
                       style={{
@@ -274,7 +274,7 @@ function UserManagementPage() {
                         fontWeight: "300",
                       }}
                     >
-                      maghna.verma@dineout.co.in
+                      maghna.verma@DeaseApp.co.in
                     </td>
                     <td
                       style={{
@@ -343,7 +343,7 @@ function UserManagementPage() {
                         fontWeight: "300",
                       }}
                     >
-                      maghna.verma@dineout.co.in
+                      maghna.verma@DeaseApp.co.in
                     </td>
                     <td
                       style={{
@@ -412,7 +412,7 @@ function UserManagementPage() {
                         fontWeight: "300",
                       }}
                     >
-                      maghna.verma@dineout.co.in
+                      maghna.verma@DeaseApp.co.in
                     </td>
                     <td
                       style={{
@@ -481,7 +481,7 @@ function UserManagementPage() {
                         fontWeight: "300",
                       }}
                     >
-                      maghna.verma@dineout.co.in
+                      maghna.verma@DeaseApp.co.in
                     </td>
                     <td
                       style={{

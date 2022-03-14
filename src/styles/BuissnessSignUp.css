@@ -83,13 +83,13 @@
   );
   background-image: -webkit-linear-gradient(
     top,
-rgba(93, 220, 149, 0.459) 0%,
+    rgba(93, 220, 149, 0.459) 0%,
     rgba(93, 220, 149, 0.459) 65%,
     rgba(93, 220, 148, 0.459) 100%
   );
   background-image: -o-linear-gradient(
     top,
- rgba(93, 220, 149, 0.459) 0%,
+    rgba(93, 220, 149, 0.459) 0%,
     rgba(93, 220, 149, 0.459) 65%,
     rgba(93, 220, 148, 0.459) 100%
   );
@@ -124,16 +124,19 @@ rgba(93, 220, 149, 0.459) 0%,
   -ms-transform: translate(-100%, -50%) scale(2.1);
   transform: translate(-100%, -50%) scale(2.1);
 }
-.beta-section{
-  margin: 50px 0 !important;
-  background-color: #ffffff59;
-  padding: 20px;
+.beta-heading{
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center;
+}
+.beta-heading span{
+  color: #439548;
 }
 .beta-text {
   font-size: 16px;
   font-weight: unset;
 }
-.beta-img{
+.beta-img {
   margin-left: -118px;
   width: 250px !important;
 }
@@ -146,6 +149,11 @@ rgba(93, 220, 149, 0.459) 0%,
     text-align: center;
     box-shadow: 0 0 15px 1px rgb(0 0 0 / 40%);
   }
+  .beta-section {
+    margin: 120px 0 !important;
+    background-color: #ffffff59;
+    padding: 20px;
+  }
   .SecRow-BS {
     padding: 0px 26px;
     display: block;
@@ -157,8 +165,30 @@ rgba(93, 220, 149, 0.459) 0%,
     align-items: center;
   }
 }
-@media screen and (min-width: 320px) and (max-width:991px) {
-  .symbols-pulse > div{
+@media (min-width: 768px) {
+  .col-md-1 {
+    flex: 0 0 auto;
+    width: 8.33333333% !important;
+  }
+  .col-md-4 {
+    flex: 0 0 auto;
+    width: 33.33333333% !important;
+  }
+  .col-md-5 {
+    flex: 0 0 auto;
+    width: 41.66666667% !important;
+  }
+  .col-md-8 {
+    flex: 0 0 auto;
+    width: 66.66666667% !important;
+  }
+}
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+@media screen and (min-width: 320px) and (max-width: 991px) {
+  .symbols-pulse > div {
     left: 30%;
     top: 40%;
   }
@@ -167,6 +197,7 @@ rgba(93, 220, 149, 0.459) 0%,
     top: 45%;
   }
 }
+
 @media screen and (min-width: 992px) {
   .Main-Sec-SignUp {
     width: 100%;
@@ -175,6 +206,11 @@ rgba(93, 220, 149, 0.459) 0%,
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 0 15px 1px rgb(0 0 0 / 40%);
+  }
+  .beta-section {
+    margin: 50px 0 !important;
+    background-color: #ffffff59;
+    padding: 20px;
   }
   .SecRow-BS {
     padding: 5px 10px;
@@ -187,8 +223,8 @@ rgba(93, 220, 149, 0.459) 0%,
     align-items: center;
   }
 }
-@media screen and (max-width:1050px){
-  .beta-img{
+@media screen and (max-width: 1050px) {
+  .beta-img {
     width: 200px !important;
     margin-left: -100px;
   }

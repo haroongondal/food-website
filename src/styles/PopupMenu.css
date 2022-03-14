@@ -110,7 +110,7 @@
     align-content: center;
     justify-items: center;
   }
-  .text-dineout-popup-menu {
+  .text-DeaseApp-popup-menu {
     font-size: 12px;
     margin-bottom: -24px;
     padding-top: 1px;
@@ -123,8 +123,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 14px;
-    width: 14px;
+    height: 20px;
+    width: 20px;
     background-color: white;
     border-radius: 3px;
     border: 1px solid #0325ff;
@@ -135,7 +135,7 @@
   .main-popup-menu input:checked ~ .w3docs-popup-menu {
     background-color: #0083c7;
   }
-  .add-menu-item .fileUploader{
+  .add-menu-item .fileUploader {
     width: auto !important;
   }
   .w3docs-popup-menu:after {
@@ -147,9 +147,9 @@
     display: block;
   }
   .main-popup-menu .w3docs-popup-menu:after {
-    left: 4px;
-    bottom: 1px;
-    width: 4px;
+    left: 6px;
+    bottom: 4px;
+    width: 6px;
     height: 12px;
     border: solid white;
     border-width: 0 2px 2px 0;
@@ -342,7 +342,7 @@
     justify-content: center;
     margin-top: 2%;
   }
-  .text-max-size-menu{
+  .text-max-size-menu {
     font-size: 10px !important;
     font-weight: 100 !important;
   }
@@ -694,7 +694,7 @@
     align-content: center;
     justify-items: center;
   }
-  .text-dineout-popup-menu {
+  .text-DeaseApp-popup-menu {
     font-size: 12px;
     margin-bottom: -24px;
     padding-top: 1px;
@@ -707,8 +707,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 14px;
-    width: 14px;
+    height: 20px;
+    width: 20px;
     background-color: white;
     border-radius: 3px;
     border: 1px solid #0325ff;
@@ -728,9 +728,9 @@
     display: block;
   }
   .main-popup-menu .w3docs-popup-menu:after {
-    left: 4px;
-    bottom: 1px;
-    width: 4px;
+    left: 6px;
+    bottom: 4px;
+    width: 6px;
     height: 12px;
     border: solid white;
     border-width: 0 2px 2px 0;
