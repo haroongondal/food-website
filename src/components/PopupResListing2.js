@@ -1,14 +1,27 @@
-import {React, useState ,useEffect} from "react";
+import { React, useState, useEffect } from "react";
 import resImage from "../images/kadai_chicken.jpg";
 
 export default function PopupResListing2(props) {
   const [userInfo, setUserInfo] = useState({
-    email:'',
-    phone:''
+    email: "",
+    phone: "",
   });
+  const [showEmailOTPField, setShowtEmailOTPField] = useState(false);
+  const [showPhoneOTPField, setShowPhoneOTPField] = useState(false);
+  // let showEmailOTPField = false;
+  // let showPhoneOTPField = false;
+  function showEmailOTP() {
+    setShowtEmailOTPField( true);
+  }
+  function showPhoneOTP() {
+    setShowPhoneOTPField( true);
+  }
   useEffect(() => {
     props.addUser(userInfo);
   }, [userInfo]);
+  useEffect(() => {
+    
+  });
   const handleChange = (event) => {
     setUserInfo({ ...userInfo, [event.target.name]: event.target.value });
   };
@@ -21,8 +34,8 @@ export default function PopupResListing2(props) {
 
       <hr />
 
-      <div className="pt-1">
-      <div className="col-md-12 Sec-row-RL">
+      <div className="pt-1 row">
+        <div className="col-9 Sec-row-RL">
           <div className="label-RL text-lg-start">Email</div>
           <input
             type="email"
@@ -33,8 +46,35 @@ export default function PopupResListing2(props) {
             name="email"
           />
         </div>
-        <div className="col-md-12 Sec-row-RL">
-          <div className="label-RL text-lg-start">Last Name</div>
+        <div className="col-3">
+          <a
+            onClick={showEmailOTP}
+            className=" btn text-light verify-btn"
+            type="none"
+            style={{
+              background: "#439548",
+              margin: "30px 0 0 0",
+              width: "100%",
+            }}
+          >
+            Verify
+          </a>
+        </div>
+        {showEmailOTPField && 
+          <div className="col-12 Sec-row-RL">
+            <div className="label-RL text-lg-start">OTP</div>
+            <input
+              type="nu,ber"
+              placeholder="Type OTP here"
+              className="input-RL"
+              // value={userInfo.firstNname}
+              // onChange={handleChange}
+              name="email"
+            />
+          </div>
+        }
+        <div className="col-9 Sec-row-RL">
+          <div className="label-RL text-lg-start">Phone Number</div>
           <input
             type="text"
             placeholder="03_________"
@@ -46,6 +86,33 @@ export default function PopupResListing2(props) {
             // maxLength = "11"
           />
         </div>
+        <div className="col-3">
+          <a
+            onClick={showPhoneOTP}
+            className="btn text-light verify-btn"
+            type="none"
+            style={{
+              background: "#439548",
+              margin: "30px 0 0 0",
+              width: "100%",
+            }}
+          >
+            Verify
+          </a>
+        </div>
+        {showPhoneOTPField && 
+          <div className="col-12 Sec-row-RL">
+            <div className="label-RL text-lg-start">OTP</div>
+            <input
+              type="nu,ber"
+              placeholder="Type OTP here"
+              className="input-RL"
+              // value={userInfo.firstNname}
+              // onChange={handleChange}
+              name="email"
+            />
+          </div>
+        }
       </div>
     </div>
   );

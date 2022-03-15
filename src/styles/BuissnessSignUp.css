@@ -16,9 +16,13 @@
   width: 100%;
   height: 100%;
   font-size: 14px;
-  padding: 12px 10px;
+  padding: 12px 35px;
   border-radius: 5px;
   border: 1px solid #d8d9db;
+}
+.input-icon{
+  position: absolute;
+  left: 40px;
 }
 .text-detect-BS {
   background: #2d2d2d;
@@ -149,6 +153,9 @@
     text-align: center;
     box-shadow: 0 0 15px 1px rgb(0 0 0 / 40%);
   }
+  .Main-Sec-SignUp input:focus-visible{
+    outline: none;
+  }
   .beta-section {
     margin: 120px 0 !important;
     background-color: #ffffff59;
@@ -206,6 +213,9 @@
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 0 15px 1px rgb(0 0 0 / 40%);
+  }
+  .Main-Sec-SignUp input:focus-visible{
+    outline: none;
   }
   .beta-section {
     margin: 50px 0 !important;

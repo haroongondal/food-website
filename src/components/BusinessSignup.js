@@ -107,7 +107,8 @@ function BusinessSignup(props) {
             </div>
             <hr />
             <div className="SecRow-BS">
-              <div className=" Sec-BS">
+              <div className=" Sec-BS position-relative">
+                <i className="fa fa-cutlery input-icon"></i>
                 <input
                   className="input-BS"
                   type="text"
@@ -116,7 +117,8 @@ function BusinessSignup(props) {
                   onChange={(e) => setRestName(e.target.value)}
                 />
               </div>
-              <div className=" Sec-BS">
+              <div className=" Sec-BS position-relative">
+              <i className="fa fa-home input-icon"></i>
                 <input
                   className="input-BS"
                   type="text"
@@ -128,7 +130,8 @@ function BusinessSignup(props) {
             </div>
 
             <div className="SecRow-BS">
-              <div className="Sec-BS">
+              <div className="Sec-BS position-relative">
+              <i className="fa fa-user input-icon"></i>
                 <input
                   className="input-BS"
                   type="text"
@@ -137,7 +140,8 @@ function BusinessSignup(props) {
                   onChange={(e) => setOwnerName(e.target.value)}
                 />
               </div>
-              <div className="Sec-BS">
+              <div className="Sec-BS position-relative">
+              <i className="fa fa-phone input-icon"></i>
                 <input
                   className="input-BS"
                   type="number"
@@ -158,7 +162,8 @@ function BusinessSignup(props) {
 
             {showOTPField ? (
               <div className="SecRow-BS">
-                <div className=" Sec-BS">
+                <div className=" Sec-BS position-relative">
+                <i className="fa fa-key input-icon"></i>
                   <input
                     className="input-BS"
                     type="number"
@@ -173,7 +178,8 @@ function BusinessSignup(props) {
             )}
 
             <div className="SecRow-BS">
-              <div className=" Sec-BS">
+              <div className=" Sec-BS position-relative">
+              <i className="fa fa-whatsapp input-icon"></i>
                 <input
                   className="input-BS"
                   type="number"
@@ -182,7 +188,8 @@ function BusinessSignup(props) {
                   onChange={(e) => setWhatsNo(e.target.value)}
                 />
               </div>
-              <div className="Sec-BS">
+              <div className="Sec-BS position-relative">
+              <i className="fa fa-envelope input-icon"></i>
                 <input
                   className="input-BS"
                   type="email"
@@ -194,7 +201,8 @@ function BusinessSignup(props) {
             </div>
 
             <div className="SecRow-BS">
-              <div className="Sec-BS">
+              <div className="Sec-BS position-relative">
+              <i className="fa fa-lock input-icon"></i>
                 <input
                   className="input-BS"
                   type="password"
@@ -203,7 +211,8 @@ function BusinessSignup(props) {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
-              <div className="Sec-BS">
+              <div className="Sec-BS position-relative">
+              <i className="fa fa-check input-icon"></i>
                 <input
                   className="input-BS"
                   type="password"

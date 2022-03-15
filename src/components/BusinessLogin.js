@@ -168,7 +168,8 @@ function BusinessLogin(props) {
             </div>
             <hr />
             <div className="SecRow-BL">
-              <div className="col-md-12 Sec-BS">
+              <div className="col-md-12 Sec-BS position-relative">
+              <i className="fa fa-envelope input-icon"></i>
                 <input
                   className="input-BS"
                   type="text"
@@ -180,7 +181,8 @@ function BusinessLogin(props) {
               </div>
             </div>
             <div className="SecRow-BL">
-              <div className="Sec-BS">
+              <div className="Sec-BS position-relative">
+              <i className="fa fa-lock input-icon"></i>
                 <input
                   className="input-BS"
                   type="password"

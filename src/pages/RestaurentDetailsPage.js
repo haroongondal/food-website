@@ -31,7 +31,7 @@ function RestaurentDetailsPage() {
            <NavBar ShouldHideSearch = {false}/>
             {/* <Breadcrumb/> */}
 
-            <ResDetailTopNav/>
+            {/* <ResDetailTopNav/> */}
 
             <BannerResturant/>
             <div className="merge-section">
