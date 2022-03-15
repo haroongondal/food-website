@@ -296,7 +296,7 @@ function AddOutletItem(props) {
               </div>
             </div>
             {/* Area */}
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
+            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4">
               <span className="label-dropDown-block">Area</span>
               <div className="" id="margin-10-T">
                 <div className="">
@@ -340,7 +340,7 @@ function AddOutletItem(props) {
               </div>
             </div>
             {/* Zip/Pincode */}
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
+            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4">
               <span className="label-dropDown-block">Zip/Pincode</span>
               <div className="" id="margin-10-T">
                 <div className="">
@@ -385,7 +385,7 @@ function AddOutletItem(props) {
               </div>
             </div>
             {/* Latitude */}
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
+            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4">
               <span className="label-dropDown-block">Latitude</span>
               <div className="" id="margin-10-T">
                 <div className="">
@@ -428,7 +428,7 @@ function AddOutletItem(props) {
               </div>
             </div>
             {/* Phone Number */}
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
+            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4">
               <span className="label-dropDown-block">Phone Number</span>
               <div className="" id="margin-10-T">
                 <div className="">
@@ -495,7 +495,7 @@ function AddOutletItem(props) {
                 </span>
               </div>
             </div>
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
+            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4">
               <div className="label-PS text-lg-start">Category Name</div>
               <input
                 type="text"
@@ -505,7 +505,7 @@ function AddOutletItem(props) {
                 required
               />
             </div>
-            <div className="dropDown-block-Outlet col-12">
+            <div className="dropDown-block-Outlet col-12 pt-sm-3 pt-4">
               <span className="label-dropDown-block">Menu Images</span>
               <div className="" id="margin-10-T">
                 <ImageUploader
@@ -548,7 +548,7 @@ function AddOutletItem(props) {
                 </div>
               </div>
             </div>
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
+            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4">
               <span className="label-dropDown-block">
                 Average Price For 2 persons
               </span>
@@ -595,7 +595,7 @@ function AddOutletItem(props) {
                 </div>
               </div>
             </div>
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
+            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4">
               <span className="label-dropDown-block">
                 Restaurent Closing Time
               </span>
@@ -628,7 +628,7 @@ function AddOutletItem(props) {
                 Select Cuisines
               </button>
             </div>
-            <div className="dropDown-block-Outlet col-sm-6 col-12 py-3">
+            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4 py-3">
               <button
                 className="select-cuisine-btn"
                 onClick={handleSelectFeaturesPop}
@@ -668,7 +668,7 @@ function AddOutletItem(props) {
                 </label>
               </div>
             </div>
-            <div className="dropDown-block-Outlet col-sm-6 col-12 mt-sm-0 mt-3">
+            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4 mt-sm-0 mt-3">
               <div className="label-PS">Establishment type</div>
               <div className="align-CB-PS p-0">
                 <label
@@ -700,7 +700,7 @@ function AddOutletItem(props) {
             </div>
           </div>
           <div className="border-popup-city row">
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
+            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4">
               <div className="label-PS mt-sm-3 mt-2">
                 {" "}
                 What meal does this restaurant Serve
@@ -785,7 +785,7 @@ function AddOutletItem(props) {
                 </label>
               </div>
             </div>
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
+            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4">
               <div className="label-PS mt-3">
                 What is this restaurant Good for
               </div>

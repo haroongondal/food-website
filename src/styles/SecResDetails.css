@@ -2,7 +2,10 @@
   .border-restaurent-details {
     background-color: white;
     border-radius: 0px 0px 5px 5px;
-    margin: 90px 12px 0;
+    margin: 20px 12px 0;
+  }
+  .restaurent-detail-carousel{
+    margin-top: 90px;
   }
   .content-restaurent-details {
     padding: 20px 15px;

@@ -9,6 +9,11 @@
     .section-left-restaurent-details{
       width: 100%;
     }
+    .restaurent_detail_page .restaurent-img-carousel .react-multi-carousel-item {
+      max-width: 340px;
+      margin-right: 15px;
+      margin-left: 15px;
+  }
   }
   
   

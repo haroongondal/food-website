@@ -35,7 +35,7 @@ export default function PopupResListing2(props) {
       <hr />
 
       <div className="pt-1 row">
-        <div className="col-9 Sec-row-RL">
+        <div className="col-9 mt-0 Sec-row-RL">
           <div className="label-RL text-lg-start">Email</div>
           <input
             type="email"
@@ -55,6 +55,8 @@ export default function PopupResListing2(props) {
               background: "#439548",
               margin: "30px 0 0 0",
               width: "100%",
+              fontSize:'16px',
+              padding:'6px 30px'
             }}
           >
             Verify
@@ -73,7 +75,7 @@ export default function PopupResListing2(props) {
             />
           </div>
         }
-        <div className="col-9 Sec-row-RL">
+        <div className="col-9 mt-0 Sec-row-RL">
           <div className="label-RL text-lg-start">Phone Number</div>
           <input
             type="text"
@@ -95,6 +97,8 @@ export default function PopupResListing2(props) {
               background: "#439548",
               margin: "30px 0 0 0",
               width: "100%",
+              fontSize:'16px',
+              padding:'6px 30px'
             }}
           >
             Verify
