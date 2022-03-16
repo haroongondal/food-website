@@ -131,7 +131,7 @@
   font-size: 10px;
   color: #06386c;
 }
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 280px) {
   .feedback-Components-DD {
     width: 50%;
   }

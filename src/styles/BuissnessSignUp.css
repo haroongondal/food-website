@@ -141,7 +141,7 @@
   margin-left: -118px;
   width: 250px !important;
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 280px) {
   .input-icon{
     position: absolute;
     left: 12px;
@@ -195,7 +195,7 @@
   flex: 0 0 auto;
   width: 100%;
 }
-@media screen and (min-width: 320px) and (max-width: 991px) {
+@media screen and (min-width: 280px) and (max-width: 991px) {
   .symbols-pulse > div {
     left: 30%;
     top: 40%;

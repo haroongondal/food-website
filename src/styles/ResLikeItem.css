@@ -90,7 +90,7 @@
 .box-restaurent-3rd-pag .react-stars > span {
   font-size: 25px !important;
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 280px) {
   .box-restaurent-3rd-page {
     width: auto;
     /* box-shadow: 0px 0px 6px rgb(0 0 0 / 20%); */

@@ -346,7 +346,7 @@ input[type="checkbox"] {
 .tab-switch-btn:focus {
   background: red;
 }
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 280px) {
   .dropDown-item {
     display: block;
     align-items: center;

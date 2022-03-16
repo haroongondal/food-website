@@ -222,7 +222,7 @@
   }
 
   
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 280px) {
   .section-right-reservation{
     display: none;
   }

@@ -167,7 +167,7 @@
   padding: 5px 12px;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 280px) {
   .dashboard_image {
     display: none;
     cursor: pointer;

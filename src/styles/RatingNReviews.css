@@ -91,7 +91,7 @@
   color: #3db645;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 280px) {
   .ratings-bars-rating-stars {
     padding: 20px 0px;
     margin: 0 auto;

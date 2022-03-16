@@ -173,7 +173,7 @@ button.title-faq.is-open {
 .submit-btn-business:focus {
   outline: none;
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 280px) {
   .center-main-section {
     width: 95%;
     margin: 0 auto;

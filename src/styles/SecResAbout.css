@@ -78,7 +78,7 @@
 }
 
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 280px) {
   .border-about-section {
     background-color: #fff;
     margin: 0px 12px;

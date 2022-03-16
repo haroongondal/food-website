@@ -35,7 +35,7 @@ export default function PopupResListing2(props) {
       <hr />
 
       <div className="pt-1 row">
-        <div className="col-9 mt-0 Sec-row-RL">
+        <div className="col-7 col-sm-9 mt-0 Sec-row-RL">
           <div className="label-RL text-lg-start">Email</div>
           <input
             type="email"
@@ -46,7 +46,7 @@ export default function PopupResListing2(props) {
             name="email"
           />
         </div>
-        <div className="col-3">
+        <div className="col-5 col-sm-3">
           <a
             onClick={showEmailOTP}
             className=" btn text-light verify-btn"
@@ -75,7 +75,7 @@ export default function PopupResListing2(props) {
             />
           </div>
         }
-        <div className="col-9 mt-0 Sec-row-RL">
+        <div className="col-7 col-sm-9 mt-0 Sec-row-RL">
           <div className="label-RL text-lg-start">Phone Number</div>
           <input
             type="text"
@@ -88,7 +88,7 @@ export default function PopupResListing2(props) {
             // maxLength = "11"
           />
         </div>
-        <div className="col-3">
+        <div className="col-5 col-sm-3">
           <a
             onClick={showPhoneOTP}
             className="btn text-light verify-btn"

@@ -45,7 +45,7 @@
   margin-top: 20px;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 280px) {
   .border-select-sort-by {
     width: 100%;
     margin: 20px 0px;

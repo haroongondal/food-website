@@ -59,7 +59,7 @@
   margin-top: 8px;
 }
 
-  @media screen and (min-width: 320px) {
+  @media screen and (min-width: 280px) {
     .div-sort-by {
       display: none;
     }
