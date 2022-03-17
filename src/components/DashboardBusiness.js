@@ -10,7 +10,7 @@ function DashboardBusiness() {
 
         <div className="dashboard-text-section">
             <div className="up">
-                <h1>Register your restaurant on FoodApp</h1>
+                <h1>Register your restaurant on DeaseApp</h1>
                 <h6>for free and get more customers!</h6>
             </div>
             <div className="down">

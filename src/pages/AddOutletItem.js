@@ -180,7 +180,7 @@ function AddOutletItem(props) {
   const [takeAway, setTakeAway] = useState(false);
   const [delivery, setDelivery] = useState(false);
   const [cafe, setCafe] = useState(false);
-  const [restaurent, setRestaurent] = useState(false);
+  const [Restaurant, setrestaurant] = useState(false);
   const closeIcon = <CancelSvgIcon />;
 
   const handleSelectCuisinePop = (e) => {
@@ -209,305 +209,198 @@ function AddOutletItem(props) {
 
   return (
     <div className="add-outlet-item">
-      <div className="align-Popup">
-        <div className="border-popup-city">
+      <h3 className="page-heading">Outlets</h3>
+      <h5>Upload Banner Images</h5>
+      <div className="row">
+        <div className="col-xxl-6 col-12">
           <div className="row">
-            <div className="col-xl-6 col-12">
-              <div className="align-popOutlet-images border-popup-city flex-sm-row flex-column justify-content-between align-items-center">
-                {/* Fracade Image */}
-                <div className="dropDown-block-Outlet">
-                  <span className="label-dropDown-block">Fracade Image</span>
-                  <div className="" id="margin-10-T">
-                    <ImageUploader
-                      withIcon={true}
-                      buttonText="Choose image"
-                      onChange={uploadImageFracade}
-                      imgExtension={[".jpg", ".gif", ".png", ".gif"]}
-                      maxFileSize={5242880}
-                    />
-                  </div>
-                </div>
-
-                {/* Kitchen Image */}
-                <div className="dropDown-block-Outlet">
-                  <span className="label-dropDown-block">Kitchen Image</span>
-                  <div className="" id="margin-10-T">
-                    <ImageUploader
-                      withIcon={true}
-                      buttonText="Choose image"
-                      onChange={uploadImageKitchen}
-                      imgExtension={[".jpg", ".gif", ".png", ".gif"]}
-                      maxFileSize={5242880}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-6 col-12">
-              <div className="align-popOutlet-images border-popup-city flex-sm-row flex-column  justify-content-between align-items-center">
-                {/* Dinning Image */}
-                <div className="dropDown-block-Outlet">
-                  <span className="label-dropDown-block">Dinning Image</span>
-                  <div className="" id="margin-10-T">
-                    <ImageUploader
-                      withIcon={true}
-                      buttonText="Choose image"
-                      onChange={uploadImageDinning}
-                      imgExtension={[".jpg", ".gif", ".png", ".gif"]}
-                      maxFileSize={5242880}
-                    />
-                  </div>
-                </div>
-
-                {/* Locality Image */}
-                <div className="dropDown-block-Outlet">
-                  <span className="label-dropDown-block">Locality Image</span>
-                  <div className="" id="margin-10-T">
-                    <ImageUploader
-                      withIcon={true}
-                      buttonText="Choose image"
-                      onChange={uploadImageLocality}
-                      imgExtension={[".jpg", ".gif", ".png", ".gif"]}
-                      maxFileSize={5242880}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-popup-city row">
-            {/* City */}
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
-              <span className="label-dropDown-block">City</span>
-              <div className="" id="margin-10-T">
-                <div className="">
-                  <div className="content-dropDown">
-                    <select onChange={(e) => setCity(e.target.value)}>
-                      <option className="option">City</option>
-                      <option className="option">City</option>
-                      <option className="option">City</option>
-                    </select>
-                    <span>
-                      <img alt="down-arrow" src={arrow} />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Area */}
-            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4">
-              <span className="label-dropDown-block">Area</span>
-              <div className="" id="margin-10-T">
-                <div className="">
-                  <div className="position-unset position-sm-relative ">
-                    <form action="#" className="form-dropDown-M">
-                      <div className="form-input-dropDown">
-                        <input
-                          type="text"
-                          placeholder="Enter Area"
-                          value={area}
-                          onChange={(e) => setArea(e.target.value)}
-                          required
-                        />
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="border-popup-city row">
-            {/* GSTN */}
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
-              <span className="label-dropDown-block">GSTN</span>
-              <div className="" id="margin-10-T">
-                <div className="">
-                  <div className="position-unset position-sm-relative ">
-                    <form action="#" className="form-dropDown-M">
-                      <div className="form-input-dropDown">
-                        <input
-                          type="number"
-                          placeholder="Enter GSTN"
-                          value={gstn}
-                          onChange={(e) => setGstn(e.target.value)}
-                          required
-                        />
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Zip/Pincode */}
-            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4">
-              <span className="label-dropDown-block">Zip/Pincode</span>
-              <div className="" id="margin-10-T">
-                <div className="">
-                  <div className="position-unset position-sm-relative ">
-                    <form action="#" className="form-dropDown-M">
-                      <div className="form-input-dropDown">
-                        <input
-                          type="number"
-                          placeholder="Enter Zip/Pincode"
-                          value={pincode}
-                          onChange={(e) => setPincode(e.target.value)}
-                          required
-                        />
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="border-popup-city row">
-            {/* Address */}
-            {/* Logitude */}
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
-              <span className="label-dropDown-block">Logitude</span>
-              <div className="" id="margin-10-T">
-                <div className="">
-                  <div className="position-unset position-sm-relative ">
-                    <form action="#" className="form-dropDown-M">
-                      <div className="form-input-dropDown">
-                        <input
-                          type="email"
-                          placeholder="Enter Logitude"
-                          value={logitude}
-                          onChange={(e) => setLogitude(e.target.value)}
-                          required
-                        />
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Latitude */}
-            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4">
-              <span className="label-dropDown-block">Latitude</span>
-              <div className="" id="margin-10-T">
-                <div className="">
-                  <div className="position-unset position-sm-relative ">
-                    <form action="#" className="form-dropDown-M">
-                      <div className="form-input-dropDown">
-                        <input
-                          type="email"
-                          placeholder="Enter Latitude"
-                          value={latitude}
-                          onChange={(e) => setLatitude(e.target.value)}
-                          required
-                        />
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="border-popup-city row">
-            <div className="dropDown-block col-sm-6 col-12">
-              <span className="label-dropDown-block">Address</span>
-              <div className="" id="margin-10-T">
-                <div className="">
-                  <div className="position-unset position-sm-relative ">
-                    <form action="#" className="form-dropDown-M">
-                      <div className="form-input-dropDown">
-                        <input
-                          type="text"
-                          placeholder="Enter Street Address"
-                          value={address}
-                          onChange={(e) => setAddress(e.target.value)}
-                          required
-                        />
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Phone Number */}
-            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4">
-              <span className="label-dropDown-block">Phone Number</span>
-              <div className="" id="margin-10-T">
-                <div className="">
-                  <div className="position-unset position-sm-relative ">
-                    <form action="#" className="form-dropDown-M">
-                      <div className="form-input-dropDown">
-                        <input
-                          type="number"
-                          placeholder="Enter Phone Number"
-                          value={phoneNo}
-                          onChange={(e) => setPhoneNo(e.target.value)}
-                          required
-                        />
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="border-popup-city dropDown-block-Outlet w-100">
-            <div className=" align-checkbox-city">
-              <label className="content-CB-PS" style={{ marginLeft: "0px" }}>
-                <h6 className="label-CB-PS">
-                  Yes, I would like to receive important updates and
-                  notifications from FoodApp on my WhatsApp
-                </h6>
-                <input
-                  type="checkbox"
-                  // onChange={(e) => setWhatsAppCheckbox(e.target.checked)}
-                  required
-                />
-                <span className="checkbox-CB-PS"></span>
-              </label>
-            </div>
-          </div>
-          {/* Add Menu */}
-          <div className="border-popup-city dropDown-block-Outlet">
-            <h4 className="sectionHeading my-2">Add Menu</h4>
-          </div>
-          <div className="border-popup-city row ">
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
-              <div className="label-PS text-lg-start">Cuisines</div>
-              <div className="dropdown-PS">
-                <select onChange={(e) => setCusineId(e.target.value)}>
-                  {isPending && (
-                    <div>
-                      <Skeleton />
-                    </div>
-                  )}
-                  {error && <div>{error}</div>}
-                  {data &&
-                    data.map((c) => (
-                      <option className="option" value={c.Id}>
-                        {c.Value}
-                      </option>
-                    ))}
-                </select>
-                <span className="Darrow">
-                  <img
-                    alt="down-arrow"
-                    src="/static/media/down_arrow.5b0512cf.svg"
-                  />
-                </span>
-              </div>
-            </div>
-            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4">
-              <div className="label-PS text-lg-start">Category Name</div>
-              <input
-                type="text"
-                placeholder="Pizza"
-                onChange={(e) => setSubCusine(e.target.value)}
-                className="input-PS"
-                required
+            <div className="col-lg-3 col-sm-6 col-12">
+              <ImageUploader
+                withIcon={true}
+                buttonText="Choose image"
+                onChange={uploadImageFracade}
+                imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+                maxFileSize={5242880}
               />
             </div>
-            <div className="dropDown-block-Outlet col-12 pt-sm-3 pt-4">
-              <span className="label-dropDown-block">Menu Images</span>
-              <div className="" id="margin-10-T">
+            <div className="col-lg-3 col-sm-6 col-12">
+              <ImageUploader
+                withIcon={true}
+                buttonText="Choose image"
+                onChange={uploadImageDinning}
+                imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+                maxFileSize={5242880}
+              />
+            </div>
+            <div className="col-lg-3 col-sm-6 col-12">
+              <ImageUploader
+                withIcon={true}
+                buttonText="Choose image"
+                onChange={uploadImageLocality}
+                imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+                maxFileSize={5242880}
+              />
+            </div>
+            <div className="col-lg-3 col-sm-6 col-12">
+              <ImageUploader
+                withIcon={true}
+                buttonText="Choose image"
+                onChange={uploadImageKitchen}
+                imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+                maxFileSize={5242880}
+              />
+            </div>
+          </div>
+        </div>
+        <div className="col-xxl-6 col-12 d-xxl-block d-none"></div>
+      </div>
+      <div className="row">
+        <div className="col-xl-6 col-12">
+          <div className="outlet-section res-location-details">
+            <div className="section-heading px-4 py-2 mt-4">
+              Restaurant Location Details
+            </div>
+            <div className="row px-3 my-4">
+              <div className="col-sm-6 col-12 my-sm-0 my-3">
+                <label for="city" className="label mb-2">
+                  City
+                </label>
+                <select id="city" className="form-select py-3">
+                  <option value="islamabad" key="">
+                    Islamabad
+                  </option>
+                  <option value="islamabad" key="">
+                    Lahore
+                  </option>
+                  <option value="islamabad" key="">
+                    Peshawar
+                  </option>
+                  <option value="islamabad" key="">
+                    Karachi
+                  </option>
+                </select>
+              </div>
+
+              <div className="col-sm-6 col-12 my-sm-0 my-3">
+                <label for="zipcode" className="label mb-2">
+                  Zipcode
+                </label>
+                <input type="text" id="zipcode" className="form-control py-3" />
+              </div>
+              <div className="col-sm-6 col-12 mt-3 mb-sm-0 mb-3">
+                <label for="area" className="label mb-2">
+                  Area
+                </label>
+                <input type="text" id="area" className="form-control py-3" />
+              </div>
+              <div className="col-sm-6 col-12"></div>
+              <div className="col-sm-6 col-12 mt-3 mb-sm-0 mb-3">
+                <label for="zipcode" className="label mb-2">
+                  Latitude
+                </label>
+                <input
+                  type="text"
+                  id="latitude"
+                  className="form-control py-3"
+                />
+              </div>
+              <div className="col-sm-6 col-12 mt-3 mb-sm-0 mb-3">
+                <label for="address" className="label mb-2">
+                  Longitude
+                </label>
+                <input
+                  type="text"
+                  id="longitude"
+                  className="form-control py-3"
+                />
+              </div>
+              <div className="col-12 my-3">
+                <label for="address" className="label mb-2">
+                  Address
+                </label>
+                <input type="text" id="address" className="form-control py-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-xl-6 col-12">
+          <div className="outlet-section">
+            <div className="section-heading px-4 py-2 mt-4">Add Menu</div>
+            <div className="row px-3 my-4">
+              <div className="col-sm-6 col-12 my-sm-0 my-3">
+                <label for="city" className="label mb-2">
+                  GSTN
+                </label>
+                <br />
+                <div className="gstn-field border">
+                  <span>Sales Tax</span>
+
+                  <input
+                    type="number"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    className="border"
+                  />
+                </div>
+                <span>
+                  <i className="fa fa-plus"></i>
+                </span>
+              </div>
+              <div className="col-sm-6 col-12 my-sm-0 my-3">
+                <div
+                  className=" align-checkbox-city"
+                  style={{ marginTop: "25px" }}
+                >
+                  <label className="content-CB-PS">
+                    <h6 className="label-CB-PS">
+                      Sales Tax should be included 2.5%
+                    </h6>
+                    <input
+                      type="checkbox"
+                      // onChange={(e) => setWhatsAppCheckbox(e.target.checked)}
+                      required
+                    />
+                    <span className="checkbox-CB-PS"></span>
+                  </label>
+                </div>
+              </div>
+              <div className="col-sm-6 col-12 mt-3 mb-sm-0 mb-3">
+                <label for="address" className="label mb-2">
+                  Cuisines
+                </label>
+                <select type="text" id="cuisines" className="form-select py-3">
+                  <option value="chines" key="">
+                    Chines
+                  </option>
+                  <option value="northPakistan" key="">
+                    North Pakistan
+                  </option>
+                  <option value="mainCuisines" key="">
+                    Main Cuisines
+                  </option>
+                </select>
+              </div>
+              <div className="col-sm-6 col-12 mt-3 mb-sm-0 mb-3">
+                <label for="address" className="label mb-2">
+                  Category Name
+                </label>
+                <input
+                  type="text"
+                  id="categoryName"
+                  className="form-control py-3"
+                />
+              </div>
+              <div className="col-sm-6 col-12 my-3 mb-sm-0 mb-3">
+                <ImageUploader
+                  withIcon={true}
+                  buttonText="Choose image"
+                  // onChange={uploadImageFracade}
+                  imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+                  maxFileSize={5242880}
+                />
+              </div>
+              <div className="col-sm-6 col-12 my-3 mb-sm-0 mb-3">
                 <ImageUploader
                   withIcon={true}
                   buttonText="Choose image"
@@ -518,133 +411,426 @@ function AddOutletItem(props) {
               </div>
             </div>
           </div>
-          {/* Restaurant Details */}
-          <div className="border-popup-city dropDown-block-Outlet">
-            <h4 className="sectionHeading my-2">Restaurent Details</h4>
-          </div>
-          <div className="border-popup-city row">
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
-              {/* Restaurent Name */}
-
-              <span className="label-dropDown-block">
-                Enter Restaurent Name
-              </span>
-              <div className="" id="margin-10-T">
-                <div className="">
-                  <div className="position-unset position-sm-relative ">
-                    <form action="#" className="form-dropDown-M">
-                      <div className="form-input-dropDown">
-                        <input
-                          type="text"
-                          placeholder="Restaurent Name"
-                          className="input-PS"
-                          value={restName}
-                          onChange={(e) => setRestName(e.target.value)}
-                          required
-                        />
-                      </div>
-                    </form>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12">
+          <div className="outlet-section">
+            <div className="section-heading px-4 py-2 mt-4">
+              Restaurant Details
+            </div>
+            <div className="row px-3 my-4">
+              <div className="col-sm-6 col-lg-4 col-12">
+                <label for="restaurant_name" className="label mb-2">
+                  Enter Restaurant Name
+                </label>
+                <input
+                  type="text"
+                  id="restaurant_name"
+                  className="form-control py-3"
+                />
+              </div>
+              <div className="col-sm-6 col-lg-2 col-12">
+                <label for="avg_price" className="label mb-2">
+                  Avg Price
+                </label>
+                <input
+                  type="number"
+                  id="avg_price"
+                  className="form-control py-3"
+                />
+              </div>
+              <div className="col-sm-6 col-lg-2 col-12 mt-lg-0 mt-3">
+                <label for="opening_time" className="label mb-2">
+                  Opening Time
+                </label>
+                <input
+                  type="time"
+                  id="opening_time"
+                  className="form-control py-3"
+                />
+              </div>
+              <div className="col-sm-6 col-lg-2 col-12 mt-lg-0 mt-3">
+                <label for="closing_time" className="label mb-2">
+                  Closing Time
+                </label>
+                <input
+                  type="time"
+                  id="closing_time"
+                  className="form-control py-3"
+                />
+              </div>
+              <div className="col-sm-6 col-lg-2 col-12 mt-lg-0 mt-3">
+                <label for="holiday" className="label mb-2">
+                  Holiday
+                </label>
+                <input type="time" id="holiday" className="form-control py-3" />
+              </div>
+            </div>
+            <div className="row px-3 mt-4">
+              <div className="col-sm-6 col-lg-6 col-12">
+                <div className="row">
+                  <div className="col-sm-6 col-12">
+                    <label for="number" className="label mb-2">
+                      Mobile Number
+                    </label>
+                    <input
+                      type="text"
+                      id="number"
+                      className="form-control py-3"
+                    />
+                  </div>
+                  <div className="col-sm-6 col-12 mt-sm-0 mt-3">
+                    <label for="landline" className="label mb-2">
+                      Landline
+                    </label>
+                    <input
+                      type="text"
+                      id="landline"
+                      className="form-control py-3"
+                    />
                   </div>
                 </div>
               </div>
+              <div className="col-sm-6 col-12"></div>
             </div>
-            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4">
-              <span className="label-dropDown-block">
-                Average Price For 2 persons
-              </span>
-              <div className="" id="margin-10-T">
-                <div className="">
-                  <div className="position-unset position-sm-relative ">
-                    <form action="#" className="form-dropDown-M">
-                      <div className="form-input-dropDown">
-                        <input
-                          type="text"
-                          placeholder="2500"
-                          className="input-PS"
-                          value={averagePrice}
-                          onChange={(e) => setAveragePrice(e.target.value)}
-                          required
-                        />
-                      </div>
-                    </form>
-                  </div>
+            <div className="row px-3 mt-4">
+              <div className="col-sm-6 col-12">
+                <div className=" align-checkbox-city">
+                  <label className="content-CB-PS">
+                    <h6 className="label-CB-PS">
+                      Yes, I would like to receive important updates and
+                      notifications from DeaseApp on my WhatsApp
+                    </h6>
+                    <input
+                      type="checkbox"
+                      // onChange={(e) => setWhatsAppCheckbox(e.target.checked)}
+                      required
+                    />
+                    <span className="checkbox-CB-PS"></span>
+                  </label>
                 </div>
               </div>
+              <div className="col-sm-6 col-12"></div>
             </div>
-          </div>
-          <div className="border-popup-city row">
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
-              <span className="label-dropDown-block">
-                Restaurent Opening Time
-              </span>
-              <div className="" id="margin-10-T">
-                <div className="">
-                  <div className="position-unset position-sm-relative ">
-                    <form action="#" className="form-dropDown-M">
-                      <div className="form-input-dropDown">
-                        <input
-                          type="time"
-                          className="input-PS"
-                          // value={averagePrice}
-                          // onChange={(e) => setAveragePrice(e.target.value)}
-                          required
-                        />
-                      </div>
-                    </form>
-                  </div>
-                </div>
+            <div className="row px-3 mt-4">
+              <h5>Select Cuisines</h5>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Afghanistani</h6>
+                  <input
+                    type="checkbox"
+                    name="cuisnes[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">BBQ</h6>
+                  <input
+                    type="checkbox"
+                    name="cuisnes[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Pizza</h6>
+                  <input
+                    type="checkbox"
+                    name="cuisnes[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Chicken</h6>
+                  <input
+                    type="checkbox"
+                    name="cuisnes[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Iranian</h6>
+                  <input
+                    type="checkbox"
+                    name="cuisnes[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-2 col-sm-6 col-md-4 col-lg-2  my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Take Away</h6>
+                  <input
+                    type="checkbox"
+                    name="cuisnes[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Burger</h6>
+                  <input
+                    type="checkbox"
+                    name="cuisnes[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-2 col-sm-6 col-md-4 col-lg-2  my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Chinese</h6>
+                  <input
+                    type="checkbox"
+                    name="cuisnes[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Biryani</h6>
+                  <input
+                    type="checkbox"
+                    name="cuisnes[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
               </div>
             </div>
-            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4">
-              <span className="label-dropDown-block">
-                Restaurent Closing Time
-              </span>
-              <div className="" id="margin-10-T">
-                <div className="">
-                  <div className="content-dropDown">
-                    <form action="#" className="form-dropDown-M">
-                      <div className="form-input-dropDown">
-                        <input
-                          type="time"
-                          // placeholder="2500"
-                          className="input-PS"
-                          // value={averagePrice}
-                          // onChange={(e) => setAveragePrice(e.target.value)}
-                          required
-                        />
-                      </div>
-                    </form>
-                  </div>
-                </div>
+            <div className="row px-3 mt-4">
+              <h5>Select Features</h5>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Smoking Area</h6>
+                  <input
+                    type="checkbox"
+                    name="cuisnes[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Air Conditioned</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">DJ</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Valet Available</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Home Delivery</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-2 col-sm-6 col-md-4 col-lg-2  my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Lift</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Parking</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-2 col-sm-6 col-md-4 col-lg-2  my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Take Away</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Live Performance</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Cards Accepted</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Dance Floor</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Outdoor Seating</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Full Bar Available</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Screening</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-2 col-sm-6 col-md-4 col-lg-2  my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Wallet Accepted</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Parking</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-2 col-sm-6 col-md-4 col-lg-2  my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Wifi</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Amex Accepted</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
               </div>
             </div>
-          </div>
-          <div className="border-popup-city row">
-            <div className="dropDown-block-Outlet col-sm-6 col-12 py-3">
-              <button
-                className="select-cuisine-btn"
-                onClick={handleSelectCuisinePop}
-              >
-                Select Cuisines
-              </button>
-            </div>
-            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4 py-3">
-              <button
-                className="select-cuisine-btn"
-                onClick={handleSelectFeaturesPop}
-              >
-                Select Features
-              </button>
-            </div>
-          </div>
-          <div className="border-popup-city row">
-            <div className="dropDown-block-Outlet col-sm-6 col-12">
-              <div className="label-PS">Delivery Type</div>
-              <div className="align-CB-PS p-0">
-                <label
-                  className="col-md-6 col-12 content-CB-PS my-3"
-                  style={{ marginLeft: "0px" }}
-                >
+            <div className="row px-3 mt-4">
+              <h5>Delivery Type</h5>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Home Delivery</h6>
+                  <input
+                    type="radio"
+                    name="d_type"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Take Away</h6>
                   <input
                     type="radio"
@@ -653,375 +839,306 @@ function AddOutletItem(props) {
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
-
-                <label
-                  className="col-md-6 col-12 content-CB-PS my-3"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Home Delivery</h6>
-                  <input
-                    type="radio"
-                    name="d_type"
-                    onChange={(e) => setDelivery(e.target.checked)}
-                  />
-                  <span className="checkbox-CB-PS"></span>
-                </label>
               </div>
             </div>
-            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4 mt-sm-0 mt-3">
-              <div className="label-PS">Establishment type</div>
-              <div className="align-CB-PS p-0">
-                <label
-                  className="col-md-6 col-12 content-CB-PS my-3"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Cafe</h6>
-                  <input
-                    type="radio"
-                    name="fav_language"
-                    onChange={(e) => setCafe(e.target.checked)}
-                  />
-                  <span className="checkbox-CB-PS"></span>
-                </label>
-
-                <label
-                  className="col-md-6  col-12 content-CB-PS mt-sm-3 mt-2"
-                  style={{ marginLeft: "0px" }}
-                >
+            <div className="row px-3 mt-4">
+              <h5>Establishment Type</h5>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Restaurant</h6>
                   <input
                     type="radio"
-                    name="fav_language"
-                    onChange={(e) => setRestaurent(e.target.checked)}
-                  />
-                  <span className="checkbox-CB-PS"></span>
-                </label>
-              </div>
-            </div>
-          </div>
-          <div className="border-popup-city row">
-            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4">
-              <div className="label-PS mt-sm-3 mt-2">
-                {" "}
-                What meal does this restaurant Serve
-              </div>
-              <div className="align-CB-PS p-0">
-                <label
-                  className="col-md-6 col-12 content-CB-PS my-2"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Breakfast</h6>
-                  <input
-                    type="checkbox"
-                    name="r_serve[]"
+                    name="r_type"
                     onChange={(e) => setTakeAway(e.target.checked)}
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
-
-                <label
-                  className="col-md-6 col-12 content-CB-PS my-2"
-                  style={{ marginLeft: "0px" }}
-                >
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Cafe</h6>
+                  <input
+                    type="radio"
+                    name="r_type"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+            </div>
+            <div className="row px-3 mt-4">
+              <h5>What Meal Does This Restaurant Serve</h5>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Breakfast</h6>
+                  <input
+                    type="checkbox"
+                    name="f_type[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Lunch</h6>
                   <input
                     type="checkbox"
-                    name="r_serve[]"
-                    onChange={(e) => setDelivery(e.target.checked)}
+                    name="cuisnes[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
-
-                <label
-                  className="col-md-6 col-12 content-CB-PS my-2"
-                  style={{ marginLeft: "0px" }}
-                >
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Drinks</h6>
                   <input
                     type="checkbox"
-                    name="r_serve[]"
-                    onChange={(e) => setDelivery(e.target.checked)}
+                    name="cuisnes[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
-
-                <label
-                  className="col-md-6 col-12 content-CB-PS my-2"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Buffet /Brunch</h6>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Buffet/Brunch</h6>
                   <input
                     type="checkbox"
-                    name="r_serve[]"
-                    onChange={(e) => setDelivery(e.target.checked)}
+                    name="cuisnes[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
-
-                <label
-                  className="col-md-6 col-12 content-CB-PS my-2"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Dinner</h6>
-                  <input
-                    type="checkbox"
-                    name="r_serve[]"
-                    onChange={(e) => setDelivery(e.target.checked)}
-                  />
-                  <span className="checkbox-CB-PS"></span>
-                </label>
-
-                <label
-                  className="col-md-6 col-12 content-CB-PS my-2"
-                  style={{ marginLeft: "0px" }}
-                >
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Late Night</h6>
                   <input
                     type="checkbox"
-                    name="r_serve[]"
-                    onChange={(e) => setDelivery(e.target.checked)}
+                    name="cuisnes[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
             </div>
-            <div className="dropDown-block-Outlet col-sm-6 col-12 pt-sm-0 pt-4">
-              <div className="label-PS mt-3">
-                What is this restaurant Good for
+            <div className="row px-3 mt-4">
+              <h5>What Is This Restaurant Good For?</h5>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Smoking Area</h6>
+                  <input
+                    type="checkbox"
+                    name="cuisnes[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
               </div>
-              <div className="align-CB-PS p-0">
-                <label
-                  className="col-md-6 col-12 content-CB-PS my-2"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Business meetings</h6>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Air Conditioned</h6>
                   <input
                     type="checkbox"
-                    name="r_good[]"
-                    onChange={(e) => setCafe(e.target.checked)}
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
-
-                <label
-                  className="col-md-6  col-12 content-CB-PS my-2"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS"> Families with Children's</h6>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">DJ</h6>
                   <input
                     type="checkbox"
-                    name="r_good[]"
-                    onChange={(e) => setRestaurent(e.target.checked)}
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
-                <label
-                  className="col-md-6  col-12 content-CB-PS my-2"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Hidden Jems</h6>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Valet Available</h6>
                   <input
                     type="checkbox"
-                    name="r_good[]"
-                    onChange={(e) => setRestaurent(e.target.checked)}
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
-                <label
-                  className="col-md-6  col-12 content-CB-PS my-2"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Hot new restaurant</h6>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Home Delivery</h6>
                   <input
                     type="checkbox"
-                    name="r_good[]"
-                    onChange={(e) => setRestaurent(e.target.checked)}
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
-                <label
-                  className="col-md-6  col-12 content-CB-PS my-2"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Kids</h6>
+              </div>
+              <div className="col-2 col-sm-6 col-md-4 col-lg-2  my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Lift</h6>
                   <input
                     type="checkbox"
-                    name="r_good[]"
-                    onChange={(e) => setRestaurent(e.target.checked)}
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
-                <label
-                  className="col-md-6  col-12 content-CB-PS my-2"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Large Group</h6>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Parking</h6>
                   <input
                     type="checkbox"
-                    name="r_good[]"
-                    onChange={(e) => setRestaurent(e.target.checked)}
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
-                <label
-                  className="col-md-6  col-12 content-CB-PS my-2"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Local Cuisine</h6>
+              </div>
+              <div className="col-2 col-sm-6 col-md-4 col-lg-2  my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Take Away</h6>
                   <input
                     type="checkbox"
-                    name="r_good[]"
-                    onChange={(e) => setRestaurent(e.target.checked)}
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
-                <label
-                  className="col-md-6  col-12 content-CB-PS my-2"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">scenic view</h6>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Live Performance</h6>
                   <input
                     type="checkbox"
-                    name="r_good[]"
-                    onChange={(e) => setRestaurent(e.target.checked)}
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
-                <label
-                  className="col-md-6  col-12 content-CB-PS my-2"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Special Occasions</h6>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Cards Accepted</h6>
                   <input
                     type="checkbox"
-                    name="r_good[]"
-                    onChange={(e) => setRestaurent(e.target.checked)}
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Dance Floor</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Outdoor Seating</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Full Bar Available</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Screening</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-2 col-sm-6 col-md-4 col-lg-2  my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Wallet Accepted</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Parking</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-2 col-sm-6 col-md-4 col-lg-2  my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Wifi</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+                <label className="content-CB-PS">
+                  <h6 className="label-CB-PS">Amex Accepted</h6>
+                  <input
+                    type="checkbox"
+                    name="features[]"
+                    onChange={(e) => setTakeAway(e.target.checked)}
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
             </div>
-          </div>
-          <div className="border-popup-city row">
-            {/* Restaurant Description */}
-            <div className="Section-PS px-0">
+            <div className="row px-3 mt-4">
               <div className="col-12">
-                <div className="label-PS">Restaurant Description</div>
-                <textarea
-                  placeholder="Remember, be nice!"
-                  className="PS-textArea"
-                  rows="5"
-                  cols="9"
-                  value={desc}
-                  onChange={(e) => setDesc(e.target.value)}
-                ></textarea>
+                <label className="label mb-2" for="restaurant-desc">Restaurant Description</label>
+                <textarea type="form-control" name="restaurant-desc" rows="5" />
               </div>
             </div>
-            {/* Popup Select-Cuisines*/}
-            <ForDevice deviceName={["tablet", "desktop"]}>
-              <Modal
-                open={isSelectCuisineShowing}
-                onClose={closeSelectCuisinePop}
-                closeIcon={closeIcon}
-                center
-                styles={{
-                  modal: {
-                    "margin-top": "80px",
-                    "max-width": "535px",
-                    padding: "0px",
-                    borderRadius: "23px",
-                  },
-                }}
-              >
-                <PopupSelectCuisine click={closeSelectCuisinePop} />
-              </Modal>
-            </ForDevice>
-            <ForDevice deviceName="mobile">
-              <Modal
-                open={isSelectCuisineShowing}
-                onClose={closeSelectCuisinePop}
-                closeIcon={closeIcon}
-                classNames={{
-                  modalAnimationIn: "sortByEnterModalAnimation",
-                  modalAnimationOut: "sortByLeaveModalAnimation",
-                }}
-                animationDuration={800}
-                center
-                styles={{
-                  modal: {
-                    width: "100%",
-                    padding: "0px",
-                    margin: "0px",
-                    borderRadius: "23px 23px 0px 0px",
-                    verticalAlign: "bottom",
-                  },
-                }}
-              >
-                <PopupSelectCuisine click={closeSelectCuisinePop} />
-              </Modal>
-            </ForDevice>
-            {/* Popup Select-Features*/}
-            <ForDevice deviceName={["tablet", "desktop"]}>
-              <Modal
-                open={isSelectFeaturesShowing}
-                onClose={closeSelectFeaturesPop}
-                closeIcon={closeIcon}
-                center
-                styles={{
-                  modal: {
-                    "margin-top": "80px",
-                    "max-width": "535px",
-                    padding: "0px",
-                    borderRadius: "23px",
-                  },
-                }}
-              >
-                <PopupSelectFeatures click={closeSelectFeaturesPop} />
-              </Modal>
-            </ForDevice>
-            <ForDevice deviceName="mobile">
-              <Modal
-                open={isSelectFeaturesShowing}
-                onClose={closeSelectFeaturesPop}
-                closeIcon={closeIcon}
-                center
-                classNames={{
-                  modalAnimationIn: "sortByEnterModalAnimation",
-                  modalAnimationOut: "sortByLeaveModalAnimation",
-                }}
-                animationDuration={800}
-                styles={{
-                  modal: {
-                    width: "100%",
-                    padding: "0px",
-                    margin: "0px",
-                    borderRadius: "23px 23px 0px 0px",
-                    verticalAlign: "bottom",
-                  },
-                }}
-              >
-                <PopupSelectFeatures click={closeSelectFeaturesPop} />
-              </Modal>
-            </ForDevice>
-          </div>
-          {/* Buttons */}
-          <div className="row m-auto">
-            <div className="col-md-12 d-flex mb-2 pr-0 justify-content-center">
-              <button
-                type="submit"
-                className="blue-btn"
-                onClick={(e) => handleSubmit(e)}
-                style={{ marginRight: "20px" }}
-              >
-                Save
-              </button>
-              {/* <button className="green-btn" onClick={(e) => props.click(e)}>
-              Cancel
-            </button> */}
-            </div>
+            <div className="d-flex justify-content-sm-start justify-content-between mt-4 footer px-3 mt-4">
+    <button className="btn btn-success me-3 py-3 px-5 mb-4">Save Information</button>
+    <button className="btn btn-light p-3 mb-4">Cancel</button>
+      </div>
           </div>
         </div>
       </div>
+
     </div>
   );
 }

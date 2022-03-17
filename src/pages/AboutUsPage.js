@@ -60,7 +60,7 @@ export default function AboutUsPage() {
          <div className="join-us-section">
             <h2>Join us</h2>
             <p>We’re always looking for fun-loving, intelligent and hardworking people to join us! So if you think you can add flavours to our recipe, drop us a mail and tell us about yourself.
-               For job openings: <a href="foodApp.co.pk">careers@foodApp.co.pk</a>
+               For job openings: <a href="DeaseApp.co.pk">careers@DeaseApp.co.pk</a>
             </p>
          </div>
     </div>

@@ -36,7 +36,7 @@ function AdminNavbar() {
         href="#"
         className="nav-link"
       >
-        Outlet Dashboard
+        Dashboard
       </h1>
       <ul>
         {/* <li>
@@ -72,7 +72,7 @@ function AdminNavbar() {
       >
         <section id="sidebar-Mobile">
           <a href="#abcabc" className="brand">
-            <span className="logo-text">FoodApp</span>
+            <span className="logo-text">DeaseApp</span>
           </a>
           <ul className="sidebar-menu">
             <li>

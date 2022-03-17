@@ -83,7 +83,7 @@ function SignUp(props) {
                         <div className="modal-content clearfix">
                             {/* <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> */}
                             <div className="modal-body">
-                                <h3 className="title">Welcome to FoodApp!</h3>
+                                <h3 className="title">Welcome to DeaseApp!</h3>
                                 <hr className="hr-for-sign-in-form"/>
                                 <form >
                                 <div className="content-of-form">
@@ -147,7 +147,7 @@ function SignUp(props) {
                                     <div className="form-group checkbox" onChange={(e) => setCheck2(e.target.checked)}>
                                         <input type="checkbox"/>
                                         <label>Sign me up to receive exclusive dining offers and news
-                                            on hot new restaurants on FoodApp.</label>
+                                            on hot new restaurants on DeaseApp.</label>
                                     </div>
                                     <div className="form-group checkbox">
                                         <input type="checkbox"/>

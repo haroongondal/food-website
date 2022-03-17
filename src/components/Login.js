@@ -105,7 +105,7 @@ export default function Login(props) {
                             <span>Continue with Google</span>
                         </button>
                         <div className="text-create-account">
-                            <span>New to FoodApp? </span><a href="/">Create an account</a>
+                            <span>New to DeaseApp? </span><a href="/">Create an account</a>
                         </div>
                     </div>
                     

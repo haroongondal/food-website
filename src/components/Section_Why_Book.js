@@ -8,7 +8,7 @@ export default function Section_Why_Book() {
         <div className='d-md-block d-none'>
            
            <div className="heading_why-book mobile-hide">
-            <h3>Why Book a Restaurant With FoodApp</h3>
+            <h3>Why Book a Restaurant With DeaseApp</h3>
         </div>
         
         

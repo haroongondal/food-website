@@ -11,9 +11,9 @@ function BusinessMainSection() {
 
         <div className="section-1-why-list">
             <div className="Heading-text">
-                <h1>Why list your restaurant on FoodApp?</h1>
-                <h6>FoodApp has a network in 500+ cities with over 12 crore customers and more than button for find line text of transform
-                    text from image in google 10 lakh orders are delivered per day by our nearly 2 lakhs FoodApp riders button for find line
+                <h1>Why list your restaurant on DeaseApp?</h1>
+                <h6>DeaseApp has a network in 500+ cities with over 12 crore customers and more than button for find line text of transform
+                    text from image in google 10 lakh orders are delivered per day by our nearly 2 lakhs DeaseApp riders button for find line
                     text of transform text from image in google</h6>
             </div>
             <div className="items_services center">
@@ -82,7 +82,7 @@ function BusinessMainSection() {
         <div className="section-2-how-it-works">
             <div className="Heading-text">
                 <h1>How it works?</h1>
-                <h6>With 3 steps, you can register your restaurent on FoodApp platform and enjoy the benefits.</h6>
+                <h6>With 3 steps, you can register your restaurent on DeaseApp platform and enjoy the benefits.</h6>
             </div>
             <div className="items_services center">
     
@@ -202,7 +202,7 @@ function BusinessMainSection() {
 
                 {/* content starts here */}
 
-            <button className="title-faq" style={{outline: "0px auto -webkit-focus-ring-color"}}>With 3 steps, you can register your restaurent on FoodApp platform and enjoy the benefits.</button>
+            <button className="title-faq" style={{outline: "0px auto -webkit-focus-ring-color"}}>With 3 steps, you can register your restaurent on DeaseApp platform and enjoy the benefits.</button>
             <div className="faq-content">
         <div className="faq-body">
             Step 1 : Go to your favorite restaurant and take your smartphone with you. You can take a seat at any table you like.,<br/><br/>  
@@ -212,7 +212,7 @@ function BusinessMainSection() {
         </div>
             </div>
 
-            <button className="title-faq" style={{outline: "0px auto -webkit-focus-ring-color"}}>With 3 steps, you can register your restaurent on FoodApp platform and enjoy the benefits.</button>
+            <button className="title-faq" style={{outline: "0px auto -webkit-focus-ring-color"}}>With 3 steps, you can register your restaurent on DeaseApp platform and enjoy the benefits.</button>
             <div className="faq-content">
         <div className="faq-body">
             Step 1 : Go to your favorite restaurant and take your smartphone with you. You can take a seat at any table you like.,<br/><br/> 
@@ -222,7 +222,7 @@ function BusinessMainSection() {
         </div>
             </div>
 
-            <button className="title-faq" style={{outline: "0px auto -webkit-focus-ring-color"}}>With 3 steps, you can register your restaurent on FoodApp platform and enjoy the benefits.</button>
+            <button className="title-faq" style={{outline: "0px auto -webkit-focus-ring-color"}}>With 3 steps, you can register your restaurent on DeaseApp platform and enjoy the benefits.</button>
             <div className="faq-content">
         <div className="faq-body">
             Step 1 : Go to your favorite restaurant and take your smartphone with you. You can take a seat at any table you like.,<br/><br/> 
@@ -232,7 +232,7 @@ function BusinessMainSection() {
         </div>
             </div>
 
-            <button className="title-faq" style={{outline: "0px auto -webkit-focus-ring-color"}}>With 3 steps, you can register your restaurent on FoodApp platform and enjoy the benefits.</button>
+            <button className="title-faq" style={{outline: "0px auto -webkit-focus-ring-color"}}>With 3 steps, you can register your restaurent on DeaseApp platform and enjoy the benefits.</button>
             <div className="faq-content">
         <div className="faq-body">
             Step 1 : Go to your favorite restaurant and take your smartphone with you. You can take a seat at any table you like.,<br/><br/>
@@ -242,7 +242,7 @@ function BusinessMainSection() {
         </div>
             </div>
 
-            <button className="title-faq" style={{outline: "0px auto -webkit-focus-ring-color"}}>With 3 steps, you can register your restaurent on FoodApp platform and enjoy the benefits.</button>
+            <button className="title-faq" style={{outline: "0px auto -webkit-focus-ring-color"}}>With 3 steps, you can register your restaurent on DeaseApp platform and enjoy the benefits.</button>
             <div className="faq-content">
         <div className="faq-body">
             Step 1 : Go to your favorite restaurant and take your smartphone with you. You can take a seat at any table you like.,<br/><br/>  
@@ -266,7 +266,7 @@ function BusinessMainSection() {
                     <h6 className="text-contact">Please Leave your contact details and<br/>
                         we'll be in touch within 24 hours</h6>
                     <h6 className="text-query">or send us your query at<br/>
-                        <a href="#abc">FoodApp@gmail.com</a></h6>
+                        <a href="#abc">DeaseApp@gmail.com</a></h6>
                 </div>
                 <div className="right-section-5">
                     <div className="form-body-business">

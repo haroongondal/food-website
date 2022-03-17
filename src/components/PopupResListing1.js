@@ -110,7 +110,7 @@ export default function PopupResListing1(props) {
               I certify that I am an authorized representative or affiliate of
               this establishment and have the authority ss representative. The
               information I have entered into this form is neither false nor
-              fraudulent. I also understand that FoodApp may disclose my name
+              fraudulent. I also understand that DeaseApp may disclose my name
               and affiliation to other verified representatives of this
               establishment.
             </label>
@@ -125,7 +125,7 @@ export default function PopupResListing1(props) {
               onChange={handleChange}
             />
             <label>
-              I have read and accept FoodApp's{" "}
+              I have read and accept DeaseApp's{" "}
               <span className="text-primary">Terms of Use</span> and{" "}
               <span className="text-primary">Privacy Policy</span>.
             </label>

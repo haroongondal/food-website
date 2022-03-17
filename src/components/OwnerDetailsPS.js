@@ -210,7 +210,7 @@ export default function OwnerDetailsPS() {
               <label className="content-CB-PS" style={{ marginLeft: "0px" }}>
                 <h6 className="label-CB-PS">
                   Yes, I would like to receive important updates and
-                  notifications from FoodApp on my WhatsApp
+                  notifications from DeaseApp on my WhatsApp
                 </h6>
                 <input
                   type="checkbox"

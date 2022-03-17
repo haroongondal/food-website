@@ -21,7 +21,7 @@ function PrivacyPolicyPage() {
             collection, use, disclosure and transfer of your information by
             Times Internet Limited and/or its subsidiary(ies) and/or
             affiliate(s) (collectively referred to as the "Company/TIL"), which
-            operates <a href="http://www.foodApp.pk/"> www.foodApp.co.pk</a> and
+            operates <a href="http://www.DeaseApp.pk/"> www.DeaseApp.co.pk</a> and
             its sub-sites, platforms, applications, m-web platforms and other
             platforms (collectively referred to as “Sites”) for delivery of
             information, products, offerings and content via any mobile or
