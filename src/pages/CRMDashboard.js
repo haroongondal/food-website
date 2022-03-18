@@ -1,6 +1,6 @@
 import {React,useEffect} from "react";
 import { Route, Switch, useRouteMatch } from "react-router";
-import AdminSidebar from "../components/AdminSidebar";
+import AdminSidebar2 from "../components/AdminSidebar2";
 import AdminNavbar from "../components/AdminNavbar";
 import AdminMenuPage from "./AdminMenuPage";
 import MenuDashboard from "./MenuDashboard";
@@ -20,10 +20,10 @@ function CRMDashboard(props) {
     props.showBottomNav(false);
   });
   return (
-    <div>
-      <AdminSidebar />
+    <div className="adminBody" id="adminBody">
+      <AdminSidebar2 />
       <section id="content">
-        <AdminNavbar />
+        {/* <AdminNavbar /> */}
         <main>
           <Switch>
             <Route exact path={`${path}/Add-Menu`}>

@@ -100,7 +100,35 @@
   width: 100%;
   margin-left: 1rem;
 }
-
+.resTop-navbar {
+  border-bottom: 1px solid lightgray;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  z-index: 1;
+}
+.resTop-navbar .top-navItem {
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+}
+.resTop-navbar .top-navItem.active {
+  color: #439548;
+}
+.resTop-navbar .top-navItem.active::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 29px;
+  width: 100%;
+  height: 2px;
+  background-color: #439548;
+  background-size: 100% 100%;
+}
+.resTop-navbar .top-navList {
+  margin: 10px 0;
+}
 /* examples/custom-animation.css */
 @keyframes customEnterModalAnimation {
   0% {
@@ -141,7 +169,6 @@
 
 /* admin-sidebar-mobile */
 @keyframes sideBarEnterModalAnimation {
-  
   100% {
     transform: translateX(60%);
   }
@@ -163,5 +190,3 @@
     visibility: hidden;
   }
 }
-
-

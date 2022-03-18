@@ -333,21 +333,22 @@ function AddOutletItem(props) {
                 </label>
                 <br />
                 <div className="gstn-field border">
-                  <span>Sales Tax</span>
+                  <span style={{display:'inline-block',margin:'11px 0 0 6px'}}>Sales Tax</span>
 
                   <input
                     type="number"
                     min="0"
-                    max="1"
+                    max="100"
                     step="0.1"
                     className="border"
+                    placeholder="%"
                   />
                 </div>
                 <span>
                   <i className="fa fa-plus"></i>
                 </span>
               </div>
-              <div className="col-sm-6 col-12 my-sm-0 my-3">
+              <div className="col-12 my-sm-0 my-3">
                 <div
                   className=" align-checkbox-city"
                   style={{ marginTop: "25px" }}
@@ -495,7 +496,7 @@ function AddOutletItem(props) {
               <div className="col-sm-6 col-12"></div>
             </div>
             <div className="row px-3 mt-4">
-              <div className="col-sm-6 col-12">
+              <div className="col-12">
                 <div className=" align-checkbox-city">
                   <label className="content-CB-PS">
                     <h6 className="label-CB-PS">

@@ -35,6 +35,7 @@
     font-size: 18px;
     color:black;
   }
+
   .add-outlet-item .content-CB-PS{
     margin-left: 0;
   }
@@ -42,12 +43,12 @@
     display: inline-block;
     width: 80%;
     position: relative;
-    height: 35px;
+    height: 55px;
     padding: 5px;
   }
   .add-outlet-item .gstn-field > input {
     width: 50px;
-    height: 34px;
+    height: 54px;
     position: absolute;
     right: 0;
     top: 0;
@@ -62,7 +63,7 @@
     width: 100%;
   }
   .add-outlet-item .outlet-section .fa-plus {
-    padding: 10px 13px;
+    padding: 19px;
     background: #85d790;
     color: white;
     margin-left: 5px;
@@ -307,6 +308,11 @@
   }
   .res-location-details {
     height: 91%;
+  }
+}
+@media screen  and (min-width:992px) and (max-width:1150px){
+  .add-outlet-item .label-CB-PS, .add-outlet-item .label  {
+    font-size: 14px;
   }
 }
 @media (min-width: 576px) {

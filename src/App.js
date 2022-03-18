@@ -1,4 +1,5 @@
 import "./App.css";
+import "../src/styles/grid.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ConsumerLandingPage from "./pages/ConsumerLandingPage";
 import TestPage from "./pages/TestPage";
@@ -73,7 +74,7 @@ function App() {
             </Route>
 
             <Route path="/RestaurentDetailsPage/:id">
-              <RestaurentDetailsPage />
+              <RestaurentDetailsPage  showHeader={showHeader} />
             </Route>
 
             <Route exact path="/TestPage">

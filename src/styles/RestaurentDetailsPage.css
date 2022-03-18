@@ -1,7 +1,15 @@
 
   
-  
-
+  .restaurent_detail_page .reservation i{
+    font-size: 20px;
+    color: #439548;
+  }
+  .restaurent_detail_page .reservation a{
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+  }
   @media screen and (min-width: 280px) {
     .merge-section{
       display: flex;

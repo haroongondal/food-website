@@ -1,10 +1,11 @@
-import React from "react";
+import { React, useEffect } from "react";
 import { useParams } from "react-router";
 import BannerResturant from "../components/BannerResturant";
 import Breadcrumb from "../components/Breadcrumb";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import ResDetailTopNav from "../components/ResDetailTopNav";
+import ResTopNavbar from "../components/ResTopNavbar";
 import ReservationItem from "../components/Reservation_Item";
 import SecResAbout from "../components/SecResAbout";
 import SecResDetails from "../components/SecResDetails";
@@ -19,7 +20,7 @@ import useFetch from "../Utils/useFetch";
 import Carousel from "react-multi-carousel";
 import restaurentImage from "../images/restaurant.jpg";
 
-function RestaurentDetailsPage() {
+function RestaurentDetailsPage(props) {
   const { id } = useParams();
   const responsive = {
     tablet: {
@@ -32,6 +33,9 @@ function RestaurentDetailsPage() {
       items: 1,
     },
   };
+  useEffect(function () {
+    props.showHeader(false);
+  });
   // const { query, search } = useLocation();
   // console.log(id, query.backUrl, new URLSearchParams(search).get('id'))
 
@@ -40,33 +44,34 @@ function RestaurentDetailsPage() {
   );
   return (
     <div className="restaurent_detail_page">
+      <ResTopNavbar />
       <NavBar ShouldHideSearch={false} />
       {/* <Breadcrumb/> */}
-
-      {/* <ResDetailTopNav/> */}
       <div className="d-lg-none d-block restaurent-detail-carousel">
-      <Carousel
-        responsive={responsive}
-        infinite={true}
-        showDots={true} 
-        removeArrowOnDeviceType={["tablet", "mobile"]}
-        partialVisible={false}
-        className="restaurent-img-carousel" 
-      >
-        {/* {restaurants.isPending && <div><Skeleton width={200} height={250}/></div>}
+        <Carousel
+          responsive={responsive}
+          infinite={true}
+          showDots={true}
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+          partialVisible={false}
+          className="restaurent-img-carousel"
+        >
+          {/* {restaurants.isPending && <div><Skeleton width={200} height={250}/></div>}
         {restaurants.error && <div>{restaurants.error}</div>} */}
-        {/* {restaurants.data && restaurants.data.map((r) => <RestaurentItem key = {r.Id} data = {r}/>)} */}
-        <div className="slide-img-restaurent-3rd-page">
-          <img alt="res-img" src={restaurentImage} />
-        </div>
-        <div className="slide-img-restaurent-3rd-page">
-          <img alt="res-img" src={restaurentImage} />
-        </div>
-        <div className="slide-img-restaurent-3rd-page">
-          <img alt="res-img" src={restaurentImage} />
-        </div>
-      </Carousel>
+          {/* {restaurants.data && restaurants.data.map((r) => <RestaurentItem key = {r.Id} data = {r}/>)} */}
+          <div className="slide-img-restaurent-3rd-page">
+            <img alt="res-img" src={restaurentImage} />
+          </div>
+          <div className="slide-img-restaurent-3rd-page">
+            <img alt="res-img" src={restaurentImage} />
+          </div>
+          <div className="slide-img-restaurent-3rd-page">
+            <img alt="res-img" src={restaurentImage} />
+          </div>
+        </Carousel>
       </div>
+      {/* <ResDetailTopNav/> */}
+
       <BannerResturant />
       <div className="merge-section">
         <div className="section-left-restaurent-details">
@@ -87,7 +92,14 @@ function RestaurentDetailsPage() {
           )}
           <SecResNavbar />
 
-          <SecResMobileResveration />
+          {/* <SecResMobileResveration /> */}
+
+          <div className="border-restaurent-details">
+            <div className="content-restaurent-details reservation">
+              <i className="fa fa-ticket me-3"></i>{" "}
+              <a href="/business-login">Reserve a Table</a>
+            </div>
+          </div>
 
           {restaurantDetails.error && console.log(restaurantDetails.error)}
           {restaurantDetails.isPending &&
