@@ -442,7 +442,7 @@ export default function ProfileSettings() {
             {/* FullName */}
             <div className="col-sm-6 col-12 px-2">
               <div className="label-PS">
-                {" "}
+                
                 Write your Referal Email Or Code ?
               </div>
               <div className="align-CB-PS p-0">

@@ -1,7 +1,8 @@
-import {React,useEffect} from "react";
+import { React, useEffect, useRef } from "react";
 import { Route, Switch, useRouteMatch } from "react-router";
 import AdminSidebar2 from "../components/AdminSidebar2";
-import AdminNavbar from "../components/AdminNavbar";
+// import AdminSidebar from "../components/AdminSidebar";
+// import AdminNavbar from "../components/AdminNavbar";
 import AdminMenuPage from "./AdminMenuPage";
 import MenuDashboard from "./MenuDashboard";
 import OutletsPage from "./OutletsPage";
@@ -15,15 +16,17 @@ import useFetch from "../Utils/useFetch";
 
 function CRMDashboard(props) {
   const { path } = useRouteMatch();
+  const adminBody = useRef();
   useEffect(function () {
     props.showHeader(false);
     props.showBottomNav(false);
   });
   return (
-    <div className="adminBody" id="adminBody">
-      <AdminSidebar2 />
+    <div ref={adminBody}>
       <section id="content">
         {/* <AdminNavbar /> */}
+        <AdminSidebar2 adminBody={adminBody} />
+
         <main>
           <Switch>
             <Route exact path={`${path}/Add-Menu`}>
@@ -52,9 +55,9 @@ function CRMDashboard(props) {
               <ProfileSettings />
             </Route>
           </Switch>
-          <BottomNavBarCRM />
         </main>
       </section>
+      <BottomNavBarCRM />
     </div>
   );
 }

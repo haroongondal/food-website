@@ -157,7 +157,7 @@
   font-size: 14px;
   margin-bottom: -17px;
   color: #06386c;
-  line-height: 1.2;
+  line-height: 1.4;
   margin-left: 5px;
 }
 .content-CB-PS input[type="radio"] {
@@ -171,13 +171,14 @@
   width: 20px;
   background-color: white;
   border-radius: 3px;
-  border: 1px solid #06386c;
+  border: 1px solid gray;
 }
 .content-CB-PS input:active ~ .checkbox-CB-PS {
   background-color: white;
 }
 .content-CB-PS input:checked ~ .checkbox-CB-PS {
-  background-color: #0083c7;
+  background-color: #5ddc954d;
+  border: 1px solid #5ddc95;
 }
 .checkbox-CB-PS:after {
   content: "";
@@ -192,7 +193,7 @@
   bottom: 4px;
   width: 6px;
   height: 12px;
-  border: solid white;
+  border: solid #5ddc95;
   border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);

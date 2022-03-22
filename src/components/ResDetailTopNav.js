@@ -1,34 +1,34 @@
 import React from "react";
 import { useEffect } from "react";
-import '../styles/ResDetailTopNav.css'
-import Scrollspy from 'react-scrollspy'
+import "../styles/ResDetailTopNav.css";
+import restaurentImage from "../images/restaurant.jpg";
+import Scrollspy from "react-scrollspy";
 
 export default function ResDetailTopNav() {
-
   const Header = () => {
-    
     // Sticky Menu Area
     useEffect(() => {
-        window.addEventListener('scroll', isSticky);
-        return () => {
-            window.removeEventListener('scroll', isSticky);
-        };
+      window.addEventListener("scroll", isSticky);
+      return () => {
+        window.removeEventListener("scroll", isSticky);
+      };
     });
 
-           
     /* Method that will fix header after a specific scrollable */
-           const isSticky = (e) => {
-                const header = document.querySelector('.res-detail-top-nav');
-                const scrollTop = window.scrollY;
-                scrollTop >= 250 ? header.classList.add('dashboard-res-detail-M-fixed') : header.classList.remove('dashboard-res-detail-M-fixed');
-            };  
-}
+    const isSticky = (e) => {
+      const header = document.querySelector(".res-detail-top-nav");
+      const scrollTop = window.scrollY;
+      scrollTop >= 250
+        ? header.classList.add("dashboard-res-detail-M-fixed")
+        : header.classList.remove("dashboard-res-detail-M-fixed");
+    };
+  };
   return (
     <div>
       <section className="res-detail-top-nav">
         <div class="dashboard-res-detail-M" id="scroll-header">
           <img
-            src="https://im1.DeaseApp.co.in/images/uploads/restaurant/sharpen/1/w/o/p13437-1635482277617b7aa51ce75.jpg?tr=tr:n-large"
+            src={restaurentImage}
             alt="JW Kitchen"
             title="JW Kitchen"
             class="no-img"
@@ -43,9 +43,8 @@ export default function ResDetailTopNav() {
               />
             </a>
           </div> */}
-          
-          
-          <div class="right-tools-res-detail-M">
+
+          {/* <div class="right-tools-res-detail-M">
             <ul>
               <li>
                 <img
@@ -67,8 +66,19 @@ export default function ResDetailTopNav() {
                 />
               </li>
             </ul>
+          </div> */}
+          <div className="position-absolute px-4 text-light top-0 w-100 top-nav-secondary">
+            <div className="d-flex justify-content-between mb-3 mt-2">
+              <div>
+                <i className="fa fa-angle-left me-3 fs-3"></i>
+              </div>
+              <div>
+                <i className="fa fa-share-square-o me-3"></i>
+                <i className="fa fa-heart-o"></i>
+              </div>
+            </div>
           </div>
-          {/* <div class="rating-res-detail-M">
+          <div class="rating-res-detail-M">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="15"
@@ -83,31 +93,36 @@ export default function ResDetailTopNav() {
               ></path>
             </svg>
             4.4<span>(780)</span>
-          </div> */}
-        </div>
-        <div style={{margin:"0px 12px"}}>
-        <div className="topSec-res-detail-M">
-          <div className="overview-res-detail-M">
-            <Scrollspy
-        items={ ['top-section', 'about-section', 'menu-section', 'rating-review-section'] }
-        currentClassName="activeTab" className="">
-              <li className="bottom-color-res-detail-M">
-                <a href="#top-section">Overview</a>
-              </li>
-              <li className=" bottom-color-res-detail-M">
-                <a href="#about-section">About</a>
-              </li>
-              <li className="bottom-color-res-detail-M ">
-                <a href="#menu-section">Menu</a>
-              </li>
-              <li className=" bottom-color-res-detail-M">
-                <a href="#rating-review-section">Reviews</a>
-              </li>
-            </Scrollspy>
           </div>
-          
-          
         </div>
+        <div style={{ margin: "0px 12px" }}>
+          <div className="topSec-res-detail-M">
+            <div className="overview-res-detail-M">
+              <Scrollspy
+                items={[
+                  "top-section",
+                  "about-section",
+                  "menu-section",
+                  "rating-review-section",
+                ]}
+                currentClassName="activeTab"
+                className=""
+              >
+                <li className="bottom-color-res-detail-M">
+                  <a href="#top-section">Overview</a>
+                </li>
+                <li className=" bottom-color-res-detail-M">
+                  <a href="#about-section">About</a>
+                </li>
+                <li className="bottom-color-res-detail-M ">
+                  <a href="#menu-section">Menu</a>
+                </li>
+                <li className=" bottom-color-res-detail-M">
+                  <a href="#rating-review-section">Reviews</a>
+                </li>
+              </Scrollspy>
+            </div>
+          </div>
         </div>
       </section>
     </div>

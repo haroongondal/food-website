@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import { React, useEffect, useState } from "react";
 import { useParams } from "react-router";
 import BannerResturant from "../components/BannerResturant";
 import Breadcrumb from "../components/Breadcrumb";
@@ -21,6 +21,7 @@ import Carousel from "react-multi-carousel";
 import restaurentImage from "../images/restaurant.jpg";
 
 function RestaurentDetailsPage(props) {
+  const [isVisibleNavbar, setIsVisibleNavbar] = useState(false);
   const { id } = useParams();
   const responsive = {
     tablet: {
@@ -35,7 +36,21 @@ function RestaurentDetailsPage(props) {
   };
   useEffect(function () {
     props.showHeader(false);
+    window.addEventListener("scroll", listenToScroll);
+    return () => window.removeEventListener("scroll", listenToScroll);
   });
+  const listenToScroll = () => {
+    let heightToHideFrom = 100;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+
+    if (winScroll > heightToHideFrom) {
+      // to limit setting state only the first time
+        setIsVisibleNavbar(true);
+    } else {
+      setIsVisibleNavbar(false);
+    }
+  };
   // const { query, search } = useLocation();
   // console.log(id, query.backUrl, new URLSearchParams(search).get('id'))
 
@@ -44,11 +59,11 @@ function RestaurentDetailsPage(props) {
   );
   return (
     <div className="restaurent_detail_page">
-      <ResTopNavbar />
+      {isVisibleNavbar && <ResTopNavbar />}
       <NavBar ShouldHideSearch={false} />
       {/* <Breadcrumb/> */}
       <div className="d-lg-none d-block restaurent-detail-carousel">
-        <Carousel
+        {/* <Carousel
           responsive={responsive}
           infinite={true}
           showDots={true}
@@ -56,9 +71,6 @@ function RestaurentDetailsPage(props) {
           partialVisible={false}
           className="restaurent-img-carousel"
         >
-          {/* {restaurants.isPending && <div><Skeleton width={200} height={250}/></div>}
-        {restaurants.error && <div>{restaurants.error}</div>} */}
-          {/* {restaurants.data && restaurants.data.map((r) => <RestaurentItem key = {r.Id} data = {r}/>)} */}
           <div className="slide-img-restaurent-3rd-page">
             <img alt="res-img" src={restaurentImage} />
           </div>
@@ -68,9 +80,9 @@ function RestaurentDetailsPage(props) {
           <div className="slide-img-restaurent-3rd-page">
             <img alt="res-img" src={restaurentImage} />
           </div>
-        </Carousel>
+        </Carousel> */}
       </div>
-      {/* <ResDetailTopNav/> */}
+      <ResDetailTopNav />
 
       <BannerResturant />
       <div className="merge-section">
@@ -96,7 +108,7 @@ function RestaurentDetailsPage(props) {
 
           <div className="border-restaurent-details">
             <div className="content-restaurent-details reservation">
-              <i className="fa fa-ticket me-3"></i>{" "}
+              <i className="fa fa-cutlery me-3"></i>
               <a href="/business-login">Reserve a Table</a>
             </div>
           </div>

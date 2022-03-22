@@ -1,14 +1,14 @@
 @media only screen and (min-width: 280px) {
   .add-outlet-item {
-    margin-bottom: 85px;
-    padding: 0 20px;
+    margin-bottom: 50px;
+    padding: 0;
   }
   .add-outlet-item .page-heading {
     font-size: 28px;
     font-weight: bold;
   }
   .add-outlet-item h5 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
   }
   .add-outlet-item .outlet-section {
@@ -24,7 +24,7 @@
     border-radius: 10px 10px 0 0;
   }
   .add-outlet-item .label {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
   }
   .add-outlet-item select,
@@ -32,7 +32,7 @@
     font-size: 14px;
   }
   .add-outlet-item .label-CB-PS {
-    font-size: 18px;
+    font-size: 16px;
     color:black;
   }
 
@@ -43,15 +43,15 @@
     display: inline-block;
     width: 80%;
     position: relative;
-    height: 55px;
+    height: 43px;
     padding: 5px;
   }
   .add-outlet-item .gstn-field > input {
-    width: 50px;
-    height: 54px;
+    width: 70px;
+    height: 43px;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: -1px;
+    top: -1px;
     padding: 0 10px;
   }
   .add-outlet-item input:focus,
@@ -63,7 +63,7 @@
     width: 100%;
   }
   .add-outlet-item .outlet-section .fa-plus {
-    padding: 19px;
+    padding: 14px;
     background: #85d790;
     color: white;
     margin-left: 5px;
@@ -184,6 +184,22 @@
   }
   .add-outlet-item .fileContainer {
     height: 250px;
+  }
+  .add-outlet-item .submit-button{
+    background-color: #5ddc95;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: none;
+    color: white;
+  }
+  .add-outlet-item input,.add-outlet-item select {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width:768px){
+  .add-outlet-item{
+    padding: 0;
   }
 }
 @media screen and (max-width: 991px) {
@@ -310,11 +326,11 @@
     height: 91%;
   }
 }
-@media screen  and (min-width:992px) and (max-width:1150px){
+/* @media screen  and (min-width:992px) and (max-width:1150px){
   .add-outlet-item .label-CB-PS, .add-outlet-item .label  {
     font-size: 14px;
   }
-}
+} */
 @media (min-width: 576px) {
   /* .col-sm-6 {
     flex: 0 0 auto;

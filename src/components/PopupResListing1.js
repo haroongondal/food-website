@@ -125,8 +125,8 @@ export default function PopupResListing1(props) {
               onChange={handleChange}
             />
             <label>
-              I have read and accept DeaseApp's{" "}
-              <span className="text-primary">Terms of Use</span> and{" "}
+              I have read and accept DeaseApp's
+              <span className="text-primary">Terms of Use</span> and
               <span className="text-primary">Privacy Policy</span>.
             </label>
           </div>

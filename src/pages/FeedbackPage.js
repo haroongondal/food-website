@@ -37,7 +37,7 @@ function FeedbackPage() {
 
   return (
     <div>
-      <FeedbackComponents setOutLetId = {handleId} />
+      <FeedbackComponents setOutLetId={handleId} />
       <div className="Content-graph-boxes">
         {/* <div className="border-back-white">
               <div className="toggle-brands">
@@ -59,7 +59,7 @@ function FeedbackPage() {
         <div className="border-back-white" style={{ padding: "14px 0px" }}>
           <div className="outlets-header">
             <h6 className="title-outlets-header">
-              Summary{" "}
+              Summary
               <span>
                 {isPending && (
                   <div>
@@ -94,7 +94,6 @@ function FeedbackPage() {
             </div>
           </div>
 
-
           <ForDevice deviceName={["tablet", "desktop"]}>
             <hr />
           </ForDevice>
@@ -103,7 +102,6 @@ function FeedbackPage() {
             <hr className="mb-0" />
           </ForDevice>
 
-          
           <div className="like-dislike">
             <div className="d-flex like-sec" style={{ width: "50.00%" }}>
               <img src={likeThumb} alt="" />

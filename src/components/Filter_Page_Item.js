@@ -54,7 +54,7 @@ export default function Filter_Page_Item({ data = "" }) {
 
             <span className="filter-P-restaurent-location">
               Rs. {data.CostOfTwo == null ? "00" : data.CostOfTwo} for 2 |
-              Multi-Cuisine, North Indian Multi-Cuisne, North{" "}
+              Multi-Cuisine, North Indian Multi-Cuisne, North
             </span>
 
             <span className="filter-P-offer">1 offer avaiable</span>

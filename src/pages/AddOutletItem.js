@@ -265,7 +265,7 @@ function AddOutletItem(props) {
                 <label for="city" className="label mb-2">
                   City
                 </label>
-                <select id="city" className="form-select py-3">
+                <select id="city" className="form-select">
                   <option value="islamabad" key="">
                     Islamabad
                   </option>
@@ -285,13 +285,13 @@ function AddOutletItem(props) {
                 <label for="zipcode" className="label mb-2">
                   Zipcode
                 </label>
-                <input type="text" id="zipcode" className="form-control py-3" />
+                <input type="text" id="zipcode" className="form-control" />
               </div>
               <div className="col-sm-6 col-12 mt-3 mb-sm-0 mb-3">
                 <label for="area" className="label mb-2">
                   Area
                 </label>
-                <input type="text" id="area" className="form-control py-3" />
+                <input type="text" id="area" className="form-control" />
               </div>
               <div className="col-sm-6 col-12"></div>
               <div className="col-sm-6 col-12 mt-3 mb-sm-0 mb-3">
@@ -301,7 +301,7 @@ function AddOutletItem(props) {
                 <input
                   type="text"
                   id="latitude"
-                  className="form-control py-3"
+                  className="form-control"
                 />
               </div>
               <div className="col-sm-6 col-12 mt-3 mb-sm-0 mb-3">
@@ -311,14 +311,14 @@ function AddOutletItem(props) {
                 <input
                   type="text"
                   id="longitude"
-                  className="form-control py-3"
+                  className="form-control"
                 />
               </div>
               <div className="col-12 my-3">
                 <label for="address" className="label mb-2">
                   Address
                 </label>
-                <input type="text" id="address" className="form-control py-3" />
+                <input type="text" id="address" className="form-control" />
               </div>
             </div>
           </div>
@@ -327,13 +327,17 @@ function AddOutletItem(props) {
           <div className="outlet-section">
             <div className="section-heading px-4 py-2 mt-4">Add Menu</div>
             <div className="row px-3 my-4">
-              <div className="col-sm-6 col-12 my-sm-0 my-3">
+              <div className="col-sm-6 col-xl-9 col-12 my-sm-0 my-3">
                 <label for="city" className="label mb-2">
                   GSTN
                 </label>
                 <br />
                 <div className="gstn-field border">
-                  <span style={{display:'inline-block',margin:'11px 0 0 6px'}}>Sales Tax</span>
+                  <span
+                    style={{ display: "inline-block", margin: "5px 0 0 6px" }}
+                  >
+                    Sales Tax
+                  </span>
 
                   <input
                     type="number"
@@ -342,16 +346,16 @@ function AddOutletItem(props) {
                     step="0.1"
                     className="border"
                     placeholder="%"
+                    className="px-1 border"
                   />
                 </div>
                 <span>
                   <i className="fa fa-plus"></i>
                 </span>
               </div>
-              <div className="col-12 my-sm-0 my-3">
+              <div className="col-12 mb-sm-0 my-3">
                 <div
                   className=" align-checkbox-city"
-                  style={{ marginTop: "25px" }}
                 >
                   <label className="content-CB-PS">
                     <h6 className="label-CB-PS">
@@ -366,11 +370,11 @@ function AddOutletItem(props) {
                   </label>
                 </div>
               </div>
-              <div className="col-sm-6 col-12 mt-3 mb-sm-0 mb-3">
+              {/* <div className="col-sm-6 col-12 mt-3 mb-sm-0 mb-3">
                 <label for="address" className="label mb-2">
                   Cuisines
                 </label>
-                <select type="text" id="cuisines" className="form-select py-3">
+                <select type="text" id="cuisines" className="form-select">
                   <option value="chines" key="">
                     Chines
                   </option>
@@ -389,9 +393,9 @@ function AddOutletItem(props) {
                 <input
                   type="text"
                   id="categoryName"
-                  className="form-control py-3"
+                  className="form-control"
                 />
-              </div>
+              </div> */}
               <div className="col-sm-6 col-12 my-3 mb-sm-0 mb-3">
                 <ImageUploader
                   withIcon={true}
@@ -421,64 +425,64 @@ function AddOutletItem(props) {
               Restaurant Details
             </div>
             <div className="row px-3 my-4">
-              <div className="col-sm-6 col-lg-4 col-12">
+              <div className="col-sm-6 col-lg-4 col-12 mb-sm-0 mb-3">
                 <label for="restaurant_name" className="label mb-2">
                   Enter Restaurant Name
                 </label>
                 <input
                   type="text"
                   id="restaurant_name"
-                  className="form-control py-3"
+                  className="form-control"
                 />
               </div>
-              <div className="col-sm-6 col-lg-2 col-12">
+              <div className="col-sm-6 col-lg-2 col-12 mb-sm-0 mb-3">
                 <label for="avg_price" className="label mb-2">
                   Avg Price
                 </label>
                 <input
                   type="number"
                   id="avg_price"
-                  className="form-control py-3"
+                  className="form-control"
                 />
               </div>
-              <div className="col-sm-6 col-lg-2 col-12 mt-lg-0 mt-3">
+              <div className="col-sm-6 col-lg-2 col-12 mt-lg-0 mt-3 mb-sm-0 mb-3">
                 <label for="opening_time" className="label mb-2">
                   Opening Time
                 </label>
                 <input
                   type="time"
                   id="opening_time"
-                  className="form-control py-3"
+                  className="form-control"
                 />
               </div>
-              <div className="col-sm-6 col-lg-2 col-12 mt-lg-0 mt-3">
+              <div className="col-sm-6 col-lg-2 col-12 mt-lg-0 mt-3 mb-sm-0 mb-3">
                 <label for="closing_time" className="label mb-2">
                   Closing Time
                 </label>
                 <input
                   type="time"
                   id="closing_time"
-                  className="form-control py-3"
+                  className="form-control"
                 />
               </div>
-              <div className="col-sm-6 col-lg-2 col-12 mt-lg-0 mt-3">
+              <div className="col-sm-6 col-lg-2 col-12 mt-lg-0 mt-3 mb-sm-0 mb-2">
                 <label for="holiday" className="label mb-2">
                   Holiday
                 </label>
-                <input type="time" id="holiday" className="form-control py-3" />
+                <input type="datetime-local" id="holiday" className="form-control" />
               </div>
             </div>
-            <div className="row px-3 mt-4">
+            <div className="row px-3 mt-sm-4 mt-3">
               <div className="col-sm-6 col-lg-6 col-12">
                 <div className="row">
-                  <div className="col-sm-6 col-12">
+                  <div className="col-sm-6 col-12 mb-sm-0 mb-3">
                     <label for="number" className="label mb-2">
                       Mobile Number
                     </label>
                     <input
                       type="text"
                       id="number"
-                      className="form-control py-3"
+                      className="form-control"
                     />
                   </div>
                   <div className="col-sm-6 col-12 mt-sm-0 mt-3">
@@ -488,7 +492,7 @@ function AddOutletItem(props) {
                     <input
                       type="text"
                       id="landline"
-                      className="form-control py-3"
+                      className="form-control"
                     />
                   </div>
                 </div>
@@ -515,8 +519,8 @@ function AddOutletItem(props) {
               <div className="col-sm-6 col-12"></div>
             </div>
             <div className="row px-3 mt-4">
-              <h5>Select Cuisines</h5>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <h5 className="mb-4 pb-1">Select Cuisines</h5>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Afghanistani</h6>
                   <input
@@ -527,7 +531,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">BBQ</h6>
                   <input
@@ -538,7 +542,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Pizza</h6>
                   <input
@@ -549,7 +553,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Chicken</h6>
                   <input
@@ -560,7 +564,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Iranian</h6>
                   <input
@@ -571,7 +575,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-2 col-sm-6 col-md-4 col-lg-2  my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Take Away</h6>
                   <input
@@ -582,7 +586,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Burger</h6>
                   <input
@@ -593,7 +597,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-2 col-sm-6 col-md-4 col-lg-2  my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Chinese</h6>
                   <input
@@ -604,7 +608,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Biryani</h6>
                   <input
@@ -617,8 +621,8 @@ function AddOutletItem(props) {
               </div>
             </div>
             <div className="row px-3 mt-4">
-              <h5>Select Features</h5>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+            <h5 className="mb-4 pb-1">Select Features</h5>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Smoking Area</h6>
                   <input
@@ -629,7 +633,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Air Conditioned</h6>
                   <input
@@ -640,7 +644,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">DJ</h6>
                   <input
@@ -651,7 +655,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Valet Available</h6>
                   <input
@@ -662,7 +666,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Home Delivery</h6>
                   <input
@@ -673,7 +677,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-2 col-sm-6 col-md-4 col-lg-2  my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Lift</h6>
                   <input
@@ -684,7 +688,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Parking</h6>
                   <input
@@ -695,7 +699,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-2 col-sm-6 col-md-4 col-lg-2  my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Take Away</h6>
                   <input
@@ -706,7 +710,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Live Performance</h6>
                   <input
@@ -717,7 +721,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Cards Accepted</h6>
                   <input
@@ -728,7 +732,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Dance Floor</h6>
                   <input
@@ -739,7 +743,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Outdoor Seating</h6>
                   <input
@@ -750,7 +754,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Full Bar Available</h6>
                   <input
@@ -761,7 +765,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Screening</h6>
                   <input
@@ -772,7 +776,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-2 col-sm-6 col-md-4 col-lg-2  my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Wallet Accepted</h6>
                   <input
@@ -783,7 +787,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Parking</h6>
                   <input
@@ -794,7 +798,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-2 col-sm-6 col-md-4 col-lg-2  my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Wifi</h6>
                   <input
@@ -805,7 +809,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Amex Accepted</h6>
                   <input
@@ -817,9 +821,9 @@ function AddOutletItem(props) {
                 </label>
               </div>
             </div>
-            <div className="row px-3 mt-4">
-              <h5>Delivery Type</h5>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+            <div className="row px-3">
+              <h5 className="my-4 my-sm-3 py-1 py-sm-2">Delivery Type</h5>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 my-3">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Home Delivery</h6>
                   <input
@@ -830,7 +834,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 my-3">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Take Away</h6>
                   <input
@@ -842,9 +846,9 @@ function AddOutletItem(props) {
                 </label>
               </div>
             </div>
-            <div className="row px-3 mt-4">
-              <h5>Establishment Type</h5>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+            <div className="row px-3 mt-3 mt-sm-4">
+              <h5 className="my-4 my-sm-3 py-1 pb-sm-2 pt-sm-0">Establishment Type</h5>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 my-3">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Restaurant</h6>
                   <input
@@ -855,7 +859,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 my-3">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Cafe</h6>
                   <input
@@ -867,9 +871,9 @@ function AddOutletItem(props) {
                 </label>
               </div>
             </div>
-            <div className="row px-3 mt-4">
-              <h5>What Meal Does This Restaurant Serve</h5>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+            <div className="row px-3 mt-1 mt-sm-4">
+              <h5 className="my-4 mt-sm-3 py-2 pt-sm-0">What Meal Does This Restaurant Serve</h5>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Breakfast</h6>
                   <input
@@ -878,9 +882,9 @@ function AddOutletItem(props) {
                     onChange={(e) => setTakeAway(e.target.checked)}
                   />
                   <span className="checkbox-CB-PS"></span>
-                </label>
+                </label>  
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Lunch</h6>
                   <input
@@ -891,7 +895,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Drinks</h6>
                   <input
@@ -902,7 +906,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Buffet/Brunch</h6>
                   <input
@@ -913,7 +917,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Late Night</h6>
                   <input
@@ -926,8 +930,8 @@ function AddOutletItem(props) {
               </div>
             </div>
             <div className="row px-3 mt-4">
-              <h5>What Is This Restaurant Good For?</h5>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <h5 className="mb-4 pb-1 py-sm-2">What Is This Restaurant Good For?</h5>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Smoking Area</h6>
                   <input
@@ -938,7 +942,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Air Conditioned</h6>
                   <input
@@ -949,7 +953,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">DJ</h6>
                   <input
@@ -960,7 +964,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Valet Available</h6>
                   <input
@@ -971,7 +975,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Home Delivery</h6>
                   <input
@@ -982,7 +986,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-2 col-sm-6 col-md-4 col-lg-2  my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Lift</h6>
                   <input
@@ -993,7 +997,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Parking</h6>
                   <input
@@ -1004,7 +1008,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-2 col-sm-6 col-md-4 col-lg-2  my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Take Away</h6>
                   <input
@@ -1015,7 +1019,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Live Performance</h6>
                   <input
@@ -1026,7 +1030,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Cards Accepted</h6>
                   <input
@@ -1037,7 +1041,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Dance Floor</h6>
                   <input
@@ -1048,7 +1052,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Outdoor Seating</h6>
                   <input
@@ -1059,7 +1063,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Full Bar Available</h6>
                   <input
@@ -1070,7 +1074,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Screening</h6>
                   <input
@@ -1081,7 +1085,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-2 col-sm-6 col-md-4 col-lg-2  my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Wallet Accepted</h6>
                   <input
@@ -1092,7 +1096,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Parking</h6>
                   <input
@@ -1103,7 +1107,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-2 col-sm-6 col-md-4 col-lg-2  my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Wifi</h6>
                   <input
@@ -1114,7 +1118,7 @@ function AddOutletItem(props) {
                   <span className="checkbox-CB-PS"></span>
                 </label>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 my-3">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Amex Accepted</h6>
                   <input
@@ -1128,18 +1132,21 @@ function AddOutletItem(props) {
             </div>
             <div className="row px-3 mt-4">
               <div className="col-12">
-                <label className="label mb-2" for="restaurant-desc">Restaurant Description</label>
+                <label className="label mb-2" for="restaurant-desc">
+                  Restaurant Description
+                </label>
                 <textarea type="form-control" name="restaurant-desc" rows="5" />
               </div>
             </div>
-            <div className="d-flex justify-content-sm-start justify-content-between mt-4 footer px-3 mt-4">
-    <button className="btn btn-success me-3 py-3 px-5 mb-4">Save Information</button>
-    <button className="btn btn-light p-3 mb-4">Cancel</button>
-      </div>
+            <div className="d-flex footer justify-content-between justify-content-sm-start mt-4 pb-4 px-3">
+              <button className="btn btn-success me-sm-3 px-lg-4 px-sm-3 px-2 py-lg-3 submit-button">
+                Save Information
+              </button>
+              <button className="btn btn-light px-3 py-2">Cancel</button>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   );
 }

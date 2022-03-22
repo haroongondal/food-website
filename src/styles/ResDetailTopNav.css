@@ -57,11 +57,23 @@
   -ms-border-radius: 0;
   border-radius: 0;
 }
+.res-detail-top-nav .top-nav-secondary {
+  z-index: 1;
+}
+.res-detail-top-nav .top-nav-secondary i.fa {
+  width: 25px;
+  border-radius: 50%;
+  background-color: #0000004f;
+  height: 25px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
 .rating-res-detail-M {
   font-size: 14px;
   font-weight: 500;
   color: #fff;
-  bottom: 5.5rem;
+  bottom: 3.5rem;
   text-align: left;
   line-height: 1;
   padding: 6px 10px;
@@ -89,7 +101,7 @@
 }
 .topSec-res-detail-M {
   padding: 1rem 15px 0px 15px;
-  margin-top: 20px;
+  margin-top: -45px;
   position: relative;
   z-index: 3;
   background: white;
@@ -125,7 +137,7 @@
   text-align: center;
   position: relative;
 }
-.overview-res-detail-M ul li.bottom-color-res-detail-M a{
+.overview-res-detail-M ul li.bottom-color-res-detail-M a {
   text-decoration: none;
   color: black;
 }

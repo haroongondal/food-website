@@ -169,7 +169,6 @@ export default function OutletsPage() {
                     <span>Add Brand</span>
                   </div> */}
               <Link to="/CRM-Dashboard/Add-Outlet">
-                {" "}
                 <div className="add-context-btn">
                   <button type="submit" className="blue-plus-btn">
                     <i class="bx bx-plus-circle"></i>
