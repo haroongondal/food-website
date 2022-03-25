@@ -11,6 +11,20 @@ import Modal from "react-responsive-modal";
 import CancelSvgIcon from "../components/CancelSvgIcon";
 import useFetch from "../Utils/useFetch";
 import Skeleton from "react-loading-skeleton";
+import { FilePond, File, registerPlugin } from "react-filepond";
+
+// Import FilePond styles
+import "filepond/dist/filepond.min.css";
+
+// Import the Image EXIF Orientation and Image Preview plugins
+// Note: These need to be installed separately
+// `npm i filepond-plugin-image-preview filepond-plugin-image-exif-orientation --save`
+import FilePondPluginImageExifOrientation from "filepond-plugin-image-exif-orientation";
+import FilePondPluginImagePreview from "filepond-plugin-image-preview";
+import "filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css";
+
+// Register the plugins
+registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview);
 
 function AddOutletItem(props) {
   const [email, setEmail] = useState("");
@@ -32,6 +46,12 @@ function AddOutletItem(props) {
   const { data, isPending, error } = useFetch(
     "https://api.masairapp.com/api/Lov/GetCusine"
   );
+  const [ImageKitchen, setImageKitchen] = useState([]);
+  const [ImageDining, setImageDinning] = useState([]);
+  const [ImageLocality, setImageLocality] = useState([]);
+  const [ImageFracade, setImageFracade] = useState([]);
+  const [menuImage1, setMenuImage1] = useState([]);
+  const [menuImage2, setMenuImage2] = useState([]);
 
   const [subCusine, setSubCusine] = useState("");
 
@@ -214,40 +234,76 @@ function AddOutletItem(props) {
       <div className="row">
         <div className="col-xxl-6 col-12">
           <div className="row">
-            <div className="col-lg-3 col-sm-6 col-12">
-              <ImageUploader
+            <div className="col-sm-6 col-md-3 col-12">
+              {/* <ImageUploader
                 withIcon={true}
                 buttonText="Choose image"
                 onChange={uploadImageFracade}
                 imgExtension={[".jpg", ".gif", ".png", ".gif"]}
                 maxFileSize={5242880}
+              /> */}
+              <FilePond
+                files={ImageFracade}
+                onupdatefiles={setImageFracade}
+                allowMultiple={true}
+                maxFiles={3}
+                server="/api"
+                name="files"
+                labelIdle='Drag & Drop your files or <span class="filepond--label-action">Browse</span>'
               />
             </div>
-            <div className="col-lg-3 col-sm-6 col-12">
-              <ImageUploader
+            <div className="col-sm-6 col-md-3 col-12">
+              {/* <ImageUploader
                 withIcon={true}
                 buttonText="Choose image"
                 onChange={uploadImageDinning}
                 imgExtension={[".jpg", ".gif", ".png", ".gif"]}
                 maxFileSize={5242880}
+              /> */}
+              <FilePond
+                files={ImageDining}
+                onupdatefiles={setImageDinning}
+                allowMultiple={true}
+                maxFiles={3}
+                server="/api"
+                name="files"
+                labelIdle='Drag & Drop your files or <span class="filepond--label-action">Browse</span>'
               />
             </div>
-            <div className="col-lg-3 col-sm-6 col-12">
-              <ImageUploader
+            <div className="col-sm-6 col-md-3 col-12">
+              {/* <ImageUploader
                 withIcon={true}
                 buttonText="Choose image"
                 onChange={uploadImageLocality}
                 imgExtension={[".jpg", ".gif", ".png", ".gif"]}
                 maxFileSize={5242880}
+              /> */}
+              <FilePond
+                files={ImageLocality}
+                onupdatefiles={setImageLocality}
+                allowMultiple={true}
+                maxFiles={3}
+                server="/api"
+                name="files"
+                labelIdle='Drag & Drop your files or <span class="filepond--label-action">Browse</span>'
               />
             </div>
-            <div className="col-lg-3 col-sm-6 col-12">
-              <ImageUploader
+            <div className="col-sm-6 col-md-3 col-12">
+              {/* <ImageUploader
                 withIcon={true}
                 buttonText="Choose image"
                 onChange={uploadImageKitchen}
                 imgExtension={[".jpg", ".gif", ".png", ".gif"]}
                 maxFileSize={5242880}
+              /> */}
+              <FilePond
+                files={ImageKitchen}
+                onupdatefiles={setImageKitchen}
+                allowMultiple={true}
+                maxFiles={3}
+                server="/api"
+                name="files"
+                labelIdle='Drag & Drop your files or <span class="filepond--label-action">Browse</span>'
               />
             </div>
           </div>
@@ -298,21 +354,13 @@ function AddOutletItem(props) {
                 <label for="zipcode" className="label mb-2">
                   Latitude
                 </label>
-                <input
-                  type="text"
-                  id="latitude"
-                  className="form-control"
-                />
+                <input type="text" id="latitude" className="form-control" />
               </div>
               <div className="col-sm-6 col-12 mt-3 mb-sm-0 mb-3">
                 <label for="address" className="label mb-2">
                   Longitude
                 </label>
-                <input
-                  type="text"
-                  id="longitude"
-                  className="form-control"
-                />
+                <input type="text" id="longitude" className="form-control" />
               </div>
               <div className="col-12 my-3">
                 <label for="address" className="label mb-2">
@@ -324,7 +372,7 @@ function AddOutletItem(props) {
           </div>
         </div>
         <div className="col-xl-6 col-12">
-          <div className="outlet-section">
+          <div className="outlet-section add-menu-section">
             <div className="section-heading px-4 py-2 mt-4">Add Menu</div>
             <div className="row px-3 my-4">
               <div className="col-sm-6 col-xl-9 col-12 my-sm-0 my-3">
@@ -354,9 +402,7 @@ function AddOutletItem(props) {
                 </span>
               </div>
               <div className="col-12 mb-sm-0 my-3">
-                <div
-                  className=" align-checkbox-city"
-                >
+                <div className=" align-checkbox-city">
                   <label className="content-CB-PS">
                     <h6 className="label-CB-PS">
                       Sales Tax should be included 2.5%
@@ -396,22 +442,40 @@ function AddOutletItem(props) {
                   className="form-control"
                 />
               </div> */}
-              <div className="col-sm-6 col-12 my-3 mb-sm-0 mb-3">
-                <ImageUploader
+              <div className="col-sm-6 col-12 my-0 my-sm-3">
+                {/* <ImageUploader
                   withIcon={true}
                   buttonText="Choose image"
                   // onChange={uploadImageFracade}
                   imgExtension={[".jpg", ".gif", ".png", ".gif"]}
                   maxFileSize={5242880}
+                /> */}
+                <FilePond
+                  files={menuImage1}
+                  onupdatefiles={setMenuImage1}
+                  allowMultiple={true}
+                  maxFiles={3}
+                  server="/api"
+                  name="files"
+                  labelIdle='Drag & Drop your files or <span class="filepond--label-action">Browse</span>'
                 />
               </div>
-              <div className="col-sm-6 col-12 my-3 mb-sm-0 mb-3">
-                <ImageUploader
+              <div className="col-sm-6 col-12 my-0 my-sm-3">
+                {/* <ImageUploader
                   withIcon={true}
                   buttonText="Choose image"
                   // onChange={uploadImageFracade}
                   imgExtension={[".jpg", ".gif", ".png", ".gif"]}
                   maxFileSize={5242880}
+                /> */}
+                <FilePond
+                  files={menuImage2}
+                  onupdatefiles={setMenuImage2}
+                  allowMultiple={true}
+                  maxFiles={3}
+                  server="/api"
+                  name="files"
+                  labelIdle='Drag & Drop your files or <span class="filepond--label-action">Browse</span>'
                 />
               </div>
             </div>
@@ -439,37 +503,29 @@ function AddOutletItem(props) {
                 <label for="avg_price" className="label mb-2">
                   Avg Price
                 </label>
-                <input
-                  type="number"
-                  id="avg_price"
-                  className="form-control"
-                />
+                <input type="number" id="avg_price" className="form-control" />
               </div>
               <div className="col-sm-6 col-lg-2 col-12 mt-lg-0 mt-3 mb-sm-0 mb-3">
                 <label for="opening_time" className="label mb-2">
                   Opening Time
                 </label>
-                <input
-                  type="time"
-                  id="opening_time"
-                  className="form-control"
-                />
+                <input type="time" id="opening_time" className="form-control" />
               </div>
               <div className="col-sm-6 col-lg-2 col-12 mt-lg-0 mt-3 mb-sm-0 mb-3">
                 <label for="closing_time" className="label mb-2">
                   Closing Time
                 </label>
-                <input
-                  type="time"
-                  id="closing_time"
-                  className="form-control"
-                />
+                <input type="time" id="closing_time" className="form-control" />
               </div>
               <div className="col-sm-6 col-lg-2 col-12 mt-lg-0 mt-3 mb-sm-0 mb-2">
                 <label for="holiday" className="label mb-2">
                   Holiday
                 </label>
-                <input type="datetime-local" id="holiday" className="form-control" />
+                <input
+                  type="datetime-local"
+                  id="holiday"
+                  className="form-control"
+                />
               </div>
             </div>
             <div className="row px-3 mt-sm-4 mt-3">
@@ -479,21 +535,13 @@ function AddOutletItem(props) {
                     <label for="number" className="label mb-2">
                       Mobile Number
                     </label>
-                    <input
-                      type="text"
-                      id="number"
-                      className="form-control"
-                    />
+                    <input type="text" id="number" className="form-control" />
                   </div>
                   <div className="col-sm-6 col-12 mt-sm-0 mt-3">
                     <label for="landline" className="label mb-2">
                       Landline
                     </label>
-                    <input
-                      type="text"
-                      id="landline"
-                      className="form-control"
-                    />
+                    <input type="text" id="landline" className="form-control" />
                   </div>
                 </div>
               </div>
@@ -621,7 +669,7 @@ function AddOutletItem(props) {
               </div>
             </div>
             <div className="row px-3 mt-4">
-            <h5 className="mb-4 pb-1">Select Features</h5>
+              <h5 className="mb-4 pb-1">Select Features</h5>
               <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Smoking Area</h6>
@@ -847,7 +895,9 @@ function AddOutletItem(props) {
               </div>
             </div>
             <div className="row px-3 mt-3 mt-sm-4">
-              <h5 className="my-4 my-sm-3 py-1 pb-sm-2 pt-sm-0">Establishment Type</h5>
+              <h5 className="my-4 my-sm-3 py-1 pb-sm-2 pt-sm-0">
+                Establishment Type
+              </h5>
               <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 my-3">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Restaurant</h6>
@@ -872,7 +922,9 @@ function AddOutletItem(props) {
               </div>
             </div>
             <div className="row px-3 mt-1 mt-sm-4">
-              <h5 className="my-4 mt-sm-3 py-2 pt-sm-0">What Meal Does This Restaurant Serve</h5>
+              <h5 className="my-4 mt-sm-3 py-2 pt-sm-0">
+                What Meal Does This Restaurant Serve
+              </h5>
               <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Breakfast</h6>
@@ -882,7 +934,7 @@ function AddOutletItem(props) {
                     onChange={(e) => setTakeAway(e.target.checked)}
                   />
                   <span className="checkbox-CB-PS"></span>
-                </label>  
+                </label>
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
@@ -930,7 +982,9 @@ function AddOutletItem(props) {
               </div>
             </div>
             <div className="row px-3 mt-4">
-              <h5 className="mb-4 pb-1 py-sm-2">What Is This Restaurant Good For?</h5>
+              <h5 className="mb-4 pb-1 py-sm-2">
+                What Is This Restaurant Good For?
+              </h5>
               <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2  my-2">
                 <label className="content-CB-PS">
                   <h6 className="label-CB-PS">Smoking Area</h6>

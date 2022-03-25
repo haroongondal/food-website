@@ -71,16 +71,14 @@
 }
 .rating-res-detail-M {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   color: #fff;
   bottom: 3.5rem;
   text-align: left;
-  line-height: 1;
   padding: 6px 10px;
   right: 2rem;
   display: flex;
-  vertical-align: middle;
-  align-items: center;
+  line-height: 0.8;
   position: absolute;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -90,14 +88,52 @@
   background: #78ba68;
 }
 .rating-res-detail-M svg {
-  margin-right: 0.5rem;
+  margin-right: 0.2rem;
   margin-top: 1px;
   width: 15px;
 }
+/* .detail-page-modal .react-responsive-modal-modal{
+  display: table;
+} */
+.detail-page-modal .react-multi-carousel-list  {
+  margin-top: calc(43vh - 100px);
+}
+.img-slider-modal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.img-slider-modalt {
+  height: 200px;
+  position: relative;
+}
+.detail-page-modal .react-responsive-modal-closeButton{
+  background-color: black;
+  border-radius: 50%;
+}
+.detail-page-modal .react-responsive-modal-closeButton:focus-visible{
+  outline: none;
+}
+.showImages {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  bottom: 3.5rem;
+  text-align: left;
+  left: 2rem;
+  line-height: 1;
+  border-radius: 3px;
+  z-index: 2;
+  background: rgb(255 255 255 / 0%);
+  backdrop-filter: blur(5px);
+}
 .rating-res-detail-M span {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
   margin-left: 0.3rem;
+  line-height: 1;
 }
 .topSec-res-detail-M {
   padding: 1rem 15px 0px 15px;

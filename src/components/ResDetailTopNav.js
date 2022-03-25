@@ -1,72 +1,87 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../styles/ResDetailTopNav.css";
+import "../styles/MobileTopNavBar.css";
 import restaurentImage from "../images/restaurant.jpg";
 import Scrollspy from "react-scrollspy";
+import Carousel from "react-multi-carousel";
+import Modal from "react-responsive-modal";
+import CancelSvgIcon from "../components/CancelSvgIcon";
 
 export default function ResDetailTopNav() {
-  const Header = () => {
-    // Sticky Menu Area
-    useEffect(() => {
-      window.addEventListener("scroll", isSticky);
-      return () => {
-        window.removeEventListener("scroll", isSticky);
-      };
-    });
+  // Sticky Menu Area
+  const [isVisibleNavbar, setIsVisibleNavbar] = useState(false);
+  const [isModalOpen, setisModalOpen] = useState(false);
+  const closeIcon = <CancelSvgIcon />;  const responsive = {
+    largeScreen: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 3000, min: 2000 },
+      items: 1,
+    },
+    desktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 1200, min: 577 },
+      items: 1,
+    },
 
-    /* Method that will fix header after a specific scrollable */
-    const isSticky = (e) => {
-      const header = document.querySelector(".res-detail-top-nav");
-      const scrollTop = window.scrollY;
-      scrollTop >= 250
-        ? header.classList.add("dashboard-res-detail-M-fixed")
-        : header.classList.remove("dashboard-res-detail-M-fixed");
-    };
+    mobile_tablet: {
+      breakpoint: { max: 576, min: 0 },
+      items: 1,
+    },
+  };
+ function openModal(){
+  setisModalOpen(true);
+  }
+  function closeModal(){
+    setisModalOpen(false);
+    }
+  useEffect(function () {
+    window.addEventListener("scroll", listenToScroll);
+    return () => window.removeEventListener("scroll", listenToScroll);
+  });
+  const listenToScroll = () => {
+    let heightToHideFrom = 100;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+
+    if (winScroll > heightToHideFrom) {
+      // to limit setting state only the first time
+      setIsVisibleNavbar(true);
+    } else {
+      setIsVisibleNavbar(false);
+    }
   };
   return (
     <div>
+      {isVisibleNavbar && (
+        <div className="resTop-navbar pt-2 px-3 d-lg-none d-block">
+          <div className="d-flex justify-content-between mb-3 mt-2">
+            <div>
+              <i className="fa fa-angle-left me-3 fs-3"></i>
+              <span className="fw-bold">Savour Food</span>
+            </div>
+            <div>
+              <i className="fa fa-share-square-o me-3"></i>
+              <i className="fa fa-heart-o"></i>
+            </div>
+          </div>
+          <div className="d-flex justify-content-between top-navList">
+            <div className="top-navItem active">Overview</div>
+            <div className="top-navItem">About</div>
+            <div className="top-navItem">Menu</div>
+            <div className="top-navItem">Reviews</div>
+          </div>
+        </div>
+      )}
+
       <section className="res-detail-top-nav">
-        <div class="dashboard-res-detail-M" id="scroll-header">
+        <div class="dashboard-res-detail-M" id="scroll-header" onClick={openModal}>
           <img
             src={restaurentImage}
             alt="JW Kitchen"
             title="JW Kitchen"
             class="no-img"
           />
-          {/* <div class="back-btn-res-detail-M">
-            <a>
-              <img
-                src="https://im1.DeaseApp.co.in/images/uploads/misc/2021/Feb/5/vector_(3).png"
-                alt="DeaseApp"
-                title="DeaseApp"
-                class="no-img"
-              />
-            </a>
-          </div> */}
-
-          {/* <div class="right-tools-res-detail-M">
-            <ul>
-              <li>
-                <img
-                  src="https://im1.DeaseApp.co.in/images/uploads/misc/2021/Feb/5/vector.png"
-                  alt="Share"
-                  title="Share"
-                  class="no-img"
-                  width="15"
-                  height="13"
-                />
-              </li>
-              <li class="">
-                <img
-                  src="https://im1.DeaseApp.co.in/images/uploads/misc/2021/Feb/5/vector_(1).png"
-                  alt="Favourite"
-                  title="Favourite"
-                  width="15"
-                  height="13"
-                />
-              </li>
-            </ul>
-          </div> */}
           <div className="position-absolute px-4 text-light top-0 w-100 top-nav-secondary">
             <div className="d-flex justify-content-between mb-3 mt-2">
               <div>
@@ -77,6 +92,9 @@ export default function ResDetailTopNav() {
                 <i className="fa fa-heart-o"></i>
               </div>
             </div>
+          </div>
+          <div className="showImages position-absolute p-2" onClick={openModal}>
+            <i className="fa fa-image me-2"></i>All Photos (19)
           </div>
           <div class="rating-res-detail-M">
             <svg
@@ -125,6 +143,45 @@ export default function ResDetailTopNav() {
           </div>
         </div>
       </section>
+      <Modal
+        open={isModalOpen}
+        onClose={closeModal}
+        center
+        closeIcon={closeIcon}
+        classNames={{
+          root: "detail-page-modal",
+          modalAnimationIn: "sortByEnterModalAnimation",
+          modalAnimationOut: "sortByLeaveModalAnimation",
+        }}
+        animationDuration={300}
+        styles={{
+          modal: {
+            verticalAlign: "center",
+            width: "100%",
+            height: "100%",
+            padding: "0px",
+            margin: "0px",
+          },
+        }}
+      >
+        <Carousel
+          responsive={responsive}
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+        >
+          {/* {restaurants.isPending && <div><Skeleton width={200} height={250}/></div>}
+        {restaurants.error && <div>{restaurants.error}</div>} */}
+          {/* {restaurants.data && restaurants.data.map((r) => <RestaurentItem key = {r.Id} data = {r}/>)} */}
+          <div className="img-slider-modal">
+            <img alt="res-img" src={restaurentImage} />
+          </div>
+          <div className="img-slider-modal">
+            <img alt="res-img" src={restaurentImage} />
+          </div>
+          <div className="img-slider-modal">
+            <img alt="res-img" src={restaurentImage} />
+          </div>
+        </Carousel>
+      </Modal>
     </div>
   );
 }

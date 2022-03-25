@@ -1,11 +1,10 @@
-import { React, useEffect, useState } from "react";
+import { React, useEffect } from "react";
 import { useParams } from "react-router";
 import BannerResturant from "../components/BannerResturant";
 import Breadcrumb from "../components/Breadcrumb";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import ResDetailTopNav from "../components/ResDetailTopNav";
-import ResTopNavbar from "../components/ResTopNavbar";
 import ReservationItem from "../components/Reservation_Item";
 import SecResAbout from "../components/SecResAbout";
 import SecResDetails from "../components/SecResDetails";
@@ -21,7 +20,6 @@ import Carousel from "react-multi-carousel";
 import restaurentImage from "../images/restaurant.jpg";
 
 function RestaurentDetailsPage(props) {
-  const [isVisibleNavbar, setIsVisibleNavbar] = useState(false);
   const { id } = useParams();
   const responsive = {
     tablet: {
@@ -36,30 +34,15 @@ function RestaurentDetailsPage(props) {
   };
   useEffect(function () {
     props.showHeader(false);
-    window.addEventListener("scroll", listenToScroll);
-    return () => window.removeEventListener("scroll", listenToScroll);
-  });
-  const listenToScroll = () => {
-    let heightToHideFrom = 100;
-    const winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
 
-    if (winScroll > heightToHideFrom) {
-      // to limit setting state only the first time
-        setIsVisibleNavbar(true);
-    } else {
-      setIsVisibleNavbar(false);
-    }
-  };
-  // const { query, search } = useLocation();
-  // console.log(id, query.backUrl, new URLSearchParams(search).get('id'))
+  });
+
 
   const restaurantDetails = useFetch(
     `https://api.masairapp.com/api/Restaurant/GetRestaurantById?id=${id}`
   );
   return (
     <div className="restaurent_detail_page">
-      {isVisibleNavbar && <ResTopNavbar />}
       <NavBar ShouldHideSearch={false} />
       {/* <Breadcrumb/> */}
       <div className="d-lg-none d-block restaurent-detail-carousel">
