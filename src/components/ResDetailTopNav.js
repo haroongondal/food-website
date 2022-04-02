@@ -12,6 +12,7 @@ export default function ResDetailTopNav() {
   // Sticky Menu Area
   const [isVisibleNavbar, setIsVisibleNavbar] = useState(false);
   const [isModalOpen, setisModalOpen] = useState(false);
+  const [activeTab, setactiveTab] = useState(1);
   const closeIcon = <CancelSvgIcon />;  const responsive = {
     largeScreen: {
       // the naming can be any, depends on you.
@@ -29,6 +30,19 @@ export default function ResDetailTopNav() {
       items: 1,
     },
   };
+function setTab1() {
+  setactiveTab(1);
+}
+function setTab2() {
+  setactiveTab(2);
+}
+function setTab3() {
+  setactiveTab(3);
+}
+function setTab4() {
+  setactiveTab(4);
+}
+
  function openModal(){
   setisModalOpen(true);
   }
@@ -66,10 +80,10 @@ export default function ResDetailTopNav() {
             </div>
           </div>
           <div className="d-flex justify-content-between top-navList">
-            <div className="top-navItem active">Overview</div>
-            <div className="top-navItem">About</div>
-            <div className="top-navItem">Menu</div>
-            <div className="top-navItem">Reviews</div>
+            <div className={`top-navItem  ${activeTab == 1 ? 'active' : ''}`} onClick={setTab1}><a href="#top-section">Overview</a></div>
+            <div className={`top-navItem  ${activeTab == 2 ? 'active' : ''}`} onClick={setTab2}><a href="#about-section">About</a></div>
+            <div className={`top-navItem  ${activeTab == 3 ? 'active' : ''}`} onClick={setTab3}><a href="#menu-section">Menu</a></div>
+            <div className={`top-navItem  ${activeTab == 4 ? 'active' : ''}`} onClick={setTab4}><a href="#rating-review-section">Reviews</a></div>
           </div>
         </div>
       )}
@@ -123,19 +137,19 @@ export default function ResDetailTopNav() {
                   "menu-section",
                   "rating-review-section",
                 ]}
-                currentClassName="activeTab"
+                
                 className=""
               >
-                <li className="bottom-color-res-detail-M">
+                <li className={`bottom-color-res-detail-M  ${activeTab == 1 ? 'activeTab' : ''}`} onClick={setTab1}>
                   <a href="#top-section">Overview</a>
                 </li>
-                <li className=" bottom-color-res-detail-M">
+                <li className={`bottom-color-res-detail-M  ${activeTab == 2 ? 'activeTab' : ''}`} onClick={setTab2}>
                   <a href="#about-section">About</a>
                 </li>
-                <li className="bottom-color-res-detail-M ">
+                <li className={`bottom-color-res-detail-M  ${activeTab == 3 ? 'activeTab' : ''}`} onClick={setTab3}>
                   <a href="#menu-section">Menu</a>
                 </li>
-                <li className=" bottom-color-res-detail-M">
+                <li className={`bottom-color-res-detail-M  ${activeTab == 4 ? 'activeTab' : ''}`} onClick={setTab4}>
                   <a href="#rating-review-section">Reviews</a>
                 </li>
               </Scrollspy>

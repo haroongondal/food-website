@@ -12,7 +12,7 @@
   #content main {
     width: 100%;
     padding: 36px 24px;
-    font-family: var(--poppins);
+    font-family: "Poppins", sans-serif;;
     max-height: calc(100vh - 56px);
     overflow-y: auto;
     overflow-x: hidden;
@@ -52,7 +52,7 @@
   #content main {
     width: 100%;
     padding: 36px 24px;
-    font-family: var(--poppins);
+    font-family: "Poppins", sans-serif;;
     max-height: calc(100vh - 56px);
     overflow-y: auto;
   }

@@ -24,15 +24,6 @@ function AdminSidebar() {
         <li>
           <span className="nav-section-title"></span>
         </li>
-        {/* <li className= {IsOpened ? "have-children" : "have-no-children"}><a href="#abc" onClick={handdleToggle}><span className="fa fa-university"></span>Menu</a>
-        <ul>
-        <li><a href="#abc">Add Exhibition</a></li>
-        <li><a href="#abc">View Exhibitions</a></li>
-        <li><a href="#abc">Add Exhibition</a></li>
-        <li><a href="#abc">View Exhibitions</a></li>
-      </ul> 
-    </li> */}
-
     <Link to={`${path}/`}>
           <li className="have-children">
             <a href="#abc">

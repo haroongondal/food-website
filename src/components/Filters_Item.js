@@ -99,7 +99,7 @@ export default function FiltersItem(props) {
       >
         {filter_name}
       </button>
-      <div className="accordion-content" style={{ maxHeight: "189px" }}>
+      <div className="accordion-content" style={{ maxHeight: "220px" }}>
         <input
           type="text"
           className={

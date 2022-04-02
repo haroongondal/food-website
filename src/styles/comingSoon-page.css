@@ -1,0 +1,31 @@
+.comingSoon-page {
+  position: relative;
+  overflow-y: hidden;
+  height: calc(100vh - 130px);
+}
+.comingSoon-page .comingSoon-img {
+  width: 100%;
+  height: calc(100vh - 130px);
+  background-image: url("../images/bg-comingSoon.png");
+  filter: blur(8px);
+  -webkit-filter: blur(3px);
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.comingSoon-page .comingSoon-text{
+    font-size: 40px;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;  
+    transform: translateY(-50%);
+    font-family: "Poppins", sans-serif;;
+
+}
+.comingSoon-page .comingSoon-text > span{
+    color: #5ddc95;
+    margin-left: 5px;
+}

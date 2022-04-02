@@ -46,9 +46,11 @@ function AdminNavbar() {
 					</a>
 				</li> */}
         <li>
+        <Link to={`${path}/profile-Settings`}>
           <a href="#abc" className="profile">
             <img alt="profile-img" src={profileImage} />
           </a>
+        </Link>
         </li>
       </ul>
 

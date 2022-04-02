@@ -102,6 +102,9 @@ table td {
     grid-gap: 10px;
     align-items: center;
   }
+  .right-outlets-header a{
+    text-decoration: none;
+  }
   .add-context-btn {
     display: flex;
     align-items: center;
@@ -346,6 +349,9 @@ table td {
     display: flex;
     grid-gap: 16px;
     align-items: center;
+  }
+  .right-outlets-header a{
+    text-decoration: none;
   }
   .add-context-btn {
     display: flex;

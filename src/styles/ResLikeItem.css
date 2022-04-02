@@ -93,12 +93,13 @@
 @media screen and (min-width: 280px) {
   .box-restaurent-3rd-page {
     width: auto;
-    /* box-shadow: 0px 0px 6px rgb(0 0 0 / 20%); */
+    box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);
     border-radius: 5px;
     overflow: hidden;
     margin: 0 auto;
     margin-top: 23px;
-    background-color: #feeeee;
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
   }
   .box-restaurent-3rd-page a {
     text-decoration: none;
@@ -108,12 +109,13 @@
 @media screen and (min-width: 992px) {
   .box-restaurent-3rd-page {
     width: 270px;
-    /* box-shadow: 0px 0px 6px rgb(0 0 0 / 20%); */
+    box-shadow: 0px 0px 6px rgb(0 0 0 / 20%);
     border-radius: 5px;
     overflow: hidden;
     margin: 10px;
     margin-top: 23px;
-    background-color: #feeeee;
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
   }
   .box-restaurent-3rd-page .slide-img-restaurent-3rd-page{
     height: 170px;

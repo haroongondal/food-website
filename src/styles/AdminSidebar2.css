@@ -211,6 +211,11 @@ header.adminBody {
 }
 .user-info-nav a{
   font-size: 14px;
+  color: gray;
+  text-decoration: none;
+}
+.user-info-nav a:hover{
+  color: gray;
 }
 .user_info-popup .green-dot {
   position: absolute;

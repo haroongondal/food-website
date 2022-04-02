@@ -11,6 +11,7 @@ import UserManagementPage from "./UserManagementPage";
 import FeedbackPage from "./FeedbackPage";
 import ProfileSettings from "./ProfileSettings";
 import BottomNavBarCRM from "../components/BottomNavbarCRM";
+import ComingSoon from "../components/ComingSoon";
 
 import useFetch from "../Utils/useFetch";
 
@@ -53,6 +54,9 @@ function CRMDashboard(props) {
 
             <Route exact path={`${path}/Profile-Settings`}>
               <ProfileSettings />
+            </Route>
+            <Route exact path={`${path}/Coming-Soon`}>
+              <ComingSoon />
             </Route>
           </Switch>
         </main>

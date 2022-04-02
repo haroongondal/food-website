@@ -108,19 +108,25 @@
   width: 100%;
   z-index: 4;
 }
-.resTop-navbar .top-navItem {
+.resTop-navbar .top-navItem > a {
   font-size: 14px;
   font-weight: bold;
   position: relative;
+  text-decoration: none;
+  color: black;
+  padding: 0 10px;
 }
-.resTop-navbar .top-navItem.active {
+.resTop-navbar .top-navItem {
+  position: relative;
+}
+.resTop-navbar .top-navItem.active > a {
   color: #439548;
 }
 .resTop-navbar .top-navItem.active::after {
   position: absolute;
   content: "";
   left: 0;
-  top: 29px;
+  top: 32px;
   width: 100%;
   height: 2px;
   background-color: #439548;
