@@ -41,6 +41,7 @@ function RestaurentDetailsPage(props) {
   const restaurantDetails = useFetch(
     `https://api.masairapp.com/api/Restaurant/GetRestaurantById?id=${id}`
   );
+
   return (
     <div className="restaurent_detail_page">
       <NavBar ShouldHideSearch={false} />

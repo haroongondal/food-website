@@ -19,32 +19,27 @@ export default function ProfileSettings() {
   const [ownerFullName, setOwnerFullName] = useState("");
   const [ownerEmail, setOwnerEmail] = useState("");
   const [ownerMobile, setOwnerMobile] = useState("");
+  const [ownerWhatsapp, setOwnerWhatsapp] = useState("");
+  const [ownerPassword, setOwnerPassword] = useState();
+  const [confirmPassword, setConfirmPassword] = useState();
   const [imgFront, setImgFront] = useState("");
   const [imgBack, setImgBack] = useState("");
   const [sameAsBtn, setSameAsBtn] = useState(false);
   const [whatsAppCheckbox, setWhatsAppCheckbox] = useState(false);
 
-  // Restaurant-Details
-  const [restName, setRestName] = useState("");
-  const [averagePrice, setAveragePrice] = useState("");
-  const [desc, setDesc] = useState("");
-  const [takeAway, setTakeAway] = useState(false);
-  const [delivery, setDelivery] = useState(false);
-  const [cafe, setCafe] = useState(false);
-  const [restaurent, setRestaurent] = useState(false);
-
   // Restaurant-Documents
   const [imgSMES, setImgSMES] = useState("");
   const [imgLicence, setImgLicence] = useState("");
   const [gstNo, setGstNo] = useState("");
+  const [referalEmail, setreferalEmail] = useState(false);
   const [ReferalEmail, setReferalEmail] = useState(false);
-  console.log("referal email: ", ReferalEmail);
+  const [passwordError, setPasswordError] = useState(false);
   function handleSubmit(e) {
     e.preventDefault();
     {
       const values = {
         Id: 0,
-        RestaurantName: restName,
+        RestaurantName: "",
         OwnerName: ownerFullName,
         PrimaryLocation: null,
         //
@@ -93,7 +88,7 @@ export default function ProfileSettings() {
         Latitude: 200.0,
         Distance: 200.0,
         UnitOfLength: null,
-        Description: desc,
+        Description: "",
         ListOfWorkingDays: null,
         UserReviews: null,
         NoOfReview: 0,
@@ -113,26 +108,30 @@ export default function ProfileSettings() {
       };
       console.log(values);
       // Please Add Link of API
-
-      fetch("https://api.masairapp.com/api/Restaurant/PostRestaurantInfo", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + localStorage.getItem("jwt"),
-        },
-        body: JSON.stringify(values),
-      })
-        .then((result) => {
-          return result.json();
+      if (ownerPassword === confirmPassword) {
+        setPasswordError(false);
+        fetch("https://api.masairapp.com/api/Restaurant/PostRestaurantInfo", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + localStorage.getItem("jwt"),
+          },
+          body: JSON.stringify(values),
         })
-        .then((data) => {
-          console.log(data);
-          if (!data.ResponseMessage) {
-          }
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+          .then((result) => {
+            return result.json();
+          })
+          .then((data) => {
+            console.log(data);
+            if (!data.ResponseMessage) {
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      } else {
+        setPasswordError(true);
+      }
     }
   }
 
@@ -239,7 +238,10 @@ export default function ProfileSettings() {
             </div>
 
             {/* Email Address */}
-            <div className="col-sm-6 col-12 px-2 margin-top-5" id="back-img-padding-L">
+            <div
+              className="col-sm-6 col-12 px-2 margin-top-5"
+              id="back-img-padding-L"
+            >
               <div className="label-PS">Enter Outlet Owner email address</div>
               <input
                 type="text"
@@ -319,17 +321,6 @@ export default function ProfileSettings() {
 
           <div className="Section-PS">
             <div className="col-sm-6 col-12 px-2" id="">
-              {/* Radio Button */}
-              <div className="radio-PS">
-                <input
-                  type="radio"
-                  id="mobile"
-                  name="mobile"
-                  required
-                  onChange={(e) => setSameAsBtn(e.target.checked)}
-                />
-                  <label for="html">Same as restaurent mobile number</label>
-              </div>
               {/* Mobile Number */}
               <div className="label-PS">Mobile Number of Owner</div>
               <div className="dropdown-PS">
@@ -349,74 +340,28 @@ export default function ProfileSettings() {
                 {/* Verify Button */}
                 <button className="verify-btn">Verify</button>
               </div>
-              {/* <div className="label-PS mt-3 mb-0">
-                Write your Referal Email Or Code ?
-              </div>
-              <div className="align-CB-PS p-0">
-                <label
-                  className="col-sm-6 col-12 px-2 col-12 content-CB-PS my-3"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">Yes</h6>
-                  <input
-                    type="radio"
-                    name="referal"
-                    value="true"
-                    onChange={(e) => setReferalEmail(true)}
-                  />
-                  <span className="checkbox-CB-PS"></span>
-                </label>
-
-                <label
-                  className="col-sm-6 col-12 px-2 col-12 content-CB-PS my-3"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <h6 className="label-CB-PS">No</h6>
-                  <input
-                    type="radio"
-                    name="referal"
-                    value="false"
-                    onChange={(e) => setReferalEmail(false)}
-                  />
-                  <span className="checkbox-CB-PS"></span>
-                </label>
-                <label
-                  className="col-sm-6 col-12 px-2 col-12 content-CB-PS my-3"
-                  style={{ marginLeft: "0px" }}
-                >
-                  <div className="dropdown-PS">
-                    <span className="CountryCode-PS">
-                      <h6>Enter Email Here</h6>
-                    </span>
-                    <input
-                      type="email"
-                      placeholder="user@mail.com"
-                      className="input-PS"
-                      style={{ paddingLeft: "64px" }}
-                      // value={email}
-                      // onChange={(e) => setGstNo(e.target.value)}
-                      required
-                    />
-                  </div>
-                </label>
-              </div> */}
-
-              {/* <div className="dropdown-PS mt-3">
+            </div>
+            <div className="col-sm-6 col-12 px-2" id="">
+              {/* Mobile Number */}
+              <div className="label-PS">WhatsApp Number of Owner</div>
+              <div className="dropdown-PS">
                 <span className="CountryCode-PS">
-                  <h6>@</h6>
+                  <h6>+92</h6>
                 </span>
                 <input
-                  type="email"
-                  placeholder="user@mail.com"
+                  type="text"
+                  placeholder="312-34567890"
                   className="input-PS"
                   style={{ paddingLeft: "64px" }}
-                  // value={email}
-                  // onChange={(e) => setGstNo(e.target.value)}
+                  value={ownerWhatsapp}
+                  onChange={(e) => setOwnerWhatsapp(e.target.value)}
                   required
                 />
-              </div> */}
-            </div>
 
+                {/* Verify Button */}
+                <button className="verify-btn">Verify</button>
+              </div>
+            </div>
             {/* WhatsApp checkbox */}
             <div
               className="col-sm-6 col-12 px-2 whatsapp-CB-Margin"
@@ -441,10 +386,7 @@ export default function ProfileSettings() {
           <div className="Section-PS">
             {/* FullName */}
             <div className="col-sm-6 col-12 px-2">
-              <div className="label-PS">
-                
-                Write your Referal Email Or Code ?
-              </div>
+              <div className="label-PS">Write your Referal Email Or Code ?</div>
               <div className="align-CB-PS p-0">
                 <label
                   className="col-sm-6 col-12 col-12 content-CB-PS my-3"
@@ -478,7 +420,10 @@ export default function ProfileSettings() {
 
             {/* Email Address */}
             {ReferalEmail && (
-              <div className="col-sm-6 col-12 px-2 margin-top-5" id="back-img-padding-L">
+              <div
+                className="col-sm-6 col-12 px-2 margin-top-5"
+                id="back-img-padding-L"
+              >
                 <div className="label-PS">Enter Referal Email Here</div>
                 <div className="dropdown-PS">
                   <span class="CountryCode-PS">
@@ -489,13 +434,74 @@ export default function ProfileSettings() {
                     placeholder="user@mail.com"
                     className="input-PS"
                     style={{ paddingLeft: "64px" }}
-                    // value={email}
-                    // onChange={(e) => setGstNo(e.target.value)}
+                    value={referalEmail}
+                    onChange={(e) => setreferalEmail(e.target.value)}
                     required
                   />
                 </div>
               </div>
             )}
+          </div>
+          <div className="Section-PS">
+            <div className="col-sm-6 col-12 px-2" id="">
+              {/*  Password */}
+              <div className="label-PS">Password</div>
+              <div className="dropdown-PS">
+                <span className="CountryCode-PS">
+                  <h6>
+                    <i className="fa fa-lock"></i>
+                  </h6>
+                </span>
+                <input
+                  type="password"
+                  className="input-PS"
+                  style={{ paddingLeft: "64px" }}
+                  value={ownerPassword}
+                  onChange={(e) => setOwnerPassword(e.target.value)}
+                  required
+                />
+              </div>
+            </div>
+            <div className="col-sm-6 col-12 px-2" id="">
+              {/* Confirm Password */}
+              <div className="label-PS">Confirm Password</div>
+              <div className="dropdown-PS d-block">
+                <span className="CountryCode-PS">
+                  <h6>
+                    <i className="fa fa-key"></i>
+                  </h6>
+                </span>
+                <input
+                  type="password"
+                  className="input-PS"
+                  style={{ paddingLeft: "64px" }}
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  required
+                />
+                {passwordError && <div className="fieldError">Password Did'nt Match</div>}
+              </div>
+            </div>
+            {/* WhatsApp checkbox */}
+            <div
+              className="col-sm-6 col-12 px-2 whatsapp-CB-Margin"
+              id="back-img-padding-L"
+            >
+              <div className=" align-checkbox-city">
+                <label className="content-CB-PS" style={{ marginLeft: "0px" }}>
+                  <h6 className="label-CB-PS">
+                    Yes, I would like to receive important updates and
+                    notifications from DeaseApp on my WhatsApp
+                  </h6>
+                  <input
+                    type="checkbox"
+                    onChange={(e) => setWhatsAppCheckbox(e.target.checked)}
+                    required
+                  />
+                  <span className="checkbox-CB-PS"></span>
+                </label>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -544,7 +550,10 @@ export default function ProfileSettings() {
             </div>
 
             {/* Restaurants License */}
-            <div className="col-sm-6 col-12 px-2 margin-top-5" id="back-img-padding-L">
+            <div
+              className="col-sm-6 col-12 px-2 margin-top-5"
+              id="back-img-padding-L"
+            >
               <div className="d-flex justify-content-between">
                 <div className="label-PS">Restaurants License</div>
                 <div className="text-imageSize-PS">Image size: 1MB</div>

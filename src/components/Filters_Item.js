@@ -82,7 +82,7 @@ export default function FiltersItem(props) {
         <Checkbox
           key={dt.FeatureId}
           filter_name={dt.Title}
-          id={dt.Id}
+          id={dt.FeatureId}
           handleFilters={props.handleFilters}
           filterType={props.filtertypes}
         />

@@ -248,7 +248,10 @@
   align-self: center;
   color: #06386c;
 }
-
+.fieldError {
+  color: red;
+  font-size: 14px;
+}
 @media only screen and (min-width: 280px) {
   .header-PS {
     display: block;

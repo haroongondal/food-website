@@ -17,7 +17,24 @@ export default function PopupResListing(props) {
   function submitForm(event) {
   event.preventDefault();
    console.log('form submitted: ',formData);
-   props.closeModal();
+   fetch("https://api.masairapp.com/api/ClaimRestaurant/PostClaimRestaurant", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+        .then((result) => {
+          props.closeModal();
+          return result.json();
+        })
+        .then((data) => {
+          if (!data.ResponseMessage) {
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
 
   }
   return (

@@ -12,6 +12,7 @@ export default function SecResListing() {
   const close = false;
   const [isResListingShowing, setResListingShowing] = useState(false);
 
+
   const handleResListingPop = (e) => {
     e.preventDefault();
     setResListingShowing(true);

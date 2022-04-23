@@ -4,14 +4,14 @@ import arrow from "../images/down_arrow.svg";
 
 export default function PopupResListing1(props) {
   const [userInfo, setUserInfo] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    role: "",
-    emailNotification: false,
-    certified: true,
-    termsAndConditions: true,
+    FirstName: "",
+    LastName: "",
+    Email: "",
+    PhoneNumber: "",
+    Role: "",
+    NotifiedByEmail: false,
+    CertifyIAuthorized: true,
+    ReadTermsCondition: true,
   });
   useEffect(() => {
     props.addUser(userInfo);
@@ -42,9 +42,9 @@ export default function PopupResListing1(props) {
             type="text"
             placeholder="Talha"
             className="input-RL"
-            value={userInfo.firstNname}
+            value={userInfo.FirstName}
             onChange={handleChange}
-            name="firstName"
+            name="FirstName"
           />
         </div>
         <div className="col-md-12 Sec-row-RL">
@@ -53,15 +53,15 @@ export default function PopupResListing1(props) {
             type="text"
             placeholder="Khan"
             className="input-RL"
-            value={userInfo.firstNname}
+            value={userInfo.LastName}
             onChange={handleChange}
-            name="lastName"
+            name="LastName"
           />
         </div>
         <div className="col-md-12 Sec-row-RL mb-4">
           <div className="label-RL text-lg-start">Role at Business</div>
           <div className="dropdown-RL">
-            <select name="role" onChange={handleChange}>
+            <select name="Role" onChange={handleChange}>
               <option value="role" className="option">
                 Role
               </option>
@@ -82,7 +82,7 @@ export default function PopupResListing1(props) {
             <input
               type="checkbox"
               value={true}
-              name="emailNotification"
+              name="NotifiedByEmail"
               onChange={handleChange}
             />
             <label>
@@ -103,7 +103,7 @@ export default function PopupResListing1(props) {
             <input
               type="checkbox"
               value={true}
-              name="certified"
+              name="CertifyIAuthorized"
               onChange={handleChange}
             />
             <label>
@@ -120,7 +120,7 @@ export default function PopupResListing1(props) {
           <div className="CheckBox-RL checkbox mt-2">
             <input
               type="checkbox"
-              name="termsAndConditions"
+              name="ReadTermsCondition"
               value={true}
               onChange={handleChange}
             />

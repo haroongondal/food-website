@@ -3,8 +3,8 @@ import resImage from "../images/kadai_chicken.jpg";
 
 export default function PopupResListing2(props) {
   const [userInfo, setUserInfo] = useState({
-    email: "",
-    phone: "",
+    Email: "",
+    PhoneNumber: "",
   });
   const [showEmailOTPField, setShowtEmailOTPField] = useState(false);
   const [showPhoneOTPField, setShowPhoneOTPField] = useState(false);
@@ -41,9 +41,9 @@ export default function PopupResListing2(props) {
             type="email"
             placeholder="name@mail.com"
             className="input-RL"
-            value={userInfo.firstNname}
+            value={userInfo.Email}
             onChange={handleChange}
-            name="email"
+            name="Email"
           />
         </div>
         <div className="col-5 col-sm-3">
@@ -81,9 +81,9 @@ export default function PopupResListing2(props) {
             type="text"
             placeholder="03_________"
             className="input-RL"
-            value={userInfo.firstNname}
+            value={userInfo.PhoneNumber}
             onChange={handleChange}
-            name="phone"
+            name="PhoneNumber"
             // oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
             // maxLength = "11"
           />

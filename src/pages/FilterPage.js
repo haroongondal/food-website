@@ -88,6 +88,18 @@ function FilterPage(props) {
     }
 
     if (Types.FilterTypes.FeatureFilters === filterType) {
+      console.log('running 1');
+      if (isChecked) {
+        console.log('running 2',id);
+        setFeatureIds((oldArray) => [...oldArray, id]);
+      } else {
+        console.log('running 3');
+        const index = featureIds.findIndex((id_) => id_ === id);
+        if (index !== -1) {
+          console.log('running 4');
+          setFeatureIds([...featureIds.slice(0, index), ...featureIds.slice(index + 1)]);
+        }
+      }
     }
 
     if (Types.FilterTypes.TagFilters === filterType) {
@@ -272,10 +284,10 @@ function FilterPage(props) {
             </div>
             <div className="adjust-M">
               <div className="listing_sidebar-M mt-4">
-                <FiltersItem
+                {/* <FiltersItem
                   filtertypes={Types.FilterTypes.QuickFilters}
                   handleFilters={handleFilters}
-                />
+                /> */}
                 <FiltersItem
                   filtertypes={Types.FilterTypes.CusineFilters}
                   handleFilters={handleFilters}
@@ -374,10 +386,10 @@ function FilterPage(props) {
           {/* <ForDevice deviceName={["tablet", "desktop"]}> */}
           <div className="adjust d-md-block d-none">
             <div className="alignment listing_sidebar">
-              <FiltersItem
+              {/* <FiltersItem
                 filtertypes={Types.FilterTypes.QuickFilters}
                 handleFilters={handleFilters}
-              />
+              /> */}
               <FiltersItem
                 filtertypes={Types.FilterTypes.CusineFilters}
                 handleFilters={handleFilters}

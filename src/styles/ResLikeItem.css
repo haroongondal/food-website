@@ -11,8 +11,8 @@
 }
 .detail-box-restaurent-3rd-page {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   align-items: center;
   padding: 5px 15px;
   padding-bottom: 10px;
@@ -81,7 +81,7 @@
 }
 .box-restaurent-3rd-page .user-reviews{
   position: absolute;
-  right: 0;
+  right: 30px;
   top: 9px;
   font-size: 13px;
   color: black;

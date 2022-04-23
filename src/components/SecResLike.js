@@ -1,6 +1,9 @@
 import "../styles/SecResLike.css";
 import ResLikeItem from "./ResLikeItem";
 import Carousel from "react-multi-carousel";
+import useFetch from "../Utils/useFetch";
+import Skeleton from "react-loading-skeleton";
+import useGeoLocation from "../Utils/useGeoLocation";
 
 export default function SecResLike() {
   const responsive = {
@@ -20,6 +23,11 @@ export default function SecResLike() {
       items: 1,
     },
   };
+  const location = useGeoLocation();
+
+  const restaurants = useFetch(
+    `https://api.masairapp.com/api/Restaurant/GetRestaurantsByCoordinate?latitude=${location.coordinates.lat}&longitude=${location.coordinates.lng}`
+  );
   return (
     <div className="border-like-restaurents">
       <div className="content-like-restaurents">
@@ -30,12 +38,20 @@ export default function SecResLike() {
           removeArrowOnDeviceType={["tablet", "mobile"]}
           className="resLikeItem-carousel"
         >
-          {/* {restaurants.isPending && <div><Skeleton width={200} height={250}/></div>}
-        {restaurants.error && <div>{restaurants.error}</div>} */}
-          {/* {restaurants.data && restaurants.data.map((r) => <RestaurentItem key = {r.Id} data = {r}/>)} */}
+          {restaurants.isPending && (
+                <div>
+                  <Skeleton width={300} height={258} />
+                </div>
+              )}
+              {restaurants.error && <div>{restaurants.error}</div>}
+              {restaurants.data &&
+                restaurants.data
+                  .sort((e, d) => d.NoOfOrders - e.NoOfOrders)
+                  .map((r) => <ResLikeItem key={r.Id} data={r} />)}
+
+          {/* <ResLikeItem />
           <ResLikeItem />
-          <ResLikeItem />
-          <ResLikeItem />
+          <ResLikeItem /> */}
         </Carousel>
         <div className="boxes-like-restaurents"></div>
       </div>
