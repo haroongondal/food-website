@@ -2,15 +2,6 @@ import React from "react";
 import { useState } from "react";
 import arrow from "../images/down_arrow.svg";
 import "../styles/AddNewOutlet.css";
-// import ImageUpload from "image-upload-react";
-import ImageUploader from "react-images-upload";
-import PopupSelectCuisine from "../components/PopupSelectCuisine";
-import PopupSelectFeatures from "../components/PopupSelectFeatures";
-import { ForDevice } from "media-query-react";
-import Modal from "react-responsive-modal";
-import CancelSvgIcon from "../components/CancelSvgIcon";
-import useFetch from "../Utils/useFetch";
-import Skeleton from "react-loading-skeleton";
 import { FilePond, File, registerPlugin } from "react-filepond";
 
 // Import FilePond styles
@@ -27,107 +18,122 @@ import "filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css";
 registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview);
 
 function AddOutletItem(props) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [pin, setPin] = useState("");
-  const [gstn, setGstn] = useState("");
-  const [address, setAddress] = useState("");
-  const [phoneNo, setPhoneNo] = useState("");
-  const [area, setArea] = useState("");
-  const [logitude, setLogitude] = useState("");
-  const [latitude, setLatitude] = useState("");
-  const [city, setCity] = useState("");
-  const [pincode, setPincode] = useState("");
-  const [country, setCountry] = useState("");
-  const [imgFracade, setImgFracade] = useState("");
-  const [imgKitchen, setImgKitchen] = useState("");
-  const [imgDinning, setImgDinning] = useState("");
-  const [imgLocality, setImgLocality] = useState("");
-  const { data, isPending, error } = useFetch(
-    "https://api.masairapp.com/api/Lov/GetCusine"
-  );
-  const [ImageKitchen, setImageKitchen] = useState([]);
-  const [ImageDining, setImageDinning] = useState([]);
   const [ImageLocality, setImageLocality] = useState([]);
   const [ImageFracade, setImageFracade] = useState([]);
+  const [ImageKitchen, setImageKitchen] = useState([]);
+  const [ImageDining, setImageDinning] = useState([]);
+  const [city, setCity] = useState("");
+  const [zipcode, setZipcode] = useState("");
+  const [area, setArea] = useState("");
+  const [longitude, setLongitude] = useState("");
+  const [latitude, setLatitude] = useState("");
+  const [address, setAddress] = useState("");
+  const [gstn, setGstn] = useState("");
+  const [IsSalesTaxIncluded, setIsSalesTaxIncluded] = useState(false);
   const [menuImage1, setMenuImage1] = useState([]);
   const [menuImage2, setMenuImage2] = useState([]);
+  const [restaurantName, setRestaurantName] = useState();
+  const [averagePrice, setAveragePrice] = useState("");
+  const [oppeningTime, setOppeningTime] = useState("");
+  const [closingTime, setClosingTime] = useState("");
+  const [holiday, setHoliday] = useState("");
+  const [phoneNo, setPhoneNo] = useState("");
+  const [landline, setLandline] = useState("");
+  const [ReceiveWhatsappNoti, setReceiveWhatsappNoti] = useState(false);
+  const [cuisinesList, setCuisinesList] = useState([]);
+  const [FeaturesList, setFeaturesList] = useState([]);
+  const [establishmentType, setEstablishmentType] = useState(false);
+  const [delivery, setDelivery] = useState(false);
+  const [MealRestaurantServe, setMealRestaurantServe] = useState([]);
+  const [RestaurantGoodFor, setRestaurantGoodFor] = useState([]);
+  const [desc, setDesc] = useState("");
 
-  const [subCusine, setSubCusine] = useState("");
-
-  const [cusineId, setCusineId] = useState("-1");
-
+  function handleCusines(isChecked, value) {
+    if (isChecked) {
+      setCuisinesList((oldArray) => [...oldArray, value]);
+    } else {
+      const index = cuisinesList.findIndex((value__) => value__ === value);
+      if (index !== -1) {
+        setCuisinesList([
+          ...cuisinesList.slice(0, index),
+          ...cuisinesList.slice(index + 1),
+        ]);
+      }
+    }
+  }
+  function handleFeatures(isChecked, value) {
+    if (isChecked) {
+      setFeaturesList((oldArray) => [...oldArray, value]);
+    } else {
+      const index = FeaturesList.findIndex((value__) => value__ === value);
+      if (index !== -1) {
+        setFeaturesList([
+          ...FeaturesList.slice(0, index),
+          ...FeaturesList.slice(index + 1),
+        ]);
+      }
+    }
+  }
+  function handleRestaurantGoodFor(isChecked, value) {
+    if (isChecked) {
+      setRestaurantGoodFor((oldArray) => [...oldArray, value]);
+    } else {
+      const index = RestaurantGoodFor.findIndex((value__) => value__ === value);
+      if (index !== -1) {
+        setRestaurantGoodFor([
+          ...RestaurantGoodFor.slice(0, index),
+          ...RestaurantGoodFor.slice(index + 1),
+        ]);
+      }
+    }
+  }
+  function handleMealRestaurantServe(isChecked, value) {
+    if (isChecked) {
+      setMealRestaurantServe((oldArray) => [...oldArray, value]);
+    } else {
+      const index = MealRestaurantServe.findIndex(
+        (value__) => value__ === value
+      );
+      if (index !== -1) {
+        setRestaurantGoodFor([
+          ...MealRestaurantServe.slice(0, index),
+          ...MealRestaurantServe.slice(index + 1),
+        ]);
+      }
+    }
+  }
   function handleSubmit(e) {
     e.preventDefault();
     {
       const values = {
-        Id: 0,
-        RestaurantName: null,
-        OwnerName: null,
-        PrimaryLocation: null,
-        //
-        PhoneNumber: phoneNo,
-        //
-        Email: email,
-        //
-        CityId: 2,
-        //
-        WebSiteLink: null,
-        NoOfOutlets: 0,
-        //
-        EstablishmentTypeId: 2,
-        //
-        PrimaryAreaOfOutlet: area,
-        //
-        HomeDelivery: "Yes",
-        //
-        CostOfTwo: 200.0,
-        //
-        RegistrationDate: null,
-        //
-        // ShopLicense: imgLicence.split(",")[1],
-        Fssai: null,
-        Tin: null,
-        FracadeImageStringBase64: null,
-        KitchenImageStringBase64: null,
-        DinningImageStringBase64: null,
-        LocalityImageStringBase64: null,
         UserId: 1,
-        IsActive: true,
-        //
-        CusinesCSV: null,
-        //
-        IsFeature: false,
-        //
-        ListOfRestaurantCusine: null,
-        //
-        ListOfRestaurantTags: null,
-        //
-        ListOfRestaurantFeature: null,
-        //
-        RestaurantCusine: null,
-        //
-        Longitude: 200.0,
-        Latitude: 200.0,
-        Distance: 200.0,
-        UnitOfLength: null,
-        Description: null,
-        ListOfWorkingDays: null,
-        UserReviews: null,
-        NoOfReview: 0,
-        //
-        AverageRating: 200.0,
-        //
-        NoOfOrders: 0,
-        //
-        // RestaurantOwnerIDFrontStringBase64: imgFront.split(",")[1],
-        // RestaurantOwnerIDBackStringBase64: imgBack.split(",")[1],
         ParentId: 0,
-        //
-        IsBlocked: false,
-        //
-        ResponseCode: 0,
-        ResponseMessage: null,
+        FracadeImageStringBase64: ImageFracade,
+        KitchenImageStringBase64: ImageKitchen,
+        DinningImageStringBase64: ImageDining,
+        LocalityImageStringBase64: ImageLocality,
+        RestaurantName: restaurantName,
+        OpeningTime: oppeningTime,
+        ClosingTIme: closingTime,
+        Holiday: holiday,
+        PhoneNumber: phoneNo,
+        RestaurantLandLineNumber: landline,
+        ReceiveWhatsappNoti: ReceiveWhatsappNoti,
+        CityId: city,
+        PrimaryAreaOfOutlet: area,
+        Gstn: gstn,
+        ZipCode: zipcode,
+        Address: address,
+        Longitude: longitude,
+        Latitude: latitude,
+        ListOfRestaurantCusine: cuisinesList,
+        ListOfRestaurantFeature: FeaturesList,
+        EstablishmentTypeId: establishmentType,
+        HomeDelivery: delivery,
+        RestaurantGoodFor: RestaurantGoodFor,
+        MealRestaurantServe: MealRestaurantServe,
+
+        Description: desc,
       };
       console.log(values);
       // Please Add Link of API
@@ -156,76 +162,44 @@ function AddOutletItem(props) {
 
   // ------Images-Handles------
 
-  const uploadImageFracade = async (e) => {
-    const file = e[e.length - 1];
-    const base64 = await convertBase64(file);
-    setImgFracade(base64);
-  };
+  // const uploadImageFracade = async (e) => {
+  //   const file = e[e.length - 1];
+  //   const base64 = await convertBase64(file);
+  //   setImageFracade(base64);
+  // };
 
-  const uploadImageKitchen = async (e) => {
-    const file = e[e.length - 1];
-    const base64 = await convertBase64(file);
-    setImgKitchen(base64);
-  };
+  // const uploadImageKitchen = async (e) => {
+  //   const file = e[e.length - 1];
+  //   const base64 = await convertBase64(file);
+  //   setImageKitchen(base64);
+  // };
 
-  const uploadImageDinning = async (e) => {
-    const file = e[e.length - 1];
-    const base64 = await convertBase64(file);
-    setImgDinning(base64);
-  };
+  // const uploadImageDinning = async (e) => {
+  //   const file = e[e.length - 1];
+  //   const base64 = await convertBase64(file);
+  //   setImageDinning(base64);
+  // };
 
-  const uploadImageLocality = async (e) => {
-    const file = e[e.length - 1];
-    const base64 = await convertBase64(file);
-    setImgLocality(base64);
-  };
+  // const uploadImageLocality = async (e) => {
+  //   const file = e[e.length - 1];
+  //   const base64 = await convertBase64(file);
+  //   setImageLocality(base64);
+  // };
 
-  const convertBase64 = (file) => {
-    return new Promise((resolve, reject) => {
-      const fileReader = new FileReader();
-      fileReader.readAsDataURL(file);
+  // const convertBase64 = (file) => {
+  //   return new Promise((resolve, reject) => {
+  //     const fileReader = new FileReader();
+  //     fileReader.readAsDataURL(file);
 
-      fileReader.onload = () => {
-        resolve(fileReader.result);
-      };
+  //     fileReader.onload = () => {
+  //       resolve(fileReader.result);
+  //     };
 
-      fileReader.onerror = (error) => {
-        reject(error);
-      };
-    });
-  };
-
-  const [isSelectCuisineShowing, setSelectCuisineShowing] = useState(false);
-  const [desc, setDesc] = useState("");
-  const [takeAway, setTakeAway] = useState(false);
-  const [delivery, setDelivery] = useState(false);
-  const [cafe, setCafe] = useState(false);
-  const [Restaurant, setrestaurant] = useState(false);
-  const closeIcon = <CancelSvgIcon />;
-
-  const handleSelectCuisinePop = (e) => {
-    e.preventDefault();
-    setSelectCuisineShowing(true);
-  };
-
-  const closeSelectCuisinePop = () => {
-    setSelectCuisineShowing(false);
-  };
-
-  // Popup Select-Features
-  const [isSelectFeaturesShowing, setSelectFeaturesShowing] = useState(false);
-
-  const handleSelectFeaturesPop = (e) => {
-    e.preventDefault();
-    setSelectFeaturesShowing(true);
-  };
-
-  const closeSelectFeaturesPop = () => {
-    setSelectFeaturesShowing(false);
-  };
-  const [averagePrice, setAveragePrice] = useState("");
-
-  const [restName, setRestName] = useState("");
+  //     fileReader.onerror = (error) => {
+  //       reject(error);
+  //     };
+  //   });
+  // };
 
   return (
     <div className="add-outlet-item">
@@ -235,13 +209,6 @@ function AddOutletItem(props) {
         <div className="col-xxl-6 col-12">
           <div className="row">
             <div className="col-sm-6 col-md-3 col-12">
-              {/* <ImageUploader
-                withIcon={true}
-                buttonText="Choose image"
-                onChange={uploadImageFracade}
-                imgExtension={[".jpg", ".gif", ".png", ".gif"]}
-                maxFileSize={5242880}
-              /> */}
               <FilePond
                 files={ImageFracade}
                 onupdatefiles={setImageFracade}
@@ -253,13 +220,6 @@ function AddOutletItem(props) {
               />
             </div>
             <div className="col-sm-6 col-md-3 col-12">
-              {/* <ImageUploader
-                withIcon={true}
-                buttonText="Choose image"
-                onChange={uploadImageDinning}
-                imgExtension={[".jpg", ".gif", ".png", ".gif"]}
-                maxFileSize={5242880}
-              /> */}
               <FilePond
                 files={ImageDining}
                 onupdatefiles={setImageDinning}
@@ -271,13 +231,6 @@ function AddOutletItem(props) {
               />
             </div>
             <div className="col-sm-6 col-md-3 col-12">
-              {/* <ImageUploader
-                withIcon={true}
-                buttonText="Choose image"
-                onChange={uploadImageLocality}
-                imgExtension={[".jpg", ".gif", ".png", ".gif"]}
-                maxFileSize={5242880}
-              /> */}
               <FilePond
                 files={ImageLocality}
                 onupdatefiles={setImageLocality}
@@ -289,13 +242,6 @@ function AddOutletItem(props) {
               />
             </div>
             <div className="col-sm-6 col-md-3 col-12">
-              {/* <ImageUploader
-                withIcon={true}
-                buttonText="Choose image"
-                onChange={uploadImageKitchen}
-                imgExtension={[".jpg", ".gif", ".png", ".gif"]}
-                maxFileSize={5242880}
-              /> */}
               <FilePond
                 files={ImageKitchen}
                 onupdatefiles={setImageKitchen}
@@ -321,7 +267,12 @@ function AddOutletItem(props) {
                 <label for="city" className="label mb-2">
                   City
                 </label>
-                <select id="city" className="form-select">
+                <select
+                  id="city"
+                  value={city}
+                  onChange={setCity}
+                  className="form-select"
+                >
                   <option value="islamabad" key="">
                     Islamabad
                   </option>
@@ -341,32 +292,62 @@ function AddOutletItem(props) {
                 <label for="zipcode" className="label mb-2">
                   Zipcode
                 </label>
-                <input type="text" id="zipcode" className="form-control" />
+                <input
+                  type="text"
+                  id="zipcode"
+                  value={zipcode}
+                  onChange={(e) => setZipcode(e.target.value)}
+                  className="form-control"
+                />
               </div>
               <div className="col-sm-6 col-12 mt-3 mb-sm-0 mb-3">
                 <label for="area" className="label mb-2">
                   Area
                 </label>
-                <input type="text" id="area" className="form-control" />
+                <input
+                  type="text"
+                  id="area"
+                  value={area}
+                  onChange={(e) => setArea(e.target.value)}
+                  className="form-control"
+                />
               </div>
               <div className="col-sm-6 col-12"></div>
               <div className="col-sm-6 col-12 mt-3 mb-sm-0 mb-3">
                 <label for="zipcode" className="label mb-2">
                   Latitude
                 </label>
-                <input type="text" id="latitude" className="form-control" />
+                <input
+                  type="text"
+                  id="latitude"
+                  value={latitude}
+                  onChange={(e) => setLatitude(e.target.value)}
+                  className="form-control"
+                />
               </div>
               <div className="col-sm-6 col-12 mt-3 mb-sm-0 mb-3">
                 <label for="address" className="label mb-2">
                   Longitude
                 </label>
-                <input type="text" id="longitude" className="form-control" />
+                <input
+                  type="text"
+                  id="longitude"
+                  value={longitude}
+                  onChange={(e) => setLongitude(e.target.value)}
+                  className="form-control"
+                />
               </div>
               <div className="col-12 my-3">
                 <label for="address" className="label mb-2">
                   Address
                 </label>
-                <input type="text" id="address" className="form-control" />
+                <input
+                  type="text"
+                  id="address"
+                  value={address}
+                  onChange={(e) => setAddress(e.target.value)}
+                  className="form-control"
+                />
               </div>
             </div>
           </div>
@@ -394,6 +375,8 @@ function AddOutletItem(props) {
                     step="0.1"
                     className="border"
                     placeholder="%"
+                    value={gstn}
+                    onChange={(e) => setGstn(e.target.value)}
                     className="px-1 border"
                   />
                 </div>
@@ -409,47 +392,15 @@ function AddOutletItem(props) {
                     </h6>
                     <input
                       type="checkbox"
-                      // onChange={(e) => setWhatsAppCheckbox(e.target.checked)}
+                      value={true}
+                      onChange={(e) => setIsSalesTaxIncluded(e.target.checked)}
                       required
                     />
                     <span className="checkbox-CB-PS"></span>
                   </label>
                 </div>
               </div>
-              {/* <div className="col-sm-6 col-12 mt-3 mb-sm-0 mb-3">
-                <label for="address" className="label mb-2">
-                  Cuisines
-                </label>
-                <select type="text" id="cuisines" className="form-select">
-                  <option value="chines" key="">
-                    Chines
-                  </option>
-                  <option value="northPakistan" key="">
-                    North Pakistan
-                  </option>
-                  <option value="mainCuisines" key="">
-                    Main Cuisines
-                  </option>
-                </select>
-              </div>
-              <div className="col-sm-6 col-12 mt-3 mb-sm-0 mb-3">
-                <label for="address" className="label mb-2">
-                  Category Name
-                </label>
-                <input
-                  type="text"
-                  id="categoryName"
-                  className="form-control"
-                />
-              </div> */}
               <div className="col-sm-6 col-12 my-0 my-sm-3">
-                {/* <ImageUploader
-                  withIcon={true}
-                  buttonText="Choose image"
-                  // onChange={uploadImageFracade}
-                  imgExtension={[".jpg", ".gif", ".png", ".gif"]}
-                  maxFileSize={5242880}
-                /> */}
                 <FilePond
                   files={menuImage1}
                   onupdatefiles={setMenuImage1}
@@ -461,13 +412,6 @@ function AddOutletItem(props) {
                 />
               </div>
               <div className="col-sm-6 col-12 my-0 my-sm-3">
-                {/* <ImageUploader
-                  withIcon={true}
-                  buttonText="Choose image"
-                  // onChange={uploadImageFracade}
-                  imgExtension={[".jpg", ".gif", ".png", ".gif"]}
-                  maxFileSize={5242880}
-                /> */}
                 <FilePond
                   files={menuImage2}
                   onupdatefiles={setMenuImage2}
@@ -496,6 +440,8 @@ function AddOutletItem(props) {
                 <input
                   type="text"
                   id="restaurant_name"
+                  value={restaurantName}
+                  onChange={(e) => setRestaurantName(e.target.value)}
                   className="form-control"
                 />
               </div>
@@ -503,19 +449,37 @@ function AddOutletItem(props) {
                 <label for="avg_price" className="label mb-2">
                   Avg Price
                 </label>
-                <input type="number" id="avg_price" className="form-control" />
+                <input
+                  type="number"
+                  id="avg_price"
+                  value={averagePrice}
+                  onChange={(e) => setAveragePrice(e.target.value)}
+                  className="form-control"
+                />
               </div>
               <div className="col-sm-6 col-lg-2 col-12 mt-lg-0 mt-3 mb-sm-0 mb-3">
                 <label for="opening_time" className="label mb-2">
                   Opening Time
                 </label>
-                <input type="time" id="opening_time" className="form-control" />
+                <input
+                  type="time"
+                  id="opening_time"
+                  value={oppeningTime}
+                  onChange={(e) => setOppeningTime(e.target.value)}
+                  className="form-control"
+                />
               </div>
               <div className="col-sm-6 col-lg-2 col-12 mt-lg-0 mt-3 mb-sm-0 mb-3">
                 <label for="closing_time" className="label mb-2">
                   Closing Time
                 </label>
-                <input type="time" id="closing_time" className="form-control" />
+                <input
+                  type="time"
+                  id="closing_time"
+                  value={closingTime}
+                  onChange={(e) => setClosingTime(e.target.value)}
+                  className="form-control"
+                />
               </div>
               <div className="col-sm-6 col-lg-2 col-12 mt-lg-0 mt-3 mb-sm-0 mb-2">
                 <label for="holiday" className="label mb-2">
@@ -535,13 +499,25 @@ function AddOutletItem(props) {
                     <label for="number" className="label mb-2">
                       Mobile Number
                     </label>
-                    <input type="text" id="number" className="form-control" />
+                    <input
+                      type="text"
+                      id="number"
+                      value={phoneNo}
+                      onChange={(e) => setPhoneNo(e.target.value)}
+                      className="form-control"
+                    />
                   </div>
                   <div className="col-sm-6 col-12 mt-sm-0 mt-3">
                     <label for="landline" className="label mb-2">
                       Landline
                     </label>
-                    <input type="text" id="landline" className="form-control" />
+                    <input
+                      type="text"
+                      id="landline"
+                      value={landline}
+                      onChange={(e) => setLandline(e.target.value)}
+                      className="form-control"
+                    />
                   </div>
                 </div>
               </div>
@@ -557,7 +533,8 @@ function AddOutletItem(props) {
                     </h6>
                     <input
                       type="checkbox"
-                      // onChange={(e) => setWhatsAppCheckbox(e.target.checked)}
+                      value={true}
+                      onChange={(e) => setReceiveWhatsappNoti(e.target.checked)}
                       required
                     />
                     <span className="checkbox-CB-PS"></span>
@@ -574,7 +551,11 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="cuisnes[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Afghanistani"
+                    key={1}
+                    onChange={(e) =>
+                      handleCusines(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -585,7 +566,11 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="cuisnes[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="BBQ"
+                    key="BBQ"
+                    onChange={(e) =>
+                      handleCusines(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -596,7 +581,11 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="cuisnes[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Pizza"
+                    key="Pizza"
+                    onChange={(e) =>
+                      handleCusines(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -607,7 +596,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="cuisnes[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Chicken"
+                    onChange={(e) =>
+                      handleCusines(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -618,7 +610,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="cuisnes[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Iranian"
+                    onChange={(e) =>
+                      handleCusines(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -629,7 +624,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="cuisnes[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Take Away"
+                    onChange={(e) =>
+                      handleCusines(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -640,7 +638,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="cuisnes[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Burger"
+                    onChange={(e) =>
+                      handleCusines(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -651,7 +652,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="cuisnes[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Chinese"
+                    onChange={(e) =>
+                      handleCusines(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -662,7 +666,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="cuisnes[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Biryani"
+                    onChange={(e) =>
+                      handleCusines(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -676,7 +683,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="cuisnes[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Smoking Area"
+                    onChange={(e) =>
+                      handleCusines(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -687,7 +697,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Air Conditioned"
+                    onChange={(e) =>
+                      handleFeatures(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -698,7 +711,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="DJ"
+                    onChange={(e) =>
+                      handleFeatures(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -709,7 +725,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Valet Available"
+                    onChange={(e) =>
+                      handleFeatures(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -720,7 +739,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Home Delivery"
+                    onChange={(e) =>
+                      handleFeatures(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -731,7 +753,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Lift"
+                    onChange={(e) =>
+                      handleFeatures(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -742,7 +767,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Parking"
+                    onChange={(e) =>
+                      handleFeatures(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -753,7 +781,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Take Away"
+                    onChange={(e) =>
+                      handleFeatures(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -764,7 +795,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Live Performance"
+                    onChange={(e) =>
+                      handleFeatures(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -775,7 +809,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Cards Accepted"
+                    onChange={(e) =>
+                      handleFeatures(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -786,7 +823,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Dance Floor"
+                    onChange={(e) =>
+                      handleFeatures(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -797,7 +837,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Outdoor Seating"
+                    onChange={(e) =>
+                      handleFeatures(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -808,7 +851,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Full Bar Available"
+                    onChange={(e) =>
+                      handleFeatures(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -819,7 +865,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Screening"
+                    onChange={(e) =>
+                      handleFeatures(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -830,7 +879,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Wallet Accepted"
+                    onChange={(e) =>
+                      handleFeatures(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -841,7 +893,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Parking"
+                    onChange={(e) =>
+                      handleFeatures(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -852,7 +907,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Wifi"
+                    onChange={(e) =>
+                      handleFeatures(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -863,7 +921,10 @@ function AddOutletItem(props) {
                   <input
                     type="checkbox"
                     name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Amex Accepted"
+                    onChange={(e) =>
+                      handleFeatures(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -877,7 +938,8 @@ function AddOutletItem(props) {
                   <input
                     type="radio"
                     name="d_type"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value={true}
+                    onChange={(e) => setDelivery(true)}
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -888,7 +950,8 @@ function AddOutletItem(props) {
                   <input
                     type="radio"
                     name="d_type"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value={false}
+                    onChange={(e) => setDelivery(false)}
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -904,7 +967,8 @@ function AddOutletItem(props) {
                   <input
                     type="radio"
                     name="r_type"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Restaurant"
+                    onChange={(e) => setEstablishmentType(e.target.value)}
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -915,7 +979,8 @@ function AddOutletItem(props) {
                   <input
                     type="radio"
                     name="r_type"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    value="Cafe"
+                    onChange={(e) => setEstablishmentType(e.target.value)}
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -930,8 +995,14 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Breakfast</h6>
                   <input
                     type="checkbox"
-                    name="f_type[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="MealRestaurantServe[]"
+                    value="Breakfast"
+                    onChange={(e) =>
+                      handleMealRestaurantServe(
+                        e.target.checked,
+                        e.target.value
+                      )
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -941,8 +1012,14 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Lunch</h6>
                   <input
                     type="checkbox"
-                    name="cuisnes[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="MealRestaurantServe[]"
+                    value="Lunch"
+                    onChange={(e) =>
+                      handleMealRestaurantServe(
+                        e.target.checked,
+                        e.target.value
+                      )
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -952,8 +1029,14 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Drinks</h6>
                   <input
                     type="checkbox"
-                    name="cuisnes[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="MealRestaurantServe[]"
+                    value="Drinks"
+                    onChange={(e) =>
+                      handleMealRestaurantServe(
+                        e.target.checked,
+                        e.target.value
+                      )
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -963,8 +1046,14 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Buffet/Brunch</h6>
                   <input
                     type="checkbox"
-                    name="cuisnes[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="MealRestaurantServe[]"
+                    value="Buffet/Brunch"
+                    onChange={(e) =>
+                      handleMealRestaurantServe(
+                        e.target.checked,
+                        e.target.value
+                      )
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -974,8 +1063,14 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Late Night</h6>
                   <input
                     type="checkbox"
-                    name="cuisnes[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="MealRestaurantServe[]"
+                    value="Late Night"
+                    onChange={(e) =>
+                      handleMealRestaurantServe(
+                        e.target.checked,
+                        e.target.value
+                      )
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -990,8 +1085,11 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Smoking Area</h6>
                   <input
                     type="checkbox"
-                    name="cuisnes[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="handleRestaurantGoodFor[]"
+                    value="Smoking Area"
+                    onChange={(e) =>
+                      handleRestaurantGoodFor(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -1001,8 +1099,11 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Air Conditioned</h6>
                   <input
                     type="checkbox"
-                    name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="handleRestaurantGoodFor[]"
+                    value="Air Conditioned"
+                    onChange={(e) =>
+                      handleRestaurantGoodFor(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -1012,8 +1113,11 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">DJ</h6>
                   <input
                     type="checkbox"
-                    name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="handleRestaurantGoodFor[]"
+                    value="DJ"
+                    onChange={(e) =>
+                      handleRestaurantGoodFor(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -1023,8 +1127,11 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Valet Available</h6>
                   <input
                     type="checkbox"
-                    name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="handleRestaurantGoodFor[]"
+                    value="Valet Available"
+                    onChange={(e) =>
+                      handleRestaurantGoodFor(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -1034,8 +1141,11 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Home Delivery</h6>
                   <input
                     type="checkbox"
-                    name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="handleRestaurantGoodFor[]"
+                    value="Home Delivery"
+                    onChange={(e) =>
+                      handleRestaurantGoodFor(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -1045,8 +1155,11 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Lift</h6>
                   <input
                     type="checkbox"
-                    name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="handleRestaurantGoodFor[]"
+                    value="Lift"
+                    onChange={(e) =>
+                      handleRestaurantGoodFor(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -1056,8 +1169,11 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Parking</h6>
                   <input
                     type="checkbox"
-                    name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="handleRestaurantGoodFor[]"
+                    value="Parking"
+                    onChange={(e) =>
+                      handleRestaurantGoodFor(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -1067,8 +1183,11 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Take Away</h6>
                   <input
                     type="checkbox"
-                    name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="handleRestaurantGoodFor[]"
+                    value="Take Away"
+                    onChange={(e) =>
+                      handleRestaurantGoodFor(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -1078,8 +1197,11 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Live Performance</h6>
                   <input
                     type="checkbox"
-                    name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="handleRestaurantGoodFor[]"
+                    value="Live Performance"
+                    onChange={(e) =>
+                      handleRestaurantGoodFor(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -1089,8 +1211,11 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Cards Accepted</h6>
                   <input
                     type="checkbox"
-                    name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="handleRestaurantGoodFor[]"
+                    value="Cards Accepted"
+                    onChange={(e) =>
+                      handleRestaurantGoodFor(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -1100,8 +1225,11 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Dance Floor</h6>
                   <input
                     type="checkbox"
-                    name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="handleRestaurantGoodFor[]"
+                    value="Dance Floor"
+                    onChange={(e) =>
+                      handleRestaurantGoodFor(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -1111,8 +1239,11 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Outdoor Seating</h6>
                   <input
                     type="checkbox"
-                    name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="handleRestaurantGoodFor[]"
+                    value="Outdoor Seating"
+                    onChange={(e) =>
+                      handleRestaurantGoodFor(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -1122,8 +1253,11 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Full Bar Available</h6>
                   <input
                     type="checkbox"
-                    name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="handleRestaurantGoodFor[]"
+                    value="Full Bar Available"
+                    onChange={(e) =>
+                      handleRestaurantGoodFor(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -1133,8 +1267,11 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Screening</h6>
                   <input
                     type="checkbox"
-                    name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="handleRestaurantGoodFor[]"
+                    value="Screening"
+                    onChange={(e) =>
+                      handleRestaurantGoodFor(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -1144,8 +1281,11 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Wallet Accepted</h6>
                   <input
                     type="checkbox"
-                    name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="handleRestaurantGoodFor[]"
+                    value="Wallet Accepted"
+                    onChange={(e) =>
+                      handleRestaurantGoodFor(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -1155,8 +1295,11 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Parking</h6>
                   <input
                     type="checkbox"
-                    name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="handleRestaurantGoodFor[]"
+                    value="Parking"
+                    onChange={(e) =>
+                      handleRestaurantGoodFor(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -1166,8 +1309,11 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Wifi</h6>
                   <input
                     type="checkbox"
-                    name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="handleRestaurantGoodFor[]"
+                    value="Wifi"
+                    onChange={(e) =>
+                      handleRestaurantGoodFor(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -1177,8 +1323,11 @@ function AddOutletItem(props) {
                   <h6 className="label-CB-PS">Amex Accepted</h6>
                   <input
                     type="checkbox"
-                    name="features[]"
-                    onChange={(e) => setTakeAway(e.target.checked)}
+                    name="handleRestaurantGoodFor[]"
+                    value="Amex Accepted"
+                    onChange={(e) =>
+                      handleRestaurantGoodFor(e.target.checked, e.target.value)
+                    }
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -1189,11 +1338,20 @@ function AddOutletItem(props) {
                 <label className="label mb-2" for="restaurant-desc">
                   Restaurant Description
                 </label>
-                <textarea type="form-control" name="restaurant-desc" rows="5" />
+                <textarea
+                  type="form-control"
+                  name="restaurant-desc"
+                  value={desc}
+                  onChange={(e) => setDesc(e.target.value)}
+                  rows="5"
+                />
               </div>
             </div>
             <div className="d-flex footer justify-content-between justify-content-sm-start mt-4 pb-4 px-3">
-              <button className="btn btn-success me-sm-3 px-lg-4 px-sm-3 px-2 py-lg-3 submit-button">
+              <button
+                className="btn btn-success me-sm-3 px-lg-4 px-sm-3 px-2 py-lg-3 submit-button"
+                onClick={handleSubmit}
+              >
                 Save Information
               </button>
               <button className="btn btn-light px-3 py-2">Cancel</button>

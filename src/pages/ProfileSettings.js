@@ -19,98 +19,41 @@ export default function ProfileSettings() {
   const [ownerFullName, setOwnerFullName] = useState("");
   const [ownerEmail, setOwnerEmail] = useState("");
   const [ownerMobile, setOwnerMobile] = useState("");
-  const [ownerWhatsapp, setOwnerWhatsapp] = useState("");
-  const [ownerPassword, setOwnerPassword] = useState();
+  const [WhatsappNumber, setWhatsappNumber] = useState("");
+  const [ReceiveWhatsappNotif, setReceiveWhatsappNotif] = useState("");
   const [confirmPassword, setConfirmPassword] = useState();
   const [imgFront, setImgFront] = useState("");
   const [imgBack, setImgBack] = useState("");
-  const [sameAsBtn, setSameAsBtn] = useState(false);
-  const [whatsAppCheckbox, setWhatsAppCheckbox] = useState(false);
+  const [ownerPassword, setOwnerPassword] = useState("");
 
   // Restaurant-Documents
   const [imgSMES, setImgSMES] = useState("");
   const [imgLicence, setImgLicence] = useState("");
   const [gstNo, setGstNo] = useState("");
-  const [referalEmail, setreferalEmail] = useState(false);
-  const [ReferalEmail, setReferalEmail] = useState(false);
+  const [IsRefferalEmail, setIsRefferalEmail] = useState(false);
+  const [RefferalEmailAddress, setRefferalEmailAddress] = useState("");
   const [passwordError, setPasswordError] = useState(false);
   function handleSubmit(e) {
     e.preventDefault();
     {
       const values = {
-        Id: 0,
-        RestaurantName: "",
         OwnerName: ownerFullName,
-        PrimaryLocation: null,
-        //
-        PhoneNumber: ownerMobile,
-        //
         Email: ownerEmail,
-        //
-        CityId: 2,
-        //
-        WebSiteLink: null,
-        NoOfOutlets: 0,
-        //
-        EstablishmentTypeId: 2,
-        //
-        PrimaryAreaOfOutlet: null,
-        //
-        HomeDelivery: "Yes",
-        //
-        CostOfTwo: 200.0,
-        //
-        RegistrationDate: null,
-        //
-        // ShopLicense: imgLicence.split(",")[1],
-        Fssai: null,
-        Tin: null,
-        FracadeImageStringBase64: null,
-        KitchenImageStringBase64: null,
-        DinningImageStringBase64: null,
-        LocalityImageStringBase64: null,
+        RestaurantOwnerIDFrontStringBase64: imgFront,
+        RestaurantOwnerIDBackStringBase64: imgBack,
+        PhoneNumber: ownerMobile,
+        WhatsappNumber: WhatsappNumber,
+        ReceiveWhatsappNotif: ReceiveWhatsappNotif,
+        IsRefferalEmail: IsRefferalEmail,
+        RefferalEmailAddress: RefferalEmailAddress,
+        SMESImageStringBase64: imgSMES,
+        LicenceImageStringBase64: imgLicence,
+        Gstn: gstNo,
         UserId: 1,
-        IsActive: true,
-        //
-        CusinesCSV: null,
-        //
-        IsFeature: false,
-        //
-        ListOfRestaurantCusine: null,
-        //
-        ListOfRestaurantTags: null,
-        //
-        ListOfRestaurantFeature: null,
-        //
-        RestaurantCusine: null,
-        //
-        Longitude: 200.0,
-        Latitude: 200.0,
-        Distance: 200.0,
-        UnitOfLength: null,
-        Description: "",
-        ListOfWorkingDays: null,
-        UserReviews: null,
-        NoOfReview: 0,
-        //
-        AverageRating: 200.0,
-        //
-        NoOfOrders: 0,
-        //
-        // RestaurantOwnerIDFrontStringBase64: imgFront.split(",")[1],
-        // RestaurantOwnerIDBackStringBase64: imgBack.split(",")[1],
-        ParentId: 0,
-        //
-        IsBlocked: false,
-        //
-        ResponseCode: 0,
-        ResponseMessage: null,
       };
-      console.log(values);
-      // Please Add Link of API
-      if (ownerPassword === confirmPassword) {
-        setPasswordError(false);
-        fetch("https://api.masairapp.com/api/Restaurant/PostRestaurantInfo", {
+      // if (ownerPassword === confirmPassword) {
+      //   setPasswordError(false);
+        fetch("https://api.masairapp.com/api/Restaurant/UpdateRestaurantInfo", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -129,9 +72,10 @@ export default function ProfileSettings() {
           .catch((error) => {
             console.log(error);
           });
-      } else {
-        setPasswordError(true);
-      }
+      // } 
+      // else {
+      //   setPasswordError(true);
+      // }
     }
   }
 
@@ -353,8 +297,8 @@ export default function ProfileSettings() {
                   placeholder="312-34567890"
                   className="input-PS"
                   style={{ paddingLeft: "64px" }}
-                  value={ownerWhatsapp}
-                  onChange={(e) => setOwnerWhatsapp(e.target.value)}
+                  value={WhatsappNumber}
+                  onChange={(e) => setWhatsappNumber(e.target.value)}
                   required
                 />
 
@@ -375,7 +319,8 @@ export default function ProfileSettings() {
                   </h6>
                   <input
                     type="checkbox"
-                    onChange={(e) => setWhatsAppCheckbox(e.target.checked)}
+                    onChange={(e) => setReceiveWhatsappNotif(e.target.checked)}
+                    value="true"
                     required
                   />
                   <span className="checkbox-CB-PS"></span>
@@ -397,7 +342,7 @@ export default function ProfileSettings() {
                     type="radio"
                     name="referal"
                     value="true"
-                    onChange={(e) => setReferalEmail(true)}
+                    onChange={(e) => setIsRefferalEmail(true)}
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -411,7 +356,7 @@ export default function ProfileSettings() {
                     type="radio"
                     name="referal"
                     value="false"
-                    onChange={(e) => setReferalEmail(false)}
+                    onChange={(e) => setIsRefferalEmail(false)}
                   />
                   <span className="checkbox-CB-PS"></span>
                 </label>
@@ -419,7 +364,7 @@ export default function ProfileSettings() {
             </div>
 
             {/* Email Address */}
-            {ReferalEmail && (
+            {IsRefferalEmail && (
               <div
                 className="col-sm-6 col-12 px-2 margin-top-5"
                 id="back-img-padding-L"
@@ -434,17 +379,16 @@ export default function ProfileSettings() {
                     placeholder="user@mail.com"
                     className="input-PS"
                     style={{ paddingLeft: "64px" }}
-                    value={referalEmail}
-                    onChange={(e) => setreferalEmail(e.target.value)}
+                    value={RefferalEmailAddress}
+                    onChange={(e) => setRefferalEmailAddress(e.target.value)}
                     required
                   />
                 </div>
               </div>
             )}
           </div>
-          <div className="Section-PS">
+          {/* <div className="Section-PS">
             <div className="col-sm-6 col-12 px-2" id="">
-              {/*  Password */}
               <div className="label-PS">Password</div>
               <div className="dropdown-PS">
                 <span className="CountryCode-PS">
@@ -463,7 +407,6 @@ export default function ProfileSettings() {
               </div>
             </div>
             <div className="col-sm-6 col-12 px-2" id="">
-              {/* Confirm Password */}
               <div className="label-PS">Confirm Password</div>
               <div className="dropdown-PS d-block">
                 <span className="CountryCode-PS">
@@ -482,7 +425,6 @@ export default function ProfileSettings() {
                 {passwordError && <div className="fieldError">Password Did'nt Match</div>}
               </div>
             </div>
-            {/* WhatsApp checkbox */}
             <div
               className="col-sm-6 col-12 px-2 whatsapp-CB-Margin"
               id="back-img-padding-L"
@@ -502,7 +444,7 @@ export default function ProfileSettings() {
                 </label>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Restaurant Documents */}
